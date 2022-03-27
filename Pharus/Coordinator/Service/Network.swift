@@ -36,11 +36,11 @@ class Network: APIClientProtocol {
         }
         
         let url = URL(string: newUrlString)
-        guard let url = url else {
+        guard url != nil else {
             return
         }
         
-        var urlRequest = URLRequest(url: url)
+        var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = httpMethod
         
         if let httpBody = httpBody {
