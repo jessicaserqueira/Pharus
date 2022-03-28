@@ -46,6 +46,18 @@ class LoginPresenterTests: XCTestCase {
         XCTAssertFalse(isValidEmail, "Test should have returned false, but returned true instead")
     }
     
+    func testLoginPresenter_WhenEmailIsSQLInjection_ShouldReturnFalse() {
+        //Arrange
+        let sut = LoginPresenter()
+        
+        //Act
+        let email = "\"DELETE FROM USER\""
+        let isValidEmail = sut.isValidEmail(email: email)
+        
+        //Assert
+        XCTAssertFalse(isValidEmail, "Test should have returned false, but returned true instead")
+    }
+    
     func testLoginPresenter_WhenEmailIsValid_ShouldReturnTrue() {
         //Arrange
         let sut = LoginPresenter()
@@ -91,6 +103,18 @@ class LoginPresenterTests: XCTestCase {
         let isValidPassword = sut.isValidPassword(password: password)
         
         //Assert
-        XCTAssertFalse(isValidPassword, "Test should have returned false, but returned false true")
+        XCTAssertFalse(isValidPassword, "Test should have returned false, but returned false true instead")
+    }
+    
+    func testLoginPresenter_WhenPasswordIsSQLInjection_ShouldReturnFalse() {
+        //Arrange
+        let sut = LoginPresenter()
+        
+        //Act
+        let password = "\"DELETE FROM USER\""
+        let isValidPassword = sut.isValidPassword(password: password)
+        
+        //Assert
+        XCTAssertFalse(isValidPassword, "Test should have returned false, but returned false true instead")
     }
 }
