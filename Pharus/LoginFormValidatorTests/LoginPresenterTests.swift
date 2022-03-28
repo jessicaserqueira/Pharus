@@ -10,33 +10,37 @@ import XCTest
 
 class LoginPresenterTests: XCTestCase {
     
+    var sut: LoginPresenter!
+    
+     override func setUp() {
+        sut = LoginPresenter()
+    }
+    
+     override func tearDown() {
+        sut = nil
+    }
+    
     func testLoginPresenter_WhenEmailHasConsecutiveDots_ShoudlReturnFalse() {
-        //Arrange
-        let loginPresenter = LoginPresenter()
         
         //Act
         let email = "john@doe........com"
-        let isValidEmail = loginPresenter.isValidEmail(email: email)
+        let isValidEmail = sut.isValidEmail(email: email)
         
         //Assert
         XCTAssertFalse(isValidEmail, "Test should have returned false, but returned true instead")
     }
     
     func testLoginPresenter_WhenEmailHasNoAts_shouldReturnFalse() {
-        //Arrange
-        let loginPresenter = LoginPresenter()
         
         //Act
         let email = "johndoe.com"
-        let isValidEmail = loginPresenter.isValidEmail(email: email)
+        let isValidEmail = sut.isValidEmail(email: email)
         
         //Assert
         XCTAssertFalse(isValidEmail, "Test should have returned false, but returned true instead")
     }
     
     func testLoginPresenter_WhenEmailHasTwoAts_ShouldReturnFalse() {
-        //Arrange
-        let sut = LoginPresenter()
         
         //Act
         let email = "john@@doe.com"
@@ -47,9 +51,7 @@ class LoginPresenterTests: XCTestCase {
     }
     
     func testLoginPresenter_WhenEmailIsSQLInjection_ShouldReturnFalse() {
-        //Arrange
-        let sut = LoginPresenter()
-        
+
         //Act
         let email = "\"DELETE FROM USER\""
         let isValidEmail = sut.isValidEmail(email: email)
@@ -59,9 +61,7 @@ class LoginPresenterTests: XCTestCase {
     }
     
     func testLoginPresenter_WhenEmailIsValid_ShouldReturnTrue() {
-        //Arrange
-        let sut = LoginPresenter()
-        
+
         //Act
         let email = "john@doe.com.br"
         let isValidEmail = sut.isValidEmail(email: email)
@@ -71,9 +71,7 @@ class LoginPresenterTests: XCTestCase {
     }
     
     func testLoginPresenter_WhenPasswordCountIsLessThanEight_ShouldReturnFalse() {
-        //Arrange
-        let sut = LoginPresenter()
-        
+
         //Act
         let password = "!234567"
         let isValidPassword = sut.isValidPassword(password: password)
@@ -83,9 +81,7 @@ class LoginPresenterTests: XCTestCase {
     }
     
     func testLoginPresenter_WhenPasswordIsValid_ShouldReturnTrue() {
-        //Arrange
-        let sut = LoginPresenter()
-        
+
         //Act
         let password = "!234567Q"
         let isValidPassword = sut.isValidPassword(password: password)
@@ -95,9 +91,7 @@ class LoginPresenterTests: XCTestCase {
     }
     
     func testLoginPresenter_WhenPasswordCountIsMoreThanEightButHasNoSpecialCharacters_ShouldReturnFalse() {
-        //Arrange
-        let sut = LoginPresenter()
-        
+
         //Act
         let password = "12345678Z"
         let isValidPassword = sut.isValidPassword(password: password)
@@ -107,9 +101,7 @@ class LoginPresenterTests: XCTestCase {
     }
     
     func testLoginPresenter_WhenPasswordIsSQLInjection_ShouldReturnFalse() {
-        //Arrange
-        let sut = LoginPresenter()
-        
+
         //Act
         let password = "\"DELETE FROM USER\""
         let isValidPassword = sut.isValidPassword(password: password)
