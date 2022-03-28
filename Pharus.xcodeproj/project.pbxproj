@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79164BB827F1251C00167B8A /* UIView+Extension.swift */; };
+		7963213427F23D2500A202EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963213327F23D2500A202EE /* Constants.swift */; };
 		799768D027EA3B5F0057AFA7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* Student.swift */; };
 		79E6424D27F098D30046A2F0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6424C27F098D30046A2F0 /* Network.swift */; };
 		C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618A27EA03A5007EC5C3 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		79164BB827F1251C00167B8A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		7963213327F23D2500A202EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		799768CF27EA3B5F0057AFA7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		79E6424C27F098D30046A2F0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C045618727EA03A5007EC5C3 /* Pharus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pharus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				79E6424C27F098D30046A2F0 /* Network.swift */,
+				7963213327F23D2500A202EE /* Constants.swift */,
 			);
 			name = Service;
 			path = Coordinator/Service;
@@ -213,6 +216,7 @@
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
+				7963213427F23D2500A202EE /* Constants.swift in Sources */,
 				C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */,
 				C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */,
 				C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */,
