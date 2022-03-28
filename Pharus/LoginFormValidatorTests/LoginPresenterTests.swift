@@ -20,6 +20,8 @@ class LoginPresenterTests: XCTestCase {
         sut = nil
     }
     
+    //MARK: - Email Testing
+    
     func testLoginPresenter_WhenEmailHasConsecutiveDots_ShoudlReturnFalse() {
         
         //Act
@@ -69,6 +71,8 @@ class LoginPresenterTests: XCTestCase {
         //Assert
         XCTAssertTrue(isValidEmail, "Test should have returned true, but returned false instead")
     }
+    
+    //MARK: - Password Testing
     
     func testLoginPresenter_WhenPasswordCountIsLessThanEight_ShouldReturnFalse() {
 
