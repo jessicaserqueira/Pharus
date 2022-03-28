@@ -10,6 +10,10 @@
 		79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79164BB827F1251C00167B8A /* UIView+Extension.swift */; };
 		799768D027EA3B5F0057AFA7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* Student.swift */; };
 		79E6424D27F098D30046A2F0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6424C27F098D30046A2F0 /* Network.swift */; };
+		C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */; };
+		C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */; };
+		C008AF2027F1ED7000AD94C9 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1F27F1ED7000AD94C9 /* LoginPresenter.swift */; };
+		C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF2327F1EDA100AD94C9 /* LoginView.swift */; };
 		C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618A27EA03A5007EC5C3 /* AppDelegate.swift */; };
 		C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618C27EA03A5007EC5C3 /* SceneDelegate.swift */; };
 		C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618E27EA03A5007EC5C3 /* StartViewController.swift */; };
@@ -18,12 +22,17 @@
 		C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561A727EA041B007EC5C3 /* Coordinator.swift */; };
 		C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */; };
 		C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */; };
+		C0D2F70427F1E794001C33F3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C0D2F70327F1E794001C33F3 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		79164BB827F1251C00167B8A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		799768CF27EA3B5F0057AFA7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		79E6424C27F098D30046A2F0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoodinator.swift; sourceTree = "<group>"; };
+		C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C008AF1F27F1ED7000AD94C9 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/ViewController/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
+		C008AF2327F1EDA100AD94C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C045618727EA03A5007EC5C3 /* Pharus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pharus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C045618A27EA03A5007EC5C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C045618C27EA03A5007EC5C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +43,7 @@
 		C04561A727EA041B007EC5C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
+		C0D2F70327F1E794001C33F3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,15 @@
 			path = Coordinator/Service;
 			sourceTree = "<group>";
 		};
+		C008AF2227F1ED7F00AD94C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
+				C04561A127EA03B1007EC5C3 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C045617E27EA03A5007EC5C3 = {
 			isa = PBXGroup;
 			children = (
@@ -83,11 +102,12 @@
 		C045618927EA03A5007EC5C3 /* Pharus */ = {
 			isa = PBXGroup;
 			children = (
+				C0D2F70327F1E794001C33F3 /* .gitignore */,
 				79E6424B27F098C10046A2F0 /* Service */,
 				79CAD97F27EBD77600A554E0 /* Extensions */,
 				C04561A327EA03BF007EC5C3 /* Coordinator */,
 				C04561A227EA03B3007EC5C3 /* Model */,
-				C04561A127EA03B1007EC5C3 /* ViewController */,
+				C008AF2227F1ED7F00AD94C9 /* View */,
 				C04561A027EA03AE007EC5C3 /* Presenter */,
 				C045619F27EA03AB007EC5C3 /* SystemDelegate */,
 				C045619327EA03A6007EC5C3 /* Assets.xcassets */,
@@ -109,6 +129,7 @@
 		C04561A027EA03AE007EC5C3 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				C008AF1F27F1ED7000AD94C9 /* LoginPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -117,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				C045618E27EA03A5007EC5C3 /* StartViewController.swift */,
+				C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -135,6 +157,7 @@
 				C04561A727EA041B007EC5C3 /* Coordinator.swift */,
 				C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */,
 				C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */,
+				C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -197,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C045619727EA03A6007EC5C3 /* LaunchScreen.storyboard in Resources */,
+				C0D2F70427F1E794001C33F3 /* .gitignore in Resources */,
 				C045619427EA03A6007EC5C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,15 +232,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C008AF2027F1ED7000AD94C9 /* LoginPresenter.swift in Sources */,
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
 				C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */,
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
+				C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */,
 				C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */,
 				C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */,
 				C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */,
+				C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */,
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
+				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
