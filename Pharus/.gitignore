@@ -1,3 +1,7 @@
-*/.xcuserstate
+
 *.xcodeproj
+
+##User Settings
+UserInterfaceState.xcuserstate
+*/.xcuserstate
 xcuserdata
