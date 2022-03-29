@@ -1,7 +1,7 @@
 {
     "name": {
-        "firstName": "João",
-        "lastName": "Maria José"
+        "firstName": "John",
+        "lastName": "Jonah Jameson"
     },
     "birthday": "13/05/2002",
     "schoolId": "XXXXXXXX",
@@ -16,19 +16,19 @@
             "number": "(XX)XXXXX-XXXX"
         }
     ],
-    "school": "Colégio Santa Maria",
+    "school": "Colégio Bernoulli",
     "schoolShift": "M",
     "avatar": "https://wallpapercave.com/wp/wp9414303.jpg",
     "backgroundPhoto": "https://wallpapercave.com/wp/wp9414303.jpg",
     "medals": {
         "diamond": 0,
-        "ruby": 1,
-        "emerald": 0,
-        "saphire": 2,
-        "platinum": 1,
+        "ruby": 0,
+        "emerald": 1,
+        "saphire": 0,
+        "platinum": 0,
         "gold": 1,
-        "silver": 2,
-        "bronze": 5
+        "silver": 0,
+        "bronze": 0
     },
     "score": 1300,
     "schoolProjects": [
@@ -59,7 +59,7 @@
             "rules": "...",
             "mentors": [
                 "Daniel Pereira",
-                "Fernando Milp"
+                "Fernando de olveira da silva"
             ]
         }
     ]
