@@ -1,0 +1,66 @@
+{
+    "name": {
+        "firstName": "João",
+        "lastName": "Maria José"
+    },
+    "birthday": "13/05/2002",
+    "schoolId": "XXXXXXXX",
+    "gender": "M",
+    "phoneNumbers": [
+        {
+            "type": "home",
+            "number": "(XX)XXXX-XXXX"
+        },
+        {
+            "type": "cellphone",
+            "number": "(XX)XXXXX-XXXX"
+        }
+    ],
+    "school": "Colégio Santa Maria",
+    "schoolShift": "M",
+    "avatar": "https://wallpapercave.com/wp/wp9414303.jpg",
+    "backgroundPhoto": "https://wallpapercave.com/wp/wp9414303.jpg",
+    "medals": {
+        "diamond": 0,
+        "ruby": 1,
+        "emerald": 0,
+        "saphire": 2,
+        "platinum": 1,
+        "gold": 1,
+        "silver": 2,
+        "bronze": 5
+    },
+    "score": 1300,
+    "schoolProjects": [
+        {
+            "name": "Minha primeira página web",
+            "score": 68,
+            "medal": "gold",
+            "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
+            "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
+            "startDate": "01/01/2022",
+            "endDate": "03/02/2022",
+            "rules": "...",
+            "mentors": [
+                "Lucas Daniel",
+                "Melissa Ferdinando"
+            ]
+        }
+    ],
+    "companyProjects": [
+        {
+            "name": "Minha página web muito braba",
+            "score": 43,
+            "medal": "emerald",
+            "description": "O aluno deve fazer uma página web utilizando React.js",
+            "scoreDescription": "Página marromeno",
+            "startDate": "01/01/2022",
+            "endDate": "03/02/2022",
+            "rules": "...",
+            "mentors": [
+                "Daniel Pereira",
+                "Fernando Milp"
+            ]
+        }
+    ]
+}

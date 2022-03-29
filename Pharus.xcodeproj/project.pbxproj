@@ -13,6 +13,8 @@
 		799768D027EA3B5F0057AFA7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* Student.swift */; };
 		79E6424D27F098D30046A2F0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6424C27F098D30046A2F0 /* Network.swift */; };
 		79F06DA127F28FCD00343865 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */; };
+		79FB0CC927F330FA001D36A7 /* Student.json in Resources */ = {isa = PBXBuildFile; fileRef = 79FB0CC827F330FA001D36A7 /* Student.json */; };
+		79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */; };
 		C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */; };
 		C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */; };
 		C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF2327F1EDA100AD94C9 /* LoginView.swift */; };
@@ -44,6 +46,8 @@
 		79E6424C27F098D30046A2F0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		79F06D9E27F28FCD00343865 /* LoginPresenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginPresenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		79FB0CC827F330FA001D36A7 /* Student.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Student.json; sourceTree = "<group>"; };
+		79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoodinator.swift; sourceTree = "<group>"; };
 		C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C008AF2327F1EDA100AD94C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
+				79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				799768CF27EA3B5F0057AFA7 /* Student.swift */,
+				79FB0CC827F330FA001D36A7 /* Student.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 			files = (
 				C045619727EA03A6007EC5C3 /* LaunchScreen.storyboard in Resources */,
 				C045619427EA03A6007EC5C3 /* Assets.xcassets in Resources */,
+				79FB0CC927F330FA001D36A7 /* Student.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
+				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
 				C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */,
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
