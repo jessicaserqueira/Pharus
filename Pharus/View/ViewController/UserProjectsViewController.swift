@@ -29,19 +29,12 @@ class UserProjectsViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        viewCustom.backgroundColor = .yellow
         self.view = viewCustom
+        view.backgroundColor = .white
         
     }
     
     func setNavigationBar() {
-//        let logoutButton = UIBarButtonItem(image: UIImage(named: "Log Out Icon"),
-//                                           style: .plain,
-//                                           target: self,
-//                                           action: #selector(logout))
-//        logoutButton.tintColor = .gra
-//        navigationItem.rightBarButtonItem = logoutButton
-        
         self.title = "Seus projetos"
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -77,19 +70,19 @@ extension UserProjectsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.userProjects, for: indexPath) as! UserProjectCell
         
-        let project = Project(name: "primeiro projeto",
+        let project = Project(name: "Meu primeiro projeto",
                               score: 157,
                               medal: "gold",
-                              projectDescription: "hahahahahahskjdajsdas aksj dkajsk dkajs dkja d",
+                              projectDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum elit tellus, at condimentum mauris sagittis ut. Nam auctor nunc non ipsum blandit tempus.",
                               scoreDescription: "tirou essa nota p qsim ",
                               startDate: "21/02/12", endDate: "22/02/12",
                               rules: "regras e regras e regras",
-                              mentors: ["fernando milp", "josé oliveira"])
+                              mentors: ["Fernando milp", "José oliveira"])
 
         cell.configureSubviews()
         cell.setupConstraints()
         cell.configureCell(project: project)
-        cell.mainStackView.layer.cornerRadius = 16
+        cell.mainView.layer.cornerRadius = 16
         
         return cell
     }

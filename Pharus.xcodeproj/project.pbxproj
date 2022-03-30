@@ -15,6 +15,7 @@
 		7943976027F3C6130075102B /* UserProjectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975F27F3C6130075102B /* UserProjectsPresenter.swift */; };
 		7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963212F27F23AF000A202EE /* LoginPresenter.swift */; };
 		7963213227F23C9200A202EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963213127F23C9200A202EE /* Constants.swift */; };
+		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
 		799768D027EA3B5F0057AFA7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* Student.swift */; };
 		79E6424D27F098D30046A2F0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6424C27F098D30046A2F0 /* Network.swift */; };
 		79F06DA127F28FCD00343865 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */; };
@@ -52,6 +53,7 @@
 		7943975F27F3C6130075102B /* UserProjectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsPresenter.swift; sourceTree = "<group>"; };
 		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		7963213127F23C9200A202EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		799768CF27EA3B5F0057AFA7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		79E6424C27F098D30046A2F0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		79F06D9E27F28FCD00343865 /* LoginPresenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginPresenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 			children = (
 				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
 				79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */,
+				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
 				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
 				C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */,
