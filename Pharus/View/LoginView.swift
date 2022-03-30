@@ -177,7 +177,6 @@ class LoginView: UIView {
         
         configureSubviews()
         setupConstraints()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -199,7 +198,6 @@ class LoginView: UIView {
         passwordStackView.addArrangedSubview(changePasswordLabel)
         mainStackView.addArrangedSubview(loginButtonView)
         loginButtonView.addSubview(loginButton)
-        
     }
     
     func setupConstraints() {
@@ -210,8 +208,6 @@ class LoginView: UIView {
         
         //Logo Image View
         NSLayoutConstraint.activate([
-            logoImageView.widthAnchor.constraint(equalToConstant: 20),
-            logoImageView.heightAnchor.constraint(equalToConstant: 60),
             logoImageView.centerXAnchor.constraint(equalTo: mainStackView.centerXAnchor),
             logoImageView.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 100)
         ])
@@ -219,27 +215,23 @@ class LoginView: UIView {
         //Main Stack View
         NSLayoutConstraint.activate([
             mainStackView.centerXAnchor.constraint(equalTo: mainView.centerXAnchor)
-            
         ])
         
         //Login Title
         NSLayoutConstraint.activate([
             loginTitle.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -24),
             loginTitle.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 24)
-            
         ])
         
         //E-mail Stack View
         NSLayoutConstraint.activate([
             emailStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -24),
             emailStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 24)
-            
         ])
         
         //E-mail Label
         NSLayoutConstraint.activate([
             emailLabel.leadingAnchor.constraint(equalTo: emailStackView.leadingAnchor)
-            
         ])
         
         //E-mail TextField
@@ -272,6 +264,7 @@ class LoginView: UIView {
         NSLayoutConstraint.activate([
             loginButton.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor),
             loginButton.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
+            loginButton.heightAnchor.constraint(equalToConstant: 54),
             loginButton.bottomAnchor.constraint(equalTo: mainStackView.bottomAnchor, constant: 100)
         ])
     }
