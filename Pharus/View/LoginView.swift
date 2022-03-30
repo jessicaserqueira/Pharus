@@ -8,8 +8,7 @@
 import UIKit
 
 protocol LoginViewDelegate: AnyObject{
-    
-    
+        
 }
 
 class LoginView: UIView {
@@ -39,6 +38,8 @@ class LoginView: UIView {
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
+        stackView.spacing = UIScreen.main.bounds.height/17
+        stackView.alignment = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "LoginView.mainStackView"
         return stackView
@@ -50,7 +51,7 @@ class LoginView: UIView {
         let label = UILabel()
         label.text = "Login"
         label.textColor = .black
-        label.font = .boldSystemFont(ofSize: 45)
+        label.font = .boldSystemFont(ofSize: 30)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LoginView.loginTitle"
@@ -60,12 +61,11 @@ class LoginView: UIView {
     }()
     
     
-
-    
     lazy var emailStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.alignment = .center
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "LoginView.emailStackView"
 
@@ -78,7 +78,6 @@ class LoginView: UIView {
         label.text = "E-mail"
         label.font = .boldSystemFont(ofSize: 18)
         label.textColor = .black
-        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LoginView.emailLabel"
         
@@ -87,7 +86,9 @@ class LoginView: UIView {
     
     lazy var emailTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "email@email"
+        textField.placeholder = "antonia.ferreira@gmail.com"
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.accessibilityIdentifier = "LoginView.emailTextField"
         
@@ -97,7 +98,9 @@ class LoginView: UIView {
     lazy var passwordStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.alignment = .center
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "LoginView.passwordStackView"
         
@@ -109,7 +112,6 @@ class LoginView: UIView {
         label.text = "Senha"
         label.font = .boldSystemFont(ofSize: 18)
         label.textColor = .black
-        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LoginView.passwordLabel"
        
@@ -119,10 +121,25 @@ class LoginView: UIView {
     lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Senha"
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
+        textField.isSecureTextEntry = true
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.accessibilityIdentifier = "LoginView.passwordTextField"
         
         return textField
+    }()
+    
+    lazy var changePasswordLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Esqueci minha senha!"
+        label.font = .systemFont(ofSize: 9)
+        label.textColor = .gray
+        label.textAlignment = .right
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "LoginView.changePasswordLabel"
+       
+        return label
     }()
     
     lazy var loginButtonView: UIView = {
@@ -136,11 +153,11 @@ class LoginView: UIView {
     lazy var loginButton: UIButton = {
         let button = UIButton()
         button.setTitle("Entrar", for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 45)
+        button.titleLabel?.font = .boldSystemFont(ofSize: 30)
         button.setTitleColor(UIColor.black, for: .normal)
-        button.layer.cornerRadius = 10
+        button.layer.cornerRadius = 16
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.lightGray.cgColor
+        button.layer.borderColor = UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1).cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "LoginView.loginButton"
         return button
@@ -167,9 +184,10 @@ class LoginView: UIView {
         mainStackView.addArrangedSubview(emailStackView)
         emailStackView.addArrangedSubview(emailLabel)
         emailStackView.addArrangedSubview(emailTextField)
-        emailStackView.addArrangedSubview(passwordStackView)
+        mainStackView.addArrangedSubview(passwordStackView)
         passwordStackView.addArrangedSubview(passwordLabel)
         passwordStackView.addArrangedSubview(passwordTextField)
+        passwordStackView.addArrangedSubview(changePasswordLabel)
         mainStackView.addArrangedSubview(loginButtonView)
         loginButtonView.addSubview(loginButton)
                 
@@ -188,32 +206,74 @@ class LoginView: UIView {
             logoImageView.heightAnchor.constraint(equalToConstant: 60),
             logoImageView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -50),
             logoImageView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 50),
-            logoImageView.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 70)
-           
+            logoImageView.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 100)
+                      
         ])
                 
-        //Container Stack View
+        //Main Stack View
         NSLayoutConstraint.activate([
-            mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -22.78),
+           
+            mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -24),
             mainStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 24),
-            mainStackView.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 50)
+          
         ])
                 
         //Login Title
         NSLayoutConstraint.activate([
 
-            loginTitle.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor, constant: -50),
-            loginTitle.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor, constant: 50),
-            loginTitle.bottomAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 200)
+            loginTitle.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -24),
+            loginTitle.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 24),
+            loginTitle.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 250)
            
         ])
         
+        //E-mail Stack View
+        NSLayoutConstraint.activate([
+            emailStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -24),
+            emailStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 24)
+          
+        ])
         
+        //E-mail Label
+        NSLayoutConstraint.activate([
+            emailLabel.leadingAnchor.constraint(equalTo: emailStackView.leadingAnchor)
+   
+        ])
         
+        //E-mail TextField
+        NSLayoutConstraint.activate([
+            emailTextField.leadingAnchor.constraint(equalTo: emailStackView.leadingAnchor)
+            
+        ])
+                
+        //Password Stack View
+        NSLayoutConstraint.activate([
+            passwordStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -24),
+            passwordStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 24)
+        ])
         
+        //Password Label
+        NSLayoutConstraint.activate([
+            passwordLabel.leadingAnchor.constraint(equalTo: passwordStackView.leadingAnchor)
+        ])
         
+        //Password TextField
+        NSLayoutConstraint.activate([
+            passwordTextField.leadingAnchor.constraint(equalTo: passwordStackView.leadingAnchor)
+        ])
+        
+        //Change Password Label
+        NSLayoutConstraint.activate([
+            changePasswordLabel.trailingAnchor.constraint(equalTo: passwordStackView.trailingAnchor)
+        ])
+        
+        //Login Button
+        NSLayoutConstraint.activate([
+            
+            loginButton.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor),
+            loginButton.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
+            loginButton.bottomAnchor.constraint(equalTo: mainStackView.bottomAnchor, constant: 100)
+        ])
         
     }
- 
-    
 }
