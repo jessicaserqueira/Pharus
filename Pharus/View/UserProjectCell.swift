@@ -16,24 +16,46 @@ class UserProjectCell: UITableViewCell {
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    lazy var titleStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = 41
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "UserProjectCell.mainStackView"
-        //stackView.backgroundColor = .red
+        stackView.accessibilityIdentifier = "UserProjectCell.titleStackView"
+        stackView.backgroundColor = .yellow
+        
         return stackView
     }()
     
-    lazy var infoStackView: UIStackView = {
+    lazy var descriptionStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 4
+        stackView.axis = .horizontal
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "UserProjectCell.infoStackView"
+        stackView.accessibilityIdentifier = "UserProejctCell.descriptionStackView"
+        stackView.backgroundColor = .green
+        
         return stackView
     }()
+    
+    lazy var mainStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "UserProjectCell.mainStackView"
+        stackView.backgroundColor = .purple
+        
+        return stackView
+    }()
+    
+    lazy var progressStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 8
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "UserProjectCell.progressStackView"
+        
+        return stackView
+    }()
+    
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -43,6 +65,15 @@ class UserProjectCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.titleLabel"
         return label
+    }()
+    
+    lazy var medalImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: K.AssetsNames.medal)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.accessibilityIdentifier = "UserProjectCell.medalImageView"
+        
+        return imageView
     }()
     
     lazy var mentorsLabel: UILabel = {
@@ -67,7 +98,7 @@ class UserProjectCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "asda.asdasd"
-       // view.backgroundColor = .blue
+        view.backgroundColor = .blue
         return view
     }()
     
@@ -77,6 +108,17 @@ class UserProjectCell: UITableViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "UserProjectCell.progressImageView"
         return imageView
+    }()
+    
+    lazy var completeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Completo"
+        label.font = .systemFont(ofSize: 12)
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "UserProjectCell.completeLabel"
+        
+        return label
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -99,14 +141,22 @@ class UserProjectCell: UITableViewCell {
     func configureSubviews() {
         addSubview(mainView)
         mainView.addSubview(mainStackView)
-        mainStackView.addArrangedSubview(infoStackView)
+        mainStackView.addArrangedSubview(titleStackView)
         
-        infoStackView.addArrangedSubview(titleLabel)
-        infoStackView.addArrangedSubview(mentorsLabel)
-        infoStackView.addArrangedSubview(descriptionLabel)
+        titleStackView.addArrangedSubview(titleLabel)
+        titleStackView.addArrangedSubview(medalImageView)
         
-        mainStackView.addArrangedSubview(helpImageView)
-        helpImageView.addSubview(progressImageView)
+        mainStackView.addArrangedSubview(mentorsLabel)
+        
+        mainStackView.addArrangedSubview(descriptionStackView)
+        
+        descriptionStackView.addArrangedSubview(descriptionLabel)
+        descriptionStackView.addArrangedSubview(helpImageView)
+                
+        helpImageView.addSubview(progressStackView)
+        progressStackView.addArrangedSubview(progressImageView)
+        progressStackView.addArrangedSubview(completeLabel)
+
         mainView.backgroundColor = .cardColor
     }
     
@@ -124,9 +174,6 @@ class UserProjectCell: UITableViewCell {
             mainStackView.bottomAnchor.constraint(equalTo: mainView.bottomAnchor, constant: -20)
         ])
         
-        //Info Stack View
-        //infoStackView.bottomAnchor.constraint(equalTo: mainStackView.bottomAnchor, constant: -10).isActive = true
-        
         //help
         NSLayoutConstraint.activate([
             helpImageView.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
@@ -137,9 +184,14 @@ class UserProjectCell: UITableViewCell {
         NSLayoutConstraint.activate([
             progressImageView.widthAnchor.constraint(equalToConstant: 79),
             progressImageView.heightAnchor.constraint(equalToConstant: 79),
-            progressImageView.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor),
-            progressImageView.centerYAnchor.constraint(equalTo: helpImageView.centerYAnchor)
+            //progressImageView.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor),
+            //progressImageView.centerYAnchor.constraint(equalTo: helpImageView.centerYAnchor)
         ])
         
+        //Progress Stack View
+        NSLayoutConstraint.activate([
+            progressStackView.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor),
+            progressStackView.centerYAnchor.constraint(equalTo: helpImageView.centerYAnchor)
+        ])
     }
 }
