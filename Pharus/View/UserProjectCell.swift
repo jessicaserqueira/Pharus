@@ -60,7 +60,8 @@ class UserProjectCell: UITableViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Titulo do projeto"
-        label.numberOfLines = 2
+        label.numberOfLines = 1
+        label.lineBreakMode = .byCharWrapping
         label.font = .systemFont(ofSize: 24, weight: .heavy)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.titleLabel"
@@ -80,6 +81,8 @@ class UserProjectCell: UITableViewCell {
         let label = UILabel()
         label.text = "mentores: etc etc etc"
         label.font = .systemFont(ofSize: 15)
+        label.numberOfLines = 1
+        label.lineBreakMode = .byCharWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.mentorsLabel"
         return label
@@ -107,6 +110,7 @@ class UserProjectCell: UITableViewCell {
         imageView.image = UIImage(named: "Progress")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "UserProjectCell.progressImageView"
+        
         return imageView
     }()
     
@@ -142,21 +146,15 @@ class UserProjectCell: UITableViewCell {
         addSubview(mainView)
         mainView.addSubview(mainStackView)
         mainStackView.addArrangedSubview(titleStackView)
-        
         titleStackView.addArrangedSubview(titleLabel)
         titleStackView.addArrangedSubview(medalImageView)
-        
         mainStackView.addArrangedSubview(mentorsLabel)
-        
         mainStackView.addArrangedSubview(descriptionStackView)
-        
         descriptionStackView.addArrangedSubview(descriptionLabel)
         descriptionStackView.addArrangedSubview(helpImageView)
-                
         helpImageView.addSubview(progressStackView)
         progressStackView.addArrangedSubview(progressImageView)
         progressStackView.addArrangedSubview(completeLabel)
-
         mainView.backgroundColor = .cardColor
     }
     
@@ -166,12 +164,16 @@ class UserProjectCell: UITableViewCell {
         self.stretch(mainView, top: 10, left: 30, bottom: -10, right: -30)
         
         //Main Stack View
-       // self.stretch(mainStackView, to: mainView, top: 17, left: 21, bottom: -18, right: 21)
         NSLayoutConstraint.activate([
             mainStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 21),
             mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -23),
             mainStackView.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 17),
             mainStackView.bottomAnchor.constraint(equalTo: mainView.bottomAnchor, constant: -20)
+        ])
+        
+        //Mentors Label
+        NSLayoutConstraint.activate([
+            mentorsLabel.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor)
         ])
         
         //help
@@ -183,9 +185,7 @@ class UserProjectCell: UITableViewCell {
         //Progress Image View
         NSLayoutConstraint.activate([
             progressImageView.widthAnchor.constraint(equalToConstant: 79),
-            progressImageView.heightAnchor.constraint(equalToConstant: 79),
-            //progressImageView.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor),
-            //progressImageView.centerYAnchor.constraint(equalTo: helpImageView.centerYAnchor)
+            progressImageView.heightAnchor.constraint(equalToConstant: 79)
         ])
         
         //Progress Stack View
