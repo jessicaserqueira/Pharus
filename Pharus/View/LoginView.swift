@@ -41,10 +41,9 @@ class LoginView: UIView {
         stackView.alignment = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "LoginView.mainStackView"
+        
         return stackView
     }()
-    
-    
     
     lazy var loginTitle: UILabel = {
         let label = UILabel()
@@ -55,10 +54,8 @@ class LoginView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LoginView.loginTitle"
         
-        
         return label
     }()
-    
     
     lazy var emailStackView: UIStackView = {
         let stackView = UIStackView()
@@ -68,7 +65,6 @@ class LoginView: UIView {
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "LoginView.emailStackView"
-        
         
         return stackView
     }()
@@ -109,10 +105,10 @@ class LoginView: UIView {
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "LoginView.passwordStackView"
-        
-        
+    
         return stackView
     }()
+    
     lazy var passwordLabel: UILabel = {
         let label = UILabel()
         label.text = "Senha"
@@ -172,6 +168,7 @@ class LoginView: UIView {
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "LoginView.loginButton"
+        
         return button
     }()
     
@@ -213,24 +210,20 @@ class LoginView: UIView {
         
         //Logo Image View
         NSLayoutConstraint.activate([
-            
             logoImageView.widthAnchor.constraint(equalToConstant: 20),
             logoImageView.heightAnchor.constraint(equalToConstant: 60),
             logoImageView.centerXAnchor.constraint(equalTo: mainStackView.centerXAnchor),
             logoImageView.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 100)
-            
         ])
         
         //Main Stack View
         NSLayoutConstraint.activate([
-            
             mainStackView.centerXAnchor.constraint(equalTo: mainView.centerXAnchor)
             
         ])
         
         //Login Title
         NSLayoutConstraint.activate([
-            
             loginTitle.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -24),
             loginTitle.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 24)
             
@@ -252,7 +245,6 @@ class LoginView: UIView {
         //E-mail TextField
         NSLayoutConstraint.activate([
             emailTextField.leadingAnchor.constraint(equalTo: emailStackView.leadingAnchor)
-            
         ])
         
         //Password Stack View
@@ -278,7 +270,6 @@ class LoginView: UIView {
         
         //Login Button
         NSLayoutConstraint.activate([
-            
             loginButton.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor),
             loginButton.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
             loginButton.bottomAnchor.constraint(equalTo: mainStackView.bottomAnchor, constant: 100)
