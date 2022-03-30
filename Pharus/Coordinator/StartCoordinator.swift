@@ -24,7 +24,7 @@ class StartCoordinator: Coordinator {
     func start() {
         let startViewController = UserProjectsViewController.init()
         startViewController.coordinator = self
-        navigationController.setNavigationBarHidden(true, animated: true)
+        //navigationController.setNavigationBarHidden(true, animated: true)
         navigationController.pushViewController(startViewController, animated: true)
     }
 }
