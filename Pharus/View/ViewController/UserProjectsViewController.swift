@@ -11,6 +11,8 @@ class UserProjectsViewController: UIViewController {
     
     var coordinator: StartFlow?
     let tableView = UITableView()
+    var student: Student?
+    var projects = [Project]()
   
        // MARK: - Properties
        
@@ -23,7 +25,11 @@ class UserProjectsViewController: UIViewController {
         setNavigationBar()
         view.addSubview(tableView)
         setupTableView()
-        
+        student = Bundle.main.decode("Student.json")
+        if let student = student {
+            projects.append(contentsOf: student.schoolProjects)
+            projects.append(contentsOf: student.companyProjects)
+        }
     }
     
     override func loadView() {
@@ -31,7 +37,6 @@ class UserProjectsViewController: UIViewController {
         
         self.view = viewCustom
         view.backgroundColor = .white
-        
     }
     
     func setNavigationBar() {
@@ -96,20 +101,21 @@ extension UserProjectsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        // books.count
-        30
+        projects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.userProjects, for: indexPath) as! UserProjectCell
+        let project = projects[indexPath.row]
         
-        let project = Project(name: "Meu primeiro projeto alo alo alo",
-                              score: 157,
-                              medal: "gold",
-                              projectDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum elit tellus, at condimentum mauris sagittis ut. Nam auctor nunc non ipsum blandit tempus.",
-                              scoreDescription: "tirou essa nota p qsim ",
-                              startDate: "21/02/12", endDate: "22/02/12",
-                              rules: "regras e regras e regras",
-                              mentors: ["Fernando Sabino", "José oliveira da silva fernandes"])
+//        let project = Project(name: "Meu primeiro projeto alo alo alo",
+//                              score: 157,
+//                              medal: "gold",
+//                              projectDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum elit tellus, at condimentum mauris sagittis ut. Nam auctor nunc non ipsum blandit tempus.",
+//                              scoreDescription: "tirou essa nota p qsim ",
+//                              startDate: "21/02/12", endDate: "22/02/12",
+//                              rules: "regras e regras e regras",
+//                              mentors: ["Fernando Sabino", "José oliveira da silva fernandes"])
 
         cell.configureSubviews()
         cell.setupConstraints()

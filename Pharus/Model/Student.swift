@@ -31,12 +31,12 @@ struct Project: Codable {
     let score: Int
     let medal, projectDescription, scoreDescription, startDate: String
     let endDate, rules: String
-    let mentors: [String]
+    let mentor: String
 
     enum CodingKeys: String, CodingKey {
         case name, score, medal
         case projectDescription = "description"
-        case scoreDescription, startDate, endDate, rules, mentors
+        case scoreDescription, startDate, endDate, rules, mentor
     }
 }
 
