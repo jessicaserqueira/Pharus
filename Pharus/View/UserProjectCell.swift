@@ -13,6 +13,7 @@ class UserProjectCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "UserProjectCell.mainView"
+        
         return view
     }()
     
