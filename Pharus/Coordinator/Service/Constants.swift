@@ -20,5 +20,6 @@ struct K {
     struct AssetsNames {
         static let backButton = "backButtonImage"
         static let medal = "Medalha"
+        static let companyLogo = "havaianas"
     }
 }

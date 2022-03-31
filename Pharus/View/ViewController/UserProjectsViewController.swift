@@ -76,6 +76,8 @@ class UserProjectsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        tableView.separatorColor = .clear
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -89,7 +91,7 @@ class UserProjectsViewController: UIViewController {
 extension UserProjectsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        300
+        397
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,7 +109,7 @@ extension UserProjectsViewController: UITableViewDataSource {
                               scoreDescription: "tirou essa nota p qsim ",
                               startDate: "21/02/12", endDate: "22/02/12",
                               rules: "regras e regras e regras",
-                              mentors: ["Fernando milp", "José oliveira da silva fernandes"])
+                              mentors: ["Fernando Sabino", "José oliveira da silva fernandes"])
 
         cell.configureSubviews()
         cell.setupConstraints()

@@ -21,7 +21,7 @@ class UserProjectCell: UITableViewCell {
         stackView.axis = .horizontal
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "UserProjectCell.titleStackView"
-        stackView.backgroundColor = .yellow
+        //stackView.backgroundColor = .yellow
         
         return stackView
     }()
@@ -29,9 +29,10 @@ class UserProjectCell: UITableViewCell {
     lazy var descriptionStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
+        stackView.spacing = 40
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "UserProejctCell.descriptionStackView"
-        stackView.backgroundColor = .green
+        //stackView.backgroundColor = .green
         
         return stackView
     }()
@@ -39,9 +40,10 @@ class UserProjectCell: UITableViewCell {
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
+        stackView.spacing = 7
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "UserProjectCell.mainStackView"
-        stackView.backgroundColor = .purple
+        //stackView.backgroundColor = .purple
         
         return stackView
     }()
@@ -61,7 +63,7 @@ class UserProjectCell: UITableViewCell {
         let label = UILabel()
         label.text = "Titulo do projeto"
         label.numberOfLines = 1
-        label.lineBreakMode = .byCharWrapping
+        label.lineBreakMode = .byTruncatingTail
         label.font = .systemFont(ofSize: 24, weight: .heavy)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.titleLabel"
@@ -80,9 +82,9 @@ class UserProjectCell: UITableViewCell {
     lazy var mentorsLabel: UILabel = {
         let label = UILabel()
         label.text = "mentores: etc etc etc"
-        label.font = .systemFont(ofSize: 15)
         label.numberOfLines = 1
-        label.lineBreakMode = .byCharWrapping
+        label.font = .boldSystemFont(ofSize: 18)
+        label.lineBreakMode = .byTruncatingTail
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.mentorsLabel"
         return label
@@ -101,7 +103,7 @@ class UserProjectCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "asda.asdasd"
-        view.backgroundColor = .blue
+        //view.backgroundColor = .blue
         return view
     }()
     
@@ -123,6 +125,40 @@ class UserProjectCell: UITableViewCell {
         label.accessibilityIdentifier = "UserProjectCell.completeLabel"
         
         return label
+    }()
+    
+    lazy var daysRemainingLabel: UILabel = {
+        let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 18)
+        label.text = "Este projeto finaliza em 8 dias"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "UserProjectCell.daysRemainingLabel"
+        return label
+    }()
+    
+    lazy var partnershipStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "UserProjectCell.partnershipStackView"
+        //stackView.backgroundColor = .red
+        return stackView
+    }()
+    
+    lazy var partnershipLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Realizado em parceria com"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "UserProjectCell.partnershipLabel"
+        return label
+    }()
+    
+    lazy var companyLogoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: K.AssetsNames.companyLogo)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.accessibilityIdentifier = "UserProjectCell.companyLogoImageView"
+        return imageView
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -155,13 +191,17 @@ class UserProjectCell: UITableViewCell {
         helpImageView.addSubview(progressStackView)
         progressStackView.addArrangedSubview(progressImageView)
         progressStackView.addArrangedSubview(completeLabel)
+        mainStackView.addArrangedSubview(daysRemainingLabel)
+        mainStackView.addArrangedSubview(partnershipStackView)
+        partnershipStackView.addArrangedSubview(partnershipLabel)
+        partnershipStackView.addArrangedSubview(companyLogoImageView)
         mainView.backgroundColor = .cardColor
     }
     
     func setupConstraints() {
         
         //Main View
-        self.stretch(mainView, top: 10, left: 30, bottom: -10, right: -30)
+        self.stretch(mainView, top: 10, left: 16, bottom: -10, right: -16)
         
         //Main Stack View
         NSLayoutConstraint.activate([
@@ -184,14 +224,20 @@ class UserProjectCell: UITableViewCell {
         
         //Progress Image View
         NSLayoutConstraint.activate([
-            progressImageView.widthAnchor.constraint(equalToConstant: 79),
-            progressImageView.heightAnchor.constraint(equalToConstant: 79)
+            progressImageView.widthAnchor.constraint(equalToConstant: 108),
+            progressImageView.heightAnchor.constraint(equalToConstant: 108)
         ])
         
         //Progress Stack View
         NSLayoutConstraint.activate([
             progressStackView.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor),
             progressStackView.centerYAnchor.constraint(equalTo: helpImageView.centerYAnchor)
+        ])
+        
+        //Company Logo Image View
+        NSLayoutConstraint.activate([
+            companyLogoImageView.widthAnchor.constraint(equalToConstant: 66),
+            companyLogoImageView.heightAnchor.constraint(equalToConstant: 66)
         ])
     }
 }
