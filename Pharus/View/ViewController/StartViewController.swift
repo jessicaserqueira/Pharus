@@ -19,5 +19,18 @@ class StartViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
+<<<<<<< HEAD
+=======
+    
+    override func loadView() {
+        super.loadView()
+        
+        let student: Student = Bundle.main.decode("Student.json")
+        print(student)
+        viewCustom.backgroundColor = .cyan
+        self.view = viewCustom
+    }
+
+>>>>>>> develop
 
 }

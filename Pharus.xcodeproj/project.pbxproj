@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79164BB827F1251C00167B8A /* UIView+Extension.swift */; };
-		7963212927F23AA200A202EE /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963212827F23AA200A202EE /* LoginPresenterTests.swift */; };
 		7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963212F27F23AF000A202EE /* LoginPresenter.swift */; };
 		7963213227F23C9200A202EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963213127F23C9200A202EE /* Constants.swift */; };
 		799768D027EA3B5F0057AFA7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* Student.swift */; };
 		79E6424D27F098D30046A2F0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6424C27F098D30046A2F0 /* Network.swift */; };
+		79F06DA127F28FCD00343865 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */; };
+		79FB0CC927F330FA001D36A7 /* Student.json in Resources */ = {isa = PBXBuildFile; fileRef = 79FB0CC827F330FA001D36A7 /* Student.json */; };
+		79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */; };
 		C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */; };
 		C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */; };
 		C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF2327F1EDA100AD94C9 /* LoginView.swift */; };
@@ -26,11 +28,10 @@
 		C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561A727EA041B007EC5C3 /* Coordinator.swift */; };
 		C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */; };
 		C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */; };
-		C0D2F70427F1E794001C33F3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C0D2F70327F1E794001C33F3 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7963212A27F23AA200A202EE /* PBXContainerItemProxy */ = {
+		79F06DA227F28FCD00343865 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C045617F27EA03A5007EC5C3 /* Project object */;
 			proxyType = 1;
@@ -41,12 +42,14 @@
 
 /* Begin PBXFileReference section */
 		79164BB827F1251C00167B8A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		7963212627F23AA200A202EE /* LoginFormValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginFormValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7963212827F23AA200A202EE /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		7963213127F23C9200A202EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		799768CF27EA3B5F0057AFA7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		79E6424C27F098D30046A2F0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		79F06D9E27F28FCD00343865 /* LoginPresenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginPresenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		79FB0CC827F330FA001D36A7 /* Student.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Student.json; sourceTree = "<group>"; };
+		79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoodinator.swift; sourceTree = "<group>"; };
 		C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C008AF2327F1EDA100AD94C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -62,11 +65,10 @@
 		C04561A727EA041B007EC5C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
-		C0D2F70327F1E794001C33F3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7963212327F23AA200A202EE /* Frameworks */ = {
+		79F06D9B27F28FCD00343865 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -83,18 +85,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7963212727F23AA200A202EE /* LoginFormValidatorTests */ = {
-			isa = PBXGroup;
-			children = (
-				7963212827F23AA200A202EE /* LoginPresenterTests.swift */,
-			);
-			path = LoginFormValidatorTests;
-			sourceTree = "<group>";
-		};
 		79CAD97F27EBD77600A554E0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
+				79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -107,6 +102,14 @@
 			);
 			name = Service;
 			path = Coordinator/Service;
+			sourceTree = "<group>";
+		};
+		79F06D9F27F28FCD00343865 /* LoginPresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */,
+			);
+			path = LoginPresenterTests;
 			sourceTree = "<group>";
 		};
 		C008AF2227F1ED7F00AD94C9 /* View */ = {
@@ -122,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				C045618927EA03A5007EC5C3 /* Pharus */,
+				79F06D9F27F28FCD00343865 /* LoginPresenterTests */,
 				C045618827EA03A5007EC5C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				C045618727EA03A5007EC5C3 /* Pharus.app */,
-				7963212627F23AA200A202EE /* LoginFormValidatorTests.xctest */,
+				79F06D9E27F28FCD00343865 /* LoginPresenterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,7 +142,6 @@
 		C045618927EA03A5007EC5C3 /* Pharus */ = {
 			isa = PBXGroup;
 			children = (
-				C0D2F70327F1E794001C33F3 /* .gitignore */,
 				79E6424B27F098C10046A2F0 /* Service */,
 				79CAD97F27EBD77600A554E0 /* Extensions */,
 				C04561A327EA03BF007EC5C3 /* Coordinator */,
@@ -146,7 +149,6 @@
 				C008AF2227F1ED7F00AD94C9 /* View */,
 				C04561A027EA03AE007EC5C3 /* Presenter */,
 				C045619F27EA03AB007EC5C3 /* SystemDelegate */,
-				7963212727F23AA200A202EE /* LoginFormValidatorTests */,
 				C045619327EA03A6007EC5C3 /* Assets.xcassets */,
 				C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */,
 				C045619827EA03A6007EC5C3 /* Info.plist */,
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				799768CF27EA3B5F0057AFA7 /* Student.swift */,
+				79FB0CC827F330FA001D36A7 /* Student.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,22 +204,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7963212527F23AA200A202EE /* LoginFormValidatorTests */ = {
+		79F06D9D27F28FCD00343865 /* LoginPresenterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7963212C27F23AA200A202EE /* Build configuration list for PBXNativeTarget "LoginFormValidatorTests" */;
+			buildConfigurationList = 79F06DA427F28FCD00343865 /* Build configuration list for PBXNativeTarget "LoginPresenterTests" */;
 			buildPhases = (
-				7963212227F23AA200A202EE /* Sources */,
-				7963212327F23AA200A202EE /* Frameworks */,
-				7963212427F23AA200A202EE /* Resources */,
+				79F06D9A27F28FCD00343865 /* Sources */,
+				79F06D9B27F28FCD00343865 /* Frameworks */,
+				79F06D9C27F28FCD00343865 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7963212B27F23AA200A202EE /* PBXTargetDependency */,
+				79F06DA327F28FCD00343865 /* PBXTargetDependency */,
 			);
-			name = LoginFormValidatorTests;
-			productName = LoginFormValidatorTests;
-			productReference = 7963212627F23AA200A202EE /* LoginFormValidatorTests.xctest */;
+			name = LoginPresenterTests;
+			productName = LoginPresenterTests;
+			productReference = 79F06D9E27F28FCD00343865 /* LoginPresenterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C045618627EA03A5007EC5C3 /* Pharus */ = {
@@ -245,7 +248,7 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					7963212527F23AA200A202EE = {
+					79F06D9D27F28FCD00343865 = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = C045618627EA03A5007EC5C3;
 					};
@@ -268,13 +271,13 @@
 			projectRoot = "";
 			targets = (
 				C045618627EA03A5007EC5C3 /* Pharus */,
-				7963212527F23AA200A202EE /* LoginFormValidatorTests */,
+				79F06D9D27F28FCD00343865 /* LoginPresenterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7963212427F23AA200A202EE /* Resources */ = {
+		79F06D9C27F28FCD00343865 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,19 +289,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C045619727EA03A6007EC5C3 /* LaunchScreen.storyboard in Resources */,
-				C0D2F70427F1E794001C33F3 /* .gitignore in Resources */,
 				C045619427EA03A6007EC5C3 /* Assets.xcassets in Resources */,
+				79FB0CC927F330FA001D36A7 /* Student.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7963212227F23AA200A202EE /* Sources */ = {
+		79F06D9A27F28FCD00343865 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7963212927F23AA200A202EE /* LoginPresenterTests.swift in Sources */,
+				79F06DA127F28FCD00343865 /* LoginPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +311,7 @@
 			files = (
 				C008AF2F27F1F98500AD94C9 /* LoginViewController.swift in Sources */,
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
+				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
 				C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */,
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
@@ -326,10 +330,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7963212B27F23AA200A202EE /* PBXTargetDependency */ = {
+		79F06DA327F28FCD00343865 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C045618627EA03A5007EC5C3 /* Pharus */;
-			targetProxy = 7963212A27F23AA200A202EE /* PBXContainerItemProxy */;
+			targetProxy = 79F06DA227F28FCD00343865 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -345,7 +349,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7963212D27F23AA200A202EE /* Debug */ = {
+		79F06DA527F28FCD00343865 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -354,9 +358,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QNHX86K7F4;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.colen.victor.LoginFormValidatorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.colen.victor.LoginPresenterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -365,7 +369,7 @@
 			};
 			name = Debug;
 		};
-		7963212E27F23AA200A202EE /* Release */ = {
+		79F06DA627F28FCD00343865 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -374,9 +378,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QNHX86K7F4;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.colen.victor.LoginFormValidatorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.colen.victor.LoginPresenterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -540,11 +544,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7963212C27F23AA200A202EE /* Build configuration list for PBXNativeTarget "LoginFormValidatorTests" */ = {
+		79F06DA427F28FCD00343865 /* Build configuration list for PBXNativeTarget "LoginPresenterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7963212D27F23AA200A202EE /* Debug */,
-				7963212E27F23AA200A202EE /* Release */,
+				79F06DA527F28FCD00343865 /* Debug */,
+				79F06DA627F28FCD00343865 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
