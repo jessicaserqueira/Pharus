@@ -126,18 +126,7 @@ class UserProjectCell: UITableViewCell {
         view.accessibilityIdentifier = "UserProjectCell.descriptionTitleLabel"
         return view
     }()
-    
-    lazy var completeLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Completo"
-        label.font = .systemFont(ofSize: 12)
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectCell.completeLabel"
         
-        return label
-    }()
-    
     lazy var daysRemainingLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 18)
@@ -198,6 +187,7 @@ class UserProjectCell: UITableViewCell {
         self.descriptionLabel.text = project.projectDescription
         self.mentor.text = "Mentor: " + project.mentor
         self.completionBarCircleView.percentage = Double(project.completionStatus)
+        self.percentageCompletionLabel.text = String(project.completionStatus) + "%"
         
     }
     
@@ -218,7 +208,6 @@ class UserProjectCell: UITableViewCell {
         descriptionStackView.addArrangedSubview(helpImageView)
         
         helpImageView.addSubview(percentageCompletionLabel)
-        helpImageView.addSubview(completeLabel)
         
         mainStackView.addArrangedSubview(daysRemainingLabel)
         mainStackView.addArrangedSubview(partnershipStackView)
@@ -264,13 +253,7 @@ class UserProjectCell: UITableViewCell {
             companyLogoImageView.widthAnchor.constraint(equalToConstant: 66),
             companyLogoImageView.heightAnchor.constraint(equalToConstant: 66)
         ])
-        
-        //Complete Label
-        NSLayoutConstraint.activate([
-            completeLabel.bottomAnchor.constraint(equalTo: helpImageView.bottomAnchor, constant: -5),
-            completeLabel.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor)
-        ])
-        
+                
         //Percentage Completion Label
         NSLayoutConstraint.activate([
             percentageCompletionLabel.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor),

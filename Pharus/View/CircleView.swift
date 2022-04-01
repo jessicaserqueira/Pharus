@@ -15,8 +15,6 @@ class CircleView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        
-        makeCircularPath(endAnglePercentage: CGFloat(percentage))
     }
     
     required init?(coder: NSCoder) {
@@ -24,18 +22,18 @@ class CircleView: UIView {
     }
     
     
-   var progressColor = UIColor.white {
+   lazy var progressColor = UIColor.white {
       didSet {
          progressLayer.strokeColor = progressColor.cgColor
       }
    }
-   var trackColor = UIColor.white {
+  lazy var trackColor = UIColor.white {
       didSet {
          trackLayer.strokeColor = trackColor.cgColor
       }
    }
     
-    var percentage = 0.0 {
+   lazy var percentage = 0.0 {
         didSet {
             makeCircularPath(endAnglePercentage: percentage)
         }
