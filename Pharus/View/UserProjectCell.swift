@@ -39,7 +39,7 @@ class UserProjectCell: UITableViewCell {
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 7
+        stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "UserProjectCell.mainStackView"
         
@@ -166,7 +166,7 @@ class UserProjectCell: UITableViewCell {
     
     lazy var inspirationImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: K.AssetsNames.inspiration)
+        imageView.image = UIImage(named: K.AssetsNames.hourglass)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "UserProjectCell.inspirationImageView"
         return imageView
