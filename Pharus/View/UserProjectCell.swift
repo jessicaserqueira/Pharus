@@ -22,7 +22,6 @@ class UserProjectCell: UITableViewCell {
         stackView.axis = .horizontal
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "UserProjectCell.titleStackView"
-        stackView.backgroundColor = .yellow
         
         return stackView
     }()
@@ -33,7 +32,6 @@ class UserProjectCell: UITableViewCell {
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "UserProejctCell.descriptionStackView"
-        stackView.backgroundColor = .green
         
         return stackView
     }()
@@ -44,7 +42,6 @@ class UserProjectCell: UITableViewCell {
         stackView.spacing = 7
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "UserProjectCell.mainStackView"
-        stackView.backgroundColor = .purple
         
         return stackView
     }()
@@ -104,7 +101,6 @@ class UserProjectCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "UserProjectCell.helpImageView"
-        view.backgroundColor = .blue
         
         return view
     }()
@@ -115,24 +111,27 @@ class UserProjectCell: UITableViewCell {
         label.font = .boldSystemFont(ofSize: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.descriptionTitleLabel"
+        
         return label
     }()
     
     lazy var completionBarCircleView: CircleView = {
         let view = CircleView()
+        view.trackColor = UIColor(red: 0.765, green: 0.765, blue: 0.765, alpha: 1)
+        view.progressColor = UIColor(red: 0.153, green: 0.153, blue: 0.153, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.trackColor = .yellow
-        view.progressColor = .red
         view.accessibilityIdentifier = "UserProjectCell.descriptionTitleLabel"
+        
         return view
     }()
-        
+    
     lazy var daysRemainingLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 18)
         label.text = "Este projeto finaliza em 8 dias"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.daysRemainingLabel"
+        
         return label
     }()
     
@@ -141,7 +140,6 @@ class UserProjectCell: UITableViewCell {
         stackView.axis = .horizontal
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "UserProjectCell.partnershipStackView"
-        stackView.backgroundColor = .red
         
         return stackView
     }()
@@ -160,6 +158,7 @@ class UserProjectCell: UITableViewCell {
         imageView.image = UIImage(named: K.AssetsNames.companyLogo)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "UserProjectCell.companyLogoImageView"
+        
         return imageView
     }()
     
@@ -168,6 +167,7 @@ class UserProjectCell: UITableViewCell {
         label.text = "100%"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.percentageCompletionLabel"
+        
         return label
     }()
     
@@ -214,7 +214,7 @@ class UserProjectCell: UITableViewCell {
         
         partnershipStackView.addArrangedSubview(partnershipLabel)
         partnershipStackView.addArrangedSubview(companyLogoImageView)
-                
+        
         helpImageView.addSubview(completionBarCircleView)
         
         mainView.backgroundColor = .cardColor
@@ -253,7 +253,7 @@ class UserProjectCell: UITableViewCell {
             companyLogoImageView.widthAnchor.constraint(equalToConstant: 66),
             companyLogoImageView.heightAnchor.constraint(equalToConstant: 66)
         ])
-                
+        
         //Percentage Completion Label
         NSLayoutConstraint.activate([
             percentageCompletionLabel.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor),
