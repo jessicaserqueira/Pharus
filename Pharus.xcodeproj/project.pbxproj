@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79164BB827F1251C00167B8A /* UIView+Extension.swift */; };
+		79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79222EA027F63FC50051334A /* CGFloat+Extension.swift */; };
+		79222EA327F643D60051334A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79222EA227F643D60051334A /* CircleView.swift */; };
 		7943975827F3C5BF0075102B /* UserProjectsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */; };
 		7943975A27F3C5D20075102B /* UserProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975927F3C5D20075102B /* UserProjectsViewController.swift */; };
 		7943975C27F3C5E40075102B /* UserProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975B27F3C5E40075102B /* UserProjectsView.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		79164BB827F1251C00167B8A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		79222EA027F63FC50051334A /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		79222EA227F643D60051334A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsCoordinator.swift; sourceTree = "<group>"; };
 		7943975927F3C5D20075102B /* UserProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsViewController.swift; sourceTree = "<group>"; };
 		7943975B27F3C5E40075102B /* UserProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsView.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
 				79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */,
 				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
+				79222EA027F63FC50051334A /* CGFloat+Extension.swift */,
 				797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */,
 			);
 			name = Extensions;
@@ -130,6 +135,7 @@
 				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
 				7943975B27F3C5E40075102B /* UserProjectsView.swift */,
 				7943975D27F3C6020075102B /* UserProjectCell.swift */,
+				79222EA227F643D60051334A /* CircleView.swift */,
 				C04561A127EA03B1007EC5C3 /* ViewController */,
 			);
 			path = View;
@@ -327,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79222EA327F643D60051334A /* CircleView.swift in Sources */,
 				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
 				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
@@ -349,6 +356,7 @@
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
 				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
 				7943976027F3C6130075102B /* UserProjectsPresenter.swift in Sources */,
+				79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

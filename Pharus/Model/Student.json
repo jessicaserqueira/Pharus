@@ -41,7 +41,8 @@
             "startDate": "01/01/2022",
             "endDate": "03/02/2022",
             "rules": "...",
-            "mentor": "Fabiano El Brabo Tomoda"
+            "mentor": "Fabiano El Brabo Tomoda",
+            "completionStatus": 45.8
         }
     ],
     "companyProjects": [
@@ -54,7 +55,8 @@
             "startDate": "01/01/2022",
             "endDate": "03/02/2022",
             "rules": "...",
-            "mentor": "Ju El brabo liano"
+            "mentor": "Ju El brabo liano",
+            "completionStatus": 81.8
         }
     ]
 }

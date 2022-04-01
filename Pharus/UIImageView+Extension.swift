@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIImageView {
-    
     func setRounded() {
         let radius = self.frame.width
         self.layer.cornerRadius = 0.5 * radius

@@ -62,7 +62,6 @@ class UserProjectCell: UITableViewCell {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Titulo do projeto"
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
         label.font = .systemFont(ofSize: 20, weight: .heavy)
@@ -83,7 +82,6 @@ class UserProjectCell: UITableViewCell {
     
     lazy var mentor: UILabel = {
         let label = UILabel()
-        label.text = "mentor: lorem ipsum dolor sit amet"
         label.numberOfLines = 1
         label.font = .boldSystemFont(ofSize: 18)
         label.lineBreakMode = .byTruncatingTail
@@ -95,7 +93,6 @@ class UserProjectCell: UITableViewCell {
     
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "ajfdlakjdflkah dfjha dsfjkhaskjdf jkasdhf kjsldhf akjhsdf hweui fysdjkn fpiue hfjdsn hfhaeu f"
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.descriptionLabel"
@@ -121,13 +118,13 @@ class UserProjectCell: UITableViewCell {
         return label
     }()
     
-    lazy var progressImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "Progress")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "UserProjectCell.progressImageView"
-        
-        return imageView
+    lazy var completionBarCircleView: CircleView = {
+        let view = CircleView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.trackColor = .yellow
+        view.progressColor = .red
+        view.accessibilityIdentifier = "UserProjectCell.descriptionTitleLabel"
+        return view
     }()
     
     lazy var completeLabel: UILabel = {
@@ -177,6 +174,14 @@ class UserProjectCell: UITableViewCell {
         return imageView
     }()
     
+    lazy var percentageCompletionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "100%"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "UserProjectCell.percentageCompletionLabel"
+        return label
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -192,6 +197,8 @@ class UserProjectCell: UITableViewCell {
         self.titleLabel.text = project.name
         self.descriptionLabel.text = project.projectDescription
         self.mentor.text = "Mentor: " + project.mentor
+        self.completionBarCircleView.percentage = Double(project.completionStatus)
+        
     }
     
     func configureSubviews() {
@@ -210,16 +217,16 @@ class UserProjectCell: UITableViewCell {
         descriptionStackView.addArrangedSubview(descriptionLabel)
         descriptionStackView.addArrangedSubview(helpImageView)
         
-        helpImageView.addSubview(progressStackView)
-        
-        progressStackView.addArrangedSubview(progressImageView)
-        progressStackView.addArrangedSubview(completeLabel)
+        helpImageView.addSubview(percentageCompletionLabel)
+        helpImageView.addSubview(completeLabel)
         
         mainStackView.addArrangedSubview(daysRemainingLabel)
         mainStackView.addArrangedSubview(partnershipStackView)
         
         partnershipStackView.addArrangedSubview(partnershipLabel)
         partnershipStackView.addArrangedSubview(companyLogoImageView)
+                
+        helpImageView.addSubview(completionBarCircleView)
         
         mainView.backgroundColor = .cardColor
     }
@@ -252,22 +259,28 @@ class UserProjectCell: UITableViewCell {
             descriptionStackView.heightAnchor.constraint(equalToConstant: 158)
         ])
         
-        //Progress Image View
-        NSLayoutConstraint.activate([
-            progressImageView.widthAnchor.constraint(equalToConstant: 108),
-            progressImageView.heightAnchor.constraint(equalToConstant: 108)
-        ])
-        
-        //Progress Stack View
-        NSLayoutConstraint.activate([
-            progressStackView.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor),
-            progressStackView.centerYAnchor.constraint(equalTo: helpImageView.centerYAnchor),
-        ])
-        
         //Company Logo Image View
         NSLayoutConstraint.activate([
             companyLogoImageView.widthAnchor.constraint(equalToConstant: 66),
             companyLogoImageView.heightAnchor.constraint(equalToConstant: 66)
+        ])
+        
+        //Complete Label
+        NSLayoutConstraint.activate([
+            completeLabel.bottomAnchor.constraint(equalTo: helpImageView.bottomAnchor, constant: -5),
+            completeLabel.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor)
+        ])
+        
+        //Percentage Completion Label
+        NSLayoutConstraint.activate([
+            percentageCompletionLabel.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor),
+            percentageCompletionLabel.centerYAnchor.constraint(equalTo: helpImageView.centerYAnchor),
+        ])
+        
+        //Completion Bar Circle View
+        NSLayoutConstraint.activate([
+            completionBarCircleView.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor),
+            completionBarCircleView.centerYAnchor.constraint(equalTo: helpImageView.centerYAnchor),
         ])
     }
 }

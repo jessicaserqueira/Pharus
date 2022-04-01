@@ -32,11 +32,13 @@ struct Project: Codable {
     let medal, projectDescription, scoreDescription, startDate: String
     let endDate, rules: String
     let mentor: String
+    let completionStatus: Float
 
     enum CodingKeys: String, CodingKey {
         case name, score, medal
         case projectDescription = "description"
         case scoreDescription, startDate, endDate, rules, mentor
+        case completionStatus
     }
 }
 
