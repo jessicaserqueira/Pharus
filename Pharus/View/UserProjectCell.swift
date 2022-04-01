@@ -89,6 +89,13 @@ class UserProjectCell: UITableViewCell {
         return label
     }()
     
+    lazy var descriptionLabelView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "UserProjectCell.descriptionLabelView"
+        return view
+    }()
+    
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -243,7 +250,10 @@ class UserProjectCell: UITableViewCell {
         mainStackView.addArrangedSubview(descriptionTitleLabel)
         mainStackView.addArrangedSubview(descriptionStackView)
         
-        descriptionStackView.addArrangedSubview(descriptionLabel)
+        descriptionStackView.addArrangedSubview(descriptionLabelView)
+        
+        descriptionLabelView.addSubview(descriptionLabel)
+        
         descriptionStackView.addArrangedSubview(completionStackView)
         
         completionStackView.addArrangedSubview(completionCircleHelpView)
@@ -295,6 +305,14 @@ class UserProjectCell: UITableViewCell {
         //Description Stack View
         NSLayoutConstraint.activate([
             descriptionStackView.heightAnchor.constraint(equalToConstant: 144)
+        ])
+        
+        //Description Label
+        NSLayoutConstraint.activate([
+            descriptionLabel.topAnchor.constraint(equalTo: descriptionLabelView.topAnchor),
+            descriptionLabel.trailingAnchor.constraint(equalTo: descriptionLabelView.trailingAnchor),
+            descriptionLabel.leadingAnchor.constraint(equalTo: descriptionLabelView.leadingAnchor),
+            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: descriptionLabelView.bottomAnchor)
         ])
         
         //Percentage Completion Label

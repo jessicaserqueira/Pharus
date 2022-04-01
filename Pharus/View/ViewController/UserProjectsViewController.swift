@@ -40,6 +40,7 @@ class UserProjectsViewController: UIViewController {
     }
     
     func setNavigationBar() {
+        
 //        let button = UIButton()
 //        button.frame = CGRect(x: 0, y: 0, width: 45, height: 45)
 //        let color = UIColor(patternImage: UIImage(named: "userPicture")!)
