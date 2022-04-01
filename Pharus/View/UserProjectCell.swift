@@ -168,19 +168,37 @@ class UserProjectCell: UITableViewCell {
     lazy var partnershipStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
+        stackView.spacing = 26
+        stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "UserProjectCell.partnershipStackView"
         
         return stackView
     }()
     
+    lazy var partnershipLabelView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "UserProjectCell.partnershipLabelView"
+        
+        return view
+    }()
+    
     lazy var partnershipLabel: UILabel = {
         let label = UILabel()
-        label.text = "Realizado em parceria com"
+        label.text = "Parceria: "
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.partnershipLabel"
         
         return label
+    }()
+    
+    lazy var companyLogoView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "UserProjectCell.companyLogoView"
+        
+        return view
     }()
     
     lazy var companyLogoImageView: UIImageView = {
@@ -233,7 +251,6 @@ class UserProjectCell: UITableViewCell {
         completionCircleHelpView.addSubview(completionBarCircleView)
         completionCircleHelpView.addSubview(percentageCompletionLabel)
         
-        //completionStackView.addArrangedSubview(percentageCompletionLabel)
         completionStackView.addArrangedSubview(daysRemainingStackView)
         
         daysRemainingStackView.addArrangedSubview(inspirationImageView)
@@ -241,10 +258,13 @@ class UserProjectCell: UITableViewCell {
         
         mainStackView.addArrangedSubview(partnershipStackView)
         
-        partnershipStackView.addArrangedSubview(partnershipLabel)
-        partnershipStackView.addArrangedSubview(companyLogoImageView)
+        partnershipStackView.addArrangedSubview(partnershipLabelView)
         
-        completionStackView.addSubview(completionBarCircleView)
+        partnershipLabelView.addSubview(partnershipLabel)
+        
+        partnershipStackView.addArrangedSubview(companyLogoView)
+        
+        companyLogoView.addSubview(companyLogoImageView)
         
         mainView.backgroundColor = .cardColor
     }
@@ -267,7 +287,7 @@ class UserProjectCell: UITableViewCell {
             mentor.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor)
         ])
         
-        //help
+        //Completion Stack View
         NSLayoutConstraint.activate([
             completionStackView.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
         ])
@@ -275,12 +295,6 @@ class UserProjectCell: UITableViewCell {
         //Description Stack View
         NSLayoutConstraint.activate([
             descriptionStackView.heightAnchor.constraint(equalToConstant: 144)
-        ])
-        
-        //Company Logo Image View
-        NSLayoutConstraint.activate([
-            companyLogoImageView.widthAnchor.constraint(equalToConstant: 66),
-            companyLogoImageView.heightAnchor.constraint(equalToConstant: 66)
         ])
         
         //Percentage Completion Label
@@ -299,5 +313,20 @@ class UserProjectCell: UITableViewCell {
         NSLayoutConstraint.activate([
             inspirationImageView.heightAnchor.constraint(equalToConstant: 36)
         ])
+        
+        //Company Logo Image View
+        NSLayoutConstraint.activate([
+            companyLogoImageView.widthAnchor.constraint(equalToConstant: 66),
+            companyLogoImageView.heightAnchor.constraint(equalToConstant: 66),
+            companyLogoImageView.leadingAnchor.constraint(equalTo: companyLogoView.leadingAnchor),
+            companyLogoImageView.centerYAnchor.constraint(equalTo: partnershipStackView.centerYAnchor)
+        ])
+        
+        //Partnership Label
+        NSLayoutConstraint.activate([
+            partnershipLabel.trailingAnchor.constraint(equalTo: partnershipLabelView.trailingAnchor),
+            partnershipLabel.centerYAnchor.constraint(equalTo: partnershipStackView.centerYAnchor),
+        ])
+        
     }
 }
