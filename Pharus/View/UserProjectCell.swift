@@ -61,29 +61,30 @@ class UserProjectCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
-        label.font = .systemFont(ofSize: 20, weight: .heavy)
+        label.font = .systemFont(ofSize: 20, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.titleLabel"
         
         return label
     }()
     
-    lazy var medalImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: K.AssetsNames.medal)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "UserProjectCell.medalImageView"
-        
-        return imageView
-    }()
-    
     lazy var mentor: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.font = .boldSystemFont(ofSize: 18)
+        label.font = .systemFont(ofSize: 18, weight: .bold)
         label.lineBreakMode = .byTruncatingTail
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.mentorsLabel"
+        
+        return label
+    }()
+    
+    lazy var descriptionTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Descrição:"
+        label.font = .boldSystemFont(ofSize: 18)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "UserProjectCell.descriptionTitleLabel"
         
         return label
     }()
@@ -97,22 +98,23 @@ class UserProjectCell: UITableViewCell {
         return label
     }()
     
-    lazy var helpImageView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "UserProjectCell.helpImageView"
+    lazy var completionStackView: UIStackView = {
+        let stackview = UIStackView()
+        stackview.axis = .vertical
+        stackview.alignment = .center
+        stackview.spacing = 26
+        stackview.translatesAutoresizingMaskIntoConstraints = false
+        stackview.accessibilityIdentifier = "UserProjectCell.helpImageView"
         
-        return view
+        return stackview
     }()
     
-    lazy var descriptionTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Descrição:"
-        label.font = .boldSystemFont(ofSize: 18)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectCell.descriptionTitleLabel"
+    lazy var completionCircleHelpView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "UserProjectCell.completionCircleHelpView"
         
-        return label
+        return view
     }()
     
     lazy var completionBarCircleView: CircleView = {
@@ -125,14 +127,42 @@ class UserProjectCell: UITableViewCell {
         return view
     }()
     
+    lazy var percentageCompletionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "100%"
+        label.font = .systemFont(ofSize: 14)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "UserProjectCell.percentageCompletionLabel"
+        
+        return label
+    }()
+    
+    lazy var daysRemainingStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 11.67
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "UserProjectCell.daysRemainingStackView"
+        
+        return stackView
+    }()
+    
     lazy var daysRemainingLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 18)
-        label.text = "Este projeto finaliza em 8 dias"
+        label.text = "8 dias"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.daysRemainingLabel"
         
         return label
+    }()
+    
+    lazy var inspirationImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: K.AssetsNames.inspiration)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.accessibilityIdentifier = "UserProjectCell.inspirationImageView"
+        return imageView
     }()
     
     lazy var partnershipStackView: UIStackView = {
@@ -160,15 +190,6 @@ class UserProjectCell: UITableViewCell {
         imageView.accessibilityIdentifier = "UserProjectCell.companyLogoImageView"
         
         return imageView
-    }()
-    
-    lazy var percentageCompletionLabel: UILabel = {
-        let label = UILabel()
-        label.text = "100%"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectCell.percentageCompletionLabel"
-        
-        return label
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -199,23 +220,31 @@ class UserProjectCell: UITableViewCell {
         mainStackView.addArrangedSubview(titleStackView)
         
         titleStackView.addArrangedSubview(titleLabel)
-        titleStackView.addArrangedSubview(medalImageView)
         
         mainStackView.addArrangedSubview(mentor)
+        mainStackView.addArrangedSubview(descriptionTitleLabel)
         mainStackView.addArrangedSubview(descriptionStackView)
         
         descriptionStackView.addArrangedSubview(descriptionLabel)
-        descriptionStackView.addArrangedSubview(helpImageView)
+        descriptionStackView.addArrangedSubview(completionStackView)
         
-        helpImageView.addSubview(percentageCompletionLabel)
+        completionStackView.addArrangedSubview(completionCircleHelpView)
         
-        mainStackView.addArrangedSubview(daysRemainingLabel)
+        completionCircleHelpView.addSubview(completionBarCircleView)
+        completionCircleHelpView.addSubview(percentageCompletionLabel)
+        
+        //completionStackView.addArrangedSubview(percentageCompletionLabel)
+        completionStackView.addArrangedSubview(daysRemainingStackView)
+        
+        daysRemainingStackView.addArrangedSubview(inspirationImageView)
+        daysRemainingStackView.addArrangedSubview(daysRemainingLabel)
+        
         mainStackView.addArrangedSubview(partnershipStackView)
         
         partnershipStackView.addArrangedSubview(partnershipLabel)
         partnershipStackView.addArrangedSubview(companyLogoImageView)
         
-        helpImageView.addSubview(completionBarCircleView)
+        completionStackView.addSubview(completionBarCircleView)
         
         mainView.backgroundColor = .cardColor
     }
@@ -223,14 +252,14 @@ class UserProjectCell: UITableViewCell {
     func setupConstraints() {
         
         //Main View
-        self.stretch(mainView, top: 10, left: 16, bottom: -10, right: -16)
+        self.stretch(mainView, top: 16, left: 16, bottom: -16, right: -16)
         
         //Main Stack View
         NSLayoutConstraint.activate([
-            mainStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 21),
-            mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -23),
-            mainStackView.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 17),
-            mainStackView.bottomAnchor.constraint(equalTo: mainView.bottomAnchor, constant: -20)
+            mainStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 8),
+            mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -8),
+            mainStackView.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 24.5),
+            mainStackView.bottomAnchor.constraint(equalTo: mainView.bottomAnchor, constant: -8)
         ])
         
         //Mentors Label
@@ -240,12 +269,12 @@ class UserProjectCell: UITableViewCell {
         
         //help
         NSLayoutConstraint.activate([
-            helpImageView.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
+            completionStackView.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
         ])
         
         //Description Stack View
         NSLayoutConstraint.activate([
-            descriptionStackView.heightAnchor.constraint(equalToConstant: 158)
+            descriptionStackView.heightAnchor.constraint(equalToConstant: 144)
         ])
         
         //Company Logo Image View
@@ -256,14 +285,19 @@ class UserProjectCell: UITableViewCell {
         
         //Percentage Completion Label
         NSLayoutConstraint.activate([
-            percentageCompletionLabel.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor),
-            percentageCompletionLabel.centerYAnchor.constraint(equalTo: helpImageView.centerYAnchor),
+            percentageCompletionLabel.centerXAnchor.constraint(equalTo: completionCircleHelpView.centerXAnchor),
+            percentageCompletionLabel.centerYAnchor.constraint(equalTo: completionCircleHelpView.centerYAnchor),
         ])
         
         //Completion Bar Circle View
         NSLayoutConstraint.activate([
-            completionBarCircleView.centerXAnchor.constraint(equalTo: helpImageView.centerXAnchor),
-            completionBarCircleView.centerYAnchor.constraint(equalTo: helpImageView.centerYAnchor),
+            completionBarCircleView.centerXAnchor.constraint(equalTo: completionCircleHelpView.centerXAnchor),
+            completionBarCircleView.centerYAnchor.constraint(equalTo: completionCircleHelpView.centerYAnchor),
+        ])
+        
+        //Inspiration Image View
+        NSLayoutConstraint.activate([
+            inspirationImageView.heightAnchor.constraint(equalToConstant: 36)
         ])
     }
 }

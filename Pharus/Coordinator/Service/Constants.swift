@@ -21,5 +21,6 @@ struct K {
         static let backButton = "backButtonImage"
         static let medal = "Medalha"
         static let companyLogo = "havaianas"
+        static let inspiration = "inspiration"
     }
 }

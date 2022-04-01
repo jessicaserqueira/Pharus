@@ -43,14 +43,14 @@ class CircleView: UIView {
         
         let progressLayerPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2,
                                                                 y: frame.size.height/2),
-                                             radius: 50,
+                                             radius: 40,
                                              startAngle: CGFloat(270).toRadians(),
                                              endAngle: CGFloat(270).toRadians() * (endAnglePercentage/100),
                                              clockwise: true)
         
         let trackLayerPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2,
                                                              y: frame.size.height/2),
-                                          radius: 50,
+                                          radius: 40,
                                           startAngle: CGFloat(0).toRadians(),
                                           endAngle: CGFloat(360).toRadians(),
                                           clockwise: true)
