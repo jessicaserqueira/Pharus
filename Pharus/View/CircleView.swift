@@ -30,7 +30,6 @@ class CircleView: UIView {
         }
     }
     
-    
     override init(frame: CGRect) {
         super.init(frame: .zero)
     }
@@ -62,7 +61,6 @@ class CircleView: UIView {
         trackLayer.lineWidth = 15
         trackLayer.strokeEnd = 1.0
         layer.addSublayer(trackLayer)
-        
         
         progressLayer.path = progressLayerPath.cgPath
         progressLayer.fillColor = UIColor.clear.cgColor
