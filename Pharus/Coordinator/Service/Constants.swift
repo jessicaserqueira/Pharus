@@ -23,4 +23,8 @@ struct K {
         static let companyLogo = "havaianas"
         static let hourglass = "hourglass"
     }
+    
+    struct DateFormats {
+        static let projectDateFormat = "dd/MM/yyyy"
+    }
 }

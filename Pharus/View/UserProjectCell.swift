@@ -236,7 +236,7 @@ class UserProjectCell: UITableViewCell {
         self.percentageCompletionLabel.text = String(project.completionStatus) + "%"
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = K.DateFormats.projectDateFormat
         
         let projectStartDate = dateFormatter.date(from:project.startDate)!
         let projectEndDate = dateFormatter.date(from: project.endDate)!
@@ -267,6 +267,8 @@ class UserProjectCell: UITableViewCell {
         completionStackView.addArrangedSubview(completionCircleHelpView)
         
         completionCircleHelpView.addSubview(completionBarCircleView)
+        
+        //Making circle start from intended position
         completionBarCircleView.transform = CGAffineTransform(rotationAngle: 180.7)
         
         completionCircleHelpView.addSubview(percentageCompletionLabel)

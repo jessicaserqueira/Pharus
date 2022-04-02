@@ -40,11 +40,18 @@ class UserProjectsViewController: UIViewController {
     }
     
     func setNavigationBar() {
-        let image = UIImage(named: "userPicture")?.withRenderingMode(.alwaysOriginal)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image,
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(profilePicTapped))
+        let image = UIImage(named: "userPicture")
+        let button = UIButton(type: .custom)
+            button.frame = CGRect(x: 0, y: -20, width: 60, height: 60)
+            button.layer.cornerRadius = 0.5 * button.bounds.size.width
+            button.clipsToBounds = true
+            button.setImage(image, for: .normal)
+            button.addTarget(self, action: #selector(profilePicTapped), for: .touchUpInside)
+        
+        let p = UIBarButtonItem()
+        p.customView = button
+        navigationItem.rightBarButtonItem = p
+        
         
         var backButtonImage = UIImage(named: K.AssetsNames.backButton)
         backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
