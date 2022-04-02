@@ -184,19 +184,25 @@ class LoginView: UIView {
     }
     
     func configureSubviews() {
-        backgroundColor = .white
         addSubview(mainView)
+        
         mainView.addSubview(mainStackView)
+        
         mainStackView.addArrangedSubview(logoImageView)
         mainStackView.addArrangedSubview(loginTitle)
         mainStackView.addArrangedSubview(emailStackView)
+        
         emailStackView.addArrangedSubview(emailLabel)
         emailStackView.addArrangedSubview(emailTextField)
+        
         mainStackView.addArrangedSubview(passwordStackView)
+        
         passwordStackView.addArrangedSubview(passwordLabel)
         passwordStackView.addArrangedSubview(passwordTextField)
         passwordStackView.addArrangedSubview(changePasswordLabel)
+        
         mainStackView.addArrangedSubview(loginButtonView)
+        
         loginButtonView.addSubview(loginButton)
     }
     
@@ -204,7 +210,6 @@ class LoginView: UIView {
         
         //Main View
         self.stretch(mainView)
-        backgroundColor = .white
         
         //Logo Image View
         NSLayoutConstraint.activate([

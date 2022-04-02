@@ -33,7 +33,7 @@
     "score": 1300,
     "schoolProjects": [
         {
-            "name": "Minha primeira página web",
+            "name": "Minha primeira página web kdjfoi jdfiosud fiosu fiuds",
             "score": 68,
             "medal": "gold",
             "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
@@ -41,10 +41,8 @@
             "startDate": "01/01/2022",
             "endDate": "03/02/2022",
             "rules": "...",
-            "mentors": [
-                "Lucas Daniel",
-                "Melissa Ferdinando"
-            ]
+            "mentor": "Fabiano El Brabo Tomoda",
+            "completionStatus": 32.7
         }
     ],
     "companyProjects": [
@@ -52,15 +50,13 @@
             "name": "Minha página web muito braba",
             "score": 43,
             "medal": "emerald",
-            "description": "O aluno deve fazer uma página web utilizando React.js",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum elit tellus, at condimentum mauris sagittis ut. Nam auctor nunc non ipsum blandit tempus. ",
             "scoreDescription": "Página marromeno",
             "startDate": "01/01/2022",
-            "endDate": "03/02/2022",
+            "endDate": "03/03/2022",
             "rules": "...",
-            "mentors": [
-                "Daniel Pereira",
-                "Fernando de olveira da silva"
-            ]
+            "mentor": "Ju El brabo liano",
+            "completionStatus": 81.8
         }
     ]
 }

@@ -22,7 +22,7 @@ class StartCoordinator: Coordinator {
     }
     
     func start() {
-        let startViewController = StartViewController.init()
+        let startViewController = StartViewController()
         startViewController.coordinator = self
         navigationController.setNavigationBarHidden(true, animated: true)
         navigationController.pushViewController(startViewController, animated: true)

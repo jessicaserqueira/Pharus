@@ -22,7 +22,7 @@ class LoginCoordinator: Coordinator {
     }
     
     func start() {
-        let loginViewController = LoginViewController.init()
+        let loginViewController = LoginViewController()
         loginViewController.coordinator = self
         navigationController.setNavigationBarHidden(true, animated: true)
         navigationController.pushViewController(loginViewController, animated: true)
