@@ -21,7 +21,7 @@ extension Date {
         Calendar.current.dateComponents([.weekOfMonth], from: date, to: otherDate).weekOfMonth ?? 0
     }
     
-    func getDifferneceInDays(between date: Date, and otherDate: Date) -> Int {
+    func getDifferenceInDays(between date: Date, and otherDate: Date) -> Int {
         Calendar.current.dateComponents([.day], from: date, to: otherDate).day ?? 0
     }
     
