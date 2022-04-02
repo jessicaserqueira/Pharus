@@ -235,6 +235,14 @@ class UserProjectCell: UITableViewCell {
         self.completionBarCircleView.percentage = Double(project.completionStatus)
         self.percentageCompletionLabel.text = String(project.completionStatus) + "%"
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        let projectStartDate = dateFormatter.date(from:project.startDate)!
+        let projectEndDate = dateFormatter.date(from: project.endDate)!
+        
+        self.daysRemainingLabel.text = String(Date().getDifferneceInDays(between: projectStartDate, and: projectEndDate)) + " Dias"
+        
     }
     
     func configureSubviews() {
