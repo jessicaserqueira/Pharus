@@ -9,6 +9,8 @@ import UIKit
 
 class UserProjectCell: UITableViewCell {
     
+    //MARK: - Views
+    
     lazy var mainView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -217,6 +219,8 @@ class UserProjectCell: UITableViewCell {
         return imageView
     }()
     
+    //MARK: - Initializers
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -238,11 +242,11 @@ class UserProjectCell: UITableViewCell {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = K.DateFormats.projectDateFormat
         
-        let projectStartDate = dateFormatter.date(from:project.startDate)!
-        let projectEndDate = dateFormatter.date(from: project.endDate)!
+        let projectStartDate = dateFormatter.date(from: project.startDate) ?? Date()
+        let projectEndDate = dateFormatter.date(from: project.endDate) ?? Date()
         
-        self.daysRemainingLabel.text = String(Date().getDifferenceInDays(between: projectStartDate, and: projectEndDate)) + " Dias"
-        
+        self.daysRemainingLabel.text = String(Date().getDifferenceInDays(between: projectStartDate,
+                                                                         and: projectEndDate)) + " Dias"
     }
     
     func configureSubviews() {
@@ -291,6 +295,7 @@ class UserProjectCell: UITableViewCell {
         mainView.backgroundColor = .cardColor
     }
     
+    //MARK: - Constraints
     func setupConstraints() {
         
         //Main View
@@ -330,13 +335,13 @@ class UserProjectCell: UITableViewCell {
         //Percentage Completion Label
         NSLayoutConstraint.activate([
             percentageCompletionLabel.centerXAnchor.constraint(equalTo: completionCircleHelpView.centerXAnchor),
-            percentageCompletionLabel.centerYAnchor.constraint(equalTo: completionCircleHelpView.centerYAnchor),
+            percentageCompletionLabel.centerYAnchor.constraint(equalTo: completionCircleHelpView.centerYAnchor)
         ])
         
         //Completion Bar Circle View
         NSLayoutConstraint.activate([
             completionBarCircleView.centerXAnchor.constraint(equalTo: completionCircleHelpView.centerXAnchor),
-            completionBarCircleView.centerYAnchor.constraint(equalTo: completionCircleHelpView.centerYAnchor),
+            completionBarCircleView.centerYAnchor.constraint(equalTo: completionCircleHelpView.centerYAnchor)
         ])
         
         //Inspiration Image View

@@ -39,30 +39,31 @@ class CircleView: UIView {
     }
     
     func makeCircularPath(completionPercentage: CGFloat) {
+        //Circular corner radius
         self.layer.cornerRadius = self.frame.size.width/2
         
-        let progressLayerPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2,
+        let completionBarLayerPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2,
                                                                 y: frame.size.height/2),
                                              radius: 40,
                                              startAngle: CGFloat(0).toRadians(),
                                              endAngle: CGFloat(360).toRadians() * (completionPercentage/100),
                                              clockwise: true)
         
-        let trackLayerPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2,
+        let circleLayerPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2,
                                                              y: frame.size.height/2),
                                           radius: 40,
                                           startAngle: CGFloat(0).toRadians(),
                                           endAngle: CGFloat(360).toRadians(),
                                           clockwise: true)
         
-        circleLayer.path = trackLayerPath.cgPath
+        circleLayer.path = circleLayerPath.cgPath
         circleLayer.fillColor = UIColor.clear.cgColor
         circleLayer.strokeColor = circleColor.cgColor
         circleLayer.lineWidth = 15
         circleLayer.strokeEnd = 1.0
         layer.addSublayer(circleLayer)
         
-        completionBarLayer.path = progressLayerPath.cgPath
+        completionBarLayer.path = completionBarLayerPath.cgPath
         completionBarLayer.fillColor = UIColor.clear.cgColor
         completionBarLayer.strokeColor = completionBarColor.cgColor
         completionBarLayer.lineWidth = 15.0

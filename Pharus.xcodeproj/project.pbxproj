@@ -12,7 +12,6 @@
 		79222EA327F643D60051334A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79222EA227F643D60051334A /* CircleView.swift */; };
 		7943975827F3C5BF0075102B /* UserProjectsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */; };
 		7943975A27F3C5D20075102B /* UserProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975927F3C5D20075102B /* UserProjectsViewController.swift */; };
-		7943975C27F3C5E40075102B /* UserProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975B27F3C5E40075102B /* UserProjectsView.swift */; };
 		7943975E27F3C6020075102B /* UserProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975D27F3C6020075102B /* UserProjectCell.swift */; };
 		7943976027F3C6130075102B /* UserProjectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975F27F3C6130075102B /* UserProjectsPresenter.swift */; };
 		794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */; };
@@ -28,8 +27,6 @@
 		C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */; };
 		C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */; };
 		C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF2327F1EDA100AD94C9 /* LoginView.swift */; };
-		C008AF2C27F1F95900AD94C9 /* LoginCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF2B27F1F95900AD94C9 /* LoginCoodinator.swift */; };
-		C008AF2F27F1F98500AD94C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF2E27F1F98500AD94C9 /* LoginViewController.swift */; };
 		C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618A27EA03A5007EC5C3 /* AppDelegate.swift */; };
 		C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618C27EA03A5007EC5C3 /* SceneDelegate.swift */; };
 		C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618E27EA03A5007EC5C3 /* StartViewController.swift */; };
@@ -56,7 +53,6 @@
 		79222EA227F643D60051334A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsCoordinator.swift; sourceTree = "<group>"; };
 		7943975927F3C5D20075102B /* UserProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsViewController.swift; sourceTree = "<group>"; };
-		7943975B27F3C5E40075102B /* UserProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsView.swift; sourceTree = "<group>"; };
 		7943975D27F3C6020075102B /* UserProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectCell.swift; sourceTree = "<group>"; };
 		7943975F27F3C6130075102B /* UserProjectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsPresenter.swift; sourceTree = "<group>"; };
 		794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -73,8 +69,6 @@
 		C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoodinator.swift; sourceTree = "<group>"; };
 		C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C008AF2327F1EDA100AD94C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		C008AF2B27F1F95900AD94C9 /* LoginCoodinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoodinator.swift; sourceTree = "<group>"; };
-		C008AF2E27F1F98500AD94C9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C045618727EA03A5007EC5C3 /* Pharus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pharus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C045618A27EA03A5007EC5C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C045618C27EA03A5007EC5C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
-				7943975B27F3C5E40075102B /* UserProjectsView.swift */,
 				7943975D27F3C6020075102B /* UserProjectCell.swift */,
 				79222EA227F643D60051334A /* CircleView.swift */,
 				C04561A127EA03B1007EC5C3 /* ViewController */,
@@ -350,7 +343,6 @@
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
 				7943975827F3C5BF0075102B /* UserProjectsCoordinator.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
-				7943975C27F3C5E40075102B /* UserProjectsView.swift in Sources */,
 				C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */,
 				7943975A27F3C5D20075102B /* UserProjectsViewController.swift in Sources */,
 				C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */,

@@ -9,7 +9,7 @@ import UIKit
 
 class UserProjectsViewController: UIViewController {
     
-    var coordinator: StartFlow?
+    var coordinator: UserProjectsCoordinator?
     let tableView = UITableView()
     var student: Student?
     var projects = [Project]()
@@ -61,7 +61,7 @@ class UserProjectsViewController: UIViewController {
                                                          renderingMode: .alwaysOriginal)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
-                                                           style: .done,
+                                                           style: .plain,
                                                            target: self,
                                                            action: #selector(backButtonPressed))
         
@@ -77,7 +77,8 @@ class UserProjectsViewController: UIViewController {
    }
     
     func setupTableView() {
-        tableView.register(UserProjectCell.self, forCellReuseIdentifier: K.CellReuseIdentifiers.userProjects)
+        tableView.register(UserProjectCell.self,
+                           forCellReuseIdentifier: K.CellReuseIdentifiers.userProjects)
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -100,7 +101,6 @@ extension UserProjectsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       // books.count
         projects.count
     }
     
@@ -116,8 +116,6 @@ extension UserProjectsViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
 }
 
 extension UserProjectsViewController: UITableViewDelegate {
