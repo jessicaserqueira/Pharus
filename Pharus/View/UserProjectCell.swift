@@ -126,8 +126,8 @@ class UserProjectCell: UITableViewCell {
     
     lazy var completionBarCircleView: CircleView = {
         let view = CircleView()
-        view.trackColor = UIColor(red: 0.765, green: 0.765, blue: 0.765, alpha: 1)
-        view.progressColor = UIColor(red: 0.153, green: 0.153, blue: 0.153, alpha: 1)
+        view.circleColor = UIColor(red: 0.765, green: 0.765, blue: 0.765, alpha: 1)
+        view.completionBarColor = UIColor(red: 0.153, green: 0.153, blue: 0.153, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "UserProjectCell.descriptionTitleLabel"
         
@@ -232,7 +232,7 @@ class UserProjectCell: UITableViewCell {
         self.titleLabel.text = project.name
         self.descriptionLabel.text = project.projectDescription
         self.mentor.text = "Mentor: " + project.mentor
-        self.completionBarCircleView.percentage = Double(project.completionStatus)
+        self.completionBarCircleView.completionPercentage = Double(project.completionStatus)
         self.percentageCompletionLabel.text = String(project.completionStatus) + "%"
         
         let dateFormatter = DateFormatter()
