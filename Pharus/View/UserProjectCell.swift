@@ -241,7 +241,7 @@ class UserProjectCell: UITableViewCell {
         let projectStartDate = dateFormatter.date(from:project.startDate)!
         let projectEndDate = dateFormatter.date(from: project.endDate)!
         
-        self.daysRemainingLabel.text = String(Date().getDifferneceInDays(between: projectStartDate, and: projectEndDate)) + " Dias"
+        self.daysRemainingLabel.text = String(Date().getDifferenceInDays(between: projectStartDate, and: projectEndDate)) + " Dias"
         
     }
     
