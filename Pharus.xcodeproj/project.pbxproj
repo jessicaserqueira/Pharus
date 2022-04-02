@@ -7,8 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79164BB827F1251C00167B8A /* UIView+Extension.swift */; };
+		79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79222EA027F63FC50051334A /* CGFloat+Extension.swift */; };
+		79222EA327F643D60051334A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79222EA227F643D60051334A /* CircleView.swift */; };
+		7943975827F3C5BF0075102B /* UserProjectsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */; };
+		7943975A27F3C5D20075102B /* UserProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975927F3C5D20075102B /* UserProjectsViewController.swift */; };
+		7943975E27F3C6020075102B /* UserProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975D27F3C6020075102B /* UserProjectCell.swift */; };
+		7943976027F3C6130075102B /* UserProjectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975F27F3C6130075102B /* UserProjectsPresenter.swift */; };
+		794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */; };
+		7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963212F27F23AF000A202EE /* LoginPresenter.swift */; };
+		7963213227F23C9200A202EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963213127F23C9200A202EE /* Constants.swift */; };
+		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
+		797A68EE27F4768A00ABDAC6 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */; };
 		799768D027EA3B5F0057AFA7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* Student.swift */; };
 		79E6424D27F098D30046A2F0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6424C27F098D30046A2F0 /* Network.swift */; };
+		79F06DA127F28FCD00343865 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */; };
+		79FB0CC927F330FA001D36A7 /* Student.json in Resources */ = {isa = PBXBuildFile; fileRef = 79FB0CC827F330FA001D36A7 /* Student.json */; };
+		79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */; };
+		C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */; };
+		C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */; };
+		C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF2327F1EDA100AD94C9 /* LoginView.swift */; };
 		C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618A27EA03A5007EC5C3 /* AppDelegate.swift */; };
 		C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618C27EA03A5007EC5C3 /* SceneDelegate.swift */; };
 		C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618E27EA03A5007EC5C3 /* StartViewController.swift */; };
@@ -19,9 +37,38 @@
 		C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		79F06DA227F28FCD00343865 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C045617F27EA03A5007EC5C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C045618627EA03A5007EC5C3;
+			remoteInfo = Pharus;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		79164BB827F1251C00167B8A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		79222EA027F63FC50051334A /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		79222EA227F643D60051334A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsCoordinator.swift; sourceTree = "<group>"; };
+		7943975927F3C5D20075102B /* UserProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsViewController.swift; sourceTree = "<group>"; };
+		7943975D27F3C6020075102B /* UserProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectCell.swift; sourceTree = "<group>"; };
+		7943975F27F3C6130075102B /* UserProjectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsPresenter.swift; sourceTree = "<group>"; };
+		794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
+		7963213127F23C9200A202EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		799768CF27EA3B5F0057AFA7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		79E6424C27F098D30046A2F0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		79F06D9E27F28FCD00343865 /* LoginPresenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginPresenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		79FB0CC827F330FA001D36A7 /* Student.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Student.json; sourceTree = "<group>"; };
+		79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoodinator.swift; sourceTree = "<group>"; };
+		C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C008AF2327F1EDA100AD94C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C045618727EA03A5007EC5C3 /* Pharus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pharus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C045618A27EA03A5007EC5C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C045618C27EA03A5007EC5C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +82,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		79F06D9B27F28FCD00343865 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C045618427EA03A5007EC5C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,23 +102,50 @@
 		79CAD97F27EBD77600A554E0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
+				79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */,
+				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
+				79222EA027F63FC50051334A /* CGFloat+Extension.swift */,
+				794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */,
+				797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */,
 			);
-			path = Extensions;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		79E6424B27F098C10046A2F0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				79E6424C27F098D30046A2F0 /* Network.swift */,
+				7963213127F23C9200A202EE /* Constants.swift */,
 			);
 			name = Service;
 			path = Coordinator/Service;
+			sourceTree = "<group>";
+		};
+		79F06D9F27F28FCD00343865 /* LoginPresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */,
+			);
+			path = LoginPresenterTests;
+			sourceTree = "<group>";
+		};
+		C008AF2227F1ED7F00AD94C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
+				7943975D27F3C6020075102B /* UserProjectCell.swift */,
+				79222EA227F643D60051334A /* CircleView.swift */,
+				C04561A127EA03B1007EC5C3 /* ViewController */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C045617E27EA03A5007EC5C3 = {
 			isa = PBXGroup;
 			children = (
 				C045618927EA03A5007EC5C3 /* Pharus */,
+				79F06D9F27F28FCD00343865 /* LoginPresenterTests */,
 				C045618827EA03A5007EC5C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				C045618727EA03A5007EC5C3 /* Pharus.app */,
+				79F06D9E27F28FCD00343865 /* LoginPresenterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +166,7 @@
 				79CAD97F27EBD77600A554E0 /* Extensions */,
 				C04561A327EA03BF007EC5C3 /* Coordinator */,
 				C04561A227EA03B3007EC5C3 /* Model */,
-				C04561A127EA03B1007EC5C3 /* ViewController */,
+				C008AF2227F1ED7F00AD94C9 /* View */,
 				C04561A027EA03AE007EC5C3 /* Presenter */,
 				C045619F27EA03AB007EC5C3 /* SystemDelegate */,
 				C045619327EA03A6007EC5C3 /* Assets.xcassets */,
@@ -106,14 +188,18 @@
 		C04561A027EA03AE007EC5C3 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				7963212F27F23AF000A202EE /* LoginPresenter.swift */,
+				7943975F27F3C6130075102B /* UserProjectsPresenter.swift */,
 			);
-			path = Presenter;
+			name = Presenter;
 			sourceTree = "<group>";
 		};
 		C04561A127EA03B1007EC5C3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				C045618E27EA03A5007EC5C3 /* StartViewController.swift */,
+				C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */,
+				7943975927F3C5D20075102B /* UserProjectsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -122,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				799768CF27EA3B5F0057AFA7 /* Student.swift */,
+				79FB0CC827F330FA001D36A7 /* Student.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +219,8 @@
 				C04561A727EA041B007EC5C3 /* Coordinator.swift */,
 				C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */,
 				C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */,
+				C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */,
+				7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -139,6 +228,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		79F06D9D27F28FCD00343865 /* LoginPresenterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F06DA427F28FCD00343865 /* Build configuration list for PBXNativeTarget "LoginPresenterTests" */;
+			buildPhases = (
+				79F06D9A27F28FCD00343865 /* Sources */,
+				79F06D9B27F28FCD00343865 /* Frameworks */,
+				79F06D9C27F28FCD00343865 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79F06DA327F28FCD00343865 /* PBXTargetDependency */,
+			);
+			name = LoginPresenterTests;
+			productName = LoginPresenterTests;
+			productReference = 79F06D9E27F28FCD00343865 /* LoginPresenterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C045618627EA03A5007EC5C3 /* Pharus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C045619B27EA03A6007EC5C3 /* Build configuration list for PBXNativeTarget "Pharus" */;
@@ -162,9 +269,13 @@
 		C045617F27EA03A5007EC5C3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1210;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
+					79F06D9D27F28FCD00343865 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C045618627EA03A5007EC5C3;
+					};
 					C045618627EA03A5007EC5C3 = {
 						CreatedOnToolsVersion = 12.1;
 					};
@@ -184,39 +295,80 @@
 			projectRoot = "";
 			targets = (
 				C045618627EA03A5007EC5C3 /* Pharus */,
+				79F06D9D27F28FCD00343865 /* LoginPresenterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		79F06D9C27F28FCD00343865 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C045618527EA03A5007EC5C3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C045619727EA03A6007EC5C3 /* LaunchScreen.storyboard in Resources */,
 				C045619427EA03A6007EC5C3 /* Assets.xcassets in Resources */,
+				79FB0CC927F330FA001D36A7 /* Student.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		79F06D9A27F28FCD00343865 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F06DA127F28FCD00343865 /* LoginPresenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C045618327EA03A5007EC5C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */,
+				79222EA327F643D60051334A /* CircleView.swift in Sources */,
+				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
+				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
 				C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */,
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
+				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
+				7943975827F3C5BF0075102B /* UserProjectsCoordinator.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
+				C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */,
+				7943975A27F3C5D20075102B /* UserProjectsViewController.swift in Sources */,
 				C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */,
+				7943975E27F3C6020075102B /* UserProjectCell.swift in Sources */,
 				C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */,
+				7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */,
 				C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */,
+				C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */,
+				7963213227F23C9200A202EE /* Constants.swift in Sources */,
+				797A68EE27F4768A00ABDAC6 /* UIImageView+Extension.swift in Sources */,
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
+				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
+				7943976027F3C6130075102B /* UserProjectsPresenter.swift in Sources */,
+				79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79F06DA327F28FCD00343865 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C045618627EA03A5007EC5C3 /* Pharus */;
+			targetProxy = 79F06DA227F28FCD00343865 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */ = {
@@ -230,6 +382,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		79F06DA527F28FCD00343865 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QNHX86K7F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.colen.victor.LoginPresenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pharus.app/Pharus";
+			};
+			name = Debug;
+		};
+		79F06DA627F28FCD00343865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QNHX86K7F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.colen.victor.LoginPresenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pharus.app/Pharus";
+			};
+			name = Release;
+		};
 		C045619927EA03A6007EC5C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -385,6 +577,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		79F06DA427F28FCD00343865 /* Build configuration list for PBXNativeTarget "LoginPresenterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F06DA527F28FCD00343865 /* Debug */,
+				79F06DA627F28FCD00343865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C045618227EA03A5007EC5C3 /* Build configuration list for PBXProject "Pharus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

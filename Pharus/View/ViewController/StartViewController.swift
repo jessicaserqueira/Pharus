@@ -11,8 +11,7 @@ class StartViewController: UIViewController {
     var coordinator: StartFlow?
   
        // MARK: - Properties
-       
-    let viewCustom = UIView()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +23,10 @@ class StartViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        viewCustom.backgroundColor = .cyan
-        self.view = viewCustom
+        let student: Student = Bundle.main.decode("Student.json")
+        print(student)
+//        viewCustom.backgroundColor = .cyan
+//        self.view = viewCustom
     }
 
 
