@@ -11,8 +11,7 @@ class StartViewController: UIViewController {
     var coordinator: StartFlow?
   
        // MARK: - Properties
-       
-    let viewCustom = UIView()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +19,8 @@ class StartViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
+<<<<<<< HEAD
+=======
     
     override func loadView() {
         super.loadView()
@@ -30,5 +31,6 @@ class StartViewController: UIViewController {
         self.view = viewCustom
     }
 
+>>>>>>> develop
 
 }
