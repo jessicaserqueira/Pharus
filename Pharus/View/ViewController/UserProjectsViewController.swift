@@ -40,26 +40,18 @@ class UserProjectsViewController: UIViewController {
     }
     
     func setNavigationBar() {
-        
-//        let button = UIButton()
-//        button.frame = CGRect(x: 0, y: 0, width: 45, height: 45)
-//        let color = UIColor(patternImage: UIImage(named: "userPicture")!)
-//        button.backgroundColor = color
-//        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-//        button.addAction(UIAction { _ in
-//            self.profilePicTapped()
-//        }, for: .touchUpInside)
-//
-//        let barButton = UIBarButtonItem()
-//        barButton.customView = button
-//
-//        self.navigationItem.rightBarButtonItem = barButton
         let image = UIImage(named: "userPicture")?.withRenderingMode(.alwaysOriginal)
-        //let imageView = UIImageView(image: image)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(profilePicTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image,
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(profilePicTapped))
         
         var backButtonImage = UIImage(named: K.AssetsNames.backButton)
-        backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153, green: 0.153, blue: 0.153, alpha: 1), renderingMode: .alwaysOriginal)
+        backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
+                                                                 green: 0.153,
+                                                                 blue: 0.153,
+                                                                 alpha: 1),
+                                                         renderingMode: .alwaysOriginal)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
                                                            style: .done,

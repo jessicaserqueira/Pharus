@@ -259,6 +259,8 @@ class UserProjectCell: UITableViewCell {
         completionStackView.addArrangedSubview(completionCircleHelpView)
         
         completionCircleHelpView.addSubview(completionBarCircleView)
+        completionBarCircleView.transform = CGAffineTransform(rotationAngle: 180.7)
+        
         completionCircleHelpView.addSubview(percentageCompletionLabel)
         
         completionStackView.addArrangedSubview(daysRemainingStackView)
