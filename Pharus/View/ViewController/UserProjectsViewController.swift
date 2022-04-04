@@ -43,18 +43,13 @@ class UserProjectsViewController: UIViewController {
     func setNavigationBar() {
         self.title = "Seus projetos"
         
-        let image = UIImage(named: K.AssetsNames.userPicture)
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.clipsToBounds = true
-        button.setImage(image, for: .normal)
-        button.addTarget(self, action: #selector(profilePicTapped), for: .touchUpInside)
+        let userImage = UIImage(named: K.AssetsNames.userPicture)!
+        let userProfileButtonView = createUserProfileButton(image: userImage)
         
         let userPictureBarButton = UIBarButtonItem()
-        userPictureBarButton.customView = button
-        self.navigationItem.rightBarButtonItem = userPictureBarButton
+        userPictureBarButton.customView = userProfileButtonView
         
+        self.navigationItem.rightBarButtonItem = userPictureBarButton
         
         var backButtonImage = UIImage(named: K.AssetsNames.backButton)
         backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
@@ -68,6 +63,19 @@ class UserProjectsViewController: UIViewController {
                                                                 target: self,
                                                                 action: #selector(backButtonPressed))
         
+    }
+    
+    func createUserProfileButton(image: UIImage) -> UIButton {
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        button.clipsToBounds = true
+        button.setImage(image, for: .normal)
+        button.addTarget(self,
+                         action: #selector(profilePicTapped),
+                         for: .touchUpInside)
+        
+        return button
     }
     
     //Implementar quando o fluxo estiver pronto
@@ -117,7 +125,7 @@ extension UserProjectsViewController: UITableViewDataSource {
         
         cell.configureSubviews()
         cell.setupConstraints()
-        cell.configureCell(project: project)
+        cell.configureCell(using: project)
         cell.mainView.layer.cornerRadius = 16
         
         return cell

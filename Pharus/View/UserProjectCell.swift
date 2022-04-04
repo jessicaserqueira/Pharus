@@ -232,7 +232,7 @@ class UserProjectCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureCell(project: Project) {
+    func configureCell(using project: Project) {
         self.titleLabel.text = project.name
         self.descriptionLabel.text = project.projectDescription
         self.mentor.text = "Mentor: " + project.mentor
@@ -246,7 +246,7 @@ class UserProjectCell: UITableViewCell {
         let projectEndDate = dateFormatter.date(from: project.endDate) ?? Date()
         
         self.daysRemainingLabel.text = Date.getDifferenceInDays(between: projectStartDate,
-                                                                  and: projectEndDate).description + " Dias"
+                                                                and: projectEndDate).description + " Dias"
     }
     
     func configureSubviews() {
