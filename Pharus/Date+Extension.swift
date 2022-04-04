@@ -8,7 +8,6 @@
 import Foundation
 
 extension Date {
-    
    static func getDifferenceInYears(between date: Date, and otherDate: Date) -> Int {
         Calendar.current.dateComponents([.year], from: date, to: otherDate).year ?? 0
     }
