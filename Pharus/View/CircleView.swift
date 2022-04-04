@@ -26,7 +26,7 @@ class CircleView: UIView {
     
     lazy var completionPercentage = 0.0 {
         didSet {
-            makeCircularPath(completionPercentage: completionPercentage)
+            makeCircularPath(completionPercentage: CGFloat(completionPercentage))
         }
     }
     
