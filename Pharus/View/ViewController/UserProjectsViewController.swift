@@ -13,18 +13,19 @@ class UserProjectsViewController: UIViewController {
     let tableView = UITableView()
     var student: Student?
     var projects = [Project]()
-  
-       // MARK: - Properties
-       
+    
+    // MARK: - Properties
+    
     let viewCustom = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         setNavigationBar()
+        
         view.addSubview(tableView)
         setupTableView()
+        
         student = Bundle.main.decode("Student.json")
         if let student = student {
             projects.append(contentsOf: student.schoolProjects)
@@ -40,17 +41,19 @@ class UserProjectsViewController: UIViewController {
     }
     
     func setNavigationBar() {
-        let image = UIImage(named: "userPicture")
-        let button = UIButton(type: .custom)
-            button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-            button.layer.cornerRadius = 0.5 * button.bounds.size.width
-            button.clipsToBounds = true
-            button.setImage(image, for: .normal)
-            button.addTarget(self, action: #selector(profilePicTapped), for: .touchUpInside)
+        self.title = "Seus projetos"
         
-        let p = UIBarButtonItem()
-        p.customView = button
-        navigationItem.rightBarButtonItem = p
+        let image = UIImage(named: K.AssetsNames.userPicture)
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        button.clipsToBounds = true
+        button.setImage(image, for: .normal)
+        button.addTarget(self, action: #selector(profilePicTapped), for: .touchUpInside)
+        
+        let userPictureBarButton = UIBarButtonItem()
+        userPictureBarButton.customView = button
+        self.navigationItem.rightBarButtonItem = userPictureBarButton
         
         
         var backButtonImage = UIImage(named: K.AssetsNames.backButton)
@@ -60,37 +63,40 @@ class UserProjectsViewController: UIViewController {
                                                                  alpha: 1),
                                                          renderingMode: .alwaysOriginal)
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
-                                                           style: .plain,
-                                                           target: self,
-                                                           action: #selector(backButtonPressed))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
+                                                                style: .plain,
+                                                                target: self,
+                                                                action: #selector(backButtonPressed))
         
-        self.title = "Seus projetos"
     }
     
+    //Implementar quando o fluxo estiver pronto
     @objc func backButtonPressed() {
         print("Back button pressed")
     }
     
+    //Implementar quando a tela de usuário estiver pronta
     @objc func profilePicTapped() {
-    print("Profile Picture pressed")
-   }
+        print("Profile Picture pressed")
+    }
     
     func setupTableView() {
         tableView.register(UserProjectCell.self,
                            forCellReuseIdentifier: K.CellReuseIdentifiers.userProjects)
+        
         tableView.dataSource = self
         tableView.delegate = self
         
         tableView.separatorColor = .clear
         
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
     }
 }
 

@@ -126,8 +126,8 @@ class UserProjectCell: UITableViewCell {
         return view
     }()
     
-    lazy var completionBarCircleView: CircleView = {
-        let view = CircleView()
+    lazy var completionBarCircleView: CircleProgressView = {
+        let view = CircleProgressView()
         view.circleColor = UIColor(red: 0.765, green: 0.765, blue: 0.765, alpha: 1)
         view.completionBarColor = UIColor(red: 0.153, green: 0.153, blue: 0.153, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -236,8 +236,8 @@ class UserProjectCell: UITableViewCell {
         self.titleLabel.text = project.name
         self.descriptionLabel.text = project.projectDescription
         self.mentor.text = "Mentor: " + project.mentor
-        self.completionBarCircleView.completionPercentage = Double(project.completionStatus)
-        self.percentageCompletionLabel.text = String(project.completionStatus) + "%"
+        self.completionBarCircleView.completionPercentage = project.completionStatus
+        self.percentageCompletionLabel.text = project.completionStatus.description + "%"
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = K.DateFormats.projectDateFormat
@@ -245,8 +245,8 @@ class UserProjectCell: UITableViewCell {
         let projectStartDate = dateFormatter.date(from: project.startDate) ?? Date()
         let projectEndDate = dateFormatter.date(from: project.endDate) ?? Date()
         
-        self.daysRemainingLabel.text = String(Date().getDifferenceInDays(between: projectStartDate,
-                                                                         and: projectEndDate)) + " Dias"
+        self.daysRemainingLabel.text = Date().getDifferenceInDays(between: projectStartDate,
+                                                                  and: projectEndDate).description + " Dias"
     }
     
     func configureSubviews() {
