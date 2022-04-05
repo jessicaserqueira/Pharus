@@ -15,7 +15,7 @@ class ClickListener: UITapGestureRecognizer {
 
 extension UIView {
     
-    func setOnClickListener(action :@escaping () -> Void){
+    func setOnClickListener(action: @escaping () -> Void){
         let tapRecogniser = ClickListener(target: self, action: #selector(onViewClicked(sender:)))
         tapRecogniser.onClick = action
         self.addGestureRecognizer(tapRecogniser)
@@ -29,7 +29,12 @@ extension UIView {
     
     //MARK: - Constraints
     
-    func stretch(_ view: UIView, to otherView: UIView? = nil, top: CGFloat = 0, left: CGFloat = 0, bottom: CGFloat = 0, right: CGFloat = 0) {
+    func stretch(_ view: UIView,
+                 to otherView: UIView? = nil,
+                 top: CGFloat = 0,
+                 left: CGFloat = 0,
+                 bottom: CGFloat = 0,
+                 right: CGFloat = 0) {
         view.translatesAutoresizingMaskIntoConstraints = false
         
         if let otherView = otherView {
@@ -51,7 +56,8 @@ extension UIView {
     
     //MARK: - Add Background
     
-    func addBackground(imageName: String, contentMode: UIView.ContentMode = .scaleToFill) {
+    func addBackground(imageName: String,
+                       contentMode: UIView.ContentMode = .scaleToFill) {
         // setup the UIImageView
         let backgroundImageView = UIImageView(frame: UIScreen.main.bounds)
         backgroundImageView.image = UIImage(named: imageName)
