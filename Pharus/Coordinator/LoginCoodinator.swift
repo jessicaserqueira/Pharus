@@ -9,6 +9,7 @@ import UIKit
 
 protocol LoginFlow {
     func start()
+    func showHome()
     
 }
 
@@ -30,6 +31,12 @@ class LoginCoordinator: Coordinator {
 }
 
 extension LoginCoordinator: LoginFlow {
+    func showHome() {
+        let coordinator = UserProjectsCoordinator(navigationController: navigationController)
+        coordinate(to: coordinator)
+        
+    }
+    
     
     func showLogin() {
        

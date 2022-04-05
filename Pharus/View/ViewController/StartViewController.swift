@@ -9,8 +9,8 @@ import UIKit
 
 class StartViewController: UIViewController {
     var coordinator: StartFlow?
-  
-       // MARK: - Properties
+    
+    // MARK: - Properties
     
     
     override func viewDidLoad() {
@@ -25,9 +25,7 @@ class StartViewController: UIViewController {
         
         let student: Student = Bundle.main.decode("Student.json")
         print(student)
-//        viewCustom.backgroundColor = .cyan
-//        self.view = viewCustom
+        //        viewCustom.backgroundColor = .cyan
+        //        self.view = viewCustom
     }
-
-
 }

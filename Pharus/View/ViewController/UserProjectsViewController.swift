@@ -13,9 +13,9 @@ class UserProjectsViewController: UIViewController {
     let tableView = UITableView()
     var student: Student?
     var projects = [Project]()
-  
-       // MARK: - Properties
-       
+    
+    // MARK: - Properties
+    
     let viewCustom = UIView()
     
     override func viewDidLoad() {
@@ -42,11 +42,11 @@ class UserProjectsViewController: UIViewController {
     func setNavigationBar() {
         let image = UIImage(named: "userPicture")
         let button = UIButton(type: .custom)
-            button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-            button.layer.cornerRadius = 0.5 * button.bounds.size.width
-            button.clipsToBounds = true
-            button.setImage(image, for: .normal)
-            button.addTarget(self, action: #selector(profilePicTapped), for: .touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        button.clipsToBounds = true
+        button.setImage(image, for: .normal)
+        button.addTarget(self, action: #selector(profilePicTapped), for: .touchUpInside)
         
         let p = UIBarButtonItem()
         p.customView = button
@@ -73,8 +73,8 @@ class UserProjectsViewController: UIViewController {
     }
     
     @objc func profilePicTapped() {
-    print("Profile Picture pressed")
-   }
+        print("Profile Picture pressed")
+    }
     
     func setupTableView() {
         tableView.register(UserProjectCell.self,
