@@ -9,11 +9,13 @@ import UIKit
 
 protocol LoginViewDelegate: AnyObject{
     
+    func loginButtonPressed()
 }
 
 class LoginView: UIView {
     
     weak var delegate: LoginViewDelegate?
+    
     
     lazy var mainView: UIView = {
         let view = UIView()
@@ -150,14 +152,6 @@ class LoginView: UIView {
         return label
     }()
     
-    lazy var loginButtonView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "LoginView.loginButtonView"
-        
-        return view
-    }()
-    
     lazy var loginButton: UIButton = {
         let button = UIButton()
         button.setTitle("Entrar", for: .normal)
@@ -167,8 +161,11 @@ class LoginView: UIView {
         button.layer.borderWidth = 0.3
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self,
+                         action: #selector(loginButtonPressed),
+                         for: UIControl.Event.touchUpInside)
         button.accessibilityIdentifier = "LoginView.loginButton"
-        
+
         return button
     }()
     
@@ -201,9 +198,8 @@ class LoginView: UIView {
         passwordStackView.addArrangedSubview(passwordTextField)
         passwordStackView.addArrangedSubview(changePasswordLabel)
         
-        mainStackView.addArrangedSubview(loginButtonView)
-        
-        loginButtonView.addSubview(loginButton)
+        mainStackView.addArrangedSubview(loginButton)
+ 
     }
     
     func setupConstraints() {
@@ -273,4 +269,13 @@ class LoginView: UIView {
             loginButton.bottomAnchor.constraint(equalTo: mainStackView.bottomAnchor, constant: 100)
         ])
     }
+    
+    // MARK: Actions
+    
+    @objc func loginButtonPressed(){
+        
+        delegate?.loginButtonPressed()
+        
+    }
+    
 }

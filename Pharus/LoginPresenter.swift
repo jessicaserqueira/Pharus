@@ -10,6 +10,7 @@ import Foundation
 protocol LoginPresenterProtocol {
     func isValidEmail(email: String) -> Bool
     func isValidPassword(password: String) -> Bool
+    func loginButtonPressed()
 }
 
 class LoginPresenter: LoginPresenterProtocol {
@@ -25,5 +26,9 @@ class LoginPresenter: LoginPresenterProtocol {
         
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
         return passwordPredicate.evaluate(with: password)
+    }
+    
+    func loginButtonPressed() {
+       // TODO: Navigation
     }
 }
