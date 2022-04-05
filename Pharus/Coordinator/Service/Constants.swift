@@ -15,14 +15,16 @@ struct K {
     
     struct CellReuseIdentifiers {
         static let userProjects = "userProjects"
+        static let userRankingProjects = "userRankingProjects"
     }
     
     struct AssetsNames {
         static let backButton = "backButtonImage"
-        static let medal = "Medalha"
+        static let medal = "medal"
         static let companyLogo = "havaianas"
         static let hourglass = "hourglass"
         static let userPicture = "userPicture"
+        static let thirdPlace = "thirdPlace"
     }
     
     struct DateFormats {
