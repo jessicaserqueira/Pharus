@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "79F06D9D27F28FCD00343865"
-               BuildableName = "LoginPresenterTests.xctest"
-               BlueprintName = "LoginPresenterTests"
+               BuildableName = "PharusTests.xctest"
+               BlueprintName = "PharusTests"
                ReferencedContainer = "container:Pharus.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -1,5 +1,5 @@
 //
-//  CircleView.swift
+//  CircleProgressView.swift
 //  Pharus
 //
 //  Created by Victor Colen on 31/03/22.
@@ -7,16 +7,10 @@
 
 import UIKit
 
-class CircleView: UIView {
+class CircleProgressView: UIView {
     
-    var completionBarLayer = CAShapeLayer()
     var circleLayer = CAShapeLayer()
-    
-    lazy var completionBarColor = UIColor.white {
-        didSet {
-            completionBarLayer.strokeColor = completionBarColor.cgColor
-        }
-    }
+    var completionBarLayer = CAShapeLayer()
     
     lazy var circleColor = UIColor.white {
         didSet {
@@ -24,11 +18,19 @@ class CircleView: UIView {
         }
     }
     
-    lazy var completionPercentage = 0.0 {
+    lazy var completionBarColor = UIColor.white {
+        didSet {
+            completionBarLayer.strokeColor = completionBarColor.cgColor
+        }
+    }
+    
+    lazy var completionPercentage: Float = 0.0 {
         didSet {
             makeCircularPath(completionPercentage: CGFloat(completionPercentage))
         }
     }
+    
+    lazy var circleRadius: CGFloat = 40.0
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -38,23 +40,24 @@ class CircleView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func makeCircularPath(completionPercentage: CGFloat) {
+    func makeCircularPath(completionPercentage: Float) {
+        
         //Circular corner radius
         self.layer.cornerRadius = self.frame.size.width/2
         
         let completionBarLayerPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2,
-                                                                y: frame.size.height/2),
-                                             radius: 40,
-                                             startAngle: CGFloat(0).toRadians(),
-                                             endAngle: CGFloat(360).toRadians() * (completionPercentage/100),
-                                             clockwise: true)
+                                                                     y: frame.size.height/2),
+                                                  radius: self.circleRadius,
+                                                  startAngle: CGFloat(0).toRadians(),
+                                                  endAngle: CGFloat(360).toRadians() * CGFloat(completionPercentage)/100,
+                                                  clockwise: true)
         
         let circleLayerPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/2,
-                                                             y: frame.size.height/2),
-                                          radius: 40,
-                                          startAngle: CGFloat(0).toRadians(),
-                                          endAngle: CGFloat(360).toRadians(),
-                                          clockwise: true)
+                                                              y: frame.size.height/2),
+                                           radius: self.circleRadius,
+                                           startAngle: CGFloat(0).toRadians(),
+                                           endAngle: CGFloat(360).toRadians(),
+                                           clockwise: true)
         
         circleLayer.path = circleLayerPath.cgPath
         circleLayer.fillColor = UIColor.clear.cgColor

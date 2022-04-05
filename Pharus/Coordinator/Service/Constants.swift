@@ -22,6 +22,7 @@ struct K {
         static let medal = "Medalha"
         static let companyLogo = "havaianas"
         static let hourglass = "hourglass"
+        static let userPicture = "userPicture"
     }
     
     struct DateFormats {
