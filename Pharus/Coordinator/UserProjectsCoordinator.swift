@@ -23,7 +23,7 @@ class UserProjectsCoordinator: Coordinator {
     func start() {
         let userProjectsViewController = UserProjectsViewController()
         userProjectsViewController.coordinator = self
-        navigationController.setNavigationBarHidden(true, animated: true)
+        navigationController.setNavigationBarHidden(false, animated: true)
         navigationController.pushViewController(userProjectsViewController, animated: true)
     }
 }

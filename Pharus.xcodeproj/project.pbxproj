@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */; };
+		7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */; };
+		7910D9D227FD0B8300A8DDA0 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */; };
 		79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79164BB827F1251C00167B8A /* UIView+Extension.swift */; };
 		79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79222EA027F63FC50051334A /* CGFloat+Extension.swift */; };
 		79222EA327F643D60051334A /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79222EA227F643D60051334A /* CircleProgressView.swift */; };
@@ -50,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailView.swift; sourceTree = "<group>"; };
+		7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailViewController.swift; sourceTree = "<group>"; };
+		7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		79164BB827F1251C00167B8A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		79222EA027F63FC50051334A /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		79222EA227F643D60051334A /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
 				79222EA027F63FC50051334A /* CGFloat+Extension.swift */,
 				794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */,
+				7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */,
 				797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */,
 			);
 			name = Extensions;
@@ -140,6 +147,7 @@
 				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
 				7943975D27F3C6020075102B /* UserProjectCell.swift */,
 				79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */,
+				7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */,
 				79222EA227F643D60051334A /* CircleProgressView.swift */,
 				C04561A127EA03B1007EC5C3 /* ViewController */,
 			);
@@ -205,6 +213,7 @@
 				C045618E27EA03A5007EC5C3 /* StartViewController.swift */,
 				C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */,
 				7943975927F3C5D20075102B /* UserProjectsViewController.swift */,
+				7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */,
 				79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */,
 			);
 			path = ViewController;
@@ -346,12 +355,14 @@
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
 				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
 				C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */,
+				7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */,
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
 				7943975827F3C5BF0075102B /* UserProjectsCoordinator.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
 				C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */,
 				7943975A27F3C5D20075102B /* UserProjectsViewController.swift in Sources */,
+				7910D9D227FD0B8300A8DDA0 /* UIFont+Extension.swift in Sources */,
 				C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */,
 				7943975E27F3C6020075102B /* UserProjectCell.swift in Sources */,
 				79C577D027FBBB8100046B00 /* UserProjectRankingCell.swift in Sources */,
@@ -364,6 +375,7 @@
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
 				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
 				7943976027F3C6130075102B /* UserProjectsPresenter.swift in Sources */,
+				7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */,
 				79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
