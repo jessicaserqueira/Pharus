@@ -158,7 +158,7 @@
 				793EC73827FE177000CD8334 /* CheckmarkButton.swift */,
 				793EC73C27FE197B00CD8334 /* UserProfileButton.swift */,
 				79222EA227F643D60051334A /* CircleProgressView.swift */,
-				C04561A127EA03B1007EC5C3 /* ViewController */,
+				C04561A127EA03B1007EC5C3 /* Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
-		C04561A127EA03B1007EC5C3 /* ViewController */ = {
+		C04561A127EA03B1007EC5C3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				C045618E27EA03A5007EC5C3 /* StartViewController.swift */,
@@ -225,7 +225,7 @@
 				7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */,
 				79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */,
 			);
-			path = ViewController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		C04561A227EA03B3007EC5C3 /* Model */ = {
