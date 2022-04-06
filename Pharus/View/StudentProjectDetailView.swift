@@ -257,7 +257,8 @@ class StudentProjectDetailView: UIView {
                 taskCheckboxButton.heightAnchor.constraint(equalToConstant: 25)
             ])
             
-            //   descricao 4 linhas dps abrir
+            //MARK: - Tirar isso aqui no produto final
+            //   descricao terá limite de 4 linhas e dps abre para mais
             taskCheckboxButton.addAction(UIAction {  _ in
                 if taskCheckboxButton.currentImage == self.checkmarkImage {
                     taskCheckboxButton.setImage(.none, for: .normal)

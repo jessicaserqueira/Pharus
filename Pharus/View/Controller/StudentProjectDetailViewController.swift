@@ -19,7 +19,7 @@ class StudentProjectDetailViewController: UIViewController {
         self.title = "Projeto 1"
         setNavigationBar()
         customView.rulesHelperView.setOnClickListener {
-            self.present(LoginViewController(), animated: true)
+            self.present(ProjectRulesViewController(), animated: true)
         }
     }
     
