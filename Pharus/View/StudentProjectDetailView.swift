@@ -79,7 +79,7 @@ class StudentProjectDetailView: UIView {
         return label
     }()
     
-    lazy var taskStackView: UIStackView = {
+    lazy var tasksStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 29
@@ -89,7 +89,7 @@ class StudentProjectDetailView: UIView {
         return stackView
     }()
     
-    lazy var titleHelper: UIView = {
+    lazy var tasksTitleHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.taskStackView"
@@ -107,7 +107,7 @@ class StudentProjectDetailView: UIView {
         return label
     }()
     
-    lazy var individualTaskHelperStackView: UIStackView = {
+    lazy var taskHelperStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 30
@@ -145,16 +145,16 @@ class StudentProjectDetailView: UIView {
     
     lazy var completedTasksProgressView: UIProgressView = {
         let progressView = UIProgressView()
-        progressView.progressTintColor = .darkCardColor
+        progressView.layer.cornerRadius = 8
         progressView.progress = 0.75
         progressView.clipsToBounds = true
         progressView.trackTintColor = .white
-        progressView.layer.cornerRadius = 8
+        progressView.progressTintColor = .darkCardColor
         progressView.accessibilityIdentifier = "StudentProjectDetailView.completedTasksProgressView"
         
         return progressView
     }()
-        
+    
     lazy var uploadFilesHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -198,14 +198,38 @@ class StudentProjectDetailView: UIView {
         descriptionStackView.addArrangedSubview(descriptionTitleLabel)
         descriptionStackView.addArrangedSubview(descriptionTextLabel)
         
-        mainStackView.addArrangedSubview(taskStackView)
+        mainStackView.addArrangedSubview(tasksStackView)
         
-        taskStackView.addArrangedSubview(titleHelper)
-        titleHelper.addSubview(taskTitleLabel)
+        tasksStackView.addArrangedSubview(tasksTitleHelperView)
+        tasksTitleHelperView.addSubview(taskTitleLabel)
         
-        taskStackView.addArrangedSubview(individualTaskHelperStackView)
+        tasksStackView.addArrangedSubview(taskHelperStackView)
         
-        for task in 1...10 {
+        let tasks = [
+            "tarefa 1: la oasokdoajsdijaiod aiosjdsj dioja djosaid iajs doijaisodj ioajsid aiosjdioa jsiodj",
+            "tarefa 2: bla bla bla bla",
+            "tarefa 3: akdajsdokasldlaskdlkalskdlaskdlak"
+        ]
+        
+        let animations: [ String: UIView.AnimationOptions] = [
+            "curveEaseIn": .curveEaseIn,
+            "curveEaseOut": .curveEaseOut,
+            "curveEaseInOut": .curveEaseInOut,
+            "curveLinear": .curveLinear,
+            "transitionFlipFromTop": .transitionFlipFromTop,
+            "transitionFlipFromBottom": .transitionFlipFromBottom,
+            "transitionFlipFromLeft": .transitionFlipFromLeft,
+            "transitionFlipFromRight": .transitionFlipFromRight,
+            "allowUserInteraction": .allowUserInteraction,
+            "transitionCurlUp": .transitionCurlUp,
+            "transitionCurlDown": .transitionCurlDown,
+            "autoreverse": .autoreverse,
+            "repeat": .repeat,
+            "beginFromCurrentState": .beginFromCurrentState,
+            "transitionCrossDissolve": .transitionCrossDissolve,
+        ]
+        
+        for animation in animations {
             let individualTaskStackView = UIStackView()
             individualTaskStackView.translatesAutoresizingMaskIntoConstraints = false
             individualTaskStackView.axis = .horizontal
@@ -213,7 +237,8 @@ class StudentProjectDetailView: UIView {
             
             let taskTitleLabel = UILabel()
             taskTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-            taskTitleLabel.text = "Tarefa \(task)"
+            taskTitleLabel.text = tasks.randomElement()!
+            taskTitleLabel.numberOfLines = 0
             
             let taskCheckboxButton = UIButton()
             taskCheckboxButton.layer.borderWidth = 1
@@ -229,11 +254,21 @@ class StudentProjectDetailView: UIView {
             
             taskCheckboxButton.addAction(UIAction {  _ in
                 if taskCheckboxButton.currentImage == self.checkmarkImage {
-                    print("desativar")
                     taskCheckboxButton.setImage(.none, for: .normal)
+                    UIView.transition(with: self.descriptionTextLabel, duration: 0.4,
+                                      options: animation.value,
+                                      animations: {
+                        self.descriptionTextLabel.isHidden = true
+                    })
+                    print(animation.key)
                 } else {
-                    print("ativar")
                     taskCheckboxButton.setImage(self.checkmarkImage, for: .normal)
+                    UIView.transition(with: self.descriptionTextLabel, duration: 0.4,
+                                      options: animation.value,
+                                      animations: {
+                        self.descriptionTextLabel.isHidden = false
+                    })
+                    print(animation.key)
                 }
                 
             }, for: .touchUpInside)
@@ -241,7 +276,15 @@ class StudentProjectDetailView: UIView {
             individualTaskStackView.addArrangedSubview(taskCheckboxButton)
             individualTaskStackView.addArrangedSubview(taskTitleLabel)
             
-            individualTaskHelperStackView.addArrangedSubview(individualTaskStackView)
+            let dropBoxIconImageView = UIImageView()
+            dropBoxIconImageView.image = UIImage(systemName: "lessthan")
+            dropBoxIconImageView.translatesAutoresizingMaskIntoConstraints = false
+            dropBoxIconImageView.widthAnchor.constraint(equalToConstant: 25).isActive = true
+            dropBoxIconImageView.heightAnchor.constraint(equalToConstant: 25).isActive = true
+            
+            individualTaskStackView.addArrangedSubview(dropBoxIconImageView)
+            
+            taskHelperStackView.addArrangedSubview(individualTaskStackView)
         }
         
         mainStackView.addArrangedSubview(completedTasksProgressStackView)
@@ -280,9 +323,9 @@ class StudentProjectDetailView: UIView {
         
         //Title Helper
         NSLayoutConstraint.activate([
-            titleHelper.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor),
-            titleHelper.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
-            titleHelper.heightAnchor.constraint(equalToConstant: 30)
+            tasksTitleHelperView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor),
+            tasksTitleHelperView.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
+            tasksTitleHelperView.heightAnchor.constraint(equalToConstant: 30)
         ])
         
         //Completed Tasks Progress View
