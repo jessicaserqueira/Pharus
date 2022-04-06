@@ -8,6 +8,33 @@
 import UIKit
 
 class StudentProjectDetailView: UIView {
+    
+    //MARK: - temporary data
+    
+    let tasks = [
+        "tarefa 1: la oasokdoajsdijaiod aiosjdsj dioja djosaid iajs doijaisodj ioajsid aiosjdioa jsiodj",
+        "tarefa 2: bla bla bla bla",
+        "tarefa 3: akdajsdokasldlaskdlkalskdlaskdlak"
+    ]
+    
+    let taskDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum elit tellus, at condimentum mauris sagittis ut. Nam auctor nunc non ipsum blandit tempus."
+    
+    let animations: [ String: UIView.AnimationOptions] = [
+        "curveEaseIn": .curveEaseIn,
+        "curveEaseOut": .curveEaseOut,
+        "curveEaseInOut": .curveEaseInOut,
+        "curveLinear": .curveLinear,
+        "transitionFlipFromTop": .transitionFlipFromTop,
+        "transitionFlipFromBottom": .transitionFlipFromBottom,
+        "transitionFlipFromLeft": .transitionFlipFromLeft,
+        "transitionFlipFromRight": .transitionFlipFromRight,
+        "allowUserInteraction": .allowUserInteraction,
+        "transitionCurlUp": .transitionCurlUp,
+        "transitionCurlDown": .transitionCurlDown,
+        "beginFromCurrentState": .beginFromCurrentState,
+        "transitionCrossDissolve": .transitionCrossDissolve,
+    ]
+    
     //MARK: - Views
     
     lazy var mainView: UIView = {
@@ -205,30 +232,6 @@ class StudentProjectDetailView: UIView {
         
         tasksStackView.addArrangedSubview(taskHelperStackView)
         
-        let tasks = [
-            "tarefa 1: la oasokdoajsdijaiod aiosjdsj dioja djosaid iajs doijaisodj ioajsid aiosjdioa jsiodj",
-            "tarefa 2: bla bla bla bla",
-            "tarefa 3: akdajsdokasldlaskdlkalskdlaskdlak"
-        ]
-        
-        let animations: [ String: UIView.AnimationOptions] = [
-            "curveEaseIn": .curveEaseIn,
-            "curveEaseOut": .curveEaseOut,
-            "curveEaseInOut": .curveEaseInOut,
-            "curveLinear": .curveLinear,
-            "transitionFlipFromTop": .transitionFlipFromTop,
-            "transitionFlipFromBottom": .transitionFlipFromBottom,
-            "transitionFlipFromLeft": .transitionFlipFromLeft,
-            "transitionFlipFromRight": .transitionFlipFromRight,
-            "allowUserInteraction": .allowUserInteraction,
-            "transitionCurlUp": .transitionCurlUp,
-            "transitionCurlDown": .transitionCurlDown,
-            "autoreverse": .autoreverse,
-            "repeat": .repeat,
-            "beginFromCurrentState": .beginFromCurrentState,
-            "transitionCrossDissolve": .transitionCrossDissolve,
-        ]
-        
         for animation in animations {
             let individualTaskStackView = UIStackView()
             individualTaskStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -240,12 +243,12 @@ class StudentProjectDetailView: UIView {
             taskTitleLabel.text = tasks.randomElement()!
             taskTitleLabel.numberOfLines = 0
             
-            let taskCheckboxButton = UIButton()
-            taskCheckboxButton.layer.borderWidth = 1
-            taskCheckboxButton.layer.borderColor = UIColor.black.cgColor
-            taskCheckboxButton.layer.cornerRadius = 4
-            taskCheckboxButton.setImage(checkmarkImage, for: .normal)
+            let taskCheckboxButton = CheckmarkButton()
             
+            let taskDescriptionLabel = UILabel()
+            taskDescriptionLabel.text = taskDescription
+            taskDescriptionLabel.numberOfLines = 0
+            taskDescriptionLabel.isHidden = true
             
             NSLayoutConstraint.activate([
                 taskCheckboxButton.widthAnchor.constraint(equalToConstant: 25),
@@ -255,22 +258,24 @@ class StudentProjectDetailView: UIView {
             taskCheckboxButton.addAction(UIAction {  _ in
                 if taskCheckboxButton.currentImage == self.checkmarkImage {
                     taskCheckboxButton.setImage(.none, for: .normal)
-                    UIView.transition(with: self.descriptionTextLabel, duration: 0.4,
-                                      options: animation.value,
-                                      animations: {
-                        self.descriptionTextLabel.isHidden = true
-                    })
+                    UIView.transition(with: taskDescriptionLabel,
+                                      duration: 0.4,
+                                      options: animation.value) {
+                        taskDescriptionLabel.isHidden = false
+                    }
                     print(animation.key)
                 } else {
                     taskCheckboxButton.setImage(self.checkmarkImage, for: .normal)
-                    UIView.transition(with: self.descriptionTextLabel, duration: 0.4,
-                                      options: animation.value,
-                                      animations: {
-                        self.descriptionTextLabel.isHidden = false
-                    })
+                    
+                    UIView.transition(with: taskDescriptionLabel,
+                                      duration: 0.4,
+                                      options: animation.value) {
+                        taskDescriptionLabel.isHidden = true
+                    }
+                    
                     print(animation.key)
+                    
                 }
-                
             }, for: .touchUpInside)
             
             individualTaskStackView.addArrangedSubview(taskCheckboxButton)
@@ -284,7 +289,9 @@ class StudentProjectDetailView: UIView {
             
             individualTaskStackView.addArrangedSubview(dropBoxIconImageView)
             
+            
             taskHelperStackView.addArrangedSubview(individualTaskStackView)
+            taskHelperStackView.addArrangedSubview(taskDescriptionLabel)
         }
         
         mainStackView.addArrangedSubview(completedTasksProgressStackView)
