@@ -32,11 +32,10 @@ class LoginCoordinator: Coordinator {
 
 extension LoginCoordinator: LoginFlow {
     func showHome() {
-        let coordinator = UserProjectsCoordinator(navigationController: navigationController)
-        coordinate(to: coordinator)
+        let coordinator = TabBarCoordinator(navigationController: navigationController, tabBarViewController: UITabBarController())
+            coordinate(to: coordinator)
         
     }
-    
     
     func showLogin() {
        
