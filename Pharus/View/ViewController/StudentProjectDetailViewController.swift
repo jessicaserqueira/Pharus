@@ -11,25 +11,27 @@ class StudentProjectDetailViewController: UIViewController {
     
     var coordinator: LoginCoordinator?
     var customView = StudentProjectDetailView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view = customView
         self.title = "Projeto 1"
         setNavigationBar()
-        
+        customView.rulesHelperView.setOnClickListener {
+            self.present(LoginViewController(), animated: true)
+        }
     }
     
     func setNavigationBar() {
         
-        let userImage = UIImage(named: K.AssetsNames.userPicture)!
+        let userImage = UIImage(named: K.AssetsNames.userPicture) ?? UIImage()
         
-        let userProfileButtonView = UserProfileButton()
-        userProfileButtonView.image = userImage
+        let userProfileButton = UserProfileButton()
+        userProfileButton.image = userImage
         
         let userPictureBarButton = UIBarButtonItem()
-        userPictureBarButton.customView = userProfileButtonView
+        userPictureBarButton.customView = userProfileButton
         
         self.navigationItem.rightBarButtonItem = userPictureBarButton
         

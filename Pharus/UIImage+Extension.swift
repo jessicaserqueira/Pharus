@@ -9,4 +9,5 @@ import UIKit
 
 extension UIImage {
     static let checkmarkImage = UIImage(systemName: "checkmark")
+    static let lessThanImage = UIImage(systemName: "lessthan")
 }
