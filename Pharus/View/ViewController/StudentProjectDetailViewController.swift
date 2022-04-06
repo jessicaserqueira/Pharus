@@ -24,7 +24,9 @@ class StudentProjectDetailViewController: UIViewController {
     func setNavigationBar() {
         
         let userImage = UIImage(named: K.AssetsNames.userPicture)!
-        let userProfileButtonView = createUserProfileButton(image: userImage)
+        
+        let userProfileButtonView = UserProfileButton()
+        userProfileButtonView.image = userImage
         
         let userPictureBarButton = UIBarButtonItem()
         userPictureBarButton.customView = userProfileButtonView
@@ -43,19 +45,6 @@ class StudentProjectDetailViewController: UIViewController {
                                                                 target: self,
                                                                 action: #selector(backButtonPressed))
         
-    }
-    
-    func createUserProfileButton(image: UIImage) -> UIButton {
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.clipsToBounds = true
-        button.setImage(image, for: .normal)
-        button.addTarget(self,
-                         action: #selector(profilePicTapped),
-                         for: .touchUpInside)
-        
-        return button
     }
     
     //Implementar quando o fluxo estiver pronto

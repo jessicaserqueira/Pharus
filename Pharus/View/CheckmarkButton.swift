@@ -5,8 +5,6 @@
 //  Created by Victor Colen on 06/04/22.
 //
 
-import Foundation
-
 import UIKit
 
 class CheckmarkButton: UIButton {
@@ -29,5 +27,4 @@ class CheckmarkButton: UIButton {
         self.layer.cornerRadius = 4
         self.setImage(.checkmarkImage, for: .normal)
     }
-        
 }

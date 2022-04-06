@@ -15,6 +15,7 @@
 		79222EA327F643D60051334A /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79222EA227F643D60051334A /* CircleProgressView.swift */; };
 		793EC73927FE177000CD8334 /* CheckmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EC73827FE177000CD8334 /* CheckmarkButton.swift */; };
 		793EC73B27FE183000CD8334 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EC73A27FE183000CD8334 /* UIImage+Extension.swift */; };
+		793EC73D27FE197B00CD8334 /* UserProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EC73C27FE197B00CD8334 /* UserProfileButton.swift */; };
 		7943975827F3C5BF0075102B /* UserProjectsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */; };
 		7943975A27F3C5D20075102B /* UserProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975927F3C5D20075102B /* UserProjectsViewController.swift */; };
 		7943975E27F3C6020075102B /* UserProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975D27F3C6020075102B /* UserProjectCell.swift */; };
@@ -63,6 +64,7 @@
 		79222EA227F643D60051334A /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		793EC73827FE177000CD8334 /* CheckmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkButton.swift; sourceTree = "<group>"; };
 		793EC73A27FE183000CD8334 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		793EC73C27FE197B00CD8334 /* UserProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileButton.swift; sourceTree = "<group>"; };
 		7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsCoordinator.swift; sourceTree = "<group>"; };
 		7943975927F3C5D20075102B /* UserProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsViewController.swift; sourceTree = "<group>"; };
 		7943975D27F3C6020075102B /* UserProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectCell.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */,
 				7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */,
 				793EC73827FE177000CD8334 /* CheckmarkButton.swift */,
+				793EC73C27FE197B00CD8334 /* UserProfileButton.swift */,
 				79222EA227F643D60051334A /* CircleProgressView.swift */,
 				C04561A127EA03B1007EC5C3 /* ViewController */,
 			);
@@ -384,6 +387,7 @@
 				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
 				7943976027F3C6130075102B /* UserProjectsPresenter.swift in Sources */,
 				7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */,
+				793EC73D27FE197B00CD8334 /* UserProfileButton.swift in Sources */,
 				79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
