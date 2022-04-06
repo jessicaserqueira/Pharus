@@ -15,6 +15,7 @@ class StudentProjectDetailView: UIView {
         view.backgroundColor = .cardColor
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.mainView"
+        
         return view
     }()
     
@@ -23,6 +24,7 @@ class StudentProjectDetailView: UIView {
         scrollView.backgroundColor = .white
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.accessibilityIdentifier = "StudentProjectDetailView.mainScrollView"
+        
         return scrollView
     }()
     
@@ -33,6 +35,7 @@ class StudentProjectDetailView: UIView {
         stackView.backgroundColor = .green
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProjectDetailView.mainStackView"
+        
         return stackView
     }()
     
@@ -42,6 +45,7 @@ class StudentProjectDetailView: UIView {
         label.font = .cardTitleFont
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.mentorLabel"
+        
         return label
     }()
     
@@ -51,6 +55,7 @@ class StudentProjectDetailView: UIView {
         stackView.backgroundColor = .blue
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProjectDetailView.descriptionStackView"
+        
         return stackView
     }()
     
@@ -60,6 +65,7 @@ class StudentProjectDetailView: UIView {
         label.font = .cardSubtitleFont
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionTitleLabel"
+        
         return label
     }()
     
@@ -69,6 +75,7 @@ class StudentProjectDetailView: UIView {
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionTextLabel"
+        
         return label
     }()
     
@@ -79,6 +86,7 @@ class StudentProjectDetailView: UIView {
         stackView.backgroundColor = .yellow
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProjectDetailView.taskStackView"
+        
         return stackView
     }()
     
@@ -87,6 +95,7 @@ class StudentProjectDetailView: UIView {
         view.backgroundColor = .red
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.taskStackView"
+        
         return view
     }()
     
@@ -96,6 +105,7 @@ class StudentProjectDetailView: UIView {
         label.font = .cardSubtitleFont
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.taskTitleLabel"
+        
         return label
     }()
     
@@ -104,6 +114,7 @@ class StudentProjectDetailView: UIView {
         label.text = "Completadas 3 de 4 tarefas"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.completedTasksLabel"
+        
         return label
     }()
     
@@ -113,6 +124,7 @@ class StudentProjectDetailView: UIView {
         stackView.spacing = 30
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.backgroundColor = .brown
+        
         return stackView
     }()
     
