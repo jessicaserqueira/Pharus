@@ -9,7 +9,7 @@ import UIKit
 
 class UserRankingProjectsViewController: UIViewController {
     
-    var coordinator: LoginCoordinator?
+    var coordinator: UserProjectsRankingCoordinator?
     let tableView = UITableView()
     var student: Student?
     var projects = [Project]()
