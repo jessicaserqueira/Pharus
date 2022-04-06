@@ -16,5 +16,6 @@ class StudentProjectDetailViewController: UIViewController {
         super.viewDidLoad()
         
         self.view = customView
+        self.title = "Projeto 1"
     }
 }

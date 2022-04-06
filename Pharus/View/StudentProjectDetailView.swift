@@ -109,6 +109,25 @@ class StudentProjectDetailView: UIView {
         return label
     }()
     
+    lazy var individualTaskHelperStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 30
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.backgroundColor = .brown
+        stackView.accessibilityIdentifier = "StudentProjectDetailView.individualTaskHelperStackView"
+        
+        return stackView
+    }()
+    
+    lazy var checkmarkImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "checkmark")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.accessibilityIdentifier = "StudentProjectDetailView.checkMarkImageView"
+        return imageView
+    }()
+    
     lazy var completedTasksLabel: UILabel = {
         let label = UILabel()
         label.text = "Completadas 3 de 4 tarefas"
@@ -118,16 +137,14 @@ class StudentProjectDetailView: UIView {
         return label
     }()
     
-    lazy var individualTaskHelperStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 30
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.backgroundColor = .brown
-        
-        return stackView
+    lazy var completedTasksProgressView: UIProgressView = {
+       let progressView = UIProgressView()
+        progressView.progressTintColor = .blue
+        progressView.progress = 0.75
+        progressView.heightAnchor.constraint(equalToConstant: 22).isActive = true
+        progressView.layer.cornerRadius = 8
+        return progressView
     }()
-    
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -160,7 +177,7 @@ class StudentProjectDetailView: UIView {
         
         taskStackView.addArrangedSubview(individualTaskHelperStackView)
         
-        for _ in 1...30 {
+        for task in 1...10 {
             let individualTaskStackView = UIStackView()
             individualTaskStackView.translatesAutoresizingMaskIntoConstraints = false
             individualTaskStackView.axis = .horizontal
@@ -168,24 +185,41 @@ class StudentProjectDetailView: UIView {
             
             let taskTitleLabel = UILabel()
             taskTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-            taskTitleLabel.text = "botao"
+            taskTitleLabel.text = "Tarefa \(task)"
             taskTitleLabel.backgroundColor = .white
-            
             
             let taskCheckboxButton = UIButton()
             taskCheckboxButton.layer.borderWidth = 1
             taskCheckboxButton.layer.borderColor = UIColor.black.cgColor
             taskCheckboxButton.layer.cornerRadius = 4
+            taskCheckboxButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
+            
             taskCheckboxButton.backgroundColor = .systemPink
-            taskCheckboxButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
+            
+            NSLayoutConstraint.activate([
+                taskCheckboxButton.widthAnchor.constraint(equalToConstant: 25),
+                taskCheckboxButton.heightAnchor.constraint(equalToConstant: 25)
+            ])
+            
             taskCheckboxButton.addAction(UIAction {  _ in
-                print("teste")
+                if taskCheckboxButton.currentImage == UIImage(systemName: "checkmark") {
+                    print("desativar")
+                    taskCheckboxButton.setImage(.none, for: .normal)
+                } else {
+                    print("ativar")
+                    taskCheckboxButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
+                }
+                
             }, for: .touchUpInside)
             
             individualTaskStackView.addArrangedSubview(taskCheckboxButton)
             individualTaskStackView.addArrangedSubview(taskTitleLabel)
             
             individualTaskHelperStackView.addArrangedSubview(individualTaskStackView)
+            
+            mainStackView.addArrangedSubview(completedTasksLabel)
+            mainStackView.addArrangedSubview(completedTasksProgressView)
+            
         }
     }
     
