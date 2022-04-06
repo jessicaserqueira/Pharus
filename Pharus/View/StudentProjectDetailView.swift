@@ -128,6 +128,7 @@ class StudentProjectDetailView: UIView {
         stackView.spacing = 16
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProjectDetailView.completedTasksProgressStackView"
+        
         return stackView
     }()
     
@@ -146,16 +147,19 @@ class StudentProjectDetailView: UIView {
         let progressView = UIProgressView()
         progressView.progressTintColor = .darkCardColor
         progressView.progress = 0.75
+        progressView.clipsToBounds = true
+        progressView.trackTintColor = .white
         progressView.layer.cornerRadius = 8
         progressView.accessibilityIdentifier = "StudentProjectDetailView.completedTasksProgressView"
         
         return progressView
     }()
         
-    lazy var anotherHelperView: UIView = {
+    lazy var uploadFilesHelperView: UIView = {
         let view = UIView()
-        view.backgroundColor = .red
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "StudentProjectDetailView.uploadFilesHelperView"
+        
         return view
     }()
     
@@ -245,9 +249,9 @@ class StudentProjectDetailView: UIView {
         completedTasksProgressStackView.addArrangedSubview(completedTasksLabel)
         completedTasksProgressStackView.addArrangedSubview(completedTasksProgressView)
         
-        mainStackView.addArrangedSubview(anotherHelperView)
+        mainStackView.addArrangedSubview(uploadFilesHelperView)
         
-        anotherHelperView.addSubview(uploadFilesButton)
+        uploadFilesHelperView.addSubview(uploadFilesButton)
         
         uploadFilesButton.addAction(UIAction { _ in
             print("enviar arquivos")
@@ -286,13 +290,17 @@ class StudentProjectDetailView: UIView {
             completedTasksProgressView.heightAnchor.constraint(equalToConstant: 22)
         ])
         
+        //Upload Files Helper View
+        NSLayoutConstraint.activate([
+            uploadFilesHelperView.heightAnchor.constraint(equalToConstant: 50)
+        ])
+        
         //Upload Files Button
         NSLayoutConstraint.activate([
-            uploadFilesButton.centerYAnchor.constraint(equalTo: anotherHelperView.centerYAnchor),
-            uploadFilesButton.centerXAnchor.constraint(equalTo: anotherHelperView.centerXAnchor),
+            uploadFilesButton.centerYAnchor.constraint(equalTo: uploadFilesHelperView.centerYAnchor),
+            uploadFilesButton.centerXAnchor.constraint(equalTo: uploadFilesHelperView.centerXAnchor),
             uploadFilesButton.heightAnchor.constraint(equalToConstant: 44),
             uploadFilesButton.widthAnchor.constraint(equalToConstant: 195),
-            anotherHelperView.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 }
