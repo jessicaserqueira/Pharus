@@ -21,6 +21,10 @@ class StudentProjectDetailViewController: UIViewController {
         customView.rulesHelperView.setOnClickListener {
             self.present(ProjectRulesViewController(), animated: true)
         }
+        
+        customView.uploadFilesButton.addAction(UIAction { _ in
+            self.present(SendFileViewController(), animated: true)
+        }, for: .touchUpInside)
     }
     
     func setNavigationBar() {
