@@ -4,7 +4,6 @@
 //
 //  Created by Victor Colen on 05/04/22.
 //
-
 import UIKit
 
 class StudentProjectDetailViewController: UIViewController {
@@ -64,3 +63,4 @@ class StudentProjectDetailViewController: UIViewController {
     }
     
 }
+

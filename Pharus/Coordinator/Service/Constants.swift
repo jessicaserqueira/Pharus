@@ -4,7 +4,6 @@
 //
 //  Created by Victor Colen on 28/03/22.
 //
-
 import Foundation
 
 struct K {
@@ -33,3 +32,4 @@ struct K {
         static let projectDateFormat = "dd/MM/yyyy"
     }
 }
+
