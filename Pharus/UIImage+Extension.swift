@@ -13,5 +13,6 @@ extension UIImage {
     static let bookIcon = UIImage(named: K.AssetsNames.book)
     static let xmark = UIImage(systemName: "xmark")
     static let alertIcon = UIImage(named: "alertIcon")
+
 }
 

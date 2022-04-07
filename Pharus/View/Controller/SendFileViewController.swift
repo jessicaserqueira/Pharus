@@ -4,6 +4,7 @@
 //
 //  Created by Victor Colen on 06/04/22.
 //
+
 import UIKit
 
 class SendFileViewController: UIViewController {
@@ -12,7 +13,6 @@ class SendFileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         let alertViewController = AlertViewController()
         alertViewController.modalPresentationStyle = .fullScreen
@@ -34,6 +34,7 @@ class SendFileViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
+
         self.view = customView
     }
 }

@@ -22,6 +22,11 @@
 		7943976027F3C6130075102B /* UserProjectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975F27F3C6130075102B /* UserProjectsPresenter.swift */; };
 		794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */; };
 		7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058027FE382D00A89012 /* TabBarViewController.swift */; };
+		7952058327FE394900A89012 /* ProjectRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058227FE394900A89012 /* ProjectRulesView.swift */; };
+		7952058527FE3B1A00A89012 /* ProjectRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */; };
+		7952058727FE55E400A89012 /* MainCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058627FE55E400A89012 /* MainCardButton.swift */; };
+		7952058927FE5CD900A89012 /* SendFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058827FE5CD900A89012 /* SendFileView.swift */; };
+		7952058B27FE62DE00A89012 /* SendFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058A27FE62DE00A89012 /* SendFileViewController.swift */; };
 		7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963212F27F23AF000A202EE /* LoginPresenter.swift */; };
 		7963213227F23C9200A202EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963213127F23C9200A202EE /* Constants.swift */; };
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
@@ -80,6 +85,11 @@
 		7943975F27F3C6130075102B /* UserProjectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsPresenter.swift; sourceTree = "<group>"; };
 		794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		7952058027FE382D00A89012 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7952058227FE394900A89012 /* ProjectRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRulesView.swift; sourceTree = "<group>"; };
+		7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRulesViewController.swift; sourceTree = "<group>"; };
+		7952058627FE55E400A89012 /* MainCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
+		7952058827FE5CD900A89012 /* SendFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileView.swift; sourceTree = "<group>"; };
+		7952058A27FE62DE00A89012 /* SendFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileViewController.swift; sourceTree = "<group>"; };
 		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		7963213127F23C9200A202EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -171,7 +181,10 @@
 			children = (
 				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
 				7943975D27F3C6020075102B /* UserProjectCell.swift */,
+				7952058627FE55E400A89012 /* MainCardButton.swift */,
+				7952058227FE394900A89012 /* ProjectRulesView.swift */,
 				79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */,
+				7952058827FE5CD900A89012 /* SendFileView.swift */,
 				7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */,
 				793EC73827FE177000CD8334 /* CheckmarkButton.swift */,
 				793EC73C27FE197B00CD8334 /* UserProfileButton.swift */,
@@ -244,7 +257,9 @@
 				C045618E27EA03A5007EC5C3 /* StartViewController.swift */,
 				7952058027FE382D00A89012 /* TabBarViewController.swift */,
 				C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */,
+				7952058A27FE62DE00A89012 /* SendFileViewController.swift */,
 				7943975927F3C5D20075102B /* UserProjectsViewController.swift */,
+				7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */,
 				7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */,
 				79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */,
 				C05AA30227FFAA7400230698 /* AlertViewController.swift */,
@@ -391,6 +406,7 @@
 				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
 				7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */,
 				793EC73B27FE183000CD8334 /* UIImage+Extension.swift in Sources */,
+				7952058927FE5CD900A89012 /* SendFileView.swift in Sources */,
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
 				C05AA2BC27FC740E00230698 /* TabBarCoordinator.swift in Sources */,
 				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
@@ -401,7 +417,9 @@
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
 				7943975827F3C5BF0075102B /* UserProjectsCoordinator.swift in Sources */,
+				7952058727FE55E400A89012 /* MainCardButton.swift in Sources */,
 				793EC73927FE177000CD8334 /* CheckmarkButton.swift in Sources */,
+				7952058327FE394900A89012 /* ProjectRulesView.swift in Sources */,
 				C05AA2CE27FC82AB00230698 /* UserProjectsRankingCoordinator.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
 				C05AA2F527FFA66D00230698 /* AlertView.swift in Sources */,
@@ -409,6 +427,7 @@
 				7943975A27F3C5D20075102B /* UserProjectsViewController.swift in Sources */,
 				7910D9D227FD0B8300A8DDA0 /* UIFont+Extension.swift in Sources */,
 				C05AA2C827FC749E00230698 /* TarBarPresenter.swift in Sources */,
+				7952058527FE3B1A00A89012 /* ProjectRulesViewController.swift in Sources */,
 				C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */,
 				7943975E27F3C6020075102B /* UserProjectCell.swift in Sources */,
 				79C577D027FBBB8100046B00 /* UserProjectRankingCell.swift in Sources */,
@@ -422,6 +441,7 @@
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
 				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
 				7943976027F3C6130075102B /* UserProjectsPresenter.swift in Sources */,
+				7952058B27FE62DE00A89012 /* SendFileViewController.swift in Sources */,
 				7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */,
 				793EC73D27FE197B00CD8334 /* UserProfileButton.swift in Sources */,
 				79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */,

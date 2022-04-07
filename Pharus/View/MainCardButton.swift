@@ -7,12 +7,13 @@
 import UIKit
 
 class MainCardButton: UIButton {
-        
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
         configureSubviews()
         setupConstraints()
+
     }
     
     required init?(coder: NSCoder) {
