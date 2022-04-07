@@ -25,6 +25,8 @@ struct K {
         static let hourglass = "hourglass"
         static let userPicture = "userPicture"
         static let thirdPlace = "thirdPlace"
+        static let upload = "upload"
+        static let book = "book"
     }
     
     struct DateFormats {
