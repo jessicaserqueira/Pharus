@@ -9,7 +9,7 @@ import UIKit
 
 class StudentProjectDetailViewController: UIViewController {
     
-    var coordinator: LoginCoordinator?
+    var coordinator: StudentProjectDetailFlow?
     var customView = StudentProjectDetailView()
 
     override func viewDidLoad() {

@@ -25,19 +25,23 @@ class TabBarCoordinator: Coordinator {
     }
     
     func start() {
-//        let HomeCoordinator =
+        //        let HomeCoordinator =
         let userProjectsCoordinator = makeUserProjectsCoordinator()
+        let studentProjectDetailCoordinator = makeStudentProjectDetailCoordinator()
         let userProjectsRankingCoordinator = makeUserProjectsRankingCoordinator()
-//        let AvatarCoordinator =
-//        let profileCoordinator =
-    
-        childCoordinators.append(userProjectsCoordinator)
-        childCoordinators.append(userProjectsRankingCoordinator)
+        let studentAvatarCoordinator = makeStudentAvatarCoordinato()
         
-        tabBarViewController.setViewControllers([userProjectsCoordinator.navigationController, userProjectsRankingCoordinator.navigationController],
-                                            animated: true)
+        childCoordinators.append(userProjectsCoordinator)
+        childCoordinators.append(studentProjectDetailCoordinator)
+        childCoordinators.append(userProjectsRankingCoordinator)
+        childCoordinators.append(studentAvatarCoordinator)
+        
+        
+        tabBarViewController.setViewControllers([userProjectsCoordinator.navigationController, studentProjectDetailCoordinator.navigationController, userProjectsRankingCoordinator.navigationController,
+            studentAvatarCoordinator.navigationController],
+                                                animated: true)
         navigationController.setViewControllers([tabBarViewController], animated: true)
-
+        
     }
     private func makeUserProjectsCoordinator() -> UserProjectsCoordinator {
         let coordinator = UserProjectsCoordinator(navigationController: UINavigationController())
@@ -55,6 +59,22 @@ class TabBarCoordinator: Coordinator {
         return coordinator
     }
     
+    private func makeStudentProjectDetailCoordinator() -> StudentProjectDetailCoordinator {
+        let coordinator = StudentProjectDetailCoordinator(navigationController: UINavigationController())
+        
+        coordinator.start()
+        
+        return coordinator
+    }
+    
+    private func makeStudentAvatarCoordinato() -> StudentAvatarCoordinator {
+        let coordinator = StudentAvatarCoordinator(navigationController: UINavigationController())
+        
+        coordinator.start()
+        
+        return coordinator
+    }
+    
 }
 
 extension TabBarCoordinator: TabBarFlow {
@@ -65,9 +85,9 @@ extension TabBarCoordinator: TabBarFlow {
     }
     
     func showLogin() {
-       
+        
         
     }
-
-
+    
+    
 }

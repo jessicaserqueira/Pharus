@@ -23,6 +23,7 @@ class UserProjectsCoordinator: Coordinator {
     func start() {
         let userProjectsViewController = UserProjectsViewController()
         userProjectsViewController.coordinator = self
+        userProjectsViewController.tabBarItem.image = UIImage(named: "ProjectsTabBar.fill")
         navigationController.setNavigationBarHidden(false, animated: true)
         navigationController.pushViewController(userProjectsViewController, animated: true)
     }

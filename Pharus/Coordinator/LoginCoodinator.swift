@@ -23,9 +23,10 @@ class LoginCoordinator: Coordinator {
     }
     
     func start() {
-        let loginViewController = StudentProjectDetailViewController()
+        let loginViewController = LoginViewController()
         loginViewController.coordinator = self
-        navigationController.setNavigationBarHidden(false, animated: true)
+        navigationController.setNavigationBarHidden(true, animated: true)
+        navigationController.tabBarController?.tabBar.isHidden = true
         navigationController.pushViewController(loginViewController, animated: true)
     }
 }
