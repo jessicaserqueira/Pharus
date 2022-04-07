@@ -13,4 +13,5 @@ extension UIImage {
     static let uploadIcon = UIImage(named: K.AssetsNames.upload)
     static let bookIcon = UIImage(named: K.AssetsNames.book)
     static let xmark = UIImage(systemName: "xmark")
+    static let alertIcon = UIImage(named: "alertIcon")
 }
