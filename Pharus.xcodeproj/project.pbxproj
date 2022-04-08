@@ -24,9 +24,7 @@
 		7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058027FE382D00A89012 /* TabBarViewController.swift */; };
 		7952058327FE394900A89012 /* ProjectRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058227FE394900A89012 /* ProjectRulesView.swift */; };
 		7952058527FE3B1A00A89012 /* ProjectRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */; };
-		7952058727FE55E400A89012 /* MainCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058627FE55E400A89012 /* MainCardButton.swift */; };
 		7952058927FE5CD900A89012 /* SendFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058827FE5CD900A89012 /* SendFileView.swift */; };
-		7952058B27FE62DE00A89012 /* SendFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058A27FE62DE00A89012 /* SendFileViewController.swift */; };
 		7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963212F27F23AF000A202EE /* LoginPresenter.swift */; };
 		7963213227F23C9200A202EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963213127F23C9200A202EE /* Constants.swift */; };
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
@@ -54,7 +52,6 @@
 		C05AA2CE27FC82AB00230698 /* UserProjectsRankingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2CD27FC82AB00230698 /* UserProjectsRankingCoordinator.swift */; };
 		C05AA2F527FFA66D00230698 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F427FFA66D00230698 /* AlertView.swift */; };
 		C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F827FFA69800230698 /* MainCardButton.swift */; };
-		C05AA2FF27FFA6F300230698 /* SendFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2FE27FFA6F300230698 /* SendFileView.swift */; };
 		C05AA30327FFAA7400230698 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA30227FFAA7400230698 /* AlertViewController.swift */; };
 		C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA30627FFAA9500230698 /* SendFileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -336,7 +333,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					79F06D9D27F28FCD00343865 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -412,12 +409,10 @@
 				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
 				C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */,
 				C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */,
-				C05AA2FF27FFA6F300230698 /* SendFileView.swift in Sources */,
 				7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */,
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
 				7943975827F3C5BF0075102B /* UserProjectsCoordinator.swift in Sources */,
-				7952058727FE55E400A89012 /* MainCardButton.swift in Sources */,
 				793EC73927FE177000CD8334 /* CheckmarkButton.swift in Sources */,
 				7952058327FE394900A89012 /* ProjectRulesView.swift in Sources */,
 				C05AA2CE27FC82AB00230698 /* UserProjectsRankingCoordinator.swift in Sources */,
@@ -441,7 +436,6 @@
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
 				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
 				7943976027F3C6130075102B /* UserProjectsPresenter.swift in Sources */,
-				7952058B27FE62DE00A89012 /* SendFileViewController.swift in Sources */,
 				7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */,
 				793EC73D27FE197B00CD8334 /* UserProfileButton.swift in Sources */,
 				79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */,
