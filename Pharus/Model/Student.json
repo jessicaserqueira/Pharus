@@ -13,9 +13,9 @@
     "username": "sTud3nt",
     "score": 1300,
     "medals": {
-        "diamond": 0,
+        "diamond": 1,
         "ruby": 0,
-        "emerald": 1,
+        "emerald": 0,
         "saphire": 0,
         "platinum": 0,
         "gold": 1,
@@ -39,6 +39,7 @@
             "hasCompanyPartnership": false,
             "company": null,
             "companyPhoto": null,
+            "completionStatus": 100.0,
             "tasks": [
                 {
                     "title": "Criar navigation",
@@ -68,6 +69,7 @@
             "hasCompanyPartnership": true,
             "company": "ioBrabaAsys",
             "companyPhoto": "https://pt.wikipedia.org/wiki/Ficheiro:Ioasys_logo.png",
+            "completionStatus": 100.0,
             "tasks": [
                 {
                     "title": "quis nostrud exercitation",
@@ -97,6 +99,7 @@
             "hasCompanyPartnership": false,
             "company": null,
             "companyPhoto": null,
+            "completionStatus": 50.0,
             "tasks": [
                 {
                     "title": "consectetur adipiscing elit",

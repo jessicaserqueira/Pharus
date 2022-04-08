@@ -36,12 +36,13 @@ struct Project: Codable {
     let hasCompanyPartnership: Bool
     let company: String?
     let companyPhoto: String?
+    let completionStatus: Int
     let tasks: [Task]
 
     enum CodingKeys: String, CodingKey {
         case id, name, isComplete, score, medal
         case projectDescription = "description"
-        case scoreDescription, startDate, endDate, school, rules, mentor, hasCompanyPartnership, company, companyPhoto, tasks
+        case scoreDescription, startDate, endDate, school, rules, mentor, hasCompanyPartnership, company, companyPhoto, completionStatus, tasks
     }
 }
 
