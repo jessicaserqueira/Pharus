@@ -17,7 +17,6 @@ protocol Coordinator {
 }
 
 extension Coordinator {
-    
     func coordinate(to coordinator: Coordinator) {
         coordinator.start()
     }

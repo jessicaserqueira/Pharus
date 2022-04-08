@@ -8,9 +8,7 @@
 import UIKit
 
 protocol LoginFlow {
-    func start()
     func showHome()
-
 }
 
 class LoginCoordinator: Coordinator {
@@ -24,7 +22,12 @@ class LoginCoordinator: Coordinator {
     
     func start() {
         let loginViewController = LoginViewController()
+        let loginPresenter = LoginPresenter()
+        
+        loginPresenter.coordinator = self
+        loginViewController.presenter = loginPresenter
         loginViewController.coordinator = self
+        
         navigationController.setNavigationBarHidden(true, animated: true)
         navigationController.pushViewController(loginViewController, animated: true)
     }
@@ -32,15 +35,7 @@ class LoginCoordinator: Coordinator {
 
 extension LoginCoordinator: LoginFlow {
     func showHome() {
-//        let coordinator = TabBarCoordinator(navigationController: navigationController, tabBarViewController: UITabBarController())
-//            coordinate(to: coordinator)
         let coordinator = UserProjectsCoordinator(navigationController: navigationController)
         coordinator.coordinate(to: coordinator)
-        
-    }
-    
-    func showLogin() {
-       
-        
     }
 }

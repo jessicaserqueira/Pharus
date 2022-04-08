@@ -14,6 +14,9 @@ protocol LoginPresenterProtocol {
 }
 
 class LoginPresenter: LoginPresenterProtocol {
+    
+    var coordinator: LoginCoordinator?
+    
     func isValidEmail(email: String) -> Bool {
         let emailRegEx = K.RegEx.emailRegEx
         
@@ -29,6 +32,6 @@ class LoginPresenter: LoginPresenterProtocol {
     }
     
     func loginButtonPressed() {
-       // TODO: Navigation
+        coordinator?.showHome()
     }
 }

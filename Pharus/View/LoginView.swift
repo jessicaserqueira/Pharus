@@ -8,14 +8,12 @@
 import UIKit
 
 protocol LoginViewDelegate: AnyObject{
-    
     func loginButtonPressed()
 }
 
 class LoginView: UIView {
     
     weak var delegate: LoginViewDelegate?
-    
     
     lazy var mainView: UIView = {
         let view = UIView()
@@ -160,10 +158,11 @@ class LoginView: UIView {
         button.layer.cornerRadius = 12
         button.layer.borderWidth = 0.3
         button.layer.borderColor = UIColor.lightGray.cgColor
-        button.translatesAutoresizingMaskIntoConstraints = false
+        
         button.addTarget(self,
                          action: #selector(loginButtonPressed),
                          for: UIControl.Event.touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "LoginView.loginButton"
 
         return button
@@ -199,7 +198,6 @@ class LoginView: UIView {
         passwordStackView.addArrangedSubview(changePasswordLabel)
         
         mainStackView.addArrangedSubview(loginButton)
- 
     }
     
     func setupConstraints() {
@@ -270,12 +268,9 @@ class LoginView: UIView {
         ])
     }
     
-    // MARK: Actions
+   //MARK: - Actions
     
-    @objc func loginButtonPressed(){
-        
+    @objc func loginButtonPressed() {
         delegate?.loginButtonPressed()
-        
     }
-    
 }
