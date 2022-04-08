@@ -87,7 +87,7 @@ class UserProjectsViewController: UIViewController {
     
     //Implementar quando o fluxo estiver pronto
     @objc func backButtonPressed() {
-        print("Back button pressed")
+        self.navigationController?.popViewController(animated: true)
     }
     
     //Implementar quando a tela de usuário estiver pronta
@@ -140,5 +140,12 @@ extension UserProjectsViewController: UITableViewDataSource {
 }
 
 extension UserProjectsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let project = projects[indexPath.row]
+        
+        let studentProjectDetailViewController = StudentProjectDetailViewController()
+        studentProjectDetailViewController.project = project
+        
+        self.navigationController?.pushViewController(studentProjectDetailViewController, animated: true)
+    }
 }

@@ -8,15 +8,7 @@
 import UIKit
 
 class StudentProjectDetailView: UIView {
-    
-    //MARK: - temporary data
-    
-    let tasks = [
-        "tarefa 1: la oasokdoajsdijaiod aiosjdsj dioja djosaid iajs doijaisodj ioajsid aiosjdioa jsiodj",
-        "tarefa 2: bla bla bla bla",
-        "tarefa 3: akdajsdokasldlaskdlkalskdlaskdlak"
-    ]
-    
+        
     //MARK: - Views
     
     lazy var mainView: UIView = {
@@ -211,30 +203,18 @@ class StudentProjectDetailView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureSubviews() {
-        addSubview(mainScrollView)
+    func customizeView(with project: Project) {
+        mentorLabel.text = project.mentor
+        descriptionTextLabel.text = project.projectDescription
+        completedTasksProgressView.progress = project.completionStatus/100
         
-        mainScrollView.addSubview(mainView)
+        var completedTasksCount = 0
         
-        mainView.addSubview(mainStackView)
-        
-        mainStackView.addArrangedSubview(mentorLabel)
-        mainStackView.addArrangedSubview(descriptionStackView)
-        
-        descriptionStackView.addArrangedSubview(descriptionTitleLabel)
-        descriptionStackView.addArrangedSubview(descriptionTextLabel)
-        
-        mainStackView.addArrangedSubview(rulesHelperView)
-        rulesHelperView.addSubview(rulesLabel)
-        
-        mainStackView.addArrangedSubview(tasksStackView)
-        
-        tasksStackView.addArrangedSubview(tasksTitleHelperView)
-        tasksTitleHelperView.addSubview(taskTitleLabel)
-        
-        tasksStackView.addArrangedSubview(taskHelperStackView)
-        
-        for _ in 0...10 {
+        for task in project.tasks {
+            if task.isComplete {
+                completedTasksCount += 1
+            }
+            
             let individualTaskStackView = UIStackView()
             individualTaskStackView.translatesAutoresizingMaskIntoConstraints = false
             individualTaskStackView.axis = .horizontal
@@ -242,13 +222,13 @@ class StudentProjectDetailView: UIView {
             
             let taskTitleLabel = UILabel()
             taskTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-            taskTitleLabel.text = tasks.randomElement()!
+            taskTitleLabel.text = task.title
             taskTitleLabel.numberOfLines = 0
             
             let taskCheckboxButton = CheckmarkButton()
             
             let taskDescriptionLabel = UILabel()
-            taskDescriptionLabel.text = "Lorem Ipsum dolor sit amet consectur"
+            taskDescriptionLabel.text = task.taskDescription
             taskDescriptionLabel.numberOfLines = 0
             taskDescriptionLabel.isHidden = true
             
@@ -257,8 +237,6 @@ class StudentProjectDetailView: UIView {
                 taskCheckboxButton.heightAnchor.constraint(equalToConstant: 25)
             ])
             
-            //MARK: - Tirar isso aqui no produto final
-            //   descricao terá limite de 4 linhas e dps abre para mais
             taskCheckboxButton.addAction(UIAction {  _ in
                 if taskCheckboxButton.currentImage == self.checkmarkImage {
                     taskCheckboxButton.setImage(.none, for: .normal)
@@ -295,6 +273,33 @@ class StudentProjectDetailView: UIView {
             taskHelperStackView.addArrangedSubview(individualTaskStackView)
             taskHelperStackView.addArrangedSubview(taskDescriptionLabel)
         }
+        
+        completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count)"
+        
+    }
+    
+    func configureSubviews() {
+        addSubview(mainScrollView)
+        
+        mainScrollView.addSubview(mainView)
+        
+        mainView.addSubview(mainStackView)
+        
+        mainStackView.addArrangedSubview(mentorLabel)
+        mainStackView.addArrangedSubview(descriptionStackView)
+        
+        descriptionStackView.addArrangedSubview(descriptionTitleLabel)
+        descriptionStackView.addArrangedSubview(descriptionTextLabel)
+        
+        mainStackView.addArrangedSubview(rulesHelperView)
+        rulesHelperView.addSubview(rulesLabel)
+        
+        mainStackView.addArrangedSubview(tasksStackView)
+        
+        tasksStackView.addArrangedSubview(tasksTitleHelperView)
+        tasksTitleHelperView.addSubview(taskTitleLabel)
+        
+        tasksStackView.addArrangedSubview(taskHelperStackView)
         
         mainStackView.addArrangedSubview(completedTasksProgressStackView)
         
