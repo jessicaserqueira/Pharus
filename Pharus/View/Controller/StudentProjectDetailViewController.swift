@@ -18,7 +18,9 @@ class StudentProjectDetailViewController: UIViewController {
         
         setNavigationBar()
         customView.rulesHelperView.setOnClickListener {
-            self.present(ProjectRulesViewController(), animated: true)
+            let projectRulesViewController = ProjectRulesViewController()
+            projectRulesViewController.project = self.project
+            self.present(projectRulesViewController, animated: true)
         }
         
         customView.uploadFilesButton.addAction(UIAction { _ in
@@ -65,7 +67,6 @@ class StudentProjectDetailViewController: UIViewController {
         
     }
     
-    //Implementar quando o fluxo estiver pronto
     @objc func backButtonPressed() {
         self.navigationController?.popViewController(animated: true)
     }
