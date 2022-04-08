@@ -10,11 +10,9 @@ import UIKit
 class UserProjectsViewController: UIViewController {
     
     var coordinator: UserProjectsCoordinator?
-    let tableView = UITableView()
     var student: Student?
     var projects = [Project]()
-    
-    // MARK: - Properties
+    let tableView = UITableView()
     
     let viewCustom = UIView()
     

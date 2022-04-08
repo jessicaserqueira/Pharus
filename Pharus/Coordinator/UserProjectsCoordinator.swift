@@ -15,6 +15,7 @@ class UserProjectsCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
+    var student: Student?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -23,6 +24,7 @@ class UserProjectsCoordinator: Coordinator {
     func start() {
         let userProjectsViewController = UserProjectsViewController()
         userProjectsViewController.coordinator = self
+        userProjectsViewController.student = student
         navigationController.setNavigationBarHidden(false, animated: true)
         navigationController.pushViewController(userProjectsViewController, animated: true)
     }

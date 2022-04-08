@@ -12,26 +12,18 @@ class LoginViewController: UIViewController {
     private lazy var customView = LoginView()
     var coordinator: LoginCoordinator?
     var presenter: LoginPresenter?
-    var student: Student?
         
     override func loadView() {
         super.loadView()
         
         self.view = customView
         customView.delegate = self
-        student = Bundle.main.decode("Student.json")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initializeHideKeyboard()
-    }
-}
-
-extension LoginViewController: LoginViewDelegate {
-    func loginButtonPressed() {
-        presenter?.loginButtonPressed()
     }
     
     func initializeHideKeyboard() {
@@ -44,6 +36,15 @@ extension LoginViewController: LoginViewDelegate {
     
     @objc func dismissMyKeyboard() {
         view.endEditing(true)
+    }
+}
+
+extension LoginViewController: LoginViewDelegate {
+    func loginButtonPressed() {
+        guard let email = customView.emailTextField.text else { return }
+        guard let password = customView.passwordTextField.text else { return }
+        
+        presenter?.loginUser(email: email, password: password)
     }
 }
 
