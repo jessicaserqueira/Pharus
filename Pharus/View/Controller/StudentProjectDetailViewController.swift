@@ -15,7 +15,6 @@ class StudentProjectDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         setNavigationBar()
         customView.rulesHelperView.setOnClickListener {
             let projectRulesViewController = ProjectRulesViewController()
@@ -36,8 +35,6 @@ class StudentProjectDetailViewController: UIViewController {
         }
         
         self.view = customView
-        
-        
     }
     
     func setNavigationBar() {

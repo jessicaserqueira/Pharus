@@ -36,9 +36,9 @@ class LoginCoordinator: Coordinator {
 extension LoginCoordinator: LoginFlow {
     func showHome(student: Student) {
         //Implementar tabbar
-        let coordinator = UserProjectsCoordinator(navigationController: navigationController)
-        coordinator.student = student
+        let studentProjectsCoordinator = StudentProjectsCoordinator(navigationController: navigationController)
+        studentProjectsCoordinator.student = student
         
-        coordinator.coordinate(to: coordinator)
+        self.coordinate(to: studentProjectsCoordinator)
     }
 }

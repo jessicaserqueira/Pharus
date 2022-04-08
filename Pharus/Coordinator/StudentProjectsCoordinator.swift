@@ -11,7 +11,7 @@ protocol UserProjectsFlow {
     func start()
 }
 
-class UserProjectsCoordinator: Coordinator {
+class StudentProjectsCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
@@ -22,15 +22,15 @@ class UserProjectsCoordinator: Coordinator {
     }
     
     func start() {
-        let userProjectsViewController = UserProjectsViewController()
-        userProjectsViewController.coordinator = self
-        userProjectsViewController.student = student
+        let studentProjectsViewController = StudentProjectsViewController()
+        studentProjectsViewController.coordinator = self
+        studentProjectsViewController.student = self.student
         navigationController.setNavigationBarHidden(false, animated: true)
-        navigationController.pushViewController(userProjectsViewController, animated: true)
+        navigationController.pushViewController(studentProjectsViewController, animated: true)
     }
 }
 
-extension UserProjectsCoordinator: UserProjectsFlow {
+extension StudentProjectsCoordinator: UserProjectsFlow {
     
     func showUserProjects() {
        
