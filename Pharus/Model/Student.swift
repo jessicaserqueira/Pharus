@@ -14,7 +14,7 @@ struct Student: Codable {
     let schoolShift: String
     let avatar: String
     let email, username: String
-    let score: Int
+    let score: Float
     let medals: Medals
     let projects: [Project]
 }
@@ -29,14 +29,14 @@ struct Medals: Codable {
 struct Project: Codable {
     let id, name: String
     let isComplete: Bool
-    let score: Int?
+    let score: Float?
     let medal: String?
     let projectDescription, scoreDescription, startDate, endDate: String
     let school, rules, mentor: String
     let hasCompanyPartnership: Bool
     let company: String?
     let companyPhoto: String?
-    let completionStatus: Int
+    let completionStatus: Float
     let tasks: [Task]
 
     enum CodingKeys: String, CodingKey {

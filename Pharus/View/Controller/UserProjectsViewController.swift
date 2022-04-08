@@ -28,8 +28,7 @@ class UserProjectsViewController: UIViewController {
         
         student = Bundle.main.decode("Student.json")
         if let student = student {
-            projects.append(contentsOf: student.schoolProjects)
-            projects.append(contentsOf: student.companyProjects)
+            projects = student.projects
         }
     }
     
