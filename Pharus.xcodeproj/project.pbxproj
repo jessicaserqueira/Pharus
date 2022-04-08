@@ -143,14 +143,14 @@
 		79CAD97F27EBD77600A554E0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
 				79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */,
-				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
 				79222EA027F63FC50051334A /* CGFloat+Extension.swift */,
 				794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */,
+				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
 				7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */,
-				797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */,
 				793EC73A27FE183000CD8334 /* UIImage+Extension.swift */,
+				797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */,
+				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -158,8 +158,8 @@
 		79E6424B27F098C10046A2F0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				79E6424C27F098D30046A2F0 /* Network.swift */,
 				7963213127F23C9200A202EE /* Constants.swift */,
+				79E6424C27F098D30046A2F0 /* Network.swift */,
 			);
 			name = Service;
 			path = Coordinator/Service;
@@ -176,19 +176,19 @@
 		C008AF2227F1ED7F00AD94C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C05AA2F427FFA66D00230698 /* AlertView.swift */,
+				793EC73827FE177000CD8334 /* CheckmarkButton.swift */,
+				79222EA227F643D60051334A /* CircleProgressView.swift */,
+				C04561A127EA03B1007EC5C3 /* Controller */,
 				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
-				7943975D27F3C6020075102B /* UserProjectCell.swift */,
 				7952058627FE55E400A89012 /* MainCardButton.swift */,
 				7952058227FE394900A89012 /* ProjectRulesView.swift */,
-				79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */,
 				7952058827FE5CD900A89012 /* SendFileView.swift */,
 				7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */,
-				793EC73827FE177000CD8334 /* CheckmarkButton.swift */,
 				793EC73C27FE197B00CD8334 /* UserProfileButton.swift */,
-				79222EA227F643D60051334A /* CircleProgressView.swift */,
+				7943975D27F3C6020075102B /* UserProjectCell.swift */,
+				79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */,
 				C05AA2F827FFA69800230698 /* MainCardButton.swift */,
-				C04561A127EA03B1007EC5C3 /* Controller */,
-				C05AA2F427FFA66D00230698 /* AlertView.swift */,
 				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
 			);
 			path = View;
@@ -251,15 +251,15 @@
 		C04561A127EA03B1007EC5C3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C045618E27EA03A5007EC5C3 /* StartViewController.swift */,
-				7952058027FE382D00A89012 /* TabBarViewController.swift */,
-				C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */,
-				7952058A27FE62DE00A89012 /* SendFileViewController.swift */,
-				7943975927F3C5D20075102B /* UserProjectsViewController.swift */,
-				7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */,
-				7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */,
-				79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */,
 				C05AA30227FFAA7400230698 /* AlertViewController.swift */,
+				C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */,
+				7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */,
+				7952058A27FE62DE00A89012 /* SendFileViewController.swift */,
+				C045618E27EA03A5007EC5C3 /* StartViewController.swift */,
+				7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */,
+				7952058027FE382D00A89012 /* TabBarViewController.swift */,
+				79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */,
+				7943975927F3C5D20075102B /* UserProjectsViewController.swift */,
 				C05AA30627FFAA9500230698 /* SendFileViewController.swift */,
 			);
 			path = Controller;
@@ -268,8 +268,8 @@
 		C04561A227EA03B3007EC5C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				799768CF27EA3B5F0057AFA7 /* Student.swift */,
 				79FB0CC827F330FA001D36A7 /* Student.json */,
+				799768CF27EA3B5F0057AFA7 /* Student.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,10 +277,10 @@
 		C04561A327EA03BF007EC5C3 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				C04561A727EA041B007EC5C3 /* Coordinator.swift */,
 				C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */,
-				C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */,
+				C04561A727EA041B007EC5C3 /* Coordinator.swift */,
 				C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */,
+				C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */,
 				C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */,
 				7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */,
 				C05AA2CD27FC82AB00230698 /* UserProjectsRankingCoordinator.swift */,

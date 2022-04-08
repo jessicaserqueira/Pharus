@@ -8,17 +8,19 @@ import UIKit
 
 class StudentProjectDetailViewController: UIViewController {
     
+    var project: Project? = nil
     var coordinator: LoginCoordinator?
     var customView = StudentProjectDetailView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view = customView
-        self.title = "Projeto 1"
+        
         setNavigationBar()
         customView.rulesHelperView.setOnClickListener {
-            self.present(ProjectRulesViewController(), animated: true)
+            let projectRulesViewController = ProjectRulesViewController()
+            projectRulesViewController.project = self.project
+            self.present(projectRulesViewController, animated: true)
         }
         
         customView.uploadFilesButton.addAction(UIAction { _ in
@@ -26,7 +28,20 @@ class StudentProjectDetailViewController: UIViewController {
         }, for: .touchUpInside)
     }
     
+    override func loadView() {
+        super.loadView()
+        
+        if let project = project {
+            customView.customizeView(with: project)
+        }
+        
+        self.view = customView
+        
+        
+    }
+    
     func setNavigationBar() {
+        self.title = project?.name
         
         let userImage = UIImage(named: K.AssetsNames.userPicture) ?? UIImage()
         
@@ -52,9 +67,8 @@ class StudentProjectDetailViewController: UIViewController {
         
     }
     
-    //Implementar quando o fluxo estiver pronto
     @objc func backButtonPressed() {
-        print("Back button pressed")
+        self.navigationController?.popViewController(animated: true)
     }
     
     //Implementar quando a tela de usuário estiver pronta

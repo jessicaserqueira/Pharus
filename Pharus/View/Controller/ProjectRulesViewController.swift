@@ -9,15 +9,24 @@ import UIKit
 
 class ProjectRulesViewController: UIViewController {
     
+    var project: Project? = nil
     var coordinator: LoginCoordinator?
     var customView = ProjectRulesView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view = customView
         customView.closeButton.addAction(UIAction { _ in
             self.dismiss(animated: true)
         }, for: .touchUpInside)
+    }
+    
+    override func loadView() {
+        super.loadView()
+        
+        self.view = customView
+        if let project = project {
+            customView.rulesLabel.text = project.rules
+        }
     }
 }

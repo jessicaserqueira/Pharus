@@ -38,6 +38,7 @@ extension LoginViewController: LoginViewDelegate {
         coordinator?.showHome()
         
     }
+    
     func initializeHideKeyboard(){
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
