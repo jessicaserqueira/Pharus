@@ -9,37 +9,14 @@ import Foundation
 
 // MARK: - Student
 struct Student: Codable {
-    let name: Name
-    let birthday, schoolID, gender: String
-    let phoneNumbers: [PhoneNumber]
-    let school, schoolShift: String
-    let avatar, backgroundPhoto: String
+    let id, firstName, lastName, birthdate: String
+    let schoolID, gender, phone, school: String
+    let schoolShift: String
+    let avatar: String
+    let email, username: String
+    let score: Float
     let medals: Medals
-    let score: Int
-    let schoolProjects, companyProjects: [Project]
-
-    enum CodingKeys: String, CodingKey {
-        case name, birthday
-        case schoolID = "schoolId"
-        case gender, phoneNumbers, school, schoolShift, avatar, backgroundPhoto, medals, score, schoolProjects, companyProjects
-    }
-}
-
-// MARK: - Project
-struct Project: Codable {
-    let name: String
-    let score: Int
-    let medal, projectDescription, scoreDescription, startDate: String
-    let endDate, rules: String
-    let mentor: String
-    let completionStatus: Float
-
-    enum CodingKeys: String, CodingKey {
-        case name, score, medal
-        case projectDescription = "description"
-        case scoreDescription, startDate, endDate, rules, mentor
-        case completionStatus
-    }
+    let projects: [Project]
 }
 
 // MARK: - Medals
@@ -48,13 +25,35 @@ struct Medals: Codable {
     let platinum, gold, silver, bronze: Int
 }
 
-// MARK: - Name
-struct Name: Codable {
-    let firstName, lastName: String
+// MARK: - Project
+struct Project: Codable {
+    let id, name: String
+    let isComplete: Bool
+    let score: Float?
+    let medal: String?
+    let projectDescription, scoreDescription, startDate, endDate: String
+    let school, rules, mentor: String
+    let hasCompanyPartnership: Bool
+    let company: String?
+    let companyPhoto: String?
+    let completionStatus: Float
+    let tasks: [Task]
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, isComplete, score, medal
+        case projectDescription = "description"
+        case scoreDescription, startDate, endDate, school, rules, mentor, hasCompanyPartnership, company, companyPhoto, completionStatus, tasks
+    }
 }
 
-// MARK: - PhoneNumber
-struct PhoneNumber: Codable {
-    let type, number: String
-}
+// MARK: - Task
+struct Task: Codable {
+    let title: String
+    let isComplete: Bool
+    let taskDescription: String
 
+    enum CodingKeys: String, CodingKey {
+        case title, isComplete
+        case taskDescription = "description"
+    }
+}
