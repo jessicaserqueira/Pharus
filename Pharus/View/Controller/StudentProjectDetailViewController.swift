@@ -50,7 +50,7 @@ class StudentProjectDetailViewController: UIViewController {
                 completedTasksCount += 1
             }
             
-            let taskView = ProjectTaskViewView()
+            let taskView = ProjectTaskView()
             taskView.customizeView(using: task)
             
             taskView.taskCheckboxButton.addAction(UIAction { _ in
@@ -122,7 +122,5 @@ extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {
     func sendFilesButtonTapped() {
         presenter?.showUploadFileView()
     }
-    
-    
 }
 

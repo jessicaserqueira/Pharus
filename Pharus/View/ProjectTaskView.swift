@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProjectTaskViewView: UIView {
+class ProjectTaskView: UIView {
     
     //MARK: - Views
     
