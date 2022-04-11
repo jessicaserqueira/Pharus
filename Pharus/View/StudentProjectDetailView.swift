@@ -7,6 +7,13 @@
 
 import UIKit
 
+protocol StudentProjectDetailViewDelegate {
+    func rulesViewTapped()
+    //func taskCheckmarkButtonTapped()?
+    //func showTaskButtonTapped()?
+    func sendFilesButtonTapped()
+}
+
 class StudentProjectDetailView: UIView {
         
     //MARK: - Views
@@ -207,75 +214,6 @@ class StudentProjectDetailView: UIView {
         mentorLabel.text = project.mentor
         descriptionTextLabel.text = project.projectDescription
         completedTasksProgressView.progress = project.completionStatus/100
-        
-        var completedTasksCount = 0
-        
-        for task in project.tasks {
-            if task.isComplete {
-                completedTasksCount += 1
-            }
-            
-            let individualTaskStackView = UIStackView()
-            individualTaskStackView.translatesAutoresizingMaskIntoConstraints = false
-            individualTaskStackView.axis = .horizontal
-            individualTaskStackView.spacing = 11
-            
-            let taskTitleLabel = UILabel()
-            taskTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-            taskTitleLabel.text = task.title
-            taskTitleLabel.numberOfLines = 0
-            
-            let taskCheckboxButton = CheckmarkButton()
-            
-            let taskDescriptionLabel = UILabel()
-            taskDescriptionLabel.text = task.taskDescription
-            taskDescriptionLabel.numberOfLines = 0
-            taskDescriptionLabel.isHidden = true
-            
-            NSLayoutConstraint.activate([
-                taskCheckboxButton.widthAnchor.constraint(equalToConstant: 25),
-                taskCheckboxButton.heightAnchor.constraint(equalToConstant: 25)
-            ])
-            
-            taskCheckboxButton.addAction(UIAction {  _ in
-                if taskCheckboxButton.currentImage == self.checkmarkImage {
-                    taskCheckboxButton.setImage(.none, for: .normal)
-                    UIView.transition(with: taskDescriptionLabel,
-                                      duration: 0.4,
-                                      options: .curveEaseOut) {
-                        taskDescriptionLabel.isHidden = false
-                    }
-                } else {
-                    taskCheckboxButton.setImage(self.checkmarkImage, for: .normal)
-                    
-                    UIView.transition(with: taskDescriptionLabel,
-                                      duration: 0.4,
-                                      options:. transitionCrossDissolve ) {
-                        taskDescriptionLabel.isHidden = true
-                    }
-                }
-            }, for: .touchUpInside)
-            
-            individualTaskStackView.addArrangedSubview(taskCheckboxButton)
-            individualTaskStackView.addArrangedSubview(taskTitleLabel)
-            
-            let dropTextIconImageView = UIImageView()
-            dropTextIconImageView.image = .lessThanImage
-            dropTextIconImageView.translatesAutoresizingMaskIntoConstraints = false
-            
-            NSLayoutConstraint.activate([
-                dropTextIconImageView.widthAnchor.constraint(equalToConstant: 25),
-                dropTextIconImageView.heightAnchor.constraint(equalToConstant: 25)
-            ])
-                        
-            individualTaskStackView.addArrangedSubview(dropTextIconImageView)
-            
-            taskHelperStackView.addArrangedSubview(individualTaskStackView)
-            taskHelperStackView.addArrangedSubview(taskDescriptionLabel)
-        }
-        
-        completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count)"
-        
     }
     
     func configureSubviews() {
@@ -309,11 +247,6 @@ class StudentProjectDetailView: UIView {
         mainStackView.addArrangedSubview(uploadFilesHelperView)
         
         uploadFilesHelperView.addSubview(uploadFilesButton)
-        
-        uploadFilesButton.addAction(UIAction { _ in
-            print("enviar arquivos")
-        }, for: .touchUpInside)
-        
     }
     
     //MARK: - Constraints

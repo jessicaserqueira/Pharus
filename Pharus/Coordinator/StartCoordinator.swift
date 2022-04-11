@@ -8,7 +8,6 @@
 import UIKit
 
 protocol StartFlow {
-    
     func showLogin()
 }
 
@@ -30,10 +29,8 @@ class StartCoordinator: Coordinator {
 }
 
 extension StartCoordinator: StartFlow {
-    
     func showLogin() {
         let loginCoordinator = LoginCoordinator(navigationController: navigationController)
         coordinate(to: loginCoordinator)
-    
     }
 }

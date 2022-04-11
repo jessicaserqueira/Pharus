@@ -10,10 +10,13 @@ import Foundation
 protocol LoginPresenterProtocol {
     func isValidEmail(email: String) -> Bool
     func isValidPassword(password: String) -> Bool
-    func loginButtonPressed()
+    func loginUser(email: String, password: String)
 }
 
 class LoginPresenter: LoginPresenterProtocol {
+    
+    var coordinator: LoginCoordinator?
+    
     func isValidEmail(email: String) -> Bool {
         let emailRegEx = K.RegEx.emailRegEx
         
@@ -28,7 +31,8 @@ class LoginPresenter: LoginPresenterProtocol {
         return passwordPredicate.evaluate(with: password)
     }
     
-    func loginButtonPressed() {
-       // TODO: Navigation
+    func loginUser(email: String, password: String) {
+        let student: Student = Bundle.main.decode("Student.json")
+        coordinator?.showHome(student: student)
     }
 }

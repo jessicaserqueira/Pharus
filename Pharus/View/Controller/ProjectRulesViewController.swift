@@ -9,7 +9,7 @@ import UIKit
 
 class ProjectRulesViewController: UIViewController {
     
-    var project: Project? = nil
+    var rules: String?
     var coordinator: LoginCoordinator?
     var customView = ProjectRulesView()
     
@@ -25,8 +25,8 @@ class ProjectRulesViewController: UIViewController {
         super.loadView()
         
         self.view = customView
-        if let project = project {
-            customView.rulesLabel.text = project.rules
+        if let rules = rules {
+            customView.rulesLabel.text = rules
         }
     }
 }

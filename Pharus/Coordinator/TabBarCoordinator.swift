@@ -39,8 +39,8 @@ class TabBarCoordinator: Coordinator {
         navigationController.setViewControllers([tabBarViewController], animated: true)
 
     }
-    private func makeUserProjectsCoordinator() -> UserProjectsCoordinator {
-        let coordinator = UserProjectsCoordinator(navigationController: UINavigationController())
+    private func makeUserProjectsCoordinator() -> StudentProjectsCoordinator {
+        let coordinator = StudentProjectsCoordinator(navigationController: UINavigationController())
         
         coordinator.start()
         
@@ -59,7 +59,7 @@ class TabBarCoordinator: Coordinator {
 
 extension TabBarCoordinator: TabBarFlow {
     func showTabBar() {
-        let coordinator = UserProjectsCoordinator(navigationController: navigationController)
+        let coordinator = StudentProjectsCoordinator(navigationController: navigationController)
         coordinate(to: coordinator)
         
     }

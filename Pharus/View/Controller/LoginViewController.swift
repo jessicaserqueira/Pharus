@@ -9,47 +9,41 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    var coordinator: LoginFlow?
-    private lazy var viewCustom = LoginView()
-    var presenter: LoginPresenterProtocol?
-    var student: Student?
-    
-    // MARK: - Properties
-    
+    private lazy var customView = LoginView()
+    var presenter: LoginPresenter?
+        
     override func loadView() {
         super.loadView()
         
-        self.view = viewCustom
-        viewCustom.delegate = self
-        student = Bundle.main.decode("Student.json")
-        
+        self.view = customView
+        customView.delegate = self
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         initializeHideKeyboard()
-        
-    }
-}
-extension LoginViewController: LoginViewDelegate {
-    func loginButtonPressed() {
-        //       presenter?.loginButtonPressed()
-        coordinator?.showHome()
-        
     }
     
-    func initializeHideKeyboard(){
-        
+    func initializeHideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(dismissMyKeyboard))
         
         view.addGestureRecognizer(tap)
     }
-    @objc func dismissMyKeyboard(){
-        
+    
+    @objc func dismissMyKeyboard() {
         view.endEditing(true)
+    }
+}
+
+extension LoginViewController: LoginViewDelegate {
+    func loginButtonPressed() {
+        guard let email = customView.emailTextField.text else { return }
+        guard let password = customView.passwordTextField.text else { return }
+        
+        presenter?.loginUser(email: email, password: password)
     }
 }
 

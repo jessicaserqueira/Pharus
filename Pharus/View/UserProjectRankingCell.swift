@@ -13,7 +13,7 @@ class UserProjectRankingCell: UITableViewCell {
         let view = UIView()
         view.backgroundColor = .cardColor
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "UserProjectCell.mainView"
+        view.accessibilityIdentifier = "StudentProjectCell.mainView"
         
         return view
     }()
@@ -23,7 +23,7 @@ class UserProjectRankingCell: UITableViewCell {
         stackView.axis = .vertical
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "UserProjectCell.mainStackView"
+        stackView.accessibilityIdentifier = "StudentProjectCell.mainStackView"
         
         return stackView
     }()
@@ -32,7 +32,7 @@ class UserProjectRankingCell: UITableViewCell {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "UserProjectCell.placementStackView"
+        stackView.accessibilityIdentifier = "StudentProjectCell.placementStackView"
         return stackView
     }()
     
@@ -40,7 +40,7 @@ class UserProjectRankingCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.image = UIImage(named: K.AssetsNames.thirdPlace)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "UserProjectCell.placementImageView"
+        imageView.accessibilityIdentifier = "StudentProjectCell.placementImageView"
         return imageView
     }()
     
@@ -48,7 +48,7 @@ class UserProjectRankingCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.image = UIImage(named: K.AssetsNames.medal)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "UserProjectCell.placementImageView"
+        imageView.accessibilityIdentifier = "StudentProjectCell.placementImageView"
         
         return imageView
     }()
@@ -56,7 +56,7 @@ class UserProjectRankingCell: UITableViewCell {
     lazy var medalHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "UserProjectCell.medalHelperView"
+        view.accessibilityIdentifier = "StudentProjectCell.medalHelperView"
         return view
     }()
     

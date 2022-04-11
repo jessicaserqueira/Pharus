@@ -7,35 +7,25 @@
 
 import UIKit
 
-class UserProjectsViewController: UIViewController {
+class StudentProjectsViewController: UIViewController {
     
-    var coordinator: UserProjectsCoordinator?
-    let tableView = UITableView()
+    var presenter: StudentProjectsPresenter?
     var student: Student?
     var projects = [Project]()
-    
-    // MARK: - Properties
-    
-    let viewCustom = UIView()
+    let tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setNavigationBar()
-        
+        projects = student?.projects ?? [Project]()
         view.addSubview(tableView)
         setupTableView()
-        
-        student = Bundle.main.decode("Student.json")
-        if let student = student {
-            projects = student.projects
-        }
     }
     
     override func loadView() {
         super.loadView()
         
-        self.view = viewCustom
         view.backgroundColor = .white
     }
     
@@ -96,7 +86,7 @@ class UserProjectsViewController: UIViewController {
     }
     
     func setupTableView() {
-        tableView.register(UserProjectCell.self,
+        tableView.register(StudentProjectCell.self,
                            forCellReuseIdentifier: K.CellReuseIdentifiers.userProjects)
         
         tableView.dataSource = self
@@ -115,7 +105,13 @@ class UserProjectsViewController: UIViewController {
     }
 }
 
-extension UserProjectsViewController: UITableViewDataSource {
+extension StudentProjectsViewController: StudentProjectCellDelegate {
+    func projectTapped() {
+        
+    }
+}
+
+extension StudentProjectsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         397
@@ -127,7 +123,7 @@ extension UserProjectsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.userProjects,
-                                                 for: indexPath) as! UserProjectCell
+                                                 for: indexPath) as! StudentProjectCell
         let project = projects[indexPath.row]
         
         cell.configureSubviews()
@@ -139,13 +135,9 @@ extension UserProjectsViewController: UITableViewDataSource {
     }
 }
 
-extension UserProjectsViewController: UITableViewDelegate {
+extension StudentProjectsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let project = projects[indexPath.row]
-        
-        let studentProjectDetailViewController = StudentProjectDetailViewController()
-        studentProjectDetailViewController.project = project
-        
-        self.navigationController?.pushViewController(studentProjectDetailViewController, animated: true)
+        presenter?.showStudentProject(project: project)
     }
 }

@@ -8,24 +8,15 @@ import UIKit
 
 class StudentProjectDetailViewController: UIViewController {
     
-    var project: Project? = nil
-    var coordinator: LoginCoordinator?
+    var project: Project?
+    var presenter: StudentProjectDetailPresenter?
     var customView = StudentProjectDetailView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         setNavigationBar()
-        customView.rulesHelperView.setOnClickListener {
-            let projectRulesViewController = ProjectRulesViewController()
-            projectRulesViewController.project = self.project
-            self.present(projectRulesViewController, animated: true)
-        }
-        
-        customView.uploadFilesButton.addAction(UIAction { _ in
-            self.present(SendFileViewController(), animated: true)
-        }, for: .touchUpInside)
+        addActions()
     }
     
     override func loadView() {
@@ -33,10 +24,45 @@ class StudentProjectDetailViewController: UIViewController {
         
         if let project = project {
             customView.customizeView(with: project)
+            setupProjectTasks()
         }
         
         self.view = customView
+    }
+    
+    func addActions() {
+        customView.rulesHelperView.setOnClickListener {
+            self.rulesViewTapped()
+        }
         
+        customView.uploadFilesButton.addAction(UIAction { _ in
+            self.sendFilesButtonTapped()
+        }, for: .touchUpInside)
+    }
+    
+    func setupProjectTasks() {
+        guard let project = project else { return }
+        
+        var completedTasksCount = 0
+        
+        for task in project.tasks {
+            if task.isComplete {
+                completedTasksCount += 1
+            }
+            
+            let taskView = ProjectTaskView()
+            taskView.customizeView(using: task)
+            
+            taskView.taskCheckboxButton.addAction(UIAction { _ in
+                taskView.taskCheckboxButton.setImage(task.isComplete ? .none : .checkmarkImage,
+                                                     for: .normal)
+                task.toggleCompletionStatus()
+            }, for: .touchUpInside)
+            
+            customView.taskHelperStackView.addArrangedSubview(taskView)
+        }
+        
+        customView.completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count)"
         
     }
     
@@ -76,5 +102,25 @@ class StudentProjectDetailViewController: UIViewController {
         print("Profile Picture pressed")
     }
     
+}
+
+extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {
+    func rulesViewTapped() {
+        guard let project = project else { return }
+        presenter?.showProjectRules(rules: project.rules)
+    }
+    
+//    func taskCheckmarkButtonTapped() {
+//        print("task pressed")
+//        //presenter?.toggleTaskCompletedStatus(task: <#T##Task#>)
+//    }
+    
+//    func showTaskButtonTapped() {
+//        print("mostrar descricao")
+//    }
+    
+    func sendFilesButtonTapped() {
+        presenter?.showUploadFileView()
+    }
 }
 

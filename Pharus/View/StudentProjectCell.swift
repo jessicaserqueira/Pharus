@@ -7,14 +7,18 @@
 
 import UIKit
 
-class UserProjectCell: UITableViewCell {
+protocol StudentProjectCellDelegate {
+    func projectTapped()
+}
+
+class StudentProjectCell: UITableViewCell {
     
     //MARK: - Views
     
     lazy var mainView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "UserProjectCell.mainView"
+        view.accessibilityIdentifier = "StudentProjectCell.mainView"
         
         return view
     }()
@@ -23,7 +27,7 @@ class UserProjectCell: UITableViewCell {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "UserProjectCell.titleStackView"
+        stackView.accessibilityIdentifier = "StudentProjectCell.titleStackView"
         
         return stackView
     }()
@@ -43,7 +47,7 @@ class UserProjectCell: UITableViewCell {
         stackView.axis = .vertical
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "UserProjectCell.mainStackView"
+        stackView.accessibilityIdentifier = "StudentProjectCell.mainStackView"
         
         return stackView
     }()
@@ -53,7 +57,7 @@ class UserProjectCell: UITableViewCell {
         stackView.axis = .vertical
         stackView.spacing = 8
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "UserProjectCell.progressStackView"
+        stackView.accessibilityIdentifier = "StudentProjectCell.progressStackView"
         
         return stackView
     }()
@@ -65,7 +69,7 @@ class UserProjectCell: UITableViewCell {
         label.lineBreakMode = .byTruncatingTail
         label.font = .cardTitleFont
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectCell.titleLabel"
+        label.accessibilityIdentifier = "StudentProjectCell.titleLabel"
         
         return label
     }()
@@ -76,7 +80,7 @@ class UserProjectCell: UITableViewCell {
         label.font = .cardSubtitleFont
         label.lineBreakMode = .byTruncatingTail
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectCell.mentorsLabel"
+        label.accessibilityIdentifier = "StudentProjectCell.mentorsLabel"
         
         return label
     }()
@@ -86,7 +90,7 @@ class UserProjectCell: UITableViewCell {
         label.text = "Descrição:"
         label.font = .boldSystemFont(ofSize: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectCell.descriptionTitleLabel"
+        label.accessibilityIdentifier = "StudentProjectCell.descriptionTitleLabel"
         
         return label
     }()
@@ -94,7 +98,7 @@ class UserProjectCell: UITableViewCell {
     lazy var descriptionLabelView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "UserProjectCell.descriptionLabelView"
+        view.accessibilityIdentifier = "StudentProjectCell.descriptionLabelView"
         return view
     }()
     
@@ -102,7 +106,7 @@ class UserProjectCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectCell.descriptionLabel"
+        label.accessibilityIdentifier = "StudentProjectCell.descriptionLabel"
         
         return label
     }()
@@ -113,7 +117,7 @@ class UserProjectCell: UITableViewCell {
         stackview.alignment = .center
         stackview.spacing = 26
         stackview.translatesAutoresizingMaskIntoConstraints = false
-        stackview.accessibilityIdentifier = "UserProjectCell.helpImageView"
+        stackview.accessibilityIdentifier = "StudentProjectCell.helpImageView"
         
         return stackview
     }()
@@ -121,7 +125,7 @@ class UserProjectCell: UITableViewCell {
     lazy var completionCircleHelpView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "UserProjectCell.completionCircleHelpView"
+        view.accessibilityIdentifier = "StudentProjectCell.completionCircleHelpView"
         
         return view
     }()
@@ -131,7 +135,7 @@ class UserProjectCell: UITableViewCell {
         view.circleColor = UIColor(red: 0.765, green: 0.765, blue: 0.765, alpha: 1)
         view.completionBarColor = UIColor(red: 0.153, green: 0.153, blue: 0.153, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "UserProjectCell.descriptionTitleLabel"
+        view.accessibilityIdentifier = "StudentProjectCell.descriptionTitleLabel"
         
         return view
     }()
@@ -141,7 +145,7 @@ class UserProjectCell: UITableViewCell {
         label.text = "100%"
         label.font = .systemFont(ofSize: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectCell.percentageCompletionLabel"
+        label.accessibilityIdentifier = "StudentProjectCell.percentageCompletionLabel"
         
         return label
     }()

@@ -33,7 +33,6 @@ class SendFileViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        
 
         self.view = customView
     }
