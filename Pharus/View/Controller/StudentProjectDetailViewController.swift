@@ -110,14 +110,14 @@ extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {
         presenter?.showProjectRules(rules: project.rules)
     }
     
-    func taskCheckmarkButtonTapped() {
-        print("task pressed")
-        //presenter?.toggleTaskCompletedStatus(task: <#T##Task#>)
-    }
+//    func taskCheckmarkButtonTapped() {
+//        print("task pressed")
+//        //presenter?.toggleTaskCompletedStatus(task: <#T##Task#>)
+//    }
     
-    func showTaskButtonTapped() {
-        print("mostrar descricao")
-    }
+//    func showTaskButtonTapped() {
+//        print("mostrar descricao")
+//    }
     
     func sendFilesButtonTapped() {
         presenter?.showUploadFileView()

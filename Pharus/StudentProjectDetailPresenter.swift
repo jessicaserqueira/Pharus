@@ -10,7 +10,6 @@ import UIKit
 protocol StudentProjectsDetailPresenterProtocol {
     func showProjectRules(rules: String)
     func showUploadFileView()
-    func showTaskDescription(task: Task)
     func toggleTaskCompletedStatus(task: Task)
 }
 
@@ -19,18 +18,15 @@ class StudentProjectDetailPresenter: StudentProjectsDetailPresenterProtocol {
     var coordinator: StudentProjectDetailCoordinator?
     
     func showProjectRules(rules: String) {
-        print(rules)
+        coordinator?.showProjectRules(rules: rules)
     }
     
     func showUploadFileView() {
-        print("upar arquivo")
+        print("passou aq")
+        coordinator?.showSendFileView()
     }
-    
-    func showTaskDescription(task: Task) {
-        print(task.taskDescription)
-    }
-    
+        
     func toggleTaskCompletedStatus(task: Task) {
-        print(task.isComplete)
+        task.toggleCompletionStatus()
     }
 }

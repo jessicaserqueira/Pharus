@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol StudentProjectDetailFlow {
+    func showProjectRules(rules: String)
+    func showSendFileView()
+}
 
 class StudentProjectDetailCoordinator: Coordinator {
     
@@ -23,8 +27,24 @@ class StudentProjectDetailCoordinator: Coordinator {
         studentProjectDetailPresenter.coordinator = self
         
         let studentProjectDetailViewController = StudentProjectDetailViewController()
+        studentProjectDetailViewController.presenter = studentProjectDetailPresenter
         studentProjectDetailViewController.project = self.project
         
         navigationController.pushViewController(studentProjectDetailViewController, animated: true)
+    }
+}
+
+extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
+    
+    func showProjectRules(rules: String) {
+        let projectRulesViewController = ProjectRulesViewController()
+        projectRulesViewController.rules = rules
+        
+        navigationController.pushViewController(projectRulesViewController, animated: true)
+    }
+    
+    func showSendFileView() {
+        let sendFileViewController = SendFileViewController()
+        navigationController.present(sendFileViewController, animated: true)
     }
 }

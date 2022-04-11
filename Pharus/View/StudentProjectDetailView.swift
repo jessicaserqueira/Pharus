@@ -9,8 +9,8 @@ import UIKit
 
 protocol StudentProjectDetailViewDelegate {
     func rulesViewTapped()
-    func taskCheckmarkButtonTapped()
-    func showTaskButtonTapped()
+    //func taskCheckmarkButtonTapped()?
+    //func showTaskButtonTapped()?
     func sendFilesButtonTapped()
 }
 
@@ -247,11 +247,6 @@ class StudentProjectDetailView: UIView {
         mainStackView.addArrangedSubview(uploadFilesHelperView)
         
         uploadFilesHelperView.addSubview(uploadFilesButton)
-        
-        uploadFilesButton.addAction(UIAction { _ in
-            print("enviar arquivos")
-        }, for: .touchUpInside)
-        
     }
     
     //MARK: - Constraints
