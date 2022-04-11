@@ -8,12 +8,14 @@
 import Foundation
 
 protocol StudentProjectsPresenterProtocol {
-    
+    func showStudentProject(project: Project)
 }
 
 class StudentProjectsPresenter: StudentProjectsPresenterProtocol {
-    
     var coordinator: StudentProjectsCoordinator?
     
+    func showStudentProject(project: Project) {
+        coordinator?.showUserProject(project: project)
+    }
 }
 

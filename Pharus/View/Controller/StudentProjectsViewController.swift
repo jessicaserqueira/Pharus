@@ -9,7 +9,7 @@ import UIKit
 
 class StudentProjectsViewController: UIViewController {
     
-    var coordinator: StudentProjectsCoordinator?
+    var presenter: StudentProjectsPresenter?
     var student: Student?
     var projects = [Project]()
     let tableView = UITableView()
@@ -105,6 +105,12 @@ class StudentProjectsViewController: UIViewController {
     }
 }
 
+extension StudentProjectsViewController: StudentProjectCellDelegate {
+    func projectTapped() {
+        
+    }
+}
+
 extension StudentProjectsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -132,10 +138,6 @@ extension StudentProjectsViewController: UITableViewDataSource {
 extension StudentProjectsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let project = projects[indexPath.row]
-        
-        let studentProjectDetailViewController = StudentProjectDetailViewController()
-        studentProjectDetailViewController.project = project
-        
-        self.navigationController?.pushViewController(studentProjectDetailViewController, animated: true)
+        presenter?.showStudentProject(project: project)
     }
 }

@@ -24,12 +24,14 @@
 		7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058027FE382D00A89012 /* TabBarViewController.swift */; };
 		7952058327FE394900A89012 /* ProjectRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058227FE394900A89012 /* ProjectRulesView.swift */; };
 		7952058527FE3B1A00A89012 /* ProjectRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */; };
-		7952058927FE5CD900A89012 /* SendFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058827FE5CD900A89012 /* SendFileView.swift */; };
 		7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963212F27F23AF000A202EE /* LoginPresenter.swift */; };
 		7963213227F23C9200A202EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963213127F23C9200A202EE /* Constants.swift */; };
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
 		797A68EE27F4768A00ABDAC6 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */; };
 		799768D027EA3B5F0057AFA7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* Student.swift */; };
+		79AF90F728043A590094AB97 /* SendFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2FE27FFA6F300230698 /* SendFileView.swift */; };
+		79AF90F928043D3C0094AB97 /* StudentProjectDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */; };
+		79AF90FB28043DEA0094AB97 /* StudentProjectDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */; };
 		79C577D027FBBB8100046B00 /* UserProjectRankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */; };
 		79C577D227FBBB9800046B00 /* UserProjectsRankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */; };
 		79E6424D27F098D30046A2F0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6424C27F098D30046A2F0 /* Network.swift */; };
@@ -85,13 +87,14 @@
 		7952058227FE394900A89012 /* ProjectRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRulesView.swift; sourceTree = "<group>"; };
 		7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRulesViewController.swift; sourceTree = "<group>"; };
 		7952058627FE55E400A89012 /* MainCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
-		7952058827FE5CD900A89012 /* SendFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileView.swift; sourceTree = "<group>"; };
 		7952058A27FE62DE00A89012 /* SendFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileViewController.swift; sourceTree = "<group>"; };
 		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		7963213127F23C9200A202EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		799768CF27EA3B5F0057AFA7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailCoordinator.swift; sourceTree = "<group>"; };
+		79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailPresenter.swift; sourceTree = "<group>"; };
 		79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectRankingCell.swift; sourceTree = "<group>"; };
 		79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsRankingViewController.swift; sourceTree = "<group>"; };
 		79E6424C27F098D30046A2F0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -140,6 +143,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79AF90F628043A120094AB97 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		79CAD97F27EBD77600A554E0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,10 +193,9 @@
 				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
 				7952058627FE55E400A89012 /* MainCardButton.swift */,
 				7952058227FE394900A89012 /* ProjectRulesView.swift */,
-				7952058827FE5CD900A89012 /* SendFileView.swift */,
+				7943975D27F3C6020075102B /* StudentProjectCell.swift */,
 				7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */,
 				793EC73C27FE197B00CD8334 /* UserProfileButton.swift */,
-				7943975D27F3C6020075102B /* StudentProjectCell.swift */,
 				79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */,
 				C05AA2F827FFA69800230698 /* MainCardButton.swift */,
 				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
@@ -200,6 +209,7 @@
 				C045618927EA03A5007EC5C3 /* Pharus */,
 				79F06D9F27F28FCD00343865 /* PharusTests */,
 				C045618827EA03A5007EC5C3 /* Products */,
+				79AF90F628043A120094AB97 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,6 +253,7 @@
 			children = (
 				7963212F27F23AF000A202EE /* LoginPresenter.swift */,
 				C05AA2C727FC749E00230698 /* TarBarPresenter.swift */,
+				79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */,
 				7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */,
 			);
 			name = Presenter;
@@ -257,9 +268,9 @@
 				7952058A27FE62DE00A89012 /* SendFileViewController.swift */,
 				C045618E27EA03A5007EC5C3 /* StartViewController.swift */,
 				7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */,
+				7943975927F3C5D20075102B /* StudentProjectsViewController.swift */,
 				7952058027FE382D00A89012 /* TabBarViewController.swift */,
 				79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */,
-				7943975927F3C5D20075102B /* StudentProjectsViewController.swift */,
 				C05AA30627FFAA9500230698 /* SendFileViewController.swift */,
 			);
 			path = Controller;
@@ -281,9 +292,10 @@
 				C04561A727EA041B007EC5C3 /* Coordinator.swift */,
 				C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */,
 				C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */,
-				C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */,
 				7943975727F3C5BF0075102B /* StudentProjectsCoordinator.swift */,
+				C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */,
 				C05AA2CD27FC82AB00230698 /* UserProjectsRankingCoordinator.swift */,
+				79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -403,7 +415,6 @@
 				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
 				7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */,
 				793EC73B27FE183000CD8334 /* UIImage+Extension.swift in Sources */,
-				7952058927FE5CD900A89012 /* SendFileView.swift in Sources */,
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
 				C05AA2BC27FC740E00230698 /* TabBarCoordinator.swift in Sources */,
 				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
@@ -418,10 +429,12 @@
 				C05AA2CE27FC82AB00230698 /* UserProjectsRankingCoordinator.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
 				C05AA2F527FFA66D00230698 /* AlertView.swift in Sources */,
+				79AF90F728043A590094AB97 /* SendFileView.swift in Sources */,
 				C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */,
 				7943975A27F3C5D20075102B /* StudentProjectsViewController.swift in Sources */,
 				7910D9D227FD0B8300A8DDA0 /* UIFont+Extension.swift in Sources */,
 				C05AA2C827FC749E00230698 /* TarBarPresenter.swift in Sources */,
+				79AF90FB28043DEA0094AB97 /* StudentProjectDetailPresenter.swift in Sources */,
 				7952058527FE3B1A00A89012 /* ProjectRulesViewController.swift in Sources */,
 				C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */,
 				7943975E27F3C6020075102B /* StudentProjectCell.swift in Sources */,
@@ -438,6 +451,7 @@
 				7943976027F3C6130075102B /* StudentProjectsPresenter.swift in Sources */,
 				7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */,
 				793EC73D27FE197B00CD8334 /* UserProfileButton.swift in Sources */,
+				79AF90F928043D3C0094AB97 /* StudentProjectDetailCoordinator.swift in Sources */,
 				79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

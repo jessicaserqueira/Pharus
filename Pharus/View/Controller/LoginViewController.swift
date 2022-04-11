@@ -10,7 +10,6 @@ import UIKit
 class LoginViewController: UIViewController {
     
     private lazy var customView = LoginView()
-    var coordinator: LoginCoordinator?
     var presenter: LoginPresenter?
         
     override func loadView() {

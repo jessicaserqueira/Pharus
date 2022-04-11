@@ -26,8 +26,6 @@ class LoginCoordinator: Coordinator {
         
         loginPresenter.coordinator = self
         loginViewController.presenter = loginPresenter
-        loginViewController.coordinator = self
-        
         navigationController.setNavigationBarHidden(true, animated: true)
         navigationController.pushViewController(loginViewController, animated: true)
     }

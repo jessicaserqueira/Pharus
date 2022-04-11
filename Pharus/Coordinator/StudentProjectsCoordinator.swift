@@ -9,6 +9,7 @@ import UIKit
 
 protocol UserProjectsFlow {
     func start()
+    func showUserProject(project: Project)
 }
 
 class StudentProjectsCoordinator: Coordinator {
@@ -22,18 +23,24 @@ class StudentProjectsCoordinator: Coordinator {
     }
     
     func start() {
+        let studentProjectsPresenter = StudentProjectsPresenter()
+        studentProjectsPresenter.coordinator = self
+        
         let studentProjectsViewController = StudentProjectsViewController()
-        studentProjectsViewController.coordinator = self
+        studentProjectsViewController.presenter = studentProjectsPresenter
         studentProjectsViewController.student = self.student
+        
         navigationController.setNavigationBarHidden(false, animated: true)
         navigationController.pushViewController(studentProjectsViewController, animated: true)
     }
 }
 
 extension StudentProjectsCoordinator: UserProjectsFlow {
-    
-    func showUserProjects() {
-       
+    func showUserProject(project: Project) {
+        let studentProjectDetailCoordinator = StudentProjectDetailCoordinator(navigationController: navigationController)
+        studentProjectDetailCoordinator.project = project
+        
+        self.coordinate(to: studentProjectDetailCoordinator)
         
     }
 }
