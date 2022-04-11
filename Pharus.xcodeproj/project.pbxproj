@@ -193,12 +193,12 @@
 				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
 				7952058627FE55E400A89012 /* MainCardButton.swift */,
 				7952058227FE394900A89012 /* ProjectRulesView.swift */,
+				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
 				7943975D27F3C6020075102B /* StudentProjectCell.swift */,
 				7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */,
 				793EC73C27FE197B00CD8334 /* UserProfileButton.swift */,
 				79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */,
 				C05AA2F827FFA69800230698 /* MainCardButton.swift */,
-				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,16 +225,16 @@
 		C045618927EA03A5007EC5C3 /* Pharus */ = {
 			isa = PBXGroup;
 			children = (
-				79E6424B27F098C10046A2F0 /* Service */,
-				79CAD97F27EBD77600A554E0 /* Extensions */,
-				C04561A327EA03BF007EC5C3 /* Coordinator */,
-				C04561A227EA03B3007EC5C3 /* Model */,
-				C008AF2227F1ED7F00AD94C9 /* View */,
-				C04561A027EA03AE007EC5C3 /* Presenter */,
-				C045619F27EA03AB007EC5C3 /* SystemDelegate */,
 				C045619327EA03A6007EC5C3 /* Assets.xcassets */,
-				C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */,
+				C04561A327EA03BF007EC5C3 /* Coordinator */,
+				79CAD97F27EBD77600A554E0 /* Extensions */,
 				C045619827EA03A6007EC5C3 /* Info.plist */,
+				C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */,
+				C04561A227EA03B3007EC5C3 /* Model */,
+				C04561A027EA03AE007EC5C3 /* Presenter */,
+				79E6424B27F098C10046A2F0 /* Service */,
+				C045619F27EA03AB007EC5C3 /* SystemDelegate */,
+				C008AF2227F1ED7F00AD94C9 /* View */,
 			);
 			path = Pharus;
 			sourceTree = "<group>";
@@ -252,9 +252,9 @@
 			isa = PBXGroup;
 			children = (
 				7963212F27F23AF000A202EE /* LoginPresenter.swift */,
-				C05AA2C727FC749E00230698 /* TarBarPresenter.swift */,
 				79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */,
 				7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */,
+				C05AA2C727FC749E00230698 /* TarBarPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -292,10 +292,10 @@
 				C04561A727EA041B007EC5C3 /* Coordinator.swift */,
 				C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */,
 				C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */,
+				79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */,
 				7943975727F3C5BF0075102B /* StudentProjectsCoordinator.swift */,
 				C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */,
 				C05AA2CD27FC82AB00230698 /* UserProjectsRankingCoordinator.swift */,
-				79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";

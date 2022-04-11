@@ -28,7 +28,6 @@ class StudentProjectDetailCoordinator: Coordinator {
         let studentProjectDetailViewController = StudentProjectDetailViewController()
         studentProjectDetailViewController.project = self.project
         
-        navigationController.setNavigationBarHidden(false, animated: true)
         navigationController.pushViewController(studentProjectDetailViewController, animated: true)
     }
 }
