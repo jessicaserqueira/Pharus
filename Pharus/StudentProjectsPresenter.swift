@@ -15,7 +15,7 @@ class StudentProjectsPresenter: StudentProjectsPresenterProtocol {
     var coordinator: StudentProjectsCoordinator?
     
     func showStudentProject(project: Project) {
-        coordinator?.showUserProject(project: project)
+        coordinator?.showStudentProject(project)
     }
 }
 

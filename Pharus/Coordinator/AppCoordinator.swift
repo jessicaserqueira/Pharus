@@ -18,12 +18,12 @@ class AppCoordinator: Coordinator {
         self.window = window
         self.navigationController = UINavigationController()
         self.navigationBarController = UINavigationBar()
-        
     }
     
     func start() {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
+        
         let mainCoordinator = LoginCoordinator(navigationController: navigationController)
         coordinate(to: mainCoordinator)
     }

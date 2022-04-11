@@ -7,9 +7,8 @@
 
 import UIKit
 
-protocol UserProjectsFlow {
-    func start()
-    func showUserProject(project: Project)
+protocol StudentProjectsFlow {
+    func showStudentProject(_ project: Project)
 }
 
 class StudentProjectsCoordinator: Coordinator {
@@ -35,8 +34,8 @@ class StudentProjectsCoordinator: Coordinator {
     }
 }
 
-extension StudentProjectsCoordinator: UserProjectsFlow {
-    func showUserProject(project: Project) {
+extension StudentProjectsCoordinator: StudentProjectsFlow {
+    func showStudentProject(_ project: Project) {
         let studentProjectDetailCoordinator = StudentProjectDetailCoordinator(navigationController: navigationController)
         studentProjectDetailCoordinator.project = project
         

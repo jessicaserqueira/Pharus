@@ -32,6 +32,7 @@
 		79AF90F728043A590094AB97 /* SendFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2FE27FFA6F300230698 /* SendFileView.swift */; };
 		79AF90F928043D3C0094AB97 /* StudentProjectDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */; };
 		79AF90FB28043DEA0094AB97 /* StudentProjectDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */; };
+		79AF90FD2804478F0094AB97 /* ProjectTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */; };
 		79C577D027FBBB8100046B00 /* UserProjectRankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */; };
 		79C577D227FBBB9800046B00 /* UserProjectsRankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */; };
 		79E6424D27F098D30046A2F0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6424C27F098D30046A2F0 /* Network.swift */; };
@@ -95,6 +96,7 @@
 		799768CF27EA3B5F0057AFA7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailCoordinator.swift; sourceTree = "<group>"; };
 		79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailPresenter.swift; sourceTree = "<group>"; };
+		79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTaskView.swift; sourceTree = "<group>"; };
 		79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectRankingCell.swift; sourceTree = "<group>"; };
 		79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsRankingViewController.swift; sourceTree = "<group>"; };
 		79E6424C27F098D30046A2F0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				C04561A127EA03B1007EC5C3 /* Controller */,
 				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
 				7952058627FE55E400A89012 /* MainCardButton.swift */,
+				79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */,
 				7952058227FE394900A89012 /* ProjectRulesView.swift */,
 				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
 				7943975D27F3C6020075102B /* StudentProjectCell.swift */,
@@ -421,6 +424,7 @@
 				C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */,
 				C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */,
 				7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */,
+				79AF90FD2804478F0094AB97 /* ProjectTaskView.swift in Sources */,
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
 				7943975827F3C5BF0075102B /* StudentProjectsCoordinator.swift in Sources */,

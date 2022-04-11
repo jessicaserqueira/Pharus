@@ -47,13 +47,19 @@ struct Project: Codable {
 }
 
 // MARK: - Task
-struct Task: Codable {
+class Task: Codable {
     let title: String
-    let isComplete: Bool
+    var isComplete: Bool
     let taskDescription: String
 
     enum CodingKeys: String, CodingKey {
         case title, isComplete
         case taskDescription = "description"
+    }
+}
+
+extension Task {
+    func toggleCompletionStatus() {
+        isComplete.toggle()
     }
 }

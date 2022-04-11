@@ -7,9 +7,6 @@
 
 import UIKit
 
-protocol StudentProjectDetailFlow {
-    func start()
-}
 
 class StudentProjectDetailCoordinator: Coordinator {
     
@@ -31,9 +28,3 @@ class StudentProjectDetailCoordinator: Coordinator {
         navigationController.pushViewController(studentProjectDetailViewController, animated: true)
     }
 }
-
-extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
-
-}
-
-
