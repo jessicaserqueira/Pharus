@@ -18,6 +18,15 @@ class StudentAvatarView: UIView {
     
     //MARK: - Views
     
+    lazy var avatarScrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+//        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.accessibilityIdentifier = "StudentAvatarView.scrollView"
+        
+        return scrollView
+    }()
+    
     lazy var mainView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -30,16 +39,17 @@ class StudentAvatarView: UIView {
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 20
+        stackView.spacing = 2
+        stackView.backgroundColor = .brown
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "StudentAvatarView.mainStackView"
+        stackView.accessibilityIdentifier = "StudentAvatarView.avatarStackView"
+        
         return stackView
     }()
     
     lazy var avatarScreemImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named:"AvatarScreem")
-//        imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentAvatarView.avatarScreemImageView"
@@ -47,17 +57,14 @@ class StudentAvatarView: UIView {
         return imageView
     }()
     
-    
-    lazy var avatarStackTitle: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.frame(forAlignmentRect: .zero)
-        stackView.distribution = .equalSpacing
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "StudentAvatarView.avatarStackTitle"
-        return stackView
+    lazy var avatarTitleView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .gray
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "StudentAvatarView.avatarTitleView"
+        
+        return view
     }()
-    
     
     lazy var selectYourAvatarLabel: UILabel = {
         let label = UILabel()
@@ -74,41 +81,22 @@ class StudentAvatarView: UIView {
     lazy var selectAvatarStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.alignment = .center
+        stackView.spacing = 32
+//        stackView.distribution = .fillEqually
+        stackView.backgroundColor = .green
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentAvatarView.selectAvatarStackView"
         
         return stackView
     }()
     
-    lazy var avatarImage1: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named:"Avatar1.fill")
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "StudentAvatarView.avatarImage1"
+    lazy var mainScrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.accessibilityIdentifier = "StudentAvatarView.scrollView"
         
-        return imageView
-    }()
-    
-    lazy var avatarImage2: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named:"Avatar2.fill")
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "StudentAvatarView.avatarImage2"
-        
-        return imageView
-    }()
-    
-    lazy var avatarImage3: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named:"Avatar3.fill")
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "StudentAvatarView.avatarImage3"
-        
-        return imageView
+        return scrollView
     }()
     
     override init(frame: CGRect) {
@@ -123,55 +111,62 @@ class StudentAvatarView: UIView {
     }
     
     func configureSubviews() {
-        addSubview(mainView)
         
-        mainView.addSubview(mainStackView)
-        mainStackView.addSubview(avatarScreemImageView)
+        addSubview(mainScrollView)
+        mainScrollView.addSubview(mainStackView)
         
-        mainStackView.addArrangedSubview(avatarStackTitle)
+        mainStackView.addArrangedSubview(avatarScreemImageView)
         
-        avatarStackTitle.addArrangedSubview(selectYourAvatarLabel)
-        avatarStackTitle.addArrangedSubview(selectAvatarStackView)
+        mainStackView.addArrangedSubview(avatarTitleView)
+        avatarTitleView.addSubview(selectYourAvatarLabel)
         
-        selectAvatarStackView.addArrangedSubview(avatarImage1)
-        selectAvatarStackView.addArrangedSubview(avatarImage2)
-        selectAvatarStackView.addArrangedSubview(avatarImage3)
+        mainStackView.addArrangedSubview(avatarScrollView)
+        avatarScrollView.addSubview(selectAvatarStackView)
+        
+        let images = [
+            UIImage(named: "Avatar1"),
+            UIImage(named: "Avatar2"),
+            UIImage(named: "Avatar3"),
+        ]
+        
+        for _ in 0...10 {
+            let avatarImage = AvatarImageView()
+            let colors:[UIColor] = [ .blue, .gray, .yellow
+            ]
+            
+            avatarImage.avatarImageView.image = images.randomElement()!
+            avatarImage.backgroundColor = colors.randomElement()
+            
+            selectAvatarStackView.addArrangedSubview(avatarImage)
+            avatarImage.widthAnchor.constraint(equalToConstant: 120).isActive = true
+            avatarImage.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        }
         
     }
     func setupConstraints() {
         
-        //Main View
-        self.stretch(mainView, top: 16, left: 16, bottom: -16, right: -16)
         
         //Main Stack View
         NSLayoutConstraint.activate([
-            mainStackView.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
-            mainStackView.centerYAnchor.constraint(equalTo: mainView.centerYAnchor)
+            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            mainStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            
+        ])
+        NSLayoutConstraint.activate([
+            avatarTitleView.heightAnchor.constraint(equalToConstant: 30),
+            selectYourAvatarLabel.centerYAnchor.constraint(equalTo: avatarTitleView.centerYAnchor),
+            selectYourAvatarLabel.centerXAnchor.constraint(equalTo: avatarTitleView.centerXAnchor),
             
         ])
         
-        //Avatar Screem Image View
-        NSLayoutConstraint.activate([
-            avatarScreemImageView.heightAnchor.constraint(equalToConstant: 300),
-            avatarScreemImageView.widthAnchor.constraint(equalToConstant: 300),
-            avatarScreemImageView.centerYAnchor.constraint(equalTo: mainStackView.centerYAnchor),
-            avatarScreemImageView.centerXAnchor.constraint(equalTo: mainStackView.centerXAnchor)
-            
-        ])
+        self.stretch(mainScrollView)
+        self.stretch(selectAvatarStackView, to: avatarScrollView)
+        avatarScrollView.heightAnchor.constraint(equalToConstant: 120).isActive = true
+
         
-        //Avatar Stack Title
-        NSLayoutConstraint.activate([
-            avatarStackTitle.centerXAnchor.constraint(equalTo: mainStackView.centerXAnchor),
-            avatarStackTitle.heightAnchor.constraint(equalToConstant: 170)
-    
-        ])
-        
-        //Select Avatar Stack View
-        NSLayoutConstraint.activate([
-            selectAvatarStackView.topAnchor.constraint(equalTo: avatarStackTitle.topAnchor, constant: 20)
-            
-        ])
-        
+
     }
 }
 extension StudentAvatarView: StudentAvatarDelegate {

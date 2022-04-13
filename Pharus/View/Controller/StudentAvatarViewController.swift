@@ -10,8 +10,6 @@ class StudentAvatarViewController: UIViewController {
     
     var coordinator: StudentAvatarCoordinator?
     private lazy var viewCustom = StudentAvatarView()
-
-    
     
     // MARK: - Properties
     
@@ -34,19 +32,26 @@ class StudentAvatarViewController: UIViewController {
         }
     
     func setNavigationBar() {
-        let image = UIImage(named: "userPicture")
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.clipsToBounds = true
-        button.setImage(image, for: .normal)
-        
         
         self.title = "Avatar"
+        var backButtonImage = UIImage(named: K.AssetsNames.backButton)
+        backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
+                                                                 green: 0.153,
+                                                                 blue: 0.153,
+                                                                 alpha: 1),
+                                                         renderingMode: .alwaysOriginal)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
+                                                                style: .plain,
+                                                                target: self,
+                                                                action: #selector(backButtonPressed))
+        
     }
-   
+    //Implementar quando o fluxo estiver pronto
+    @objc func backButtonPressed() {
+        print("Back button pressed")
+    }
 }
-
 extension StudentAvatarViewController: StudentAvatarDelegate {
     
     func selectYourAvatar(){
