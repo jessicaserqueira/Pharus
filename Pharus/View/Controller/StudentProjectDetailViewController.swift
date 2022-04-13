@@ -4,7 +4,6 @@
 //
 //  Created by Victor Colen on 05/04/22.
 //
-
 import UIKit
 
 class StudentProjectDetailViewController: UIViewController {
@@ -19,8 +18,12 @@ class StudentProjectDetailViewController: UIViewController {
         self.title = "Projeto 1"
         setNavigationBar()
         customView.rulesHelperView.setOnClickListener {
-            self.present(LoginViewController(), animated: true)
+            self.present(ProjectRulesViewController(), animated: true)
         }
+        
+        customView.uploadFilesButton.addAction(UIAction { _ in
+            self.present(SendFileViewController(), animated: true)
+        }, for: .touchUpInside)
     }
     
     func setNavigationBar() {
@@ -60,3 +63,4 @@ class StudentProjectDetailViewController: UIViewController {
     }
     
 }
+

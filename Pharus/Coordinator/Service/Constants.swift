@@ -4,7 +4,6 @@
 //
 //  Created by Victor Colen on 28/03/22.
 //
-
 import Foundation
 
 struct K {
@@ -25,9 +24,12 @@ struct K {
         static let hourglass = "hourglass"
         static let userPicture = "userPicture"
         static let thirdPlace = "thirdPlace"
+        static let upload = "upload"
+        static let book = "book"
     }
     
     struct DateFormats {
         static let projectDateFormat = "dd/MM/yyyy"
     }
 }
+

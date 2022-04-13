@@ -63,7 +63,7 @@ class UserProjectCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
-        label.font = .systemFont(ofSize: 20, weight: .bold)
+        label.font = .cardTitleFont
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.titleLabel"
         
@@ -73,7 +73,7 @@ class UserProjectCell: UITableViewCell {
     lazy var mentor: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.font = .systemFont(ofSize: 18, weight: .bold)
+        label.font = .cardSubtitleFont
         label.lineBreakMode = .byTruncatingTail
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.mentorsLabel"
