@@ -20,7 +20,6 @@ class StudentAvatarView: UIView {
     
     lazy var avatarScrollView: UIScrollView = {
         let scrollView = UIScrollView()
-//        scrollView.showsHorizontalScrollIndicator = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.accessibilityIdentifier = "StudentAvatarView.scrollView"
         
@@ -40,7 +39,6 @@ class StudentAvatarView: UIView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 2
-        stackView.backgroundColor = .brown
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentAvatarView.avatarStackView"
         
@@ -57,9 +55,19 @@ class StudentAvatarView: UIView {
         return imageView
     }()
     
+    lazy var expandButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "Expand.fill"), for: .normal)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 150, bottom: 0, right: 0)
+        button.clipsToBounds = true
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = "StudentAvatarView.expandButton"
+       
+        return button
+    }()
+    
     lazy var avatarTitleView: UIView = {
         let view = UIView()
-        view.backgroundColor = .gray
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentAvatarView.avatarTitleView"
         
@@ -82,8 +90,6 @@ class StudentAvatarView: UIView {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 32
-//        stackView.distribution = .fillEqually
-        stackView.backgroundColor = .green
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentAvatarView.selectAvatarStackView"
         
@@ -116,6 +122,7 @@ class StudentAvatarView: UIView {
         mainScrollView.addSubview(mainStackView)
         
         mainStackView.addArrangedSubview(avatarScreemImageView)
+        mainStackView.addArrangedSubview(expandButton)
         
         mainStackView.addArrangedSubview(avatarTitleView)
         avatarTitleView.addSubview(selectYourAvatarLabel)
@@ -131,42 +138,32 @@ class StudentAvatarView: UIView {
         
         for _ in 0...10 {
             let avatarImage = AvatarImageView()
-            let colors:[UIColor] = [ .blue, .gray, .yellow
-            ]
-            
             avatarImage.avatarImageView.image = images.randomElement()!
-            avatarImage.backgroundColor = colors.randomElement()
-            
+                        
             selectAvatarStackView.addArrangedSubview(avatarImage)
             avatarImage.widthAnchor.constraint(equalToConstant: 120).isActive = true
             avatarImage.heightAnchor.constraint(equalToConstant: 120).isActive = true
         }
-        
     }
     func setupConstraints() {
-        
-        
+
         //Main Stack View
         NSLayoutConstraint.activate([
             mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
-            
         ])
+        //Avatar Title View
         NSLayoutConstraint.activate([
             avatarTitleView.heightAnchor.constraint(equalToConstant: 30),
             selectYourAvatarLabel.centerYAnchor.constraint(equalTo: avatarTitleView.centerYAnchor),
             selectYourAvatarLabel.centerXAnchor.constraint(equalTo: avatarTitleView.centerXAnchor),
-            
         ])
         
         self.stretch(mainScrollView)
         self.stretch(selectAvatarStackView, to: avatarScrollView)
         avatarScrollView.heightAnchor.constraint(equalToConstant: 120).isActive = true
-
-        
-
     }
 }
 extension StudentAvatarView: StudentAvatarDelegate {
