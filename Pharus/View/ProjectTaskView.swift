@@ -38,7 +38,7 @@ class ProjectTaskView: UIView {
     }()
 
     lazy var taskCheckboxButton: CheckmarkButton = {
-        let button = CheckmarkButton()
+        let button = CheckmarkButton(checkImage: .checkmarkImage!)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "ProjectTaskViewView.taskCheckboxButton"
         return button

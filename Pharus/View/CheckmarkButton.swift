@@ -9,9 +9,23 @@ import UIKit
 
 class CheckmarkButton: UIButton {
     
-    //MARK: - Views
+    //MARK: - Properties
+    
+    var checkImage: UIImage
+    
+    //MARK: - Initializer
+    
+    convenience init(checkImage: UIImage) {
+        self.init()
+        
+        self.checkImage = checkImage
+        
+        setupButton()
+    }
     
     override init(frame: CGRect) {
+        checkImage = .checkmarkImage!
+        
         super.init(frame: .zero)
         
         setupButton()
@@ -21,7 +35,7 @@ class CheckmarkButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupButton() {
+    private func setupButton() {
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.black.cgColor
         self.layer.cornerRadius = 4
