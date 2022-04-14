@@ -13,7 +13,7 @@ class SendFileView: UIView {
     
     lazy var mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = .cardColor
+        view.backgroundColor = .Project.subscribedProjectBackgroundColor
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.mainView"
         return view
@@ -55,7 +55,7 @@ class SendFileView: UIView {
     
     lazy var uploadFileHelperView: UIView = {
         let view = UIView()
-        view.backgroundColor = .darkCardColor
+        view.backgroundColor = .Project.disabledProjectBackgroundColor
         view.layer.cornerRadius = 8
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.uploadFileHelperView"

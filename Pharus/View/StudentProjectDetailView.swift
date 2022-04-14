@@ -20,7 +20,7 @@ class StudentProjectDetailView: UIView {
     
     lazy var mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = .cardColor
+        view.backgroundColor = .Modal.modalBackgroundColor
         view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.mainView"
@@ -174,7 +174,7 @@ class StudentProjectDetailView: UIView {
         progressView.progress = 0.75
         progressView.clipsToBounds = true
         progressView.trackTintColor = .white
-        progressView.progressTintColor = .darkCardColor
+        progressView.progressTintColor = .Project.disabledProjectBackgroundColor
         progressView.accessibilityIdentifier = "StudentProjectDetailView.completedTasksProgressView"
         
         return progressView
@@ -192,7 +192,7 @@ class StudentProjectDetailView: UIView {
         let button = UIButton()
         button.layer.cornerRadius = 16
         button.setTitle("Enviar arquivos", for: .normal)
-        button.backgroundColor = .darkCardColor
+        button.backgroundColor = .Project.disabledProjectBackgroundColor
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "StudentProjectDetailView.uploadFilesButton"
         

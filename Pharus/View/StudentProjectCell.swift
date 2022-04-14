@@ -296,7 +296,7 @@ class StudentProjectCell: UITableViewCell {
         
         companyLogoView.addSubview(companyLogoImageView)
         
-        mainView.backgroundColor = .cardColor
+        mainView.backgroundColor = .Project.subscribedProjectBackgroundColor
     }
     
     //MARK: - Constraints

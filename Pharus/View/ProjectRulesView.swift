@@ -13,7 +13,7 @@ class ProjectRulesView: UIView {
     
     lazy var scrollView: UIScrollView = {
         var scrollView = UIScrollView()
-        scrollView.backgroundColor = .cardColor
+        scrollView.backgroundColor = .Modal.modalBackgroundColor
         scrollView.layer.cornerRadius = 16
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.accessibilityIdentifier = "ProjectRulesView.scrollView"
