@@ -50,6 +50,10 @@
 		C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561A727EA041B007EC5C3 /* Coordinator.swift */; };
 		C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */; };
 		C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */; };
+		C057E8E92807941C004E44C3 /* StudentAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8E82807941C004E44C3 /* StudentAvatarView.swift */; };
+		C057E8ED28079469004E44C3 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8EC28079469004E44C3 /* AvatarImageView.swift */; };
+		C057E8F1280794E9004E44C3 /* StudentAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */; };
+		C057E8F52807954B004E44C3 /* StudentAvatarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8F42807954B004E44C3 /* StudentAvatarCoordinator.swift */; };
 		C05AA2BC27FC740E00230698 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */; };
 		C05AA2C827FC749E00230698 /* TarBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2C727FC749E00230698 /* TarBarPresenter.swift */; };
 		C05AA2CE27FC82AB00230698 /* UserProjectsRankingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2CD27FC82AB00230698 /* UserProjectsRankingCoordinator.swift */; };
@@ -117,6 +121,10 @@
 		C04561A727EA041B007EC5C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
+		C057E8E82807941C004E44C3 /* StudentAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAvatarView.swift; sourceTree = "<group>"; };
+		C057E8EC28079469004E44C3 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAvatarViewController.swift; sourceTree = "<group>"; };
+		C057E8F42807954B004E44C3 /* StudentAvatarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAvatarCoordinator.swift; sourceTree = "<group>"; };
 		C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		C05AA2C727FC749E00230698 /* TarBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarBarPresenter.swift; sourceTree = "<group>"; };
 		C05AA2CD27FC82AB00230698 /* UserProjectsRankingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsRankingCoordinator.swift; sourceTree = "<group>"; };
@@ -202,6 +210,8 @@
 				793EC73C27FE197B00CD8334 /* UserProfileButton.swift */,
 				79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */,
 				C05AA2F827FFA69800230698 /* MainCardButton.swift */,
+				C057E8E82807941C004E44C3 /* StudentAvatarView.swift */,
+				C057E8EC28079469004E44C3 /* AvatarImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,6 +285,7 @@
 				7952058027FE382D00A89012 /* TabBarViewController.swift */,
 				79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */,
 				C05AA30627FFAA9500230698 /* SendFileViewController.swift */,
+				C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,6 +310,7 @@
 				7943975727F3C5BF0075102B /* StudentProjectsCoordinator.swift */,
 				C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */,
 				C05AA2CD27FC82AB00230698 /* UserProjectsRankingCoordinator.swift */,
+				C057E8F42807954B004E44C3 /* StudentAvatarCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -414,6 +426,7 @@
 				794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */,
 				79222EA327F643D60051334A /* CircleProgressView.swift in Sources */,
 				79C577D227FBBB9800046B00 /* UserProjectsRankingViewController.swift in Sources */,
+				C057E8F52807954B004E44C3 /* StudentAvatarCoordinator.swift in Sources */,
 				C05AA30327FFAA7400230698 /* AlertViewController.swift in Sources */,
 				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
 				7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */,
@@ -424,6 +437,7 @@
 				C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */,
 				C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */,
 				7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */,
+				C057E8F1280794E9004E44C3 /* StudentAvatarViewController.swift in Sources */,
 				79AF90FD2804478F0094AB97 /* ProjectTaskView.swift in Sources */,
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
@@ -431,6 +445,7 @@
 				793EC73927FE177000CD8334 /* CheckmarkButton.swift in Sources */,
 				7952058327FE394900A89012 /* ProjectRulesView.swift in Sources */,
 				C05AA2CE27FC82AB00230698 /* UserProjectsRankingCoordinator.swift in Sources */,
+				C057E8E92807941C004E44C3 /* StudentAvatarView.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
 				C05AA2F527FFA66D00230698 /* AlertView.swift in Sources */,
 				79AF90F728043A590094AB97 /* SendFileView.swift in Sources */,
@@ -455,6 +470,7 @@
 				7943976027F3C6130075102B /* StudentProjectsPresenter.swift in Sources */,
 				7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */,
 				793EC73D27FE197B00CD8334 /* UserProfileButton.swift in Sources */,
+				C057E8ED28079469004E44C3 /* AvatarImageView.swift in Sources */,
 				79AF90F928043D3C0094AB97 /* StudentProjectDetailCoordinator.swift in Sources */,
 				79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */,
 			);

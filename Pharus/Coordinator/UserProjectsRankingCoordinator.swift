@@ -23,7 +23,8 @@ class UserProjectsRankingCoordinator: Coordinator {
     func start() {
         let userProjectsRankingViewController = UserRankingProjectsViewController()
         userProjectsRankingViewController.coordinator = self
-        navigationController.setNavigationBarHidden(true, animated: true)
+        userProjectsRankingViewController.tabBarItem.image = UIImage(named: "RankingTabBar.fill")
+        navigationController.setNavigationBarHidden(false, animated: true)
         navigationController.pushViewController(userProjectsRankingViewController, animated: true)
     }
 }
