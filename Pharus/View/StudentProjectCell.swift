@@ -131,9 +131,12 @@ class StudentProjectCell: UITableViewCell {
     }()
     
     lazy var completionBarCircleView: CircleProgressView = {
-        let view = CircleProgressView()
-        view.circleColor = UIColor(red: 0.765, green: 0.765, blue: 0.765, alpha: 1)
-        view.completionBarColor = UIColor(red: 0.153, green: 0.153, blue: 0.153, alpha: 1)
+        let view = CircleProgressView(
+            circleColor: .white,
+            completionProgressColor: .Button.mainButtonBackgroundColor,
+            radius: 40,
+            completionPercentage: 50
+        )
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectCell.descriptionTitleLabel"
         
