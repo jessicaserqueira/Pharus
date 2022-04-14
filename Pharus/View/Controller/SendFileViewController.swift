@@ -17,12 +17,9 @@ class SendFileViewController: UIViewController {
         let alertViewController = AlertViewController()
         alertViewController.modalPresentationStyle = .fullScreen
         
-        let alertView = AlertView()
-        alertView.alertMessageLabel.text = "Arquivo enviado com sucesso!"
-        
-        alertView.actionButton.addAction(UIAction { _ in
-            self.dismiss(animated: true)
-        }, for: .touchUpInside)
+        let alertView = AlertView(message: "Arquivo enviado com sucesso!",
+                                  image: .alertIcon!)
+        alertView.delegate = self
         
         alertViewController.alertView = alertView
         
@@ -35,5 +32,11 @@ class SendFileViewController: UIViewController {
         super.loadView()
 
         self.view = customView
+    }
+}
+
+extension SendFileViewController: AlertViewDelegate {
+    func mainButtonTapped() {
+        self.dismiss(animated: true)
     }
 }

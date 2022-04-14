@@ -6,67 +6,102 @@
 //
 import UIKit
 
+protocol AlertViewDelegate: AnyObject {
+    func mainButtonTapped()
+}
+
 class AlertView: UIView {
+    
+    //MARK: - Properties
+    
+    weak var delegate: AlertViewDelegate?
+    private var image: UIImage
+    private var message: String
     
     //MARK: - Views
     
-    lazy var mainView: UIView = {
+    private lazy var mainView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
         view.backgroundColor = .Project.subscribedProjectBackgroundColor
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "AlertView.mainView"
+        
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.backgroundColor = .clear
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "AlertView.mainStackView"
+        
         return stackView
     }()
     
-    lazy var alertIconHelperView: UIView = {
+    private lazy var alertIconHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "AlertView.alertIconHelperView"
+        
         return view
     }()
     
-    lazy var alertIconImageView: UIImageView = {
+    private lazy var alertIconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .alertIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "AlertView.alertIconImageView"
+        
         return imageView
     }()
     
-    lazy var alertMessageHelperView: UIView = {
+    private lazy var alertMessageHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "AlertView.alertMessageHelperView"
+        
         return view
     }()
     
-    lazy var alertMessageLabel: UILabel = {
+    private lazy var alertMessageLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "AlertView.alertMessageLabel"
+        
         return label
     }()
     
-    lazy var actionButton: MainCardButton = {
+    private lazy var actionButton: MainCardButton = {
         let button = MainCardButton()
         button.setTitle("Fechar", for: .normal)
+        button.addAction(UIAction { _ in
+            self.mainButtonTapped()
+        }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "AlertView.actionButton"
+        
         return button
     }()
     
+    //MARK: - Initializer
+    
+    convenience init(message: String, image: UIImage) {
+        self.init()
+        
+        self.message = message
+        self.image = image
+        
+        configureSubviews()
+        customizeView()
+        setupConstraints()
+    }
+    
     override init(frame: CGRect) {
+        self.message = "Alerta"
+        self.image = .strokedCheckmark
+        
         super.init(frame: .zero)
         
         configureSubviews()
@@ -78,6 +113,7 @@ class AlertView: UIView {
     }
     
     func configureSubviews() {
+        
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = bounds
@@ -100,10 +136,16 @@ class AlertView: UIView {
         mainStackView.addArrangedSubview(actionButton)
     }
     
+    func customizeView() {
+        alertMessageLabel.text = message
+        alertIconImageView.image = image
+    }
+    
     //MARK: - Constraints
     
     func setupConstraints() {
-       //Main View
+        
+        //Main View
         NSLayoutConstraint.activate([
             mainView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             mainView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
@@ -136,5 +178,13 @@ class AlertView: UIView {
             alertMessageLabel.centerXAnchor.constraint(equalTo: alertMessageHelperView.centerXAnchor)
         ])
     }
-    
 }
+
+//MARK: - Actions
+
+extension AlertView {
+    func mainButtonTapped() {
+        delegate?.mainButtonTapped()
+    }
+}
+
