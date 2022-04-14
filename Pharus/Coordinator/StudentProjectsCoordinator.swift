@@ -28,8 +28,9 @@ class StudentProjectsCoordinator: Coordinator {
         let studentProjectsViewController = StudentProjectsViewController()
         studentProjectsViewController.presenter = studentProjectsPresenter
         studentProjectsViewController.student = self.student
-        
+        studentProjectsViewController.tabBarItem.image = UIImage(named: "ProjectsTabBar.fill")
         navigationController.setNavigationBarHidden(false, animated: true)
+        
         navigationController.pushViewController(studentProjectsViewController, animated: true)
     }
 }
