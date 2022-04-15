@@ -42,7 +42,8 @@ extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
         let projectSheetView = ProjectSheetView(
             viewTitle: "Atividades",
             descriptionTitle: "Tarefa 01",
-            descriptionText: project.rules
+            descriptionText: project.rules,
+            icon: UIImage(named: K.AssetsNames.rulesIcon)!
         )
         
         let projectSheetCoordinator = ProjectSheetCoordinator(

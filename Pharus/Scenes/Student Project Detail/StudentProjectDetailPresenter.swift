@@ -22,7 +22,6 @@ class StudentProjectDetailPresenter: StudentProjectsDetailPresenterProtocol {
     }
     
     func showUploadFileView() {
-        print("passou aq")
         coordinator?.showSendFileView()
     }
         

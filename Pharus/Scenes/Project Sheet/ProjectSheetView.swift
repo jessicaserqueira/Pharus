@@ -35,7 +35,7 @@ class ProjectSheetView: UIView {
     private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 24
+        stackView.spacing = 46
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ProjectSheetView.mainStackView"
         
@@ -75,6 +75,15 @@ class ProjectSheetView: UIView {
         return label
     }()
     
+    private lazy var descriptionStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 16
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "ProjectSheetView.descriptionStackView"
+        return stackView
+    }()
+    
     private lazy var descriptionTitleLabel: UILabel = {
         let label = UILabel()
         label.text = descriptionTitle
@@ -99,7 +108,7 @@ class ProjectSheetView: UIView {
         let button = MainCardButton()
         button.setTitle("Fechar", for: .normal)
         button.addAction(UIAction { _ in
-            self.mainButtonTapped()
+            self.closeButtonTapped()
         }, for: .touchUpInside)
         button.accessibilityIdentifier = "ProjectSheetView.closeButton"
         
@@ -111,13 +120,15 @@ class ProjectSheetView: UIView {
     convenience init(
         viewTitle: String,
         descriptionTitle: String,
-        descriptionText: String
+        descriptionText: String,
+        icon: UIImage
     ) {
         self.init()
         
         self.title = viewTitle
         self.descriptionTitle = descriptionTitle
         self.descriptionText = descriptionText
+        self.icon = icon
         
         configureSubviews()
         customizeSubviews()
@@ -126,9 +137,9 @@ class ProjectSheetView: UIView {
     
     override init(frame: CGRect) {
         title = "Comentários do mentor"
-        descriptionTitle = "Tarefa 01"
+        descriptionTitle = "Tarefa 01:"
         descriptionText = "Parabéns pela dedicação e empenho em entregar a tarefa do projeto.\n\nA utilização da metodologia em um determinado momento ficou ausente, fugindo do proposto pela tarefa.\n\nPeço que faça uma revisão no material e continue a dedicação para as próximas tarefas"
-        self.icon = .strokedCheckmark
+        icon = UIImage(named: K.AssetsNames.rulesIcon)!
         
         super.init(frame: .zero)
         
@@ -152,8 +163,11 @@ class ProjectSheetView: UIView {
         titleStackView.addArrangedSubview(titleIconImageView)
         titleStackView.addArrangedSubview(titleLabel)
         
-        mainStackView.addArrangedSubview(descriptionTitleLabel)
-        mainStackView.addArrangedSubview(descriptionTextLabel)
+        mainStackView.addArrangedSubview(descriptionStackView)
+        
+        descriptionStackView.addArrangedSubview(descriptionTitleLabel)
+        descriptionStackView.addArrangedSubview(descriptionTextLabel)
+        
         mainStackView.addArrangedSubview(closeButton)
     }
     
@@ -191,7 +205,7 @@ class ProjectSheetView: UIView {
 //MARK: - Actions
 
 extension ProjectSheetView {
-    func mainButtonTapped() {
+    func closeButtonTapped() {
         delegate?.mainButtonTapped()
     }
 }

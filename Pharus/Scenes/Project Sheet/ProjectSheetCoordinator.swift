@@ -35,10 +35,7 @@ class ProjectSheetCoordinator: Coordinator {
             projectSheetView: projectSheetView
         )
     
-        navigationController.setNavigationBarHidden(true, animated: true)
-        navigationController.tabBarController?.tabBar.isHidden = true
-        
-        navigationController.pushViewController(projectSheetViewController, animated: true)
+        navigationController.present(projectSheetViewController, animated: true)
     }
 }
 

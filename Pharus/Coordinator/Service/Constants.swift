@@ -26,6 +26,8 @@ struct K {
         static let thirdPlace = "thirdPlace"
         static let upload = "upload"
         static let book = "book"
+        static let rulesIcon = "rulesIcon"
+        static let feedbackIcon = "feedbackIcon"
     }
     
     struct DateFormats {
