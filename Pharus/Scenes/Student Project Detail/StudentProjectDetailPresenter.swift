@@ -18,7 +18,7 @@ class StudentProjectDetailPresenter: StudentProjectsDetailPresenterProtocol {
     var coordinator: StudentProjectDetailCoordinator?
     
     func showProjectRules(rules: String) {
-        coordinator?.showProjectRules(rules: rules)
+        coordinator?.showProjectRules()
     }
     
     func showUploadFileView() {

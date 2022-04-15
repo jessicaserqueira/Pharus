@@ -20,7 +20,6 @@ class ProjectSheetView: UIView {
     private var title: String
     private var descriptionTitle: String
     private var descriptionText: String
-    private var buttonTitle: String
     
     //MARK: - Views
     
@@ -98,7 +97,7 @@ class ProjectSheetView: UIView {
     
     private lazy var closeButton: MainCardButton = {
         let button = MainCardButton()
-        button.setTitle(buttonTitle, for: .normal)
+        button.setTitle("Fechar", for: .normal)
         button.addAction(UIAction { _ in
             self.mainButtonTapped()
         }, for: .touchUpInside)
@@ -112,15 +111,13 @@ class ProjectSheetView: UIView {
     convenience init(
         viewTitle: String,
         descriptionTitle: String,
-        descriptionText: String,
-        mainButtonTitle: String
+        descriptionText: String
     ) {
         self.init()
         
         self.title = viewTitle
         self.descriptionTitle = descriptionTitle
         self.descriptionText = descriptionText
-        self.buttonTitle = mainButtonTitle
         
         configureSubviews()
         customizeSubviews()
@@ -131,7 +128,6 @@ class ProjectSheetView: UIView {
         title = "Comentários do mentor"
         descriptionTitle = "Tarefa 01"
         descriptionText = "Parabéns pela dedicação e empenho em entregar a tarefa do projeto.\n\nA utilização da metodologia em um determinado momento ficou ausente, fugindo do proposto pela tarefa.\n\nPeço que faça uma revisão no material e continue a dedicação para as próximas tarefas"
-        buttonTitle = "Fechar"
         self.icon = .strokedCheckmark
         
         super.init(frame: .zero)
@@ -166,7 +162,6 @@ class ProjectSheetView: UIView {
         titleLabel.text = title
         descriptionTitleLabel.text = descriptionTitle
         descriptionTextLabel.text = descriptionText
-        closeButton.setTitle(buttonTitle, for: .normal)
     }
     
     //MARK: - Constraints

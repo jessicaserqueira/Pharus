@@ -8,7 +8,7 @@
 import UIKit
 
 protocol StudentProjectDetailFlow {
-    func showProjectRules(rules: String)
+    func showProjectRules()
     func showSendFileView()
 }
 
@@ -37,13 +37,12 @@ class StudentProjectDetailCoordinator: Coordinator {
 
 extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
     
-    func showProjectRules(rules: String) {
+    func showProjectRules() {
         
         let projectSheetView = ProjectSheetView(
             viewTitle: "Atividades",
             descriptionTitle: "Tarefa 01",
-            descriptionText: project.rules,
-            mainButtonTitle: "Fechar"
+            descriptionText: project.rules
         )
         
         let projectSheetCoordinator = ProjectSheetCoordinator(
