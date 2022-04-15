@@ -54,6 +54,17 @@ extension UIView {
         }
     }
     
+    //MARK: - Center
+    
+    func center(in otherView: UIView) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        otherView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.centerXAnchor.constraint(equalTo: otherView.centerXAnchor),
+            self.centerYAnchor.constraint(equalTo: otherView.centerYAnchor)
+        ])
+    }
+    
     //MARK: - Add Background
     
     func addBackground(imageName: String,

@@ -98,7 +98,7 @@ class StudentProjectDetailView: UIView {
         label.text = "Veja aqui as regras do projeto"
         label.font = .cardSubtitleFont
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "StudentProjectDetailView.rulesLabel"
+        label.accessibilityIdentifier = "StudentProjectDetailView.descriptionLabel"
         return label
     }()
     
