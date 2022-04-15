@@ -11,7 +11,7 @@ class CheckmarkButton: UIButton {
     
     //MARK: - Properties
     
-    var checkImage: UIImage
+    private var checkImage: UIImage
     
     //MARK: - Initializer
     

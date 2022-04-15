@@ -9,15 +9,22 @@ import UIKit
 
 class UserProfileButton: UIButton {
     
-    var image: UIImage = .checkmarkImage ?? UIImage() {
-        didSet {
-            configureSubviews()
-        }
+    //MARK: - Properties
+    
+   private var userImage: UIImage
+    
+    //MARK: - Initializer
+    
+    convenience init(userImage: UIImage) {
+        self.init()
+        
+        self.userImage = userImage
+        configureSubviews()
     }
     
-    //MARK: - Views
-    
     override init(frame: CGRect) {
+        self.userImage = UIImage()
+        
         super.init(frame: .zero)
         
         configureSubviews()
@@ -31,6 +38,6 @@ class UserProfileButton: UIButton {
             self.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
             self.layer.cornerRadius = 0.5 * self.bounds.size.width
             self.clipsToBounds = true
-            self.setImage(image, for: .normal)
+            self.setImage(userImage, for: .normal)
     }
 }
