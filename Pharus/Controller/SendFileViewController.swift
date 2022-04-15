@@ -17,8 +17,11 @@ class SendFileViewController: UIViewController {
         let alertViewController = AlertViewController()
         alertViewController.modalPresentationStyle = .fullScreen
         
-        let alertView = AlertView(message: "Arquivo enviado com sucesso!",
-                                  image: .alertIcon!)
+        let alertView = AlertView(
+            message: "Arquivo enviado com sucesso!",
+                                  image: .alertIcon!
+        )
+        
         alertView.delegate = self
         
         alertViewController.alertView = alertView

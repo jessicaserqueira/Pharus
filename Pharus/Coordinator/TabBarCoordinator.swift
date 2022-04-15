@@ -8,9 +8,7 @@
 import UIKit
 
 protocol TabBarFlow {
-    func start()
     func showTabBar()
-    
 }
 
 class TabBarCoordinator: Coordinator {
