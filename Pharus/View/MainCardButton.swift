@@ -16,6 +16,7 @@ class MainCardButton: UIButton {
         self.init()
         
         self.title = title
+        
         configureSubviews()
         setupConstraints()
     }
@@ -33,14 +34,15 @@ class MainCardButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-   private func configureSubviews() {
-        self.backgroundColor = .Button.mainButtonBackgroundColor
-        self.setTitleColor(.Button.mainButtonTextColor, for: .normal)
-        self.layer.cornerRadius = 16
+    private func configureSubviews() {
+        setTitle(title, for: .normal)
+        backgroundColor = .Button.mainButtonBackgroundColor
+        setTitleColor(.Button.mainButtonTextColor, for: .normal)
+        layer.cornerRadius = 16
     }
     
     //MARK: - Constraints
-   private func setupConstraints() {
-        self.heightAnchor.constraint(equalToConstant: 44).isActive = true
+    private func setupConstraints() {
+        self.heightAnchor.constraint(equalToConstant: 56).isActive = true
     }
 }

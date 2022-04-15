@@ -150,15 +150,8 @@ class LoginView: UIView {
         return label
     }()
     
-    lazy var loginButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Entrar", for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 25)
-        button.setTitleColor(UIColor.black, for: .normal)
-        button.layer.cornerRadius = 12
-        button.layer.borderWidth = 0.3
-        button.layer.borderColor = UIColor.lightGray.cgColor
-        
+    lazy var loginButton: MainCardButton = {
+        let button = MainCardButton(title: "Entrar")
         button.addTarget(self,
                          action: #selector(loginButtonPressed),
                          for: UIControl.Event.touchUpInside)
@@ -262,8 +255,7 @@ class LoginView: UIView {
         //Login Button
         NSLayoutConstraint.activate([
             loginButton.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor),
-            loginButton.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
-            loginButton.heightAnchor.constraint(equalToConstant: 54)
+            loginButton.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor)
         ])
     }
     
