@@ -112,9 +112,9 @@ class AlertView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureSubviews() {
+    private func configureSubviews() {
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
+        let blurEffect = UIBlurEffect(style: .light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -136,14 +136,14 @@ class AlertView: UIView {
         mainStackView.addArrangedSubview(actionButton)
     }
     
-    func customizeView() {
+    private func customizeView() {
         alertMessageLabel.text = message
         alertIconImageView.image = image
     }
     
     //MARK: - Constraints
     
-    func setupConstraints() {
+    private func setupConstraints() {
         
         //Main View
         NSLayoutConstraint.activate([

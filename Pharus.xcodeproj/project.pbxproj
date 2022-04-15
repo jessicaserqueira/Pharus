@@ -92,7 +92,6 @@
 		7952058227FE394900A89012 /* ProjectRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRulesView.swift; sourceTree = "<group>"; };
 		7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRulesViewController.swift; sourceTree = "<group>"; };
 		7952058627FE55E400A89012 /* MainCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
-		7952058A27FE62DE00A89012 /* SendFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileViewController.swift; sourceTree = "<group>"; };
 		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/Scenes/Login/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		7963213127F23C9200A202EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -156,6 +155,7 @@
 		79434A652809129A006D0184 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				79434A6B2809194D006D0184 /* Send File to Project */,
 				79434A6A280914D0006D0184 /* Student Projects Ranking */,
 				79434A6928091491006D0184 /* Avatar Selection */,
 				79434A68280912BE006D0184 /* Student Project Detail */,
@@ -218,6 +218,15 @@
 			path = "Student Projects Ranking";
 			sourceTree = "<group>";
 		};
+		79434A6B2809194D006D0184 /* Send File to Project */ = {
+			isa = PBXGroup;
+			children = (
+				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
+				C05AA30627FFAA9500230698 /* SendFileViewController.swift */,
+			);
+			path = "Send File to Project";
+			sourceTree = "<group>";
+		};
 		79AF90F628043A120094AB97 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,7 +276,6 @@
 				7952058627FE55E400A89012 /* MainCardButton.swift */,
 				79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */,
 				7952058227FE394900A89012 /* ProjectRulesView.swift */,
-				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
 				793EC73C27FE197B00CD8334 /* UserProfileButton.swift */,
 				C05AA2F827FFA69800230698 /* MainCardButton.swift */,
 				C057E8EC28079469004E44C3 /* AvatarImageView.swift */,
@@ -335,10 +343,8 @@
 			children = (
 				C05AA30227FFAA7400230698 /* AlertViewController.swift */,
 				7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */,
-				7952058A27FE62DE00A89012 /* SendFileViewController.swift */,
 				C045618E27EA03A5007EC5C3 /* StartViewController.swift */,
 				7952058027FE382D00A89012 /* TabBarViewController.swift */,
-				C05AA30627FFAA9500230698 /* SendFileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
