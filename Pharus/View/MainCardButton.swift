@@ -8,28 +8,39 @@ import UIKit
 
 class MainCardButton: UIButton {
     
+    //MARK: - Properties
+    
+    private var title: String
+    
+    convenience init(title: String) {
+        self.init()
+        
+        self.title = title
+        configureSubviews()
+        setupConstraints()
+    }
+    
     override init(frame: CGRect) {
+        self.title = "Fechar"
+        
         super.init(frame: .zero)
         
         configureSubviews()
         setupConstraints()
-
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureSubviews() {
-        self.backgroundColor = UIColor(red: 0.765, green: 0.765, blue: 0.765, alpha: 1)
+   private func configureSubviews() {
+        self.backgroundColor = .Button.mainButtonBackgroundColor
+        self.setTitleColor(.Button.mainButtonTextColor, for: .normal)
         self.layer.cornerRadius = 16
-        self.setTitleColor(.black, for: .normal)
     }
     
     //MARK: - Constraints
-    
-    func setupConstraints() {
+   private func setupConstraints() {
         self.heightAnchor.constraint(equalToConstant: 44).isActive = true
     }
-    
 }
