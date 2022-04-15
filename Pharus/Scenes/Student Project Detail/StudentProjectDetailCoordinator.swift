@@ -16,10 +16,11 @@ class StudentProjectDetailCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var project: Project?
+    var project: Project
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, project: Project) {
         self.navigationController = navigationController
+        self.project = project
     }
     
     func start() {
@@ -37,10 +38,20 @@ class StudentProjectDetailCoordinator: Coordinator {
 extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
     
     func showProjectRules(rules: String) {
-        let projectRulesViewController = ProjectRulesViewController()
-        projectRulesViewController.rules = rules
         
-        navigationController.pushViewController(projectRulesViewController, animated: true)
+        let projectSheetView = ProjectSheetView(
+            viewTitle: "Atividades",
+            descriptionTitle: "Tarefa 01",
+            descriptionText: project.rules,
+            mainButtonTitle: "Fechar"
+        )
+        
+        let projectSheetCoordinator = ProjectSheetCoordinator(
+            navigationController: navigationController,
+            projectSheetView: projectSheetView
+        )
+        
+        coordinate(to: projectSheetCoordinator)
     }
     
     func showSendFileView() {

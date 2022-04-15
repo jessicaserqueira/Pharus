@@ -37,11 +37,12 @@ class StudentProjectsCoordinator: Coordinator {
 
 extension StudentProjectsCoordinator: StudentProjectsFlow {
     func showStudentProject(_ project: Project) {
-        let studentProjectDetailCoordinator = StudentProjectDetailCoordinator(navigationController: navigationController)
-        studentProjectDetailCoordinator.project = project
+        let studentProjectDetailCoordinator = StudentProjectDetailCoordinator(
+            navigationController: navigationController,
+            project: project
+        )
         
         self.coordinate(to: studentProjectDetailCoordinator)
-        
     }
 }
 

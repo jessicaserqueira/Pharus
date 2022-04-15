@@ -25,16 +25,16 @@ class TabBarCoordinator: Coordinator {
     func start() {
         //        let HomeCoordinator =
         let studentProjectsCoordinator = makeUserProjectsCoordinator()
-        let studentProjectDetailCoordinator = makeStudentProjectDetailCoordinator()
+        //let studentProjectDetailCoordinator = makeStudentProjectDetailCoordinator()
         let userProjectsRankingCoordinator = makeUserProjectsRankingCoordinator()
         let studentAvatarCoordinator = makeStudentAvatarCoordinato()
         
         childCoordinators.append(studentProjectsCoordinator)
-        childCoordinators.append(studentProjectDetailCoordinator)
+        //childCoordinators.append(studentProjectDetailCoordinator)
         childCoordinators.append(userProjectsRankingCoordinator)
         childCoordinators.append(studentAvatarCoordinator)
         
-        tabBarViewController.setViewControllers([studentProjectsCoordinator.navigationController, studentProjectDetailCoordinator.navigationController, userProjectsRankingCoordinator.navigationController,
+        tabBarViewController.setViewControllers([studentProjectsCoordinator.navigationController, //studentProjectDetailCoordinator.navigationController, userProjectsRankingCoordinator.navigationController,
             studentAvatarCoordinator.navigationController],
                                                 animated: true)
         navigationController.setViewControllers([tabBarViewController], animated: true)
@@ -56,13 +56,13 @@ class TabBarCoordinator: Coordinator {
         return coordinator
     }
     
-    private func makeStudentProjectDetailCoordinator() -> StudentProjectDetailCoordinator {
-        let coordinator = StudentProjectDetailCoordinator(navigationController: UINavigationController())
-        
-        coordinator.start()
-        
-        return coordinator
-    }
+//    private func makeStudentProjectDetailCoordinator() -> StudentProjectDetailCoordinator {
+//        let coordinator = StudentProjectDetailCoordinator(navigationController: UINavigationController())
+//        
+//        coordinator.start()
+//        
+//        return coordinator
+//    }
     
     private func makeStudentAvatarCoordinato() -> StudentAvatarCoordinator {
         let coordinator = StudentAvatarCoordinator(navigationController: UINavigationController())

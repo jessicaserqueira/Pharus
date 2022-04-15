@@ -92,12 +92,18 @@ class ProjectSheetView: UIView {
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSheetView.descriptionTextLabel"
+        
         return label
     }()
     
     private lazy var closeButton: MainCardButton = {
         let button = MainCardButton()
-        button.setTitle("Fechar", for: .normal)
+        button.setTitle(buttonTitle, for: .normal)
+        button.addAction(UIAction { _ in
+            self.mainButtonTapped()
+        }, for: .touchUpInside)
+        button.accessibilityIdentifier = "ProjectSheetView.closeButton"
+        
         return button
     }()
     
