@@ -8,23 +8,21 @@
 import UIKit
 
 class SendFileViewController: UIViewController {
-
+    
     let customView = SendFileView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let alertViewController = AlertViewController()
-        alertViewController.modalPresentationStyle = .fullScreen
-        
         let alertView = AlertView(
             message: "Arquivo enviado com sucesso!",
-                                  image: .alertIcon!
+            image: .images.check ?? .defaultImage
         )
         
         alertView.delegate = self
         
-        alertViewController.alertView = alertView
+        let alertViewController = AlertViewController(alertView: alertView)
+        alertViewController.modalPresentationStyle = .fullScreen
         
         customView.sendFileButton.addAction(UIAction { _ in
             self.present(alertViewController, animated: true)
@@ -33,13 +31,13 @@ class SendFileViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-
+        
         self.view = customView
     }
 }
 
 extension SendFileViewController: AlertViewDelegate {
-    func mainButtonTapped() {
+    func closeButtonTapped() {
         self.dismiss(animated: true)
     }
 }

@@ -139,7 +139,7 @@ class ProjectSheetView: UIView {
         title = "Comentários do mentor"
         descriptionTitle = "Tarefa 01:"
         descriptionText = "Parabéns pela dedicação e empenho em entregar a tarefa do projeto.\n\nA utilização da metodologia em um determinado momento ficou ausente, fugindo do proposto pela tarefa.\n\nPeço que faça uma revisão no material e continue a dedicação para as próximas tarefas"
-        icon = UIImage(named: K.AssetsNames.rulesIcon)!
+        icon = UIImage(named: K.Assets.Icons.rulesIcon)!
         
         super.init(frame: .zero)
         

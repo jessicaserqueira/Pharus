@@ -50,7 +50,10 @@ class StudentProjectDetailViewController: UIViewController {
                 completedTasksCount += 1
             }
             
-            let taskView = ProjectTaskView(task: task)
+            let taskView = ProjectTaskView(
+                task: task,
+                checkImage: .icons.checkmarkIcon ?? .defaultImage
+            )
             
             customView.taskHelperStackView.addArrangedSubview(taskView)
         }
@@ -62,7 +65,7 @@ class StudentProjectDetailViewController: UIViewController {
     func setNavigationBar() {
         self.title = project?.name
         
-        let userImage = UIImage(named: K.AssetsNames.userPicture) ?? UIImage()
+        let userImage = UIImage(named: K.Assets.Images.userPicture) ?? UIImage()
         
         let userProfileButton = UserProfileButton(userImage: userImage)
         
@@ -71,7 +74,7 @@ class StudentProjectDetailViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = userPictureBarButton
         
-        var backButtonImage = UIImage(named: K.AssetsNames.backButton)
+        var backButtonImage = UIImage(named: K.Assets.Icons.backButton)
         backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
                                                                  green: 0.153,
                                                                  blue: 0.153,
@@ -100,11 +103,11 @@ extension StudentProjectDetailViewController: ProjectTaskDelegate {
     func checkmarkButtonTapped(task: Task) {
         presenter?.toggleTaskCompletedStatus(task: task)
     }
-//    taskView.taskCheckboxButton.addAction(UIAction { _ in
-//        taskView.taskCheckboxButton.setImage(task.isComplete ? .none : .checkmarkImage,
-//                                             for: .normal)
-//        task.toggleCompletionStatus()
-//    }, for: .touchUpInside)
+    //    taskView.taskCheckboxButton.addAction(UIAction { _ in
+    //        taskView.taskCheckboxButton.setImage(task.isComplete ? .none : .checkmarkImage,
+    //                                             for: .normal)
+    //        task.toggleCompletionStatus()
+    //    }, for: .touchUpInside)
 }
 
 extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {

@@ -11,20 +11,12 @@ class CheckmarkButton: UIButton {
     
     //MARK: - Properties
     
-    private var checkImage: UIImage
+    var checkImage: UIImage
     
     //MARK: - Initializer
     
-    convenience init(checkImage: UIImage) {
-        self.init()
-        
-        self.checkImage = checkImage
-        
-        setupButton()
-    }
-    
     override init(frame: CGRect) {
-        checkImage = .checkmarkImage!
+        checkImage = .icons.checkmarkIcon ?? .defaultImage
         
         super.init(frame: .zero)
         

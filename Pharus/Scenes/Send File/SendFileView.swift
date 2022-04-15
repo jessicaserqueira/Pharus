@@ -80,7 +80,7 @@ class SendFileView: UIView {
     
     lazy var uploadIconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .uploadIcon
+        imageView.image = .icons.uploadIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "SendFileView.uploadIconImageView"
         return imageView
@@ -116,7 +116,7 @@ class SendFileView: UIView {
     
     lazy var fileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .bookIcon
+        imageView.image = .icons.bookIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "SendFileView.fileImageView"
         return imageView
@@ -132,7 +132,7 @@ class SendFileView: UIView {
     
     lazy var removeFileButton: UIButton = {
         let button = UIButton()
-        button.setImage(.xmark, for: .normal)
+        button.setImage(.icons.xmark, for: .normal)
         button.tintColor = .black
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "SendFileView.removeFileButton"

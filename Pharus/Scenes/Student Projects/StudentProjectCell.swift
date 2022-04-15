@@ -175,7 +175,7 @@ class StudentProjectCell: UITableViewCell {
     
     lazy var inspirationImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: K.AssetsNames.hourglass)
+        imageView.image = UIImage(named: K.Assets.Icons.hourglass)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "UserProjectCell.inspirationImageView"
         return imageView
@@ -219,7 +219,7 @@ class StudentProjectCell: UITableViewCell {
     
     lazy var companyLogoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: K.AssetsNames.companyLogo)
+        imageView.image = UIImage(named: K.Assets.Images.companyLogo)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "UserProjectCell.companyLogoImageView"
         

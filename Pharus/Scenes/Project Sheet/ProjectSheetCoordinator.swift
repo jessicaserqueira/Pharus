@@ -41,6 +41,6 @@ class ProjectSheetCoordinator: Coordinator {
 
 extension ProjectSheetCoordinator: ProjectSheetFlow {
     func popView() {
-        navigationController.popViewController(animated: true)
+        navigationController.dismiss(animated: true)
     }
 }

@@ -7,7 +7,7 @@
 import UIKit
 
 protocol AlertViewDelegate: AnyObject {
-    func mainButtonTapped()
+    func closeButtonTapped()
 }
 
 class AlertView: UIView {
@@ -76,9 +76,11 @@ class AlertView: UIView {
     private lazy var actionButton: MainCardButton = {
         let button = MainCardButton()
         button.setTitle("Fechar", for: .normal)
+        
         button.addAction(UIAction { _ in
-            self.mainButtonTapped()
+            self.closeButtonTapped()
         }, for: .touchUpInside)
+        
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "AlertView.actionButton"
         
@@ -100,7 +102,7 @@ class AlertView: UIView {
     
     override init(frame: CGRect) {
         self.message = "Alerta"
-        self.image = .strokedCheckmark
+        self.image = UIImage(named: K.Assets.Icons.rulesIcon)!
         
         super.init(frame: .zero)
         
@@ -156,26 +158,14 @@ class AlertView: UIView {
         //Main Stack View
         self.stretch(mainStackView, to: mainView, top: 24, left: 24, bottom: -24, right: -24)
         
-        //Alert Icon Helper View
-        NSLayoutConstraint.activate([
-            alertIconHelperView.heightAnchor.constraint(greaterThanOrEqualToConstant: 50)
-        ])
-        
         //Alert Icon Image View
-        NSLayoutConstraint.activate([
-            alertIconImageView.centerYAnchor.constraint(equalTo: alertIconHelperView.centerYAnchor),
-            alertIconImageView.centerXAnchor.constraint(equalTo: alertIconHelperView.centerXAnchor)
-        ])
-        
-        //Alert Message Helper View
-        NSLayoutConstraint.activate([
-            alertMessageHelperView.heightAnchor.constraint(equalToConstant: 30)
-        ])
-        
+        alertIconImageView.center(in: alertIconHelperView)
+                
         //Alert Message Label
+        alertMessageLabel.center(in: alertMessageHelperView)
         NSLayoutConstraint.activate([
-            alertMessageLabel.centerYAnchor.constraint(equalTo: alertMessageHelperView.centerYAnchor),
-            alertMessageLabel.centerXAnchor.constraint(equalTo: alertMessageHelperView.centerXAnchor)
+            alertMessageLabel.trailingAnchor.constraint(equalTo: alertMessageHelperView.trailingAnchor),
+            alertMessageLabel.leadingAnchor.constraint(equalTo: alertMessageHelperView.leadingAnchor)
         ])
     }
 }
@@ -183,8 +173,8 @@ class AlertView: UIView {
 //MARK: - Actions
 
 extension AlertView {
-    func mainButtonTapped() {
-        delegate?.mainButtonTapped()
+    func closeButtonTapped() {
+        delegate?.closeButtonTapped()
     }
 }
 

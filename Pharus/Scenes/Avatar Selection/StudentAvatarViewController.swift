@@ -34,7 +34,7 @@ class StudentAvatarViewController: UIViewController {
     func setNavigationBar() {
         
         self.title = "Avatar"
-        var backButtonImage = UIImage(named: K.AssetsNames.backButton)
+        var backButtonImage = UIImage(named: K.Assets.Icons.backButton)
         backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
                                                                  green: 0.153,
                                                                  blue: 0.153,

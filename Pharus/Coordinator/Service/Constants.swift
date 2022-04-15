@@ -17,17 +17,25 @@ struct K {
         static let userRankingProjects = "userRankingProjects"
     }
     
-    struct AssetsNames {
-        static let backButton = "backButtonImage"
-        static let medal = "medal"
-        static let companyLogo = "havaianas"
-        static let hourglass = "hourglass"
-        static let userPicture = "userPicture"
-        static let thirdPlace = "thirdPlace"
-        static let upload = "upload"
-        static let book = "book"
-        static let rulesIcon = "rulesIcon"
-        static let feedbackIcon = "feedbackIcon"
+    struct Assets {
+        
+        struct Icons {
+            static let backButton = "backButtonIcon"
+            static let bookIcon = "book"
+            static let hourglass = "hourglass"
+            static let rulesIcon = "rulesIcon"
+            static let feedbackIcon = "feedbackIcon"
+            static let xmark = "xmark"
+            static let checkboxCheckmarkButtonIcon = "checkboxCheckmarkIcon"
+        }
+        
+        struct Images {
+            static let medal = "medal"
+            static let companyLogo = "havaianas"
+            static let userPicture = "userPicture"
+            static let thirdPlace = "thirdPlace"
+            static let upload = "upload"
+        }
     }
     
     struct DateFormats {

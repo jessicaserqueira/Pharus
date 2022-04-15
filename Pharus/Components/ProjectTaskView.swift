@@ -16,7 +16,9 @@ class ProjectTaskView: UIView {
     //MARK: - Properties
     
     weak var delegate: ProjectTaskDelegate?
+    private var checkImage: UIImage
     var task: Task
+    
     
     //MARK: - Views
     
@@ -46,13 +48,13 @@ class ProjectTaskView: UIView {
         return label
     }()
     
-    lazy var taskCheckboxButton: CheckmarkButton = {
-        let button = CheckmarkButton(checkImage: .checkmarkImage!)
+    lazy var taskCheckmarkButton: CheckmarkButton = {
+        let button = CheckmarkButton()
         button.addAction(UIAction { _ in
             self.checkmarkButtonTapped(task: self.task)
         }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.accessibilityIdentifier = "ProjectTaskViewView.taskCheckboxButton"
+        button.accessibilityIdentifier = "ProjectTaskViewView.taskCheckmarkButton"
         return button
     }()
     
@@ -66,21 +68,26 @@ class ProjectTaskView: UIView {
     
     //MARK: - Initializer
     
-    convenience init(task: Task) {
+    convenience init(task: Task, checkImage: UIImage) {
         self.init()
         
         self.task = task
+        self.checkImage = checkImage
+        
         configureSubviews()
+        customizeSubviews()
         setupConstraints()
     }
     
     override init(frame: CGRect) {
         
         self.task = Task(
-            title: "sou uma task",
-                         isComplete: false,
-                         description: "Lorem Ipsum"
+            title: "Tarefa",
+            isComplete: false,
+            description: "Lorem Ipsum"
         )
+        
+        self.checkImage = .icons.checkmarkIcon ?? .defaultImage
         
         super.init(frame: .zero)
         
@@ -97,13 +104,16 @@ class ProjectTaskView: UIView {
         
         mainStackView.addArrangedSubview(taskTitleStackView)
         
-        taskTitleStackView.addArrangedSubview(taskCheckboxButton)
+        taskTitleStackView.addArrangedSubview(taskCheckmarkButton)
         taskTitleStackView.addArrangedSubview(taskTitleLabel)
         
         mainStackView.addArrangedSubview(taskDescriptionLabel)
-        
+    }
+    
+    func customizeSubviews() {
         taskTitleLabel.text = task.title
         taskDescriptionLabel.text = task.taskDescription
+        taskCheckmarkButton.setImage(self.checkImage, for: .normal)
     }
     
     //MARK: - Constraints
@@ -113,8 +123,8 @@ class ProjectTaskView: UIView {
         self.stretch(mainStackView)
         
         NSLayoutConstraint.activate([
-            taskCheckboxButton.widthAnchor.constraint(equalToConstant: 25),
-            taskCheckboxButton.heightAnchor.constraint(equalToConstant: 25)
+            taskCheckmarkButton.widthAnchor.constraint(equalToConstant: 25),
+            taskCheckmarkButton.heightAnchor.constraint(equalToConstant: 25)
         ])
     }
 }

@@ -42,7 +42,7 @@ class UserRankingProjectsViewController: UIViewController {
     func setNavigationBar() {
         self.title = "Seus Rankings"
         
-        let userImage = UIImage(named: K.AssetsNames.userPicture)!
+        let userImage = UIImage(named: K.Assets.Images.userPicture)!
         let userProfileButtonView = createUserProfileButton(image: userImage)
         
         let userPictureBarButton = UIBarButtonItem()
@@ -50,7 +50,7 @@ class UserRankingProjectsViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = userPictureBarButton
         
-        var backButtonImage = UIImage(named: K.AssetsNames.backButton)
+        var backButtonImage = UIImage(named: K.Assets.Icons.backButton)
         backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
                                                                  green: 0.153,
                                                                  blue: 0.153,

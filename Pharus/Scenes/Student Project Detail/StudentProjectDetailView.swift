@@ -186,11 +186,8 @@ class StudentProjectDetailView: UIView {
         return view
     }()
     
-    lazy var uploadFilesButton: UIButton = {
-        let button = UIButton()
-        button.layer.cornerRadius = 16
-        button.setTitle("Enviar arquivos", for: .normal)
-        button.backgroundColor = .Project.disabledProjectBackgroundColor
+    lazy var uploadFilesButton: MainCardButton = {
+        let button = MainCardButton(title: "Enviar Arquivos")
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "StudentProjectDetailView.uploadFilesButton"
         
@@ -289,10 +286,8 @@ class StudentProjectDetailView: UIView {
         ])
         
         //Upload Files Button
+        uploadFilesButton.center(in: uploadFilesHelperView)
         NSLayoutConstraint.activate([
-            uploadFilesButton.centerYAnchor.constraint(equalTo: uploadFilesHelperView.centerYAnchor),
-            uploadFilesButton.centerXAnchor.constraint(equalTo: uploadFilesHelperView.centerXAnchor),
-            uploadFilesButton.heightAnchor.constraint(equalToConstant: 44),
             uploadFilesButton.widthAnchor.constraint(equalToConstant: 195)
         ])
     }

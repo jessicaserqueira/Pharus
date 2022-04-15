@@ -7,12 +7,38 @@
 import UIKit
 
 extension UIImage {
-    static let checkmarkImage = UIImage(systemName: "checkmark")
-    static let lessThanImage = UIImage(systemName: "lessthan")
-    static let uploadIcon = UIImage(named: K.AssetsNames.upload)
-    static let bookIcon = UIImage(named: K.AssetsNames.book)
-    static let xmark = UIImage(systemName: "xmark")
-    static let alertIcon = UIImage(named: "alertIcon")
-
+    
+    static let defaultImage = UIImage()
+    
+    struct icons {
+        static let uploadIcon = UIImage(named: K.Assets.Images.upload)
+        static let bookIcon = UIImage(named: K.Assets.Icons.bookIcon)
+        static let xmark = UIImage(systemName: K.Assets.Icons.xmark)
+        static let checkmarkIcon = UIImage(named: K.Assets.Icons.checkboxCheckmarkButtonIcon)
+        static let backButtonIcon = UIImage(named: K.Assets.Icons.backButton)
+    }
+    
+    struct images {
+        static let check = UIImage(named: "check")
+    }
 }
+
+//struct Assets {
+//
+//    struct Icons {
+//        static let backButton = "backButtonIcon"
+//        static let bookIcon = "book"
+//        static let hourglass = "hourglass"
+//        static let rulesIcon = "rulesIcon"
+//        static let feedbackIcon = "feedbackIcon"
+//    }
+//
+//    struct Images {
+//        static let medal = "medal"
+//        static let companyLogo = "havaianas"
+//        static let userPicture = "userPicture"
+//        static let thirdPlace = "thirdPlace"
+//        static let upload = "upload"
+//    }
+//}
 

@@ -38,7 +38,7 @@ class UserProjectRankingCell: UITableViewCell {
     
     lazy var placementImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: K.AssetsNames.thirdPlace)
+        imageView.image = UIImage(named: K.Assets.Images.thirdPlace)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentProjectCell.placementImageView"
         return imageView
@@ -46,7 +46,7 @@ class UserProjectRankingCell: UITableViewCell {
     
     lazy var medalImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: K.AssetsNames.medal)
+        imageView.image = UIImage(named: K.Assets.Images.medal)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentProjectCell.placementImageView"
         
