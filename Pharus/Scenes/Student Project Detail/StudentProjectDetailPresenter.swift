@@ -28,5 +28,6 @@ class StudentProjectDetailPresenter: StudentProjectsDetailPresenterProtocol {
         
     func toggleTaskCompletedStatus(task: Task) {
         task.toggleCompletionStatus()
+        print(task.isComplete)
     }
 }

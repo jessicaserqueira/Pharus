@@ -7,12 +7,21 @@
 
 import UIKit
 
+protocol ProjectTaskDelegate: AnyObject {
+    func checkmarkButtonTapped(task: Task)
+}
+
 class ProjectTaskView: UIView {
+    
+    //MARK: - Properties
+    
+    weak var delegate: ProjectTaskDelegate?
+    var task: Task
     
     //MARK: - Views
     
-    lazy var mainStackView: UIStackView = {
-       let stackView = UIStackView()
+    private lazy var mainStackView: UIStackView = {
+        let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 11
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +29,7 @@ class ProjectTaskView: UIView {
         return stackView
     }()
     
-    lazy var taskTitleStackView: UIStackView = {
+    private lazy var taskTitleStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.spacing = 11
         stackView.axis = .horizontal
@@ -28,31 +37,51 @@ class ProjectTaskView: UIView {
         stackView.accessibilityIdentifier = "ProjectTaskViewView.taskTitleStackView"
         return stackView
     }()
-
-    lazy var taskTitleLabel: UILabel = {
+    
+    private lazy var taskTitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectTaskViewView.taskTitleLabel"
         return label
     }()
-
+    
     lazy var taskCheckboxButton: CheckmarkButton = {
         let button = CheckmarkButton(checkImage: .checkmarkImage!)
+        button.addAction(UIAction { _ in
+            self.checkmarkButtonTapped(task: self.task)
+        }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "ProjectTaskViewView.taskCheckboxButton"
         return button
     }()
     
-    lazy var taskDescriptionLabel: UILabel = {
+    private lazy var taskDescriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectTaskViewView.taskDescriptionLabel"
         return label
     }()
+    
+    //MARK: - Initializer
+    
+    convenience init(task: Task) {
+        self.init()
         
+        self.task = task
+        configureSubviews()
+        setupConstraints()
+    }
+    
     override init(frame: CGRect) {
+        
+        self.task = Task(
+            title: "sou uma task",
+                         isComplete: false,
+                         description: "Lorem Ipsum"
+        )
+        
         super.init(frame: .zero)
         
         configureSubviews()
@@ -72,22 +101,28 @@ class ProjectTaskView: UIView {
         taskTitleStackView.addArrangedSubview(taskTitleLabel)
         
         mainStackView.addArrangedSubview(taskDescriptionLabel)
-    }
-    
-    func customizeView(using task: Task) {
+        
         taskTitleLabel.text = task.title
         taskDescriptionLabel.text = task.taskDescription
     }
     
     //MARK: - Constraints
     
-    func setupConstraints() {
-
+    private func setupConstraints() {
+        
         self.stretch(mainStackView)
         
         NSLayoutConstraint.activate([
             taskCheckboxButton.widthAnchor.constraint(equalToConstant: 25),
             taskCheckboxButton.heightAnchor.constraint(equalToConstant: 25)
         ])
+    }
+}
+
+//MARK: - Actions
+
+extension ProjectTaskView {
+    func checkmarkButtonTapped(task: Task) {
+        delegate?.checkmarkButtonTapped(task: task)
     }
 }

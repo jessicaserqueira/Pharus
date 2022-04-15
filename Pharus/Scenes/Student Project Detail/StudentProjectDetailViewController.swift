@@ -50,14 +50,7 @@ class StudentProjectDetailViewController: UIViewController {
                 completedTasksCount += 1
             }
             
-            let taskView = ProjectTaskView()
-            taskView.customizeView(using: task)
-            
-            taskView.taskCheckboxButton.addAction(UIAction { _ in
-                taskView.taskCheckboxButton.setImage(task.isComplete ? .none : .checkmarkImage,
-                                                     for: .normal)
-                task.toggleCompletionStatus()
-            }, for: .touchUpInside)
+            let taskView = ProjectTaskView(task: task)
             
             customView.taskHelperStackView.addArrangedSubview(taskView)
         }
@@ -103,20 +96,22 @@ class StudentProjectDetailViewController: UIViewController {
     
 }
 
+extension StudentProjectDetailViewController: ProjectTaskDelegate {
+    func checkmarkButtonTapped(task: Task) {
+        presenter?.toggleTaskCompletedStatus(task: task)
+    }
+//    taskView.taskCheckboxButton.addAction(UIAction { _ in
+//        taskView.taskCheckboxButton.setImage(task.isComplete ? .none : .checkmarkImage,
+//                                             for: .normal)
+//        task.toggleCompletionStatus()
+//    }, for: .touchUpInside)
+}
+
 extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {
     func rulesViewTapped() {
         guard let project = project else { return }
         presenter?.showProjectRules(rules: project.rules)
     }
-    
-//    func taskCheckmarkButtonTapped() {
-//        print("task pressed")
-//        //presenter?.toggleTaskCompletedStatus(task: <#T##Task#>)
-//    }
-    
-//    func showTaskButtonTapped() {
-//        print("mostrar descricao")
-//    }
     
     func sendFilesButtonTapped() {
         presenter?.showUploadFileView()

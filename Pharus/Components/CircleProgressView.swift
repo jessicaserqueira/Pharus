@@ -53,7 +53,6 @@ class CircleProgressView: UIView {
     }
     
     private func makeCircularPath() {
-        
         self.layer.cornerRadius = self.frame.size.width/2
         
         let completionBarLayerPath = UIBezierPath(

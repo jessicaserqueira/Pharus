@@ -12,6 +12,8 @@ class MainCardButton: UIButton {
     
     private var title: String
     
+    //MARK: - Initializer
+    
     convenience init(title: String) {
         self.init()
         
@@ -42,6 +44,7 @@ class MainCardButton: UIButton {
     }
     
     //MARK: - Constraints
+    
     private func setupConstraints() {
         self.heightAnchor.constraint(equalToConstant: 56).isActive = true
     }

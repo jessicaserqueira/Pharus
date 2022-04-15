@@ -9,8 +9,6 @@ import UIKit
 
 protocol StudentProjectDetailViewDelegate {
     func rulesViewTapped()
-    //func taskCheckmarkButtonTapped()?
-    //func showTaskButtonTapped()?
     func sendFilesButtonTapped()
 }
 

@@ -39,6 +39,6 @@ class CheckmarkButton: UIButton {
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.black.cgColor
         self.layer.cornerRadius = 4
-        self.setImage(.checkmarkImage, for: .normal)
+        self.setImage(checkImage, for: .normal)
     }
 }
