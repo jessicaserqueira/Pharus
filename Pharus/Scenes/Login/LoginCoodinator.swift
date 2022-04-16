@@ -21,11 +21,12 @@ class LoginCoordinator: Coordinator {
     }
     
     func start() {
-        let loginViewController = LoginViewController()
-        let loginPresenter = LoginPresenter()
-        
-        loginPresenter.coordinator = self
-        loginViewController.presenter = loginPresenter
+        let loginPresenter = LoginPresenter(coordinator: self)
+        let loginViewController = LoginViewController(
+            coordinator: self,
+            presenter: loginPresenter
+        )
+    
         navigationController.setNavigationBarHidden(true, animated: true)
         navigationController.tabBarController?.tabBar.isHidden = true
         
@@ -36,8 +37,7 @@ class LoginCoordinator: Coordinator {
 extension LoginCoordinator: LoginFlow {
     func showHome(student: Student) {
         //Implementar tabbar
-        let studentProjectsCoordinator = StudentProjectsCoordinator(navigationController: navigationController)
-        studentProjectsCoordinator.student = student
+        let studentProjectsCoordinator = StudentProjectsCoordinator(navigationController: navigationController, student: student)
         
         self.coordinate(to: studentProjectsCoordinator)
     }

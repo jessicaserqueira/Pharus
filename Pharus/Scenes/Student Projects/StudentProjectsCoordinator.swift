@@ -15,10 +15,11 @@ class StudentProjectsCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var student: Student?
+    private var student: Student
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, student: Student) {
         self.navigationController = navigationController
+        self.student = student
     }
     
     func start() {
