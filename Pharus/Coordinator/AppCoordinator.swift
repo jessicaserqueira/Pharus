@@ -24,7 +24,10 @@ class AppCoordinator: Coordinator {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
-        let mainCoordinator = LoginCoordinator(navigationController: navigationController)
+        let mainCoordinator = LoginCoordinator(
+            navigationController: navigationController
+        )
+        
         coordinate(to: mainCoordinator)
     }
 }

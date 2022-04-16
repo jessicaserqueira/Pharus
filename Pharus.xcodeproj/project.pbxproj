@@ -22,12 +22,13 @@
 		7943976027F3C6130075102B /* StudentProjectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */; };
 		794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */; };
 		7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058027FE382D00A89012 /* TabBarViewController.swift */; };
-		7952058327FE394900A89012 /* ProjectRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058227FE394900A89012 /* ProjectRulesView.swift */; };
-		7952058527FE3B1A00A89012 /* ProjectRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */; };
+		7952058327FE394900A89012 /* ProjectSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058227FE394900A89012 /* ProjectSheetView.swift */; };
+		7952058527FE3B1A00A89012 /* ProjectSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058427FE3B1A00A89012 /* ProjectSheetViewController.swift */; };
+		795A02172809B689000D0B84 /* ProjectSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A02162809B689000D0B84 /* ProjectSheetPresenter.swift */; };
+		795A02192809B695000D0B84 /* ProjectSheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */; };
 		7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963212F27F23AF000A202EE /* LoginPresenter.swift */; };
 		7963213227F23C9200A202EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963213127F23C9200A202EE /* Constants.swift */; };
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
-		797A68EE27F4768A00ABDAC6 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */; };
 		799768D027EA3B5F0057AFA7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* Student.swift */; };
 		79AF90F728043A590094AB97 /* SendFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2FE27FFA6F300230698 /* SendFileView.swift */; };
 		79AF90F928043D3C0094AB97 /* StudentProjectDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */; };
@@ -44,12 +45,10 @@
 		C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF2327F1EDA100AD94C9 /* LoginView.swift */; };
 		C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618A27EA03A5007EC5C3 /* AppDelegate.swift */; };
 		C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618C27EA03A5007EC5C3 /* SceneDelegate.swift */; };
-		C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618E27EA03A5007EC5C3 /* StartViewController.swift */; };
 		C045619427EA03A6007EC5C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C045619327EA03A6007EC5C3 /* Assets.xcassets */; };
 		C045619727EA03A6007EC5C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */; };
 		C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561A727EA041B007EC5C3 /* Coordinator.swift */; };
 		C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */; };
-		C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */; };
 		C057E8E92807941C004E44C3 /* StudentAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8E82807941C004E44C3 /* StudentAvatarView.swift */; };
 		C057E8ED28079469004E44C3 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8EC28079469004E44C3 /* AvatarImageView.swift */; };
 		C057E8F1280794E9004E44C3 /* StudentAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */; };
@@ -89,14 +88,14 @@
 		7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsPresenter.swift; sourceTree = "<group>"; };
 		794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		7952058027FE382D00A89012 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		7952058227FE394900A89012 /* ProjectRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRulesView.swift; sourceTree = "<group>"; };
-		7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRulesViewController.swift; sourceTree = "<group>"; };
+		7952058227FE394900A89012 /* ProjectSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetView.swift; sourceTree = "<group>"; };
+		7952058427FE3B1A00A89012 /* ProjectSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetViewController.swift; sourceTree = "<group>"; };
 		7952058627FE55E400A89012 /* MainCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
-		7952058A27FE62DE00A89012 /* SendFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileViewController.swift; sourceTree = "<group>"; };
-		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
+		795A02162809B689000D0B84 /* ProjectSheetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetPresenter.swift; sourceTree = "<group>"; };
+		795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetCoordinator.swift; sourceTree = "<group>"; };
+		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/Scenes/Login/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		7963213127F23C9200A202EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		799768CF27EA3B5F0057AFA7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailCoordinator.swift; sourceTree = "<group>"; };
 		79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailPresenter.swift; sourceTree = "<group>"; };
@@ -114,13 +113,11 @@
 		C045618727EA03A5007EC5C3 /* Pharus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pharus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C045618A27EA03A5007EC5C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C045618C27EA03A5007EC5C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C045618E27EA03A5007EC5C3 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C045619327EA03A6007EC5C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C045619627EA03A6007EC5C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C045619827EA03A6007EC5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C04561A727EA041B007EC5C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
 		C057E8E82807941C004E44C3 /* StudentAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAvatarView.swift; sourceTree = "<group>"; };
 		C057E8EC28079469004E44C3 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAvatarViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +150,102 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79434A652809129A006D0184 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				795A02152809B664000D0B84 /* Project Sheet */,
+				79434A6B2809194D006D0184 /* Send File */,
+				79434A6A280914D0006D0184 /* Student Projects Ranking */,
+				79434A6928091491006D0184 /* Avatar Selection */,
+				79434A68280912BE006D0184 /* Student Project Detail */,
+				79434A67280912B2006D0184 /* Student Projects */,
+				79434A66280912A8006D0184 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		79434A66280912A8006D0184 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */,
+				C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */,
+				7963212F27F23AF000A202EE /* LoginPresenter.swift */,
+				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		79434A67280912B2006D0184 /* Student Projects */ = {
+			isa = PBXGroup;
+			children = (
+				7943975927F3C5D20075102B /* StudentProjectsViewController.swift */,
+				7943975D27F3C6020075102B /* StudentProjectCell.swift */,
+				7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */,
+				7943975727F3C5BF0075102B /* StudentProjectsCoordinator.swift */,
+			);
+			path = "Student Projects";
+			sourceTree = "<group>";
+		};
+		79434A68280912BE006D0184 /* Student Project Detail */ = {
+			isa = PBXGroup;
+			children = (
+				7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */,
+				79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */,
+				79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */,
+				7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */,
+			);
+			path = "Student Project Detail";
+			sourceTree = "<group>";
+		};
+		79434A6928091491006D0184 /* Avatar Selection */ = {
+			isa = PBXGroup;
+			children = (
+				C057E8F42807954B004E44C3 /* StudentAvatarCoordinator.swift */,
+				C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */,
+				C057E8E82807941C004E44C3 /* StudentAvatarView.swift */,
+			);
+			path = "Avatar Selection";
+			sourceTree = "<group>";
+		};
+		79434A6A280914D0006D0184 /* Student Projects Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */,
+				C05AA2CD27FC82AB00230698 /* UserProjectsRankingCoordinator.swift */,
+				79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */,
+			);
+			path = "Student Projects Ranking";
+			sourceTree = "<group>";
+		};
+		79434A6B2809194D006D0184 /* Send File */ = {
+			isa = PBXGroup;
+			children = (
+				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
+				C05AA30627FFAA9500230698 /* SendFileViewController.swift */,
+			);
+			path = "Send File";
+			sourceTree = "<group>";
+		};
+		795A02152809B664000D0B84 /* Project Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				7952058227FE394900A89012 /* ProjectSheetView.swift */,
+				7952058427FE3B1A00A89012 /* ProjectSheetViewController.swift */,
+				795A02162809B689000D0B84 /* ProjectSheetPresenter.swift */,
+				795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */,
+			);
+			path = "Project Sheet";
+			sourceTree = "<group>";
+		};
+		795A021A2809F345000D0B84 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				C05AA2F427FFA66D00230698 /* AlertView.swift */,
+				C05AA30227FFAA7400230698 /* AlertViewController.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		79AF90F628043A120094AB97 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +262,6 @@
 				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
 				7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */,
 				793EC73A27FE183000CD8334 /* UIImage+Extension.swift */,
-				797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */,
 				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
 			);
 			name = Extensions;
@@ -193,27 +285,19 @@
 			path = PharusTests;
 			sourceTree = "<group>";
 		};
-		C008AF2227F1ED7F00AD94C9 /* View */ = {
+		C008AF2227F1ED7F00AD94C9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C05AA2F427FFA66D00230698 /* AlertView.swift */,
+				795A021A2809F345000D0B84 /* Alert */,
 				793EC73827FE177000CD8334 /* CheckmarkButton.swift */,
 				79222EA227F643D60051334A /* CircleProgressView.swift */,
-				C04561A127EA03B1007EC5C3 /* Controller */,
-				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
 				7952058627FE55E400A89012 /* MainCardButton.swift */,
 				79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */,
-				7952058227FE394900A89012 /* ProjectRulesView.swift */,
-				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
-				7943975D27F3C6020075102B /* StudentProjectCell.swift */,
-				7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */,
 				793EC73C27FE197B00CD8334 /* UserProfileButton.swift */,
-				79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */,
 				C05AA2F827FFA69800230698 /* MainCardButton.swift */,
-				C057E8E82807941C004E44C3 /* StudentAvatarView.swift */,
 				C057E8EC28079469004E44C3 /* AvatarImageView.swift */,
 			);
-			path = View;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		C045617E27EA03A5007EC5C3 = {
@@ -239,15 +323,17 @@
 			isa = PBXGroup;
 			children = (
 				C045619327EA03A6007EC5C3 /* Assets.xcassets */,
+				C008AF2227F1ED7F00AD94C9 /* Components */,
+				C04561A127EA03B1007EC5C3 /* Controller */,
 				C04561A327EA03BF007EC5C3 /* Coordinator */,
 				79CAD97F27EBD77600A554E0 /* Extensions */,
 				C045619827EA03A6007EC5C3 /* Info.plist */,
 				C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */,
 				C04561A227EA03B3007EC5C3 /* Model */,
 				C04561A027EA03AE007EC5C3 /* Presenter */,
+				79434A652809129A006D0184 /* Scenes */,
 				79E6424B27F098C10046A2F0 /* Service */,
 				C045619F27EA03AB007EC5C3 /* SystemDelegate */,
-				C008AF2227F1ED7F00AD94C9 /* View */,
 			);
 			path = Pharus;
 			sourceTree = "<group>";
@@ -264,9 +350,6 @@
 		C04561A027EA03AE007EC5C3 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				7963212F27F23AF000A202EE /* LoginPresenter.swift */,
-				79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */,
-				7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */,
 				C05AA2C727FC749E00230698 /* TarBarPresenter.swift */,
 			);
 			name = Presenter;
@@ -275,17 +358,7 @@
 		C04561A127EA03B1007EC5C3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C05AA30227FFAA7400230698 /* AlertViewController.swift */,
-				C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */,
-				7952058427FE3B1A00A89012 /* ProjectRulesViewController.swift */,
-				7952058A27FE62DE00A89012 /* SendFileViewController.swift */,
-				C045618E27EA03A5007EC5C3 /* StartViewController.swift */,
-				7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */,
-				7943975927F3C5D20075102B /* StudentProjectsViewController.swift */,
 				7952058027FE382D00A89012 /* TabBarViewController.swift */,
-				79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */,
-				C05AA30627FFAA9500230698 /* SendFileViewController.swift */,
-				C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -304,13 +377,7 @@
 			children = (
 				C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */,
 				C04561A727EA041B007EC5C3 /* Coordinator.swift */,
-				C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */,
-				C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */,
-				79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */,
-				7943975727F3C5BF0075102B /* StudentProjectsCoordinator.swift */,
 				C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */,
-				C05AA2CD27FC82AB00230698 /* UserProjectsRankingCoordinator.swift */,
-				C057E8F42807954B004E44C3 /* StudentAvatarCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -434,7 +501,6 @@
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
 				C05AA2BC27FC740E00230698 /* TabBarCoordinator.swift in Sources */,
 				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
-				C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */,
 				C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */,
 				7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */,
 				C057E8F1280794E9004E44C3 /* StudentAvatarViewController.swift in Sources */,
@@ -443,7 +509,7 @@
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
 				7943975827F3C5BF0075102B /* StudentProjectsCoordinator.swift in Sources */,
 				793EC73927FE177000CD8334 /* CheckmarkButton.swift in Sources */,
-				7952058327FE394900A89012 /* ProjectRulesView.swift in Sources */,
+				7952058327FE394900A89012 /* ProjectSheetView.swift in Sources */,
 				C05AA2CE27FC82AB00230698 /* UserProjectsRankingCoordinator.swift in Sources */,
 				C057E8E92807941C004E44C3 /* StudentAvatarView.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
@@ -451,11 +517,11 @@
 				79AF90F728043A590094AB97 /* SendFileView.swift in Sources */,
 				C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */,
 				7943975A27F3C5D20075102B /* StudentProjectsViewController.swift in Sources */,
+				795A02192809B695000D0B84 /* ProjectSheetCoordinator.swift in Sources */,
 				7910D9D227FD0B8300A8DDA0 /* UIFont+Extension.swift in Sources */,
 				C05AA2C827FC749E00230698 /* TarBarPresenter.swift in Sources */,
 				79AF90FB28043DEA0094AB97 /* StudentProjectDetailPresenter.swift in Sources */,
-				7952058527FE3B1A00A89012 /* ProjectRulesViewController.swift in Sources */,
-				C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */,
+				7952058527FE3B1A00A89012 /* ProjectSheetViewController.swift in Sources */,
 				7943975E27F3C6020075102B /* StudentProjectCell.swift in Sources */,
 				79C577D027FBBB8100046B00 /* UserProjectRankingCell.swift in Sources */,
 				C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */,
@@ -464,12 +530,12 @@
 				C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */,
 				C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */,
 				7963213227F23C9200A202EE /* Constants.swift in Sources */,
-				797A68EE27F4768A00ABDAC6 /* UIImageView+Extension.swift in Sources */,
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
 				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
 				7943976027F3C6130075102B /* StudentProjectsPresenter.swift in Sources */,
 				7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */,
 				793EC73D27FE197B00CD8334 /* UserProfileButton.swift in Sources */,
+				795A02172809B689000D0B84 /* ProjectSheetPresenter.swift in Sources */,
 				C057E8ED28079469004E44C3 /* AvatarImageView.swift in Sources */,
 				79AF90F928043D3C0094AB97 /* StudentProjectDetailCoordinator.swift in Sources */,
 				79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */,
