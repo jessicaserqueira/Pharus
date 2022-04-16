@@ -24,13 +24,14 @@ class StudentProjectDetailCoordinator: Coordinator {
     }
     
     func start() {
-        let studentProjectDetailPresenter = StudentProjectDetailPresenter()
-        studentProjectDetailPresenter.coordinator = self
+        let studentProjectDetailPresenter = StudentProjectDetailPresenter(coordinator: self)
         
-        let studentProjectDetailViewController = StudentProjectDetailViewController()
-        studentProjectDetailViewController.presenter = studentProjectDetailPresenter
-        studentProjectDetailViewController.project = self.project
-        
+        let studentProjectDetailViewController = StudentProjectDetailViewController(
+            coordinator: self,
+            presenter: studentProjectDetailPresenter,
+            project: project
+        )
+                
         navigationController.pushViewController(studentProjectDetailViewController, animated: true)
     }
 }

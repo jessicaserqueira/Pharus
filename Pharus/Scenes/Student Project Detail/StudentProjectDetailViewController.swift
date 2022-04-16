@@ -8,41 +8,44 @@ import UIKit
 
 class StudentProjectDetailViewController: UIViewController {
     
-    var project: Project?
-    var presenter: StudentProjectDetailPresenter?
-    var customView = StudentProjectDetailView()
+    private var project: Project
+    private var presenter: StudentProjectDetailPresenter
+    private var coordinator: StudentProjectDetailCoordinator
+    private var studentProjectDetailView: StudentProjectDetailView
+    
+    init(
+        coordinator: StudentProjectDetailCoordinator,
+        presenter: StudentProjectDetailPresenter,
+        project: Project
+    ) {
+        self.coordinator = coordinator
+        self.presenter = presenter
+        self.project = project
+        self.studentProjectDetailView = StudentProjectDetailView(project: project)
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setNavigationBar()
-        addActions()
     }
     
     override func loadView() {
         super.loadView()
         
-        if let project = project {
-            customView.customizeView(with: project)
-            setupProjectTasks()
-        }
+        setupProjectTasks()
         
-        self.view = customView
-    }
-    
-    func addActions() {
-        customView.rulesHelperView.setOnClickListener {
-            self.rulesViewTapped()
-        }
-        
-        customView.uploadFilesButton.addAction(UIAction { _ in
-            self.sendFilesButtonTapped()
-        }, for: .touchUpInside)
+        studentProjectDetailView.delegate = self
+        self.view = studentProjectDetailView
     }
     
     func setupProjectTasks() {
-        guard let project = project else { return }
-        
         var completedTasksCount = 0
         
         for task in project.tasks {
@@ -55,15 +58,15 @@ class StudentProjectDetailViewController: UIViewController {
                 checkImage: .icons.checkmarkIcon ?? .defaultImage
             )
             
-            customView.taskHelperStackView.addArrangedSubview(taskView)
+            studentProjectDetailView.taskHelperStackView.addArrangedSubview(taskView)
         }
         
-        customView.completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count)"
+        studentProjectDetailView.completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count)"
         
     }
     
     func setNavigationBar() {
-        self.title = project?.name
+        self.title = project.name
         
         let userImage = UIImage(named: K.Assets.Images.userImage) ?? UIImage()
         
@@ -101,7 +104,7 @@ class StudentProjectDetailViewController: UIViewController {
 
 extension StudentProjectDetailViewController: ProjectTaskDelegate {
     func checkmarkButtonTapped(task: Task) {
-        presenter?.toggleTaskCompletedStatus(task: task)
+        presenter.toggleTaskCompletedStatus(task: task)
     }
     //    taskView.taskCheckboxButton.addAction(UIAction { _ in
     //        taskView.taskCheckboxButton.setImage(task.isComplete ? .none : .checkmarkImage,
@@ -112,12 +115,11 @@ extension StudentProjectDetailViewController: ProjectTaskDelegate {
 
 extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {
     func rulesViewTapped() {
-        guard let project = project else { return }
-        presenter?.showProjectRules(rules: project.rules)
+        presenter.showProjectRules(rules: project.rules)
     }
     
     func sendFilesButtonTapped() {
-        presenter?.showUploadFileView()
+        presenter.showUploadFileView()
     }
 }
 
