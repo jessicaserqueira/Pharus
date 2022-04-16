@@ -45,19 +45,19 @@ class StudentAvatarView: UIView {
         return stackView
     }()
     
-    lazy var avatarScreemImageView: UIImageView = {
+    lazy var avatarScreenImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named:"AvatarScreem")
+        imageView.image = .images.avatarImage
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "StudentAvatarView.avatarScreemImageView"
+        imageView.accessibilityIdentifier = "StudentAvatarView.avatarScreenImageView"
         
         return imageView
     }()
     
     lazy var expandButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "Expand.fill"), for: .normal)
+        button.setImage(.icons.expandIcon, for: .normal)
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 150, bottom: 0, right: 0)
         button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -121,7 +121,7 @@ class StudentAvatarView: UIView {
         addSubview(mainScrollView)
         mainScrollView.addSubview(mainStackView)
         
-        mainStackView.addArrangedSubview(avatarScreemImageView)
+        mainStackView.addArrangedSubview(avatarScreenImageView)
         mainStackView.addArrangedSubview(expandButton)
         
         mainStackView.addArrangedSubview(avatarTitleView)
@@ -167,7 +167,7 @@ class StudentAvatarView: UIView {
     }
 }
 extension StudentAvatarView: StudentAvatarDelegate {
-    func selectYourAvatar(){
+    func selectYourAvatar() {
         delegate?.selectYourAvatar()
     }
 }

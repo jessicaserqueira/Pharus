@@ -11,34 +11,19 @@ extension UIImage {
     static let defaultImage = UIImage()
     
     struct icons {
-        static let uploadIcon = UIImage(named: K.Assets.Images.upload)
+        static let uploadIcon = UIImage(named: K.Assets.Images.uploadImage)
         static let bookIcon = UIImage(named: K.Assets.Icons.bookIcon)
-        static let xmark = UIImage(systemName: K.Assets.Icons.xmark)
+        static let xmarkIcon = UIImage(systemName: K.Assets.Icons.xmarkIcon)
         static let checkmarkIcon = UIImage(named: K.Assets.Icons.checkboxCheckmarkButtonIcon)
-        static let backButtonIcon = UIImage(named: K.Assets.Icons.backButton)
+        static let backButtonIcon = UIImage(named: K.Assets.Icons.backButtonIcon)
+        static let expandIcon = UIImage(named: K.Assets.Icons.expandIcon)
     }
     
     struct images {
-        static let check = UIImage(named: "check")
+        static let avatarImage = UIImage(named: K.Assets.Images.avatarImage)
+        static let checkImage = UIImage(named: K.Assets.Images.checkImage)
+        static let appLogoImage = UIImage(named: K.Assets.Images.appLogoImage)
+        static let companyLogoImage = UIImage(named: K.Assets.Images.companyLogoImage)
+        static let userImage = UIImage(named: K.Assets.Images.userImage)
     }
 }
-
-//struct Assets {
-//
-//    struct Icons {
-//        static let backButton = "backButtonIcon"
-//        static let bookIcon = "book"
-//        static let hourglass = "hourglass"
-//        static let rulesIcon = "rulesIcon"
-//        static let feedbackIcon = "feedbackIcon"
-//    }
-//
-//    struct Images {
-//        static let medal = "medal"
-//        static let companyLogo = "havaianas"
-//        static let userPicture = "userPicture"
-//        static let thirdPlace = "thirdPlace"
-//        static let upload = "upload"
-//    }
-//}
-

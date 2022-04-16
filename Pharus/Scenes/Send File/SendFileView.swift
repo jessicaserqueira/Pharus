@@ -132,7 +132,7 @@ class SendFileView: UIView {
     
     lazy var removeFileButton: UIButton = {
         let button = UIButton()
-        button.setImage(.icons.xmark, for: .normal)
+        button.setImage(.icons.xmarkIcon, for: .normal)
         button.tintColor = .black
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "SendFileView.removeFileButton"

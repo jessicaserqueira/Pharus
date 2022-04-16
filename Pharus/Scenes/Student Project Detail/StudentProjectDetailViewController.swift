@@ -65,7 +65,7 @@ class StudentProjectDetailViewController: UIViewController {
     func setNavigationBar() {
         self.title = project?.name
         
-        let userImage = UIImage(named: K.Assets.Images.userPicture) ?? UIImage()
+        let userImage = UIImage(named: K.Assets.Images.userImage) ?? UIImage()
         
         let userProfileButton = UserProfileButton(userImage: userImage)
         
@@ -74,7 +74,7 @@ class StudentProjectDetailViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = userPictureBarButton
         
-        var backButtonImage = UIImage(named: K.Assets.Icons.backButton)
+        var backButtonImage = UIImage(named: K.Assets.Icons.backButtonIcon)
         backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
                                                                  green: 0.153,
                                                                  blue: 0.153,
