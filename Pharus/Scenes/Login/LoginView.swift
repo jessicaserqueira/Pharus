@@ -13,7 +13,11 @@ protocol LoginViewDelegate: AnyObject{
 
 class LoginView: UIView {
     
+    //MARK: - Properties
+    
     weak var delegate: LoginViewDelegate?
+    
+    //MARK: - Views
     
     lazy var mainView: UIView = {
         let view = UIView()
@@ -152,14 +156,16 @@ class LoginView: UIView {
     
     lazy var loginButton: MainCardButton = {
         let button = MainCardButton(title: "Entrar")
-        button.addTarget(self,
-                         action: #selector(loginButtonPressed),
-                         for: UIControl.Event.touchUpInside)
+        button.addAction(UIAction { _ in
+            self.loginButtonPressed()
+        }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "LoginView.loginButton"
 
         return button
     }()
+    
+    //MARK: - Initializer
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -258,10 +264,12 @@ class LoginView: UIView {
             loginButton.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor)
         ])
     }
-    
-   //MARK: - Actions
-    
-    @objc func loginButtonPressed() {
-        delegate?.loginButtonPressed()
-    }
+}
+
+//MARK: - Actions
+
+extension LoginView {
+     func loginButtonPressed() {
+         delegate?.loginButtonPressed()
+     }
 }

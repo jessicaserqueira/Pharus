@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserProjectRankingCell: UITableViewCell {
+class StudentProjectRankingCell: UITableViewCell {
     
     lazy var mainView: UIView = {
         let view = UIView()
@@ -64,7 +64,7 @@ class UserProjectRankingCell: UITableViewCell {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectRankingCell.projectTitleLabel"
+        label.accessibilityIdentifier = "StudentProjectRankingCell.projectTitleLabel"
         
         return label
     }()
@@ -74,7 +74,7 @@ class UserProjectRankingCell: UITableViewCell {
         label.text = "Parabéns! Você alcançou:"
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectRankingCell.congratulationsLabel"
+        label.accessibilityIdentifier = "StudentProjectRankingCell.congratulationsLabel"
         return label
     }()
     
@@ -84,7 +84,7 @@ class UserProjectRankingCell: UITableViewCell {
         stackView.backgroundColor = .project.yellowDisabledProjectBackground
         stackView.layer.cornerRadius = 16
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "UserProjectRankingCell.mentorCommentsStackView"
+        stackView.accessibilityIdentifier = "StudentProjectRankingCell.mentorCommentsStackView"
         
         return stackView
     }()
@@ -94,7 +94,7 @@ class UserProjectRankingCell: UITableViewCell {
         label.text = "Comentários do Mentor"
         label.font = .systemFont(ofSize: 18, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectRankingCell.mentorCommentsStackView"
+        label.accessibilityIdentifier = "StudentProjectRankingCell.mentorCommentsStackView"
         
         return label
     }()
@@ -102,7 +102,7 @@ class UserProjectRankingCell: UITableViewCell {
     lazy var mentorCommentsTitleHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "UserProjectRankingCell.mentorCommentsTitleHelperView"
+        view.accessibilityIdentifier = "StudentProjectRankingCell.mentorCommentsTitleHelperView"
         return view
     }()
     
@@ -111,14 +111,14 @@ class UserProjectRankingCell: UITableViewCell {
         label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum elit tellus, at condimentum mauris sagittis ut. Nam auctor nunc non ipsum blandit tempus."
         label.numberOfLines = 4
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectRankingCell.mentorCommentsStackView"
+        label.accessibilityIdentifier = "StudentProjectRankingCell.mentorCommentsStackView"
         return label
     }()
     
     lazy var mentorCommentsDescriptionHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "UserProjectRankingCell.mentorCommentsDescriptionHelperView"
+        view.accessibilityIdentifier = "StudentProjectRankingCell.mentorCommentsDescriptionHelperView"
         return view
     }()
     

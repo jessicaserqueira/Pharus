@@ -15,7 +15,16 @@ protocol LoginPresenterProtocol {
 
 class LoginPresenter: LoginPresenterProtocol {
     
-    var coordinator: LoginCoordinator?
+    //MARK: - Properties
+    
+   private var coordinator: LoginCoordinator
+    
+    //MARK: - Initializer
+    
+    init(coordinator: LoginCoordinator) {
+        self.coordinator = coordinator
+    }
+    
     
     func isValidEmail(email: String) -> Bool {
         let emailRegEx = K.RegEx.emailRegEx
@@ -33,6 +42,6 @@ class LoginPresenter: LoginPresenterProtocol {
     
     func loginUser(email: String, password: String) {
         let student: Student = Bundle.main.decode("Student.json")
-        coordinator?.showHome(student: student)
+        coordinator.showHome(student: student)
     }
 }

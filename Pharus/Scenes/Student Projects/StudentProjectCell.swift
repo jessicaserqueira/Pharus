@@ -7,9 +7,6 @@
 
 import UIKit
 
-protocol StudentProjectCellDelegate {
-    func projectTapped()
-}
 
 class StudentProjectCell: UITableViewCell {
     

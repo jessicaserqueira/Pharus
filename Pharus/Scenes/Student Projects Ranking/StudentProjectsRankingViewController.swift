@@ -1,5 +1,5 @@
 //
-//  UserProjectsRankingViewController.swift
+//  StudentRankingProjectsViewController.swift
 //  Pharus
 //
 //  Created by Victor Colen on 04/04/22.
@@ -7,16 +7,29 @@
 
 import UIKit
 
-class UserRankingProjectsViewController: UIViewController {
-    
-    var coordinator: UserProjectsRankingCoordinator?
-    let tableView = UITableView()
-    var student: Student?
-    var projects = [Project]()
+class StudentRankingProjectsViewController: UIViewController {
     
     // MARK: - Properties
     
-    let viewCustom = UIView()
+    let tableView = UITableView()
+    private var coordinator: StudentProjectsRankingCoordinator
+    private var student: Student
+    private var projects: [Project]
+    
+    init(
+        coordinator: StudentProjectsRankingCoordinator,
+        student: Student
+    ) {
+        self.coordinator = coordinator
+        self.student = student
+        self.projects = student.projects
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +40,12 @@ class UserRankingProjectsViewController: UIViewController {
         setupTableView()
         
         student = Bundle.main.decode("Student.json")
-        if let student = student {
-            projects = student.projects
-        }
+        projects = student.projects
     }
     
     override func loadView() {
         super.loadView()
         
-        self.view = viewCustom
         view.backgroundColor = .white
     }
     
@@ -88,7 +98,7 @@ class UserRankingProjectsViewController: UIViewController {
     }
     
     func setupTableView() {
-        tableView.register(UserProjectRankingCell.self,
+        tableView.register(StudentProjectRankingCell.self,
                            forCellReuseIdentifier: K.CellReuseIdentifiers.userRankingProjects)
         
         tableView.dataSource = self
@@ -107,7 +117,7 @@ class UserRankingProjectsViewController: UIViewController {
     }
 }
 
-extension UserRankingProjectsViewController: UITableViewDataSource {
+extension StudentRankingProjectsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         480
@@ -119,7 +129,7 @@ extension UserRankingProjectsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.userRankingProjects,
-                                                 for: indexPath) as! UserProjectRankingCell
+                                                 for: indexPath) as! StudentProjectRankingCell
         let project = projects[indexPath.row]
         
         cell.configureSubviews()
@@ -131,7 +141,7 @@ extension UserRankingProjectsViewController: UITableViewDataSource {
     }
 }
 
-extension UserRankingProjectsViewController: UITableViewDelegate {
+extension StudentRankingProjectsViewController: UITableViewDelegate {
     
 }
 

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ProjectSheetDelegate: AnyObject {
-    func mainButtonTapped()
+    func closeButtonTapped()
 }
 
 class ProjectSheetView: UIView {
@@ -16,6 +16,7 @@ class ProjectSheetView: UIView {
     //MARK: - Properties
     
     weak var delegate: ProjectSheetDelegate?
+    
     private var icon: UIImage
     private var title: String
     private var descriptionTitle: String
@@ -206,6 +207,6 @@ class ProjectSheetView: UIView {
 
 extension ProjectSheetView {
     func closeButtonTapped() {
-        delegate?.mainButtonTapped()
+        delegate?.closeButtonTapped()
     }
 }

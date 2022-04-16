@@ -7,7 +7,15 @@
 
 import UIKit
 
+protocol SendFileDelegate: AnyObject {
+    func sendFileButtonTapped()
+}
+
 class SendFileView: UIView {
+    
+    //MARK: - Properties
+    
+    weak var delegate: SendFileDelegate?
     
     //MARK: - Views
     
@@ -139,12 +147,11 @@ class SendFileView: UIView {
         return button
     }()
     
-    lazy var sendFileButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Enviar arquivos", for: .normal)
-        button.backgroundColor = UIColor(red: 0.765, green: 0.765, blue: 0.765, alpha: 1)
-        button.layer.cornerRadius = 16
-        button.setTitleColor(.black, for: .normal)
+    lazy var sendFileButton: MainCardButton = {
+        let button = MainCardButton(title: "Enviar Arquivos")
+        button.addAction(UIAction { _ in
+            self.sendFileButtonTapped()
+        }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "SendFileView.sendFileButton"
         return button
@@ -237,11 +244,6 @@ class SendFileView: UIView {
             uploadIconImageView.heightAnchor.constraint(equalToConstant: 43)
         ])
         
-        //Send File Button
-        NSLayoutConstraint.activate([
-            sendFileButton.heightAnchor.constraint(equalToConstant: 44)
-        ])
-        
         //File Helper View
         NSLayoutConstraint.activate([
             fileHelperView.heightAnchor.constraint(equalToConstant: 45)
@@ -255,5 +257,13 @@ class SendFileView: UIView {
         
         //Remove File button
         removeFileButton.widthAnchor.constraint(equalToConstant: 18).isActive = true
+    }
+}
+
+//MARK: - Actions
+
+extension SendFileView {
+    func sendFileButtonTapped() {
+        delegate?.sendFileButtonTapped()
     }
 }
