@@ -70,7 +70,7 @@ class StudentProjectDetailViewController: UIViewController {
         
         let userImage = UIImage(named: K.Assets.Images.userImage) ?? UIImage()
         
-        let userProfileButton = UserProfileButton(userImage: userImage)
+        let userProfileButton = StudentProfileButton(userImage: userImage)
         
         let userPictureBarButton = UIBarButtonItem()
         userPictureBarButton.customView = userProfileButton

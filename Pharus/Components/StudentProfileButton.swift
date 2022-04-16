@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserProfileButton: UIButton {
+class StudentProfileButton: UIButton {
     
     //MARK: - Properties
     

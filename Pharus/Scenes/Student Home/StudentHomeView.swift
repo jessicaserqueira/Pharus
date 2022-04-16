@@ -54,8 +54,7 @@ class StudentHomeView: UIView {
     
     lazy var studentAvatarImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .white
-        imageView.image = .images.userImage
+        imageView.image =  UIImage(named: "Avatar1")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentHomeView.studentAvatarImageView"
         return imageView
@@ -162,6 +161,10 @@ class StudentHomeView: UIView {
         
         //Student Avatar Image View
         studentAvatarImageView.center(in: studentAvatarHelperView)
+        NSLayoutConstraint.activate([
+            studentAvatarImageView.heightAnchor.constraint(equalToConstant: 100),
+            studentAvatarImageView.widthAnchor.constraint(equalToConstant: 100)
+        ])
         
         //Mini Card Scroll View
         NSLayoutConstraint.activate([
