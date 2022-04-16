@@ -9,9 +9,18 @@ import UIKit
 class AlertViewController: UIViewController {
     
     private var alertView: AlertView
+    private var coordinator: AlertCoordinator
+    private var presenter: AlertPresenter
     
-    init(alertView: AlertView) {
+    init(
+        alertView: AlertView,
+        coordinator: AlertCoordinator,
+        presenter: AlertPresenter
+    ) {
+        
         self.alertView = alertView
+        self.coordinator = coordinator
+        self.presenter = presenter
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -23,6 +32,13 @@ class AlertViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        alertView.delegate = self
         self.view = alertView
+    }
+}
+
+extension AlertViewController: AlertViewDelegate {
+    func closeButtonTapped() {
+        presenter.closeModal()
     }
 }

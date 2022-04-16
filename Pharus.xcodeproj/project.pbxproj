@@ -37,6 +37,10 @@
 		79C577D027FBBB8100046B00 /* UserProjectRankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */; };
 		79C577D227FBBB9800046B00 /* UserProjectsRankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */; };
 		79E6424D27F098D30046A2F0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6424C27F098D30046A2F0 /* Network.swift */; };
+		79E838A7280AFCE7001C46AD /* SendFilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A6280AFCE7001C46AD /* SendFilePresenter.swift */; };
+		79E838A9280AFD03001C46AD /* SendFileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A8280AFD03001C46AD /* SendFileCoordinator.swift */; };
+		79E838AC280B0676001C46AD /* AlertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838AB280B0676001C46AD /* AlertCoordinator.swift */; };
+		79E838AE280B067D001C46AD /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838AD280B067D001C46AD /* AlertPresenter.swift */; };
 		79F06DA127F28FCD00343865 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */; };
 		79FB0CC927F330FA001D36A7 /* Student.json in Resources */ = {isa = PBXBuildFile; fileRef = 79FB0CC827F330FA001D36A7 /* Student.json */; };
 		79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */; };
@@ -103,6 +107,10 @@
 		79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectRankingCell.swift; sourceTree = "<group>"; };
 		79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsRankingViewController.swift; sourceTree = "<group>"; };
 		79E6424C27F098D30046A2F0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		79E838A6280AFCE7001C46AD /* SendFilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFilePresenter.swift; sourceTree = "<group>"; };
+		79E838A8280AFD03001C46AD /* SendFileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileCoordinator.swift; sourceTree = "<group>"; };
+		79E838AB280B0676001C46AD /* AlertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCoordinator.swift; sourceTree = "<group>"; };
+		79E838AD280B067D001C46AD /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		79F06D9E27F28FCD00343865 /* PharusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PharusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		79FB0CC827F330FA001D36A7 /* Student.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Student.json; sourceTree = "<group>"; };
@@ -153,6 +161,7 @@
 		79434A652809129A006D0184 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				795A021A2809F345000D0B84 /* Alert */,
 				79434A6928091491006D0184 /* Avatar Selection */,
 				79434A66280912A8006D0184 /* Login */,
 				795A02152809B664000D0B84 /* Project Sheet */,
@@ -221,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
+				79E838A6280AFCE7001C46AD /* SendFilePresenter.swift */,
+				79E838A8280AFD03001C46AD /* SendFileCoordinator.swift */,
 				C05AA30627FFAA9500230698 /* SendFileViewController.swift */,
 			);
 			path = "Send File";
@@ -240,8 +251,10 @@
 		795A021A2809F345000D0B84 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				C05AA2F427FFA66D00230698 /* AlertView.swift */,
 				C05AA30227FFAA7400230698 /* AlertViewController.swift */,
+				C05AA2F427FFA66D00230698 /* AlertView.swift */,
+				79E838AB280B0676001C46AD /* AlertCoordinator.swift */,
+				79E838AD280B067D001C46AD /* AlertPresenter.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -288,7 +301,6 @@
 		C008AF2227F1ED7F00AD94C9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				795A021A2809F345000D0B84 /* Alert */,
 				793EC73827FE177000CD8334 /* CheckmarkButton.swift */,
 				79222EA227F643D60051334A /* CircleProgressView.swift */,
 				7952058627FE55E400A89012 /* MainCardButton.swift */,
@@ -491,6 +503,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */,
+				79E838AC280B0676001C46AD /* AlertCoordinator.swift in Sources */,
+				79E838A9280AFD03001C46AD /* SendFileCoordinator.swift in Sources */,
 				79222EA327F643D60051334A /* CircleProgressView.swift in Sources */,
 				79C577D227FBBB9800046B00 /* UserProjectsRankingViewController.swift in Sources */,
 				C057E8F52807954B004E44C3 /* StudentAvatarCoordinator.swift in Sources */,
@@ -504,6 +518,7 @@
 				C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */,
 				7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */,
 				C057E8F1280794E9004E44C3 /* StudentAvatarViewController.swift in Sources */,
+				79E838A7280AFCE7001C46AD /* SendFilePresenter.swift in Sources */,
 				79AF90FD2804478F0094AB97 /* ProjectTaskView.swift in Sources */,
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
@@ -524,6 +539,7 @@
 				7952058527FE3B1A00A89012 /* ProjectSheetViewController.swift in Sources */,
 				7943975E27F3C6020075102B /* StudentProjectCell.swift in Sources */,
 				79C577D027FBBB8100046B00 /* UserProjectRankingCell.swift in Sources */,
+				79E838AE280B067D001C46AD /* AlertPresenter.swift in Sources */,
 				C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */,
 				C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */,
 				7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */,

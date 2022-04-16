@@ -55,7 +55,11 @@ extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
     }
     
     func showSendFileView() {
-        let sendFileViewController = SendFileViewController()
-        navigationController.present(sendFileViewController, animated: true)
+        let sendFileCoordinator = SendFileCoordinator(
+            navigationController: navigationController,
+            project: project
+        )
+
+        coordinate(to: sendFileCoordinator)
     }
 }

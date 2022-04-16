@@ -67,6 +67,7 @@ class AlertView: UIView {
     
     private lazy var alertMessageLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "AlertView.alertMessageLabel"
         

@@ -9,30 +9,32 @@ import UIKit
 
 class SendFileViewController: UIViewController {
     
-    let customView = SendFileView()
+    let sendFileView = SendFileView()
+    let presenter: SendFilePresenter
+    let coordinator: SendFileCoordinator
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    init(presenter: SendFilePresenter, coordinator: SendFileCoordinator) {
+        self.presenter = presenter
+        self.coordinator = coordinator
         
-        let alertView = AlertView(
-            message: "Arquivo enviado com sucesso!",
-            image: .images.checkImage ?? .defaultImage
-        )
-        
-        alertView.delegate = self
-        
-        let alertViewController = AlertViewController(alertView: alertView)
-        alertViewController.modalPresentationStyle = .fullScreen
-        
-        customView.sendFileButton.addAction(UIAction { _ in
-            self.present(alertViewController, animated: true)
-        }, for: .touchUpInside)
+        super.init(nibName: nil, bundle: nil)
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+        
     override func loadView() {
         super.loadView()
         
-        self.view = customView
+        sendFileView.delegate = self
+        self.view = sendFileView
+    }
+}
+
+extension SendFileViewController: SendFileDelegate {
+    func sendFileButtonTapped() {
+        presenter.sendFile()
     }
 }
 
