@@ -38,8 +38,8 @@ class MainCardButton: UIButton {
     
     private func configureSubviews() {
         setTitle(title, for: .normal)
-        backgroundColor = .button.purpleMainButtonBackground
-        setTitleColor(.button.whiteMainButtonText, for: .normal)
+        backgroundColor = UIColor.button.purpleMainButtonBackground
+        setTitleColor(UIColor.button.whiteMainButtonText, for: .normal)
         layer.cornerRadius = 16
     }
     
