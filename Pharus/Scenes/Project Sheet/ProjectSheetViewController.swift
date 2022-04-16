@@ -43,7 +43,7 @@ class ProjectSheetViewController: UIViewController {
 }
 
 extension ProjectSheetViewController: ProjectSheetDelegate {
-    func mainButtonTapped() {
+    func closeButtonTapped() {
         presenter.popView()
     }
 }
