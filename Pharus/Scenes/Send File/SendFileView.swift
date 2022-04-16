@@ -80,7 +80,7 @@ class SendFileView: UIView {
     
     lazy var uploadIconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .icons.uploadIcon
+        imageView.image = .images.uploadImage
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "SendFileView.uploadIconImageView"
         return imageView
