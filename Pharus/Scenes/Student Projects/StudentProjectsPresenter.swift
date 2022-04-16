@@ -5,17 +5,21 @@
 //  Created by Victor Colen on 29/03/22.
 //
 
-import Foundation
+import UIKit
 
 protocol StudentProjectsPresenterProtocol {
     func showStudentProject(project: Project)
 }
 
 class StudentProjectsPresenter: StudentProjectsPresenterProtocol {
-    var coordinator: StudentProjectsCoordinator?
+    private var coordinator: StudentProjectsCoordinator
+    
+    init(coordinator: StudentProjectsCoordinator) {
+        self.coordinator = coordinator
+    }
     
     func showStudentProject(project: Project) {
-        coordinator?.showStudentProject(project)
+        coordinator.showStudentProject(project)
     }
 }
 

@@ -15,16 +15,20 @@ protocol StudentProjectsDetailPresenterProtocol {
 
 class StudentProjectDetailPresenter: StudentProjectsDetailPresenterProtocol {
     
-    var coordinator: StudentProjectDetailCoordinator?
+    private var coordinator: StudentProjectDetailCoordinator
+    
+    init(coordinator: StudentProjectDetailCoordinator) {
+        self.coordinator = coordinator
+    }
     
     func showProjectRules(rules: String) {
-        coordinator?.showProjectRules()
+        coordinator.showProjectRules()
     }
     
     func showUploadFileView() {
-        coordinator?.showSendFileView()
+        coordinator.showSendFileView()
     }
-        
+    
     func toggleTaskCompletedStatus(task: Task) {
         task.toggleCompletionStatus()
         print(task.isComplete)

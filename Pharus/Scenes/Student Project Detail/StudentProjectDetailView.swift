@@ -7,13 +7,18 @@
 
 import UIKit
 
-protocol StudentProjectDetailViewDelegate {
+protocol StudentProjectDetailViewDelegate: AnyObject {
     func rulesViewTapped()
     func sendFilesButtonTapped()
 }
 
 class StudentProjectDetailView: UIView {
-        
+    
+    //MARK: - Properties
+    
+    weak var delegate: StudentProjectDetailViewDelegate?
+    private var project: Project
+    
     //MARK: - Views
     
     lazy var mainView: UIView = {
@@ -87,6 +92,9 @@ class StudentProjectDetailView: UIView {
     
     lazy var rulesHelperView: UIView = {
         let view = UIView()
+        view.setOnClickListener {
+            self.rulesViewTapped()
+        }
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.rulesHelperView"
         
@@ -188,13 +196,50 @@ class StudentProjectDetailView: UIView {
     
     lazy var uploadFilesButton: MainCardButton = {
         let button = MainCardButton(title: "Enviar Arquivos")
+        button.addAction(UIAction { _ in
+            self.sendFilesButtonTapped()
+        }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "StudentProjectDetailView.uploadFilesButton"
         
         return button
     }()
     
+    //MARK: - Initializer
+    
+    convenience init(project: Project) {
+        self.init()
+        
+        self.project = project
+        configureSubviews()
+        customizeSubviews(with: project)
+        setupConstraints()
+    }
+    
     override init(frame: CGRect) {
+        
+        self.project = Project(
+            id: "1",
+            name: "El Projeto",
+            isComplete: true,
+            score: 100,
+            medal: "diamond",
+            projectDescription: "Lorem ipsum",
+            scoreDescription: " bela nota parabens",
+            startDate: "22/03/2021",
+            endDate: "25/05/2023",
+            school: "Batista",
+            rules: "Siga as regras",
+            mentor: "Yo el brabo",
+            hasCompanyPartnership: false,
+            company: nil,
+            companyPhoto: nil,
+            completionStatus: 100,
+            tasks: [
+                Task(title: "Terminar projeto", isComplete: true, description: "Teste")
+            ]
+        )
+        
         super.init(frame: .zero)
         
         configureSubviews()
@@ -205,7 +250,7 @@ class StudentProjectDetailView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func customizeView(with project: Project) {
+    func customizeSubviews(with project: Project) {
         mentorLabel.text = project.mentor
         descriptionTextLabel.text = project.projectDescription
         completedTasksProgressView.progress = project.completionStatus/100
@@ -290,5 +335,17 @@ class StudentProjectDetailView: UIView {
         NSLayoutConstraint.activate([
             uploadFilesButton.widthAnchor.constraint(equalToConstant: 195)
         ])
+    }
+}
+
+//MARK: - Actions
+
+extension StudentProjectDetailView {
+    func rulesViewTapped() {
+        delegate?.rulesViewTapped()
+    }
+    
+    func sendFilesButtonTapped() {
+        delegate?.sendFilesButtonTapped()
     }
 }

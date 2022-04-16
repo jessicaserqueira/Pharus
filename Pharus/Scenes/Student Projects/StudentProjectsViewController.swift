@@ -9,16 +9,33 @@ import UIKit
 
 class StudentProjectsViewController: UIViewController {
     
-    var presenter: StudentProjectsPresenter?
-    var student: Student?
-    var projects = [Project]()
+    private var coordinator: StudentProjectsCoordinator
+    private var presenter: StudentProjectsPresenter
+    private var student: Student
+    private var projects: [Project]
     let tableView = UITableView()
+    
+    init(
+        coordinator: StudentProjectsCoordinator,
+         presenter: StudentProjectsPresenter,
+         student: Student
+    ) {
+        self.coordinator = coordinator
+        self.presenter = presenter
+        self.student = student
+        self.projects = student.projects
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setNavigationBar()
-        projects = student?.projects ?? [Project]()
         view.addSubview(tableView)
         setupTableView()
     }
@@ -37,7 +54,7 @@ class StudentProjectsViewController: UIViewController {
         button.clipsToBounds = true
         button.setImage(image, for: .normal)
         button.addTarget(self, action: #selector(profilePicTapped), for: .touchUpInside)
-
+        
         self.title = "Seus projetos"
         
         let userImage = UIImage(named: K.Assets.Images.userImage)!
@@ -105,12 +122,6 @@ class StudentProjectsViewController: UIViewController {
     }
 }
 
-extension StudentProjectsViewController: StudentProjectCellDelegate {
-    func projectTapped() {
-        
-    }
-}
-
 extension StudentProjectsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -138,6 +149,6 @@ extension StudentProjectsViewController: UITableViewDataSource {
 extension StudentProjectsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let project = projects[indexPath.row]
-        presenter?.showStudentProject(project: project)
+        presenter.showStudentProject(project: project)
     }
 }
