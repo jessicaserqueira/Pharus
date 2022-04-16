@@ -18,7 +18,9 @@ extension UIImage {
         static let xmarkIcon = UIImage(systemName: K.Assets.Icons.xmarkIcon)
         static let checkmarkIcon = UIImage(named: K.Assets.Icons.checkboxCheckmarkButtonIcon)
         static let expandIcon = UIImage(named: K.Assets.Icons.expandIcon)
+        static let logoutButtonIcon = UIImage(systemName: K.Assets.Icons.logoutButtonIcon)
         static let backButtonIcon = UIImage(named: K.Assets.Icons.backButtonIcon)
+        
         
         static let avatarTabBarIcon = UIImage(named: K.Assets.Icons.avatarTabBarIcon)
         static let homeTabBarIcon = UIImage(named: K.Assets.Icons.homeTabBarIcon)

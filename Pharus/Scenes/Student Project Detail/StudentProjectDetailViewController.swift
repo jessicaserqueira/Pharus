@@ -52,7 +52,7 @@ class StudentProjectDetailViewController: UIViewController {
             
             let taskView = ProjectTaskView(
                 task: task,
-                checkImage: .icons.checkmarkIcon ?? .defaultImage
+                checkImage: UIImage.icons.checkmarkIcon ?? .defaultImage
             )
             
             customView.taskHelperStackView.addArrangedSubview(taskView)

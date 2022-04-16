@@ -8,6 +8,22 @@
 import UIKit
 
 extension UIColor {
+    struct background{
+        static let GradientRedBackground = UIColor(
+            red: 0.867,
+            green: 0.149,
+            blue: 0.208,
+            alpha: 1
+        )
+        
+        static let gradientPurplebackground = UIColor(
+            red: 0.42,
+            green: 0.247,
+            blue: 0.682,
+            alpha: 1
+        )
+    }
+    
     struct project {
         static let yellowDisabledProjectBackground = UIColor(
             red: 0.992,

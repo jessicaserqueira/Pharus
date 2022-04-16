@@ -15,8 +15,11 @@ protocol LoginPresenterProtocol {
 
 class LoginPresenter: LoginPresenterProtocol {
     
-    var coordinator: LoginCoordinator?
+    var coordinator: LoginFlow?
     
+    init(coordinator: LoginFlow) {
+        self.coordinator = coordinator
+    }
     func isValidEmail(email: String) -> Bool {
         let emailRegEx = K.RegEx.emailRegEx
         

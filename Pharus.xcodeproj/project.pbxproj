@@ -43,9 +43,13 @@
 		C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */; };
 		C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */; };
 		C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF2327F1EDA100AD94C9 /* LoginView.swift */; };
+		C01BB69A280B2980004D4790 /* StudentProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB699280B2980004D4790 /* StudentProfileView.swift */; };
+		C01BB6A0280B29A1004D4790 /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB69F280B29A1004D4790 /* StudentProfileViewController.swift */; };
+		C01BB6A4280B29B7004D4790 /* StudentProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB6A3280B29B7004D4790 /* StudentProfileCoordinator.swift */; };
+		C01BB6A8280B29C8004D4790 /* StudentProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB6A7280B29C8004D4790 /* StudentProfilePresenter.swift */; };
+		C01BB6B0280B685D004D4790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01BB6AF280B685D004D4790 /* Assets.xcassets */; };
 		C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618A27EA03A5007EC5C3 /* AppDelegate.swift */; };
 		C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618C27EA03A5007EC5C3 /* SceneDelegate.swift */; };
-		C045619427EA03A6007EC5C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C045619327EA03A6007EC5C3 /* Assets.xcassets */; };
 		C045619727EA03A6007EC5C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */; };
 		C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561A727EA041B007EC5C3 /* Coordinator.swift */; };
 		C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */; };
@@ -110,10 +114,14 @@
 		C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoodinator.swift; sourceTree = "<group>"; };
 		C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C008AF2327F1EDA100AD94C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C01BB699280B2980004D4790 /* StudentProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileView.swift; sourceTree = "<group>"; };
+		C01BB69F280B29A1004D4790 /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
+		C01BB6A3280B29B7004D4790 /* StudentProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileCoordinator.swift; sourceTree = "<group>"; };
+		C01BB6A7280B29C8004D4790 /* StudentProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfilePresenter.swift; sourceTree = "<group>"; };
+		C01BB6AF280B685D004D4790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C045618727EA03A5007EC5C3 /* Pharus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pharus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C045618A27EA03A5007EC5C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C045618C27EA03A5007EC5C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C045619327EA03A6007EC5C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C045619627EA03A6007EC5C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C045619827EA03A6007EC5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C04561A727EA041B007EC5C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -153,6 +161,7 @@
 		79434A652809129A006D0184 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C01BB698280B2953004D4790 /* Student Profile */,
 				795A02152809B664000D0B84 /* Project Sheet */,
 				79434A6B2809194D006D0184 /* Send File */,
 				79434A6A280914D0006D0184 /* Student Projects Ranking */,
@@ -300,6 +309,17 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		C01BB698280B2953004D4790 /* Student Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB699280B2980004D4790 /* StudentProfileView.swift */,
+				C01BB69F280B29A1004D4790 /* StudentProfileViewController.swift */,
+				C01BB6A3280B29B7004D4790 /* StudentProfileCoordinator.swift */,
+				C01BB6A7280B29C8004D4790 /* StudentProfilePresenter.swift */,
+			);
+			path = "Student Profile";
+			sourceTree = "<group>";
+		};
 		C045617E27EA03A5007EC5C3 = {
 			isa = PBXGroup;
 			children = (
@@ -322,7 +342,7 @@
 		C045618927EA03A5007EC5C3 /* Pharus */ = {
 			isa = PBXGroup;
 			children = (
-				C045619327EA03A6007EC5C3 /* Assets.xcassets */,
+				C01BB6AF280B685D004D4790 /* Assets.xcassets */,
 				C008AF2227F1ED7F00AD94C9 /* Components */,
 				C04561A127EA03B1007EC5C3 /* Controller */,
 				C04561A327EA03BF007EC5C3 /* Coordinator */,
@@ -470,7 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C045619727EA03A6007EC5C3 /* LaunchScreen.storyboard in Resources */,
-				C045619427EA03A6007EC5C3 /* Assets.xcassets in Resources */,
+				C01BB6B0280B685D004D4790 /* Assets.xcassets in Resources */,
 				79FB0CC927F330FA001D36A7 /* Student.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +512,7 @@
 			files = (
 				794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */,
 				79222EA327F643D60051334A /* CircleProgressView.swift in Sources */,
+				C01BB69A280B2980004D4790 /* StudentProfileView.swift in Sources */,
 				79C577D227FBBB9800046B00 /* UserProjectsRankingViewController.swift in Sources */,
 				C057E8F52807954B004E44C3 /* StudentAvatarCoordinator.swift in Sources */,
 				C05AA30327FFAA7400230698 /* AlertViewController.swift in Sources */,
@@ -512,7 +533,9 @@
 				7952058327FE394900A89012 /* ProjectSheetView.swift in Sources */,
 				C05AA2CE27FC82AB00230698 /* UserProjectsRankingCoordinator.swift in Sources */,
 				C057E8E92807941C004E44C3 /* StudentAvatarView.swift in Sources */,
+				C01BB6A8280B29C8004D4790 /* StudentProfilePresenter.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
+				C01BB6A0280B29A1004D4790 /* StudentProfileViewController.swift in Sources */,
 				C05AA2F527FFA66D00230698 /* AlertView.swift in Sources */,
 				79AF90F728043A590094AB97 /* SendFileView.swift in Sources */,
 				C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */,
@@ -530,6 +553,7 @@
 				C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */,
 				C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */,
 				7963213227F23C9200A202EE /* Constants.swift in Sources */,
+				C01BB6A4280B29B7004D4790 /* StudentProfileCoordinator.swift in Sources */,
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
 				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
 				7943976027F3C6130075102B /* StudentProjectsPresenter.swift in Sources */,

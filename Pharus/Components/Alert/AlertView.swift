@@ -23,7 +23,7 @@ class AlertView: UIView {
     private lazy var mainView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
-        view.backgroundColor = .project.orangeSubscribedProjectBackground
+        view.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "AlertView.mainView"
         

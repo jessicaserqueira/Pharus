@@ -16,7 +16,7 @@ class SendFileViewController: UIViewController {
         
         let alertView = AlertView(
             message: "Arquivo enviado com sucesso!",
-            image: .images.checkImage ?? .defaultImage
+            image: UIImage.images.checkImage ?? .defaultImage
         )
         
         alertView.delegate = self
