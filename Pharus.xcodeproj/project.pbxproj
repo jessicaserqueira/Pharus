@@ -37,6 +37,10 @@
 		79C577D027FBBB8100046B00 /* UserProjectRankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */; };
 		79C577D227FBBB9800046B00 /* UserProjectsRankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */; };
 		79E6424D27F098D30046A2F0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6424C27F098D30046A2F0 /* Network.swift */; };
+		79E8389F280AF7C5001C46AD /* HomeNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E8389E280AF7C5001C46AD /* HomeNewsView.swift */; };
+		79E838A1280AF7E1001C46AD /* HomeMiniCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A0280AF7E1001C46AD /* HomeMiniCardView.swift */; };
+		79E838A3280AF804001C46AD /* StudentHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A2280AF804001C46AD /* StudentHomeView.swift */; };
+		79E838A5280AF82C001C46AD /* StudentHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A4280AF82C001C46AD /* StudentHomeViewController.swift */; };
 		79F06DA127F28FCD00343865 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */; };
 		79FB0CC927F330FA001D36A7 /* Student.json in Resources */ = {isa = PBXBuildFile; fileRef = 79FB0CC827F330FA001D36A7 /* Student.json */; };
 		79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */; };
@@ -103,6 +107,10 @@
 		79C577CF27FBBB8100046B00 /* UserProjectRankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectRankingCell.swift; sourceTree = "<group>"; };
 		79C577D127FBBB9800046B00 /* UserProjectsRankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsRankingViewController.swift; sourceTree = "<group>"; };
 		79E6424C27F098D30046A2F0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		79E8389E280AF7C5001C46AD /* HomeNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewsView.swift; sourceTree = "<group>"; };
+		79E838A0280AF7E1001C46AD /* HomeMiniCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMiniCardView.swift; sourceTree = "<group>"; };
+		79E838A2280AF804001C46AD /* StudentHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeView.swift; sourceTree = "<group>"; };
+		79E838A4280AF82C001C46AD /* StudentHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeViewController.swift; sourceTree = "<group>"; };
 		79F06D9E27F28FCD00343865 /* PharusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PharusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		79FB0CC827F330FA001D36A7 /* Student.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Student.json; sourceTree = "<group>"; };
@@ -153,6 +161,7 @@
 		79434A652809129A006D0184 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				79E8389D280AF791001C46AD /* Student Home */,
 				795A02152809B664000D0B84 /* Project Sheet */,
 				79434A6B2809194D006D0184 /* Send File */,
 				79434A6A280914D0006D0184 /* Student Projects Ranking */,
@@ -275,6 +284,17 @@
 			);
 			name = Service;
 			path = Coordinator/Service;
+			sourceTree = "<group>";
+		};
+		79E8389D280AF791001C46AD /* Student Home */ = {
+			isa = PBXGroup;
+			children = (
+				79E8389E280AF7C5001C46AD /* HomeNewsView.swift */,
+				79E838A0280AF7E1001C46AD /* HomeMiniCardView.swift */,
+				79E838A2280AF804001C46AD /* StudentHomeView.swift */,
+				79E838A4280AF82C001C46AD /* StudentHomeViewController.swift */,
+			);
+			path = "Student Home";
 			sourceTree = "<group>";
 		};
 		79F06D9F27F28FCD00343865 /* PharusTests */ = {
@@ -493,11 +513,13 @@
 				794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */,
 				79222EA327F643D60051334A /* CircleProgressView.swift in Sources */,
 				79C577D227FBBB9800046B00 /* UserProjectsRankingViewController.swift in Sources */,
+				79E838A3280AF804001C46AD /* StudentHomeView.swift in Sources */,
 				C057E8F52807954B004E44C3 /* StudentAvatarCoordinator.swift in Sources */,
 				C05AA30327FFAA7400230698 /* AlertViewController.swift in Sources */,
 				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
 				7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */,
 				793EC73B27FE183000CD8334 /* UIImage+Extension.swift in Sources */,
+				79E8389F280AF7C5001C46AD /* HomeNewsView.swift in Sources */,
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
 				C05AA2BC27FC740E00230698 /* TabBarCoordinator.swift in Sources */,
 				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
@@ -522,10 +544,12 @@
 				C05AA2C827FC749E00230698 /* TarBarPresenter.swift in Sources */,
 				79AF90FB28043DEA0094AB97 /* StudentProjectDetailPresenter.swift in Sources */,
 				7952058527FE3B1A00A89012 /* ProjectSheetViewController.swift in Sources */,
+				79E838A5280AF82C001C46AD /* StudentHomeViewController.swift in Sources */,
 				7943975E27F3C6020075102B /* StudentProjectCell.swift in Sources */,
 				79C577D027FBBB8100046B00 /* UserProjectRankingCell.swift in Sources */,
 				C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */,
 				C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */,
+				79E838A1280AF7E1001C46AD /* HomeMiniCardView.swift in Sources */,
 				7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */,
 				C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */,
 				C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */,
