@@ -133,7 +133,7 @@ class StudentProjectCell: UITableViewCell {
     lazy var completionBarCircleView: CircleProgressView = {
         let view = CircleProgressView(
             circleColor: .white,
-            completionProgressColor: .Button.mainButtonBackgroundColor,
+            completionProgressColor: .button.purpleMainButtonBackground,
             radius: 40,
             completionPercentage: 50
         )
@@ -299,7 +299,7 @@ class StudentProjectCell: UITableViewCell {
         
         companyLogoView.addSubview(companyLogoImageView)
         
-        mainView.backgroundColor = .Project.subscribedProjectBackgroundColor
+        mainView.backgroundColor = .project.orangeSubscribedProjectBackground
     }
     
     //MARK: - Constraints

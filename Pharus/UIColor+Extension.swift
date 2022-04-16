@@ -8,29 +8,29 @@
 import UIKit
 
 extension UIColor {
-    struct Project {
-        static let disabledProjectBackgroundColor = UIColor(
+    struct project {
+        static let yellowDisabledProjectBackground = UIColor(
             red: 0.992,
             green: 0.925,
             blue: 0.733,
             alpha: 1
         )
         
-        static let subscribedProjectBackgroundColor = UIColor(
+        static let orangeSubscribedProjectBackground = UIColor(
             red: 0.992,
             green: 0.627,
             blue: 0.286,
             alpha: 1
         )
         
-        static let unsubscribedProjectBackgroundColor = UIColor(
+        static let grayUnsubscribedProjectBackground = UIColor(
             red: 0.808,
             green: 0.808,
             blue: 0.82,
             alpha: 1
         )
         
-        static let completedPodiumProject = UIColor(
+        static let purpleCompletedPodiumBackground = UIColor(
             red: 0.475,
             green: 0.176,
             blue: 0.914,
@@ -38,8 +38,8 @@ extension UIColor {
         )
     }
     
-    struct Modal {
-        static let modalBackgroundColor = UIColor(
+    struct modal {
+        static let yellowModalBackground = UIColor(
             red: 0.992,
             green: 0.863,
             blue: 0.631,
@@ -47,15 +47,15 @@ extension UIColor {
         )
     }
     
-    struct Button {
-        static let mainButtonBackgroundColor = UIColor(
+    struct button {
+        static let purpleMainButtonBackground = UIColor(
             red: 0.361,
             green: 0.145,
             blue: 0.776,
             alpha: 1
         )
         
-        static let mainButtonTextColor = UIColor(
+        static let whiteMainButtonText = UIColor(
             red: 0.945,
             green: 0.945,
             blue: 0.949,
@@ -63,15 +63,15 @@ extension UIColor {
         )
     }
     
-    struct Card {
-        static let homeStandardCardBackgroundColor = UIColor(
+    struct card {
+        static let orangeHomeStandardCardBackground = UIColor(
             red: 0.988,
             green: 0.729,
             blue: 0.478,
             alpha: 1
         )
         
-        static let homeAlertCardBackgroundColor = UIColor(
+        static let yellowHomeAlertCardBackground = UIColor(
             red: 0.9,
             green: 0.87,
             blue: 0,

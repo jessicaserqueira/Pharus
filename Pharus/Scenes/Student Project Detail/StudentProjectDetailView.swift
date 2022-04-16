@@ -18,7 +18,7 @@ class StudentProjectDetailView: UIView {
     
     lazy var mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = .Modal.modalBackgroundColor
+        view.backgroundColor = .modal.yellowModalBackground
         view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.mainView"
@@ -172,7 +172,7 @@ class StudentProjectDetailView: UIView {
         progressView.progress = 0.75
         progressView.clipsToBounds = true
         progressView.trackTintColor = .white
-        progressView.progressTintColor = .Project.disabledProjectBackgroundColor
+        progressView.progressTintColor = .project.yellowDisabledProjectBackground
         progressView.accessibilityIdentifier = "StudentProjectDetailView.completedTasksProgressView"
         
         return progressView
