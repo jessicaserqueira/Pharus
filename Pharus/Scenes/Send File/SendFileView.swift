@@ -21,7 +21,7 @@ class SendFileView: UIView {
     
     lazy var mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = .project.orangeSubscribedProjectBackground
+        view.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.mainView"
         return view
@@ -63,7 +63,7 @@ class SendFileView: UIView {
     
     lazy var uploadFileHelperView: UIView = {
         let view = UIView()
-        view.backgroundColor = .project.yellowDisabledProjectBackground
+        view.backgroundColor = UIColor.project.yellowDisabledProjectBackground
         view.layer.cornerRadius = 8
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.uploadFileHelperView"
@@ -88,7 +88,7 @@ class SendFileView: UIView {
     
     lazy var uploadIconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .images.uploadImage
+        imageView.image = UIImage.images.uploadImage
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "SendFileView.uploadIconImageView"
         return imageView
@@ -124,7 +124,7 @@ class SendFileView: UIView {
     
     lazy var fileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .icons.bookIcon
+        imageView.image = UIImage.icons.bookIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "SendFileView.fileImageView"
         return imageView
@@ -140,7 +140,7 @@ class SendFileView: UIView {
     
     lazy var removeFileButton: UIButton = {
         let button = UIButton()
-        button.setImage(.icons.xmarkIcon, for: .normal)
+        button.setImage(UIImage.icons.xmarkIcon, for: .normal)
         button.tintColor = .black
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "SendFileView.removeFileButton"

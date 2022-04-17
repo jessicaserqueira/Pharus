@@ -30,7 +30,7 @@ class LoginView: UIView {
     
     lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .images.appLogoImage
+        imageView.image = UIImage.images.appLogoImage
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "LoginView.logoImageView"
