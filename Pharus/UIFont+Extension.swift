@@ -19,9 +19,10 @@ extension UIFont {
     static let largeButton = customFont(font: .montserrat, ofSize: .large, weight: .medium)
     static let smallButton = customFont(font: .montserrat, ofSize: .small, weight: .semibold)
     
-    static let smallBody = customFont(font: .openSans, ofSize: .small)
-    static let miniBody = customFont(font: .openSans, ofSize: .mini)
     static let mediumBodyBold = customFont(font: .openSans, ofSize: .medium, weight: .bold)
+    static let smallBody = customFont(font: .openSans, ofSize: .small)
+    static let smallBodyBold = customFont(font: .openSans, ofSize: .small, weight: .bold)
+    static let miniBody = customFont(font: .openSans, ofSize: .mini)
     
     static func customFont(
         font: FontName,

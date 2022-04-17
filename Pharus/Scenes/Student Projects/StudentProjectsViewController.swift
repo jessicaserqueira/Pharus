@@ -49,6 +49,7 @@ class StudentProjectsViewController: UIViewController {
     func setNavigationBar() {
         self.title = "Seus projetos"
         self.navigationController?.title = ""
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
         let image = UIImage(named: "userPicture")
         let button = UIButton(type: .custom)
@@ -67,19 +68,6 @@ class StudentProjectsViewController: UIViewController {
         userPictureBarButton.customView = userProfileButtonView
         
         self.navigationItem.rightBarButtonItem = userPictureBarButton
-        
-        var backButtonImage = UIImage(named: K.Assets.Icons.backButtonIcon)
-        backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
-                                                                 green: 0.153,
-                                                                 blue: 0.153,
-                                                                 alpha: 1),
-                                                         renderingMode: .alwaysOriginal)
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
-                                                                style: .plain,
-                                                                target: self,
-                                                                action: #selector(backButtonPressed))
-        
     }
     
     func createUserProfileButton(image: UIImage) -> UIButton {
@@ -94,12 +82,7 @@ class StudentProjectsViewController: UIViewController {
         
         return button
     }
-    
-    //Implementar quando o fluxo estiver pronto
-    @objc func backButtonPressed() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+        
     //Implementar quando a tela de usuário estiver pronta
     @objc func profilePicTapped() {
         print("Profile Picture pressed")

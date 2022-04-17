@@ -13,11 +13,7 @@ class SubscribeButton: UIButton {
     
     var isSubscribed: Bool {
         didSet {
-            UIView.animate(withDuration: 0.3,
-                           delay: 0.0,
-                           options: .curveLinear) {
-                self.changeButtonStatus()
-            }
+            self.changeButtonStatus()
         }
     }
     

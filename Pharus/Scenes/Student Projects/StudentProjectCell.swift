@@ -197,6 +197,7 @@ class StudentProjectCell: UITableViewCell {
     lazy var partnershipLabel: UILabel = {
         let label = UILabel()
         label.text = "Parceira: "
+        label.font = .smallBodyBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.partnershipLabel"
         
@@ -229,9 +230,6 @@ class StudentProjectCell: UITableViewCell {
     
     lazy var subscribeButton: SubscribeButton = {
         let button = SubscribeButton(isSubscribed: true)
-        button.addAction(UIAction{ _ in
-            button.isSubscribed.toggle()
-        }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "UserProjectCell.subscribeButton"
         return button
@@ -251,19 +249,27 @@ class StudentProjectCell: UITableViewCell {
     }
     
     func configureCell(using project: Project) {
-        self.titleLabel.text = project.name
-        self.descriptionLabel.text = project.projectDescription
-        self.mentor.text = "Mentor: " + project.mentor
-        self.completionBarCircleView.completionPercentage = project.completionStatus
-        self.percentageCompletionLabel.text = project.completionStatus.description + "%"
-        self.completionBarCircleView.completionPercentage = project.completionStatus
-        self.projectScheduleView.project = project
+        titleLabel.text = project.name
+        descriptionLabel.text = project.projectDescription
+        mentor.text = "Mentor: " + project.mentor
+        completionBarCircleView.completionPercentage = project.completionStatus
+        percentageCompletionLabel.text = project.completionStatus.description + "%"
+        completionBarCircleView.completionPercentage = project.completionStatus
+        projectScheduleView.project = project
+        subscribeButton.isSubscribed = project.isSubscribed
+        
+        if project.isSubscribed {
+            mainView.backgroundColor = .project.orangeSubscribedProjectBackground
+            self.stretch(lowerStackView, to: lowerHelperView, left: 36.5, right: -27)
+        } else {
+            mainView.backgroundColor = .project.grayUnsubscribedProjectBackground
+            self.stretch(lowerStackView, to: lowerHelperView, left: 20.5, right: -12)
+        }
     }
     
     func configureSubviews() {
         addSubview(mainView)
-        mainView.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
-        
+       
         mainView.addSubview(mainStackView)
         
         mainStackView.addArrangedSubview(titleStackView)
@@ -362,9 +368,6 @@ class StudentProjectCell: UITableViewCell {
         NSLayoutConstraint.activate([
             projectScheduleView.heightAnchor.constraint(equalToConstant: 44)
         ])
-        
-        //Lower Stack View
-        self.stretch(lowerStackView, to: lowerHelperView, left: 36.5, right: -27)
         
         //Company Logo Image View
         NSLayoutConstraint.activate([
