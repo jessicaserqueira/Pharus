@@ -12,6 +12,14 @@ import UIKit
 
 extension UIFont {
     
+    static let largeTitle = customFont(font: .montserrat, ofSize: .extraLarge, weight: .bold)
+    static let mediumTitle = customFont(font: .montserrat, ofSize: .medium, weight: .bold)
+    
+    static let largeButton = customFont(font: .montserrat, ofSize: .large, weight: .medium)
+    
+    static let smallBody = customFont(font: .openSans, ofSize: .small)
+    static let miniBody = customFont(font: .openSans, ofSize: .mini)
+    
     static let cardTitleFont = UIFont.systemFont(ofSize: 20, weight: .bold)
     static let cardSubtitleFont = UIFont.systemFont(ofSize: 18, weight: .bold)
     
@@ -20,7 +28,7 @@ extension UIFont {
         ofSize size: FontSize,
         weight: FontWeight = .regular
     ) -> UIFont {
-        UIFont(
+        return UIFont(
             name: "\(font.rawValue)-\(weight.rawValue)",
             size: size.rawValue
         ) ?? .systemFont(ofSize: size.rawValue)
