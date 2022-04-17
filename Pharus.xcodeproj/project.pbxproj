@@ -183,13 +183,13 @@
 		79434A652809129A006D0184 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				79E8389D280AF791001C46AD /* Student Home */,
-				C01BB6B9280B8C41004D4790 /* Student Profile */,
 				795A021A2809F345000D0B84 /* Alert */,
 				79434A6928091491006D0184 /* Avatar Selection */,
 				79434A66280912A8006D0184 /* Login */,
 				795A02152809B664000D0B84 /* Project Sheet */,
 				79434A6B2809194D006D0184 /* Send File */,
+				79E8389D280AF791001C46AD /* Student Home */,
+				C01BB6B9280B8C41004D4790 /* Student Profile */,
 				79434A68280912BE006D0184 /* Student Project Detail */,
 				79434A67280912B2006D0184 /* Student Projects */,
 				79434A6A280914D0006D0184 /* Student Projects Ranking */,

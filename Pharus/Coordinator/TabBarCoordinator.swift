@@ -33,11 +33,13 @@ class TabBarCoordinator: Coordinator {
         let studentProjectsCoordinator = makeStudentProjectsCoordinator()
         let studentProjectsRankingCoordinator = makeStudentProjectsRankingCoordinator()
         let studentAvatarCoordinator = makeStudentAvatarCoordinator()
+        let studentProfileCoordinator = makeStudentProfileCoordinator()
         
         childCoordinators.append(studentHomeCoordinator)
         childCoordinators.append(studentProjectsCoordinator)
         childCoordinators.append(studentAvatarCoordinator)
         childCoordinators.append(studentProjectsRankingCoordinator)
+        childCoordinators.append(studentProfileCoordinator)
         
         
         tabBarViewController.setViewControllers(
@@ -45,7 +47,8 @@ class TabBarCoordinator: Coordinator {
                 studentHomeCoordinator.navigationController,
                 studentProjectsCoordinator.navigationController,
                 studentProjectsRankingCoordinator.navigationController,
-                studentAvatarCoordinator.navigationController
+                studentAvatarCoordinator.navigationController,
+                studentProfileCoordinator.navigationController
             ],
             animated: true
         )
@@ -87,6 +90,17 @@ class TabBarCoordinator: Coordinator {
     private func makeStudentAvatarCoordinator() -> StudentAvatarCoordinator {
         let coordinator = StudentAvatarCoordinator(
             navigationController: UINavigationController()
+        )
+        
+        coordinator.start()
+        
+        return coordinator
+    }
+    
+    private func makeStudentProfileCoordinator() -> StudentProfileCoordinator {
+        let coordinator = StudentProfileCoordinator(
+            navigationController: UINavigationController(),
+            student: student
         )
         
         coordinator.start()

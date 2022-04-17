@@ -17,23 +17,23 @@ class StudentProfileCoordinator: Coordinator {
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     var student: Student
-    var studentProfileView: StudentProfileView
     
-    init(navigationController: UINavigationController, student: Student, studentProfileView: StudentProfileView) {
+    init(
+        navigationController: UINavigationController,
+        student: Student
+    ) {
         self.navigationController = navigationController
         self.student = student
-        self.studentProfileView = studentProfileView
     }
     
     func start() {
         let studentProfilePresenter = StudentProfilePresenter(
-            coordinator: self,
-            studentProfileView: studentProfileView
+            coordinator: self
         )
         
         let studentProfileViewController = StutentProfileViewController(
             coordinator: self,
-            studentProfileView: studentProfileView, presenter: studentProfilePresenter
+            presenter: studentProfilePresenter
         )
 
         navigationController.setNavigationBarHidden(false, animated: true)

@@ -14,11 +14,9 @@ protocol StudentProfilePresenterProtocol {
 class StudentProfilePresenter {
     
     var coordinator: StudentProfileFlow
-    var studentProfileView: StudentProfileView
     
-    init(coordinator: StudentProfileFlow, studentProfileView: StudentProfileView) {
+    init(coordinator: StudentProfileFlow) {
         self.coordinator = coordinator
-        self.studentProfileView = studentProfileView
     }
 
 }
@@ -26,6 +24,5 @@ class StudentProfilePresenter {
 extension StudentProfilePresenter: StudentProfilePresenterProtocol{
     func showStudentProfile() {
         coordinator.showStudentProfile()
-        
     }
 }
