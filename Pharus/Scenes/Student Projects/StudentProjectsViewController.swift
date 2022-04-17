@@ -47,6 +47,9 @@ class StudentProjectsViewController: UIViewController {
     }
     
     func setNavigationBar() {
+        self.title = "Seus projetos"
+        self.navigationController?.title = ""
+        
         let image = UIImage(named: "userPicture")
         let button = UIButton(type: .custom)
         button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
@@ -55,7 +58,7 @@ class StudentProjectsViewController: UIViewController {
         button.setImage(image, for: .normal)
         button.addTarget(self, action: #selector(profilePicTapped), for: .touchUpInside)
         
-        self.title = "Seus projetos"
+        
         
         let userImage = UIImage(named: K.Assets.Images.userImage)!
         let userProfileButtonView = createUserProfileButton(image: userImage)

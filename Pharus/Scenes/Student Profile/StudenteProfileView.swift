@@ -9,7 +9,6 @@ import UIKit
 
 protocol StudentProfileDelegate: AnyObject{
     
-    
 }
 
 class StudentProfileView: UIView {

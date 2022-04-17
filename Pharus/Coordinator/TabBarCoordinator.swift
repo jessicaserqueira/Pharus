@@ -52,6 +52,13 @@ class TabBarCoordinator: Coordinator {
             ],
             animated: true
         )
+        
+        studentHomeCoordinator.navigationController.tabBarItem.image = UIImage.icons.homeTabBarIcon
+        studentProjectsCoordinator.navigationController.tabBarItem.image = UIImage.icons.projecsTabBarIcon
+        studentProjectsRankingCoordinator.navigationController.tabBarItem.image = UIImage.icons.rankingTabBarIcon
+        studentAvatarCoordinator.navigationController.tabBarItem.image = UIImage.icons.avatarTabBarIcon
+        studentProfileCoordinator.navigationController.tabBarItem.image = UIImage.icons.profileTabBarIcon
+        
         navigationController.setViewControllers([tabBarViewController], animated: true)
     }
     
@@ -81,7 +88,7 @@ class TabBarCoordinator: Coordinator {
             navigationController: UINavigationController(),
             student: student
         )
-        
+    
         coordinator.start()
         
         return coordinator
