@@ -12,16 +12,17 @@ import UIKit
 
 extension UIFont {
     
-    static let largeTitle = customFont(font: .montserrat, ofSize: .extraLarge, weight: .bold)
-    static let mediumTitle = customFont(font: .montserrat, ofSize: .medium, weight: .bold)
+    static let largeTitleBold = customFont(font: .montserrat, ofSize: .extraLarge, weight: .bold)
+    static let mediumTitleBold = customFont(font: .montserrat, ofSize: .medium, weight: .bold)
+    static let mediumTitleSemiBold = customFont(font: .montserrat, ofSize: .medium, weight: .semibold)
     
     static let largeButton = customFont(font: .montserrat, ofSize: .large, weight: .medium)
+    static let smallButton = customFont(font: .montserrat, ofSize: .small, weight: .semibold)
     
+    static let mediumBodyBold = customFont(font: .openSans, ofSize: .medium, weight: .bold)
     static let smallBody = customFont(font: .openSans, ofSize: .small)
+    static let smallBodyBold = customFont(font: .openSans, ofSize: .small, weight: .bold)
     static let miniBody = customFont(font: .openSans, ofSize: .mini)
-    
-    static let cardTitleFont = UIFont.systemFont(ofSize: 20, weight: .bold)
-    static let cardSubtitleFont = UIFont.systemFont(ofSize: 18, weight: .bold)
     
     static func customFont(
         font: FontName,

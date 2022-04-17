@@ -53,7 +53,7 @@ class LoginView: UIView {
         let label = UILabel()
         label.text = "Login"
         label.textColor = UIColor.purple.pharusPurple
-        label.font = .largeTitle
+        label.font = .largeTitleBold
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LoginView.loginTitle"
@@ -76,7 +76,7 @@ class LoginView: UIView {
     lazy var emailLabel: UILabel = {
         let label = UILabel()
         label.text = "E-mail"
-        label.font = .mediumTitle
+        label.font = .mediumTitleBold
         label.textColor = UIColor.purple.pharusPurple
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LoginView.emailLabel"
@@ -116,7 +116,7 @@ class LoginView: UIView {
     lazy var passwordLabel: UILabel = {
         let label = UILabel()
         label.text = "Senha"
-        label.font = .mediumTitle
+        label.font = .mediumTitleBold
         label.textColor = UIColor.purple.pharusPurple
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LoginView.passwordLabel"

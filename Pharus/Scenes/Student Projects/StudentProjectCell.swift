@@ -64,7 +64,7 @@ class StudentProjectCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
-        label.font = .cardTitleFont
+        label.font = .largeTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectCell.titleLabel"
         
@@ -74,7 +74,7 @@ class StudentProjectCell: UITableViewCell {
     lazy var mentor: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.font = .cardSubtitleFont
+        label.font = .mediumTitleBold
         label.lineBreakMode = .byTruncatingTail
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectCell.mentorsLabel"
@@ -85,7 +85,7 @@ class StudentProjectCell: UITableViewCell {
     lazy var descriptionTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Descrição:"
-        label.font = .boldSystemFont(ofSize: 18)
+        label.font = .mediumTitleSemiBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectCell.descriptionTitleLabel"
         
@@ -101,6 +101,7 @@ class StudentProjectCell: UITableViewCell {
     
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
+        label.font = .smallBody
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectCell.descriptionLabel"
@@ -131,7 +132,7 @@ class StudentProjectCell: UITableViewCell {
         let view = CircleProgressView(
             circleColor: .white,
             completionProgressColor: UIColor.purple.pharusPurple,
-            radius: 40,
+            radius: 45,
             completionPercentage: 50
         )
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -143,45 +144,41 @@ class StudentProjectCell: UITableViewCell {
     lazy var percentageCompletionLabel: UILabel = {
         let label = UILabel()
         label.text = "100%"
-        label.font = .systemFont(ofSize: 14)
+        label.font = .smallBody
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectCell.percentageCompletionLabel"
         
         return label
     }()
     
-    lazy var daysRemainingStackView: UIStackView = {
+    lazy var projectScheduleView: ProjectScheduleView = {
+        let view = ProjectScheduleView(project: Student.defaultProject)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "StudentProjectCell.projectScheduleView"
+        return view
+    }()
+    
+    lazy var lowerHelperView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "StudentProjectCell.lowerHelperView"
+        return view
+    }()
+    
+    lazy var lowerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = 11.67
+        stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "UserProjectCell.daysRemainingStackView"
+        stackView.accessibilityIdentifier = "UserProjectCell.lowerStackView"
         
         return stackView
-    }()
-    
-    lazy var daysRemainingLabel: UILabel = {
-        let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 18)
-        label.text = "8 dias"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectCell.daysRemainingLabel"
-        
-        return label
-    }()
-    
-    lazy var inspirationImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: K.Assets.Icons.hourglassIcon)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "UserProjectCell.inspirationImageView"
-        return imageView
     }()
     
     lazy var partnershipStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = 26
+        stackView.spacing = 8
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "UserProjectCell.partnershipStackView"
@@ -189,17 +186,18 @@ class StudentProjectCell: UITableViewCell {
         return stackView
     }()
     
-    lazy var partnershipLabelView: UIView = {
+    lazy var partnershipHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "UserProjectCell.partnershipLabelView"
+        view.accessibilityIdentifier = "UserProjectCell.partnershipHelperView"
         
         return view
     }()
     
     lazy var partnershipLabel: UILabel = {
         let label = UILabel()
-        label.text = "Parceria: "
+        label.text = "Parceira: "
+        label.font = .smallBodyBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.partnershipLabel"
         
@@ -223,6 +221,20 @@ class StudentProjectCell: UITableViewCell {
         return imageView
     }()
     
+    lazy var subscribeHelperView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "UserProjectCell.subscribeHelperView"
+        return view
+    }()
+    
+    lazy var subscribeButton: SubscribeButton = {
+        let button = SubscribeButton(isSubscribed: true)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = "UserProjectCell.subscribeButton"
+        return button
+    }()
+    
     //MARK: - Initializers
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -237,26 +249,27 @@ class StudentProjectCell: UITableViewCell {
     }
     
     func configureCell(using project: Project) {
-        self.titleLabel.text = project.name
-        self.descriptionLabel.text = project.projectDescription
-        self.mentor.text = "Mentor: " + project.mentor
-        self.completionBarCircleView.completionPercentage = project.completionStatus
-        self.percentageCompletionLabel.text = project.completionStatus.description + "%"
-        self.completionBarCircleView.completionPercentage = project.completionStatus
+        titleLabel.text = project.name
+        descriptionLabel.text = project.projectDescription
+        mentor.text = "Mentor: " + project.mentor
+        completionBarCircleView.completionPercentage = project.completionStatus
+        percentageCompletionLabel.text = project.completionStatus.description + "%"
+        completionBarCircleView.completionPercentage = project.completionStatus
+        projectScheduleView.project = project
+        subscribeButton.isSubscribed = project.isSubscribed
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = K.DateFormats.projectDateFormat
-        
-        let projectStartDate = dateFormatter.date(from: project.startDate) ?? Date()
-        let projectEndDate = dateFormatter.date(from: project.endDate) ?? Date()
-        
-        self.daysRemainingLabel.text = Date.getDifferenceInDays(between: projectStartDate,
-                                                                and: projectEndDate).description + " Dias"
+        if project.isSubscribed {
+            mainView.backgroundColor = .project.orangeSubscribedProjectBackground
+            self.stretch(lowerStackView, to: lowerHelperView, left: 36.5, right: -27)
+        } else {
+            mainView.backgroundColor = .project.grayUnsubscribedProjectBackground
+            self.stretch(lowerStackView, to: lowerHelperView, left: 20.5, right: -12)
+        }
     }
     
     func configureSubviews() {
         addSubview(mainView)
-        
+       
         mainView.addSubview(mainStackView)
         
         mainStackView.addArrangedSubview(titleStackView)
@@ -282,27 +295,29 @@ class StudentProjectCell: UITableViewCell {
         
         completionCircleHelpView.addSubview(percentageCompletionLabel)
         
-        completionStackView.addArrangedSubview(daysRemainingStackView)
+        completionStackView.addArrangedSubview(projectScheduleView)
         
-        daysRemainingStackView.addArrangedSubview(inspirationImageView)
-        daysRemainingStackView.addArrangedSubview(daysRemainingLabel)
+        mainStackView.addArrangedSubview(lowerHelperView)
         
-        mainStackView.addArrangedSubview(partnershipStackView)
+        lowerHelperView.addSubview(lowerStackView)
         
-        partnershipStackView.addArrangedSubview(partnershipLabelView)
+        lowerStackView.addArrangedSubview(partnershipStackView)
         
-        partnershipLabelView.addSubview(partnershipLabel)
+        partnershipStackView.addArrangedSubview(partnershipHelperView)
+        
+        partnershipHelperView.addSubview(partnershipLabel)
         
         partnershipStackView.addArrangedSubview(companyLogoView)
         
         companyLogoView.addSubview(companyLogoImageView)
         
-        mainView.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
+        lowerStackView.addArrangedSubview(subscribeHelperView)
+        
+        subscribeHelperView.addSubview(subscribeButton)
     }
     
     //MARK: - Constraints
     func setupConstraints() {
-        
         //Main View
         self.stretch(mainView, top: 16, left: 16, bottom: -16, right: -16)
         
@@ -349,9 +364,9 @@ class StudentProjectCell: UITableViewCell {
             completionBarCircleView.centerYAnchor.constraint(equalTo: completionCircleHelpView.centerYAnchor)
         ])
         
-        //Inspiration Image View
+        //Project Schedule View
         NSLayoutConstraint.activate([
-            inspirationImageView.heightAnchor.constraint(equalToConstant: 36)
+            projectScheduleView.heightAnchor.constraint(equalToConstant: 44)
         ])
         
         //Company Logo Image View
@@ -364,9 +379,11 @@ class StudentProjectCell: UITableViewCell {
         
         //Partnership Label
         NSLayoutConstraint.activate([
-            partnershipLabel.trailingAnchor.constraint(equalTo: partnershipLabelView.trailingAnchor),
+            partnershipLabel.trailingAnchor.constraint(equalTo: partnershipHelperView.trailingAnchor),
             partnershipLabel.centerYAnchor.constraint(equalTo: partnershipStackView.centerYAnchor),
         ])
         
+        //Subscribe Button
+        subscribeButton.center(in: subscribeHelperView)
     }
 }

@@ -31,6 +31,9 @@
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
 		79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */; };
 		799768D027EA3B5F0057AFA7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* Student.swift */; };
+		79A2C775280C473F00B3159B /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2C774280C473F00B3159B /* SubscribeButton.swift */; };
+		79A2C777280C4A1700B3159B /* MainCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2C776280C4A1700B3159B /* MainCardButton.swift */; };
+		79A2C779280C587F00B3159B /* ProjectScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2C778280C587F00B3159B /* ProjectScheduleView.swift */; };
 		79AF90F728043A590094AB97 /* SendFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2FE27FFA6F300230698 /* SendFileView.swift */; };
 		79AF90F928043D3C0094AB97 /* StudentProjectDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */; };
 		79AF90FB28043DEA0094AB97 /* StudentProjectDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */; };
@@ -113,7 +116,6 @@
 		7952058027FE382D00A89012 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7952058227FE394900A89012 /* ProjectSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetView.swift; sourceTree = "<group>"; };
 		7952058427FE3B1A00A89012 /* ProjectSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetViewController.swift; sourceTree = "<group>"; };
-		7952058627FE55E400A89012 /* MainCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
 		795A02162809B689000D0B84 /* ProjectSheetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetPresenter.swift; sourceTree = "<group>"; };
 		795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetCoordinator.swift; sourceTree = "<group>"; };
 		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/Scenes/Login/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
@@ -121,6 +123,9 @@
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingPresenter.swift.swift; sourceTree = "<group>"; };
 		799768CF27EA3B5F0057AFA7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		79A2C774280C473F00B3159B /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
+		79A2C776280C4A1700B3159B /* MainCardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
+		79A2C778280C587F00B3159B /* ProjectScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectScheduleView.swift; sourceTree = "<group>"; };
 		79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailCoordinator.swift; sourceTree = "<group>"; };
 		79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailPresenter.swift; sourceTree = "<group>"; };
 		79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTaskView.swift; sourceTree = "<group>"; };
@@ -384,15 +389,17 @@
 		C008AF2227F1ED7F00AD94C9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C057E8EC28079469004E44C3 /* AvatarImageView.swift */,
 				793EC73827FE177000CD8334 /* CheckmarkButton.swift */,
 				79222EA227F643D60051334A /* CircleProgressView.swift */,
-				7952058627FE55E400A89012 /* MainCardButton.swift */,
 				79E838A0280AF7E1001C46AD /* HomeMiniCardView.swift */,
-				79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */,
 				79E8389E280AF7C5001C46AD /* HomeNewsView.swift */,
+				79A2C776280C4A1700B3159B /* MainCardButton.swift */,
+				79A2C778280C587F00B3159B /* ProjectScheduleView.swift */,
+				79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */,
 				793EC73C27FE197B00CD8334 /* StudentProfileButton.swift */,
+				79A2C774280C473F00B3159B /* SubscribeButton.swift */,
 				C05AA2F827FFA69800230698 /* MainCardButton.swift */,
-				C057E8EC28079469004E44C3 /* AvatarImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -607,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A2C775280C473F00B3159B /* SubscribeButton.swift in Sources */,
 				794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */,
 				79E838AC280B0676001C46AD /* AlertCoordinator.swift in Sources */,
 				79E838A9280AFD03001C46AD /* SendFileCoordinator.swift in Sources */,
@@ -649,7 +657,9 @@
 				7910D9D227FD0B8300A8DDA0 /* UIFont+Extension.swift in Sources */,
 				C05AA2C827FC749E00230698 /* TarBarPresenter.swift in Sources */,
 				79AF90FB28043DEA0094AB97 /* StudentProjectDetailPresenter.swift in Sources */,
+				79A2C779280C587F00B3159B /* ProjectScheduleView.swift in Sources */,
 				C01BB6BB280B8C73004D4790 /* StudentProfileCoordinator.swift in Sources */,
+				79A2C777280C4A1700B3159B /* MainCardButton.swift in Sources */,
 				7952058527FE3B1A00A89012 /* ProjectSheetViewController.swift in Sources */,
 				79E838A5280AF82C001C46AD /* StudentHomeViewController.swift in Sources */,
 				7943975E27F3C6020075102B /* StudentProjectCell.swift in Sources */,

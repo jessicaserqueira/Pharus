@@ -70,7 +70,7 @@ class ProjectSheetView: UIView {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = title
-        label.font = .cardTitleFont
+        label.font = .largeTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSheetView.titleLabel"
         return label
@@ -88,7 +88,7 @@ class ProjectSheetView: UIView {
     private lazy var descriptionTitleLabel: UILabel = {
         let label = UILabel()
         label.text = descriptionTitle
-        label.font = .cardSubtitleFont
+        label.font = .mediumTitleBold
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSheetView.descriptionTitleLabel"

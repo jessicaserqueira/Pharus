@@ -28,10 +28,12 @@ struct Medals: Codable {
 // MARK: - Project
 struct Project: Codable {
     let id, name: String
+    let isSubscribed: Bool
     let isComplete: Bool
     let score: Float?
     let medal: String?
-    let projectDescription, scoreDescription, startDate, endDate: String
+    let scoreDescription: String?
+    let projectDescription, startDate, endDate: String
     let school, rules, mentor: String
     let hasCompanyPartnership: Bool
     let company: String?
@@ -42,7 +44,7 @@ struct Project: Codable {
     enum CodingKeys: String, CodingKey {
         case id, name, isComplete, score, medal
         case projectDescription = "description"
-        case scoreDescription, startDate, endDate, school, rules, mentor, hasCompanyPartnership, company, companyPhoto, completionStatus, tasks
+        case scoreDescription, startDate, endDate, school, rules, mentor, hasCompanyPartnership, company, companyPhoto, completionStatus, tasks, isSubscribed
     }
 }
 
@@ -68,4 +70,29 @@ extension Task {
     func toggleCompletionStatus() {
         isComplete.toggle()
     }
+}
+
+extension Student {
+    static let defaultProject = Project(
+        id: "1",
+        name: "El Projeto",
+        isSubscribed: true,
+        isComplete: false,
+        score: 100,
+        medal: "diamond",
+        scoreDescription: " bela nota parabens",
+        projectDescription: "Lorem ipsum",
+        startDate: "22/03/2021",
+        endDate: "25/05/2023",
+        school: "Batista",
+        rules: "Siga as regras",
+        mentor: "Yo el brabo",
+        hasCompanyPartnership: false,
+        company: nil,
+        companyPhoto: nil,
+        completionStatus: 100,
+        tasks: [
+            Task(title: "Terminar projeto", isComplete: true, description: "Teste")
+        ]
+    )
 }

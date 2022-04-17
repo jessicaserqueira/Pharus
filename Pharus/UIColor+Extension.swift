@@ -54,6 +54,20 @@ extension UIColor {
             blue: 0.949,
             alpha: 1
         )
+        
+        static let grayDisabledText = UIColor(
+            red: 0.471,
+            green: 0.467,
+            blue: 0.502,
+            alpha: 1
+        )
+        
+        static let pinkDisabledBorder = UIColor(
+            red: 0.81,
+            green: 0.64,
+            blue: 0.96,
+            alpha: 1.00
+        )
     }
     
     struct card {
@@ -77,6 +91,52 @@ extension UIColor {
             red: 0.361,
             green: 0.145,
             blue: 0.776,
+            alpha: 1
+        )
+    }
+    
+    struct projectSchedule {
+        static let redBackground = UIColor(
+            red: 0.6,
+            green: 0,
+            blue: 0,
+            alpha: 1
+        )
+        
+        static let yellowBackground = UIColor(
+            red: 0.9,
+            green: 0.87,
+            blue: 0,
+            alpha: 1
+        )
+        
+        static let orangeBackground = UIColor(
+            red: 0.827,
+            green: 0.388,
+            blue: 0.227,
+            alpha: 1
+        )
+        
+        static let greenBackground = UIColor(
+            red: 0.017,
+            green: 0.7,
+            blue: 0,
+            alpha: 1
+        )
+    }
+    
+    struct tabbar {
+        static let blueBackground = UIColor(
+            red: 0.235,
+            green: 0.125,
+            blue: 0.694,
+            alpha: 1
+        )
+        
+        static let whiteTint = UIColor(
+            red: 0.945,
+            green: 0.945,
+            blue: 0.949,
             alpha: 1
         )
     }

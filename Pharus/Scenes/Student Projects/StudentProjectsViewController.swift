@@ -49,60 +49,6 @@ class StudentProjectsViewController: UIViewController {
     func setNavigationBar() {
         self.title = "Seus projetos"
         self.navigationController?.title = ""
-        
-        let image = UIImage(named: "userPicture")
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.clipsToBounds = true
-        button.setImage(image, for: .normal)
-        button.addTarget(self, action: #selector(profilePicTapped), for: .touchUpInside)
-        
-        
-        
-        let userImage = UIImage(named: K.Assets.Images.userImage)!
-        let userProfileButtonView = createUserProfileButton(image: userImage)
-        
-        let userPictureBarButton = UIBarButtonItem()
-        userPictureBarButton.customView = userProfileButtonView
-        
-        self.navigationItem.rightBarButtonItem = userPictureBarButton
-        
-        var backButtonImage = UIImage(named: K.Assets.Icons.backButtonIcon)
-        backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
-                                                                 green: 0.153,
-                                                                 blue: 0.153,
-                                                                 alpha: 1),
-                                                         renderingMode: .alwaysOriginal)
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
-                                                                style: .plain,
-                                                                target: self,
-                                                                action: #selector(backButtonPressed))
-        
-    }
-    
-    func createUserProfileButton(image: UIImage) -> UIButton {
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.clipsToBounds = true
-        button.setImage(image, for: .normal)
-        button.addTarget(self,
-                         action: #selector(profilePicTapped),
-                         for: .touchUpInside)
-        
-        return button
-    }
-    
-    //Implementar quando o fluxo estiver pronto
-    @objc func backButtonPressed() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    //Implementar quando a tela de usuário estiver pronta
-    @objc func profilePicTapped() {
-        print("Profile Picture pressed")
     }
     
     func setupTableView() {

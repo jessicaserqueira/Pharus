@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "RankingTabBar.pdf",
+      "filename" : "$icon-ranking.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "$icon-ranking@2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "$icon-ranking@3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -12,7 +12,7 @@ extension UIImage {
     
     struct icons {
         static let bookIcon = UIImage(named: K.Assets.Icons.bookIcon)
-        static let hourglassIcon = UIImage(named: K.Assets.Icons.hourglassIcon)
+        static let clockIcon = UIImage(named: K.Assets.Icons.clockIcon)
         static let rulesIcon = UIImage(named: K.Assets.Icons.rulesIcon)
         static let feedbackIcon = UIImage(named: K.Assets.Icons.feedbackIcon)
         static let xmarkIcon = UIImage(systemName: K.Assets.Icons.xmarkIcon)
@@ -25,6 +25,12 @@ extension UIImage {
         static let profileTabBarIcon = UIImage(named: K.Assets.Icons.profileTabBarIcon)
         static let projecsTabBarIcon = UIImage(named: K.Assets.Icons.projectsTabBarIcon)
         static let rankingTabBarIcon = UIImage(named: K.Assets.Icons.rankingTabBarIcon)
+        
+        static let avatarTabBarIconSelected = UIImage(named: K.Assets.Icons.avatarTabBarIconSelected)
+        static let homeTabBarIconSelected = UIImage(named: K.Assets.Icons.homeTabBarIconSelected)
+        static let profileTabBarIconSelected = UIImage(named: K.Assets.Icons.profileTabBarIconSelected)
+        static let projecsTabBarIconSelected = UIImage(named: K.Assets.Icons.projectsTabBarIconSelected)
+        static let rankingTabBarIconSelected = UIImage(named: K.Assets.Icons.rankingTabBarIconSelected)
     }
     
     struct images {
