@@ -53,7 +53,7 @@ class LoginView: UIView {
         let label = UILabel()
         label.text = "Login"
         label.textColor = UIColor.purple.pharusPurple
-        label.font = .heeboSemiBold(ofSize: 24)
+        label.font = .customFont(font: .montserrat, ofSize: .medium, weight: .semibold)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LoginView.loginTitle"
@@ -159,7 +159,6 @@ class LoginView: UIView {
         button.addAction(UIAction { _ in
             self.loginButtonPressed()
         }, for: .touchUpInside)
-        button.titleLabel?.font = UIFont.heeboSemiBold(ofSize: 30)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "LoginView.loginButton"
 
