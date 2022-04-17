@@ -26,6 +26,7 @@
         {
             "id": "62501bb56caw14d76f0123c",
             "name": "Minha primeira página web usando tenologias bem brabas",
+            "isSubscribed": true,
             "isComplete": false,
             "score": 68,
             "medal": "gold",
@@ -56,6 +57,7 @@
         {
             "id": "62501bb56caw14d76f0123SSWc",
             "name": "Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "isSubscribed": true,
             "isComplete": true,
             "score": 100,
             "medal": "diamond",
@@ -84,8 +86,40 @@
             ]
         },
         {
+            "id": "62501bb56caw14d76f0123c",
+            "name": "Minha décima quinta página web usando tenologias bem brabas",
+            "isSubscribed": false,
+            "isComplete": false,
+            "score": null,
+            "medal": null,
+            "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
+            "scoreDescription": null,
+            "startDate": "01/01/2022",
+            "endDate": "26/04/2022",
+            "school": "Colégio Los Brabos",
+            "rules": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "mentor": "Fabiano El Brabo Tomoda",
+            "hasCompanyPartnership": false,
+            "company": null,
+            "companyPhoto": null,
+            "completionStatus": 0,
+            "tasks": [
+                {
+                    "title": "Criar navigation",
+                    "isComplete": false,
+                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                },
+                {
+                    "title": "Criar Login",
+                    "isComplete": true,
+                    "description": "omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                }
+            ]
+        },
+        {
             "id": "62501bb56c91d14d76f0123wwq",
             "name": "Minha primeira página web usando tenologias bem brabas",
+            "isSubscribed": true,
             "isComplete": false,
             "score": null,
             "medal": null,
