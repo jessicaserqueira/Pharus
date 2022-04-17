@@ -132,7 +132,7 @@ class StudentProjectCell: UITableViewCell {
         let view = CircleProgressView(
             circleColor: .white,
             completionProgressColor: UIColor.purple.pharusPurple,
-            radius: 40,
+            radius: 45,
             completionPercentage: 50
         )
         view.translatesAutoresizingMaskIntoConstraints = false
