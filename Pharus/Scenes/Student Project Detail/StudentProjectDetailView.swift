@@ -53,7 +53,7 @@ class StudentProjectDetailView: UIView {
     lazy var mentorLabel: UILabel = {
         let label = UILabel()
         label.text = "Mentor: José da Silva"
-        label.font = .cardTitleFont
+        label.font = .largeTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.mentorLabel"
         
@@ -73,7 +73,7 @@ class StudentProjectDetailView: UIView {
     lazy var descriptionTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Descrição:"
-        label.font = .cardSubtitleFont
+        label.font = .mediumTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionTitleLabel"
         
@@ -104,7 +104,7 @@ class StudentProjectDetailView: UIView {
     lazy var rulesLabel: UILabel = {
         let label = UILabel()
         label.text = "Veja aqui as regras do projeto"
-        label.font = .cardSubtitleFont
+        label.font = .largeTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionLabel"
         return label
@@ -131,7 +131,7 @@ class StudentProjectDetailView: UIView {
     lazy var taskTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Lista de Tarefas"
-        label.font = .cardSubtitleFont
+        label.font = .mediumTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.taskTitleLabel"
         

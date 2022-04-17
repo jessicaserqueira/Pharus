@@ -94,4 +94,34 @@ extension UIColor {
             alpha: 1
         )
     }
+    
+    struct projectSchedule {
+        static let redBackground = UIColor(
+            red: 0.6,
+            green: 0,
+            blue: 0,
+            alpha: 1
+        )
+        
+        static let yellowBackground = UIColor(
+            red: 0.9,
+            green: 0.87,
+            blue: 0,
+            alpha: 1
+        )
+        
+        static let orangeBackground = UIColor(
+            red: 0.827,
+            green: 0.388,
+            blue: 0.227,
+            alpha: 1
+        )
+        
+        static let greenBackground = UIColor(
+            red: 0.017,
+            green: 0.7,
+            blue: 0,
+            alpha: 1
+        )
+    }
 }

@@ -96,12 +96,30 @@ class ProjectScheduleView: UIView {
     
     func customizeSubviews() {
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = K.DateFormats.projectDateFormat
+        
+        let projectEndDate = dateFormatter.date(from: project.endDate) ?? Date()
+        let daysRemaining = Date.getDifferenceInDays(
+            between: Date(),
+            and: projectEndDate
+        )
+        
+        self.textLabel.text = "\(daysRemaining) Dias"
+        
+        switch daysRemaining {
+        case ...6:
+            mainView.backgroundColor = UIColor.projectSchedule.redBackground
+        case 7...8:
+            mainView.backgroundColor = UIColor.projectSchedule.yellowBackground
+        default:
+            mainView.backgroundColor = UIColor.projectSchedule.orangeBackground
+        }
     }
     
     //MARK: - Constraints
     
     func setupConstraints() {
-        mainView.backgroundColor = .green
         //Main View
         self.stretch(mainView)
         

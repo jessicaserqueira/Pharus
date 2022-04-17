@@ -389,17 +389,17 @@
 		C008AF2227F1ED7F00AD94C9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C057E8EC28079469004E44C3 /* AvatarImageView.swift */,
 				793EC73827FE177000CD8334 /* CheckmarkButton.swift */,
 				79222EA227F643D60051334A /* CircleProgressView.swift */,
-				79A2C774280C473F00B3159B /* SubscribeButton.swift */,
 				79E838A0280AF7E1001C46AD /* HomeMiniCardView.swift */,
-				79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */,
 				79E8389E280AF7C5001C46AD /* HomeNewsView.swift */,
-				793EC73C27FE197B00CD8334 /* StudentProfileButton.swift */,
-				79A2C778280C587F00B3159B /* ProjectScheduleView.swift */,
 				79A2C776280C4A1700B3159B /* MainCardButton.swift */,
+				79A2C778280C587F00B3159B /* ProjectScheduleView.swift */,
+				79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */,
+				793EC73C27FE197B00CD8334 /* StudentProfileButton.swift */,
+				79A2C774280C473F00B3159B /* SubscribeButton.swift */,
 				C05AA2F827FFA69800230698 /* MainCardButton.swift */,
-				C057E8EC28079469004E44C3 /* AvatarImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";

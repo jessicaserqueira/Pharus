@@ -46,7 +46,7 @@ class SendFileView: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Enviar arquivos"
-        label.font = .cardTitleFont
+        label.font = .largeTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.titleLabel"
         return label
