@@ -31,19 +31,20 @@ class TabBarCoordinator: Coordinator {
     func start() {
         let studentHomeCoordinator = makeStudentHomeCoordinator()
         let studentProjectsCoordinator = makeStudentProjectsCoordinator()
-        let userProjectsRankingCoordinator = makeStudentProjectsRankingCoordinator()
+        let studentProjectsRankingCoordinator = makeStudentProjectsRankingCoordinator()
         let studentAvatarCoordinator = makeStudentAvatarCoordinator()
         
         childCoordinators.append(studentHomeCoordinator)
         childCoordinators.append(studentProjectsCoordinator)
-        childCoordinators.append(userProjectsRankingCoordinator)
         childCoordinators.append(studentAvatarCoordinator)
+        childCoordinators.append(studentProjectsRankingCoordinator)
+        
         
         tabBarViewController.setViewControllers(
             [
                 studentHomeCoordinator.navigationController,
                 studentProjectsCoordinator.navigationController,
-                userProjectsRankingCoordinator.navigationController,
+                studentProjectsRankingCoordinator.navigationController,
                 studentAvatarCoordinator.navigationController
             ],
             animated: true
