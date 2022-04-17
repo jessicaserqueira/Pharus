@@ -11,7 +11,7 @@ class StudentProjectRankingCell: UITableViewCell {
     
     lazy var mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = .project.orangeSubscribedProjectBackground
+        view.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectCell.mainView"
         
@@ -81,7 +81,7 @@ class StudentProjectRankingCell: UITableViewCell {
     lazy var mentorCommentsStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.backgroundColor = .project.yellowDisabledProjectBackground
+        stackView.backgroundColor = UIColor.project.yellowDisabledProjectBackground
         stackView.layer.cornerRadius = 16
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProjectRankingCell.mentorCommentsStackView"

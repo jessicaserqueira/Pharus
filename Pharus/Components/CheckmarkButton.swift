@@ -16,7 +16,7 @@ class CheckmarkButton: UIButton {
     //MARK: - Initializer
     
     override init(frame: CGRect) {
-        checkImage = .icons.checkmarkIcon ?? .defaultImage
+        checkImage = UIImage.icons.checkmarkIcon ?? .defaultImage
         
         super.init(frame: .zero)
         

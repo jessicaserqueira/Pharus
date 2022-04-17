@@ -47,7 +47,7 @@ class StudentAvatarView: UIView {
     
     lazy var avatarScreenImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .images.avatarImage
+        imageView.image = UIImage.images.avatarImage
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentAvatarView.avatarScreenImageView"
@@ -57,7 +57,7 @@ class StudentAvatarView: UIView {
     
     lazy var expandButton: UIButton = {
         let button = UIButton()
-        button.setImage(.icons.expandIcon, for: .normal)
+        button.setImage(UIImage.icons.expandIcon, for: .normal)
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 150, bottom: 0, right: 0)
         button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false

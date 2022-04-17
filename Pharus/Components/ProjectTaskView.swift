@@ -87,7 +87,7 @@ class ProjectTaskView: UIView {
             description: "Lorem Ipsum"
         )
         
-        self.checkImage = .icons.checkmarkIcon ?? .defaultImage
+        self.checkImage = UIImage.icons.checkmarkIcon ?? .defaultImage
         
         super.init(frame: .zero)
         

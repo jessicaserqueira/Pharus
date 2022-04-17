@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "girl happy drinking coffe flat illustration 2.png",
+      "filename" : "logoutButtonIcon@1x.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "logoutButtonIcon@2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "logoutButtonIcon@3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
