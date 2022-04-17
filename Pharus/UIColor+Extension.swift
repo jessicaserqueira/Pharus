@@ -48,13 +48,6 @@ extension UIColor {
     }
     
     struct button {
-        static let purpleMainButtonBackground = UIColor(
-            red: 0.361,
-            green: 0.145,
-            blue: 0.776,
-            alpha: 1
-        )
-        
         static let whiteMainButtonText = UIColor(
             red: 0.945,
             green: 0.945,
@@ -75,6 +68,15 @@ extension UIColor {
             red: 0.9,
             green: 0.87,
             blue: 0,
+            alpha: 1
+        )
+    }
+    
+    struct purple {
+        static let pharusPurple = UIColor(
+            red: 0.361,
+            green: 0.145,
+            blue: 0.776,
             alpha: 1
         )
     }

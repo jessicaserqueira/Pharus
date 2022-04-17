@@ -52,7 +52,7 @@ class LoginView: UIView {
     lazy var loginTitle: UILabel = {
         let label = UILabel()
         label.text = "Login"
-        label.textColor = .black
+        label.textColor = UIColor.purple.pharusPurple
         label.font = .boldSystemFont(ofSize: 30)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -77,7 +77,7 @@ class LoginView: UIView {
         let label = UILabel()
         label.text = "E-mail"
         label.font = .boldSystemFont(ofSize: 18)
-        label.textColor = .black
+        label.textColor = UIColor.purple.pharusPurple
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LoginView.emailLabel"
         
@@ -88,7 +88,7 @@ class LoginView: UIView {
         let textField = UITextField()
         textField.placeholder = "antonia.ferreira@gmail.com"
         textField.font = .systemFont(ofSize: 12)
-        textField.layer.shadowColor = UIColor.gray.cgColor
+        textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         textField.layer.shadowOpacity = 0.30
         textField.layer.shadowRadius = 0.0
@@ -117,7 +117,7 @@ class LoginView: UIView {
         let label = UILabel()
         label.text = "Senha"
         label.font = .boldSystemFont(ofSize: 18)
-        label.textColor = .black
+        label.textColor = UIColor.purple.pharusPurple
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LoginView.passwordLabel"
         
@@ -128,7 +128,7 @@ class LoginView: UIView {
         let textField = UITextField()
         textField.placeholder = "Senha"
         textField.font = .systemFont(ofSize: 12)
-        textField.layer.shadowColor = UIColor.gray.cgColor
+        textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         textField.layer.shadowOpacity = 0.30
         textField.layer.shadowRadius = 0.0
@@ -146,7 +146,7 @@ class LoginView: UIView {
         let label = UILabel()
         label.text = "Esqueci minha senha!"
         label.font = .systemFont(ofSize: 11)
-        label.textColor = .black
+        label.textColor = UIColor.purple.pharusPurple
         label.textAlignment = .right
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LoginView.changePasswordLabel"

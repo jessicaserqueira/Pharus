@@ -130,7 +130,7 @@ class StudentProjectCell: UITableViewCell {
     lazy var completionBarCircleView: CircleProgressView = {
         let view = CircleProgressView(
             circleColor: .white,
-            completionProgressColor: UIColor.button.purpleMainButtonBackground,
+            completionProgressColor: UIColor.purple.pharusPurple,
             radius: 40,
             completionPercentage: 50
         )

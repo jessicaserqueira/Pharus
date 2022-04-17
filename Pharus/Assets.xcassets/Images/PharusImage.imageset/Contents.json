@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Pharus.pdf",
+      "filename" : "Vector.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Vector@2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Vector@3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
