@@ -49,43 +49,6 @@ class StudentProjectsViewController: UIViewController {
     func setNavigationBar() {
         self.title = "Seus projetos"
         self.navigationController?.title = ""
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        
-        let image = UIImage(named: "userPicture")
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.clipsToBounds = true
-        button.setImage(image, for: .normal)
-        button.addTarget(self, action: #selector(profilePicTapped), for: .touchUpInside)
-        
-        
-        
-        let userImage = UIImage(named: K.Assets.Images.userImage)!
-        let userProfileButtonView = createUserProfileButton(image: userImage)
-        
-        let userPictureBarButton = UIBarButtonItem()
-        userPictureBarButton.customView = userProfileButtonView
-        
-        self.navigationItem.rightBarButtonItem = userPictureBarButton
-    }
-    
-    func createUserProfileButton(image: UIImage) -> UIButton {
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.clipsToBounds = true
-        button.setImage(image, for: .normal)
-        button.addTarget(self,
-                         action: #selector(profilePicTapped),
-                         for: .touchUpInside)
-        
-        return button
-    }
-        
-    //Implementar quando a tela de usuário estiver pronta
-    @objc func profilePicTapped() {
-        print("Profile Picture pressed")
     }
     
     func setupTableView() {
