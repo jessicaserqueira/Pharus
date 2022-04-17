@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "SCHEDULE 1.png",
+      "filename" : "$icon-clock.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "SCHEDULE 1@2x.png",
+      "filename" : "$icon-clock@2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "SCHEDULE 1@3x.png",
+      "filename" : "$icon-clock@3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -23,7 +23,7 @@ struct K {
             static let backButtonIcon = "backButtonIcon"
             static let logoutButtonIcon = "logoutButtonIcon"
             static let bookIcon = "bookIcon"
-            static let hourglassIcon = "hourglassIcon"
+            static let clockIcon = "clockIcon"
             static let rulesIcon = "rulesIcon"
             static let feedbackIcon = "feedbackIcon"
             static let xmarkIcon = "xmark"

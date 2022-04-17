@@ -172,7 +172,7 @@ class StudentProjectCell: UITableViewCell {
     
     lazy var inspirationImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: K.Assets.Icons.hourglassIcon)
+        imageView.image = UIImage(named: K.Assets.Icons.clockIcon)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "UserProjectCell.inspirationImageView"
         return imageView
