@@ -28,7 +28,6 @@ class LoginCoordinator: Coordinator {
         )
     
         navigationController.setNavigationBarHidden(true, animated: true)
-        navigationController.tabBarController?.tabBar.isHidden = true
         
         navigationController.pushViewController(loginViewController, animated: true)
     }
@@ -36,15 +35,12 @@ class LoginCoordinator: Coordinator {
 
 extension LoginCoordinator: LoginFlow {
     func showHome(student: Student) {
-        //Implementar tabbar
-//        let studentProjectsCoordinator = StudentProjectsCoordinator(navigationController: navigationController, student: student)
-//
-//        self.coordinate(to: studentProjectsCoordinator)
+        let tabbarViewController = TabBarViewController()
+        let tabbarCoordinator = TabBarCoordinator(
+            navigationController: navigationController,
+            tabBarViewController: tabbarViewController,
+            student: student)
         
-        let studentHomeCoordinator = StudentHomeCoordinator(
-            navigationController: navigationController
-        )
-        
-        coordinate(to: studentHomeCoordinator)
+        coordinate(to: tabbarCoordinator)
     }
 }
