@@ -74,7 +74,7 @@ extension Student {
     static let defaultProject = Project(
         id: "1",
         name: "El Projeto",
-        isComplete: true,
+        isComplete: false,
         score: 100,
         medal: "diamond",
         projectDescription: "Lorem ipsum",

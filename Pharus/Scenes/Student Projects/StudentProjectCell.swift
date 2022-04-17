@@ -257,6 +257,7 @@ class StudentProjectCell: UITableViewCell {
         self.completionBarCircleView.completionPercentage = project.completionStatus
         self.percentageCompletionLabel.text = project.completionStatus.description + "%"
         self.completionBarCircleView.completionPercentage = project.completionStatus
+        self.projectScheduleView.project = project
     }
     
     func configureSubviews() {

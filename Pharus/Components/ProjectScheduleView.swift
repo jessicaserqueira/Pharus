@@ -10,7 +10,11 @@ import UIKit
 class ProjectScheduleView: UIView {
     
     //MARK: - Properties
-    private var project: Project
+    var project: Project {
+        didSet {
+            customizeSubviews()
+        }
+    }
     
     //MARK: - Views
     
@@ -64,7 +68,6 @@ class ProjectScheduleView: UIView {
         self.project = project
         
         configureSubviews()
-        customizeSubviews()
         setupConstraints()
     }
     
