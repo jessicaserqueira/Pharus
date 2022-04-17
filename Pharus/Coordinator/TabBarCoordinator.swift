@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TabBarFlow {
-
+    
 }
 
 class TabBarCoordinator: Coordinator {
@@ -41,7 +41,6 @@ class TabBarCoordinator: Coordinator {
         childCoordinators.append(studentProjectsRankingCoordinator)
         childCoordinators.append(studentProfileCoordinator)
         
-        
         tabBarViewController.setViewControllers(
             [
                 studentHomeCoordinator.navigationController,
@@ -53,11 +52,50 @@ class TabBarCoordinator: Coordinator {
             animated: true
         )
         
+        studentHomeCoordinator
+            .navigationController
+            .tabBarController?
+            .tabBar
+            .backgroundColor = .tabbar.blueBackground
+        
+        studentHomeCoordinator
+            .navigationController
+            .tabBarController?
+            .tabBar
+            .barTintColor = .tabbar.blueBackground
+        
+        studentHomeCoordinator
+            .navigationController
+            .tabBarController?
+            .tabBar
+            .tintColor = .tabbar.whiteTint
+        
+        studentHomeCoordinator
+            .navigationController
+            .tabBarController?
+            .tabBar
+            .unselectedItemTintColor = .tabbar.whiteTint
+        
+        studentHomeCoordinator
+            .navigationController
+            .tabBarController?
+            .tabBar
+            .isTranslucent = false
+        
         studentHomeCoordinator.navigationController.tabBarItem.image = UIImage.icons.homeTabBarIcon
+        //studentHomeCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.homeTabBarIcon
+        
         studentProjectsCoordinator.navigationController.tabBarItem.image = UIImage.icons.projecsTabBarIcon
+        //studentProjectsCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.projecsTabBarIcon
+        
         studentProjectsRankingCoordinator.navigationController.tabBarItem.image = UIImage.icons.rankingTabBarIcon
+        //studentProjectsRankingCoordinator.navigationController.tabBarItem.image = UIImage.icons.rankingTabBarIcon
+        
         studentAvatarCoordinator.navigationController.tabBarItem.image = UIImage.icons.avatarTabBarIcon
+        //studentAvatarCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.avatarTabBarIcon
+        
         studentProfileCoordinator.navigationController.tabBarItem.image = UIImage.icons.profileTabBarIcon
+        //studentProfileCoordinator.navigationController.tabBarItem.image = UIImage.icons.profileTabBarIcon
         
         navigationController.setViewControllers([tabBarViewController], animated: true)
     }
@@ -88,7 +126,7 @@ class TabBarCoordinator: Coordinator {
             navigationController: UINavigationController(),
             student: student
         )
-    
+        
         coordinator.start()
         
         return coordinator

@@ -124,4 +124,20 @@ extension UIColor {
             alpha: 1
         )
     }
+    
+    struct tabbar {
+        static let blueBackground = UIColor(
+            red: 0.235,
+            green: 0.125,
+            blue: 0.694,
+            alpha: 1
+        )
+        
+        static let whiteTint = UIColor(
+            red: 0.945,
+            green: 0.945,
+            blue: 0.949,
+            alpha: 1
+        )
+    }
 }
