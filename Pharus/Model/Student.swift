@@ -69,3 +69,27 @@ extension Task {
         isComplete.toggle()
     }
 }
+
+extension Student {
+    static let defaultProject = Project(
+        id: "1",
+        name: "El Projeto",
+        isComplete: true,
+        score: 100,
+        medal: "diamond",
+        projectDescription: "Lorem ipsum",
+        scoreDescription: " bela nota parabens",
+        startDate: "22/03/2021",
+        endDate: "25/05/2023",
+        school: "Batista",
+        rules: "Siga as regras",
+        mentor: "Yo el brabo",
+        hasCompanyPartnership: false,
+        company: nil,
+        companyPhoto: nil,
+        completionStatus: 100,
+        tasks: [
+            Task(title: "Terminar projeto", isComplete: true, description: "Teste")
+        ]
+    )
+}

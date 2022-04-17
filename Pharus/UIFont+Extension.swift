@@ -20,6 +20,7 @@ extension UIFont {
     
     static let smallBody = customFont(font: .openSans, ofSize: .small)
     static let miniBody = customFont(font: .openSans, ofSize: .mini)
+    static let mediumBodyBold = customFont(font: .openSans, ofSize: .medium, weight: .bold)
     
     static let cardTitleFont = UIFont.systemFont(ofSize: 20, weight: .bold)
     static let cardSubtitleFont = UIFont.systemFont(ofSize: 18, weight: .bold)

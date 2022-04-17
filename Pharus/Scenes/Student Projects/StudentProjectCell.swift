@@ -150,32 +150,11 @@ class StudentProjectCell: UITableViewCell {
         return label
     }()
     
-    lazy var daysRemainingStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 11.67
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "UserProjectCell.daysRemainingStackView"
-        
-        return stackView
-    }()
-    
-    lazy var daysRemainingLabel: UILabel = {
-        let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 18)
-        label.text = "8 dias"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "UserProjectCell.daysRemainingLabel"
-        
-        return label
-    }()
-    
-    lazy var clockImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: K.Assets.Icons.clockIcon)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "UserProjectCell.inspirationImageView"
-        return imageView
+    lazy var projectScheduleView: ProjectScheduleView = {
+        let view = ProjectScheduleView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "StudentProjectCell.projectScheduleView"
+        return view
     }()
     
     lazy var lowerStackView: UIStackView = {
@@ -271,14 +250,17 @@ class StudentProjectCell: UITableViewCell {
         self.percentageCompletionLabel.text = project.completionStatus.description + "%"
         self.completionBarCircleView.completionPercentage = project.completionStatus
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = K.DateFormats.projectDateFormat
-        
-        let projectStartDate = dateFormatter.date(from: project.startDate) ?? Date()
-        let projectEndDate = dateFormatter.date(from: project.endDate) ?? Date()
-        
-        self.daysRemainingLabel.text = Date.getDifferenceInDays(between: projectStartDate,
-                                                                and: projectEndDate).description + " Dias"
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = K.DateFormats.projectDateFormat
+//
+//        let projectEndDate = dateFormatter.date(from: project.endDate) ?? Date()
+//
+//        self.daysRemainingLabel.text = String(
+//            Date.getDifferenceInDays(
+//                between: Date(),
+//                and: projectEndDate
+//            )
+//        ) + " Dias"
     }
     
     func configureSubviews() {
@@ -310,10 +292,7 @@ class StudentProjectCell: UITableViewCell {
         
         completionCircleHelpView.addSubview(percentageCompletionLabel)
         
-        completionStackView.addArrangedSubview(daysRemainingStackView)
-        
-        daysRemainingStackView.addArrangedSubview(clockImageView)
-        daysRemainingStackView.addArrangedSubview(daysRemainingLabel)
+        completionStackView.addArrangedSubview(projectScheduleView)
         
         mainStackView.addArrangedSubview(lowerStackView)
         
@@ -324,7 +303,7 @@ class StudentProjectCell: UITableViewCell {
         partnershipLabelView.addSubview(partnershipLabel)
         
         partnershipStackView.addArrangedSubview(companyLogoView)
-    
+        
         companyLogoView.addSubview(companyLogoImageView)
         
         lowerStackView.addArrangedSubview(subscribeHelperView)
@@ -381,9 +360,9 @@ class StudentProjectCell: UITableViewCell {
             completionBarCircleView.centerYAnchor.constraint(equalTo: completionCircleHelpView.centerYAnchor)
         ])
         
-        //Inspiration Image View
+        //Project Schedule View
         NSLayoutConstraint.activate([
-            clockImageView.heightAnchor.constraint(equalToConstant: 36)
+            projectScheduleView.heightAnchor.constraint(equalToConstant: 44)
         ])
         
         //Company Logo Image View
@@ -399,7 +378,7 @@ class StudentProjectCell: UITableViewCell {
             partnershipLabel.trailingAnchor.constraint(equalTo: partnershipLabelView.trailingAnchor),
             partnershipLabel.centerYAnchor.constraint(equalTo: partnershipStackView.centerYAnchor),
         ])
-                
+        
         //Subscribe Button
         subscribeButton.center(in: subscribeHelperView)
     }

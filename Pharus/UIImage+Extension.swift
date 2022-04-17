@@ -12,7 +12,7 @@ extension UIImage {
     
     struct icons {
         static let bookIcon = UIImage(named: K.Assets.Icons.bookIcon)
-        static let hourglassIcon = UIImage(named: K.Assets.Icons.clockIcon)
+        static let clockIcon = UIImage(named: K.Assets.Icons.clockIcon)
         static let rulesIcon = UIImage(named: K.Assets.Icons.rulesIcon)
         static let feedbackIcon = UIImage(named: K.Assets.Icons.feedbackIcon)
         static let xmarkIcon = UIImage(systemName: K.Assets.Icons.xmarkIcon)
