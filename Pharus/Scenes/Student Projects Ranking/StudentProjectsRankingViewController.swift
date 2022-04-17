@@ -51,6 +51,7 @@ class StudentRankingProjectsViewController: UIViewController {
     
     func setNavigationBar() {
         self.title = "Seus Rankings"
+        self.navigationController?.title = ""
         
         let userImage = UIImage(named: K.Assets.Images.userImage)!
         let userProfileButtonView = createUserProfileButton(image: userImage)

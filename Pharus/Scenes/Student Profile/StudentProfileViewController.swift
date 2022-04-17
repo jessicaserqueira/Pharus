@@ -29,21 +29,21 @@ class StutentProfileViewController: UIViewController {
     
     init(
         coordinator: StudentProfileCoordinator,
-        studentProfileView: StudentProfileView,
         presenter: StudentProfilePresenter
     ){
         self.coordinator = coordinator
-        self.studentProfileView = studentProfileView
         self.presenter = presenter
         
         super.init(nibName: nil, bundle: nil)
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     func setNavigationBar() {
         self.title = "Perfil"
+        self.navigationController?.title = ""
         
         var logoutButtonImage = UIImage(named: K.Assets.Icons.logoutButtonIcon)
         logoutButtonImage = logoutButtonImage?.withTintColor(UIColor(red: 0.153,

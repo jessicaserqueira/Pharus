@@ -8,87 +8,115 @@
 import UIKit
 
 protocol TabBarFlow {
-    func showTabBar()
+
 }
 
 class TabBarCoordinator: Coordinator {
     
+    private var student: Student
     var navigationController: UINavigationController
     var tabBarViewController: UITabBarController
     var childCoordinators: [Coordinator] = []
     
-    init(navigationController: UINavigationController, tabBarViewController: UITabBarController) {
+    init(
+        navigationController: UINavigationController,
+        tabBarViewController: UITabBarController,
+        student: Student
+    ) {
         self.navigationController = navigationController
         self.tabBarViewController = tabBarViewController
+        self.student = student
     }
     
     func start() {
-        //        let HomeCoordinator =
-       // let studentProjectsCoordinator = makeUserProjectsCoordinator()
-        //let studentProjectDetailCoordinator = makeStudentProjectDetailCoordinator()
-       // let userProjectsRankingCoordinator = makeUserProjectsRankingCoordinator()
-        let studentAvatarCoordinator = makeStudentAvatarCoordinato()
+        let studentHomeCoordinator = makeStudentHomeCoordinator()
+        let studentProjectsCoordinator = makeStudentProjectsCoordinator()
+        let studentProjectsRankingCoordinator = makeStudentProjectsRankingCoordinator()
+        let studentAvatarCoordinator = makeStudentAvatarCoordinator()
+        let studentProfileCoordinator = makeStudentProfileCoordinator()
         
-        //childCoordinators.append(studentProjectsCoordinator)
-        //childCoordinators.append(studentProjectDetailCoordinator)
-       // childCoordinators.append(userProjectsRankingCoordinator)
+        childCoordinators.append(studentHomeCoordinator)
+        childCoordinators.append(studentProjectsCoordinator)
         childCoordinators.append(studentAvatarCoordinator)
+        childCoordinators.append(studentProjectsRankingCoordinator)
+        childCoordinators.append(studentProfileCoordinator)
         
-       // tabBarViewController.setViewControllers([studentProjectsCoordinator.navigationController, //studentProjectDetailCoordinator.navigationController, userProjectsRankingCoordinator.navigationController,
-          //  studentAvatarCoordinator.navigationController],
-        //                                        animated: true)
-      //  navigationController.setViewControllers([tabBarViewController], animated: true)
         
+        tabBarViewController.setViewControllers(
+            [
+                studentHomeCoordinator.navigationController,
+                studentProjectsCoordinator.navigationController,
+                studentProjectsRankingCoordinator.navigationController,
+                studentAvatarCoordinator.navigationController,
+                studentProfileCoordinator.navigationController
+            ],
+            animated: true
+        )
+        
+        studentHomeCoordinator.navigationController.tabBarItem.image = UIImage.icons.homeTabBarIcon
+        studentProjectsCoordinator.navigationController.tabBarItem.image = UIImage.icons.projecsTabBarIcon
+        studentProjectsRankingCoordinator.navigationController.tabBarItem.image = UIImage.icons.rankingTabBarIcon
+        studentAvatarCoordinator.navigationController.tabBarItem.image = UIImage.icons.avatarTabBarIcon
+        studentProfileCoordinator.navigationController.tabBarItem.image = UIImage.icons.profileTabBarIcon
+        
+        navigationController.setViewControllers([tabBarViewController], animated: true)
     }
-//    private func makeUserProjectsCoordinator() -> StudentProjectsCoordinator {
-//        let coordinator = StudentProjectsCoordinator(navigationController: UINavigationController())
-//
-//        coordinator.start()
-//
-//        return coordinator
-//    }
     
-//    private func makeUserProjectsRankingCoordinator() -> UserProjectsRankingCoordinator {
-//        let coordinator = UserProjectsRankingCoordinator(
-//            navigationController: UINavigationController(),
-//            student: <#Student#>)
-//
-//        coordinator.start()
-//
-//        return coordinator
-//    }
-//
-//    private func makeStudentProjectDetailCoordinator() -> StudentProjectDetailCoordinator {
-//        let coordinator = StudentProjectDetailCoordinator(navigationController: UINavigationController())
-//        
-//        coordinator.start()
-//        
-//        return coordinator
-//    }
-    
-    private func makeStudentAvatarCoordinato() -> StudentAvatarCoordinator {
-        let coordinator = StudentAvatarCoordinator(navigationController: UINavigationController())
+    private func makeStudentHomeCoordinator() -> StudentHomeCoordinator {
+        let coordinator = StudentHomeCoordinator(
+            navigationController: UINavigationController()
+        )
         
         coordinator.start()
         
         return coordinator
     }
-
+    
+    private func makeStudentProjectsCoordinator() -> StudentProjectsCoordinator {
+        let coordinator = StudentProjectsCoordinator(
+            navigationController: UINavigationController(),
+            student: student
+        )
+        
+        coordinator.start()
+        
+        return coordinator
+    }
+    
+    private func makeStudentProjectsRankingCoordinator() -> StudentProjectsRankingCoordinator {
+        let coordinator = StudentProjectsRankingCoordinator(
+            navigationController: UINavigationController(),
+            student: student
+        )
+    
+        coordinator.start()
+        
+        return coordinator
+    }
+    
+    private func makeStudentAvatarCoordinator() -> StudentAvatarCoordinator {
+        let coordinator = StudentAvatarCoordinator(
+            navigationController: UINavigationController()
+        )
+        
+        coordinator.start()
+        
+        return coordinator
+    }
+    
+    private func makeStudentProfileCoordinator() -> StudentProfileCoordinator {
+        let coordinator = StudentProfileCoordinator(
+            navigationController: UINavigationController(),
+            student: student
+        )
+        
+        coordinator.start()
+        
+        return coordinator
+    }
+    
 }
 
 extension TabBarCoordinator: TabBarFlow {
-    func showTabBar() {
-//        let coordinator = StudentProjectsCoordinator(
-//            navigationController: navigationController,
-//            student: student
-//        )
-//        coordinate(to: coordinator)
-    }
-    
-    func showLogin() {
-        
-        
-    }
-    
     
 }
