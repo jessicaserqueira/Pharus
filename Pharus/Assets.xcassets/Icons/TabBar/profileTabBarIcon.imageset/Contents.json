@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Property 1=lg-standard.svg",
+      "filename" : "$icon-profile.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Property 1=lg-standard@2x.svg",
+      "filename" : "$icon-profile@2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Property 1=lg-standard@3x.svg",
+      "filename" : "$icon-profile@3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

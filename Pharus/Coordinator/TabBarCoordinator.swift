@@ -68,7 +68,7 @@ class TabBarCoordinator: Coordinator {
             .navigationController
             .tabBarController?
             .tabBar
-            .tintColor = .tabbar.whiteTint
+            .tintColor = .none
         
         studentHomeCoordinator
             .navigationController
@@ -83,19 +83,19 @@ class TabBarCoordinator: Coordinator {
             .isTranslucent = false
         
         studentHomeCoordinator.navigationController.tabBarItem.image = UIImage.icons.homeTabBarIcon
-        //studentHomeCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.homeTabBarIcon
+        studentHomeCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.homeTabBarIconSelected
         
         studentProjectsCoordinator.navigationController.tabBarItem.image = UIImage.icons.projecsTabBarIcon
-        //studentProjectsCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.projecsTabBarIcon
+        studentProjectsCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.projecsTabBarIconSelected
         
         studentProjectsRankingCoordinator.navigationController.tabBarItem.image = UIImage.icons.rankingTabBarIcon
-        //studentProjectsRankingCoordinator.navigationController.tabBarItem.image = UIImage.icons.rankingTabBarIcon
+        studentProjectsRankingCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.rankingTabBarIconSelected
         
         studentAvatarCoordinator.navigationController.tabBarItem.image = UIImage.icons.avatarTabBarIcon
-        //studentAvatarCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.avatarTabBarIcon
+        studentAvatarCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.avatarTabBarIconSelected
         
         studentProfileCoordinator.navigationController.tabBarItem.image = UIImage.icons.profileTabBarIcon
-        //studentProfileCoordinator.navigationController.tabBarItem.image = UIImage.icons.profileTabBarIcon
+        studentProfileCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.profileTabBarIconSelected
         
         navigationController.setViewControllers([tabBarViewController], animated: true)
     }

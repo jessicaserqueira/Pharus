@@ -35,6 +35,12 @@ struct K {
             static let profileTabBarIcon = "profileTabBarIcon"
             static let projectsTabBarIcon = "projectsTabBarIcon"
             static let rankingTabBarIcon = "rankingTabBarIcon"
+            
+            static let avatarTabBarIconSelected = "avatarTabBarIconSelected"
+            static let homeTabBarIconSelected = "homeTabBarIconSelected"
+            static let profileTabBarIconSelected = "profileTabBarIconSelected"
+            static let projectsTabBarIconSelected = "projectsTabBarIconSelected"
+            static let rankingTabBarIconSelected = "rankingTabBarIconSelected"
         }
         
         struct Images {

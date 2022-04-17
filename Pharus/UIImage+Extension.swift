@@ -25,6 +25,12 @@ extension UIImage {
         static let profileTabBarIcon = UIImage(named: K.Assets.Icons.profileTabBarIcon)
         static let projecsTabBarIcon = UIImage(named: K.Assets.Icons.projectsTabBarIcon)
         static let rankingTabBarIcon = UIImage(named: K.Assets.Icons.rankingTabBarIcon)
+        
+        static let avatarTabBarIconSelected = UIImage(named: K.Assets.Icons.avatarTabBarIconSelected)
+        static let homeTabBarIconSelected = UIImage(named: K.Assets.Icons.homeTabBarIconSelected)
+        static let profileTabBarIconSelected = UIImage(named: K.Assets.Icons.profileTabBarIconSelected)
+        static let projecsTabBarIconSelected = UIImage(named: K.Assets.Icons.projectsTabBarIconSelected)
+        static let rankingTabBarIconSelected = UIImage(named: K.Assets.Icons.rankingTabBarIconSelected)
     }
     
     struct images {
