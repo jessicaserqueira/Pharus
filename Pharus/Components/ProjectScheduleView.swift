@@ -96,24 +96,32 @@ class ProjectScheduleView: UIView {
     
     func customizeSubviews() {
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = K.DateFormats.projectDateFormat
-        
-        let projectEndDate = dateFormatter.date(from: project.endDate) ?? Date()
-        let daysRemaining = Date.getDifferenceInDays(
-            between: Date(),
-            and: projectEndDate
-        )
-        
-        self.textLabel.text = "\(daysRemaining) Dias"
-        
-        switch daysRemaining {
-        case ...6:
-            mainView.backgroundColor = UIColor.projectSchedule.redBackground
-        case 7...8:
-            mainView.backgroundColor = UIColor.projectSchedule.yellowBackground
-        default:
-            mainView.backgroundColor = UIColor.projectSchedule.orangeBackground
+        if project.isComplete {
+            iconImageView.image = UIImage.images.checkImage
+            textLabel.text = "Concluído!"
+            mainView.backgroundColor = UIColor.projectSchedule.greenBackground
+        } else {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = K.DateFormats.projectDateFormat
+            
+            let projectEndDate = dateFormatter.date(from: project.endDate) ?? Date()
+            let daysRemaining = Date.getDifferenceInDays(
+                between: Date(),
+                and: projectEndDate
+            )
+            
+            textLabel.text = "\(daysRemaining) Dias"
+            
+            switch daysRemaining {
+            case ...6:
+                mainView.backgroundColor = UIColor.projectSchedule.redBackground
+                textLabel.textColor = .white
+                iconImageView.image = iconImageView.image?.withTintColor(.white)
+            case 7...8:
+                mainView.backgroundColor = UIColor.projectSchedule.yellowBackground
+            default:
+                mainView.backgroundColor = UIColor.projectSchedule.orangeBackground
+            }
         }
     }
     
