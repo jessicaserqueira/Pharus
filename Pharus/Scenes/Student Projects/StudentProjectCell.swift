@@ -242,6 +242,7 @@ class StudentProjectCell: UITableViewCell {
         self.mentor.text = "Mentor: " + project.mentor
         self.completionBarCircleView.completionPercentage = project.completionStatus
         self.percentageCompletionLabel.text = project.completionStatus.description + "%"
+        self.completionBarCircleView.completionPercentage = project.completionStatus
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = K.DateFormats.projectDateFormat

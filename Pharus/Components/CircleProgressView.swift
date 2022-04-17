@@ -16,7 +16,11 @@ class CircleProgressView: UIView {
     private var circleColor: UIColor
     private var completionProgressColor: UIColor
     private var circleRadius: Float
-    var completionPercentage: Float
+    var completionPercentage: Float {
+        didSet {
+            makeCircularPath()
+        }
+    }
     
     //MARK: - Initializer
     
@@ -32,8 +36,6 @@ class CircleProgressView: UIView {
         self.completionProgressColor = completionProgressColor
         self.circleRadius = radius
         self.completionPercentage = completionPercentage
-        
-        makeCircularPath()
     }
     
     override init(frame: CGRect) {
@@ -44,8 +46,6 @@ class CircleProgressView: UIView {
         self.completionPercentage = 50.0
         
         super.init(frame: .zero)
-        
-        makeCircularPath()
     }
     
     required init?(coder: NSCoder) {
