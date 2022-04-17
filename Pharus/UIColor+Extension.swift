@@ -54,6 +54,20 @@ extension UIColor {
             blue: 0.949,
             alpha: 1
         )
+        
+        static let grayDisabledText = UIColor(
+            red: 0.471,
+            green: 0.467,
+            blue: 0.502,
+            alpha: 1
+        )
+        
+        static let pinkDisabledBorder = UIColor(
+            red: 0.81,
+            green: 0.64,
+            blue: 0.96,
+            alpha: 1.00
+        )
     }
     
     struct card {

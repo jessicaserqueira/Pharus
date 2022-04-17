@@ -170,7 +170,7 @@ class StudentProjectCell: UITableViewCell {
         return label
     }()
     
-    lazy var inspirationImageView: UIImageView = {
+    lazy var clockImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: K.Assets.Icons.clockIcon)
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -178,10 +178,20 @@ class StudentProjectCell: UITableViewCell {
         return imageView
     }()
     
+    lazy var lowerStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "UserProjectCell.lowerStackView"
+        
+        return stackView
+    }()
+    
     lazy var partnershipStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = 26
+        stackView.spacing = 8
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "UserProjectCell.partnershipStackView"
@@ -199,7 +209,7 @@ class StudentProjectCell: UITableViewCell {
     
     lazy var partnershipLabel: UILabel = {
         let label = UILabel()
-        label.text = "Parceria: "
+        label.text = "Parceira: "
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.partnershipLabel"
         
@@ -221,6 +231,23 @@ class StudentProjectCell: UITableViewCell {
         imageView.accessibilityIdentifier = "UserProjectCell.companyLogoImageView"
         
         return imageView
+    }()
+    
+    lazy var subscribeHelperView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "UserProjectCell.subscribeHelperView"
+        return view
+    }()
+    
+    lazy var subscribeButton: SubscribeButton = {
+        let button = SubscribeButton(isSubscribed: true)
+        button.addAction(UIAction{ _ in
+            button.isSubscribed.toggle()
+        }, for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = "UserProjectCell.subscribeButton"
+        return button
     }()
     
     //MARK: - Initializers
@@ -256,6 +283,7 @@ class StudentProjectCell: UITableViewCell {
     
     func configureSubviews() {
         addSubview(mainView)
+        mainView.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
         
         mainView.addSubview(mainStackView)
         
@@ -284,20 +312,24 @@ class StudentProjectCell: UITableViewCell {
         
         completionStackView.addArrangedSubview(daysRemainingStackView)
         
-        daysRemainingStackView.addArrangedSubview(inspirationImageView)
+        daysRemainingStackView.addArrangedSubview(clockImageView)
         daysRemainingStackView.addArrangedSubview(daysRemainingLabel)
         
-        mainStackView.addArrangedSubview(partnershipStackView)
+        mainStackView.addArrangedSubview(lowerStackView)
+        
+        lowerStackView.addArrangedSubview(partnershipStackView)
         
         partnershipStackView.addArrangedSubview(partnershipLabelView)
         
         partnershipLabelView.addSubview(partnershipLabel)
         
         partnershipStackView.addArrangedSubview(companyLogoView)
-        
+    
         companyLogoView.addSubview(companyLogoImageView)
         
-        mainView.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
+        lowerStackView.addArrangedSubview(subscribeHelperView)
+        
+        subscribeHelperView.addSubview(subscribeButton)
     }
     
     //MARK: - Constraints
@@ -351,7 +383,7 @@ class StudentProjectCell: UITableViewCell {
         
         //Inspiration Image View
         NSLayoutConstraint.activate([
-            inspirationImageView.heightAnchor.constraint(equalToConstant: 36)
+            clockImageView.heightAnchor.constraint(equalToConstant: 36)
         ])
         
         //Company Logo Image View
@@ -367,6 +399,8 @@ class StudentProjectCell: UITableViewCell {
             partnershipLabel.trailingAnchor.constraint(equalTo: partnershipLabelView.trailingAnchor),
             partnershipLabel.centerYAnchor.constraint(equalTo: partnershipStackView.centerYAnchor),
         ])
-        
+                
+        //Subscribe Button
+        subscribeButton.center(in: subscribeHelperView)
     }
 }
