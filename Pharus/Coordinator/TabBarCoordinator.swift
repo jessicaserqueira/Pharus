@@ -82,7 +82,11 @@ class TabBarCoordinator: Coordinator {
             .tabBar
             .isTranslucent = false
         
-        studentHomeCoordinator.navigationController.tabBarItem.image = UIImage.icons.homeTabBarIcon
+        studentHomeCoordinator
+            .navigationController
+            .tabBarItem
+            .image = UIImage.icons.homeTabBarIcon
+        
         studentHomeCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.homeTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
         
         studentProjectsCoordinator.navigationController.tabBarItem.image = UIImage.icons.projecsTabBarIcon

@@ -185,11 +185,6 @@ class StudentProjectDetailView: UIView {
         return stackView
     }()
     
-    lazy var checkmarkImage: UIImage = {
-        var image = UIImage(systemName: "checkmark")
-        return image!
-    }()
-    
     lazy var completedTasksProgressStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -271,6 +266,42 @@ class StudentProjectDetailView: UIView {
         mentorLabel.text = project.mentor
         descriptionTextLabel.text = project.projectDescription
         completedTasksProgressView.progress = project.completionStatus/100
+        setupProjectTasks(of: project)
+        
+        if !project.isSubscribed {
+            configureUnsubscribedProject(project)
+        }
+    }
+    
+    private func setupProjectTasks(of project: Project) {
+        var completedTasksCount = 0
+        
+        for task in project.tasks {
+            if task.isComplete {
+                completedTasksCount += 1
+            }
+            
+            let taskView = ProjectTaskView(
+                task: task,
+                checkImage: UIImage.icons.checkmarkIcon ?? .defaultImage,
+                color: project.isSubscribed ? .black : .project.grayDisabledText
+            )
+            
+            taskHelperStackView.addArrangedSubview(taskView)
+        }
+        
+        completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count) tarefas (\(project.completionStatus)%)"
+        
+    }
+        
+   private func configureUnsubscribedProject(_ project: Project) {
+       rulesLabel.textColor = UIColor.project.grayDisabledText
+       completedTasksLabel.textColor = UIColor.project.grayDisabledText
+       taskTitleLabel.textColor = UIColor.project.grayDisabledText
+       
+       for case let taskView as ProjectTaskView in tasksStackView.arrangedSubviews {
+           taskView.color = .project.grayDisabledText
+       }
     }
     
     func configureSubviews() {

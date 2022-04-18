@@ -39,30 +39,8 @@ class StudentProjectDetailViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        setupProjectTasks()
-        
         studentProjectDetailView.delegate = self
         self.view = studentProjectDetailView
-    }
-    
-    func setupProjectTasks() {
-        var completedTasksCount = 0
-        
-        for task in project.tasks {
-            if task.isComplete {
-                completedTasksCount += 1
-            }
-            
-            let taskView = ProjectTaskView(
-                task: task,
-                checkImage: UIImage.icons.checkmarkIcon ?? .defaultImage
-            )
-            
-            studentProjectDetailView.taskHelperStackView.addArrangedSubview(taskView)
-        }
-        
-        studentProjectDetailView.completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count) tarefas (\(project.completionStatus)%)"
-        
     }
     
     func setNavigationBar() {

@@ -18,8 +18,8 @@ class ProjectTaskView: UIView {
     weak var delegate: ProjectTaskDelegate?
     private var checkImage: UIImage
     var task: Task
-    
-    
+    var color: UIColor
+
     //MARK: - Views
     
     private lazy var mainStackView: UIStackView = {
@@ -70,11 +70,16 @@ class ProjectTaskView: UIView {
     
     //MARK: - Initializer
     
-    convenience init(task: Task, checkImage: UIImage) {
+    convenience init(
+        task: Task,
+        checkImage: UIImage,
+        color: UIColor
+    ) {
         self.init()
         
         self.task = task
         self.checkImage = checkImage
+            self.color = color
         
         configureSubviews()
         customizeSubviews()
@@ -88,6 +93,8 @@ class ProjectTaskView: UIView {
             isComplete: false,
             description: "Lorem Ipsum"
         )
+        
+        self.color = .black
         
         self.checkImage = UIImage.icons.checkmarkIcon ?? .defaultImage
         
@@ -114,7 +121,9 @@ class ProjectTaskView: UIView {
     
     func customizeSubviews() {
         taskTitleLabel.text = task.title
+        taskTitleLabel.textColor = color
         taskDescriptionLabel.text = task.taskDescription
+        taskDescriptionLabel.textColor = color
         taskCheckmarkButton.setImage(self.checkImage, for: .normal)
     }
     
