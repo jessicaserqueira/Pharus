@@ -31,6 +31,8 @@ struct K {
             static let expandIcon = "ExpandIcon"
             static let envelopeIcon = "envelopeIcon"
             static let notificationEnvelopeIcon = "notificationEnvelopeIcon"
+            static let uploadIcon = "uploadIcon"
+            static let checkIcon = "checkIcon"
             
             static let avatarTabBarIcon = "avatarTabBarIcon"
             static let homeTabBarIcon = "homeTabBarIcon"
@@ -46,12 +48,10 @@ struct K {
         }
         
         struct Images {
-            static let checkImage = "checkImage"
             static let medalImage = "medalImage"
             static let companyLogoImage = "companyLogoImage"
             static let userImage = "userImage"
             static let thirdPlaceImage = "thirdPlaceImage"
-            static let uploadImage = "uploadImage"
             static let appLogoImage = "PharusImage"
             static let avatarImage = "AvatarScreenImage"
         }

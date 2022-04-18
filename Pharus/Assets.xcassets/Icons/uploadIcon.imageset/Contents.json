@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "upload.pdf",
+      "filename" : "$icon-upload.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "upload@2x.png",
+      "filename" : "$icon-upload@2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "upload@3x.png",
+      "filename" : "$icon-upload@3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
