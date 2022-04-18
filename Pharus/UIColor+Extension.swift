@@ -36,6 +36,20 @@ extension UIColor {
             blue: 0.914,
             alpha: 1
         )
+        
+        static let redText = UIColor(
+            red: 0.765,
+            green: 0.063,
+            blue: 0.29,
+            alpha: 1
+        )
+        
+        static let greenProgress = UIColor(
+            red: 0.017,
+            green: 0.7,
+            blue: 0,
+            alpha: 1
+        )
     }
     
     struct modal {

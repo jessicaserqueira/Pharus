@@ -62,6 +62,7 @@ class ProjectTaskView: UIView {
     private lazy var taskDescriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.font = .smallBody
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectTaskViewView.taskDescriptionLabel"
         return label

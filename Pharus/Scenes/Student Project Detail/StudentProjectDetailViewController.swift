@@ -61,7 +61,7 @@ class StudentProjectDetailViewController: UIViewController {
             studentProjectDetailView.taskHelperStackView.addArrangedSubview(taskView)
         }
         
-        studentProjectDetailView.completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count)"
+        studentProjectDetailView.completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count) tarefas (\(project.completionStatus)%)"
         
     }
     
@@ -85,12 +85,6 @@ class StudentProjectDetailViewController: UIViewController {
     @objc func backButtonPressed() {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    //Implementar quando a tela de usuário estiver pronta
-    @objc func profilePicTapped() {
-        print("Profile Picture pressed")
-    }
-    
 }
 
 extension StudentProjectDetailViewController: ProjectTaskDelegate {

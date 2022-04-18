@@ -21,6 +21,15 @@ class StudentProjectDetailView: UIView {
     
     //MARK: - Views
     
+    lazy var mainScrollView: UIScrollView = {
+        var scrollView = UIScrollView()
+        scrollView.backgroundColor = .white
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.accessibilityIdentifier = "StudentProjectDetailView.mainScrollView"
+        
+        return scrollView
+    }()
+    
     lazy var mainView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.modal.yellowModalBackground
@@ -29,15 +38,6 @@ class StudentProjectDetailView: UIView {
         view.accessibilityIdentifier = "StudentProjectDetailView.mainView"
         
         return view
-    }()
-    
-    lazy var mainScrollView: UIScrollView = {
-        var scrollView = UIScrollView()
-        scrollView.backgroundColor = .white
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.accessibilityIdentifier = "StudentProjectDetailView.mainScrollView"
-        
-        return scrollView
     }()
     
     lazy var mainStackView: UIStackView = {
@@ -60,7 +60,6 @@ class StudentProjectDetailView: UIView {
     
     lazy var mentorLabel: UILabel = {
         let label = UILabel()
-        label.text = "Mentor: José da Silva"
         label.font = .largeTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.mentorLabel"
@@ -89,7 +88,7 @@ class StudentProjectDetailView: UIView {
     lazy var descriptionTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Descrição:"
-        label.font = .mediumTitleBold
+        label.font = .mediumTitleMedium
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionTitleLabel"
         
@@ -100,6 +99,7 @@ class StudentProjectDetailView: UIView {
         let label = UILabel()
         label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum elit tellus, at condimentum mauris sagittis ut. Nam auctor nunc non ipsum blandit tempus. "
         label.numberOfLines = 0
+        label.font = .smallBody
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionTextLabel"
         
@@ -136,6 +136,7 @@ class StudentProjectDetailView: UIView {
     lazy var rulesLabel: UILabel = {
         let label = UILabel()
         label.text = "Atividades do projeto"
+        label.textColor = UIColor.project.redText
         label.font = .largeTitleMedium
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionLabel"
@@ -163,7 +164,7 @@ class StudentProjectDetailView: UIView {
     lazy var taskTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Lista de Tarefas"
-        label.font = .mediumTitleBold
+        label.font = .mediumTitleSemiBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.taskTitleLabel"
         
@@ -212,7 +213,7 @@ class StudentProjectDetailView: UIView {
         progressView.progress = 0.75
         progressView.clipsToBounds = true
         progressView.trackTintColor = .white
-        progressView.progressTintColor = UIColor.project.yellowDisabledProjectBackground
+        progressView.progressTintColor = UIColor.project.greenProgress
         progressView.accessibilityIdentifier = "StudentProjectDetailView.completedTasksProgressView"
         
         return progressView
