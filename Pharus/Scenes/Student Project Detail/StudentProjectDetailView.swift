@@ -132,7 +132,7 @@ class StudentProjectDetailView: UIView {
         imageView.accessibilityIdentifier = "StudentProjectDetailView.rulesBoookImageView"
         return imageView
     }()
-        
+    
     lazy var rulesLabel: UILabel = {
         let label = UILabel()
         label.text = "Atividades do projeto"
@@ -293,15 +293,16 @@ class StudentProjectDetailView: UIView {
         completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count) tarefas (\(project.completionStatus)%)"
         
     }
+    
+    private func configureUnsubscribedProject(_ project: Project) {
+        mentorReviewImageView.image = mentorReviewImageView.image?.withTintColor(.project.grayDisabledText)
+        rulesLabel.textColor = UIColor.project.grayDisabledText
+        completedTasksLabel.textColor = UIColor.project.grayDisabledText
+        taskTitleLabel.textColor = UIColor.project.grayDisabledText
         
-   private func configureUnsubscribedProject(_ project: Project) {
-       rulesLabel.textColor = UIColor.project.grayDisabledText
-       completedTasksLabel.textColor = UIColor.project.grayDisabledText
-       taskTitleLabel.textColor = UIColor.project.grayDisabledText
-       
-       for case let taskView as ProjectTaskView in tasksStackView.arrangedSubviews {
-           taskView.color = .project.grayDisabledText
-       }
+        for case let taskView as ProjectTaskView in tasksStackView.arrangedSubviews {
+            taskView.color = .project.grayDisabledText
+        }
     }
     
     func configureSubviews() {
@@ -383,7 +384,7 @@ class StudentProjectDetailView: UIView {
             rulesBookImageView.widthAnchor.constraint(equalToConstant: 24),
             rulesBookImageView.heightAnchor.constraint(equalToConstant: 24)
         ])
-                
+        
         //Tasks Title Helper
         NSLayoutConstraint.activate([
             tasksTitleHelperView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor),
