@@ -21,7 +21,7 @@ class SendFileView: UIView {
     
     lazy var mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
+        view.backgroundColor = UIColor.modal.yellowBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.mainView"
         return view
@@ -55,7 +55,7 @@ class SendFileView: UIView {
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum elit tellus, at condimentum mauris sagittis ut. Nam auctor nunc non ipsum blandit tempus. "
+        label.text = "Aqui você pode enviar os arquivos exigidos para completar uma tarefa. Você pode enviar mais de um arquivo de uma vez, bastando selecionar todos os que deseja enviar. "
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.descriptionLabel"
         return label
@@ -63,7 +63,7 @@ class SendFileView: UIView {
     
     lazy var uploadFileHelperView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.project.yellowDisabledProjectBackground
+        view.backgroundColor = UIColor.modal.orangeBackground
         view.layer.cornerRadius = 8
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.uploadFileHelperView"
@@ -88,7 +88,7 @@ class SendFileView: UIView {
     
     lazy var uploadIconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage.images.uploadImage
+        imageView.image = UIImage.icons.uploadIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "SendFileView.uploadIconImageView"
         return imageView
@@ -148,7 +148,7 @@ class SendFileView: UIView {
     }()
     
     lazy var sendFileButton: MainCardButton = {
-        let button = MainCardButton(title: "Enviar Arquivos")
+        let button = MainCardButton(title: "Enviar Arquivos", buttonState: .normal)
         button.addAction(UIAction { _ in
             self.sendFileButtonTapped()
         }, for: .touchUpInside)

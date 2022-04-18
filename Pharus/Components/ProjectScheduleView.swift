@@ -100,7 +100,7 @@ class ProjectScheduleView: UIView {
     func customizeSubviews() {
         
         if project.isComplete {
-            iconImageView.image = UIImage.images.checkImage
+            iconImageView.image = UIImage.icons.checkIcon?.withTintColor(.black)
             textLabel.text = "Concluído!"
             mainView.backgroundColor = UIColor.projectSchedule.greenBackground
         } else {

@@ -21,6 +21,8 @@ extension UIImage {
         static let backButtonIcon = UIImage(named: K.Assets.Icons.backButtonIcon)
         static let envelopeIcon = UIImage(named: K.Assets.Icons.envelopeIcon)
         static let notificationEnvelopeIcon = UIImage(named: K.Assets.Icons.notificationEnvelopeIcon)
+        static let uploadIcon = UIImage(named: K.Assets.Icons.uploadIcon)
+        static let checkIcon = UIImage(named: K.Assets.Icons.checkIcon)
         
         static let avatarTabBarIcon = UIImage(named: K.Assets.Icons.avatarTabBarIcon)
         static let homeTabBarIcon = UIImage(named: K.Assets.Icons.homeTabBarIcon)
@@ -36,12 +38,10 @@ extension UIImage {
     }
     
     struct images {
-        static let checkImage = UIImage(named: K.Assets.Images.checkImage)
         static let medalImage = UIImage(named: K.Assets.Images.medalImage)
         static let companyLogoImage = UIImage(named: K.Assets.Images.companyLogoImage)
         static let userImage = UIImage(named: K.Assets.Images.userImage)
         static let thirdPlaceImage = UIImage(named: K.Assets.Images.thirdPlaceImage)
-        static let uploadImage = UIImage(named: K.Assets.Images.uploadImage)
         static let appLogoImage = UIImage(named: K.Assets.Images.appLogoImage)
         static let avatarImage = UIImage(named: K.Assets.Images.avatarImage)
     }

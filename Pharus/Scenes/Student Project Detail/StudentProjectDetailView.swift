@@ -32,7 +32,7 @@ class StudentProjectDetailView: UIView {
     
     lazy var mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.modal.yellowModalBackground
+        view.backgroundColor = UIColor.modal.yellowBackground
         view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.mainView"
@@ -53,6 +53,7 @@ class StudentProjectDetailView: UIView {
     lazy var titleStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
+        stackView.spacing = 8
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProjectDetailView.titleStackView"
         return stackView
@@ -227,7 +228,7 @@ class StudentProjectDetailView: UIView {
     }()
     
     lazy var uploadFilesButton: MainCardButton = {
-        let button = MainCardButton(title: "Enviar Arquivos")
+        let button = MainCardButton(title: "Enviar Arquivos", buttonState: .normal)
         button.addAction(UIAction { _ in
             self.sendFilesButtonTapped()
         }, for: .touchUpInside)
@@ -299,6 +300,8 @@ class StudentProjectDetailView: UIView {
         rulesLabel.textColor = UIColor.project.grayDisabledText
         completedTasksLabel.textColor = UIColor.project.grayDisabledText
         taskTitleLabel.textColor = UIColor.project.grayDisabledText
+        completedTasksProgressView.trackTintColor = UIColor.button.grayDisabledBackground
+        uploadFilesButton.disable()
         
         for case let taskView as ProjectTaskView in tasksStackView.arrangedSubviews {
             taskView.color = .project.grayDisabledText

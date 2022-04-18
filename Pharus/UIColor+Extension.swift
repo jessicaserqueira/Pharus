@@ -60,10 +60,17 @@ extension UIColor {
     }
     
     struct modal {
-        static let yellowModalBackground = UIColor(
+        static let yellowBackground = UIColor(
             red: 0.992,
             green: 0.863,
             blue: 0.631,
+            alpha: 1
+        )
+        
+        static let orangeBackground = UIColor(
+            red: 0.988,
+            green: 0.729,
+            blue: 0.478,
             alpha: 1
         )
     }
@@ -88,6 +95,13 @@ extension UIColor {
             green: 0.64,
             blue: 0.96,
             alpha: 1.00
+        )
+        
+        static let grayDisabledBackground = UIColor(
+            red: 0.808,
+            green: 0.808,
+            blue: 0.82,
+            alpha: 1
         )
     }
     

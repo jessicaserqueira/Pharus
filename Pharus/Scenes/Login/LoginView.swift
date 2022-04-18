@@ -155,7 +155,7 @@ class LoginView: UIView {
     }()
     
     lazy var loginButton: MainCardButton = {
-        let button = MainCardButton(title: "Entrar")
+        let button = MainCardButton(title: "Entrar", buttonState: .normal)
         button.addAction(UIAction { _ in
             self.loginButtonPressed()
         }, for: .touchUpInside)

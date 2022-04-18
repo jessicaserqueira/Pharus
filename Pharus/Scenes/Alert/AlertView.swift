@@ -23,7 +23,7 @@ class AlertView: UIView {
     private lazy var mainView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
-        view.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
+        view.backgroundColor = UIColor.modal.yellowBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "AlertView.mainView"
         
@@ -68,6 +68,7 @@ class AlertView: UIView {
     private lazy var alertMessageLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
+        label.font = .mediumTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "AlertView.alertMessageLabel"
         
