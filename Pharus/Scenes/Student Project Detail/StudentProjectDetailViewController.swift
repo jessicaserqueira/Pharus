@@ -39,43 +39,12 @@ class StudentProjectDetailViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        setupProjectTasks()
-        
         studentProjectDetailView.delegate = self
         self.view = studentProjectDetailView
     }
     
-    func setupProjectTasks() {
-        var completedTasksCount = 0
-        
-        for task in project.tasks {
-            if task.isComplete {
-                completedTasksCount += 1
-            }
-            
-            let taskView = ProjectTaskView(
-                task: task,
-                checkImage: UIImage.icons.checkmarkIcon ?? .defaultImage
-            )
-            
-            studentProjectDetailView.taskHelperStackView.addArrangedSubview(taskView)
-        }
-        
-        studentProjectDetailView.completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count)"
-        
-    }
-    
     func setNavigationBar() {
         self.title = project.name
-        
-        let userImage = UIImage(named: K.Assets.Images.userImage) ?? UIImage()
-        
-        let userProfileButton = StudentProfileButton(userImage: userImage)
-        
-        let userPictureBarButton = UIBarButtonItem()
-        userPictureBarButton.customView = userProfileButton
-        
-        self.navigationItem.rightBarButtonItem = userPictureBarButton
         
         var backButtonImage = UIImage(named: K.Assets.Icons.backButtonIcon)
         backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
@@ -94,12 +63,6 @@ class StudentProjectDetailViewController: UIViewController {
     @objc func backButtonPressed() {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    //Implementar quando a tela de usuário estiver pronta
-    @objc func profilePicTapped() {
-        print("Profile Picture pressed")
-    }
-    
 }
 
 extension StudentProjectDetailViewController: ProjectTaskDelegate {

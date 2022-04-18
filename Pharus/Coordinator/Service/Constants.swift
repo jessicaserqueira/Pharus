@@ -29,6 +29,8 @@ struct K {
             static let xmarkIcon = "xmark"
             static let checkboxCheckmarkButtonIcon = "checkboxCheckmarkIcon"
             static let expandIcon = "ExpandIcon"
+            static let envelopeIcon = "envelopeIcon"
+            static let notificationEnvelopeIcon = "notificationEnvelopeIcon"
             
             static let avatarTabBarIcon = "avatarTabBarIcon"
             static let homeTabBarIcon = "homeTabBarIcon"
