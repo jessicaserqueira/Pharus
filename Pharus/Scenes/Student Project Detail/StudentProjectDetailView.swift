@@ -50,6 +50,14 @@ class StudentProjectDetailView: UIView {
         return stackView
     }()
     
+    lazy var titleStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "StudentProjectDetailView.titleStackView"
+        return stackView
+    }()
+    
     lazy var mentorLabel: UILabel = {
         let label = UILabel()
         label.text = "Mentor: José da Silva"
@@ -58,6 +66,14 @@ class StudentProjectDetailView: UIView {
         label.accessibilityIdentifier = "StudentProjectDetailView.mentorLabel"
         
         return label
+    }()
+    
+    lazy var mentorReviewImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage.icons.envelopeIcon
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.accessibilityIdentifier = "StudentProjectDetailView.mentorReviewImageView"
+        return imageView
     }()
     
     lazy var descriptionStackView: UIStackView = {
@@ -92,19 +108,35 @@ class StudentProjectDetailView: UIView {
     
     lazy var rulesHelperView: UIView = {
         let view = UIView()
-        view.setOnClickListener {
-            self.rulesViewTapped()
-        }
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.rulesHelperView"
-        
         return view
     }()
     
+    lazy var rulesStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.setOnClickListener {
+            self.rulesViewTapped()
+        }
+        stackView.axis = .horizontal
+        stackView.spacing = 8
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "StudentProjectDetailView.rulesStackView"
+        return stackView
+    }()
+    
+    lazy var rulesBookImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage.icons.bookIcon
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.accessibilityIdentifier = "StudentProjectDetailView.rulesBoookImageView"
+        return imageView
+    }()
+        
     lazy var rulesLabel: UILabel = {
         let label = UILabel()
-        label.text = "Veja aqui as regras do projeto"
-        label.font = .largeTitleBold
+        label.text = "Atividades do projeto"
+        label.font = .largeTitleMedium
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionLabel"
         return label
@@ -243,14 +275,22 @@ class StudentProjectDetailView: UIView {
         
         mainView.addSubview(mainStackView)
         
-        mainStackView.addArrangedSubview(mentorLabel)
+        mainStackView.addArrangedSubview(titleStackView)
+        
+        titleStackView.addArrangedSubview(mentorLabel)
+        titleStackView.addArrangedSubview(mentorReviewImageView)
+        
         mainStackView.addArrangedSubview(descriptionStackView)
         
         descriptionStackView.addArrangedSubview(descriptionTitleLabel)
         descriptionStackView.addArrangedSubview(descriptionTextLabel)
         
         mainStackView.addArrangedSubview(rulesHelperView)
-        rulesHelperView.addSubview(rulesLabel)
+        
+        rulesHelperView.addSubview(rulesStackView)
+        
+        rulesStackView.addArrangedSubview(rulesBookImageView)
+        rulesStackView.addArrangedSubview(rulesLabel)
         
         mainStackView.addArrangedSubview(tasksStackView)
         
@@ -288,11 +328,26 @@ class StudentProjectDetailView: UIView {
             mainStackView.centerXAnchor.constraint(equalTo: mainScrollView.centerXAnchor)
         ])
         
-        //Rules Helper View
+        //Mentor Review Image View
+        NSLayoutConstraint.activate([
+            mentorReviewImageView.widthAnchor.constraint(equalToConstant: 36),
+            mentorReviewImageView.heightAnchor.constraint(equalToConstant: 36)
+        ])
+        
+        //Rules Stack Helper View
         NSLayoutConstraint.activate([
             rulesHelperView.heightAnchor.constraint(equalToConstant: 30)
         ])
         
+        //Rules Stack View
+        rulesStackView.center(in: rulesHelperView)
+        
+        //Rules Book Image View
+        NSLayoutConstraint.activate([
+            rulesBookImageView.widthAnchor.constraint(equalToConstant: 24),
+            rulesBookImageView.heightAnchor.constraint(equalToConstant: 24)
+        ])
+                
         //Tasks Title Helper
         NSLayoutConstraint.activate([
             tasksTitleHelperView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor),
