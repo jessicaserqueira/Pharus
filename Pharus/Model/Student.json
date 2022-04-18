@@ -111,7 +111,17 @@
                 },
                 {
                     "title": "Criar Login",
-                    "isComplete": true,
+                    "isComplete": false,
+                    "description": "omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                },
+                {
+                    "title": "Lorem",
+                    "isComplete": false,
+                    "description": "omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                },
+                {
+                    "title": "Ipsum",
+                    "isComplete": false,
                     "description": "omnis iste natus error sit voluptatem accusantium doloremque laudantium"
                 }
             ]
