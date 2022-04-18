@@ -99,5 +99,7 @@ extension StudentProjectsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let project = projects[indexPath.row]
         presenter.showStudentProject(project: project)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
