@@ -5,7 +5,6 @@
 //  Created by Jéssica Serqueira on 22/03/22.
 //
 
-import Foundation
 import UIKit
 
 protocol Coordinator {
@@ -17,7 +16,6 @@ protocol Coordinator {
 }
 
 extension Coordinator {
-    
     func coordinate(to coordinator: Coordinator) {
         coordinator.start()
     }

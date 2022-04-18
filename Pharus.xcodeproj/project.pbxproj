@@ -7,34 +7,85 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */; };
+		7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */; };
+		7910D9D227FD0B8300A8DDA0 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */; };
 		79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79164BB827F1251C00167B8A /* UIView+Extension.swift */; };
 		79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79222EA027F63FC50051334A /* CGFloat+Extension.swift */; };
-		79222EA327F643D60051334A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79222EA227F643D60051334A /* CircleView.swift */; };
-		7943975827F3C5BF0075102B /* UserProjectsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */; };
-		7943975A27F3C5D20075102B /* UserProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975927F3C5D20075102B /* UserProjectsViewController.swift */; };
-		7943975E27F3C6020075102B /* UserProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975D27F3C6020075102B /* UserProjectCell.swift */; };
-		7943976027F3C6130075102B /* UserProjectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975F27F3C6130075102B /* UserProjectsPresenter.swift */; };
+		79222EA327F643D60051334A /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79222EA227F643D60051334A /* CircleProgressView.swift */; };
+		793EC73927FE177000CD8334 /* CheckmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EC73827FE177000CD8334 /* CheckmarkButton.swift */; };
+		793EC73B27FE183000CD8334 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EC73A27FE183000CD8334 /* UIImage+Extension.swift */; };
+		793EC73D27FE197B00CD8334 /* StudentProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EC73C27FE197B00CD8334 /* StudentProfileButton.swift */; };
+		7943975827F3C5BF0075102B /* StudentProjectsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975727F3C5BF0075102B /* StudentProjectsCoordinator.swift */; };
+		7943975A27F3C5D20075102B /* StudentProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975927F3C5D20075102B /* StudentProjectsViewController.swift */; };
+		7943975E27F3C6020075102B /* StudentProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975D27F3C6020075102B /* StudentProjectCell.swift */; };
+		7943976027F3C6130075102B /* StudentProjectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */; };
 		794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */; };
+		7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058027FE382D00A89012 /* TabBarViewController.swift */; };
+		7952058327FE394900A89012 /* ProjectSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058227FE394900A89012 /* ProjectSheetView.swift */; };
+		7952058527FE3B1A00A89012 /* ProjectSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058427FE3B1A00A89012 /* ProjectSheetViewController.swift */; };
+		795A02172809B689000D0B84 /* ProjectSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A02162809B689000D0B84 /* ProjectSheetPresenter.swift */; };
+		795A02192809B695000D0B84 /* ProjectSheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */; };
 		7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963212F27F23AF000A202EE /* LoginPresenter.swift */; };
 		7963213227F23C9200A202EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963213127F23C9200A202EE /* Constants.swift */; };
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
-		797A68EE27F4768A00ABDAC6 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */; };
+		79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */; };
 		799768D027EA3B5F0057AFA7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* Student.swift */; };
+		79A2C775280C473F00B3159B /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2C774280C473F00B3159B /* SubscribeButton.swift */; };
+		79A2C777280C4A1700B3159B /* MainCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2C776280C4A1700B3159B /* MainCardButton.swift */; };
+		79A2C779280C587F00B3159B /* ProjectScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2C778280C587F00B3159B /* ProjectScheduleView.swift */; };
+		79AF90F728043A590094AB97 /* SendFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2FE27FFA6F300230698 /* SendFileView.swift */; };
+		79AF90F928043D3C0094AB97 /* StudentProjectDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */; };
+		79AF90FB28043DEA0094AB97 /* StudentProjectDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */; };
+		79AF90FD2804478F0094AB97 /* ProjectTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */; };
+		79C577D027FBBB8100046B00 /* StudentProjectRankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C577CF27FBBB8100046B00 /* StudentProjectRankingCell.swift */; };
+		79C577D227FBBB9800046B00 /* StudentProjectsRankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C577D127FBBB9800046B00 /* StudentProjectsRankingViewController.swift */; };
 		79E6424D27F098D30046A2F0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6424C27F098D30046A2F0 /* Network.swift */; };
+		79E8389F280AF7C5001C46AD /* HomeNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E8389E280AF7C5001C46AD /* HomeNewsView.swift */; };
+		79E838A1280AF7E1001C46AD /* HomeMiniCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A0280AF7E1001C46AD /* HomeMiniCardView.swift */; };
+		79E838A3280AF804001C46AD /* StudentHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A2280AF804001C46AD /* StudentHomeView.swift */; };
+		79E838A5280AF82C001C46AD /* StudentHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A4280AF82C001C46AD /* StudentHomeViewController.swift */; };
+		79E838A7280AFCE7001C46AD /* SendFilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A6280AFCE7001C46AD /* SendFilePresenter.swift */; };
+		79E838A9280AFD03001C46AD /* SendFileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A8280AFD03001C46AD /* SendFileCoordinator.swift */; };
+		79E838AC280B0676001C46AD /* AlertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838AB280B0676001C46AD /* AlertCoordinator.swift */; };
+		79E838AE280B067D001C46AD /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838AD280B067D001C46AD /* AlertPresenter.swift */; };
+		79EE5719280B881500F01069 /* StudentHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE5718280B881500F01069 /* StudentHomeCoordinator.swift */; };
+		79EE571B280B889200F01069 /* StudentHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE571A280B889200F01069 /* StudentHomePresenter.swift */; };
+		79EE5731280BAB7F00F01069 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79EE571F280BAB7E00F01069 /* Montserrat-Medium.ttf */; };
+		79EE5737280BAB7F00F01069 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79EE5725280BAB7E00F01069 /* Montserrat-Bold.ttf */; };
+		79EE573A280BAB7F00F01069 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79EE5728280BAB7E00F01069 /* Montserrat-SemiBold.ttf */; };
+		79EE573E280BAB7F00F01069 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79EE572C280BAB7E00F01069 /* Montserrat-Regular.ttf */; };
+		79EE574F280BAB9000F01069 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79EE5743280BAB9000F01069 /* OpenSans-SemiBold.ttf */; };
+		79EE5755280BAB9000F01069 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79EE5749280BAB9000F01069 /* OpenSans-Bold.ttf */; };
+		79EE5757280BAB9000F01069 /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79EE574B280BAB9000F01069 /* OpenSans-Medium.ttf */; };
+		79EE5759280BAB9000F01069 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79EE574D280BAB9000F01069 /* OpenSans-Regular.ttf */; };
 		79F06DA127F28FCD00343865 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */; };
 		79FB0CC927F330FA001D36A7 /* Student.json in Resources */ = {isa = PBXBuildFile; fileRef = 79FB0CC827F330FA001D36A7 /* Student.json */; };
 		79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */; };
 		C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */; };
 		C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */; };
 		C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF2327F1EDA100AD94C9 /* LoginView.swift */; };
+		C01BB6BB280B8C73004D4790 /* StudentProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB6BA280B8C73004D4790 /* StudentProfileCoordinator.swift */; };
+		C01BB6C1280B8C84004D4790 /* StudenteProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB6C0280B8C84004D4790 /* StudenteProfileView.swift */; };
+		C01BB6C5280B8C9C004D4790 /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB6C4280B8C9C004D4790 /* StudentProfileViewController.swift */; };
+		C01BB6C9280B8CAF004D4790 /* StudentProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB6C8280B8CAF004D4790 /* StudentProfilePresenter.swift */; };
 		C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618A27EA03A5007EC5C3 /* AppDelegate.swift */; };
 		C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618C27EA03A5007EC5C3 /* SceneDelegate.swift */; };
-		C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045618E27EA03A5007EC5C3 /* StartViewController.swift */; };
 		C045619427EA03A6007EC5C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C045619327EA03A6007EC5C3 /* Assets.xcassets */; };
 		C045619727EA03A6007EC5C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */; };
 		C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561A727EA041B007EC5C3 /* Coordinator.swift */; };
 		C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */; };
-		C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */; };
+		C057E8E92807941C004E44C3 /* StudentAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8E82807941C004E44C3 /* StudentAvatarView.swift */; };
+		C057E8ED28079469004E44C3 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8EC28079469004E44C3 /* AvatarImageView.swift */; };
+		C057E8F1280794E9004E44C3 /* StudentAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */; };
+		C057E8F52807954B004E44C3 /* StudentAvatarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8F42807954B004E44C3 /* StudentAvatarCoordinator.swift */; };
+		C05AA2BC27FC740E00230698 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */; };
+		C05AA2C827FC749E00230698 /* TarBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2C727FC749E00230698 /* TarBarPresenter.swift */; };
+		C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */; };
+		C05AA2F527FFA66D00230698 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F427FFA66D00230698 /* AlertView.swift */; };
+		C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F827FFA69800230698 /* MainCardButton.swift */; };
+		C05AA30327FFAA7400230698 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA30227FFAA7400230698 /* AlertViewController.swift */; };
+		C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA30627FFAA9500230698 /* SendFileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,37 +99,88 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailView.swift; sourceTree = "<group>"; };
+		7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailViewController.swift; sourceTree = "<group>"; };
+		7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		79164BB827F1251C00167B8A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		79222EA027F63FC50051334A /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
-		79222EA227F643D60051334A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsCoordinator.swift; sourceTree = "<group>"; };
-		7943975927F3C5D20075102B /* UserProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsViewController.swift; sourceTree = "<group>"; };
-		7943975D27F3C6020075102B /* UserProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectCell.swift; sourceTree = "<group>"; };
-		7943975F27F3C6130075102B /* UserProjectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProjectsPresenter.swift; sourceTree = "<group>"; };
+		79222EA227F643D60051334A /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
+		793EC73827FE177000CD8334 /* CheckmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkButton.swift; sourceTree = "<group>"; };
+		793EC73A27FE183000CD8334 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		793EC73C27FE197B00CD8334 /* StudentProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileButton.swift; sourceTree = "<group>"; };
+		7943975727F3C5BF0075102B /* StudentProjectsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsCoordinator.swift; sourceTree = "<group>"; };
+		7943975927F3C5D20075102B /* StudentProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsViewController.swift; sourceTree = "<group>"; };
+		7943975D27F3C6020075102B /* StudentProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectCell.swift; sourceTree = "<group>"; };
+		7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsPresenter.swift; sourceTree = "<group>"; };
 		794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
+		7952058027FE382D00A89012 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7952058227FE394900A89012 /* ProjectSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetView.swift; sourceTree = "<group>"; };
+		7952058427FE3B1A00A89012 /* ProjectSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetViewController.swift; sourceTree = "<group>"; };
+		795A02162809B689000D0B84 /* ProjectSheetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetPresenter.swift; sourceTree = "<group>"; };
+		795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetCoordinator.swift; sourceTree = "<group>"; };
+		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/Scenes/Login/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		7963213127F23C9200A202EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingPresenter.swift.swift; sourceTree = "<group>"; };
 		799768CF27EA3B5F0057AFA7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		79A2C774280C473F00B3159B /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
+		79A2C776280C4A1700B3159B /* MainCardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
+		79A2C778280C587F00B3159B /* ProjectScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectScheduleView.swift; sourceTree = "<group>"; };
+		79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailCoordinator.swift; sourceTree = "<group>"; };
+		79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailPresenter.swift; sourceTree = "<group>"; };
+		79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTaskView.swift; sourceTree = "<group>"; };
+		79C577CF27FBBB8100046B00 /* StudentProjectRankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectRankingCell.swift; sourceTree = "<group>"; };
+		79C577D127FBBB9800046B00 /* StudentProjectsRankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingViewController.swift; sourceTree = "<group>"; };
 		79E6424C27F098D30046A2F0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		79F06D9E27F28FCD00343865 /* LoginPresenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginPresenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79E8389E280AF7C5001C46AD /* HomeNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewsView.swift; sourceTree = "<group>"; };
+		79E838A0280AF7E1001C46AD /* HomeMiniCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMiniCardView.swift; sourceTree = "<group>"; };
+		79E838A2280AF804001C46AD /* StudentHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeView.swift; sourceTree = "<group>"; };
+		79E838A4280AF82C001C46AD /* StudentHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeViewController.swift; sourceTree = "<group>"; };
+		79E838A6280AFCE7001C46AD /* SendFilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFilePresenter.swift; sourceTree = "<group>"; };
+		79E838A8280AFD03001C46AD /* SendFileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileCoordinator.swift; sourceTree = "<group>"; };
+		79E838AB280B0676001C46AD /* AlertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCoordinator.swift; sourceTree = "<group>"; };
+		79E838AD280B067D001C46AD /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		79EE5718280B881500F01069 /* StudentHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeCoordinator.swift; sourceTree = "<group>"; };
+		79EE571A280B889200F01069 /* StudentHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomePresenter.swift; sourceTree = "<group>"; };
+		79EE571F280BAB7E00F01069 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		79EE5725280BAB7E00F01069 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		79EE5728280BAB7E00F01069 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		79EE572C280BAB7E00F01069 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		79EE5743280BAB9000F01069 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		79EE5749280BAB9000F01069 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		79EE574B280BAB9000F01069 /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		79EE574D280BAB9000F01069 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		79F06D9E27F28FCD00343865 /* PharusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PharusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		79FB0CC827F330FA001D36A7 /* Student.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Student.json; sourceTree = "<group>"; };
 		79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoodinator.swift; sourceTree = "<group>"; };
 		C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C008AF2327F1EDA100AD94C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C01BB6BA280B8C73004D4790 /* StudentProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileCoordinator.swift; sourceTree = "<group>"; };
+		C01BB6C0280B8C84004D4790 /* StudenteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudenteProfileView.swift; sourceTree = "<group>"; };
+		C01BB6C4280B8C9C004D4790 /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
+		C01BB6C8280B8CAF004D4790 /* StudentProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfilePresenter.swift; sourceTree = "<group>"; };
 		C045618727EA03A5007EC5C3 /* Pharus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pharus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C045618A27EA03A5007EC5C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C045618C27EA03A5007EC5C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C045618E27EA03A5007EC5C3 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C045619327EA03A6007EC5C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C045619627EA03A6007EC5C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C045619827EA03A6007EC5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C04561A727EA041B007EC5C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
+		C057E8E82807941C004E44C3 /* StudentAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAvatarView.swift; sourceTree = "<group>"; };
+		C057E8EC28079469004E44C3 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAvatarViewController.swift; sourceTree = "<group>"; };
+		C057E8F42807954B004E44C3 /* StudentAvatarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAvatarCoordinator.swift; sourceTree = "<group>"; };
+		C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		C05AA2C727FC749E00230698 /* TarBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarBarPresenter.swift; sourceTree = "<group>"; };
+		C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingCoordinator.swift; sourceTree = "<group>"; };
+		C05AA2F427FFA66D00230698 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		C05AA2F827FFA69800230698 /* MainCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
+		C05AA2FE27FFA6F300230698 /* SendFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileView.swift; sourceTree = "<group>"; };
+		C05AA30227FFAA7400230698 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		C05AA30627FFAA9500230698 /* SendFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,15 +201,127 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79434A652809129A006D0184 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				795A021A2809F345000D0B84 /* Alert */,
+				79434A6928091491006D0184 /* Avatar Selection */,
+				79434A66280912A8006D0184 /* Login */,
+				795A02152809B664000D0B84 /* Project Sheet */,
+				79434A6B2809194D006D0184 /* Send File */,
+				79E8389D280AF791001C46AD /* Student Home */,
+				C01BB6B9280B8C41004D4790 /* Student Profile */,
+				79434A68280912BE006D0184 /* Student Project Detail */,
+				79434A67280912B2006D0184 /* Student Projects */,
+				79434A6A280914D0006D0184 /* Student Projects Ranking */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		79434A66280912A8006D0184 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */,
+				C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */,
+				7963212F27F23AF000A202EE /* LoginPresenter.swift */,
+				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		79434A67280912B2006D0184 /* Student Projects */ = {
+			isa = PBXGroup;
+			children = (
+				7943975927F3C5D20075102B /* StudentProjectsViewController.swift */,
+				7943975D27F3C6020075102B /* StudentProjectCell.swift */,
+				7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */,
+				7943975727F3C5BF0075102B /* StudentProjectsCoordinator.swift */,
+			);
+			path = "Student Projects";
+			sourceTree = "<group>";
+		};
+		79434A68280912BE006D0184 /* Student Project Detail */ = {
+			isa = PBXGroup;
+			children = (
+				7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */,
+				79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */,
+				79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */,
+				7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */,
+			);
+			path = "Student Project Detail";
+			sourceTree = "<group>";
+		};
+		79434A6928091491006D0184 /* Avatar Selection */ = {
+			isa = PBXGroup;
+			children = (
+				C057E8F42807954B004E44C3 /* StudentAvatarCoordinator.swift */,
+				C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */,
+				C057E8E82807941C004E44C3 /* StudentAvatarView.swift */,
+			);
+			path = "Avatar Selection";
+			sourceTree = "<group>";
+		};
+		79434A6A280914D0006D0184 /* Student Projects Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				79C577D127FBBB9800046B00 /* StudentProjectsRankingViewController.swift */,
+				C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */,
+				79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */,
+				79C577CF27FBBB8100046B00 /* StudentProjectRankingCell.swift */,
+			);
+			path = "Student Projects Ranking";
+			sourceTree = "<group>";
+		};
+		79434A6B2809194D006D0184 /* Send File */ = {
+			isa = PBXGroup;
+			children = (
+				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
+				79E838A6280AFCE7001C46AD /* SendFilePresenter.swift */,
+				79E838A8280AFD03001C46AD /* SendFileCoordinator.swift */,
+				C05AA30627FFAA9500230698 /* SendFileViewController.swift */,
+			);
+			path = "Send File";
+			sourceTree = "<group>";
+		};
+		795A02152809B664000D0B84 /* Project Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				7952058227FE394900A89012 /* ProjectSheetView.swift */,
+				7952058427FE3B1A00A89012 /* ProjectSheetViewController.swift */,
+				795A02162809B689000D0B84 /* ProjectSheetPresenter.swift */,
+				795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */,
+			);
+			path = "Project Sheet";
+			sourceTree = "<group>";
+		};
+		795A021A2809F345000D0B84 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				C05AA30227FFAA7400230698 /* AlertViewController.swift */,
+				C05AA2F427FFA66D00230698 /* AlertView.swift */,
+				79E838AB280B0676001C46AD /* AlertCoordinator.swift */,
+				79E838AD280B067D001C46AD /* AlertPresenter.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		79AF90F628043A120094AB97 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		79CAD97F27EBD77600A554E0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
 				79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */,
-				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
 				79222EA027F63FC50051334A /* CGFloat+Extension.swift */,
 				794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */,
-				797A68ED27F4768A00ABDAC6 /* UIImageView+Extension.swift */,
+				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
+				7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */,
+				793EC73A27FE183000CD8334 /* UIImage+Extension.swift */,
+				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -115,38 +329,99 @@
 		79E6424B27F098C10046A2F0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				79E6424C27F098D30046A2F0 /* Network.swift */,
 				7963213127F23C9200A202EE /* Constants.swift */,
+				79E6424C27F098D30046A2F0 /* Network.swift */,
 			);
 			name = Service;
 			path = Coordinator/Service;
 			sourceTree = "<group>";
 		};
-		79F06D9F27F28FCD00343865 /* LoginPresenterTests */ = {
+		79E8389D280AF791001C46AD /* Student Home */ = {
+			isa = PBXGroup;
+			children = (
+				79EE5718280B881500F01069 /* StudentHomeCoordinator.swift */,
+				79EE571A280B889200F01069 /* StudentHomePresenter.swift */,
+				79E838A2280AF804001C46AD /* StudentHomeView.swift */,
+				79E838A4280AF82C001C46AD /* StudentHomeViewController.swift */,
+			);
+			path = "Student Home";
+			sourceTree = "<group>";
+		};
+		79EE571C280BAABE00F01069 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				79EE5742280BAB9000F01069 /* OpenSans */,
+				79EE571D280BAB7E00F01069 /* Montserrat */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		79EE571D280BAB7E00F01069 /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				79EE571F280BAB7E00F01069 /* Montserrat-Medium.ttf */,
+				79EE5725280BAB7E00F01069 /* Montserrat-Bold.ttf */,
+				79EE5728280BAB7E00F01069 /* Montserrat-SemiBold.ttf */,
+				79EE572C280BAB7E00F01069 /* Montserrat-Regular.ttf */,
+			);
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		79EE5742280BAB9000F01069 /* OpenSans */ = {
+			isa = PBXGroup;
+			children = (
+				79EE5743280BAB9000F01069 /* OpenSans-SemiBold.ttf */,
+				79EE5749280BAB9000F01069 /* OpenSans-Bold.ttf */,
+				79EE574B280BAB9000F01069 /* OpenSans-Medium.ttf */,
+				79EE574D280BAB9000F01069 /* OpenSans-Regular.ttf */,
+			);
+			path = OpenSans;
+			sourceTree = "<group>";
+		};
+		79F06D9F27F28FCD00343865 /* PharusTests */ = {
 			isa = PBXGroup;
 			children = (
 				79F06DA027F28FCD00343865 /* LoginPresenterTests.swift */,
 			);
-			path = LoginPresenterTests;
+			path = PharusTests;
 			sourceTree = "<group>";
 		};
-		C008AF2227F1ED7F00AD94C9 /* View */ = {
+		C008AF2227F1ED7F00AD94C9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
-				7943975D27F3C6020075102B /* UserProjectCell.swift */,
-				79222EA227F643D60051334A /* CircleView.swift */,
-				C04561A127EA03B1007EC5C3 /* ViewController */,
+				C057E8EC28079469004E44C3 /* AvatarImageView.swift */,
+				793EC73827FE177000CD8334 /* CheckmarkButton.swift */,
+				79222EA227F643D60051334A /* CircleProgressView.swift */,
+				79E838A0280AF7E1001C46AD /* HomeMiniCardView.swift */,
+				79E8389E280AF7C5001C46AD /* HomeNewsView.swift */,
+				79A2C776280C4A1700B3159B /* MainCardButton.swift */,
+				79A2C778280C587F00B3159B /* ProjectScheduleView.swift */,
+				79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */,
+				793EC73C27FE197B00CD8334 /* StudentProfileButton.swift */,
+				79A2C774280C473F00B3159B /* SubscribeButton.swift */,
+				C05AA2F827FFA69800230698 /* MainCardButton.swift */,
 			);
-			path = View;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C01BB6B9280B8C41004D4790 /* Student Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB6BA280B8C73004D4790 /* StudentProfileCoordinator.swift */,
+				C01BB6C0280B8C84004D4790 /* StudenteProfileView.swift */,
+				C01BB6C4280B8C9C004D4790 /* StudentProfileViewController.swift */,
+				C01BB6C8280B8CAF004D4790 /* StudentProfilePresenter.swift */,
+			);
+			path = "Student Profile";
 			sourceTree = "<group>";
 		};
 		C045617E27EA03A5007EC5C3 = {
 			isa = PBXGroup;
 			children = (
 				C045618927EA03A5007EC5C3 /* Pharus */,
-				79F06D9F27F28FCD00343865 /* LoginPresenterTests */,
+				79F06D9F27F28FCD00343865 /* PharusTests */,
 				C045618827EA03A5007EC5C3 /* Products */,
+				79AF90F628043A120094AB97 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,7 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				C045618727EA03A5007EC5C3 /* Pharus.app */,
-				79F06D9E27F28FCD00343865 /* LoginPresenterTests.xctest */,
+				79F06D9E27F28FCD00343865 /* PharusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,16 +437,19 @@
 		C045618927EA03A5007EC5C3 /* Pharus */ = {
 			isa = PBXGroup;
 			children = (
-				79E6424B27F098C10046A2F0 /* Service */,
-				79CAD97F27EBD77600A554E0 /* Extensions */,
-				C04561A327EA03BF007EC5C3 /* Coordinator */,
-				C04561A227EA03B3007EC5C3 /* Model */,
-				C008AF2227F1ED7F00AD94C9 /* View */,
-				C04561A027EA03AE007EC5C3 /* Presenter */,
-				C045619F27EA03AB007EC5C3 /* SystemDelegate */,
 				C045619327EA03A6007EC5C3 /* Assets.xcassets */,
-				C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */,
+				C008AF2227F1ED7F00AD94C9 /* Components */,
+				C04561A127EA03B1007EC5C3 /* Controller */,
+				C04561A327EA03BF007EC5C3 /* Coordinator */,
+				79CAD97F27EBD77600A554E0 /* Extensions */,
+				79EE571C280BAABE00F01069 /* Fonts */,
 				C045619827EA03A6007EC5C3 /* Info.plist */,
+				C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */,
+				C04561A227EA03B3007EC5C3 /* Model */,
+				C04561A027EA03AE007EC5C3 /* Presenter */,
+				79434A652809129A006D0184 /* Scenes */,
+				79E6424B27F098C10046A2F0 /* Service */,
+				C045619F27EA03AB007EC5C3 /* SystemDelegate */,
 			);
 			path = Pharus;
 			sourceTree = "<group>";
@@ -188,27 +466,24 @@
 		C04561A027EA03AE007EC5C3 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				7963212F27F23AF000A202EE /* LoginPresenter.swift */,
-				7943975F27F3C6130075102B /* UserProjectsPresenter.swift */,
+				C05AA2C727FC749E00230698 /* TarBarPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
 		};
-		C04561A127EA03B1007EC5C3 /* ViewController */ = {
+		C04561A127EA03B1007EC5C3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C045618E27EA03A5007EC5C3 /* StartViewController.swift */,
-				C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */,
-				7943975927F3C5D20075102B /* UserProjectsViewController.swift */,
+				7952058027FE382D00A89012 /* TabBarViewController.swift */,
 			);
-			path = ViewController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		C04561A227EA03B3007EC5C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				799768CF27EA3B5F0057AFA7 /* Student.swift */,
 				79FB0CC827F330FA001D36A7 /* Student.json */,
+				799768CF27EA3B5F0057AFA7 /* Student.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,11 +491,9 @@
 		C04561A327EA03BF007EC5C3 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				C04561A727EA041B007EC5C3 /* Coordinator.swift */,
 				C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */,
-				C04561AD27EA0437007EC5C3 /* StartCoordinator.swift */,
-				C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */,
-				7943975727F3C5BF0075102B /* UserProjectsCoordinator.swift */,
+				C04561A727EA041B007EC5C3 /* Coordinator.swift */,
+				C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -228,9 +501,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		79F06D9D27F28FCD00343865 /* LoginPresenterTests */ = {
+		79F06D9D27F28FCD00343865 /* PharusTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79F06DA427F28FCD00343865 /* Build configuration list for PBXNativeTarget "LoginPresenterTests" */;
+			buildConfigurationList = 79F06DA427F28FCD00343865 /* Build configuration list for PBXNativeTarget "PharusTests" */;
 			buildPhases = (
 				79F06D9A27F28FCD00343865 /* Sources */,
 				79F06D9B27F28FCD00343865 /* Frameworks */,
@@ -241,9 +514,9 @@
 			dependencies = (
 				79F06DA327F28FCD00343865 /* PBXTargetDependency */,
 			);
-			name = LoginPresenterTests;
+			name = PharusTests;
 			productName = LoginPresenterTests;
-			productReference = 79F06D9E27F28FCD00343865 /* LoginPresenterTests.xctest */;
+			productReference = 79F06D9E27F28FCD00343865 /* PharusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C045618627EA03A5007EC5C3 /* Pharus */ = {
@@ -270,7 +543,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					79F06D9D27F28FCD00343865 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -295,7 +568,7 @@
 			projectRoot = "";
 			targets = (
 				C045618627EA03A5007EC5C3 /* Pharus */,
-				79F06D9D27F28FCD00343865 /* LoginPresenterTests */,
+				79F06D9D27F28FCD00343865 /* PharusTests */,
 			);
 		};
 /* End PBXProject section */
@@ -312,8 +585,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79EE573E280BAB7F00F01069 /* Montserrat-Regular.ttf in Resources */,
+				79EE574F280BAB9000F01069 /* OpenSans-SemiBold.ttf in Resources */,
+				79EE5731280BAB7F00F01069 /* Montserrat-Medium.ttf in Resources */,
 				C045619727EA03A6007EC5C3 /* LaunchScreen.storyboard in Resources */,
 				C045619427EA03A6007EC5C3 /* Assets.xcassets in Resources */,
+				79EE5757280BAB9000F01069 /* OpenSans-Medium.ttf in Resources */,
+				79EE573A280BAB7F00F01069 /* Montserrat-SemiBold.ttf in Resources */,
+				79EE5737280BAB7F00F01069 /* Montserrat-Bold.ttf in Resources */,
+				79EE5759280BAB9000F01069 /* OpenSans-Regular.ttf in Resources */,
+				79EE5755280BAB9000F01069 /* OpenSans-Bold.ttf in Resources */,
 				79FB0CC927F330FA001D36A7 /* Student.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,29 +614,73 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A2C775280C473F00B3159B /* SubscribeButton.swift in Sources */,
 				794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */,
-				79222EA327F643D60051334A /* CircleView.swift in Sources */,
+				79E838AC280B0676001C46AD /* AlertCoordinator.swift in Sources */,
+				79E838A9280AFD03001C46AD /* SendFileCoordinator.swift in Sources */,
+				79222EA327F643D60051334A /* CircleProgressView.swift in Sources */,
+				79C577D227FBBB9800046B00 /* StudentProjectsRankingViewController.swift in Sources */,
+				79E838A3280AF804001C46AD /* StudentHomeView.swift in Sources */,
+				79C577D227FBBB9800046B00 /* StudentProjectsRankingViewController.swift in Sources */,
+				C057E8F52807954B004E44C3 /* StudentAvatarCoordinator.swift in Sources */,
+				C05AA30327FFAA7400230698 /* AlertViewController.swift in Sources */,
 				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
+				7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */,
+				793EC73B27FE183000CD8334 /* UIImage+Extension.swift in Sources */,
+				79E8389F280AF7C5001C46AD /* HomeNewsView.swift in Sources */,
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
+				C05AA2BC27FC740E00230698 /* TabBarCoordinator.swift in Sources */,
+				79EE571B280B889200F01069 /* StudentHomePresenter.swift in Sources */,
 				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
-				C04561AE27EA0437007EC5C3 /* StartCoordinator.swift in Sources */,
+				C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */,
+				79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */,
+				7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */,
+				79EE5719280B881500F01069 /* StudentHomeCoordinator.swift in Sources */,
+				C057E8F1280794E9004E44C3 /* StudentAvatarViewController.swift in Sources */,
+				79E838A7280AFCE7001C46AD /* SendFilePresenter.swift in Sources */,
+				79AF90FD2804478F0094AB97 /* ProjectTaskView.swift in Sources */,
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
-				7943975827F3C5BF0075102B /* UserProjectsCoordinator.swift in Sources */,
+				7943975827F3C5BF0075102B /* StudentProjectsCoordinator.swift in Sources */,
+				793EC73927FE177000CD8334 /* CheckmarkButton.swift in Sources */,
+				7952058327FE394900A89012 /* ProjectSheetView.swift in Sources */,
+				C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */,
+				C057E8E92807941C004E44C3 /* StudentAvatarView.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
+				C01BB6C5280B8C9C004D4790 /* StudentProfileViewController.swift in Sources */,
+				C05AA2F527FFA66D00230698 /* AlertView.swift in Sources */,
+				C01BB6C1280B8C84004D4790 /* StudenteProfileView.swift in Sources */,
+				79AF90F728043A590094AB97 /* SendFileView.swift in Sources */,
 				C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */,
-				7943975A27F3C5D20075102B /* UserProjectsViewController.swift in Sources */,
-				C045618F27EA03A5007EC5C3 /* StartViewController.swift in Sources */,
-				7943975E27F3C6020075102B /* UserProjectCell.swift in Sources */,
+				7943975A27F3C5D20075102B /* StudentProjectsViewController.swift in Sources */,
+				795A02192809B695000D0B84 /* ProjectSheetCoordinator.swift in Sources */,
+				7910D9D227FD0B8300A8DDA0 /* UIFont+Extension.swift in Sources */,
+				C05AA2C827FC749E00230698 /* TarBarPresenter.swift in Sources */,
+				79AF90FB28043DEA0094AB97 /* StudentProjectDetailPresenter.swift in Sources */,
+				79A2C779280C587F00B3159B /* ProjectScheduleView.swift in Sources */,
+				C01BB6BB280B8C73004D4790 /* StudentProfileCoordinator.swift in Sources */,
+				79A2C777280C4A1700B3159B /* MainCardButton.swift in Sources */,
+				7952058527FE3B1A00A89012 /* ProjectSheetViewController.swift in Sources */,
+				79E838A5280AF82C001C46AD /* StudentHomeViewController.swift in Sources */,
+				7943975E27F3C6020075102B /* StudentProjectCell.swift in Sources */,
+				79C577D027FBBB8100046B00 /* StudentProjectRankingCell.swift in Sources */,
+				79E838AE280B067D001C46AD /* AlertPresenter.swift in Sources */,
+				C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */,
 				C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */,
+				79E838A1280AF7E1001C46AD /* HomeMiniCardView.swift in Sources */,
 				7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */,
 				C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */,
 				C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */,
 				7963213227F23C9200A202EE /* Constants.swift in Sources */,
-				797A68EE27F4768A00ABDAC6 /* UIImageView+Extension.swift in Sources */,
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
 				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
-				7943976027F3C6130075102B /* UserProjectsPresenter.swift in Sources */,
+				7943976027F3C6130075102B /* StudentProjectsPresenter.swift in Sources */,
+				7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */,
+				793EC73D27FE197B00CD8334 /* StudentProfileButton.swift in Sources */,
+				795A02172809B689000D0B84 /* ProjectSheetPresenter.swift in Sources */,
+				C057E8ED28079469004E44C3 /* AvatarImageView.swift in Sources */,
+				79AF90F928043D3C0094AB97 /* StudentProjectDetailCoordinator.swift in Sources */,
+				C01BB6C9280B8CAF004D4790 /* StudentProfilePresenter.swift in Sources */,
 				79222EA127F63FC50051334A /* CGFloat+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,7 +798,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -528,7 +853,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -544,6 +869,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QNHX86K7F4;
 				INFOPLIST_FILE = Pharus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -562,6 +888,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QNHX86K7F4;
 				INFOPLIST_FILE = Pharus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -577,7 +904,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		79F06DA427F28FCD00343865 /* Build configuration list for PBXNativeTarget "LoginPresenterTests" */ = {
+		79F06DA427F28FCD00343865 /* Build configuration list for PBXNativeTarget "PharusTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79F06DA527F28FCD00343865 /* Debug */,

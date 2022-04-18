@@ -1,62 +1,161 @@
 {
-    "name": {
-        "firstName": "John",
-        "lastName": "Jonah Jameson"
-    },
-    "birthday": "13/05/2002",
-    "schoolId": "XXXXXXXX",
+    "id": "62501bb56c91d14d76f0123c",
+    "firstName": "John",
+    "lastName": "Jonah Jameson",
+    "birthdate": "13/05/2002",
+    "schoolID": "XXXXXXXX",
     "gender": "M",
-    "phoneNumbers": [
-        {
-            "type": "home",
-            "number": "(XX)XXXX-XXXX"
-        },
-        {
-            "type": "cellphone",
-            "number": "(XX)XXXXX-XXXX"
-        }
-    ],
-    "school": "Colégio Bernoulli",
+    "phone": "(XX)XXXXX-XXXX",
+    "school": "Colégio Los Brabos",
     "schoolShift": "M",
     "avatar": "https://wallpapercave.com/wp/wp9414303.jpg",
-    "backgroundPhoto": "https://wallpapercave.com/wp/wp9414303.jpg",
+    "email": "student@gmail.com",
+    "username": "sTud3nt",
+    "score": 1300,
     "medals": {
-        "diamond": 0,
+        "diamond": 1,
         "ruby": 0,
-        "emerald": 1,
+        "emerald": 0,
         "saphire": 0,
         "platinum": 0,
         "gold": 1,
         "silver": 0,
         "bronze": 0
     },
-    "score": 1300,
-    "schoolProjects": [
+    "projects": [
         {
-            "name": "Minha primeira página web kdjfoi jdfiosud fiosu fiuds",
+            "id": "62501bb56caw14d76f0123c",
+            "name": "Minha primeira página web usando tenologias bem brabas",
+            "isSubscribed": true,
+            "isComplete": false,
             "score": 68,
             "medal": "gold",
             "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
             "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
             "startDate": "01/01/2022",
-            "endDate": "03/02/2022",
-            "rules": "...",
+            "endDate": "26/04/2022",
+            "school": "Colégio Los Brabos",
+            "rules": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
             "mentor": "Fabiano El Brabo Tomoda",
-            "completionStatus": 32.7
-        }
-    ],
-    "companyProjects": [
+            "hasCompanyPartnership": false,
+            "company": null,
+            "companyPhoto": null,
+            "completionStatus": 50.0,
+            "tasks": [
+                {
+                    "title": "Criar navigation",
+                    "isComplete": false,
+                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                },
+                {
+                    "title": "Criar Login",
+                    "isComplete": true,
+                    "description": "omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                }
+            ]
+        },
         {
-            "name": "Minha página web muito braba",
-            "score": 43,
-            "medal": "emerald",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum elit tellus, at condimentum mauris sagittis ut. Nam auctor nunc non ipsum blandit tempus. ",
-            "scoreDescription": "Página marromeno",
+            "id": "62501bb56caw14d76f0123SSWc",
+            "name": "Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "isSubscribed": true,
+            "isComplete": true,
+            "score": 100,
+            "medal": "diamond",
+            "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+            "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
+            "startDate": "07/09/2022",
+            "endDate": "03/10/2022",
+            "school": "Colégio Los Brabos",
+            "rules": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "mentor": "Jessica La Braba Serqueria",
+            "hasCompanyPartnership": true,
+            "company": "ioBrabaAsys",
+            "companyPhoto": "https://pt.wikipedia.org/wiki/Ficheiro:Ioasys_logo.png",
+            "completionStatus": 100.0,
+            "tasks": [
+                {
+                    "title": "quis nostrud exercitation",
+                    "isComplete": true,
+                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                },
+                {
+                    "title": "sit amet",
+                    "isComplete": true,
+                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                }
+            ]
+        },
+        {
+            "id": "62501bb56caw14d76f0123c",
+            "name": "Minha décima quinta página web usando tenologias bem brabas",
+            "isSubscribed": false,
+            "isComplete": false,
+            "score": null,
+            "medal": null,
+            "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
+            "scoreDescription": null,
             "startDate": "01/01/2022",
-            "endDate": "03/03/2022",
-            "rules": "...",
-            "mentor": "Ju El brabo liano",
-            "completionStatus": 81.8
+            "endDate": "26/04/2022",
+            "school": "Colégio Los Brabos",
+            "rules": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "mentor": "Fabiano El Brabo Tomoda",
+            "hasCompanyPartnership": false,
+            "company": null,
+            "companyPhoto": null,
+            "completionStatus": 0,
+            "tasks": [
+                {
+                    "title": "Criar navigation",
+                    "isComplete": false,
+                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                },
+                {
+                    "title": "Criar Login",
+                    "isComplete": false,
+                    "description": "omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                },
+                {
+                    "title": "Lorem",
+                    "isComplete": false,
+                    "description": "omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                },
+                {
+                    "title": "Ipsum",
+                    "isComplete": false,
+                    "description": "omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                }
+            ]
+        },
+        {
+            "id": "62501bb56c91d14d76f0123wwq",
+            "name": "Minha primeira página web usando tenologias bem brabas",
+            "isSubscribed": true,
+            "isComplete": false,
+            "score": null,
+            "medal": null,
+            "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
+            "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
+            "startDate": "01/01/2022",
+            "endDate": "03/02/2023",
+            "school": "Colégio Los Brabos",
+            "rules": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "mentor": "Ca La Braba Mila",
+            "hasCompanyPartnership": false,
+            "company": null,
+            "companyPhoto": null,
+            "completionStatus": 50.0,
+            "tasks": [
+                {
+                    "title": "consectetur adipiscing elit",
+                    "isComplete": true,
+                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                },
+                {
+                    "title": "tempor incididunt",
+                    "isComplete": false,
+                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                }
+            ]
         }
     ]
 }

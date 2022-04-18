@@ -15,7 +15,7 @@ class ClickListener: UITapGestureRecognizer {
 
 extension UIView {
     
-    func setOnClickListener(action :@escaping () -> Void){
+    func setOnClickListener(action: @escaping () -> Void){
         let tapRecogniser = ClickListener(target: self, action: #selector(onViewClicked(sender:)))
         tapRecogniser.onClick = action
         self.addGestureRecognizer(tapRecogniser)
@@ -29,7 +29,12 @@ extension UIView {
     
     //MARK: - Constraints
     
-    func stretch(_ view: UIView, to otherView: UIView? = nil, top: CGFloat = 0, left: CGFloat = 0, bottom: CGFloat = 0, right: CGFloat = 0) {
+    func stretch(_ view: UIView,
+                 to otherView: UIView? = nil,
+                 top: CGFloat = 0,
+                 left: CGFloat = 0,
+                 bottom: CGFloat = 0,
+                 right: CGFloat = 0) {
         view.translatesAutoresizingMaskIntoConstraints = false
         
         if let otherView = otherView {
@@ -49,10 +54,22 @@ extension UIView {
         }
     }
     
+    //MARK: - Center
+    
+    func center(in otherView: UIView) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        otherView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.centerXAnchor.constraint(equalTo: otherView.centerXAnchor),
+            self.centerYAnchor.constraint(equalTo: otherView.centerYAnchor)
+        ])
+    }
+    
     //MARK: - Add Background
     
-    func addBackground(imageName: String, contentMode: UIView.ContentMode = .scaleToFill) {
-        // setup the UIImageView
+    func addBackground(imageName: String,
+                       contentMode: UIView.ContentMode = .scaleToFill) {
+        
         let backgroundImageView = UIImageView(frame: UIScreen.main.bounds)
         backgroundImageView.image = UIImage(named: imageName)
         backgroundImageView.contentMode = contentMode
@@ -64,5 +81,26 @@ extension UIView {
         NSLayoutConstraint.activate([
             backgroundImageView.leadingAnchor.constraint(equalTo: leadingAnchor), backgroundImageView.trailingAnchor.constraint(equalTo: trailingAnchor), backgroundImageView.topAnchor.constraint(equalTo: topAnchor), backgroundImageView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+    }
+    
+    //MARK: - Gradient
+    
+    func applyGradient(isVertical: Bool, colorArray: [UIColor]) {
+        layer.sublayers?.filter({ $0 is CAGradientLayer }).forEach({ $0.removeFromSuperlayer() })
+         
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = colorArray.map({ $0.cgColor })
+        if isVertical {
+            //top to bottom
+            gradientLayer.locations = [0.0, 1.0]
+        } else {
+            //left to right
+            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        }
+        
+        backgroundColor = .clear
+        gradientLayer.frame = bounds
+        layer.insertSublayer(gradientLayer, at: 0)
     }
 }
