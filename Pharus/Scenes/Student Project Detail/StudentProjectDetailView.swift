@@ -136,6 +136,10 @@ class StudentProjectDetailView: UIView {
     lazy var rulesLabel: UILabel = {
         let label = UILabel()
         label.text = "Atividades do projeto"
+        label.layer.shadowColor = UIColor.black.cgColor
+        label.layer.shadowRadius = 4
+        label.layer.shadowOpacity = 0.5
+        label.layer.shadowOffset = CGSize(width: 0, height: 4)
         label.textColor = UIColor.project.redText
         label.font = .largeTitleMedium
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -199,8 +203,8 @@ class StudentProjectDetailView: UIView {
     lazy var completedTasksLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.text = "Completadas 3 de 4 tarefas (75%)"
         label.numberOfLines = 0
+        label.font = .smallTitleMedium
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.completedTasksLabel"
         

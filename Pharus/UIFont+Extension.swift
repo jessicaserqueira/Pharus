@@ -17,6 +17,7 @@ extension UIFont {
     static let mediumTitleMedium = customFont(font: .montserrat, ofSize: .medium, weight: .medium)
     static let mediumTitleBold = customFont(font: .montserrat, ofSize: .medium, weight: .bold)
     static let mediumTitleSemiBold = customFont(font: .montserrat, ofSize: .medium, weight: .semibold)
+    static let smallTitleMedium = customFont(font: .montserrat, ofSize: .small, weight: .medium)
     
     static let largeButton = customFont(font: .montserrat, ofSize: .large, weight: .medium)
     static let smallButton = customFont(font: .montserrat, ofSize: .small, weight: .semibold)
