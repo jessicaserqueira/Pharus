@@ -42,7 +42,9 @@ extension UIImage {
         static let userImage = UIImage(named: K.Assets.Images.userImage)
         static let appLogoImage = UIImage(named: K.Assets.Images.appLogoImage)
         static let avatarImage = UIImage(named: K.Assets.Images.avatarImage)
-        static let avatar6Image = UIImage(named: K.Assets.Images.avatar6Image)
+        static let avatar6FullImage = UIImage(named: K.Assets.Images.avatar6FullImage)
+        static let avatar5FullImage = UIImage(named: K.Assets.Images.avatar5FullImage)
+        static let avatar7FullImage = UIImage(named: K.Assets.Images.avatar7FullImage)
         
         static let firstPlaceImage = UIImage(named: K.Assets.Images.firstPlaceImage)
         static let secondPlaceImage = UIImage(named: K.Assets.Images.secondPlaceImage)

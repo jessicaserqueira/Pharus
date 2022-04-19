@@ -51,8 +51,10 @@ struct K {
             static let companyLogoImage = "companyLogoImage"
             static let userImage = "userImage"
             static let appLogoImage = "PharusImage"
-            static let avatarImage = "AvatarScreenImage"
-            static let avatar6Image = "avatar6"
+            static let avatarImage = "avatar01FullImage"
+            static let avatar5FullImage = "avatar05FullImage"
+            static let avatar7FullImage = "avatar07FullImage"
+            static let avatar6FullImage = "avatar06FullImage"
             
             static let firstPlaceImage = "1stPlaceImage"
             static let secondPlaceImage = "2ndPlaceImage"

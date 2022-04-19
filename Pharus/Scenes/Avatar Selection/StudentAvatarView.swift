@@ -130,15 +130,15 @@ class StudentAvatarView: UIView {
         mainStackView.addArrangedSubview(avatarScrollView)
         avatarScrollView.addSubview(selectAvatarStackView)
         
-        let images = [
-            UIImage(named: "Avatar1"),
-            UIImage(named: "Avatar2"),
-            UIImage(named: "Avatar3"),
+        let images: [UIImage] = [
+            .images.avatar6FullImage ?? .defaultImage,
+            .images.avatar5FullImage ?? .defaultImage,
+            .images.avatar7FullImage ?? .defaultImage
         ]
         
         for _ in 0...10 {
-            let avatarImage = AvatarImageView()
-            avatarImage.avatarImageView.image = images.randomElement()!
+            let avatarImage = UIImageView()
+            avatarImage.image = images.randomElement()!
                         
             selectAvatarStackView.addArrangedSubview(avatarImage)
             avatarImage.widthAnchor.constraint(equalToConstant: 120).isActive = true
