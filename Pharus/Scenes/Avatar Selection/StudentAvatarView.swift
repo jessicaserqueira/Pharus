@@ -47,7 +47,7 @@ class StudentAvatarView: UIView {
     
     lazy var avatarScreenImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage.images.avatar1FullImage
+        imageView.image = UIImage.images.avatars.fullImage.avatar1
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentAvatarView.avatarScreenImageView"
@@ -131,9 +131,9 @@ class StudentAvatarView: UIView {
         avatarScrollView.addSubview(selectAvatarStackView)
         
         let images: [UIImage] = [
-            .images.avatar6FullImage ?? .defaultImage,
-            .images.avatar5FullImage ?? .defaultImage,
-            .images.avatar7FullImage ?? .defaultImage
+            .images.avatars.fullImage.avatar6 ?? .defaultImage,
+            .images.avatars.fullImage.avatar7 ?? .defaultImage,
+            .images.avatars.fullImage.avatar5 ?? .defaultImage
         ]
         
         for _ in 0...10 {
