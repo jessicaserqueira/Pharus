@@ -51,6 +51,12 @@ class StudentProjectsViewController: UIViewController {
         self.navigationController?.title = ""
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setGradientBackground()
+    }
+    
     func setupTableView() {
         tableView.register(StudentProjectCell.self,
                            forCellReuseIdentifier: K.CellReuseIdentifiers.userProjects)
@@ -58,6 +64,7 @@ class StudentProjectsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        tableView.backgroundColor = .clear
         tableView.separatorColor = .clear
         
         NSLayoutConstraint.activate([
@@ -90,6 +97,7 @@ extension StudentProjectsViewController: UITableViewDataSource {
         cell.setupConstraints()
         cell.configureCell(using: project)
         cell.mainView.layer.cornerRadius = 16
+        cell.backgroundColor = .clear
         
         return cell
     }

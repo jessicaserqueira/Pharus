@@ -15,6 +15,7 @@ struct K {
     struct CellReuseIdentifiers {
         static let userProjects = "userProjects"
         static let userRankingProjects = "userRankingProjects"
+        static let avatarSelection = "avatarSelection"
     }
     
     struct Assets {
@@ -48,11 +49,58 @@ struct K {
         }
         
         struct Images {
+            
+            struct Avatar {
+                
+                struct FullImage {
+                    static let avatar1 = "avatar01FullImage"
+                    static let avatar2 = "avatar02FullImage"
+                    static let avatar3 = "avatar03FullImage"
+                    static let avatar4 = "avatar04FullImage"
+                    static let avatar5 = "avatar05FullImage"
+                    static let avatar6 = "avatar06FullImage"
+                    static let avatar7 = "avatar07FullImage"
+                    static let avatar8 = "avatar08FullImage"
+                    static let avatar9 = "avatar09FullImage"
+                    static let avatar10 = "avatar10FullImage"
+                    static let avatar11 = "avatar11FullImage"
+                    static let avatar12 = "avatar12FullImage"
+                    static let avatar13 = "avatar13FullImage"
+                    static let avatar14 = "avatar14FullImage"
+                    static let avatar15 = "avatar15FullImage"
+                    static let avatar16 = "avatar16FullImage"
+                    static let avatar17 = "avatar17FullImage"
+                    static let avatar18 = "avatar18FullImage"
+                    static let avatar19 = "avatar19FullImage"
+                    static let avatar20 = "avatar20FullImage"
+                }
+                
+                struct CircleImage {
+                    static let avatar1 = "avatar01CircleImage"
+                    static let avatar2 = "avatar02CircleImage"
+                    static let avatar3 = "avatar03CircleImage"
+                    static let avatar4 = "avatar04CircleImage"
+                    static let avatar5 = "avatar05CircleImage"
+                    static let avatar6 = "avatar06CircleImage"
+                    static let avatar7 = "avatar07CircleImage"
+                    static let avatar8 = "avatar08CircleImage"
+                    static let avatar9 = "avatar09CircleImage"
+                    static let avatar10 = "avatar10CircleImage"
+                    static let avatar11 = "avatar11CircleImage"
+                    static let avatar12 = "avatar12CircleImage"
+                    static let avatar13 = "avatar13CircleImage"
+                    static let avatar14 = "avatar14CircleImage"
+                    static let avatar15 = "avatar15CircleImage"
+                    static let avatar16 = "avatar16CircleImage"
+                    static let avatar17 = "avatar17CircleImage"
+                    static let avatar18 = "avatar18CircleImage"
+                    static let avatar19 = "avatar19CircleImage"
+                    static let avatar20 = "avatar20CircleImage"
+                }
+            }
             static let companyLogoImage = "companyLogoImage"
             static let userImage = "userImage"
             static let appLogoImage = "PharusImage"
-            static let avatarImage = "AvatarScreenImage"
-            static let avatar6Image = "avatar6"
             
             static let firstPlaceImage = "1stPlaceImage"
             static let secondPlaceImage = "2ndPlaceImage"
