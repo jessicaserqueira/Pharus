@@ -27,7 +27,7 @@ class AvatarSelectionViewController: UIViewController {
         self.view = viewCustom
         //viewCustom.backgroundColor = .blue
         viewCustom.delegate = self
-        overrideUserInterfaceStyle = .dark
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
