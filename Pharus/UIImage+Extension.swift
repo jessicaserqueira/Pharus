@@ -65,10 +65,75 @@ extension UIImage {
                 static let avatar18 = UIImage(named: K.Assets.Images.Avatar.FullImage.avatar18)
                 static let avatar19 = UIImage(named: K.Assets.Images.Avatar.FullImage.avatar19)
                 static let avatar20 = UIImage(named: K.Assets.Images.Avatar.FullImage.avatar20)
+                
+                static let avatars = [
+                    avatar1,
+                    avatar2,
+                    avatar3,
+                    avatar4,
+                    avatar5,
+                    avatar6,
+                    avatar7,
+                    avatar8,
+                    avatar9,
+                    avatar10,
+                    avatar11,
+                    avatar12,
+                    avatar13,
+                    avatar14,
+                    avatar15,
+                    avatar16,
+                    avatar17,
+                    avatar18,
+                    avatar19,
+                    avatar20
+                ]
             }
             
             struct circleImage {
+                static let avatar1 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar1)
+                static let avatar2 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar2)
+                static let avatar3 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar3)
+                static let avatar4 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar4)
+                static let avatar5 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar5)
+                static let avatar6 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar6)
+                static let avatar7 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar7)
+                static let avatar8 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar8)
+                static let avatar9 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar9)
+                static let avatar10 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar10)
+                static let avatar11 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar11)
+                static let avatar12 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar12)
+                static let avatar13 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar13)
+                static let avatar14 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar14)
+                static let avatar15 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar15)
+                static let avatar16 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar16)
+                static let avatar17 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar17)
+                static let avatar18 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar18)
+                static let avatar19 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar19)
+                static let avatar20 = UIImage(named: K.Assets.Images.Avatar.CircleImage.avatar20)
                 
+                static let avatars = [
+                    avatar1,
+                    avatar2,
+                    avatar3,
+                    avatar4,
+                    avatar5,
+                    avatar6,
+                    avatar7,
+                    avatar8,
+                    avatar9,
+                    avatar10,
+                    avatar11,
+                    avatar12,
+                    avatar13,
+                    avatar14,
+                    avatar15,
+                    avatar16,
+                    avatar17,
+                    avatar18,
+                    avatar19,
+                    avatar20
+                ]
             }
             
         }
