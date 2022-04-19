@@ -76,10 +76,10 @@
 		C045619727EA03A6007EC5C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */; };
 		C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561A727EA041B007EC5C3 /* Coordinator.swift */; };
 		C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */; };
-		C057E8E92807941C004E44C3 /* StudentAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8E82807941C004E44C3 /* StudentAvatarView.swift */; };
+		C057E8E92807941C004E44C3 /* AvatarSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8E82807941C004E44C3 /* AvatarSelectionView.swift */; };
 		C057E8ED28079469004E44C3 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8EC28079469004E44C3 /* AvatarImageView.swift */; };
-		C057E8F1280794E9004E44C3 /* StudentAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */; };
-		C057E8F52807954B004E44C3 /* StudentAvatarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8F42807954B004E44C3 /* StudentAvatarCoordinator.swift */; };
+		C057E8F1280794E9004E44C3 /* AvatarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8F0280794E9004E44C3 /* AvatarSelectionViewController.swift */; };
+		C057E8F52807954B004E44C3 /* AvatarSelectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8F42807954B004E44C3 /* AvatarSelectionCoordinator.swift */; };
 		C05AA2BC27FC740E00230698 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */; };
 		C05AA2C827FC749E00230698 /* TarBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2C727FC749E00230698 /* TarBarPresenter.swift */; };
 		C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */; };
@@ -171,10 +171,10 @@
 		C045619827EA03A6007EC5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C04561A727EA041B007EC5C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		C057E8E82807941C004E44C3 /* StudentAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAvatarView.swift; sourceTree = "<group>"; };
+		C057E8E82807941C004E44C3 /* AvatarSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSelectionView.swift; sourceTree = "<group>"; };
 		C057E8EC28079469004E44C3 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
-		C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAvatarViewController.swift; sourceTree = "<group>"; };
-		C057E8F42807954B004E44C3 /* StudentAvatarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAvatarCoordinator.swift; sourceTree = "<group>"; };
+		C057E8F0280794E9004E44C3 /* AvatarSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSelectionViewController.swift; sourceTree = "<group>"; };
+		C057E8F42807954B004E44C3 /* AvatarSelectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSelectionCoordinator.swift; sourceTree = "<group>"; };
 		C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		C05AA2C727FC749E00230698 /* TarBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarBarPresenter.swift; sourceTree = "<group>"; };
 		C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingCoordinator.swift; sourceTree = "<group>"; };
@@ -256,9 +256,9 @@
 		79434A6928091491006D0184 /* Avatar Selection */ = {
 			isa = PBXGroup;
 			children = (
-				C057E8F42807954B004E44C3 /* StudentAvatarCoordinator.swift */,
-				C057E8F0280794E9004E44C3 /* StudentAvatarViewController.swift */,
-				C057E8E82807941C004E44C3 /* StudentAvatarView.swift */,
+				C057E8F42807954B004E44C3 /* AvatarSelectionCoordinator.swift */,
+				C057E8F0280794E9004E44C3 /* AvatarSelectionViewController.swift */,
+				C057E8E82807941C004E44C3 /* AvatarSelectionView.swift */,
 			);
 			path = "Avatar Selection";
 			sourceTree = "<group>";
@@ -625,7 +625,7 @@
 				79C577D227FBBB9800046B00 /* StudentProjectsRankingViewController.swift in Sources */,
 				79E838A3280AF804001C46AD /* StudentHomeView.swift in Sources */,
 				79C577D227FBBB9800046B00 /* StudentProjectsRankingViewController.swift in Sources */,
-				C057E8F52807954B004E44C3 /* StudentAvatarCoordinator.swift in Sources */,
+				C057E8F52807954B004E44C3 /* AvatarSelectionCoordinator.swift in Sources */,
 				C05AA30327FFAA7400230698 /* AlertViewController.swift in Sources */,
 				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
 				7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */,
@@ -639,7 +639,7 @@
 				79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */,
 				7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */,
 				79EE5719280B881500F01069 /* StudentHomeCoordinator.swift in Sources */,
-				C057E8F1280794E9004E44C3 /* StudentAvatarViewController.swift in Sources */,
+				C057E8F1280794E9004E44C3 /* AvatarSelectionViewController.swift in Sources */,
 				79E838A7280AFCE7001C46AD /* SendFilePresenter.swift in Sources */,
 				79AF90FD2804478F0094AB97 /* ProjectTaskView.swift in Sources */,
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
@@ -648,7 +648,7 @@
 				793EC73927FE177000CD8334 /* CheckmarkButton.swift in Sources */,
 				7952058327FE394900A89012 /* ProjectSheetView.swift in Sources */,
 				C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */,
-				C057E8E92807941C004E44C3 /* StudentAvatarView.swift in Sources */,
+				C057E8E92807941C004E44C3 /* AvatarSelectionView.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
 				C01BB6C5280B8C9C004D4790 /* StudentProfileViewController.swift in Sources */,
 				C05AA2F527FFA66D00230698 /* AlertView.swift in Sources */,

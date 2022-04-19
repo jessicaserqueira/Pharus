@@ -1,5 +1,5 @@
 //
-//  StudentAvatarCoordinator.swift
+//  AvatarSelectionCoordinator.swift
 //  Pharus
 //
 //  Created by Jéssica Serqueira on 06/04/22.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol StudentAvatarFlow {
+protocol AvatarSelectionFlow {
     func start()
 }
 
-class StudentAvatarCoordinator: Coordinator {
+class AvatarSelectionCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
@@ -21,7 +21,7 @@ class StudentAvatarCoordinator: Coordinator {
     }
     
     func start() {
-        let studentAvatarViewController = StudentAvatarViewController()
+        let studentAvatarViewController = AvatarSelectionViewController()
         studentAvatarViewController.coordinator = self
         studentAvatarViewController.tabBarItem.image = UIImage(named: "AvatarTabBar.fill")
         navigationController.setNavigationBarHidden(false, animated: true)
@@ -29,7 +29,7 @@ class StudentAvatarCoordinator: Coordinator {
     }
 }
 
-extension StudentAvatarCoordinator: StudentAvatarFlow {
+extension AvatarSelectionCoordinator: AvatarSelectionFlow {
     
 
 }

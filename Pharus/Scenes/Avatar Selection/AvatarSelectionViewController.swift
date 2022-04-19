@@ -1,15 +1,15 @@
 //
-//  StudentAvatarViewController.swift
+//  AvatarSelectionViewController.swift
 //  Pharus
 //
 //  Created by Jéssica Serqueira on 06/04/22.
 //
 import UIKit
 
-class StudentAvatarViewController: UIViewController {
+class AvatarSelectionViewController: UIViewController {
     
-    var coordinator: StudentAvatarCoordinator?
-    private lazy var viewCustom = StudentAvatarView()
+    var coordinator: AvatarSelectionCoordinator?
+    private lazy var viewCustom = AvatarSelectionView()
     
     // MARK: - Properties
     
@@ -36,7 +36,7 @@ class StudentAvatarViewController: UIViewController {
         self.navigationController?.title = ""
     }
 }
-extension StudentAvatarViewController: StudentAvatarDelegate {
+extension AvatarSelectionViewController: AvatarSelectionDelegate {
     
     func selectYourAvatar() {
         

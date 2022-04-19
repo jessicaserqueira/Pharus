@@ -136,8 +136,8 @@ class TabBarCoordinator: Coordinator {
         return coordinator
     }
     
-    private func makeStudentAvatarCoordinator() -> StudentAvatarCoordinator {
-        let coordinator = StudentAvatarCoordinator(
+    private func makeStudentAvatarCoordinator() -> AvatarSelectionCoordinator {
+        let coordinator = AvatarSelectionCoordinator(
             navigationController: UINavigationController()
         )
         

@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol StudentAvatarDelegate: AnyObject{
+protocol AvatarSelectionDelegate: AnyObject{
     
     func selectYourAvatar()
 }
 
-class StudentAvatarView: UIView {
+class AvatarSelectionView: UIView {
     
-    weak var delegate: StudentAvatarDelegate?
+    weak var delegate: AvatarSelectionDelegate?
     
     //MARK: - Views
     
@@ -166,7 +166,7 @@ class StudentAvatarView: UIView {
         avatarScrollView.heightAnchor.constraint(equalToConstant: 120).isActive = true
     }
 }
-extension StudentAvatarView: StudentAvatarDelegate {
+extension AvatarSelectionView: AvatarSelectionDelegate {
     func selectYourAvatar() {
         delegate?.selectYourAvatar()
     }
