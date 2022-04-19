@@ -62,7 +62,7 @@ class StudentHomeView: UIView {
     
     lazy var studentAvatarImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image =  UIImage(named: "Avatar1")
+        imageView.image = .images.avatars.circleImage.avatar1
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentHomeView.studentAvatarImageView"
         return imageView
