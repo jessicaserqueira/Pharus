@@ -15,6 +15,7 @@ struct K {
     struct CellReuseIdentifiers {
         static let userProjects = "userProjects"
         static let userRankingProjects = "userRankingProjects"
+        static let avatarSelection = "avatarSelection"
     }
     
     struct Assets {

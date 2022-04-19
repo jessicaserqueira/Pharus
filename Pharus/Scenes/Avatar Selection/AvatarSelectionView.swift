@@ -40,6 +40,15 @@ class AvatarSelectionView: UIView {
         return imageView
     }()
     
+    lazy var avatarSelectionStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "StudentAvatarView.avatarSelectionStackView"
+        
+        return stackView
+    }()
+    
     lazy var selectYourAvatarLabel: UILabel = {
         let label = UILabel()
         label.text = "Escolha o seu avatar"
@@ -51,26 +60,7 @@ class AvatarSelectionView: UIView {
         
         return label
     }()
-    
-    lazy var avatarScrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.accessibilityIdentifier = "StudentAvatarView.scrollView"
         
-        return scrollView
-    }()
-    
-    lazy var avatarSelectionStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 32
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "StudentAvatarView.avatarSelectionStackView"
-        
-        return stackView
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
@@ -87,8 +77,9 @@ class AvatarSelectionView: UIView {
         mainScrollView.addSubview(mainStackView)
         
         mainStackView.addArrangedSubview(avatarScreenImageView)
-        mainStackView.addArrangedSubview(selectYourAvatarLabel)
         mainStackView.addArrangedSubview(avatarSelectionStackView)
+        
+        avatarSelectionStackView.addArrangedSubview(selectYourAvatarLabel)
     }
     
     func setupConstraints() {
@@ -100,7 +91,7 @@ class AvatarSelectionView: UIView {
         NSLayoutConstraint.activate([
             mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             mainStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }

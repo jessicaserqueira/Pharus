@@ -8,11 +8,13 @@ import UIKit
 
 class AvatarSelectionViewController: UIViewController {
     
-    var myCollectionView:UICollectionView?
+    // MARK: - Properties
+    
     var coordinator: AvatarSelectionCoordinator?
     private var customView: AvatarSelectionView
+    private var avatarSelectionCollectionView: UICollectionView?
     
-    // MARK: - Properties
+    //MARK: - Initializer
     
     init() {
         self.customView = AvatarSelectionView()
@@ -22,6 +24,8 @@ class AvatarSelectionViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Life Cycle
     
     override func loadView() {
         super.loadView()
@@ -42,26 +46,39 @@ class AvatarSelectionViewController: UIViewController {
         setGradientBackground()
     }
     
+    //MARK: - Functions
+    
     func setNavigationBar() {
         self.title = "Avatar"
         self.navigationController?.title = ""
     }
     
     func setupCollectionView() {
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         layout.itemSize = CGSize(width: 120, height: 120)
         layout.minimumInteritemSpacing = 32
         layout.minimumLineSpacing = 32
-        myCollectionView = UICollectionView(frame: customView.mainStackView.frame, collectionViewLayout: layout)
-        myCollectionView?.showsHorizontalScrollIndicator = false
-        myCollectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
-        myCollectionView?.backgroundColor = .clear
         
-        myCollectionView?.dataSource = self
-        myCollectionView?.delegate = self
+        avatarSelectionCollectionView = UICollectionView(
+            frame: customView.mainStackView.frame,
+            collectionViewLayout: layout
+        )
         
-        customView.mainStackView.addArrangedSubview(myCollectionView ?? UICollectionView())
+        avatarSelectionCollectionView?.showsHorizontalScrollIndicator = false
+        avatarSelectionCollectionView?.register(
+            UICollectionViewCell.self,
+            forCellWithReuseIdentifier: K.CellReuseIdentifiers.avatarSelection
+        )
+        avatarSelectionCollectionView?.backgroundColor = .clear
+        
+        avatarSelectionCollectionView?.dataSource = self
+        avatarSelectionCollectionView?.delegate = self
+        
+        customView.mainStackView.addArrangedSubview(
+            avatarSelectionCollectionView ?? UICollectionView()
+        )
     }
 }
 
@@ -71,8 +88,15 @@ extension AvatarSelectionViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath)
-        myCell.addSubview(UIImageView(image: UIImage.images.avatars.circleImage.avatars[indexPath.row]))
+        let myCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: K.CellReuseIdentifiers.avatarSelection,
+            for: indexPath
+        )
+        
+        let avatarImage = UIImage.images.avatars.circleImage.avatars[indexPath.row]
+        let avatarImageView = UIImageView(image: avatarImage)
+        
+        myCell.addSubview(avatarImageView)
         return myCell
     }
 }
@@ -80,7 +104,7 @@ extension AvatarSelectionViewController: UICollectionViewDataSource {
 extension AvatarSelectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("User tapped on item \(indexPath.row)")
+        customView.avatarScreenImageView.image = UIImage.images.avatars.fullImage.avatars[indexPath.row]
     }
 }
 
