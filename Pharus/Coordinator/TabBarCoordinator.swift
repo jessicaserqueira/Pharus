@@ -56,13 +56,13 @@ class TabBarCoordinator: Coordinator {
             .navigationController
             .tabBarController?
             .tabBar
-            .backgroundColor = .tabbar.blueBackground
+            .backgroundColor = UIColor.tabbar.blueBackground
         
         studentHomeCoordinator
             .navigationController
             .tabBarController?
             .tabBar
-            .barTintColor = .tabbar.blueBackground
+            .barTintColor = UIColor.tabbar.blueBackground
         
         studentHomeCoordinator
             .navigationController
@@ -74,7 +74,7 @@ class TabBarCoordinator: Coordinator {
             .navigationController
             .tabBarController?
             .tabBar
-            .unselectedItemTintColor = .tabbar.whiteTint
+            .unselectedItemTintColor = UIColor.tabbar.whiteTint
         
         studentHomeCoordinator
             .navigationController

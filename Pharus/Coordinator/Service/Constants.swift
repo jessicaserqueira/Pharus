@@ -48,6 +48,8 @@ struct K {
         }
         
         struct Images {
+            static let checkImage = "checkImage"
+            static let rectangleImage = "rectangleImage"
             static let medalImage = "medalImage"
             static let companyLogoImage = "companyLogoImage"
             static let userImage = "userImage"

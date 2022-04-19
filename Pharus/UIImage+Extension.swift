@@ -38,6 +38,8 @@ extension UIImage {
     }
     
     struct images {
+        static let checkImage = UIImage(named: K.Assets.Images.checkImage)
+        static let rectangleImage = UIImage(systemName: K.Assets.Images.rectangleImage)
         static let medalImage = UIImage(named: K.Assets.Images.medalImage)
         static let companyLogoImage = UIImage(named: K.Assets.Images.companyLogoImage)
         static let userImage = UIImage(named: K.Assets.Images.userImage)

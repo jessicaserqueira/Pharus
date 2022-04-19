@@ -285,7 +285,7 @@ class StudentProjectDetailView: UIView {
             let taskView = ProjectTaskView(
                 task: task,
                 checkImage: UIImage.icons.checkmarkIcon ?? .defaultImage,
-                color: project.isSubscribed ? .black : .project.grayDisabledText
+                color: project.isSubscribed ? .black : UIColor.project.grayDisabledText
             )
             
             taskHelperStackView.addArrangedSubview(taskView)
@@ -296,7 +296,7 @@ class StudentProjectDetailView: UIView {
     }
     
     private func configureUnsubscribedProject(_ project: Project) {
-        mentorReviewImageView.image = mentorReviewImageView.image?.withTintColor(.project.grayDisabledText)
+        mentorReviewImageView.image = mentorReviewImageView.image?.withTintColor(UIColor.project.grayDisabledText)
         rulesLabel.textColor = UIColor.project.grayDisabledText
         completedTasksLabel.textColor = UIColor.project.grayDisabledText
         taskTitleLabel.textColor = UIColor.project.grayDisabledText
@@ -304,7 +304,7 @@ class StudentProjectDetailView: UIView {
         uploadFilesButton.disable()
         
         for case let taskView as ProjectTaskView in tasksStackView.arrangedSubviews {
-            taskView.color = .project.grayDisabledText
+            taskView.color = UIColor.project.grayDisabledText
         }
     }
     
