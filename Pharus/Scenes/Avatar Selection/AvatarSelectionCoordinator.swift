@@ -21,14 +21,15 @@ class AvatarSelectionCoordinator: Coordinator {
     }
     
     func start() {
-        let studentAvatarViewController = AvatarSelectionViewController()
-        studentAvatarViewController.coordinator = self
-        navigationController.setNavigationBarHidden(false, animated: true)
+        let studentAvatarViewController = AvatarSelectionViewController(
+            coordinator: self
+        )
+        
         navigationController.pushViewController(studentAvatarViewController, animated: true)
     }
 }
 
 extension AvatarSelectionCoordinator: AvatarSelectionFlow {
     
-
+    
 }

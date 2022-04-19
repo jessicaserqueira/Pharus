@@ -20,22 +20,29 @@ class AvatarSelectionView: UIView {
         return scrollView
     }()
     
+    lazy var mainView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "StudentAvatarView.mainView"
+        return view
+    }()
+    
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 32
+        stackView.spacing = 48
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentAvatarView.avatarStackView"
         
         return stackView
     }()
     
-    lazy var avatarScreenImageView: UIImageView = {
+    lazy var mainAvatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.images.avatars.fullImage.avatar1
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "StudentAvatarView.avatarScreenImageView"
+        imageView.accessibilityIdentifier = "StudentAvatarView.MainAvatarImageView"
         
         return imageView
     }()
@@ -43,6 +50,7 @@ class AvatarSelectionView: UIView {
     lazy var avatarSelectionStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
+        stackView.spacing = 32
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentAvatarView.avatarSelectionStackView"
         
@@ -60,7 +68,7 @@ class AvatarSelectionView: UIView {
         
         return label
     }()
-        
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
@@ -74,25 +82,42 @@ class AvatarSelectionView: UIView {
     
     func configureSubviews() {
         addSubview(mainScrollView)
-        mainScrollView.addSubview(mainStackView)
+        mainScrollView.addSubview(mainView)
         
-        mainStackView.addArrangedSubview(avatarScreenImageView)
+        mainView.addSubview(mainStackView)
+        
+        mainStackView.addArrangedSubview(mainAvatarImageView)
         mainStackView.addArrangedSubview(avatarSelectionStackView)
         
         avatarSelectionStackView.addArrangedSubview(selectYourAvatarLabel)
     }
     
     func setupConstraints() {
-
         //Main Scroll View
         self.stretch(mainScrollView)
         
+        //Main View
+        self.stretch(mainView, to: mainScrollView)
+        mainView.center(in: mainScrollView)
+        NSLayoutConstraint.activate([
+            mainView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
+        ])
+        
         //Main Stack View
         NSLayoutConstraint.activate([
-            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            mainStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
+            mainStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor),
+            mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor),
+            mainStackView.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 20)
+        ])
+        
+        //Main Avatar Image View
+        NSLayoutConstraint.activate([
+            mainAvatarImageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/2.2)
+        ])
+        
+        //Select You Avatar Label
+        NSLayoutConstraint.activate([
+            selectYourAvatarLabel.heightAnchor.constraint(equalToConstant: 25)
         ])
     }
 }

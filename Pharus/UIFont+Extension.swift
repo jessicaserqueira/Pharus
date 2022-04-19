@@ -10,7 +10,7 @@ import UIKit
 //MARK: - Constants
 extension UIFont {
     
-    static let largeTitleBold = customFont(font: .montserrat, ofSize: .extraLarge, weight: .bold)
+    static let largeTitleBold = customFont(font: .montserrat, ofSize: .large, weight: .bold)
     static let largeTitleMedium = customFont(font: .montserrat, ofSize: .large, weight: .medium)
     static let mediumTitleMedium = customFont(font: .montserrat, ofSize: .medium, weight: .medium)
     static let mediumTitleBold = customFont(font: .montserrat, ofSize: .medium, weight: .bold)

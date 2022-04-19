@@ -10,14 +10,16 @@ class AvatarSelectionViewController: UIViewController {
     
     // MARK: - Properties
     
-    var coordinator: AvatarSelectionCoordinator?
+    private var coordinator: AvatarSelectionCoordinator
     private var customView: AvatarSelectionView
     private var avatarSelectionCollectionView: UICollectionView?
     
     //MARK: - Initializer
     
-    init() {
+    init(coordinator: AvatarSelectionCoordinator) {
+        self.coordinator = coordinator
         self.customView = AvatarSelectionView()
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -58,8 +60,8 @@ class AvatarSelectionViewController: UIViewController {
         layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         layout.itemSize = CGSize(width: 120, height: 120)
-        layout.minimumInteritemSpacing = 32
-        layout.minimumLineSpacing = 32
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 20
         
         avatarSelectionCollectionView = UICollectionView(
             frame: customView.mainStackView.frame,
@@ -71,14 +73,19 @@ class AvatarSelectionViewController: UIViewController {
             UICollectionViewCell.self,
             forCellWithReuseIdentifier: K.CellReuseIdentifiers.avatarSelection
         )
+        
         avatarSelectionCollectionView?.backgroundColor = .clear
         
         avatarSelectionCollectionView?.dataSource = self
         avatarSelectionCollectionView?.delegate = self
         
-        customView.mainStackView.addArrangedSubview(
+        customView.avatarSelectionStackView.addArrangedSubview(
             avatarSelectionCollectionView ?? UICollectionView()
         )
+        
+        NSLayoutConstraint.activate([
+            avatarSelectionCollectionView!.heightAnchor.constraint(equalToConstant: 130)
+        ])
     }
 }
 
@@ -104,7 +111,7 @@ extension AvatarSelectionViewController: UICollectionViewDataSource {
 extension AvatarSelectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        customView.avatarScreenImageView.image = UIImage.images.avatars.fullImage.avatars[indexPath.row]
+        customView.mainAvatarImageView.image = UIImage.images.avatars.fullImage.avatars[indexPath.row]
     }
 }
 
