@@ -47,7 +47,7 @@ class StudentAvatarView: UIView {
     
     lazy var avatarScreenImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage.images.avatarImage
+        imageView.image = UIImage.images.avatar1FullImage
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentAvatarView.avatarScreenImageView"

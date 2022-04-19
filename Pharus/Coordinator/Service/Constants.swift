@@ -48,13 +48,39 @@ struct K {
         }
         
         struct Images {
+            
+            struct Avatar {
+                
+                struct FullImage {
+                    static let avatar1FullImage = "avatar01FullImage"
+                    static let avatar2FullImage = "avatar02FullImage"
+                    static let avatar3FullImage = "avatar03FullImage"
+                    static let avatar4FullImage = "avatar04FullImage"
+                    static let avatar5FullImage = "avatar05FullImage"
+                    static let avatar6FullImage = "avatar06FullImage"
+                    static let avatar7FullImage = "avatar07FullImage"
+                    static let avatar8FullImage = "avatar08FullImage"
+                    static let avatar9FullImage = "avatar09FullImage"
+                    static let avatar10FullImage = "avatar10FullImage"
+                    static let avatar11FullImage = "avatar11FullImage"
+                    static let avatar12FullImage = "avatar12FullImage"
+                    static let avatar13FullImage = "avatar13FullImage"
+                    static let avatar14FullImage = "avatar14FullImage"
+                    static let avatar15FullImage = "avatar15FullImage"
+                    static let avatar16FullImage = "avatar16FullImage"
+                    static let avatar17FullImage = "avatar17FullImage"
+                    static let avatar18FullImage = "avatar18FullImage"
+                    static let avatar19FullImage = "avatar19FullImage"
+                    static let avatar20FullImage = "avatar20FullImage"
+                }
+                
+                struct CircleImage {
+                    
+                }
+            }
             static let companyLogoImage = "companyLogoImage"
             static let userImage = "userImage"
             static let appLogoImage = "PharusImage"
-            static let avatarImage = "avatar01FullImage"
-            static let avatar5FullImage = "avatar05FullImage"
-            static let avatar7FullImage = "avatar07FullImage"
-            static let avatar6FullImage = "avatar06FullImage"
             
             static let firstPlaceImage = "1stPlaceImage"
             static let secondPlaceImage = "2ndPlaceImage"
