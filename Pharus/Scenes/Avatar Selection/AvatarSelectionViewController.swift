@@ -95,7 +95,7 @@ extension AvatarSelectionViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let myCell = collectionView.dequeueReusableCell(
+        let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: K.CellReuseIdentifiers.avatarSelection,
             for: indexPath
         )
@@ -103,8 +103,8 @@ extension AvatarSelectionViewController: UICollectionViewDataSource {
         let avatarImage = UIImage.images.avatars.circleImage.avatars[indexPath.row]
         let avatarImageView = UIImageView(image: avatarImage)
         
-        myCell.addSubview(avatarImageView)
-        return myCell
+        cell.addSubview(avatarImageView)
+        return cell
     }
 }
 

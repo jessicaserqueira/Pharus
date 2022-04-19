@@ -69,6 +69,8 @@ class AvatarSelectionView: UIView {
         return label
     }()
     
+    //MARK: - Initializer
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
@@ -79,6 +81,8 @@ class AvatarSelectionView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Functions
     
     func configureSubviews() {
         addSubview(mainScrollView)
