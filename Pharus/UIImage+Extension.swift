@@ -38,13 +38,22 @@ extension UIImage {
     }
     
     struct images {
-        static let checkImage = UIImage(named: K.Assets.Images.checkImage)
-        static let rectangleImage = UIImage(systemName: K.Assets.Images.rectangleImage)
-        static let medalImage = UIImage(named: K.Assets.Images.medalImage)
         static let companyLogoImage = UIImage(named: K.Assets.Images.companyLogoImage)
         static let userImage = UIImage(named: K.Assets.Images.userImage)
-        static let thirdPlaceImage = UIImage(named: K.Assets.Images.thirdPlaceImage)
         static let appLogoImage = UIImage(named: K.Assets.Images.appLogoImage)
         static let avatarImage = UIImage(named: K.Assets.Images.avatarImage)
+        static let avatar6Image = UIImage(named: K.Assets.Images.avatar6Image)
+        
+        static let firstPlaceImage = UIImage(named: K.Assets.Images.firstPlaceImage)
+        static let secondPlaceImage = UIImage(named: K.Assets.Images.secondPlaceImage)
+        static let thirdPlaceImage = UIImage(named: K.Assets.Images.thirdPlaceImage)
+        static let fourthPlaceImage = UIImage(named: K.Assets.Images.fourthPlaceImage)
+        static let fifthPlaceImage = UIImage(named: K.Assets.Images.fifthPlaceImage)
+        
+        static let firstPlaceMedalImage = UIImage(named: K.Assets.Images.firstPlaceMedalImage)
+        static let secondPlaceMedalImage = UIImage(named: K.Assets.Images.secondPlaceMedalImage)
+        static let thirdPlaceMedalImage = UIImage(named: K.Assets.Images.thirdPlaceMedalImage)
+        static let fourthPlaceMedalImage = UIImage(named: K.Assets.Images.fourthPlaceMedalImage)
+        static let fifthPlaceMedalImage = UIImage(named: K.Assets.Images.fifthPlaceMedalImage)
     }
 }

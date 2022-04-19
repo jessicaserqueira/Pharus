@@ -48,14 +48,23 @@ struct K {
         }
         
         struct Images {
-            static let checkImage = "checkImage"
-            static let rectangleImage = "rectangleImage"
-            static let medalImage = "medalImage"
             static let companyLogoImage = "companyLogoImage"
             static let userImage = "userImage"
-            static let thirdPlaceImage = "thirdPlaceImage"
             static let appLogoImage = "PharusImage"
             static let avatarImage = "AvatarScreenImage"
+            static let avatar6Image = "avatar6"
+            
+            static let firstPlaceImage = "1stPlaceImage"
+            static let secondPlaceImage = "2ndPlaceImage"
+            static let thirdPlaceImage = "3rdPlaceImage"
+            static let fourthPlaceImage = "4thPlaceImage"
+            static let fifthPlaceImage = "5thPlaceImage"
+            
+            static let firstPlaceMedalImage = "1stPlaceMedalImage"
+            static let secondPlaceMedalImage = "2ndPlaceMedalImage"
+            static let thirdPlaceMedalImage = "3rdPlaceMedalImage"
+            static let fourthPlaceMedalImage = "4thPlaceMedalImage"
+            static let fifthPlaceMedalImage = "5thPlaceMedalImage"
         }
     }
     
@@ -63,4 +72,3 @@ struct K {
         static let projectDateFormat = "dd/MM/yyyy"
     }
 }
-

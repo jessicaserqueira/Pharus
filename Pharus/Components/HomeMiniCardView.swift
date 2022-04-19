@@ -35,7 +35,7 @@ class StudentHomeMiniCardView: UIView {
     
     lazy var cardIconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: K.Assets.Images.medalImage)
+        imageView.image = .images.fifthPlaceMedalImage
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentHomeMiniCardView.cardIconImageView"
         return imageView
