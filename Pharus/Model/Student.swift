@@ -4,7 +4,6 @@
 //
 //  Created by Victor Colen on 22/03/22.
 //
-
 import Foundation
 
 // MARK: - Student
@@ -29,6 +28,7 @@ struct Medals: Codable {
 struct Project: Codable {
     let id, name: String
     let isSubscribed: Bool
+    let placement: Int?
     let isComplete: Bool
     let score: Float?
     let medal: String?
@@ -44,7 +44,7 @@ struct Project: Codable {
     enum CodingKeys: String, CodingKey {
         case id, name, isComplete, score, medal
         case projectDescription = "description"
-        case scoreDescription, startDate, endDate, school, rules, mentor, hasCompanyPartnership, company, companyPhoto, completionStatus, tasks, isSubscribed
+        case scoreDescription, startDate, endDate, school, rules, mentor, hasCompanyPartnership, company, companyPhoto, completionStatus, tasks, isSubscribed, placement
     }
 }
 
@@ -77,6 +77,7 @@ extension Student {
         id: "1",
         name: "El Projeto",
         isSubscribed: true,
+        placement: 2,
         isComplete: false,
         score: 100,
         medal: "diamond",
