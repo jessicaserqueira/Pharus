@@ -51,6 +51,12 @@ class StudentProjectsViewController: UIViewController {
         self.navigationController?.title = ""
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setGradientBackground()
+    }
+    
     func setupTableView() {
         tableView.register(StudentProjectCell.self,
                            forCellReuseIdentifier: K.CellReuseIdentifiers.userProjects)

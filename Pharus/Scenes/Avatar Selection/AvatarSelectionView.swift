@@ -7,14 +7,7 @@
 
 import UIKit
 
-protocol AvatarSelectionDelegate: AnyObject{
-    
-    func selectYourAvatar()
-}
-
 class AvatarSelectionView: UIView {
-    
-    weak var delegate: AvatarSelectionDelegate?
     
     //MARK: - Views
     
@@ -26,7 +19,7 @@ class AvatarSelectionView: UIView {
         
         return scrollView
     }()
-        
+    
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -90,27 +83,17 @@ class AvatarSelectionView: UIView {
     }
     
     func configureSubviews() {
-        
         addSubview(mainScrollView)
         mainScrollView.addSubview(mainStackView)
         
         mainStackView.addArrangedSubview(avatarScreenImageView)
         mainStackView.addArrangedSubview(selectYourAvatarLabel)
-        mainStackView.addArrangedSubview(avatarScrollView)
-        
-        avatarScrollView.addSubview(avatarSelectionStackView)
-        
-        for avatar in UIImage.images.avatars.circleImage.avatars {
-            let avatarImage = UIImageView()
-            avatarImage.image = avatar
-                        
-            avatarSelectionStackView.addArrangedSubview(avatarImage)
-            avatarImage.widthAnchor.constraint(equalToConstant: 120).isActive = true
-            avatarImage.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        }
+        mainStackView.addArrangedSubview(avatarSelectionStackView)
     }
+    
     func setupConstraints() {
-        
+
+        //Main Scroll View
         self.stretch(mainScrollView)
         
         //Main Stack View
@@ -120,16 +103,5 @@ class AvatarSelectionView: UIView {
             mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
-        
-        //Select Avatar Stack View
-        self.stretch(avatarSelectionStackView, to: avatarScrollView)
-        
-        //Avatar Scroll View
-        avatarScrollView.heightAnchor.constraint(equalToConstant: 120).isActive = true
-    }
-}
-extension AvatarSelectionView: AvatarSelectionDelegate {
-    func selectYourAvatar() {
-        delegate?.selectYourAvatar()
     }
 }

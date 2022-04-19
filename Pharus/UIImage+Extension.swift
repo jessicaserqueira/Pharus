@@ -44,6 +44,10 @@ extension UIImage {
         
         struct avatars {
             
+            static let avatarsDict: [UIImage : UIImage] = [
+                (.images.avatars.circleImage.avatar1 ?? .defaultImage) : .images.avatars.fullImage.avatar1 ?? .defaultImage
+            ]
+            
             struct fullImage {
                 static let avatar1 = UIImage(named: K.Assets.Images.Avatar.FullImage.avatar1)
                 static let avatar2 = UIImage(named: K.Assets.Images.Avatar.FullImage.avatar2)

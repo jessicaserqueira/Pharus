@@ -45,12 +45,18 @@ class StudentRankingProjectsViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        view.backgroundColor = .white
+        tableView.backgroundColor = .clear
     }
     
     func setNavigationBar() {
         self.title = "Seus Rankings"
         self.navigationController?.title = ""
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setGradientBackground()
     }
     
     func setupTableView() {
@@ -59,6 +65,7 @@ class StudentRankingProjectsViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.allowsSelection = false
         
         tableView.separatorColor = .clear
         
@@ -90,6 +97,7 @@ extension StudentRankingProjectsViewController: UITableViewDataSource {
         
         cell.configureCell(using: project)
         cell.mainView.layer.cornerRadius = 16
+        cell.backgroundColor = .clear
         
         return cell
     }
