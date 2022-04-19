@@ -75,7 +75,26 @@ struct K {
                 }
                 
                 struct CircleImage {
-                    
+                    static let avatar1CircleImage = "avatar01CircleImage"
+                    static let avatar2CircleImage = "avatar02CircleImage"
+                    static let avatar3CircleImage = "avatar03CircleImage"
+                    static let avatar4CircleImage = "avatar04CircleImage"
+                    static let avatar5CircleImage = "avatar05CircleImage"
+                    static let avatar6CircleImage = "avatar06CircleImage"
+                    static let avatar7CircleImage = "avatar07CircleImage"
+                    static let avatar8CircleImage = "avatar08CircleImage"
+                    static let avatar9CircleImage = "avatar09CircleImage"
+                    static let avatar10CircleImage = "avatar10CircleImage"
+                    static let avatar11CircleImage = "avatar11CircleImage"
+                    static let avatar12CircleImage = "avatar12CircleImage"
+                    static let avatar13CircleImage = "avatar13CircleImage"
+                    static let avatar14CircleImage = "avatar14CircleImage"
+                    static let avatar15CircleImage = "avatar15CircleImage"
+                    static let avatar16CircleImage = "avatar16CircleImage"
+                    static let avatar17CircleImage = "avatar17CircleImage"
+                    static let avatar18CircleImage = "avatar18CircleImage"
+                    static let avatar19CircleImage = "avatar19CircleImage"
+                    static let avatar20CircleImage = "avatar20CircleImage"
                 }
             }
             static let companyLogoImage = "companyLogoImage"
