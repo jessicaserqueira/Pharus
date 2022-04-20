@@ -101,7 +101,7 @@ class ProjectScheduleView: UIView {
         
         if project.isComplete {
             iconImageView.image = UIImage.icons.checkIcon?.withTintColor(.black)
-            textLabel.text = "Concluído!"
+            textLabel.text = "Feito!"
             mainView.backgroundColor = UIColor.projectSchedule.greenBackground
         } else {
             let dateFormatter = DateFormatter()

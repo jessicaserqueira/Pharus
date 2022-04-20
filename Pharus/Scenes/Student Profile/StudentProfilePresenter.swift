@@ -13,16 +13,20 @@ protocol StudentProfilePresenterProtocol {
 
 class StudentProfilePresenter {
     
-    var coordinator: StudentProfileFlow
+    var coordinator: StudentProfileCoordinator
     
-    init(coordinator: StudentProfileFlow) {
+    init(coordinator: StudentProfileCoordinator) {
         self.coordinator = coordinator
     }
 
 }
 
-extension StudentProfilePresenter: StudentProfilePresenterProtocol{
+extension StudentProfilePresenter: StudentProfilePresenterProtocol {
     func showStudentProfile() {
         coordinator.showStudentProfile()
+    }
+    
+    func showLogoutAlert() {
+        coordinator.showLogOutAlert()
     }
 }

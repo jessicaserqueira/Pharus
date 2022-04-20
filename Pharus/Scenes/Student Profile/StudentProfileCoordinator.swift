@@ -46,4 +46,15 @@ extension StudentProfileCoordinator: StudentProfileFlow {
     func showStudentProfile() {
    
     }
+    
+    func showLogOutAlert() {
+        let logoutAlertView = LogoutAlertView()
+        
+        let logoutAlertCoordinator = LogoutAlertCoordinator(
+            navigationController: navigationController,
+            alertView: logoutAlertView
+        )
+        
+        coordinate(to: logoutAlertCoordinator)
+    }
 }
