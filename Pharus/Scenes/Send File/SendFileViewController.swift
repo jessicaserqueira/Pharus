@@ -2,12 +2,13 @@
 //  SendFileViewController.swift
 //  Pharus
 //
-//  Created by Victor Colen on 06/04/22.
+//  Created by Jéssica Serqueira on 06/04/22.
 //
 
 import UIKit
+import UniformTypeIdentifiers
 
-class SendFileViewController: UIViewController {
+class SendFileViewController: UIViewController, UIDocumentPickerDelegate {
     
     let sendFileView = SendFileView()
     let presenter: SendFilePresenter
@@ -23,7 +24,7 @@ class SendFileViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-        
+    
     override func loadView() {
         super.loadView()
         
@@ -33,6 +34,27 @@ class SendFileViewController: UIViewController {
 }
 
 extension SendFileViewController: SendFileDelegate {
+     func uploadButtonTapped() {
+        presenter.uploadFile()
+        let suportFiles: [UTType] =
+            [
+                UTType.pdf,
+                UTType.data,
+                UTType.jpeg
+            ]
+        
+        let controller = UIDocumentPickerViewController(forOpeningContentTypes: suportFiles, asCopy: true)
+        controller.delegate = self
+        controller.allowsMultipleSelection = false
+        present(controller, animated: true, completion: nil)
+    }
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        if let filename = urls.first?.lastPathComponent {
+            print(filename)
+            sendFileView.fileNameLabel.text = filename
+        }
+    }
     func sendFileButtonTapped() {
         presenter.sendFile()
     }

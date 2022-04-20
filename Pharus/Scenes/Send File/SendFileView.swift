@@ -8,14 +8,18 @@
 import UIKit
 
 protocol SendFileDelegate: AnyObject {
+    func uploadButtonTapped()
     func sendFileButtonTapped()
 }
 
+
 class SendFileView: UIView {
+    
     
     //MARK: - Properties
     
     weak var delegate: SendFileDelegate?
+  
     
     //MARK: - Views
     
@@ -72,6 +76,10 @@ class SendFileView: UIView {
     
     lazy var uploadFileStackView: UIStackView = {
         let stackView = UIStackView()
+        stackView.setOnClickListener {
+            self.uploadButtonTapped()
+            
+        }
         stackView.axis = .vertical
         stackView.spacing = 3
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -94,15 +102,16 @@ class SendFileView: UIView {
         return imageView
     }()
     
+    
     lazy var uploadMessageLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Selecione os arquivos para enviar"
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "SendFileView.uploadMessageLabel"
-        return label
-    }()
+         let label = UILabel()
+         label.text = "Selecione os arquivos para enviar"
+         label.textAlignment = .center
+         label.numberOfLines = 0
+         label.translatesAutoresizingMaskIntoConstraints = false
+         label.accessibilityIdentifier = "SendFileView.uploadMessageLabel"
+         return label
+     }()
     
     lazy var fileHelperView: UIView = {
         let view = UIView()
@@ -132,7 +141,7 @@ class SendFileView: UIView {
     
     lazy var fileNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Tarefa realizada.jpg"
+        label.text = ""
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.fileNameLabel"
         return label
@@ -262,8 +271,13 @@ class SendFileView: UIView {
 
 //MARK: - Actions
 
-extension SendFileView {
+extension SendFileView: SendFileDelegate {
+    func uploadButtonTapped() {
+        delegate?.uploadButtonTapped()
+    }
+
     func sendFileButtonTapped() {
         delegate?.sendFileButtonTapped()
     }
 }
+

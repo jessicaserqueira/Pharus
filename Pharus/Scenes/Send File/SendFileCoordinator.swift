@@ -8,6 +8,7 @@
 import UIKit
 
 protocol SendFileFlow {
+    func showUploadFile()
     func showFileSentAlert()
 }
 
@@ -34,6 +35,10 @@ class SendFileCoordinator: Coordinator {
 }
 
 extension SendFileCoordinator: SendFileFlow {
+    func showUploadFile() {
+     
+    }
+
     func showFileSentAlert() {
         let alertView = OneButtonAlertView(
             message: "Arquivo enviado com sucesso!",
@@ -47,6 +52,6 @@ extension SendFileCoordinator: SendFileFlow {
         
         navigationController.topViewController?.dismiss(animated: true)
         coordinate(to: alertCoordinator)
-    }
+}
 }
 
