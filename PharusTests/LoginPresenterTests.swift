@@ -1,6 +1,5 @@
 //
 //  LoginFormValidatorTests.swift
-//  LoginFormValidatorTests
 //
 //  Created by Victor Colen on 28/03/22.
 //
