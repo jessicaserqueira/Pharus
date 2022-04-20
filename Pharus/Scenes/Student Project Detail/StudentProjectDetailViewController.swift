@@ -46,7 +46,7 @@ class StudentProjectDetailViewController: UIViewController {
     func setNavigationBar() {
         self.title = project.name
         
-        var backButtonImage = UIImage(named: K.Assets.Icons.backButtonIcon)
+        var backButtonImage = UIImage(named: K.Assets.Icons.backArrowIcon)
         backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
                                                                  green: 0.153,
                                                                  blue: 0.153,

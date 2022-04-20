@@ -87,19 +87,50 @@ class TabBarCoordinator: Coordinator {
             .tabBarItem
             .image = UIImage.icons.homeTabBarIcon
         
-        studentHomeCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.homeTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
+        studentHomeCoordinator
+            .navigationController
+            .tabBarItem
+            .selectedImage = UIImage.icons.homeTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
         
-        studentProjectsCoordinator.navigationController.tabBarItem.image = UIImage.icons.projecsTabBarIcon
-        studentProjectsCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.projecsTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
+        studentProjectsCoordinator
+            .navigationController
+            .tabBarItem
+            .image = UIImage.icons.projecsTabBarIcon
         
-        studentProjectsRankingCoordinator.navigationController.tabBarItem.image = UIImage.icons.rankingTabBarIcon
-        studentProjectsRankingCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.rankingTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
+        studentProjectsCoordinator
+            .navigationController
+            .tabBarItem
+            .selectedImage = UIImage.icons.projecsTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
         
-        studentAvatarCoordinator.navigationController.tabBarItem.image = UIImage.icons.avatarTabBarIcon
-        studentAvatarCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.avatarTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
+        studentProjectsRankingCoordinator
+            .navigationController
+            .tabBarItem
+            .image = UIImage.icons.rankingTabBarIcon
         
-        studentProfileCoordinator.navigationController.tabBarItem.image = UIImage.icons.profileTabBarIcon
-        studentProfileCoordinator.navigationController.tabBarItem.selectedImage = UIImage.icons.profileTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
+        studentProjectsRankingCoordinator
+            .navigationController
+            .tabBarItem
+            .selectedImage = UIImage.icons.rankingTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
+        
+        studentAvatarCoordinator
+            .navigationController
+            .tabBarItem
+            .image = UIImage.icons.avatarTabBarIcon
+        
+        studentAvatarCoordinator
+            .navigationController
+            .tabBarItem
+            .selectedImage = UIImage.icons.avatarTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
+        
+        studentProfileCoordinator
+            .navigationController
+            .tabBarItem
+            .image = UIImage.icons.profileTabBarIcon
+        
+        studentProfileCoordinator
+            .navigationController
+            .tabBarItem
+            .selectedImage = UIImage.icons.profileTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
         
         navigationController.setViewControllers([tabBarViewController], animated: true)
     }
@@ -136,8 +167,8 @@ class TabBarCoordinator: Coordinator {
         return coordinator
     }
     
-    private func makeStudentAvatarCoordinator() -> StudentAvatarCoordinator {
-        let coordinator = StudentAvatarCoordinator(
+    private func makeStudentAvatarCoordinator() -> AvatarSelectionCoordinator {
+        let coordinator = AvatarSelectionCoordinator(
             navigationController: UINavigationController()
         )
         

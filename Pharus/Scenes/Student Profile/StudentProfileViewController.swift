@@ -10,21 +10,41 @@ import UIKit
 class StutentProfileViewController: UIViewController {
     
     var coordinator: StudentProfileCoordinator
-    var studentProfileView = StudentProfileView()
+    var studentProfileView: StudentProfileView?
     var presenter: StudentProfilePresenter
+    var student: Student?
+    
+    init(
+        coordinator: StudentProfileCoordinator,
+        presenter: StudentProfilePresenter,
+        student: Student
+    ) {
+        self.coordinator = coordinator
+        self.presenter = presenter
+        self.student = student
+        
+        super.init(nibName: nil, bundle: nil)
+    }
     
     override func loadView() {
         super.loadView()
-       
+        
         self.view = studentProfileView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        studentProfileView.delegate = self
+        if let student = student {
+            studentProfileView =  StudentProfileView(student: student)
+        }
         setNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        setGradientBackground()
     }
     
     init(
@@ -45,47 +65,17 @@ class StutentProfileViewController: UIViewController {
         self.title = "Perfil"
         self.navigationController?.title = ""
         
-        var logoutButtonImage = UIImage(named: K.Assets.Icons.logoutButtonIcon)
-        logoutButtonImage = logoutButtonImage?.withTintColor(UIColor(red: 0.153,
-                                                                     green: 0.153,
-                                                                     blue: 0.153,
-                                                                     alpha: 1),
-                                                             renderingMode: .alwaysOriginal)
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: logoutButtonImage,
-                                                                 style: .plain,
-                                                                 target: self,
-                                                                 action: #selector(logoutButtonPressed))
-        
-        var backButtonImage = UIImage(named: K.Assets.Icons.backButtonIcon)
-        backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
-                                                                 green: 0.153,
-                                                                 blue: 0.153,
-                                                                 alpha: 1),
-                                                         renderingMode: .alwaysOriginal)
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
-                                                                style: .plain,
-                                                                target: self,
-                                                                action: #selector(backButtonPressed))
-        
+        let logoutIcon = UIImage.icons.logOutIcon?.withRenderingMode(.alwaysOriginal)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: logoutIcon,
+            style: .plain,
+            target: self,
+            action: #selector(logoutTapped)
+        )
     }
     
-    //Implementar quando o fluxo estiver pronto
-    @objc func backButtonPressed() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    //Implementar quando o fluxo estiver pronto
-    @objc func logoutButtonPressed() {
-        self.navigationController?.popViewController(animated: true)
+    //MARK: - Implementar
+    @objc func logoutTapped() {
+        print("logout")
     }
 }
-
-extension StutentProfileViewController: StudentProfileDelegate {
-  
-    
-}
-
-
-

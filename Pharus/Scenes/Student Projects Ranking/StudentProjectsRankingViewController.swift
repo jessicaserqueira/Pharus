@@ -4,7 +4,6 @@
 //
 //  Created by Victor Colen on 04/04/22.
 //
-
 import UIKit
 
 class StudentRankingProjectsViewController: UIViewController {
@@ -46,56 +45,18 @@ class StudentRankingProjectsViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        view.backgroundColor = .white
+        tableView.backgroundColor = .clear
     }
     
     func setNavigationBar() {
         self.title = "Seus Rankings"
         self.navigationController?.title = ""
-        
-        let userImage = UIImage(named: K.Assets.Images.userImage)!
-        let userProfileButtonView = createUserProfileButton(image: userImage)
-        
-        let userPictureBarButton = UIBarButtonItem()
-        userPictureBarButton.customView = userProfileButtonView
-        
-        self.navigationItem.rightBarButtonItem = userPictureBarButton
-        
-        var backButtonImage = UIImage(named: K.Assets.Icons.backButtonIcon)
-        backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
-                                                                 green: 0.153,
-                                                                 blue: 0.153,
-                                                                 alpha: 1),
-                                                         renderingMode: .alwaysOriginal)
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
-                                                                style: .plain,
-                                                                target: self,
-                                                                action: #selector(backButtonPressed))
-        
     }
     
-    func createUserProfileButton(image: UIImage) -> UIButton {
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.clipsToBounds = true
-        button.setImage(image, for: .normal)
-        button.addTarget(self,
-                         action: #selector(profilePicTapped),
-                         for: .touchUpInside)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        return button
-    }
-    
-    //Implementar quando o fluxo estiver pronto
-    @objc func backButtonPressed() {
-        print("Back button pressed")
-    }
-    
-    //Implementar quando a tela de usuário estiver pronta
-    @objc func profilePicTapped() {
-        print("Profile Picture pressed")
+        setGradientBackground()
     }
     
     func setupTableView() {
@@ -104,6 +65,7 @@ class StudentRankingProjectsViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.allowsSelection = false
         
         tableView.separatorColor = .clear
         
@@ -121,7 +83,7 @@ class StudentRankingProjectsViewController: UIViewController {
 extension StudentRankingProjectsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        480
+        502
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -133,10 +95,9 @@ extension StudentRankingProjectsViewController: UITableViewDataSource {
                                                  for: indexPath) as! StudentProjectRankingCell
         let project = projects[indexPath.row]
         
-        cell.configureSubviews()
-        cell.setupConstraints()
         cell.configureCell(using: project)
         cell.mainView.layer.cornerRadius = 16
+        cell.backgroundColor = .clear
         
         return cell
     }
@@ -145,4 +106,3 @@ extension StudentRankingProjectsViewController: UITableViewDataSource {
 extension StudentRankingProjectsViewController: UITableViewDelegate {
     
 }
-

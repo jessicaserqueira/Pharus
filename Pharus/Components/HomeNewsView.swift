@@ -21,7 +21,7 @@ class HomeNewsView: UIView {
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 40
+        stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "HomeNewsView.mainStackView"
         return stackView
@@ -54,6 +54,7 @@ class HomeNewsView: UIView {
         let label = UILabel()
         label.text = "A empresa XPTO, em parceria com a escola, lançou o projeto Voluntários Digitais. Dá uma olhadinha lá, quem sabe você se identifica com a proposta!"
         label.numberOfLines = 0
+        label.textAlignment = .justified
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "HomeNewsView.descriptionLabel"
         return label
