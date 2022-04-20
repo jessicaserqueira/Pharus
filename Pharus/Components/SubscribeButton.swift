@@ -51,7 +51,7 @@ class SubscribeButton: UIButton {
             for: .normal
         )
         
-        titleLabel?.font = UIFont.smallButton
+        titleLabel?.font = UIFont.smallButtonSemiBold
         backgroundColor = .clear
         contentEdgeInsets = UIEdgeInsets(top: 0.0, left: 16.0, bottom: 0.0, right: 16.0)
         

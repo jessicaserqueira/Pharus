@@ -27,7 +27,7 @@ struct K {
             static let clockIcon = "clockIcon"
             static let rulesIcon = "rulesIcon"
             static let feedbackIcon = "feedbackIcon"
-            static let xmarkIcon = "xmark"
+            static let xmarkIcon = "xmarkIcon"
             static let checkboxCheckmarkButtonIcon = "checkboxCheckmarkIcon"
             static let expandIcon = "ExpandIcon"
             static let envelopeIcon = "envelopeIcon"

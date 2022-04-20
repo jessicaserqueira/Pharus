@@ -46,5 +46,21 @@ extension StudentProjectsCoordinator: StudentProjectsFlow {
         
         self.coordinate(to: studentProjectDetailCoordinator)
     }
+    
+    func showSubscribeAlert(of project: Project) {
+        let alertView = TwoBigButtonsAlertView(
+            title: "Confirmar Inscrição",
+            message: "Você deseja se inscrever no projeto \"\(project.name)\"?",
+            mainButtonText: "Sim, quero me inscrever",
+            secondaryButtonText: "Não quero, mudei de idéia"
+        )
+        
+        let twoBigButtonsAlertCoordinator = TwoBigButtonsAlertCoordinator(
+            navigationController: navigationController,
+            alertView: alertView
+        )
+        
+        coordinate(to: twoBigButtonsAlertCoordinator)
+    }
 }
 

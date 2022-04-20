@@ -15,7 +15,7 @@ extension UIImage {
         static let clockIcon = UIImage(named: K.Assets.Icons.clockIcon)
         static let rulesIcon = UIImage(named: K.Assets.Icons.rulesIcon)
         static let feedbackIcon = UIImage(named: K.Assets.Icons.feedbackIcon)
-        static let xmarkIcon = UIImage(systemName: K.Assets.Icons.xmarkIcon)
+        static let xmarkIcon = UIImage(named: K.Assets.Icons.xmarkIcon)
         static let checkmarkIcon = UIImage(named: K.Assets.Icons.checkboxCheckmarkButtonIcon)
         static let expandIcon = UIImage(named: K.Assets.Icons.expandIcon)
         static let backArrowIcon = UIImage(named: K.Assets.Icons.backArrowIcon)

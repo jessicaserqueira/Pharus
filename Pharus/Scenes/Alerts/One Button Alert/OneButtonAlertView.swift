@@ -1,20 +1,21 @@
 //
-//  AlertView.swift
+//  OneButtonAlertView.swift
 //  Pharus
 //
 //  Created by Victor Colen on 07/04/22.
 //
+
 import UIKit
 
-protocol AlertViewDelegate: AnyObject {
+protocol OneButtonAlertViewDelegate: AnyObject {
     func closeButtonTapped()
 }
 
-class AlertView: UIView {
+class OneButtonAlertView: UIView {
     
     //MARK: - Properties
     
-    weak var delegate: AlertViewDelegate?
+    weak var delegate: OneButtonAlertViewDelegate?
     private var image: UIImage
     private var message: String
     
@@ -25,7 +26,7 @@ class AlertView: UIView {
         view.layer.cornerRadius = 16
         view.backgroundColor = UIColor.modal.yellowBackground
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "AlertView.mainView"
+        view.accessibilityIdentifier = "OneButtonAlertView.mainView"
         
         return view
     }()
@@ -36,7 +37,7 @@ class AlertView: UIView {
         stackView.backgroundColor = .clear
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "AlertView.mainStackView"
+        stackView.accessibilityIdentifier = "OneButtonAlertView.mainStackView"
         
         return stackView
     }()
@@ -44,7 +45,7 @@ class AlertView: UIView {
     private lazy var alertIconHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "AlertView.alertIconHelperView"
+        view.accessibilityIdentifier = "OneButtonAlertView.alertIconHelperView"
         
         return view
     }()
@@ -52,7 +53,7 @@ class AlertView: UIView {
     private lazy var alertIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "AlertView.alertIconImageView"
+        imageView.accessibilityIdentifier = "OneButtonAlertView.alertIconImageView"
         
         return imageView
     }()
@@ -60,7 +61,7 @@ class AlertView: UIView {
     private lazy var alertMessageHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "AlertView.alertMessageHelperView"
+        view.accessibilityIdentifier = "OneButtonAlertView.alertMessageHelperView"
         
         return view
     }()
@@ -70,7 +71,7 @@ class AlertView: UIView {
         label.textAlignment = .center
         label.font = .mediumTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "AlertView.alertMessageLabel"
+        label.accessibilityIdentifier = "OneButtonAlertView.alertMessageLabel"
         
         return label
     }()
@@ -84,7 +85,7 @@ class AlertView: UIView {
         }, for: .touchUpInside)
         
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.accessibilityIdentifier = "AlertView.actionButton"
+        button.accessibilityIdentifier = "OneButtonAlertView.actionButton"
         
         return button
     }()
@@ -174,7 +175,7 @@ class AlertView: UIView {
 
 //MARK: - Actions
 
-extension AlertView {
+extension OneButtonAlertView {
     func closeButtonTapped() {
         delegate?.closeButtonTapped()
     }

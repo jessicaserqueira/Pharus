@@ -76,6 +76,6 @@ class StutentProfileViewController: UIViewController {
     
     //MARK: - Implementar
     @objc func logoutTapped() {
-        print("logout")
+        presenter.showLogoutAlert()
     }
 }

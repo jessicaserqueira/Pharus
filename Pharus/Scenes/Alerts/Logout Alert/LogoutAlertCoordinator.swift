@@ -1,34 +1,37 @@
 //
-//  AlertCoordinator.swift
+//  LogoutAlertCoordinator.swift
 //  Pharus
 //
-//  Created by Victor Colen on 16/04/22.
+//  Created by Victor Colen on 20/04/22.
 //
 
 import UIKit
 
-protocol AlertFlow {
+protocol LogoutAlertFlow {
     func closeModal()
+    func logout()
 }
 
-class AlertCoordinator: Coordinator {
+class LogoutAlertCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var alertView: AlertView
+    var alertView: LogoutAlertView
     
-    init(navigationController: UINavigationController, alertView: AlertView) {
+    init(
+        navigationController: UINavigationController,
+        alertView: LogoutAlertView
+    ) {
         self.navigationController = navigationController
         self.alertView = alertView
     }
     
     func start() {
-        let alertPresenter = AlertPresenter(coordinator: self)
-        let alertViewController = AlertViewController(
+        let alertPresenter = LogoutAlertPresenter(coordinator: self)
+        let alertViewController = LogoutAlertViewController(
             alertView: alertView,
             coordinator: self,
-            presenter: alertPresenter
-        )
+            presenter: alertPresenter)
         
         alertViewController.modalPresentationStyle = .overFullScreen
         
@@ -36,10 +39,14 @@ class AlertCoordinator: Coordinator {
     }
 }
 
-extension AlertCoordinator: AlertFlow {
+extension LogoutAlertCoordinator: LogoutAlertFlow {
     func closeModal() {
         navigationController.topViewController?.dismiss(animated: true)
     }
+    
+    //implementar
+    func logout() {
+        closeModal()
+        print("fazer logout")
+    }
 }
-
-

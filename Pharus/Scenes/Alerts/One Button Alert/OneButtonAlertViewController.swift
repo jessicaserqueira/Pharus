@@ -1,21 +1,22 @@
 //
-//  AlerViewController.swift
+//  OneButtonAlertViewController.swift
 //  Pharus
 //
 //  Created by Victor Colen on 07/04/22.
 //
+
 import UIKit
 
-class AlertViewController: UIViewController {
+class OneButtonAlertViewController: UIViewController {
     
-    private var alertView: AlertView
-    private var coordinator: AlertCoordinator
-    private var presenter: AlertPresenter
+    private var alertView: OneButtonAlertView
+    private var coordinator: OneButtonAlertCoordinator
+    private var presenter: OneButtonAlertPresenter
     
     init(
-        alertView: AlertView,
-        coordinator: AlertCoordinator,
-        presenter: AlertPresenter
+        alertView: OneButtonAlertView,
+        coordinator: OneButtonAlertCoordinator,
+        presenter: OneButtonAlertPresenter
     ) {
         
         self.alertView = alertView
@@ -37,7 +38,7 @@ class AlertViewController: UIViewController {
     }
 }
 
-extension AlertViewController: AlertViewDelegate {
+extension OneButtonAlertViewController: OneButtonAlertViewDelegate {
     func closeButtonTapped() {
         presenter.closeModal()
     }
