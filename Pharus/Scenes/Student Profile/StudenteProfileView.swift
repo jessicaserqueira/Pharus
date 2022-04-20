@@ -7,17 +7,19 @@
 
 import UIKit
 
-protocol StudentProfileDelegate: AnyObject{
-    
-}
-
 class StudentProfileView: UIView {
     
-    weak var delegate: StudentProfileDelegate?
+    lazy var mainScrollView: UIScrollView = {
+        var scrollView = UIScrollView()
+        scrollView.clipsToBounds = true
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.accessibilityIdentifier = "StudentProfileView.mainScrollView"
+        return scrollView
+    }()
     
     lazy var mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .red
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProfileView.mainView"
         
@@ -27,30 +29,45 @@ class StudentProfileView: UIView {
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.distribution = .equalSpacing
+        stackView.spacing = 88
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProfileView.mainStackView"
         
         return stackView
     }()
     
-    lazy var imageStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "StudentProfileView.imageStackView"
+    lazy var profileImageHelperView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "StudentProfileView.profileImageHelperView"
         
-        return stackView
+        return view
     }()
     
     lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage.images.userImage
+        imageView.image = UIImage.images.avatars.circleImage.avatar1
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "profileImageView.profileImageView"
+        imageView.accessibilityIdentifier = "StudentProfileView.profileImageView"
         
         return imageView
+    }()
+    
+    lazy var infoHelperView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "StudentProfileView.infoHelperView"
+        return view
+    }()
+    
+    lazy var infoStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 40
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "StudentProfileView.infoStackView"
+        return stackView
     }()
     
     convenience init(student: Student) {
@@ -70,11 +87,17 @@ class StudentProfileView: UIView {
     }
     
     func configureSubviews(with student: Student) {
-        addSubview(mainView)
-        mainView.addSubview(mainStackView)
+        addSubview(mainScrollView)
         
-        mainStackView.addArrangedSubview(imageStackView)
-        imageStackView.addArrangedSubview(profileImageView)
+        mainScrollView.addSubview(mainStackView)
+        
+        mainStackView.addArrangedSubview(profileImageHelperView)
+        
+        profileImageHelperView.addSubview(profileImageView)
+        
+        mainStackView.addArrangedSubview(infoHelperView)
+        
+        infoHelperView.addSubview(infoStackView)
         
         let studentInfo: KeyValuePairs<String, String> = [
             "Nome": student.firstName + student.lastName,
@@ -100,26 +123,39 @@ class StudentProfileView: UIView {
             stackView.addArrangedSubview(infoKeyLabel)
             stackView.addArrangedSubview(infoValueLabel)
             
-            mainStackView.addArrangedSubview(stackView)
+            infoStackView.addArrangedSubview(stackView)
         }
     }
     
     func setupConstraints() {
-        
-        //Main View
-        self.stretch(mainView)
-        
+        //Main Scroll View
+        self.stretch(mainScrollView)
+          
         //Main Stack View
+        self.stretch(mainStackView, to: mainScrollView, top: 30, bottom: -26)
         NSLayoutConstraint.activate([
-            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
-            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
-            mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,constant: 40),
-            mainStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -40)
+            mainStackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
         ])
         
-        //Image Stack View
+        //Info Helper View
         NSLayoutConstraint.activate([
-            imageStackView.heightAnchor.constraint(equalToConstant: 120),
+            infoHelperView.heightAnchor.constraint(equalToConstant: 480)
+        ])
+        
+        //Info Stack View
+        NSLayoutConstraint.activate([
+            infoStackView.leadingAnchor.constraint(equalTo: infoHelperView.leadingAnchor, constant: 40)
+        ])
+        
+        //Profile Image Helper View
+        NSLayoutConstraint.activate([
+            profileImageHelperView.heightAnchor.constraint(equalToConstant: 150)
+        ])
+        
+        //Profile Image View
+        profileImageView.center(in: profileImageHelperView)
+        NSLayoutConstraint.activate([
+            profileImageView.heightAnchor.constraint(equalToConstant: 120)
         ])
     }
 }

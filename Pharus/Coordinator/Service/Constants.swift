@@ -99,7 +99,6 @@ struct K {
                 }
             }
             static let companyLogoImage = "companyLogoImage"
-            static let userImage = "userImage"
             static let appLogoImage = "PharusImage"
             
             static let firstPlaceImage = "1stPlaceImage"

@@ -38,9 +38,14 @@ class StutentProfileViewController: UIViewController {
         if let student = student {
             studentProfileView =  StudentProfileView(student: student)
         }
-        studentProfileView!.delegate = self
         setNavigationBar()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setGradientBackground()
     }
     
     init(
@@ -60,48 +65,5 @@ class StutentProfileViewController: UIViewController {
     func setNavigationBar() {
         self.title = "Perfil"
         self.navigationController?.title = ""
-        
-        var logoutButtonImage = UIImage(named: K.Assets.Icons.logoutButtonIcon)
-        logoutButtonImage = logoutButtonImage?.withTintColor(UIColor(red: 0.153,
-                                                                     green: 0.153,
-                                                                     blue: 0.153,
-                                                                     alpha: 1),
-                                                             renderingMode: .alwaysOriginal)
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: logoutButtonImage,
-                                                                 style: .plain,
-                                                                 target: self,
-                                                                 action: #selector(logoutButtonPressed))
-        
-        var backButtonImage = UIImage(named: K.Assets.Icons.backButtonIcon)
-        backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
-                                                                 green: 0.153,
-                                                                 blue: 0.153,
-                                                                 alpha: 1),
-                                                         renderingMode: .alwaysOriginal)
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
-                                                                style: .plain,
-                                                                target: self,
-                                                                action: #selector(backButtonPressed))
-        
-    }
-    
-    //Implementar quando o fluxo estiver pronto
-    @objc func backButtonPressed() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    //Implementar quando o fluxo estiver pronto
-    @objc func logoutButtonPressed() {
-        self.navigationController?.popViewController(animated: true)
     }
 }
-
-extension StutentProfileViewController: StudentProfileDelegate {
-    
-    
-}
-
-
-
