@@ -10,19 +10,35 @@ import UIKit
 class StutentProfileViewController: UIViewController {
     
     var coordinator: StudentProfileCoordinator
-    var studentProfileView = StudentProfileView()
+    var studentProfileView: StudentProfileView?
     var presenter: StudentProfilePresenter
+    var student: Student?
+    
+    init(
+        coordinator: StudentProfileCoordinator,
+         presenter: StudentProfilePresenter,
+         student: Student
+    ) {
+        self.coordinator = coordinator
+        self.presenter = presenter
+        self.student = student
+        
+        super.init(nibName: nil, bundle: nil)
+    }
     
     override func loadView() {
         super.loadView()
-       
+        
         self.view = studentProfileView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        studentProfileView.delegate = self
+        if let student = student {
+            studentProfileView =  StudentProfileView(student: student)
+        }
+        studentProfileView!.delegate = self
         setNavigationBar()
         
     }
@@ -83,7 +99,7 @@ class StutentProfileViewController: UIViewController {
 }
 
 extension StutentProfileViewController: StudentProfileDelegate {
-  
+    
     
 }
 

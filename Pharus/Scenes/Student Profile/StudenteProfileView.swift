@@ -53,209 +53,55 @@ class StudentProfileView: UIView {
         return imageView
     }()
     
-    lazy var nameStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 10
-        stackView.distribution = .fillEqually
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "StudentProfileView.nameStackView"
+    convenience init(student: Student) {
+        self.init()
         
-        return stackView
-    }()
-    
-    lazy var nameTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Nome"
-        label.font = .boldSystemFont(ofSize: 16)
-        label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "StudentProfileView.nameTitleLabel"
-        
-        return label
-    }()
-    
-    lazy var nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Antonia Ferreira"
-        label.font = .systemFont(ofSize: 12)
-        label.textColor = .gray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "StudentProfileView.nameLabel"
-        
-        return label
-    }()
-    
-    lazy var emailStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 10
-        stackView.distribution = .fillEqually
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "StudentProfileView.emailStackView"
-        
-        return stackView
-    }()
-    
-    lazy var emailTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "E-mail"
-        label.font = .boldSystemFont(ofSize: 16)
-        label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "StudentProfileView.emailTitleLabel"
-        
-        return label
-    }()
-    
-    lazy var emailLabel: UILabel = {
-        let label = UILabel()
-        label.text = "antonia.ferreira@gmail.com"
-        label.font = .systemFont(ofSize: 12)
-        label.textColor = .gray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "StudentProfileView.emailLabel"
-        
-        return label
-    }()
-    
-    lazy var schoolStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 10
-        stackView.distribution = .fillEqually
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "StudentProfileView.schoolStackView"
-        
-        return stackView
-    }()
-    
-    lazy var schoolTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Escola"
-        label.font = .boldSystemFont(ofSize: 16)
-        label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "StudentProfileView.schoolTitleLabel"
-        
-        return label
-    }()
-    
-    lazy var schoolLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Escola Estadual João da Silva"
-        label.font = .systemFont(ofSize: 12)
-        label.textColor = .gray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "StudentProfileView.emailLabel"
-        
-        return label
-    }()
-    
-    lazy var schoolYearStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 10
-        stackView.distribution = .fillEqually
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "StudentProfileView.schoolYearStackView"
-        
-        return stackView
-    }()
-    
-    lazy var schoolYearTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Período Escolar"
-        label.font = .boldSystemFont(ofSize: 16)
-        label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "StudentProfileView.schoolYearTitleLabel"
-        
-        return label
-    }()
-    
-    lazy var schoolYearLabel: UILabel = {
-        let label = UILabel()
-        label.text = "7° ano"
-        label.font = .systemFont(ofSize: 12)
-        label.textColor = .gray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "StudentProfileView.schoolYearLabel"
-        
-        return label
-    }()
-    
-    lazy var cityStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 10
-        stackView.distribution = .fillEqually
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "StudentProfileView.cityStackView"
-        
-        return stackView
-    }()
-    
-    lazy var cityTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Cidade"
-        label.font = .boldSystemFont(ofSize: 16)
-        label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "StudentProfileView.cityTitleLabel"
-        
-        return label
-    }()
-    
-    lazy var cityLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Lavras, MG"
-        label.font = .systemFont(ofSize: 12)
-        label.textColor = .gray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "StudentProfileView.cityLabel"
-        
-        return label
-    }()
+        configureSubviews(with: student)
+        setupConstraints()
+    }
 
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
-        configureSubviews()
-        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureSubviews() {
+    func configureSubviews(with student: Student) {
         addSubview(mainView)
         mainView.addSubview(mainStackView)
         
         mainStackView.addArrangedSubview(imageStackView)
         imageStackView.addArrangedSubview(profileImageView)
         
-        mainStackView.addArrangedSubview(nameStackView)
-        nameStackView.addArrangedSubview(nameTitleLabel)
-        nameStackView.addArrangedSubview(nameLabel)
+        let studentInfo: KeyValuePairs<String, String> = [
+            "Nome": student.firstName + student.lastName,
+            "E-mail": student.email,
+            "Escola": student.school,
+            "Período Escolar": student.year,
+            "Cidade": student.city
+        ]
         
-        mainStackView.addArrangedSubview(emailStackView)
-        emailStackView.addArrangedSubview(emailTitleLabel)
-        emailStackView.addArrangedSubview(emailLabel)
-        
-        mainStackView.addArrangedSubview(schoolStackView)
-        schoolStackView.addArrangedSubview(schoolTitleLabel)
-        schoolStackView.addArrangedSubview(schoolLabel)
-        
-        mainStackView.addArrangedSubview(schoolYearStackView)
-        schoolYearStackView.addArrangedSubview(schoolYearTitleLabel)
-        schoolYearStackView.addArrangedSubview(schoolYearLabel)
-        
-        mainStackView.addArrangedSubview(cityStackView)
-        cityStackView.addArrangedSubview(cityTitleLabel)
-        cityStackView.addArrangedSubview(cityLabel)
-        
+        for info in studentInfo {
+            let stackView = UIStackView()
+            stackView.axis = .vertical
+            stackView.spacing = 18
+            
+            let infoKeyLabel = UILabel()
+            infoKeyLabel.text = info.key
+            infoKeyLabel.font = .mediumTitleBold
+            
+            let infoValueLabel = UILabel()
+            infoValueLabel.text = info.value
+            infoValueLabel.font = .smallBody
+            
+            stackView.addArrangedSubview(infoKeyLabel)
+            stackView.addArrangedSubview(infoValueLabel)
+            
+            mainStackView.addArrangedSubview(stackView)
+        }
     }
     
     func setupConstraints() {
@@ -274,9 +120,6 @@ class StudentProfileView: UIView {
         //Image Stack View
         NSLayoutConstraint.activate([
             imageStackView.heightAnchor.constraint(equalToConstant: 120),
-          
-           
         ])
-        
     }
 }
