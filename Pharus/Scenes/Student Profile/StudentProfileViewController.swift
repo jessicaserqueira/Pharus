@@ -39,7 +39,6 @@ class StutentProfileViewController: UIViewController {
             studentProfileView =  StudentProfileView(student: student)
         }
         setNavigationBar()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
