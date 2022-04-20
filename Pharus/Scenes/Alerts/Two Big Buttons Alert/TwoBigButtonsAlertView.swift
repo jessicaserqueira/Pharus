@@ -8,6 +8,7 @@
 import UIKit
 
 protocol TwoBigButtonsAlertViewDelegate: AnyObject {
+    func closeButtonTapped()
     func primaryButtonTapped()
     func secondaryButtonTapped()
 }
@@ -58,17 +59,20 @@ class TwoBigButtonsAlertView: UIView {
         return label
     }()
     
-    lazy var closeModalImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage.icons.xmarkIcon
-        imageView.tintColor = .black
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "TwoBigButtonsAlertView.closeModalImageView"
-        return imageView
+    lazy var closeModalButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage.icons.xmarkIcon, for: .normal)
+        button.addAction(UIAction { _ in
+            self.closeButtonTapped()
+        }, for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = "TwoBigButtonsAlertView.closeModalButton"
+        return button
     }()
     
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
+        label.font = .mediumBody
         label.text = "Você deseja se inscrever no projeto \"Algoritmo no seu dia?\""
         label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -142,7 +146,7 @@ class TwoBigButtonsAlertView: UIView {
         mainStackView.addArrangedSubview(titleStackView)
         
         titleStackView.addArrangedSubview(titleLabel)
-        titleStackView.addArrangedSubview(closeModalImageView)
+        titleStackView.addArrangedSubview(closeModalButton)
         
         mainStackView.addArrangedSubview(descriptionLabel)
         mainStackView.addArrangedSubview(primaryButton)
@@ -169,8 +173,8 @@ class TwoBigButtonsAlertView: UIView {
         self.stretch(mainStackView, to: mainView, top: 32, left: 16, bottom: -16, right: -13)
         //Close Modal Image View
         NSLayoutConstraint.activate([
-            closeModalImageView.heightAnchor.constraint(equalToConstant: 24),
-            closeModalImageView.widthAnchor.constraint(equalToConstant: 24)
+            closeModalButton.heightAnchor.constraint(equalToConstant: 24),
+            closeModalButton.widthAnchor.constraint(equalToConstant: 24)
         ])
     }
 }
@@ -178,6 +182,10 @@ class TwoBigButtonsAlertView: UIView {
 //MARK: - Actions
 
 extension TwoBigButtonsAlertView {
+    
+    func closeButtonTapped() {
+        delegate?.closeButtonTapped()
+    }
     func primaryButtonTapped() {
         delegate?.primaryButtonTapped()
     }

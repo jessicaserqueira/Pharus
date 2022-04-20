@@ -9,29 +9,46 @@ import UIKit
 
 class TwoBigButtonsAlertViewController: UIViewController {
     
-    private var alertView = TwoBigButtonsAlertView()
+    private var alertView: TwoBigButtonsAlertView
+    private var coordinator: TwoBigButtonsAlertCoordinator
+    private var presenter: TwoBigButtonsAlertPresenter
     
-//    init(
-//        alertView: OneButtonAlertView,
-//        coordinator: OneButtonAlertCoordinator,
-//        presenter: OneButtonAlertPresenter
-//    ) {
-//
-//        self.alertView = alertView
-//        self.coordinator = coordinator
-//        self.presenter = presenter
-//
-//        super.init(nibName: nil, bundle: nil)
-//    }
+    init(
+        alertView: TwoBigButtonsAlertView,
+        coordinator: TwoBigButtonsAlertCoordinator,
+        presenter: TwoBigButtonsAlertPresenter
+    ) {
+
+        self.alertView = alertView
+        self.coordinator = coordinator
+        self.presenter = presenter
+
+        super.init(nibName: nil, bundle: nil)
+    }
     
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        alertView.delegate = self
         self.view = alertView
+        
+    }
+}
+
+extension TwoBigButtonsAlertViewController: TwoBigButtonsAlertViewDelegate {
+    func closeButtonTapped() {
+        presenter.closeModal()
+    }
+    
+    func primaryButtonTapped() {
+        print("primerio botao")
+    }
+    
+    func secondaryButtonTapped() {
+        print("segundo botao")
     }
 }
 
