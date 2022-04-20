@@ -1,21 +1,22 @@
 //
-//  OneButtonAlertView.swift
+//  TwoBigButtonsAlertView.swift
 //  Pharus
 //
-//  Created by Victor Colen on 07/04/22.
+//  Created by Victor Colen on 20/04/22.
 //
 
 import UIKit
 
-protocol OneButtonAlertViewDelegate: AnyObject {
-    func closeButtonTapped()
+protocol TwoBigButtonsAlertViewDelegate: AnyObject {
+    func primaryButtonTapped()
+    func secondaryButtonTapped()
 }
 
-class OneButtonAlertView: UIView {
+class TwoBigButtonsAlertView: UIView {
     
     //MARK: - Properties
     
-    weak var delegate: OneButtonAlertViewDelegate?
+    weak var delegate: TwoBigButtonsAlertViewDelegate?
     private var image: UIImage
     private var message: String
     
@@ -81,7 +82,7 @@ class OneButtonAlertView: UIView {
         button.setTitle("Fechar", for: .normal)
         
         button.addAction(UIAction { _ in
-            self.closeButtonTapped()
+            self.primaryButtonTapped()
         }, for: .touchUpInside)
         
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -175,9 +176,14 @@ class OneButtonAlertView: UIView {
 
 //MARK: - Actions
 
-extension OneButtonAlertView {
-    func closeButtonTapped() {
-        delegate?.closeButtonTapped()
+extension TwoBigButtonsAlertView {
+    func primaryButtonTapped() {
+        delegate?.primaryButtonTapped()
+    }
+    
+    func secondaryButtonTapped() {
+        delegate?.secondaryButtonTapped()
     }
 }
+
 

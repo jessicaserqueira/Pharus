@@ -31,6 +31,8 @@
 		79735B64280ED78600D1067B /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79735B63280ED78600D1067B /* UIViewController+extension.swift */; };
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
 		79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */; };
+		7993C9A728102C2500526AF2 /* TwoBigButtonsAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A628102C2500526AF2 /* TwoBigButtonsAlertView.swift */; };
+		7993C9A928102E1800526AF2 /* SecondaryCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */; };
 		799768D027EA3B5F0057AFA7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* Student.swift */; };
 		79A2C775280C473F00B3159B /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2C774280C473F00B3159B /* SubscribeButton.swift */; };
 		79A2C777280C4A1700B3159B /* MainCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2C776280C4A1700B3159B /* MainCardButton.swift */; };
@@ -124,6 +126,8 @@
 		79735B63280ED78600D1067B /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingPresenter.swift.swift; sourceTree = "<group>"; };
+		7993C9A628102C2500526AF2 /* TwoBigButtonsAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBigButtonsAlertView.swift; sourceTree = "<group>"; };
+		7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryCardButton.swift; sourceTree = "<group>"; };
 		799768CF27EA3B5F0057AFA7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		79A2C774280C473F00B3159B /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
 		79A2C776280C4A1700B3159B /* MainCardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
@@ -320,6 +324,7 @@
 		7993C9A428102B3400526AF2 /* Two Big Buttons Alert */ = {
 			isa = PBXGroup;
 			children = (
+				7993C9A628102C2500526AF2 /* TwoBigButtonsAlertView.swift */,
 			);
 			path = "Two Big Buttons Alert";
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 				79222EA227F643D60051334A /* CircleProgressView.swift */,
 				79E838A0280AF7E1001C46AD /* HomeMiniCardView.swift */,
 				79E8389E280AF7C5001C46AD /* HomeNewsView.swift */,
+				7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */,
 				79A2C776280C4A1700B3159B /* MainCardButton.swift */,
 				79A2C778280C587F00B3159B /* ProjectScheduleView.swift */,
 				79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */,
@@ -667,6 +673,7 @@
 				79E838A7280AFCE7001C46AD /* SendFilePresenter.swift in Sources */,
 				79AF90FD2804478F0094AB97 /* ProjectTaskView.swift in Sources */,
 				79E6424D27F098D30046A2F0 /* Network.swift in Sources */,
+				7993C9A928102E1800526AF2 /* SecondaryCardButton.swift in Sources */,
 				79164BB927F1251C00167B8A /* UIView+Extension.swift in Sources */,
 				7943975827F3C5BF0075102B /* StudentProjectsCoordinator.swift in Sources */,
 				793EC73927FE177000CD8334 /* CheckmarkButton.swift in Sources */,
@@ -700,6 +707,7 @@
 				7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */,
 				C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */,
 				C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */,
+				7993C9A728102C2500526AF2 /* TwoBigButtonsAlertView.swift in Sources */,
 				7963213227F23C9200A202EE /* Constants.swift in Sources */,
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
 				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
