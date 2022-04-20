@@ -137,7 +137,7 @@ class SendFileView: UIView {
     
     lazy var fileNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Tarefa realizada.jpg"
+        label.text = "\(String(describing: uploadButtonTapped))como"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.fileNameLabel"
         return label
