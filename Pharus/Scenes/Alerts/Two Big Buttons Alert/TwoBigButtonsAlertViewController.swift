@@ -44,11 +44,11 @@ extension TwoBigButtonsAlertViewController: TwoBigButtonsAlertViewDelegate {
     }
     
     func primaryButtonTapped() {
-        print("primerio botao")
+        presenter.subscribeToProject()
     }
     
     func secondaryButtonTapped() {
-        print("segundo botao")
+        presenter.closeModal()
     }
 }
 

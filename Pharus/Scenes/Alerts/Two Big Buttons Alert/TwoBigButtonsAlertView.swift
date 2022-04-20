@@ -82,6 +82,9 @@ class TwoBigButtonsAlertView: UIView {
     
     lazy var primaryButton: MainCardButton = {
         let button = MainCardButton(title: "Sim, quero me inscrever", buttonState: .normal)
+        button.addAction(UIAction { _ in
+            self.primaryButtonTapped()
+        }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "TwoBigButtonsAlertView.primaryButton"
         return button
@@ -89,6 +92,9 @@ class TwoBigButtonsAlertView: UIView {
     
     lazy var secondaryButton: SecondaryCardButton = {
         let button = SecondaryCardButton(title: "Não quero, mudei de ideia")
+        button.addAction( UIAction { _ in
+            self.secondaryButtonTapped()
+        }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "TwoBigButtonsAlertView.secondaryButton"
         return button

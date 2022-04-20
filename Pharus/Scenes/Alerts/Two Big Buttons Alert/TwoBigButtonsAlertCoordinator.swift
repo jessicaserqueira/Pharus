@@ -42,6 +42,12 @@ extension TwoBigButtonsAlertCoordinator: TwoBigButtonsAlertFlow {
     func closeModal() {
         navigationController.topViewController?.dismiss(animated: true)
     }
+    
+    //implementar
+    func subscribeToProject() {
+        print("Inscrever no projeto")
+        closeModal()
+    }
 }
 
 

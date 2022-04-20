@@ -8,7 +8,8 @@
 import UIKit
 
 protocol TwoBigButtonsAlertPresenterProtocol {
-   func closeModal()
+    func closeModal()
+    func subscribeToProject()
 }
 
 class TwoBigButtonsAlertPresenter: TwoBigButtonsAlertPresenterProtocol {
@@ -21,5 +22,9 @@ class TwoBigButtonsAlertPresenter: TwoBigButtonsAlertPresenterProtocol {
     
     func closeModal() {
         coordinator.closeModal()
+    }
+    
+    func subscribeToProject() {
+        coordinator.subscribeToProject()
     }
 }
