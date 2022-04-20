@@ -17,7 +17,10 @@ class TwoBigButtonsAlertCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var alertView: TwoBigButtonsAlertView
     
-    init(navigationController: UINavigationController, alertView: TwoBigButtonsAlertView) {
+    init(
+        navigationController: UINavigationController,
+        alertView: TwoBigButtonsAlertView
+    ) {
         self.navigationController = navigationController
         self.alertView = alertView
     }

@@ -154,7 +154,10 @@ class TwoBigButtonsAlertView: UIView {
     }
     
     private func customizeView() {
-
+        titleLabel.text = title
+        descriptionLabel.text = message
+        primaryButton.setTitle(mainButtonText, for: .normal)
+        secondaryButton.setTitle(secondaryButtonText, for: .normal)
     }
     
     //MARK: - Constraints

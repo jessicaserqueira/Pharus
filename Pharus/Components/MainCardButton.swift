@@ -56,7 +56,7 @@ class MainCardButton: UIButton {
     
     private func configureSubviews() {
         setTitle(title, for: .normal)
-        titleLabel?.font = UIFont.largeButton
+        titleLabel?.font = UIFont.mediumButtonSemiBold
         setBackgroundColor()
         setTitleColor(UIColor.project.grayDisabledText, for: .disabled)
         setTitleColor(UIColor.button.whiteMainButtonText, for: .normal)
