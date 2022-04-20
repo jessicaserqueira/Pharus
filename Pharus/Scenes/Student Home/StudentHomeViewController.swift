@@ -26,7 +26,9 @@ class StudentHomeViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
+        
+        setupTabBarIcons()
     }
     
     override func loadView() {
@@ -38,5 +40,12 @@ class StudentHomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         setGradientBackground()
         super.viewWillAppear(animated)
+    }
+    
+    func setupTabBarIcons() {
+        let array = self.tabBarController?.customizableViewControllers
+        for controller in array! {
+            controller.tabBarItem.imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
+        }
     }
 }
