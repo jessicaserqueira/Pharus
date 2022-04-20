@@ -12,7 +12,7 @@ class HomeNewsView: UIView {
     
     lazy var mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = .card.orangeHomeStandardCardBackground
+        view.backgroundColor = UIColor.card.orangeHomeStandardCardBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "HomeNewsView.view"
         return view

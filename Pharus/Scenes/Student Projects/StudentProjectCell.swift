@@ -259,10 +259,10 @@ class StudentProjectCell: UITableViewCell {
         subscribeButton.isSubscribed = project.isSubscribed
         
         if project.isSubscribed {
-            mainView.backgroundColor = .project.orangeSubscribedProjectBackground
+            mainView.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
             self.stretch(lowerStackView, to: lowerHelperView, left: 36.5, right: -27)
         } else {
-            mainView.backgroundColor = .project.grayUnsubscribedProjectBackground
+            mainView.backgroundColor = UIColor.project.grayUnsubscribedProjectBackground
             self.stretch(lowerStackView, to: lowerHelperView, left: 20.5, right: -12)
         }
     }

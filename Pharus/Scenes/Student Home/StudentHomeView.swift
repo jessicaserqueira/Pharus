@@ -122,7 +122,7 @@ class StudentHomeView: UIView {
         
         for _ in 0...20 {
             let view = StudentHomeMiniCardView()
-            view.mainView.backgroundColor = .card.orangeHomeStandardCardBackground
+            view.mainView.backgroundColor = UIColor.card.orangeHomeStandardCardBackground
             view.mainView.layer.cornerRadius = 16
             
             NSLayoutConstraint.activate([

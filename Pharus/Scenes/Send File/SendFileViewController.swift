@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import UniformTypeIdentifiers
 
-class SendFileViewController: UIViewController {
+class SendFileViewController: UIViewController, UIDocumentPickerDelegate {
     
     let sendFileView = SendFileView()
     let presenter: SendFilePresenter
@@ -23,7 +24,7 @@ class SendFileViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-        
+    
     override func loadView() {
         super.loadView()
         
@@ -33,11 +34,25 @@ class SendFileViewController: UIViewController {
 }
 
 extension SendFileViewController: SendFileDelegate {
+    func uploadButtonTapped() {
+        presenter.uploadFile()
+        let suportFiles: [UTType] = [UTType.data]
+        let vc = UIDocumentPickerViewController(forOpeningContentTypes: suportFiles, asCopy: true)
+        vc.delegate = self
+        vc.allowsMultipleSelection = false
+    
+        present(vc, animated: true, completion: nil)
+    }
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt url: URL) {
+        
+        print("a file was selected")
+        
+    }
+    
     func sendFileButtonTapped() {
         presenter.sendFile()
     }
 }
-
 extension SendFileViewController: AlertViewDelegate {
     func closeButtonTapped() {
         self.dismiss(animated: true)
