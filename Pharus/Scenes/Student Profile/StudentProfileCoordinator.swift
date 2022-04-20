@@ -33,7 +33,8 @@ class StudentProfileCoordinator: Coordinator {
         
         let studentProfileViewController = StutentProfileViewController(
             coordinator: self,
-            presenter: studentProfilePresenter
+            presenter: studentProfilePresenter,
+            student: student
         )
 
         navigationController.setNavigationBarHidden(false, animated: true)

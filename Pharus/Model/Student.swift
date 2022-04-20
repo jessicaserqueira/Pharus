@@ -13,6 +13,8 @@ struct Student: Codable {
     let schoolShift: String
     let avatar: String
     let email, username: String
+    let year: String
+    let city: String
     let score: Float
     let medals: Medals
     let projects: [Project]
