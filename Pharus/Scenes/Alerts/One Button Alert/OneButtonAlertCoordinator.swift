@@ -1,5 +1,5 @@
 //
-//  AlertCoordinator.swift
+//  OneButtonAlertCoordinator.swift
 //  Pharus
 //
 //  Created by Victor Colen on 16/04/22.
@@ -7,24 +7,24 @@
 
 import UIKit
 
-protocol AlertFlow {
+protocol OneButtonAlertFlow {
     func closeModal()
 }
 
-class AlertCoordinator: Coordinator {
+class OneButtonAlertCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var alertView: AlertView
+    var alertView: OneButtonAlertView
     
-    init(navigationController: UINavigationController, alertView: AlertView) {
+    init(navigationController: UINavigationController, alertView: OneButtonAlertView) {
         self.navigationController = navigationController
         self.alertView = alertView
     }
     
     func start() {
-        let alertPresenter = AlertPresenter(coordinator: self)
-        let alertViewController = AlertViewController(
+        let alertPresenter = OneButtonAlertPresenter(coordinator: self)
+        let alertViewController = OneButtonAlertViewController(
             alertView: alertView,
             coordinator: self,
             presenter: alertPresenter
@@ -36,7 +36,7 @@ class AlertCoordinator: Coordinator {
     }
 }
 
-extension AlertCoordinator: AlertFlow {
+extension OneButtonAlertCoordinator: OneButtonAlertFlow {
     func closeModal() {
         navigationController.topViewController?.dismiss(animated: true)
     }

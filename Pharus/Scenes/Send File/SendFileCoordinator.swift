@@ -35,12 +35,12 @@ class SendFileCoordinator: Coordinator {
 
 extension SendFileCoordinator: SendFileFlow {
     func showFileSentAlert() {
-        let alertView = AlertView(
+        let alertView = OneButtonAlertView(
             message: "Arquivo enviado com sucesso!",
             image: UIImage.icons.checkIcon ?? .defaultImage
         )
         
-        let alertCoordinator = AlertCoordinator(
+        let alertCoordinator = OneButtonAlertCoordinator(
             navigationController: navigationController,
             alertView: alertView
         )
