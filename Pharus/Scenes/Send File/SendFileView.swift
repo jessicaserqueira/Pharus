@@ -12,12 +12,14 @@ protocol SendFileDelegate: AnyObject {
     func sendFileButtonTapped()
 }
 
+
 class SendFileView: UIView {
     
     
     //MARK: - Properties
     
     weak var delegate: SendFileDelegate?
+  
     
     //MARK: - Views
     
@@ -75,7 +77,9 @@ class SendFileView: UIView {
     lazy var uploadFileStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.setOnClickListener {
-            self.uploadButtonTapped()        }
+            self.uploadButtonTapped()
+            
+        }
         stackView.axis = .vertical
         stackView.spacing = 3
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -137,7 +141,7 @@ class SendFileView: UIView {
     
     lazy var fileNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "\(String(describing: uploadButtonTapped))como"
+        label.text = ""
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.fileNameLabel"
         return label
@@ -271,6 +275,7 @@ extension SendFileView: SendFileDelegate {
     func uploadButtonTapped() {
         delegate?.uploadButtonTapped()
     }
+
     func sendFileButtonTapped() {
         delegate?.sendFileButtonTapped()
     }

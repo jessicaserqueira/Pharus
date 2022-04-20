@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SendFileFlow {
-
+    func showUploadFile()
     func showFileSentAlert()
 }
 
@@ -35,6 +35,9 @@ class SendFileCoordinator: Coordinator {
 }
 
 extension SendFileCoordinator: SendFileFlow {
+    func showUploadFile() {
+     
+    }
 
     func showFileSentAlert() {
 

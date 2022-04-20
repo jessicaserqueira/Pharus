@@ -2,7 +2,7 @@
 //  SendFileViewController.swift
 //  Pharus
 //
-//  Created by Victor Colen on 06/04/22.
+//  Created by Jéssica Serqueira on 06/04/22.
 //
 
 import UIKit
@@ -34,22 +34,27 @@ class SendFileViewController: UIViewController, UIDocumentPickerDelegate {
 }
 
 extension SendFileViewController: SendFileDelegate {
-    func uploadButtonTapped() {
+     func uploadButtonTapped() {
         presenter.uploadFile()
-        let suportFiles: [UTType] = [UTType.data]
-        let vc = UIDocumentPickerViewController(forOpeningContentTypes: suportFiles, asCopy: true)
-        vc.delegate = self
-        vc.allowsMultipleSelection = false
-    
-        present(vc, animated: true, completion: nil)
+        let suportFiles: [UTType] =
+            [
+                UTType.pdf,
+                UTType.data,
+                UTType.jpeg
+            ]
         
+        let controller = UIDocumentPickerViewController(forOpeningContentTypes: suportFiles, asCopy: true)
+        controller.delegate = self
+        controller.allowsMultipleSelection = false
+        present(controller, animated: true, completion: nil)
     }
-    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt url: URL) {
-        
-        print("a file was selected")
-        
-    }
     
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        if let filename = urls.first?.lastPathComponent {
+            print(filename)
+            sendFileView.fileNameLabel.text = filename
+        }
+    }
     func sendFileButtonTapped() {
         presenter.sendFile()
     }

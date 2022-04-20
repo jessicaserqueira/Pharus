@@ -20,9 +20,9 @@ class SendFilePresenter {
         self.coordinator = coordinator
     }
     func uploadFile(){
-        
+        coordinator.showUploadFile()
     }
-    
+
     func sendFile() {
         coordinator.showFileSentAlert()
     }
