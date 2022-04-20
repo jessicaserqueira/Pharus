@@ -16,8 +16,8 @@ class StutentProfileViewController: UIViewController {
     
     init(
         coordinator: StudentProfileCoordinator,
-         presenter: StudentProfilePresenter,
-         student: Student
+        presenter: StudentProfilePresenter,
+        student: Student
     ) {
         self.coordinator = coordinator
         self.presenter = presenter
@@ -65,5 +65,18 @@ class StutentProfileViewController: UIViewController {
     func setNavigationBar() {
         self.title = "Perfil"
         self.navigationController?.title = ""
+        
+        let logoutIcon = UIImage.icons.logOutIcon?.withRenderingMode(.alwaysOriginal)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: logoutIcon,
+            style: .plain,
+            target: self,
+            action: #selector(logoutTapped)
+        )
+    }
+    
+    //MARK: - Implementar
+    @objc func logoutTapped() {
+        print("logout")
     }
 }

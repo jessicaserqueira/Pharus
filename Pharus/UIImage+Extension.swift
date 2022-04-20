@@ -18,11 +18,12 @@ extension UIImage {
         static let xmarkIcon = UIImage(systemName: K.Assets.Icons.xmarkIcon)
         static let checkmarkIcon = UIImage(named: K.Assets.Icons.checkboxCheckmarkButtonIcon)
         static let expandIcon = UIImage(named: K.Assets.Icons.expandIcon)
-        static let backButtonIcon = UIImage(named: K.Assets.Icons.backButtonIcon)
+        static let backArrowIcon = UIImage(named: K.Assets.Icons.backArrowIcon)
         static let envelopeIcon = UIImage(named: K.Assets.Icons.envelopeIcon)
         static let notificationEnvelopeIcon = UIImage(named: K.Assets.Icons.notificationEnvelopeIcon)
         static let uploadIcon = UIImage(named: K.Assets.Icons.uploadIcon)
         static let checkIcon = UIImage(named: K.Assets.Icons.checkIcon)
+        static let logOutIcon = UIImage(named: K.Assets.Icons.logoutIcon)
         
         static let avatarTabBarIcon = UIImage(named: K.Assets.Icons.avatarTabBarIcon)
         static let homeTabBarIcon = UIImage(named: K.Assets.Icons.homeTabBarIcon)

@@ -21,8 +21,8 @@ struct K {
     struct Assets {
         
         struct Icons {
-            static let backButtonIcon = "backButtonIcon"
-            static let logoutButtonIcon = "logoutButtonIcon"
+            static let backArrowIcon = "backArrowIcon"
+            static let logoutIcon = "logoutIcon"
             static let bookIcon = "bookIcon"
             static let clockIcon = "clockIcon"
             static let rulesIcon = "rulesIcon"
