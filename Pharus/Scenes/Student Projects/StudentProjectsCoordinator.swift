@@ -46,5 +46,13 @@ extension StudentProjectsCoordinator: StudentProjectsFlow {
         
         self.coordinate(to: studentProjectDetailCoordinator)
     }
+    
+    func showSubscribeAlert(of project: Project) {
+        let twoBigButtonsAlertViewController = TwoBigButtonsAlertViewController()
+        
+        twoBigButtonsAlertViewController.modalPresentationStyle = .overFullScreen
+        
+        navigationController.present(twoBigButtonsAlertViewController, animated: true)
+    }
 }
 

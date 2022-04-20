@@ -17,87 +17,93 @@ class TwoBigButtonsAlertView: UIView {
     //MARK: - Properties
     
     weak var delegate: TwoBigButtonsAlertViewDelegate?
-    private var image: UIImage
+    private var title: String
     private var message: String
+    private var mainButtonText: String
+    private var secondaryButtonText: String
     
     //MARK: - Views
     
-    private lazy var mainView: UIView = {
+    lazy var mainView: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 16
         view.backgroundColor = UIColor.modal.yellowBackground
+        view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "OneButtonAlertView.mainView"
-        
+        view.accessibilityIdentifier = "TwoBigButtonsAlertView.mainView"
         return view
     }()
     
-    private lazy var mainStackView: UIStackView = {
+    lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.backgroundColor = .clear
-        stackView.spacing = 20
+        stackView.spacing = 24
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "OneButtonAlertView.mainStackView"
-        
+        stackView.accessibilityIdentifier = "TwoBigButtonsAlertView.mainStackView"
         return stackView
     }()
     
-    private lazy var alertIconHelperView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "OneButtonAlertView.alertIconHelperView"
-        
-        return view
+    lazy var titleStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "TwoBigButtonsAlertView.titleStackView"
+        return stackView
     }()
     
-    private lazy var alertIconImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "OneButtonAlertView.alertIconImageView"
-        
-        return imageView
-    }()
-    
-    private lazy var alertMessageHelperView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "OneButtonAlertView.alertMessageHelperView"
-        
-        return view
-    }()
-    
-    private lazy var alertMessageLabel: UILabel = {
+    lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .center
-        label.font = .mediumTitleBold
+        label.font = UIFont.largeTitleSemiBold
+        label.text = "Confirmar Inscrição"
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "OneButtonAlertView.alertMessageLabel"
-        
+        label.accessibilityIdentifier = "TwoBigButtonsAlertView.titleLabel"
         return label
     }()
     
-    private lazy var actionButton: MainCardButton = {
-        let button = MainCardButton()
-        button.setTitle("Fechar", for: .normal)
-        
-        button.addAction(UIAction { _ in
-            self.primaryButtonTapped()
-        }, for: .touchUpInside)
-        
+    lazy var closeModalImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage.icons.xmarkIcon
+        imageView.tintColor = .black
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.accessibilityIdentifier = "TwoBigButtonsAlertView.closeModalImageView"
+        return imageView
+    }()
+    
+    lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Você deseja se inscrever no projeto \"Algoritmo no seu dia?\""
+        label.numberOfLines = 2
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "TwoBigButtonsAlertView.descriptionLabel"
+        return label
+    }()
+    
+    lazy var primaryButton: MainCardButton = {
+        let button = MainCardButton(title: "Sim, quero me inscrever", buttonState: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.accessibilityIdentifier = "OneButtonAlertView.actionButton"
-        
+        button.accessibilityIdentifier = "TwoBigButtonsAlertView.primaryButton"
+        return button
+    }()
+    
+    lazy var secondaryButton: SecondaryCardButton = {
+        let button = SecondaryCardButton(title: "Não quero, mudei de ideia")
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = "TwoBigButtonsAlertView.secondaryButton"
         return button
     }()
     
     //MARK: - Initializer
-    
-    convenience init(message: String, image: UIImage) {
+        
+    convenience init(
+        title: String,
+        message: String,
+        mainButtonText: String,
+        secondaryButtonText: String
+    ) {
         self.init()
         
+        self.title = title
         self.message = message
-        self.image = image
+        self.mainButtonText = mainButtonText
+        self.secondaryButtonText = secondaryButtonText
         
         configureSubviews()
         customizeView()
@@ -105,8 +111,10 @@ class TwoBigButtonsAlertView: UIView {
     }
     
     override init(frame: CGRect) {
-        self.message = "Alerta"
-        self.image = UIImage(named: K.Assets.Icons.rulesIcon)!
+        self.title = "Confirmar Inscrição"
+        self.message = "Você deseja se inscrever no projeto ”Algoritmo no seu dia?"
+        self.mainButtonText = "Sim, quero me inscrever"
+        self.secondaryButtonText = "Não quero, mudei de idéia"
         
         super.init(frame: .zero)
         
@@ -131,20 +139,18 @@ class TwoBigButtonsAlertView: UIView {
         
         mainView.addSubview(mainStackView)
         
-        mainStackView.addArrangedSubview(alertIconHelperView)
+        mainStackView.addArrangedSubview(titleStackView)
         
-        alertIconHelperView.addSubview(alertIconImageView)
+        titleStackView.addArrangedSubview(titleLabel)
+        titleStackView.addArrangedSubview(closeModalImageView)
         
-        mainStackView.addArrangedSubview(alertMessageHelperView)
-        
-        alertMessageHelperView.addSubview(alertMessageLabel)
-        
-        mainStackView.addArrangedSubview(actionButton)
+        mainStackView.addArrangedSubview(descriptionLabel)
+        mainStackView.addArrangedSubview(primaryButton)
+        mainStackView.addArrangedSubview(secondaryButton)
     }
     
     private func customizeView() {
-        alertMessageLabel.text = message
-        alertIconImageView.image = image
+
     }
     
     //MARK: - Constraints
@@ -156,20 +162,15 @@ class TwoBigButtonsAlertView: UIView {
             mainView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             mainView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             mainView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            mainView.heightAnchor.constraint(equalToConstant: 217)
+            mainView.heightAnchor.constraint(equalToConstant: 314)
         ])
         
         //Main Stack View
-        self.stretch(mainStackView, to: mainView, top: 24, left: 24, bottom: -24, right: -24)
-        
-        //Alert Icon Image View
-        alertIconImageView.center(in: alertIconHelperView)
-                
-        //Alert Message Label
-        alertMessageLabel.center(in: alertMessageHelperView)
+        self.stretch(mainStackView, to: mainView, top: 32, left: 16, bottom: -16, right: -13)
+        //Close Modal Image View
         NSLayoutConstraint.activate([
-            alertMessageLabel.trailingAnchor.constraint(equalTo: alertMessageHelperView.trailingAnchor),
-            alertMessageLabel.leadingAnchor.constraint(equalTo: alertMessageHelperView.leadingAnchor)
+            closeModalImageView.heightAnchor.constraint(equalToConstant: 24),
+            closeModalImageView.widthAnchor.constraint(equalToConstant: 24)
         ])
     }
 }

@@ -96,6 +96,10 @@ extension StudentProjectsViewController: UITableViewDataSource {
         cell.configureSubviews()
         cell.setupConstraints()
         cell.configureCell(using: project)
+        cell.subscribeButton.addAction( UIAction { _ in
+            self.presenter.showSubscribeAlert(of: project)
+        }, for: .touchUpInside)
+        
         cell.mainView.layer.cornerRadius = 16
         cell.backgroundColor = .clear
         

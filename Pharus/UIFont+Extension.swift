@@ -11,6 +11,7 @@ import UIKit
 extension UIFont {
     
     static let largeTitleBold = customFont(font: .montserrat, ofSize: .large, weight: .bold)
+    static let largeTitleSemiBold = customFont(font: .montserrat, ofSize: .large, weight: .semibold)
     static let largeTitleMedium = customFont(font: .montserrat, ofSize: .large, weight: .medium)
     static let mediumTitleMedium = customFont(font: .montserrat, ofSize: .medium, weight: .medium)
     static let mediumTitleBold = customFont(font: .montserrat, ofSize: .medium, weight: .bold)

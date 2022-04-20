@@ -21,5 +21,9 @@ class StudentProjectsPresenter: StudentProjectsPresenterProtocol {
     func showStudentProject(project: Project) {
         coordinator.showStudentProject(project)
     }
+    
+    func showSubscribeAlert(of project: Project) {
+        coordinator.showSubscribeAlert(of: project)
+    }
 }
 
