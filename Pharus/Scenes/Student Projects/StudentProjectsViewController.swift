@@ -55,6 +55,7 @@ class StudentProjectsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         setGradientBackground()
+        tableView.reloadData()
     }
     
     func setupTableView() {

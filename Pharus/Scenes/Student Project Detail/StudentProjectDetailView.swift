@@ -315,7 +315,7 @@ class StudentProjectDetailView: UIView {
     func customizeSubviews(with project: Project) {
         mentorLabel.text = project.mentor
         descriptionTextLabel.text = project.projectDescription
-        completedTasksProgressView.progress = project.completionStatus/100
+        completedTasksProgressView.progress = project.completionPercentage
         setupProjectTasks(of: project)
         
         if !project.isSubscribed {
@@ -331,11 +331,7 @@ class StudentProjectDetailView: UIView {
     }
     
     private func setupProjectTasks(of project: Project) {
-        var completedTasksCount = 0
         for task in project.tasks {
-            if task.isComplete {
-                completedTasksCount += 1
-            }
             let checkboxIcon = task.isComplete ? UIImage.icons.checkmarkIcon! : .defaultImage
             let taskView = ProjectTaskView(
                 task: task,
@@ -352,7 +348,7 @@ class StudentProjectDetailView: UIView {
             taskHelperStackView.addArrangedSubview(taskView)
         }
         
-        completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count) tarefas (\(project.completionStatus)%)"
+        completedTasksLabel.text = "Completadas \(project.completedTasksCount) de \(project.tasks.count) tarefas (\(project.completionPercentage*100)%)"
     }
     
     private func configureUnsubscribedProject(_ project: Project) {

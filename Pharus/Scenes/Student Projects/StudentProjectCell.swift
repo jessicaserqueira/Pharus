@@ -251,11 +251,12 @@ class StudentProjectCell: UITableViewCell {
         titleLabel.text = project.name
         descriptionLabel.text = project.projectDescription
         mentor.text = "Mentor: " + project.mentor
-        completionBarCircleView.completionPercentage = project.completionStatus
-        percentageCompletionLabel.text = project.completionStatus.description + "%"
-        completionBarCircleView.completionPercentage = project.completionStatus
         projectScheduleView.project = project
         subscribeButton.isSubscribed = project.isSubscribed
+        
+        completionBarCircleView.completionPercentage = project.completionPercentage*100
+        percentageCompletionLabel.text = "\(project.completedTasksCount)/\(project.tasks.count)"
+        
         
         if project.isSubscribed {
             mainView.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
