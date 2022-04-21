@@ -49,11 +49,7 @@ class Project: Codable {
 
 extension Project {
     var completedTasksCount: Int {
-        var completedTasks = 0
-        for task in self.tasks where task.isComplete {
-            completedTasks += 1
-        }
-        return completedTasks
+        self.tasks.filter { $0.isComplete }.count
     }
     
     var completionPercentage: Float {
