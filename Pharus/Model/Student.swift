@@ -27,26 +27,68 @@ struct Medals: Codable {
 }
 
 // MARK: - Project
-struct Project: Codable {
+class Project: Codable {
     let id, name: String
-    let isSubscribed: Bool
+    var isSubscribed: Bool
     let placement: Int?
-    let isComplete: Bool
-    let score: Float?
+    var isComplete: Bool
+    var score: Float?
     let medal: String?
-    let scoreDescription: String?
+    var scoreDescription: String?
     let projectDescription, startDate, endDate: String
     let school, rules, mentor: String
     let hasCompanyPartnership: Bool
     let company: String?
     let companyPhoto: String?
-    let completionStatus: Float
+    var completionStatus: Float
     let tasks: [Task]
 
     enum CodingKeys: String, CodingKey {
         case id, name, isComplete, score, medal
         case projectDescription = "description"
         case scoreDescription, startDate, endDate, school, rules, mentor, hasCompanyPartnership, company, companyPhoto, completionStatus, tasks, isSubscribed, placement
+    }
+    
+    init(
+        id: String,
+        name: String,
+        isSubscribed: Bool,
+        placement: Int?,
+        isComplete: Bool,
+        score: Float? = nil,
+        medal: String?,
+        scoreDescription: String? = nil,
+        projectDescription: String,
+        startDate: String,
+        endDate: String,
+        school: String,
+        rules: String,
+        mentor: String,
+        hasCompanyPartnership: Bool,
+        company: String?,
+        companyPhoto: String?,
+        completionStatus: Float,
+        tasks: [Task]
+    ) {
+        self.id = id
+        self.name = name
+        self.isSubscribed = isSubscribed
+        self.placement = placement
+        self.isComplete = isComplete
+        self.score = score
+        self.medal = medal
+        self.scoreDescription = scoreDescription
+        self.projectDescription = projectDescription
+        self.startDate = startDate
+        self.endDate = endDate
+        self.school = school
+        self.rules = rules
+        self.mentor = mentor
+        self.hasCompanyPartnership = hasCompanyPartnership
+        self.company = company
+        self.companyPhoto = companyPhoto
+        self.completionStatus = completionStatus
+        self.tasks = tasks
     }
 }
 

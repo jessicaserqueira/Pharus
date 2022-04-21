@@ -34,6 +34,7 @@ struct K {
             static let notificationEnvelopeIcon = "notificationEnvelopeIcon"
             static let uploadIcon = "uploadIcon"
             static let checkIcon = "checkIcon"
+            static let rightArrowIcon = "rightArrowIcon"
             
             static let avatarTabBarIcon = "avatarTabBarIcon"
             static let homeTabBarIcon = "homeTabBarIcon"

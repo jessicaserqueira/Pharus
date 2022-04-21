@@ -10,6 +10,8 @@ import UIKit
 protocol StudentProjectDetailViewDelegate: AnyObject {
     func rulesViewTapped()
     func sendFilesButtonTapped()
+    func envelopeIconTapped()
+    func taskCheckboxTapped(task: Task)
 }
 
 class StudentProjectDetailView: UIView {
@@ -23,7 +25,6 @@ class StudentProjectDetailView: UIView {
     
     lazy var mainScrollView: UIScrollView = {
         var scrollView = UIScrollView()
-        scrollView.backgroundColor = .white
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.accessibilityIdentifier = "StudentProjectDetailView.mainScrollView"
         
@@ -66,6 +67,16 @@ class StudentProjectDetailView: UIView {
         label.accessibilityIdentifier = "StudentProjectDetailView.mentorLabel"
         
         return label
+    }()
+    
+    lazy var mentorReviewHelperView: UIView = {
+        let view = UIView()
+        view.setOnClickListener {
+            self.envelopeIconTapped()
+        }
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "StudentProjectDetailView.mentorReviewHelperView"
+        return view
     }()
     
     lazy var mentorReviewImageView: UIImageView = {
@@ -126,9 +137,9 @@ class StudentProjectDetailView: UIView {
         return stackView
     }()
     
-    lazy var rulesBookImageView: UIImageView = {
+    lazy var rulesArrowImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage.icons.bookIcon
+        imageView.image = UIImage.icons.rightArrowIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentProjectDetailView.rulesBoookImageView"
         return imageView
@@ -137,10 +148,6 @@ class StudentProjectDetailView: UIView {
     lazy var rulesLabel: UILabel = {
         let label = UILabel()
         label.text = "Atividades do projeto"
-        label.layer.shadowColor = UIColor.black.cgColor
-        label.layer.shadowRadius = 4
-        label.layer.shadowOpacity = 0.5
-        label.layer.shadowOffset = CGSize(width: 0, height: 4)
         label.textColor = UIColor.project.redText
         label.font = .largeTitleMedium
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -282,11 +289,19 @@ class StudentProjectDetailView: UIView {
                 completedTasksCount += 1
             }
             
+            let checkboxIcon = task.isComplete ? UIImage.icons.checkmarkIcon! : .defaultImage
+            
             let taskView = ProjectTaskView(
                 task: task,
-                checkImage: UIImage.icons.checkmarkIcon ?? .defaultImage,
+                checkImage: checkboxIcon,
                 color: project.isSubscribed ? .black : UIColor.project.grayDisabledText
             )
+            
+            taskView.taskCheckmarkButton.addAction(UIAction { _ in
+                self.taskCheckboxTapped(task: task)
+                let newIcon = task.isComplete ? UIImage.icons.checkmarkIcon : .defaultImage
+                taskView.taskCheckmarkButton.setImage(newIcon, for: .normal)
+            }, for: .touchUpInside)
             
             taskHelperStackView.addArrangedSubview(taskView)
         }
@@ -307,7 +322,7 @@ class StudentProjectDetailView: UIView {
             taskView.color = UIColor.project.grayDisabledText
         }
     }
-    
+        
     func configureSubviews() {
         addSubview(mainScrollView)
         
@@ -318,7 +333,9 @@ class StudentProjectDetailView: UIView {
         mainStackView.addArrangedSubview(titleStackView)
         
         titleStackView.addArrangedSubview(mentorLabel)
-        titleStackView.addArrangedSubview(mentorReviewImageView)
+        titleStackView.addArrangedSubview(mentorReviewHelperView)
+        
+        mentorReviewHelperView.addSubview(mentorReviewImageView)
         
         mainStackView.addArrangedSubview(descriptionStackView)
         
@@ -328,9 +345,9 @@ class StudentProjectDetailView: UIView {
         mainStackView.addArrangedSubview(rulesHelperView)
         
         rulesHelperView.addSubview(rulesStackView)
-        
-        rulesStackView.addArrangedSubview(rulesBookImageView)
+   
         rulesStackView.addArrangedSubview(rulesLabel)
+        rulesStackView.addArrangedSubview(rulesArrowImageView)
         
         mainStackView.addArrangedSubview(tasksStackView)
         
@@ -368,7 +385,14 @@ class StudentProjectDetailView: UIView {
             mainStackView.centerXAnchor.constraint(equalTo: mainScrollView.centerXAnchor)
         ])
         
+        //Mentor Review Helper View
+        NSLayoutConstraint.activate([
+            mentorReviewHelperView.widthAnchor.constraint(equalToConstant: 36),
+            mentorReviewHelperView.heightAnchor.constraint(equalToConstant: 36)
+        ])
+        
         //Mentor Review Image View
+        //center(in: mentorReviewHelperView)
         NSLayoutConstraint.activate([
             mentorReviewImageView.widthAnchor.constraint(equalToConstant: 36),
             mentorReviewImageView.heightAnchor.constraint(equalToConstant: 36)
@@ -384,8 +408,8 @@ class StudentProjectDetailView: UIView {
         
         //Rules Book Image View
         NSLayoutConstraint.activate([
-            rulesBookImageView.widthAnchor.constraint(equalToConstant: 24),
-            rulesBookImageView.heightAnchor.constraint(equalToConstant: 24)
+            rulesArrowImageView.widthAnchor.constraint(equalToConstant: 24),
+            rulesArrowImageView.heightAnchor.constraint(equalToConstant: 24)
         ])
         
         //Tasks Title Helper
@@ -416,6 +440,15 @@ class StudentProjectDetailView: UIView {
 //MARK: - Actions
 
 extension StudentProjectDetailView {
+    
+    func envelopeIconTapped() {
+        delegate?.envelopeIconTapped()
+    }
+    
+    func taskCheckboxTapped(task: Task) {
+        delegate?.taskCheckboxTapped(task: task)
+    }
+    
     func rulesViewTapped() {
         delegate?.rulesViewTapped()
     }

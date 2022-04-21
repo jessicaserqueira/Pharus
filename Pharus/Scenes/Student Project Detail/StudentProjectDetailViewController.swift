@@ -43,6 +43,12 @@ class StudentProjectDetailViewController: UIViewController {
         self.view = studentProjectDetailView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setGradientBackground()
+    }
+    
     func setNavigationBar() {
         self.title = project.name
         
@@ -65,18 +71,15 @@ class StudentProjectDetailViewController: UIViewController {
     }
 }
 
-extension StudentProjectDetailViewController: ProjectTaskDelegate {
-    func checkmarkButtonTapped(task: Task) {
+extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {
+    func envelopeIconTapped() {
+        presenter.showMentorReview()
+    }
+    
+    func taskCheckboxTapped(task: Task) {
         presenter.toggleTaskCompletedStatus(task: task)
     }
-    //    taskView.taskCheckboxButton.addAction(UIAction { _ in
-    //        taskView.taskCheckboxButton.setImage(task.isComplete ? .none : .checkmarkImage,
-    //                                             for: .normal)
-    //        task.toggleCompletionStatus()
-    //    }, for: .touchUpInside)
-}
-
-extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {
+    
     func rulesViewTapped() {
         presenter.showProjectRules(rules: project.rules)
     }

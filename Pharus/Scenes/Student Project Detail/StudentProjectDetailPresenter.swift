@@ -11,6 +11,7 @@ protocol StudentProjectsDetailPresenterProtocol {
     func showProjectRules(rules: String)
     func showUploadFileView()
     func toggleTaskCompletedStatus(task: Task)
+    func showMentorReview()
 }
 
 class StudentProjectDetailPresenter: StudentProjectsDetailPresenterProtocol {
@@ -25,12 +26,15 @@ class StudentProjectDetailPresenter: StudentProjectsDetailPresenterProtocol {
         coordinator.showProjectRules()
     }
     
+    func showMentorReview() {
+        coordinator.showMentorReview()
+    }
+    
     func showUploadFileView() {
         coordinator.showSendFileView()
     }
     
     func toggleTaskCompletedStatus(task: Task) {
         task.toggleCompletionStatus()
-        print(task.isComplete)
     }
 }

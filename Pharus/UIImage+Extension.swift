@@ -24,6 +24,7 @@ extension UIImage {
         static let uploadIcon = UIImage(named: K.Assets.Icons.uploadIcon)
         static let checkIcon = UIImage(named: K.Assets.Icons.checkIcon)
         static let logOutIcon = UIImage(named: K.Assets.Icons.logoutIcon)
+        static let rightArrowIcon = UIImage(named: K.Assets.Icons.rightArrowIcon)
         
         static let avatarTabBarIcon = UIImage(named: K.Assets.Icons.avatarTabBarIcon)
         static let homeTabBarIcon = UIImage(named: K.Assets.Icons.homeTabBarIcon)
