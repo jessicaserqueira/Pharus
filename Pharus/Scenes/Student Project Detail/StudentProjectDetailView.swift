@@ -71,9 +71,6 @@ class StudentProjectDetailView: UIView {
     
     lazy var mentorReviewHelperView: UIView = {
         let view = UIView()
-        view.setOnClickListener {
-            self.envelopeIconTapped()
-        }
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.mentorReviewHelperView"
         return view
@@ -270,59 +267,8 @@ class StudentProjectDetailView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func customizeSubviews(with project: Project) {
-        mentorLabel.text = project.mentor
-        descriptionTextLabel.text = project.projectDescription
-        completedTasksProgressView.progress = project.completionStatus/100
-        setupProjectTasks(of: project)
-        
-        if !project.isSubscribed {
-            configureUnsubscribedProject(project)
-        }
-    }
+    //MARK: - Functions
     
-    private func setupProjectTasks(of project: Project) {
-        var completedTasksCount = 0
-        
-        for task in project.tasks {
-            if task.isComplete {
-                completedTasksCount += 1
-            }
-            
-            let checkboxIcon = task.isComplete ? UIImage.icons.checkmarkIcon! : .defaultImage
-            
-            let taskView = ProjectTaskView(
-                task: task,
-                checkImage: checkboxIcon,
-                color: project.isSubscribed ? .black : UIColor.project.grayDisabledText
-            )
-            
-            taskView.taskCheckmarkButton.addAction(UIAction { _ in
-                self.taskCheckboxTapped(task: task)
-                let newIcon = task.isComplete ? UIImage.icons.checkmarkIcon : .defaultImage
-                taskView.taskCheckmarkButton.setImage(newIcon, for: .normal)
-            }, for: .touchUpInside)
-            
-            taskHelperStackView.addArrangedSubview(taskView)
-        }
-        
-        completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count) tarefas (\(project.completionStatus)%)"
-        
-    }
-    
-    private func configureUnsubscribedProject(_ project: Project) {
-        mentorReviewImageView.image = mentorReviewImageView.image?.withTintColor(UIColor.project.grayDisabledText)
-        rulesLabel.textColor = UIColor.project.grayDisabledText
-        completedTasksLabel.textColor = UIColor.project.grayDisabledText
-        taskTitleLabel.textColor = UIColor.project.grayDisabledText
-        completedTasksProgressView.trackTintColor = UIColor.button.grayDisabledBackground
-        uploadFilesButton.disable()
-        
-        for case let taskView as ProjectTaskView in tasksStackView.arrangedSubviews {
-            taskView.color = UIColor.project.grayDisabledText
-        }
-    }
-        
     func configureSubviews() {
         addSubview(mainScrollView)
         
@@ -345,7 +291,7 @@ class StudentProjectDetailView: UIView {
         mainStackView.addArrangedSubview(rulesHelperView)
         
         rulesHelperView.addSubview(rulesStackView)
-   
+        
         rulesStackView.addArrangedSubview(rulesLabel)
         rulesStackView.addArrangedSubview(rulesArrowImageView)
         
@@ -364,6 +310,62 @@ class StudentProjectDetailView: UIView {
         mainStackView.addArrangedSubview(uploadFilesHelperView)
         
         uploadFilesHelperView.addSubview(uploadFilesButton)
+    }
+    
+    func customizeSubviews(with project: Project) {
+        mentorLabel.text = project.mentor
+        descriptionTextLabel.text = project.projectDescription
+        completedTasksProgressView.progress = project.completionStatus/100
+        setupProjectTasks(of: project)
+        
+        if !project.isSubscribed {
+            configureUnsubscribedProject(project)
+        }
+        
+        if project.scoreDescription != nil {
+            mentorReviewHelperView.setOnClickListener {
+                self.envelopeIconTapped()
+            }
+            mentorReviewImageView.image = UIImage.icons.notificationEnvelopeIcon
+        }
+    }
+    
+    private func setupProjectTasks(of project: Project) {
+        var completedTasksCount = 0
+        for task in project.tasks {
+            if task.isComplete {
+                completedTasksCount += 1
+            }
+            let checkboxIcon = task.isComplete ? UIImage.icons.checkmarkIcon! : .defaultImage
+            let taskView = ProjectTaskView(
+                task: task,
+                checkImage: checkboxIcon,
+                color: project.isSubscribed ? .black : UIColor.project.grayDisabledText
+            )
+            taskView.taskCheckmarkButton.addAction(
+                UIAction { _ in
+                    self.taskCheckboxTapped(task: task)
+                    let newIcon = task.isComplete ? UIImage.icons.checkmarkIcon : .defaultImage
+                    taskView.taskCheckmarkButton.setImage(newIcon, for: .normal)
+                }, for: .touchUpInside
+            )
+            taskHelperStackView.addArrangedSubview(taskView)
+        }
+        
+        completedTasksLabel.text = "Completadas \(completedTasksCount) de \(project.tasks.count) tarefas (\(project.completionStatus)%)"
+    }
+    
+    private func configureUnsubscribedProject(_ project: Project) {
+        mentorReviewImageView.image = mentorReviewImageView.image?.withTintColor(UIColor.project.grayDisabledText)
+        rulesLabel.textColor = UIColor.project.grayDisabledText
+        completedTasksLabel.textColor = UIColor.project.grayDisabledText
+        taskTitleLabel.textColor = UIColor.project.grayDisabledText
+        completedTasksProgressView.trackTintColor = UIColor.button.grayDisabledBackground
+        uploadFilesButton.disable()
+        
+        for case let taskView as ProjectTaskView in tasksStackView.arrangedSubviews {
+            taskView.color = UIColor.project.grayDisabledText
+        }
     }
     
     //MARK: - Constraints
