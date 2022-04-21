@@ -11,7 +11,7 @@ protocol StudentProjectDetailViewDelegate: AnyObject {
     func rulesViewTapped()
     func sendFilesButtonTapped()
     func envelopeIconTapped()
-    func taskCheckboxTapped(task: Task)
+    func taskCheckboxTapped(task: TaskModel)
 }
 
 class StudentProjectDetailView: UIView {
@@ -19,7 +19,7 @@ class StudentProjectDetailView: UIView {
     //MARK: - Properties
     
     weak var delegate: StudentProjectDetailViewDelegate?
-    private var project: Project
+    private var project: ProjectModel
     
     //MARK: - Views
     
@@ -244,7 +244,7 @@ class StudentProjectDetailView: UIView {
     
     //MARK: - Initializer
     
-    convenience init(project: Project) {
+    convenience init(project: ProjectModel) {
         self.init()
         
         self.project = project
@@ -255,7 +255,7 @@ class StudentProjectDetailView: UIView {
     
     override init(frame: CGRect) {
         
-        self.project = Student.defaultProject
+        self.project = StudentModel.defaultProject
         
         super.init(frame: .zero)
         
@@ -312,7 +312,7 @@ class StudentProjectDetailView: UIView {
         uploadFilesHelperView.addSubview(uploadFilesButton)
     }
     
-    func customizeSubviews(with project: Project) {
+    func customizeSubviews(with project: ProjectModel) {
         mentorLabel.text = project.mentor
         descriptionTextLabel.text = project.projectDescription
         setupProjectTasks(of: project)
@@ -329,7 +329,7 @@ class StudentProjectDetailView: UIView {
         }
     }
     
-    private func setupProjectTasks(of project: Project) {
+    private func setupProjectTasks(of project: ProjectModel) {
         for task in project.tasks {
             let checkboxIcon = task.isComplete ? UIImage.icons.checkmarkIcon! : .defaultImage
             let taskView = ProjectTaskView(
@@ -352,7 +352,7 @@ class StudentProjectDetailView: UIView {
         completedTasksProgressView.progress = project.completionPercentage
     }
     
-    private func configureUnsubscribedProject(_ project: Project) {
+    private func configureUnsubscribedProject(_ project: ProjectModel) {
         mentorReviewImageView.image = mentorReviewImageView.image?.withTintColor(UIColor.project.grayDisabledText)
         rulesLabel.textColor = UIColor.project.grayDisabledText
         completedTasksLabel.textColor = UIColor.project.grayDisabledText
@@ -449,7 +449,7 @@ extension StudentProjectDetailView {
         delegate?.envelopeIconTapped()
     }
     
-    func taskCheckboxTapped(task: Task) {
+    func taskCheckboxTapped(task: TaskModel) {
         delegate?.taskCheckboxTapped(task: task)
     }
     

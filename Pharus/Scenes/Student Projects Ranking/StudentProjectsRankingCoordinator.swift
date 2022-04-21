@@ -15,9 +15,9 @@ class StudentProjectsRankingCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    private var student: Student
+    private var student: StudentModel
     
-    init(navigationController: UINavigationController, student: Student) {
+    init(navigationController: UINavigationController, student: StudentModel) {
         self.navigationController = navigationController
         self.student = student
     }

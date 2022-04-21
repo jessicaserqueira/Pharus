@@ -70,7 +70,7 @@ class StudentProfileView: UIView {
         return stackView
     }()
     
-    convenience init(student: Student) {
+    convenience init(student: StudentModel) {
         self.init()
         
         configureSubviews(with: student)
@@ -86,7 +86,7 @@ class StudentProfileView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureSubviews(with student: Student) {
+    func configureSubviews(with student: StudentModel) {
         addSubview(mainScrollView)
         
         mainScrollView.addSubview(mainStackView)

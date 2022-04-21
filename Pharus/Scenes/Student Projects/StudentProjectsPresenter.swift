@@ -8,7 +8,7 @@
 import UIKit
 
 protocol StudentProjectsPresenterProtocol {
-    func showStudentProject(project: Project)
+    func showStudentProject(project: ProjectModel)
 }
 
 class StudentProjectsPresenter: StudentProjectsPresenterProtocol {
@@ -18,11 +18,11 @@ class StudentProjectsPresenter: StudentProjectsPresenterProtocol {
         self.coordinator = coordinator
     }
     
-    func showStudentProject(project: Project) {
+    func showStudentProject(project: ProjectModel) {
         coordinator.showStudentProject(project)
     }
     
-    func showSubscribeAlert(of project: Project) {
+    func showSubscribeAlert(of project: ProjectModel) {
         coordinator.showSubscribeAlert(of: project)
     }
 }

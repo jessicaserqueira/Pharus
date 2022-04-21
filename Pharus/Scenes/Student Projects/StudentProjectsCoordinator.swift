@@ -8,16 +8,16 @@
 import UIKit
 
 protocol StudentProjectsFlow {
-    func showStudentProject(_ project: Project)
+    func showStudentProject(_ project: ProjectModel)
 }
 
 class StudentProjectsCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    private var student: Student
+    private var student: StudentModel
     
-    init(navigationController: UINavigationController, student: Student) {
+    init(navigationController: UINavigationController, student: StudentModel) {
         self.navigationController = navigationController
         self.student = student
     }
@@ -38,7 +38,7 @@ class StudentProjectsCoordinator: Coordinator {
 }
 
 extension StudentProjectsCoordinator: StudentProjectsFlow {
-    func showStudentProject(_ project: Project) {
+    func showStudentProject(_ project: ProjectModel) {
         let studentProjectDetailCoordinator = StudentProjectDetailCoordinator(
             navigationController: navigationController,
             project: project
@@ -47,7 +47,7 @@ extension StudentProjectsCoordinator: StudentProjectsFlow {
         self.coordinate(to: studentProjectDetailCoordinator)
     }
     
-    func showSubscribeAlert(of project: Project) {
+    func showSubscribeAlert(of project: ProjectModel) {
         let alertView = TwoBigButtonsAlertView(
             title: "Confirmar Inscrição",
             message: "Você deseja se inscrever no projeto \"\(project.name)\"?",
@@ -57,7 +57,8 @@ extension StudentProjectsCoordinator: StudentProjectsFlow {
         
         let twoBigButtonsAlertCoordinator = TwoBigButtonsAlertCoordinator(
             navigationController: navigationController,
-            alertView: alertView
+            alertView: alertView,
+            project: project
         )
         
         coordinate(to: twoBigButtonsAlertCoordinator)

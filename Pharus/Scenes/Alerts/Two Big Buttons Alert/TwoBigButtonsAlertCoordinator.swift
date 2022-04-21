@@ -16,13 +16,16 @@ class TwoBigButtonsAlertCoordinator: Coordinator {
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     var alertView: TwoBigButtonsAlertView
+    var project: ProjectModel
     
     init(
         navigationController: UINavigationController,
-        alertView: TwoBigButtonsAlertView
+        alertView: TwoBigButtonsAlertView,
+        project: ProjectModel
     ) {
         self.navigationController = navigationController
         self.alertView = alertView
+        self.project = project
     }
     
     func start() {
@@ -45,7 +48,7 @@ extension TwoBigButtonsAlertCoordinator: TwoBigButtonsAlertFlow {
     
     //implementar
     func subscribeToProject() {
-        print("Inscrever no projeto")
+        project.isSubscribed = true
         closeModal()
     }
 }

@@ -11,7 +11,7 @@ class AvatarSelectionViewController: UIViewController {
     // MARK: - Properties
     
     private var coordinator: AvatarSelectionCoordinator
-    private var student: Student
+    private var student: StudentModel
     private var customView: AvatarSelectionView
     private var avatarSelectionCollectionView: UICollectionView?
     
@@ -19,7 +19,7 @@ class AvatarSelectionViewController: UIViewController {
     
     init(
         coordinator: AvatarSelectionCoordinator,
-        student: Student
+        student: StudentModel
     ) {
         self.coordinator = coordinator
         self.student = student

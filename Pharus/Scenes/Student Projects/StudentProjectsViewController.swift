@@ -11,14 +11,14 @@ class StudentProjectsViewController: UIViewController {
     
     private var coordinator: StudentProjectsCoordinator
     private var presenter: StudentProjectsPresenter
-    private var student: Student
-    private var projects: [Project]
+    private var student: StudentModel
+    private var projects: [ProjectModel]
     let tableView = UITableView()
     
     init(
         coordinator: StudentProjectsCoordinator,
          presenter: StudentProjectsPresenter,
-         student: Student
+         student: StudentModel
     ) {
         self.coordinator = coordinator
         self.presenter = presenter

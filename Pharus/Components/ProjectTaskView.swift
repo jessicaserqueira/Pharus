@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ProjectTaskDelegate: AnyObject {
-    func checkmarkButtonTapped(task: Task)
+    func checkmarkButtonTapped(task: TaskModel)
 }
 
 class ProjectTaskView: UIView {
@@ -17,7 +17,7 @@ class ProjectTaskView: UIView {
     
     weak var delegate: ProjectTaskDelegate?
     private var checkImage: UIImage?
-    var task: Task
+    var task: TaskModel
     var color: UIColor
     
     //MARK: - Views
@@ -62,7 +62,7 @@ class ProjectTaskView: UIView {
     //MARK: - Initializer
     
     convenience init(
-        task: Task,
+        task: TaskModel,
         checkImage: UIImage,
         color: UIColor
     ) {
@@ -79,7 +79,7 @@ class ProjectTaskView: UIView {
     
     override init(frame: CGRect) {
         
-        self.task = Task(
+        self.task = TaskModel(
             title: "Tarefa",
             isComplete: false,
             description: "Lorem Ipsum"
@@ -130,7 +130,7 @@ class ProjectTaskView: UIView {
 //MARK: - Actions
 
 extension ProjectTaskView {
-    func checkmarkButtonTapped(task: Task) {
+    func checkmarkButtonTapped(task: TaskModel) {
         delegate?.checkmarkButtonTapped(task: task)
     }
 }
