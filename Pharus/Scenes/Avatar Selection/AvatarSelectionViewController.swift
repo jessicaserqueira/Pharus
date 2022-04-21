@@ -123,9 +123,10 @@ extension AvatarSelectionViewController: UICollectionViewDataSource {
 extension AvatarSelectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        customView
-            .mainAvatarImageView
-            .image = UIImage.images.avatars.fullImage.avatars[indexPath.row]
+        
+        let newAvatar = UIImage.images.avatars.fullImage.avatars[indexPath.row]
+        customView.mainAvatarImageView.image = newAvatar
+        
         student.avatar = String(indexPath.row + 1)
     }
 }

@@ -10,9 +10,9 @@ import UIKit
 class StutentProfileViewController: UIViewController {
     
     var coordinator: StudentProfileCoordinator
-    var studentProfileView: StudentProfileView?
+    var studentProfileView: StudentProfileView
     var presenter: StudentProfilePresenter
-    var student: Student?
+    var student: Student
     
     init(
         coordinator: StudentProfileCoordinator,
@@ -22,6 +22,8 @@ class StutentProfileViewController: UIViewController {
         self.coordinator = coordinator
         self.presenter = presenter
         self.student = student
+        
+        studentProfileView =  StudentProfileView(student: student)
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -35,9 +37,6 @@ class StutentProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let student = student {
-            studentProfileView =  StudentProfileView(student: student)
-        }
         setNavigationBar()
     }
     
@@ -45,20 +44,17 @@ class StutentProfileViewController: UIViewController {
         super.viewWillAppear(animated)
         
         setGradientBackground()
+        showStudentAvatar()
     }
-    
-    init(
-        coordinator: StudentProfileCoordinator,
-        presenter: StudentProfilePresenter
-    ){
-        self.coordinator = coordinator
-        self.presenter = presenter
         
-        super.init(nibName: nil, bundle: nil)
-    }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func showStudentAvatar() {
+        studentProfileView.profileImageView.image = UIImage(
+            named: "avatar" + student.avatar + K.Assets.Images.Avatar.CircleImage.suffix
+        )
     }
     
     func setNavigationBar() {

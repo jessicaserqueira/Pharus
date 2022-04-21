@@ -32,7 +32,6 @@
 		796F55342810F03E00DC6F70 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F55332810F03E00DC6F70 /* Project.swift */; };
 		79735B64280ED78600D1067B /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79735B63280ED78600D1067B /* UIViewController+extension.swift */; };
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
-		797E4FAA2811637000805759 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E4FA92811637000805759 /* String+Extension.swift */; };
 		79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */; };
 		7993C9A728102C2500526AF2 /* TwoBigButtonsAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A628102C2500526AF2 /* TwoBigButtonsAlertView.swift */; };
 		7993C9A928102E1800526AF2 /* SecondaryCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */; };
@@ -138,7 +137,6 @@
 		796F55332810F03E00DC6F70 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		79735B63280ED78600D1067B /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		797E4FA92811637000805759 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingPresenter.swift.swift; sourceTree = "<group>"; };
 		7993C9A628102C2500526AF2 /* TwoBigButtonsAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBigButtonsAlertView.swift; sourceTree = "<group>"; };
 		7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryCardButton.swift; sourceTree = "<group>"; };
@@ -379,7 +377,6 @@
 				79222EA027F63FC50051334A /* CGFloat+Extension.swift */,
 				794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */,
 				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
-				797E4FA92811637000805759 /* String+Extension.swift */,
 				7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */,
 				793EC73A27FE183000CD8334 /* UIImage+Extension.swift */,
 				79A4FCD0280E58B800B509FE /* UIStackView+Extension.swift */,
@@ -723,7 +720,6 @@
 				7952058327FE394900A89012 /* ProjectSheetView.swift in Sources */,
 				C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */,
 				C057E8E92807941C004E44C3 /* AvatarSelectionView.swift in Sources */,
-				797E4FAA2811637000805759 /* String+Extension.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
 				C01BB6C5280B8C9C004D4790 /* StudentProfileViewController.swift in Sources */,
 				C05AA2F527FFA66D00230698 /* OneButtonAlertView.swift in Sources */,
