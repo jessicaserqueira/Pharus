@@ -8,14 +8,35 @@ import Foundation
 
 // MARK: - Student
 class Student: Codable {
-    var id, firstName, lastName, birthdate: String
-    var gender, school, year, city: String
+    var id: String
+    let firstName: String
+    let lastName: String
+    let birthdate: String
+    let gender: String
+    let school: String
+    var year: String
+    var city: String
     var schoolShift: String
     var avatar: String
-    var email, username: String
+    var email: String
+    var username: String
     var projects: [Project]
-
-    init(id: String, firstName: String, lastName: String, birthdate: String, gender: String, school: String, year: String, city: String, schoolShift: String, avatar: String, email: String, username: String, projects: [Project]) {
+    
+    init(
+        id: String,
+        firstName: String,
+        lastName: String,
+        birthdate: String,
+        gender: String,
+        school: String,
+        year: String,
+        city: String,
+        schoolShift: String,
+        avatar: String,
+        email: String,
+        username: String,
+        projects: [Project]
+    ) {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName

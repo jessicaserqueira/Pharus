@@ -8,25 +8,49 @@
 import Foundation
 
 class Project: Codable {
-    var id, name: String
-    var isSubscribed, isComplete: Bool
-    var score, placement: Int?
+    var id: String
+    let name: String
+    var isSubscribed: Bool
+    var isComplete: Bool
+    var score: Int?
+    var placement: Int?
     var projectDescription: String
     var scoreDescription: String?
-    var startDate, endDate, school, rules: String
+    var startDate: String
+    var endDate: String
+    var school: String
+    var rules: String
     var mentor: String
     var hasCompanyPartnership: Bool
     var company: String?
     var companyPhoto: String?
     var tasks: [Task]
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name, isSubscribed, isComplete, score, placement
         case projectDescription = "description"
         case scoreDescription, startDate, endDate, school, rules, mentor, hasCompanyPartnership, company, companyPhoto, tasks
     }
-
-    init(id: String, name: String, isSubscribed: Bool, isComplete: Bool, score: Int?, placement: Int?, projectDescription: String, scoreDescription: String?, startDate: String, endDate: String, school: String, rules: String, mentor: String, hasCompanyPartnership: Bool, company: String?, companyPhoto: String?, tasks: [Task]) {
+    
+    init(
+        id: String,
+        name: String,
+        isSubscribed: Bool,
+        isComplete: Bool,
+        score: Int?,
+        placement: Int?,
+        projectDescription: String,
+        scoreDescription: String?,
+        startDate: String,
+        endDate: String,
+        school: String,
+        rules: String,
+        mentor: String,
+        hasCompanyPartnership: Bool,
+        company: String?,
+        companyPhoto: String?,
+        tasks: [Task]
+    ) {
         self.id = id
         self.name = name
         self.isSubscribed = isSubscribed
