@@ -124,7 +124,7 @@ class ChangePasswordView: UIView {
     
     lazy var newPasswordLabel: UILabel = {
         let label = UILabel()
-        label.text = "Nova Senha"
+        label.text = "Nova senha"
         label.font = .mediumTitleBold
         label.textColor = UIColor.purple.pharusPurple
         label.translatesAutoresizingMaskIntoConstraints = false
