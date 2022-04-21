@@ -1,21 +1,21 @@
 //
-//  LoginViewController.swift
+//  ChangePasswordViewController.swift
 //  Pharus
 //
-//  Created by Jéssica Serqueira on 28/03/22.
+//  Created by Jéssica Serqueira on 21/04/22.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class ChangePasswordViewController: UIViewController {
     
-    private var customView = LoginView()
-    private var coordinator: LoginCoordinator
-    private var presenter: LoginPresenter
+    private var customView = ChangePasswordView()
+    private var coordinator: ChangePasswordFlow
+    private var presenter: ChangePasswordPresenter
     
     init(
-        coordinator: LoginCoordinator,
-        presenter: LoginPresenter
+        coordinator: ChangePasswordFlow,
+        presenter: ChangePasswordPresenter
     ) {
         self.presenter = presenter
         self.coordinator = coordinator
@@ -56,16 +56,11 @@ class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: LoginViewDelegate {
-    func loginButtonPressed() {
-        guard let email = customView.emailTextField.text else { return }
-        guard let password = customView.passwordTextField.text else { return }
+extension ChangePasswordViewController: ChangePasswordDelegate {
+    func changePasswordButtonPressed() {
+       
         
-        presenter.loginUser(email: email, password: password)
-    }
-    func changePasswordButtonTapped() {
-        guard let email = customView.emailTextField.text else { return }
-        presenter.showChangePassword(email: email)
+//        presenter.changePasswordUser()
     }
 }
 

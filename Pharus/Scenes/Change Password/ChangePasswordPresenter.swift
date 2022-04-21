@@ -1,28 +1,27 @@
 //
-//  LoginPresenter.swift
+//  ChangePasswordPresenter.swift
 //  Pharus
 //
-//  Created by Victor Colen on 28/03/22.
+//  Created by Jéssica Serqueira on 21/04/22.
 //
 
 import Foundation
 
-protocol LoginPresenterProtocol {
+protocol ChangePasswordPresenterProtocol {
     func isValidEmail(email: String) -> Bool
     func isValidPassword(password: String) -> Bool
-    func loginUser(email: String, password: String)
-    func showChangePassword(email: String)
+    func changePasswordUser(email: String, password: String)
 }
 
-class LoginPresenter: LoginPresenterProtocol {
+class ChangePasswordPresenter: ChangePasswordPresenterProtocol {
     
     //MARK: - Properties
     
-   private var coordinator: LoginCoordinator
+   private var coordinator: ChangePasswordFlow
     
     //MARK: - Initializer
     
-    init(coordinator: LoginCoordinator) {
+    init(coordinator: ChangePasswordFlow) {
         self.coordinator = coordinator
     }
     
@@ -41,12 +40,8 @@ class LoginPresenter: LoginPresenterProtocol {
         return passwordPredicate.evaluate(with: password)
     }
     
-    func loginUser(email: String, password: String) {
+    func changePasswordUser(email: String, password: String) {
         let student: Student = Bundle.main.decode("Student.json")
-        coordinator.showHome(student: student)
-    }
-    func showChangePassword(email: String) {
-        let student: Student = Bundle.main.decode("Student.json")
-        coordinator.showChangePassword(student: student)
+//        coordinator.showChangePassword(student: Student)
     }
 }

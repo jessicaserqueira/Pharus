@@ -1,22 +1,22 @@
 //
-//  LoginView.swift
+//  ChangePasswordView.swift
 //  Pharus
 //
-//  Created by Jéssica Serqueira on 28/03/22.
+//  Created by Jéssica Serqueira on 21/04/22.
 //
 
 import UIKit
 
-protocol LoginViewDelegate: AnyObject{
-    func loginButtonPressed()
-    func changePasswordButtonTapped()
+protocol ChangePasswordDelegate: AnyObject{
+    func changePasswordButtonPressed()
+
 }
 
-class LoginView: UIView {
+class ChangePasswordView: UIView {
     
     //MARK: - Properties
     
-    weak var delegate: LoginViewDelegate?
+    weak var delegate: ChangePasswordDelegate?
     
     //MARK: - Views
     
@@ -24,7 +24,7 @@ class LoginView: UIView {
         let view = UIView()
         view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "LoginView.mainView"
+        view.accessibilityIdentifier = "ChangePasswordView.mainView"
         
         return view
     }()
@@ -34,7 +34,7 @@ class LoginView: UIView {
         imageView.image = UIImage.images.appLogoImage
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "LoginView.logoImageView"
+        imageView.accessibilityIdentifier = "ChangePasswordView.logoImageView"
         
         return imageView
     }()
@@ -45,19 +45,19 @@ class LoginView: UIView {
         stackView.spacing = UIScreen.main.bounds.height/17
         stackView.alignment = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "LoginView.mainStackView"
+        stackView.accessibilityIdentifier = "ChangePasswordView.mainStackView"
         
         return stackView
     }()
     
-    lazy var loginTitle: UILabel = {
+    lazy var changePasswordTitle: UILabel = {
         let label = UILabel()
-        label.text = "Login"
+        label.text = "Esqueci a senha!"
         label.textColor = UIColor.purple.pharusPurple
         label.font = .largeTitleBold
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "LoginView.loginTitle"
+        label.accessibilityIdentifier = "ChangePasswordView.changePasswordTitle"
         
         return label
     }()
@@ -69,7 +69,7 @@ class LoginView: UIView {
         stackView.alignment = .fill
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "LoginView.emailStackView"
+        stackView.accessibilityIdentifier = "ChangePasswordView.emailStackView"
         
         return stackView
     }()
@@ -80,7 +80,7 @@ class LoginView: UIView {
         label.font = .mediumTitleBold
         label.textColor = UIColor.purple.pharusPurple
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "LoginView.emailLabel"
+        label.accessibilityIdentifier = "ChangePasswordView.emailLabel"
         
         return label
     }()
@@ -97,37 +97,37 @@ class LoginView: UIView {
         textField.autocorrectionType = .no
         textField.autocapitalizationType = .none
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.accessibilityIdentifier = "LoginView.emailTextField"
+        textField.accessibilityIdentifier = "ChangePasswordView.emailTextField"
         
         return textField
     }()
     
-    lazy var passwordStackView: UIStackView = {
+    lazy var newPasswordStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "LoginView.passwordStackView"
+        stackView.accessibilityIdentifier = "ChangePasswordView.newPasswordStackView"
     
         return stackView
     }()
     
-    lazy var passwordLabel: UILabel = {
+    lazy var newPasswordLabel: UILabel = {
         let label = UILabel()
-        label.text = "Senha"
+        label.text = "Nova Senha"
         label.font = .mediumTitleBold
         label.textColor = UIColor.purple.pharusPurple
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "LoginView.passwordLabel"
+        label.accessibilityIdentifier = "ChangePasswordView.newPasswordLabel"
         
         return label
     }()
     
-    lazy var passwordTextField: UITextField = {
+    lazy var newPasswordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Senha"
+        textField.placeholder = "Nova Senha"
         textField.font = .smallBody
         textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
@@ -138,35 +138,60 @@ class LoginView: UIView {
         textField.autocapitalizationType = .none
         textField.isSecureTextEntry = true
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.accessibilityIdentifier = "LoginView.passwordTextField"
+        textField.accessibilityIdentifier = "ChangePasswordView.newPasswordTextField"
         
         return textField
     }()
     
-    lazy var changePasswordLabel: UILabel = {
+    lazy var confirmPasswordStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.spacing = 10
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "ChangePasswordView.confirmPasswordStackView"
+    
+        return stackView
+    }()
+    
+    lazy var confirmPasswordLabel: UILabel = {
         let label = UILabel()
-        label.setOnClickListener {
-            self.changePasswordButtonTapped()
-        }
-        label.isUserInteractionEnabled = true
-        label.text = "Esqueci minha senha!"
-        label.font = .miniBody
+        label.text = "Confirmar senhra"
+        label.font = .mediumTitleBold
         label.textColor = UIColor.purple.pharusPurple
-        label.textAlignment = .right
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "LoginView.changePasswordLabel"
+        label.accessibilityIdentifier = "ChangePasswordView.confirmPasswordLabel"
         
         return label
     }()
     
-    lazy var loginButton: MainCardButton = {
-        let button = MainCardButton(title: "Entrar", buttonState: .normal)
+    lazy var confirmPasswordTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Confirmar senha"
+        textField.font = .smallBody
+        textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
+        textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        textField.layer.shadowOpacity = 0.30
+        textField.layer.shadowRadius = 0.0
+        textField.backgroundColor = UIColor.white
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
+        textField.isSecureTextEntry = true
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.accessibilityIdentifier = "ChangePasswordView.confirmPasswordTextField"
+        
+        return textField
+    }()
+    
+    lazy var changePasswordButton: MainCardButton = {
+        let button = MainCardButton(title: "Mudar senha", buttonState: .normal)
         button.addAction(UIAction { _ in
-            self.loginButtonPressed()
+            self.changePasswordButtonPressed()
         }, for: .touchUpInside)
         button.titleLabel?.font = .largeButton
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.accessibilityIdentifier = "LoginView.loginButton"
+        button.accessibilityIdentifier = "ChangePasswordView.changePasswordButton"
 
         return button
     }()
@@ -190,19 +215,23 @@ class LoginView: UIView {
         mainView.addSubview(mainStackView)
         
         mainStackView.addArrangedSubview(logoImageView)
-        mainStackView.addArrangedSubview(loginTitle)
+        mainStackView.addArrangedSubview(changePasswordTitle)
         mainStackView.addArrangedSubview(emailStackView)
         
         emailStackView.addArrangedSubview(emailLabel)
         emailStackView.addArrangedSubview(emailTextField)
         
-        mainStackView.addArrangedSubview(passwordStackView)
+        mainStackView.addArrangedSubview(newPasswordStackView)
         
-        passwordStackView.addArrangedSubview(passwordLabel)
-        passwordStackView.addArrangedSubview(passwordTextField)
-        passwordStackView.addArrangedSubview(changePasswordLabel)
+        newPasswordStackView.addArrangedSubview(newPasswordLabel)
+        newPasswordStackView.addArrangedSubview(newPasswordTextField)
         
-        mainStackView.addArrangedSubview(loginButton)
+        mainStackView.addArrangedSubview(confirmPasswordStackView)
+        confirmPasswordStackView.addArrangedSubview(confirmPasswordLabel)
+        confirmPasswordStackView.addArrangedSubview(confirmPasswordTextField)
+      
+        
+        mainStackView.addArrangedSubview(changePasswordButton)
     }
     
     func setupConstraints() {
@@ -215,21 +244,14 @@ class LoginView: UIView {
             mainStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 32),
             mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -32)
         ])
-                        
-        //Change Password Label
-        NSLayoutConstraint.activate([
-            changePasswordLabel.trailingAnchor.constraint(equalTo: passwordStackView.trailingAnchor)
-        ])
     }
 }
 
 //MARK: - Actions
 
-extension LoginView: LoginViewDelegate {
-     func loginButtonPressed() {
-         delegate?.loginButtonPressed()
-     }
-    func changePasswordButtonTapped(){
-        delegate?.changePasswordButtonTapped()
+extension ChangePasswordView {
+    func changePasswordButtonPressed() {
+        delegate?.changePasswordButtonPressed()
     }
 }
+

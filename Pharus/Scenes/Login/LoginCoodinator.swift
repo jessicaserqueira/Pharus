@@ -9,12 +9,14 @@ import UIKit
 
 protocol LoginFlow {
     func showHome(student: Student)
+    func showChangePassword (student: Student)
 }
 
 class LoginCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
+    
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -34,6 +36,15 @@ class LoginCoordinator: Coordinator {
 }
 
 extension LoginCoordinator: LoginFlow {
+    func showChangePassword(student: Student) {
+        let coordinator = ChangePasswordCoordinator(
+            navigationController: navigationController,
+            student: student)
+          
+        self.coordinate(to: coordinator)
+    }
+    
+    
     func showHome(student: Student) {
         let tabbarViewController = TabBarViewController()
         let tabbarCoordinator = TabBarCoordinator(
