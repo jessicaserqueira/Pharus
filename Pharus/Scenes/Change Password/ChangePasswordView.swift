@@ -20,6 +20,14 @@ class ChangePasswordView: UIView {
     
     //MARK: - Views
     
+    lazy var mainScrollView: UIScrollView = {
+        var scrollView = UIScrollView()
+        scrollView.clipsToBounds = true
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.accessibilityIdentifier = "StudentProfileView.mainScrollView"
+        return scrollView
+    }()
+    
     lazy var mainView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -127,7 +135,7 @@ class ChangePasswordView: UIView {
     
     lazy var newPasswordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Nova Senha"
+        textField.placeholder = "Nova senha"
         textField.font = .smallBody
         textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
@@ -157,7 +165,7 @@ class ChangePasswordView: UIView {
     
     lazy var confirmPasswordLabel: UILabel = {
         let label = UILabel()
-        label.text = "Confirmar senhra"
+        label.text = "Confirmar senha"
         label.font = .mediumTitleBold
         label.textColor = UIColor.purple.pharusPurple
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -211,8 +219,9 @@ class ChangePasswordView: UIView {
     
     func configureSubviews() {
         addSubview(mainView)
-        
-        mainView.addSubview(mainStackView)
+        mainView.addSubview(mainScrollView)
+                
+        mainScrollView.addSubview(mainStackView)
         
         mainStackView.addArrangedSubview(logoImageView)
         mainStackView.addArrangedSubview(changePasswordTitle)
@@ -235,14 +244,26 @@ class ChangePasswordView: UIView {
     }
     
     func setupConstraints() {
-        //Main View
-        self.stretch(mainView)
+      
+        self.stretch(mainScrollView)
+          
+        //Main Stack View
+        self.stretch(mainView, to: mainScrollView)
+        mainView.center(in: mainScrollView)
+        NSLayoutConstraint.activate([
+            mainStackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
+
+        ])
+
                 
         //Main Stack View
         NSLayoutConstraint.activate([
-            mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 48),
+//            mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 48),
             mainStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 32),
-            mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -32)
+            mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -32),
+            mainStackView.topAnchor.constraint(equalTo: mainScrollView.topAnchor, constant: 32),
+            mainStackView.bottomAnchor.constraint(equalTo: mainScrollView.bottomAnchor, constant: -32)
+         
         ])
     }
 }

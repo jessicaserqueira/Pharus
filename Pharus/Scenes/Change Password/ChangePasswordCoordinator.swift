@@ -8,7 +8,8 @@
 import UIKit
 
 protocol ChangePasswordFlow {
-    func showChangePassword(student: Student)
+    func showChangePassword()
+    func showLogoutChangePassword()
 }
 
 class ChangePasswordCoordinator: Coordinator {
@@ -17,7 +18,7 @@ class ChangePasswordCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     private var student: Student
     
-    init(navigationController: UINavigationController, student: Student) {
+    init(navigationController: UINavigationController,navia student: Student) {
         self.navigationController = navigationController
         self.student = student
     }
@@ -29,15 +30,33 @@ class ChangePasswordCoordinator: Coordinator {
             presenter: changePasswordPresenter
         )
     
-        navigationController.setNavigationBarHidden(true, animated: true)
-        
-        navigationController.pushViewController(changePasswordViewController, animated: true)
+        navigationController.setNavigationBarHidden(false, animated: false)
+        navigationController.setViewControllers([changePasswordViewController], animated: true)
+      
     }
 }
 
 extension ChangePasswordCoordinator: ChangePasswordFlow {
-    func showChangePassword(student: Student){
+    func showChangePassword(){
+        let alertView = OneButtonAlertView(
+            message: "Senha salva com sucesso",
+            image: UIImage.icons.checkIcon ?? .defaultImage
+        )
+        let alertCoordinator = OneButtonAlertCoordinator(
+            navigationController: navigationController,
+            alertView: alertView
+          
+        )
+        coordinate(to: alertCoordinator)
         
+        }
+    func showLogoutChangePassword(){
+        let coordinator = LoginCoordinator(
+            navigationController: navigationController
+        )
+        navigationController.dismiss(animated: true)
+        coordinate(to: coordinator)
+        }
     }
     
-}
+  

@@ -38,6 +38,7 @@ class ChangePasswordViewController: UIViewController {
         super.viewDidLoad()
         
         initializeHideKeyboard()
+        setNavigationBar()
     }
     
     func initializeHideKeyboard() {
@@ -50,17 +51,32 @@ class ChangePasswordViewController: UIViewController {
         
         view.addGestureRecognizer(tap)
     }
-    
+
     @objc func dismissMyKeyboard() {
         view.endEditing(true)
+    }
+    
+    func setNavigationBar() {
+        self.navigationController?.title = ""
+        
+        let logoutIcon = UIImage.icons.xmarkIcon?.withRenderingMode(.alwaysOriginal)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: logoutIcon,
+            style: .plain,
+            target: self,
+            action: #selector(logoutTapped)
+        )
     }
 }
 
 extension ChangePasswordViewController: ChangePasswordDelegate {
-    func changePasswordButtonPressed() {
-       
+  func changePasswordButtonPressed() {
+      
+        presenter.changePasswordUser()
+    }
+    @objc func logoutTapped() {
+        presenter.logoutChangePassword()
         
-//        presenter.changePasswordUser()
     }
 }
 

@@ -30,21 +30,17 @@ class LoginCoordinator: Coordinator {
         )
     
         navigationController.setNavigationBarHidden(true, animated: true)
-        
         navigationController.pushViewController(loginViewController, animated: true)
     }
 }
-
 extension LoginCoordinator: LoginFlow {
     func showChangePassword(student: Student) {
         let coordinator = ChangePasswordCoordinator(
             navigationController: navigationController,
-            student: student)
+            navia: student)
           
         self.coordinate(to: coordinator)
     }
-    
-    
     func showHome(student: Student) {
         let tabbarViewController = TabBarViewController()
         let tabbarCoordinator = TabBarCoordinator(
