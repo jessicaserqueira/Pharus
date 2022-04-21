@@ -55,11 +55,11 @@ class SmallAlertButton: UIButton {
         layer.cornerRadius = 16
         
         if importance == .primary {
-            backgroundColor = .purple.pharusPurple
+            backgroundColor = UIColor.purple.pharusPurple
             setTitleColor(.white, for: .normal)
         } else {
             backgroundColor = .clear
-            setTitleColor(.purple.pharusPurple, for: .normal)
+            setTitleColor(UIColor.purple.pharusPurple, for: .normal)
         }
     }
         
