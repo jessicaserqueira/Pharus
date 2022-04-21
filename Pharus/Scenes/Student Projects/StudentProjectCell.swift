@@ -70,7 +70,7 @@ class StudentProjectCell: UITableViewCell {
         return label
     }()
     
-    lazy var mentor: UILabel = {
+    lazy var mentorLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
         label.font = .mediumTitleBold
@@ -203,10 +203,10 @@ class StudentProjectCell: UITableViewCell {
         return label
     }()
     
-    lazy var companyLogoView: UIView = {
+    lazy var companyLogoHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "UserProjectCell.companyLogoView"
+        view.accessibilityIdentifier = "UserProjectCell.companyLogoHelperView"
         
         return view
     }()
@@ -250,19 +250,17 @@ class StudentProjectCell: UITableViewCell {
     func configureCell(using project: Project) {
         titleLabel.text = project.name
         descriptionLabel.text = project.projectDescription
-        mentor.text = "Mentor: " + project.mentor
-        completionBarCircleView.completionPercentage = project.completionStatus
-        percentageCompletionLabel.text = project.completionStatus.description + "%"
-        completionBarCircleView.completionPercentage = project.completionStatus
+        mentorLabel.text = "Mentor: " + project.mentor
         projectScheduleView.project = project
         subscribeButton.isSubscribed = project.isSubscribed
         
+        completionBarCircleView.completionPercentage = project.completionPercentage*100
+        percentageCompletionLabel.text = "\(project.completedTasksCount)/\(project.tasks.count)"
+        
         if project.isSubscribed {
             mainView.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
-            self.stretch(lowerStackView, to: lowerHelperView, left: 36.5, right: -27)
         } else {
             mainView.backgroundColor = UIColor.project.grayUnsubscribedProjectBackground
-            self.stretch(lowerStackView, to: lowerHelperView, left: 20.5, right: -12)
         }
     }
     
@@ -275,7 +273,7 @@ class StudentProjectCell: UITableViewCell {
         
         titleStackView.addArrangedSubview(titleLabel)
         
-        mainStackView.addArrangedSubview(mentor)
+        mainStackView.addArrangedSubview(mentorLabel)
         mainStackView.addArrangedSubview(descriptionTitleLabel)
         mainStackView.addArrangedSubview(descriptionStackView)
         
@@ -296,9 +294,7 @@ class StudentProjectCell: UITableViewCell {
         
         completionStackView.addArrangedSubview(projectScheduleView)
         
-        mainStackView.addArrangedSubview(lowerHelperView)
-        
-        lowerHelperView.addSubview(lowerStackView)
+        mainStackView.addArrangedSubview(lowerStackView)
         
         lowerStackView.addArrangedSubview(partnershipStackView)
         
@@ -306,9 +302,9 @@ class StudentProjectCell: UITableViewCell {
         
         partnershipHelperView.addSubview(partnershipLabel)
         
-        partnershipStackView.addArrangedSubview(companyLogoView)
+        partnershipStackView.addArrangedSubview(companyLogoHelperView)
         
-        companyLogoView.addSubview(companyLogoImageView)
+        companyLogoHelperView.addSubview(companyLogoImageView)
         
         lowerStackView.addArrangedSubview(subscribeHelperView)
         
@@ -317,6 +313,7 @@ class StudentProjectCell: UITableViewCell {
     
     //MARK: - Constraints
     func setupConstraints() {
+ 
         //Main View
         self.stretch(mainView, top: 16, left: 16, bottom: -16, right: -16)
         
@@ -330,7 +327,7 @@ class StudentProjectCell: UITableViewCell {
         
         //Mentors Label
         NSLayoutConstraint.activate([
-            mentor.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor)
+            mentorLabel.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor)
         ])
         
         //Completion Stack View
@@ -372,7 +369,7 @@ class StudentProjectCell: UITableViewCell {
         NSLayoutConstraint.activate([
             companyLogoImageView.widthAnchor.constraint(equalToConstant: 66),
             companyLogoImageView.heightAnchor.constraint(equalToConstant: 66),
-            companyLogoImageView.leadingAnchor.constraint(equalTo: companyLogoView.leadingAnchor),
+            companyLogoImageView.leadingAnchor.constraint(equalTo: companyLogoHelperView.leadingAnchor),
             companyLogoImageView.centerYAnchor.constraint(equalTo: partnershipStackView.centerYAnchor)
         ])
         

@@ -15,9 +15,14 @@ class StudentHomeCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
+    var student: Student
     
-    init(navigationController: UINavigationController) {
+    init(
+        navigationController: UINavigationController,
+         student: Student
+    ) {
         self.navigationController = navigationController
+        self.student = student
     }
     
     func start() {
@@ -25,7 +30,8 @@ class StudentHomeCoordinator: Coordinator {
         let studentHomePresenter = StudentHomePresenter(coordinator: self)
         let studentHomeViewController = StudentHomeViewController(
             coordinator: self,
-            presenter: studentHomePresenter
+            presenter: studentHomePresenter,
+            student: student
         )
     
         navigationController.setNavigationBarHidden(true, animated: true)

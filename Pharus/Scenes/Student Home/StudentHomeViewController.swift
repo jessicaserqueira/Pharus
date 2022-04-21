@@ -10,14 +10,18 @@ class StudentHomeViewController: UIViewController {
     
     private var coordinator: StudentHomeCoordinator
     private var presenter: StudentHomePresenter
+    private var student: Student
     let customView = StudentHomeView()
     
     init(
         coordinator: StudentHomeCoordinator,
-        presenter: StudentHomePresenter
+        presenter: StudentHomePresenter,
+        student: Student
     ) {
         self.coordinator = coordinator
         self.presenter = presenter
+        self.student = student
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -38,8 +42,16 @@ class StudentHomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setGradientBackground()
         super.viewWillAppear(animated)
+        
+        setGradientBackground()
+        showStudentAvatar()
+    }
+    
+    func showStudentAvatar() {
+        customView.studentAvatarImageView.image = UIImage(
+            named: "avatar" + student.avatar + K.Assets.Images.Avatar.CircleImage.suffix
+        )
     }
     
     func setupTabBarIcons() {

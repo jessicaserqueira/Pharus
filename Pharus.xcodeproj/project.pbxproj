@@ -30,7 +30,6 @@
 		7963213227F23C9200A202EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963213127F23C9200A202EE /* Constants.swift */; };
 		796F55322810F01A00DC6F70 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F55312810F01A00DC6F70 /* Task.swift */; };
 		796F55342810F03E00DC6F70 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F55332810F03E00DC6F70 /* Project.swift */; };
-		796F55362810F04D00DC6F70 /* Medals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F55352810F04D00DC6F70 /* Medals.swift */; };
 		79735B64280ED78600D1067B /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79735B63280ED78600D1067B /* UIViewController+extension.swift */; };
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
 		79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */; };
@@ -136,7 +135,6 @@
 		7963213127F23C9200A202EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		796F55312810F01A00DC6F70 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		796F55332810F03E00DC6F70 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		796F55352810F04D00DC6F70 /* Medals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medals.swift; sourceTree = "<group>"; };
 		79735B63280ED78600D1067B /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingPresenter.swift.swift; sourceTree = "<group>"; };
@@ -547,7 +545,6 @@
 			children = (
 				79FB0CC827F330FA001D36A7 /* Student.json */,
 				799768CF27EA3B5F0057AFA7 /* Student.swift */,
-				796F55352810F04D00DC6F70 /* Medals.swift */,
 				796F55332810F03E00DC6F70 /* Project.swift */,
 				796F55312810F01A00DC6F70 /* Task.swift */,
 			);
@@ -748,7 +745,6 @@
 				79E838AE280B067D001C46AD /* OneButtonAlertPresenter.swift in Sources */,
 				C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */,
 				C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */,
-				796F55362810F04D00DC6F70 /* Medals.swift in Sources */,
 				79E838A1280AF7E1001C46AD /* HomeMiniCardView.swift in Sources */,
 				7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */,
 				C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */,

@@ -11,13 +11,18 @@ class AvatarSelectionViewController: UIViewController {
     // MARK: - Properties
     
     private var coordinator: AvatarSelectionCoordinator
+    private var student: Student
     private var customView: AvatarSelectionView
     private var avatarSelectionCollectionView: UICollectionView?
     
     //MARK: - Initializer
     
-    init(coordinator: AvatarSelectionCoordinator) {
+    init(
+        coordinator: AvatarSelectionCoordinator,
+        student: Student
+    ) {
         self.coordinator = coordinator
+        self.student = student
         self.customView = AvatarSelectionView()
         
         super.init(nibName: nil, bundle: nil)
@@ -46,6 +51,7 @@ class AvatarSelectionViewController: UIViewController {
         super.viewWillAppear(animated)
         
         setGradientBackground()
+        showStudentAvatar()
     }
     
     //MARK: - Functions
@@ -87,6 +93,12 @@ class AvatarSelectionViewController: UIViewController {
             avatarSelectionCollectionView!.heightAnchor.constraint(equalToConstant: 130)
         ])
     }
+    
+    func showStudentAvatar() {
+        customView.mainAvatarImageView.image = UIImage(
+            named: "avatar" + student.avatar + K.Assets.Images.Avatar.FullImage.suffix
+        )
+    }
 }
 
 extension AvatarSelectionViewController: UICollectionViewDataSource {
@@ -111,7 +123,11 @@ extension AvatarSelectionViewController: UICollectionViewDataSource {
 extension AvatarSelectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        customView.mainAvatarImageView.image = UIImage.images.avatars.fullImage.avatars[indexPath.row]
+        
+        let newAvatar = UIImage.images.avatars.fullImage.avatars[indexPath.row]
+        customView.mainAvatarImageView.image = newAvatar
+        
+        student.avatar = String(indexPath.row + 1)
     }
 }
 

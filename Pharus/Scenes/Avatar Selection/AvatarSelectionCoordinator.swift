@@ -15,14 +15,20 @@ class AvatarSelectionCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
+    private var student: Student
     
-    init(navigationController: UINavigationController) {
+    init(
+        navigationController: UINavigationController,
+        student: Student
+    ) {
         self.navigationController = navigationController
+        self.student = student
     }
     
     func start() {
         let studentAvatarViewController = AvatarSelectionViewController(
-            coordinator: self
+            coordinator: self,
+            student: student
         )
         
         navigationController.pushViewController(studentAvatarViewController, animated: true)

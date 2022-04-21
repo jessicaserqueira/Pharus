@@ -1,38 +1,24 @@
 {
-    "id": "62501bb56c91d14d76f0123c",
-    "firstName": "John",
-    "lastName": "Jonah Jameson",
+    "id": "",
+    "firstName": "João Pedro",
+    "lastName": "Ferreira Neto",
     "birthdate": "13/05/2002",
-    "schoolID": "XXXXXXXX",
     "gender": "M",
-    "phone": "(XX)XXXXX-XXXX",
     "school": "Colégio Los Brabos",
     "year": "1º ano",
     "city": "Lavras, MG",
     "schoolShift": "M",
-    "avatar": "https://wallpapercave.com/wp/wp9414303.jpg",
+    "avatar": "12",
     "email": "student@gmail.com",
     "username": "sTud3nt",
-    "score": 1300,
-    "medals": {
-        "diamond": 1,
-        "ruby": 0,
-        "emerald": 0,
-        "saphire": 0,
-        "platinum": 0,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 0
-    },
     "projects": [
         {
-            "id": "62501bb56caw14d76f0123c",
+            "id": "",
             "name": "Minha primeira página web usando tenologias bem brabas",
             "isSubscribed": true,
             "isComplete": false,
             "score": 68,
             "placement": 3,
-            "medal": "gold",
             "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
             "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
             "startDate": "01/01/2022",
@@ -43,7 +29,6 @@
             "hasCompanyPartnership": false,
             "company": null,
             "companyPhoto": null,
-            "completionStatus": 50.0,
             "tasks": [
                 {
                     "title": "Criar navigation",
@@ -58,13 +43,12 @@
             ]
         },
         {
-            "id": "62501bb56caw14d76f0123SSWc",
+            "id": "",
             "name": "Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
             "isSubscribed": true,
             "isComplete": true,
             "score": 100,
             "placement": 1,
-            "medal": "diamond",
             "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
             "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
             "startDate": "07/09/2022",
@@ -75,7 +59,6 @@
             "hasCompanyPartnership": true,
             "company": "ioBrabaAsys",
             "companyPhoto": "https://pt.wikipedia.org/wiki/Ficheiro:Ioasys_logo.png",
-            "completionStatus": 100.0,
             "tasks": [
                 {
                     "title": "quis nostrud exercitation",
@@ -90,13 +73,12 @@
             ]
         },
         {
-            "id": "62501bb56caw14d76f0123c",
+            "id": "",
             "name": "Minha décima quinta página web usando tenologias bem brabas",
             "isSubscribed": false,
             "isComplete": false,
             "score": null,
             "placement": 5,
-            "medal": null,
             "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
             "scoreDescription": null,
             "startDate": "01/01/2022",
@@ -107,7 +89,6 @@
             "hasCompanyPartnership": false,
             "company": null,
             "companyPhoto": null,
-            "completionStatus": 0,
             "tasks": [
                 {
                     "title": "Criar navigation",
@@ -138,7 +119,6 @@
             "isComplete": false,
             "score": null,
             "placement": 4,
-            "medal": null,
             "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
             "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
             "startDate": "01/01/2022",
@@ -149,7 +129,6 @@
             "hasCompanyPartnership": false,
             "company": null,
             "companyPhoto": null,
-            "completionStatus": 50.0,
             "tasks": [
                 {
                     "title": "consectetur adipiscing elit",
@@ -170,7 +149,6 @@
             "isComplete": false,
             "score": null,
             "placement": null,
-            "medal": null,
             "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
             "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
             "startDate": "01/01/2022",
@@ -181,7 +159,6 @@
             "hasCompanyPartnership": false,
             "company": null,
             "companyPhoto": null,
-            "completionStatus": 50.0,
             "tasks": [
                 {
                     "title": "consectetur adipiscing elit",
