@@ -137,7 +137,8 @@ class TabBarCoordinator: Coordinator {
     
     private func makeStudentHomeCoordinator() -> StudentHomeCoordinator {
         let coordinator = StudentHomeCoordinator(
-            navigationController: UINavigationController()
+            navigationController: UINavigationController(),
+            student: student
         )
         
         coordinator.start()
