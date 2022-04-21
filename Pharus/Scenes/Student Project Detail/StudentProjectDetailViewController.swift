@@ -8,7 +8,7 @@ import UIKit
 
 class StudentProjectDetailViewController: UIViewController {
     
-    private var project: Project
+    private var project: ProjectModel
     private var presenter: StudentProjectDetailPresenter
     private var coordinator: StudentProjectDetailCoordinator
     private var studentProjectDetailView: StudentProjectDetailView
@@ -16,7 +16,7 @@ class StudentProjectDetailViewController: UIViewController {
     init(
         coordinator: StudentProjectDetailCoordinator,
         presenter: StudentProjectDetailPresenter,
-        project: Project
+        project: ProjectModel
     ) {
         self.coordinator = coordinator
         self.presenter = presenter
@@ -76,7 +76,7 @@ extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {
         presenter.showMentorReview()
     }
     
-    func taskCheckboxTapped(task: Task) {
+    func taskCheckboxTapped(task: TaskModel) {
         presenter.toggleTaskCompletedStatus(task: task)
     }
     

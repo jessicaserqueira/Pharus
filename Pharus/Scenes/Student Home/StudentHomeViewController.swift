@@ -10,13 +10,13 @@ class StudentHomeViewController: UIViewController {
     
     private var coordinator: StudentHomeCoordinator
     private var presenter: StudentHomePresenter
-    private var student: Student
+    private var student: StudentModel
     let customView = StudentHomeView()
     
     init(
         coordinator: StudentHomeCoordinator,
         presenter: StudentHomePresenter,
-        student: Student
+        student: StudentModel
     ) {
         self.coordinator = coordinator
         self.presenter = presenter

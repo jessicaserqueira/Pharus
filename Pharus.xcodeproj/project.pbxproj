@@ -21,6 +21,9 @@
 		7943975E27F3C6020075102B /* StudentProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975D27F3C6020075102B /* StudentProjectCell.swift */; };
 		7943976027F3C6130075102B /* StudentProjectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */; };
 		794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */; };
+		795005A82811E734009C3716 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795005A72811E733009C3716 /* Student.swift */; };
+		795005AA2811E74D009C3716 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795005A92811E74D009C3716 /* Task.swift */; };
+		795005AC2811E75A009C3716 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795005AB2811E75A009C3716 /* Project.swift */; };
 		7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058027FE382D00A89012 /* TabBarViewController.swift */; };
 		7952058327FE394900A89012 /* ProjectSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058227FE394900A89012 /* ProjectSheetView.swift */; };
 		7952058527FE3B1A00A89012 /* ProjectSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952058427FE3B1A00A89012 /* ProjectSheetViewController.swift */; };
@@ -28,8 +31,8 @@
 		795A02192809B695000D0B84 /* ProjectSheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */; };
 		7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963212F27F23AF000A202EE /* LoginPresenter.swift */; };
 		7963213227F23C9200A202EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963213127F23C9200A202EE /* Constants.swift */; };
-		796F55322810F01A00DC6F70 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F55312810F01A00DC6F70 /* Task.swift */; };
-		796F55342810F03E00DC6F70 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F55332810F03E00DC6F70 /* Project.swift */; };
+		796F55322810F01A00DC6F70 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F55312810F01A00DC6F70 /* TaskModel.swift */; };
+		796F55342810F03E00DC6F70 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F55332810F03E00DC6F70 /* ProjectModel.swift */; };
 		79735B64280ED78600D1067B /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79735B63280ED78600D1067B /* UIViewController+extension.swift */; };
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
 		79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */; };
@@ -43,7 +46,7 @@
 		7993C9B628104C6D00526AF2 /* LogoutAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9B528104C6D00526AF2 /* LogoutAlertPresenter.swift */; };
 		7993C9B828104C7700526AF2 /* LogoutAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9B728104C7700526AF2 /* LogoutAlertViewController.swift */; };
 		7993C9BA28104E7400526AF2 /* SmallAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9B928104E7400526AF2 /* SmallAlertButton.swift */; };
-		799768D027EA3B5F0057AFA7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* Student.swift */; };
+		799768D027EA3B5F0057AFA7 /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799768CF27EA3B5F0057AFA7 /* StudentModel.swift */; };
 		79A2C775280C473F00B3159B /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2C774280C473F00B3159B /* SubscribeButton.swift */; };
 		79A2C777280C4A1700B3159B /* MainCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2C776280C4A1700B3159B /* MainCardButton.swift */; };
 		79A2C779280C587F00B3159B /* ProjectScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2C778280C587F00B3159B /* ProjectScheduleView.swift */; };
@@ -126,6 +129,9 @@
 		7943975D27F3C6020075102B /* StudentProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectCell.swift; sourceTree = "<group>"; };
 		7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsPresenter.swift; sourceTree = "<group>"; };
 		794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		795005A72811E733009C3716 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		795005A92811E74D009C3716 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		795005AB2811E75A009C3716 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		7952058027FE382D00A89012 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7952058227FE394900A89012 /* ProjectSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetView.swift; sourceTree = "<group>"; };
 		7952058427FE3B1A00A89012 /* ProjectSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetViewController.swift; sourceTree = "<group>"; };
@@ -133,8 +139,8 @@
 		795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetCoordinator.swift; sourceTree = "<group>"; };
 		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/Scenes/Login/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		7963213127F23C9200A202EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		796F55312810F01A00DC6F70 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		796F55332810F03E00DC6F70 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		796F55312810F01A00DC6F70 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		796F55332810F03E00DC6F70 /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		79735B63280ED78600D1067B /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingPresenter.swift.swift; sourceTree = "<group>"; };
@@ -148,7 +154,7 @@
 		7993C9B528104C6D00526AF2 /* LogoutAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutAlertPresenter.swift; sourceTree = "<group>"; };
 		7993C9B728104C7700526AF2 /* LogoutAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutAlertViewController.swift; sourceTree = "<group>"; };
 		7993C9B928104E7400526AF2 /* SmallAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallAlertButton.swift; sourceTree = "<group>"; };
-		799768CF27EA3B5F0057AFA7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		799768CF27EA3B5F0057AFA7 /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
 		79A2C774280C473F00B3159B /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
 		79A2C776280C4A1700B3159B /* MainCardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
 		79A2C778280C587F00B3159B /* ProjectScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectScheduleView.swift; sourceTree = "<group>"; };
@@ -544,9 +550,12 @@
 			isa = PBXGroup;
 			children = (
 				79FB0CC827F330FA001D36A7 /* Student.json */,
-				799768CF27EA3B5F0057AFA7 /* Student.swift */,
-				796F55332810F03E00DC6F70 /* Project.swift */,
-				796F55312810F01A00DC6F70 /* Task.swift */,
+				799768CF27EA3B5F0057AFA7 /* StudentModel.swift */,
+				796F55332810F03E00DC6F70 /* ProjectModel.swift */,
+				795005A72811E733009C3716 /* Student.swift */,
+				795005A92811E74D009C3716 /* Task.swift */,
+				795005AB2811E75A009C3716 /* Project.swift */,
+				796F55312810F01A00DC6F70 /* TaskModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -699,6 +708,7 @@
 				79E8389F280AF7C5001C46AD /* HomeNewsView.swift in Sources */,
 				7993C9AF28103CD500526AF2 /* TwoBigButtonsAlertCoordinator.swift in Sources */,
 				C04561A827EA041B007EC5C3 /* Coordinator.swift in Sources */,
+				795005A82811E734009C3716 /* Student.swift in Sources */,
 				C05AA2BC27FC740E00230698 /* TabBarCoordinator.swift in Sources */,
 				79EE571B280B889200F01069 /* StudentHomePresenter.swift in Sources */,
 				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
@@ -706,7 +716,7 @@
 				7993C9B228104C5800526AF2 /* LogoutAlertView.swift in Sources */,
 				79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */,
 				7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */,
-				796F55342810F03E00DC6F70 /* Project.swift in Sources */,
+				796F55342810F03E00DC6F70 /* ProjectModel.swift in Sources */,
 				79EE5719280B881500F01069 /* StudentHomeCoordinator.swift in Sources */,
 				C057E8F1280794E9004E44C3 /* AvatarSelectionViewController.swift in Sources */,
 				7993C9B828104C7700526AF2 /* LogoutAlertViewController.swift in Sources */,
@@ -720,11 +730,13 @@
 				7952058327FE394900A89012 /* ProjectSheetView.swift in Sources */,
 				C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */,
 				C057E8E92807941C004E44C3 /* AvatarSelectionView.swift in Sources */,
-				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
+				795005AA2811E74D009C3716 /* Task.swift in Sources */,
+				799768D027EA3B5F0057AFA7 /* StudentModel.swift in Sources */,
 				C01BB6C5280B8C9C004D4790 /* StudentProfileViewController.swift in Sources */,
 				C05AA2F527FFA66D00230698 /* OneButtonAlertView.swift in Sources */,
 				C01BB6C1280B8C84004D4790 /* StudenteProfileView.swift in Sources */,
 				7993C9AD28103CAB00526AF2 /* TwoBigButtonsAlertPresenter.swift in Sources */,
+				795005AC2811E75A009C3716 /* Project.swift in Sources */,
 				7993C9B428104C6400526AF2 /* LogoutAlertCoordinator.swift in Sources */,
 				79AF90F728043A590094AB97 /* SendFileView.swift in Sources */,
 				C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */,
@@ -753,7 +765,7 @@
 				7963213227F23C9200A202EE /* Constants.swift in Sources */,
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
 				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
-				796F55322810F01A00DC6F70 /* Task.swift in Sources */,
+				796F55322810F01A00DC6F70 /* TaskModel.swift in Sources */,
 				7943976027F3C6130075102B /* StudentProjectsPresenter.swift in Sources */,
 				7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */,
 				793EC73D27FE197B00CD8334 /* StudentProfileButton.swift in Sources */,

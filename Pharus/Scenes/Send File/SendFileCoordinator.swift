@@ -16,9 +16,9 @@ class SendFileCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var project: Project
+    var project: ProjectModel
     
-    init(navigationController: UINavigationController, project: Project) {
+    init(navigationController: UINavigationController, project: ProjectModel) {
         self.navigationController = navigationController
         self.project = project
     }
