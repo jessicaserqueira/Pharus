@@ -10,6 +10,7 @@ import UIKit
 protocol StudentProjectDetailFlow {
     func showProjectRules()
     func showSendFileView()
+    func showMentorReview()
 }
 
 class StudentProjectDetailCoordinator: Coordinator {
@@ -37,7 +38,7 @@ class StudentProjectDetailCoordinator: Coordinator {
 }
 
 extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
-    
+
     func showProjectRules() {
         
         let projectSheetView = ProjectSheetView(
@@ -45,6 +46,22 @@ extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
             descriptionTitle: "Tarefa 01",
             descriptionText: project.rules,
             icon: UIImage(named: K.Assets.Icons.rulesIcon)!
+        )
+        
+        let projectSheetCoordinator = ProjectSheetCoordinator(
+            navigationController: navigationController,
+            projectSheetView: projectSheetView
+        )
+        
+        coordinate(to: projectSheetCoordinator)
+    }
+    
+    func showMentorReview() {
+        let projectSheetView = ProjectSheetView(
+            viewTitle: "Avaliação do mentor",
+            descriptionTitle: "Tarefa 01:",
+            descriptionText: project.scoreDescription ?? "",
+            icon: UIImage.icons.feedbackIcon ?? .defaultImage
         )
         
         let projectSheetCoordinator = ProjectSheetCoordinator(

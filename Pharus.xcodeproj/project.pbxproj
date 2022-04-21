@@ -28,6 +28,9 @@
 		795A02192809B695000D0B84 /* ProjectSheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */; };
 		7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963212F27F23AF000A202EE /* LoginPresenter.swift */; };
 		7963213227F23C9200A202EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963213127F23C9200A202EE /* Constants.swift */; };
+		796F55322810F01A00DC6F70 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F55312810F01A00DC6F70 /* Task.swift */; };
+		796F55342810F03E00DC6F70 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F55332810F03E00DC6F70 /* Project.swift */; };
+		796F55362810F04D00DC6F70 /* Medals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F55352810F04D00DC6F70 /* Medals.swift */; };
 		79735B64280ED78600D1067B /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79735B63280ED78600D1067B /* UIViewController+extension.swift */; };
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
 		79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */; };
@@ -131,6 +134,9 @@
 		795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSheetCoordinator.swift; sourceTree = "<group>"; };
 		7963212F27F23AF000A202EE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Pharus/Scenes/Login/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		7963213127F23C9200A202EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		796F55312810F01A00DC6F70 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		796F55332810F03E00DC6F70 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		796F55352810F04D00DC6F70 /* Medals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medals.swift; sourceTree = "<group>"; };
 		79735B63280ED78600D1067B /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingPresenter.swift.swift; sourceTree = "<group>"; };
@@ -243,10 +249,10 @@
 		79434A66280912A8006D0184 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */,
 				C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */,
 				7963212F27F23AF000A202EE /* LoginPresenter.swift */,
 				C008AF2327F1EDA100AD94C9 /* LoginView.swift */,
+				C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -265,10 +271,10 @@
 		79434A68280912BE006D0184 /* Student Project Detail */ = {
 			isa = PBXGroup;
 			children = (
-				7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */,
 				79AF90F828043D3C0094AB97 /* StudentProjectDetailCoordinator.swift */,
 				79AF90FA28043DEA0094AB97 /* StudentProjectDetailPresenter.swift */,
 				7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */,
+				7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */,
 			);
 			path = "Student Project Detail";
 			sourceTree = "<group>";
@@ -277,8 +283,8 @@
 			isa = PBXGroup;
 			children = (
 				C057E8F42807954B004E44C3 /* AvatarSelectionCoordinator.swift */,
-				C057E8F0280794E9004E44C3 /* AvatarSelectionViewController.swift */,
 				C057E8E82807941C004E44C3 /* AvatarSelectionView.swift */,
+				C057E8F0280794E9004E44C3 /* AvatarSelectionViewController.swift */,
 			);
 			path = "Avatar Selection";
 			sourceTree = "<group>";
@@ -308,10 +314,10 @@
 		795A02152809B664000D0B84 /* Project Sheet */ = {
 			isa = PBXGroup;
 			children = (
+				795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */,
+				795A02162809B689000D0B84 /* ProjectSheetPresenter.swift */,
 				7952058227FE394900A89012 /* ProjectSheetView.swift */,
 				7952058427FE3B1A00A89012 /* ProjectSheetViewController.swift */,
-				795A02162809B689000D0B84 /* ProjectSheetPresenter.swift */,
-				795A02182809B695000D0B84 /* ProjectSheetCoordinator.swift */,
 			);
 			path = "Project Sheet";
 			sourceTree = "<group>";
@@ -375,9 +381,9 @@
 				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
 				7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */,
 				793EC73A27FE183000CD8334 /* UIImage+Extension.swift */,
+				79A4FCD0280E58B800B509FE /* UIStackView+Extension.swift */,
 				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
 				79735B63280ED78600D1067B /* UIViewController+extension.swift */,
-				79A4FCD0280E58B800B509FE /* UIStackView+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -406,8 +412,8 @@
 		79EE571C280BAABE00F01069 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				79EE5742280BAB9000F01069 /* OpenSans */,
 				79EE571D280BAB7E00F01069 /* Montserrat */,
+				79EE5742280BAB9000F01069 /* OpenSans */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -415,10 +421,10 @@
 		79EE571D280BAB7E00F01069 /* Montserrat */ = {
 			isa = PBXGroup;
 			children = (
-				79EE571F280BAB7E00F01069 /* Montserrat-Medium.ttf */,
 				79EE5725280BAB7E00F01069 /* Montserrat-Bold.ttf */,
-				79EE5728280BAB7E00F01069 /* Montserrat-SemiBold.ttf */,
+				79EE571F280BAB7E00F01069 /* Montserrat-Medium.ttf */,
 				79EE572C280BAB7E00F01069 /* Montserrat-Regular.ttf */,
+				79EE5728280BAB7E00F01069 /* Montserrat-SemiBold.ttf */,
 			);
 			path = Montserrat;
 			sourceTree = "<group>";
@@ -426,10 +432,10 @@
 		79EE5742280BAB9000F01069 /* OpenSans */ = {
 			isa = PBXGroup;
 			children = (
-				79EE5743280BAB9000F01069 /* OpenSans-SemiBold.ttf */,
 				79EE5749280BAB9000F01069 /* OpenSans-Bold.ttf */,
 				79EE574B280BAB9000F01069 /* OpenSans-Medium.ttf */,
 				79EE574D280BAB9000F01069 /* OpenSans-Regular.ttf */,
+				79EE5743280BAB9000F01069 /* OpenSans-SemiBold.ttf */,
 			);
 			path = OpenSans;
 			sourceTree = "<group>";
@@ -449,11 +455,11 @@
 				79222EA227F643D60051334A /* CircleProgressView.swift */,
 				79E838A0280AF7E1001C46AD /* HomeMiniCardView.swift */,
 				79E8389E280AF7C5001C46AD /* HomeNewsView.swift */,
-				7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */,
 				79A2C776280C4A1700B3159B /* MainCardButton.swift */,
 				79A2C778280C587F00B3159B /* ProjectScheduleView.swift */,
-				7993C9B928104E7400526AF2 /* SmallAlertButton.swift */,
 				79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */,
+				7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */,
+				7993C9B928104E7400526AF2 /* SmallAlertButton.swift */,
 				793EC73C27FE197B00CD8334 /* StudentProfileButton.swift */,
 				79A2C774280C473F00B3159B /* SubscribeButton.swift */,
 				C05AA2F827FFA69800230698 /* MainCardButton.swift */,
@@ -541,6 +547,9 @@
 			children = (
 				79FB0CC827F330FA001D36A7 /* Student.json */,
 				799768CF27EA3B5F0057AFA7 /* Student.swift */,
+				796F55352810F04D00DC6F70 /* Medals.swift */,
+				796F55332810F03E00DC6F70 /* Project.swift */,
+				796F55312810F01A00DC6F70 /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -700,6 +709,7 @@
 				7993C9B228104C5800526AF2 /* LogoutAlertView.swift in Sources */,
 				79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */,
 				7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */,
+				796F55342810F03E00DC6F70 /* Project.swift in Sources */,
 				79EE5719280B881500F01069 /* StudentHomeCoordinator.swift in Sources */,
 				C057E8F1280794E9004E44C3 /* AvatarSelectionViewController.swift in Sources */,
 				7993C9B828104C7700526AF2 /* LogoutAlertViewController.swift in Sources */,
@@ -738,6 +748,7 @@
 				79E838AE280B067D001C46AD /* OneButtonAlertPresenter.swift in Sources */,
 				C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */,
 				C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */,
+				796F55362810F04D00DC6F70 /* Medals.swift in Sources */,
 				79E838A1280AF7E1001C46AD /* HomeMiniCardView.swift in Sources */,
 				7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */,
 				C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */,
@@ -746,6 +757,7 @@
 				7963213227F23C9200A202EE /* Constants.swift in Sources */,
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
 				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,
+				796F55322810F01A00DC6F70 /* Task.swift in Sources */,
 				7943976027F3C6130075102B /* StudentProjectsPresenter.swift in Sources */,
 				7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */,
 				793EC73D27FE197B00CD8334 /* StudentProfileButton.swift in Sources */,
@@ -869,7 +881,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -924,7 +936,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -963,7 +975,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Pharus/Pharus.entitlements;
 				CODE_SIGN_STYLE = Manual;
-
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Pharus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;

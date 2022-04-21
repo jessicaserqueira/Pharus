@@ -16,10 +16,10 @@ class ProjectTaskView: UIView {
     //MARK: - Properties
     
     weak var delegate: ProjectTaskDelegate?
-    private var checkImage: UIImage
+    private var checkImage: UIImage?
     var task: Task
     var color: UIColor
-
+    
     //MARK: - Views
     
     private lazy var mainStackView: UIStackView = {
@@ -59,15 +59,6 @@ class ProjectTaskView: UIView {
         return button
     }()
     
-    private lazy var taskDescriptionLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.font = .smallBody
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "ProjectTaskViewView.taskDescriptionLabel"
-        return label
-    }()
-    
     //MARK: - Initializer
     
     convenience init(
@@ -79,7 +70,7 @@ class ProjectTaskView: UIView {
         
         self.task = task
         self.checkImage = checkImage
-            self.color = color
+        self.color = color
         
         configureSubviews()
         customizeSubviews()
@@ -115,15 +106,11 @@ class ProjectTaskView: UIView {
         
         taskTitleStackView.addArrangedSubview(taskCheckmarkButton)
         taskTitleStackView.addArrangedSubview(taskTitleLabel)
-        
-        mainStackView.addArrangedSubview(taskDescriptionLabel)
     }
     
     func customizeSubviews() {
         taskTitleLabel.text = task.title
         taskTitleLabel.textColor = color
-        taskDescriptionLabel.text = task.taskDescription
-        taskDescriptionLabel.textColor = color
         taskCheckmarkButton.setImage(self.checkImage, for: .normal)
     }
     
