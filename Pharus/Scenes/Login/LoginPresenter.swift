@@ -43,7 +43,57 @@ class LoginPresenter: LoginPresenterProtocol {
     
     func loginUser(email: String, password: String) {
         let student: Student = Bundle.main.decode("Student.json")
-        coordinator.showHome(student: student)
+        var projectModelArray = [ProjectModel]()
+        
+        for project in student.projects {
+            var taskModelArray = [TaskModel]()
+            for task in project.tasks {
+                let taskModel = TaskModel(
+                    title: task.title,
+                    isComplete: task.isComplete,
+                    description: task.taskDescription
+                )
+                taskModelArray.append(taskModel)
+            }
+            let projectModel = ProjectModel(
+                id: project.id,
+                name: project.name,
+                isSubscribed: project.isSubscribed,
+                isComplete: project.isComplete,
+                score: project.score,
+                placement: project.placement,
+                projectDescription: project.projectDescription,
+                scoreDescription: project.scoreDescription,
+                startDate: project.startDate,
+                endDate: project.endDate,
+                school: project.school,
+                rules: project.rules,
+                mentor: project.mentor,
+                hasCompanyPartnership: project.hasCompanyPartnership,
+                company: project.company,
+                companyPhoto: project.companyPhoto,
+                tasks: taskModelArray
+            )
+            projectModelArray.append(projectModel)
+        }
+        
+        let studentModel = StudentModel(
+            id: student.id,
+            firstName: student.firstName,
+            lastName: student.lastName,
+            birthdate: student.birthdate,
+            gender: student.gender,
+            school: student.school,
+            year: student.year,
+            city: student.city,
+            schoolShift: student.schoolShift,
+            avatar: student.avatar,
+            email: student.email,
+            username: student.username,
+            projects: projectModelArray
+        )
+        
+        coordinator.showHome(student: studentModel)
     }
     func showChangePassword(email: String) {
         let student: Student = Bundle.main.decode("Student.json")

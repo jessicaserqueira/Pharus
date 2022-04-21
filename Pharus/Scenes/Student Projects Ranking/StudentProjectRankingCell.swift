@@ -151,13 +151,13 @@ class StudentProjectRankingCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureCell(using project: Project) {
+    func configureCell(using project: ProjectModel) {
         self.projectTitleLabel.text = project.name
         configureSubviews(with: project)
         setupConstraints()
     }
     
-    private func configureSubviews(with project: Project) {
+    private func configureSubviews(with project: ProjectModel) {
         addSubview(mainView)
         
         mainView.addSubview(mainStackView)
@@ -190,7 +190,7 @@ class StudentProjectRankingCell: UITableViewCell {
         setPlacementImages(with: project)
     }
     
-    private func setPlacementImages(with project: Project) {
+    private func setPlacementImages(with project: ProjectModel) {
         switch project.placement {
         case 1:
             placementImageView.image = UIImage.images.firstPlaceImage

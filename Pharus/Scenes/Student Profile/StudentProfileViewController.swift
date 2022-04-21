@@ -12,12 +12,12 @@ class StutentProfileViewController: UIViewController {
     var coordinator: StudentProfileCoordinator
     var studentProfileView: StudentProfileView
     var presenter: StudentProfilePresenter
-    var student: Student
+    var student: StudentModel
     
     init(
         coordinator: StudentProfileCoordinator,
         presenter: StudentProfilePresenter,
-        student: Student
+        student: StudentModel
     ) {
         self.coordinator = coordinator
         self.presenter = presenter

@@ -10,7 +10,7 @@ import UIKit
 protocol StudentProjectsDetailPresenterProtocol {
     func showProjectRules(rules: String)
     func showUploadFileView()
-    func toggleTaskCompletedStatus(task: Task)
+    func toggleTaskCompletedStatus(task: TaskModel)
     func showMentorReview()
 }
 
@@ -34,7 +34,7 @@ class StudentProjectDetailPresenter: StudentProjectsDetailPresenterProtocol {
         coordinator.showSendFileView()
     }
     
-    func toggleTaskCompletedStatus(task: Task) {
+    func toggleTaskCompletedStatus(task: TaskModel) {
         task.toggleCompletionStatus()
     }
 }

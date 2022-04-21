@@ -12,12 +12,12 @@ class StudentRankingProjectsViewController: UIViewController {
     
     let tableView = UITableView()
     private var coordinator: StudentProjectsRankingCoordinator
-    private var student: Student
-    private var projects: [Project]
+    private var student: StudentModel
+    private var projects: [ProjectModel]
     
     init(
         coordinator: StudentProjectsRankingCoordinator,
-        student: Student
+        student: StudentModel
     ) {
         self.coordinator = coordinator
         self.student = student

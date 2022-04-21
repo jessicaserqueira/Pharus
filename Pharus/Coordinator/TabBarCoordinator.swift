@@ -13,7 +13,7 @@ protocol TabBarFlow {
 
 class TabBarCoordinator: Coordinator {
     
-    private var student: Student
+    private var student: StudentModel
     var navigationController: UINavigationController
     var tabBarViewController: UITabBarController
     var childCoordinators: [Coordinator] = []
@@ -21,7 +21,7 @@ class TabBarCoordinator: Coordinator {
     init(
         navigationController: UINavigationController,
         tabBarViewController: UITabBarController,
-        student: Student
+        student: StudentModel
     ) {
         self.navigationController = navigationController
         self.tabBarViewController = tabBarViewController

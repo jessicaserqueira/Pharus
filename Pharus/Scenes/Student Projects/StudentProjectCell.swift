@@ -151,7 +151,7 @@ class StudentProjectCell: UITableViewCell {
     }()
     
     lazy var projectScheduleView: ProjectScheduleView = {
-        let view = ProjectScheduleView(project: Student.defaultProject)
+        let view = ProjectScheduleView(project: StudentModel.defaultProject)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectCell.projectScheduleView"
         return view
@@ -247,7 +247,7 @@ class StudentProjectCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureCell(using project: Project) {
+    func configureCell(using project: ProjectModel) {
         titleLabel.text = project.name
         descriptionLabel.text = project.projectDescription
         mentorLabel.text = "Mentor: " + project.mentor

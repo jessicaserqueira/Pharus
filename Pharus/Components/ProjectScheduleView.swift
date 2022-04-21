@@ -10,7 +10,7 @@ import UIKit
 class ProjectScheduleView: UIView {
     
     //MARK: - Properties
-    var project: Project {
+    var project: ProjectModel {
         didSet {
             customizeSubviews()
         }
@@ -62,7 +62,7 @@ class ProjectScheduleView: UIView {
     
     //MARK: - Initilizer
     
-    convenience init(project: Project) {
+    convenience init(project: ProjectModel) {
         self.init()
         
         self.project = project
@@ -73,7 +73,7 @@ class ProjectScheduleView: UIView {
     
     override init(frame: CGRect) {
         
-        self.project = Student.defaultProject
+        self.project = StudentModel.defaultProject
         
         super.init(frame: .zero)
         

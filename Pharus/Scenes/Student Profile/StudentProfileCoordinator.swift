@@ -16,11 +16,11 @@ class StudentProfileCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var student: Student
+    var student: StudentModel
     
     init(
         navigationController: UINavigationController,
-        student: Student
+        student: StudentModel
     ) {
         self.navigationController = navigationController
         self.student = student
