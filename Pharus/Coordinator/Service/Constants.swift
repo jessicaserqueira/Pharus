@@ -74,6 +74,7 @@ struct K {
                     static let avatar18 = "avatar18FullImage"
                     static let avatar19 = "avatar19FullImage"
                     static let avatar20 = "avatar20FullImage"
+                    static let suffix = "FullImage"
                 }
                 
                 struct CircleImage {
@@ -97,6 +98,7 @@ struct K {
                     static let avatar18 = "avatar18CircleImage"
                     static let avatar19 = "avatar19CircleImage"
                     static let avatar20 = "avatar20CircleImage"
+                    static let suffix = "CircleImage"
                 }
             }
             static let companyLogoImage = "companyLogoImage"
