@@ -23,15 +23,13 @@ class ProjectModel: Codable {
     var endDate: String
     var school: String
     var mentor: String
-    var hasCompanyPartnership: Bool
     var company: String?
-    var companyPhoto: String?
     var tasks: [TaskModel]
     
     enum CodingKeys: String, CodingKey {
         case id, name, isSubscribed, isComplete, score, placement
         case projectDescription = "description"
-        case scoreDescription, startDate, endDate, school, mentor, hasCompanyPartnership, company, companyPhoto, tasks
+        case scoreDescription, startDate, endDate, school, mentor, company, tasks
     }
     
     //MARK: - Initializer
@@ -49,9 +47,7 @@ class ProjectModel: Codable {
         endDate: String,
         school: String,
         mentor: String,
-        hasCompanyPartnership: Bool,
-        company: String?,
-        companyPhoto: String?,
+        company: String,
         tasks: [TaskModel]
     ) {
         self.id = id
@@ -66,9 +62,7 @@ class ProjectModel: Codable {
         self.endDate = endDate
         self.school = school
         self.mentor = mentor
-        self.hasCompanyPartnership = hasCompanyPartnership
         self.company = company
-        self.companyPhoto = companyPhoto
         self.tasks = tasks
     }
 }
@@ -80,5 +74,18 @@ extension ProjectModel {
     
     var completionPercentage: Float {
         Float(completedTasksCount)/Float(self.tasks.count)
+    }
+    
+    var daysRemaining: Int {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = K.DateFormats.projectDateFormat
+        
+        let projectEndDate = dateFormatter.date(from: self.endDate) ?? Date()
+        let daysRemaining = Date.getDifferenceInDays(
+            between: Date(),
+            and: projectEndDate
+        )
+        
+        return daysRemaining
     }
 }

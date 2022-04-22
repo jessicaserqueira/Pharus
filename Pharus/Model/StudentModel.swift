@@ -74,9 +74,7 @@ extension StudentModel {
         endDate: "25/05/2023",
         school: "Batista",
         mentor: "Yo el brabo",
-        hasCompanyPartnership: false,
-        company: nil,
-        companyPhoto: nil,
+        company: "ioasys",
         tasks: [
             TaskModel(title: "Terminar projeto", isComplete: true, description: "Teste")
         ]

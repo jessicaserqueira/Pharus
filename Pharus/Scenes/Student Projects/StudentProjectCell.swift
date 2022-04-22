@@ -221,7 +221,8 @@ class StudentProjectCell: UITableViewCell {
     
     private lazy var companyLogoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: K.Assets.Images.companyLogoImage)
+        imageView.image = UIImage.images.companies.ioasysLogoImage
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "UserProjectCell.companyLogoImageView"
         
@@ -265,14 +266,27 @@ class StudentProjectCell: UITableViewCell {
         mentorLabel.text = "Mentor: " + project.mentor
         projectScheduleView.project = project
         subscribeButton.isSubscribed = project.isSubscribed
+        companyLogoImageView.image = UIImage(
+            named: "\(project.company!.lowercased())LogoImage"
+        )
         
         completionBarCircleView.progress = project.completionPercentage*100
-        percentageCompletionLabel.text = "\(project.completedTasksCount)/\(project.tasks.count)"
+        percentageCompletionLabel.text = "\(project.completedTasksCount) de \(project.tasks.count)"
         
-        if project.isSubscribed {
-            mainView.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
+        if project.daysRemaining >= 0 {
+            if project.isSubscribed {
+                mainView.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
+            } else {
+                mainView.backgroundColor = UIColor.project.grayUnsubscribedProjectBackground
+            }
         } else {
-            mainView.backgroundColor = UIColor.project.grayUnsubscribedProjectBackground
+            mainView.backgroundColor = UIColor.project.redExpiredProjectBackground
+            titleLabel.textColor = .white
+            mentorLabel.textColor = .white
+            descriptionTitleLabel.textColor = .white
+            descriptionLabel.textColor = .white
+            partnershipLabel.textColor = .white
+            percentageCompletionLabel.textColor = .white
         }
     }
     

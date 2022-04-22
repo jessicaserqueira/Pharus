@@ -10,7 +10,7 @@ import Foundation
 protocol LoginPresenterProtocol {
     func isValidEmail(email: String) -> Bool
     func isValidPassword(password: String) -> Bool
-    func loginUser(email: String, password: String)
+    func loginUser(email: String, password: String) -> Bool
     func showChangePassword(email: String)
 }
 
@@ -42,21 +42,24 @@ class LoginPresenter: LoginPresenterProtocol {
         return passwordPredicate.evaluate(with: password)
     }
     
-    func loginUser(email: String, password: String) {
+    func loginUser(email: String, password: String) -> Bool {
         let student: Student = Bundle.main.decode("Student.json")
-        let studentModel = makeStudentMode(with: student)
-        
-        coordinator.showHome(student: studentModel)
+        if email == student.email && password == student.password {
+            let studentModel = makeStudentModel(with: student)
+            coordinator.showHome(student: studentModel)
+            return true
+        }
+        return false
     }
     
     func showChangePassword(email: String) {
         let student: Student = Bundle.main.decode("Student.json")
-        let studentModel = makeStudentMode(with: student)
+        let studentModel = makeStudentModel(with: student)
         
         coordinator.showChangePassword(student: studentModel)
     }
     
-    func makeStudentMode(with student: Student) -> StudentModel {
+    func makeStudentModel(with student: Student) -> StudentModel {
         var projectModelArray = [ProjectModel]()
         
         for project in student.projects {
@@ -82,9 +85,7 @@ class LoginPresenter: LoginPresenterProtocol {
                 endDate: project.endDate,
                 school: project.school,
                 mentor: project.mentor,
-                hasCompanyPartnership: project.hasCompanyPartnership,
                 company: project.company,
-                companyPhoto: project.companyPhoto,
                 tasks: taskModelArray
             )
             projectModelArray.append(projectModel)

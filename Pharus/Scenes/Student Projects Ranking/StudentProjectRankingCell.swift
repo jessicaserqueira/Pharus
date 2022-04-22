@@ -166,6 +166,7 @@ class StudentProjectRankingCell: UITableViewCell {
     
     func configureCell(using project: ProjectModel) {
         self.projectTitleLabel.text = project.name
+        mentorCommentsDescriptionLabel.text = project.scoreDescription
         configureSubviews(with: project)
         setupConstraints()
     }

@@ -50,8 +50,7 @@ class ChangePasswordView: UIView {
     private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = UIScreen.main.bounds.height/17
-        stackView.alignment = .fill
+        stackView.spacing = 64
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ChangePasswordView.mainStackView"
         
@@ -93,7 +92,7 @@ class ChangePasswordView: UIView {
         return label
     }()
     
-    private lazy var emailTextField: UITextField = {
+     lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.attributedPlaceholder = NSAttributedString(
             string: "antonia.ferreira@gmail.com",
@@ -136,7 +135,7 @@ class ChangePasswordView: UIView {
         return label
     }()
     
-    private lazy var newPasswordTextField: UITextField = {
+     lazy var newPasswordTextField: UITextField = {
         let textField = UITextField()
         textField.attributedPlaceholder = NSAttributedString(
             string: "Nova senha",
@@ -180,7 +179,7 @@ class ChangePasswordView: UIView {
         return label
     }()
     
-    private lazy var confirmPasswordTextField: UITextField = {
+     lazy var confirmPasswordTextField: UITextField = {
         let textField = UITextField()
         textField.attributedPlaceholder = NSAttributedString(
             string: "Confirmar senha",
@@ -265,8 +264,7 @@ class ChangePasswordView: UIView {
         self.stretch(mainView, to: mainScrollView)
         mainView.center(in: mainScrollView)
         NSLayoutConstraint.activate([
-            mainStackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
-            
+            mainView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
         ])
         
         //Main Stack View

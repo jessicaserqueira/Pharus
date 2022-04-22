@@ -56,5 +56,9 @@ extension SendFileCoordinator: SendFileFlow {
         navigationController.topViewController?.dismiss(animated: true)
         coordinate(to: alertCoordinator)
     }
+    
+    func closeSheet() {
+        navigationController.topViewController?.dismiss(animated: true)
+    }
 }
 
