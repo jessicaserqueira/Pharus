@@ -16,6 +16,13 @@ extension UIColor {
             alpha: 1
         )
         
+        static let redExpiredProjectBackground = UIColor(
+            red: 0.765,
+            green: 0.063,
+            blue: 0.29,
+            alpha: 1
+        )
+        
         static let orangeSubscribedProjectBackground = UIColor(
             red: 0.992,
             green: 0.627,

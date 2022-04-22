@@ -17,11 +17,11 @@
             "id": "",
             "name": "Criando moda!",
             "isSubscribed": true,
-            "isComplete": false,
-            "score": null,
-            "placement": null,
+            "isComplete": true,
+            "score": 100,
+            "placement": 2,
             "description": "Design - uma maneira ou costume mais predominante em um determinado grupo em um determinado momento. É uma palavra muito usada para designar uma forma de se vestir que é comum para muitos ou apreciada por muitas pessoas.",
-            "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
+            "scoreDescription": "Fico feliz pelo seu empenho e trabalho executado em disciplina que não temos em nossa grade curricular. O trabalho entregue está no caminho certo, e você tem um grande potencial para área de tecnologia. Busque complementar seu conhecimento na área do projeto e terá um futuro brilhante!",
             "startDate": "05/09/2022",
             "endDate": "23/09/2022",
             "school": "Escola Estadual João da Silva",
@@ -32,22 +32,22 @@
             "tasks": [
                 {
                     "title": "Moda do Momenton",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": " Faça uma dissertação sobre como observa a moda em seu ambiente escola. Poderá escrever até 500 palavras, e encaminhar fotos com referências da moda em sua escola."
                 },
                 {
                     "title": "Moda na Família",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Converse com algum familiar e entenda a moda de quando ele ou ela foi adolescente. Faça 04 desenhos com a moda da adolescência de seu familiar. Coloque no início do desenho ano referencial da moda."
                 },
                 {
                     "title": "Rascunho Inovação",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Imagine um futuro de 30 anos a frente, e desenhe a moda como poderá estar. Crie em uma ferramenta de design. Faça 03 desenhos completos, incluindo o tipo de caçado que poderá ser usado."
                 },
                 {
                     "title": "Moda Verão Escolar",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Com dias quentes durante o verão, desenhe calçados que possam ser confortáveis para ir a escola. Use a imaginação para cores, e que poderia ser usado. Faça 04 modelos em uma ferramenta de design."
                 }
             ]
@@ -136,7 +136,7 @@
             ]
         },
         {
-            "id": "62501bb56c91d14d76f0123wwq",
+            "id": "62501bb56c91d14d76f0123ww",
             "name": "Sustentabilidade Hipster",
             "isSubscribed": true,
             "isComplete": false,
@@ -169,7 +169,7 @@
             ]
         },
         {
-            "id": "62501bb56c91d14d76f0123wwq",
+            "id": "62501bb56c91d14d76f012wq",
             "name": "Memória em ação!",
             "isSubscribed": true,
             "isComplete": false,
@@ -198,6 +198,45 @@
                     "title": "Imaginação no Social!",
                     "isComplete": false,
                     "description": "Atividade será individual. Observe sua comunidade, sua escola todo o ambiente por onde tenha sua vivência diária. Imagine como poderia ser útil para este ambiente. Crie um Projeto Social com base em suas observações, siga a seguinte lista: O ambiente que será beneficiado / Nome do Projeto Social / O problema observado / Como será o projeto social. Anexo o documento no APP."
+                }
+            ]
+        },
+        {
+            "id": "62501bb56c91d14d76f0123wq",
+            "name": "Algoritmo no seu dia!",
+            "isSubscribed": true,
+            "isComplete": true,
+            "score": 100,
+            "placement": 1,
+            "description": "Um algoritmo é um conjunto finito de diretrizes que descrevem como executar uma tarefa. Isso significa que até mesmo algo tão simples quanto uma receita ou uma lista de direções para a casa podem ser entendidos como um algoritmo.",
+            "scoreDescription": "Parabéns pela dedicação e tempo que dedicação no Projeto Algoritmos no seu dia.\nTarefas entregues com sucesso e seguindo toda a metodologia solicitada.\nContinue em sua caminhada de estudos!!!!\nTenha sempre confiança em seu trabalho.",
+            "startDate": "05/12/2022",
+            "endDate": "16/12/2022",
+            "school": "Escola Estadual João da Silva",
+            "mentor": "Sávio Costa",
+            "hasCompanyPartnership": true,
+            "company": "ioasys",
+            "companyPhoto":"ioasys",
+            "tasks": [
+                {
+                    "title": "Tarefa 01",
+                    "isComplete": true,
+                    "description": "Escrever um algoritmo sobre a sua organização para ida para a escola. O fim do algoritmo deverá ser com a “Entrada na sala de aula”. Anexar a tarefa 01 no aplicativo pharus."
+                },
+                {
+                    "title": "Tarefa 02",
+                    "isComplete": true,
+                    "description": "Escrever um algoritmo sobre a sua rotina após o fim da aula. Anexar a tarefa 02 no aplicativo pharus."
+                },
+                {
+                    "title": "Tarefa 03",
+                    "isComplete": true,
+                    "description": "Desenhar um algoritmo sobre o final de semanal. Término será considerado como domingo às 20:00 h. Anexar tarefa 03 no aplicativo pharus."
+                },
+                {
+                    "title": "Tarefa 04",
+                    "isComplete": true,
+                    "description": "Escrever um algoritmo com um amigo de turma sobre a rotina de parceria de amizade. Considera juntamente uma visão de futuro. Anexar tarefa 04 no aplicativo pharus."
                 }
             ]
         }

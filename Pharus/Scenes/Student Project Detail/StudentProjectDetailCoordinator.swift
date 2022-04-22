@@ -66,7 +66,7 @@ extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
     func showMentorReview() {
         let projectSheetView = ProjectSheetView(
             viewTitle: "Avaliação do mentor",
-            descriptionTitle: "Tarefa 01:",
+            descriptionTitle: project.name,
             descriptionText: project.scoreDescription ?? "",
             icon: UIImage.icons.feedbackIcon ?? .defaultImage
         )
