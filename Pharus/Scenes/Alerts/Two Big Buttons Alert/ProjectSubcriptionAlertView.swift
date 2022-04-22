@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol TwoBigButtonsAlertViewDelegate: AnyObject {
+protocol ProjectSubcriptionAlertViewDelegate: AnyObject {
     func closeButtonTapped()
     func primaryButtonTapped()
     func secondaryButtonTapped()
@@ -17,7 +17,7 @@ class ProjectSubcriptionAlertView: UIView {
     
     //MARK: - Properties
     
-    weak var delegate: TwoBigButtonsAlertViewDelegate?
+    weak var delegate: ProjectSubcriptionAlertViewDelegate?
     private var title: String
     private var message: String
     private var mainButtonText: String

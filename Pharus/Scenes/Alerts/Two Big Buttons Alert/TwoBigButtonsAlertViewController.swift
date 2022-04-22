@@ -38,7 +38,7 @@ class TwoBigButtonsAlertViewController: UIViewController {
     }
 }
 
-extension TwoBigButtonsAlertViewController: TwoBigButtonsAlertViewDelegate {
+extension TwoBigButtonsAlertViewController: ProjectSubcriptionAlertViewDelegate {
     func closeButtonTapped() {
         presenter.closeModal()
     }
