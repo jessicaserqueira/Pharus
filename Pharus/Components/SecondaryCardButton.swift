@@ -37,13 +37,7 @@ class SecondaryCardButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func disable() {
-        self.isEnabled = false
-    }
-    
-    func enable() {
-        self.isEnabled = true
-    }
+    //MARK: - Subviews
     
     private func configureSubviews() {
         setTitle(title, for: .normal)
@@ -59,6 +53,16 @@ class SecondaryCardButton: UIButton {
     
     private func setupConstraints() {
         self.heightAnchor.constraint(equalToConstant: 56).isActive = true
+    }
+    
+    //MARK: - Actions
+    
+    func disable() {
+        self.isEnabled = false
+    }
+    
+    func enable() {
+        self.isEnabled = true
     }
 }
 

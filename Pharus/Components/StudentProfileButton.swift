@@ -34,6 +34,8 @@ class StudentProfileButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Subviews
+    
     func configureSubviews() {
             self.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
             self.layer.cornerRadius = 0.5 * self.bounds.size.width

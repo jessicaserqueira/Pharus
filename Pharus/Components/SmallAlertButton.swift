@@ -19,7 +19,7 @@ class SmallAlertButton: UIButton {
         case secondary
     }
         
-    //MARK: - Initilizer
+    //MARK: - Initializer
     
     convenience init(
         title: String,
@@ -48,6 +48,8 @@ class SmallAlertButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Subviews
+    
     func configureSubviews() {
         setTitle(title, for: .normal)
         layer.borderWidth = 2
@@ -70,6 +72,5 @@ class SmallAlertButton: UIButton {
             self.heightAnchor.constraint(equalToConstant: 32)
         ])
     }
-    
 }
 
