@@ -51,6 +51,7 @@ class SendFileView: UIView {
         let label = UILabel()
         label.text = "Enviar arquivos"
         label.font = .largeTitleBold
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.titleLabel"
         return label
@@ -60,6 +61,7 @@ class SendFileView: UIView {
         let label = UILabel()
         label.numberOfLines = 0
         label.text = "Aqui você pode enviar os arquivos exigidos para completar uma tarefa. Você pode enviar mais de um arquivo de uma vez, bastando selecionar todos os que deseja enviar. "
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.descriptionLabel"
         return label
@@ -108,6 +110,7 @@ class SendFileView: UIView {
          label.text = "Selecione os arquivos para enviar"
          label.textAlignment = .center
          label.numberOfLines = 0
+        label.textColor = .black
          label.translatesAutoresizingMaskIntoConstraints = false
          label.accessibilityIdentifier = "SendFileView.uploadMessageLabel"
          return label
@@ -142,6 +145,7 @@ class SendFileView: UIView {
     lazy var fileNameLabel: UILabel = {
         let label = UILabel()
         label.text = ""
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.fileNameLabel"
         return label

@@ -48,7 +48,7 @@ class StudentProjectsViewController: UIViewController {
     
     func setNavigationBar() {
         self.title = "Seus projetos"
-        self.navigationController?.title = ""
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     override func viewWillAppear(_ animated: Bool) {

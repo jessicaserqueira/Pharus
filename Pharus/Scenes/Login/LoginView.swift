@@ -87,7 +87,9 @@ class LoginView: UIView {
     
     lazy var emailTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "antonia.ferreira@gmail.com"
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "antonia.ferreira@gmail.com",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
         textField.font = .smallBody
         textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
@@ -127,7 +129,9 @@ class LoginView: UIView {
     
     lazy var passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Senha"
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Senha",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
         textField.font = .smallBody
         textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)

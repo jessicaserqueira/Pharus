@@ -69,7 +69,7 @@ class TabBarCoordinator: Coordinator {
             .tabBarController?
             .tabBar
             .tintColor = .none
-        
+            
         studentHomeCoordinator
             .navigationController
             .tabBarController?
@@ -126,6 +126,7 @@ class TabBarCoordinator: Coordinator {
             .navigationController
             .tabBarItem
             .image = UIImage.icons.profileTabBarIcon
+        
         
         studentProfileCoordinator
             .navigationController

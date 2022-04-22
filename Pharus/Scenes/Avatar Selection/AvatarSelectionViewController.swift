@@ -58,7 +58,7 @@ class AvatarSelectionViewController: UIViewController {
     
     func setNavigationBar() {
         self.title = "Avatar"
-        self.navigationController?.title = ""
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     func setupCollectionView() {

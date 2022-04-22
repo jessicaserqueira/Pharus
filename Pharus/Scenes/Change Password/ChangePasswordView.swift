@@ -94,7 +94,9 @@ class ChangePasswordView: UIView {
     
     lazy var emailTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "antonia.ferreira@gmail.com"
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "antonia.ferreira@gmail.com",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
         textField.font = .smallBody
         textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
@@ -134,7 +136,9 @@ class ChangePasswordView: UIView {
     
     lazy var newPasswordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Nova senha"
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Nova senha",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
         textField.font = .smallBody
         textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
@@ -175,7 +179,9 @@ class ChangePasswordView: UIView {
     
     lazy var confirmPasswordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Confirmar senha"
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Confirmar senha",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
         textField.font = .smallBody
         textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)

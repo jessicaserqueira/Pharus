@@ -59,7 +59,9 @@ class StutentProfileViewController: UIViewController {
     
     func setNavigationBar() {
         self.title = "Perfil"
-        self.navigationController?.title = ""
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+       
+        
         
         let logoutIcon = UIImage.icons.logOutIcon?.withRenderingMode(.alwaysOriginal)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(

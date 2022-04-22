@@ -64,6 +64,7 @@ class StudentHomeMiniCardView: UIView {
         label.text = "O projeto ”Introdução a Robótica” te deu uma medalha!"
         label.textAlignment = .center
         label.numberOfLines = 0
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentHomeMiniCardView.cardDescriptionLabel"
         return label
