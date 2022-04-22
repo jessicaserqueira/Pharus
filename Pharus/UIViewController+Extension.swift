@@ -1,5 +1,5 @@
 //
-//  UIViewController+extension.swift
+//  UIViewController+Extension.swift
 //  Pharus
 //
 //  Created by Victor Colen on 19/04/22.

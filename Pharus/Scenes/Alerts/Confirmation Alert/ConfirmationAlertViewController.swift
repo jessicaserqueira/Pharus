@@ -9,9 +9,13 @@ import UIKit
 
 class ConfirmationAlertViewController: UIViewController {
     
+    //MARK: - Properties
+    
     private var alertView: ConfirmationAlertView
     private var coordinator: ConfirmationAlertCoordinator
     private var presenter: ConfirmationAlertPresenter
+    
+    //MARK: - Initializer
     
     init(
         alertView: ConfirmationAlertView,
@@ -30,6 +34,8 @@ class ConfirmationAlertViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +43,8 @@ class ConfirmationAlertViewController: UIViewController {
         self.view = alertView
     }
 }
+
+//MARK: - Confirmation Alert View Delegate
 
 extension ConfirmationAlertViewController: ConfirmationAlertViewDelegate {
     func closeButtonTapped() {

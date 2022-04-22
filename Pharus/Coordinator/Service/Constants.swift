@@ -7,10 +7,15 @@
 import Foundation
 
 struct K {
+    
+    //MARK: - RegEx
+    
     struct RegEx {
         static let emailRegEx =  "^[a-z0-9_%+-]+([.-][a-z0-9]+)*@[a-z0-9]+([.-][a-z0-9]+)*\\.[a-z]{2,3}$"
         static let passwordRegEx = "^(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*#?&])[A-Za-z\\d$@$!%*#?&]{8,}$"
     }
+    
+    //MARK: - Cell Resuse Identifiers
     
     struct CellReuseIdentifiers {
         static let userProjects = "userProjects"
@@ -18,7 +23,11 @@ struct K {
         static let avatarSelection = "avatarSelection"
     }
     
+    //MARK: - Assets
+    
     struct Assets {
+        
+        //MARK: - Icons
         
         struct Icons {
             static let backArrowIcon = "backArrowIcon"
@@ -51,6 +60,8 @@ struct K {
             static let projectsTabBarIconSelected = "projectsTabBarIconSelected"
             static let rankingTabBarIconSelected = "rankingTabBarIconSelected"
         }
+        
+        //MARK: - Images
         
         struct Images {
             
@@ -120,6 +131,8 @@ struct K {
             static let fifthPlaceMedalImage = "5thPlaceMedalImage"
         }
     }
+    
+    //MARK: - Date Formats
     
     struct DateFormats {
         static let projectDateFormat = "dd/MM/yyyy"

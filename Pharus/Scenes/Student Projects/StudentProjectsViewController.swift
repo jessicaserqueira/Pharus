@@ -9,16 +9,20 @@ import UIKit
 
 class StudentProjectsViewController: UIViewController {
     
+    //MARK: - Properties
+    
     private var coordinator: StudentProjectsCoordinator
     private var presenter: StudentProjectsPresenter
     private var student: StudentModel
     private var projects: [ProjectModel]
-    let tableView = UITableView()
+    private let tableView = UITableView()
+    
+    //MARK: - Initializer
     
     init(
         coordinator: StudentProjectsCoordinator,
-         presenter: StudentProjectsPresenter,
-         student: StudentModel
+        presenter: StudentProjectsPresenter,
+        student: StudentModel
     ) {
         self.coordinator = coordinator
         self.presenter = presenter
@@ -32,13 +36,7 @@ class StudentProjectsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setNavigationBar()
-        view.addSubview(tableView)
-        setupTableView()
-    }
+    //MARK: - Life Cycle
     
     override func loadView() {
         super.loadView()
@@ -46,9 +44,12 @@ class StudentProjectsViewController: UIViewController {
         view.backgroundColor = .white
     }
     
-    func setNavigationBar() {
-        self.title = "Seus projetos"
-        self.navigationController?.title = ""
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setNavigationBar()
+        view.addSubview(tableView)
+        setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,7 +59,14 @@ class StudentProjectsViewController: UIViewController {
         tableView.reloadData()
     }
     
-    func setupTableView() {
+    //MARK: - Actions
+    
+    private func setNavigationBar() {
+        self.title = "Seus projetos"
+        self.navigationController?.title = ""
+    }
+    
+    private func setupTableView() {
         tableView.register(StudentProjectCell.self,
                            forCellReuseIdentifier: K.CellReuseIdentifiers.userProjects)
         
@@ -78,6 +86,8 @@ class StudentProjectsViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
     }
 }
+
+//MARK: - UITableViewDataSource
 
 extension StudentProjectsViewController: UITableViewDataSource {
     
@@ -108,6 +118,8 @@ extension StudentProjectsViewController: UITableViewDataSource {
         return cell
     }
 }
+
+//MARK: - UITableViewDelegate
 
 extension StudentProjectsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

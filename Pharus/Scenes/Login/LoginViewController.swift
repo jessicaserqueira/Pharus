@@ -9,10 +9,14 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    //MARK: - Properties
+    
     private var customView = LoginView()
     private var coordinator: LoginCoordinator
     private var presenter: LoginPresenter
     var keyboardHeight = CGFloat(0)
+    
+    //MARK: - Initializer
     
     init(
         coordinator: LoginCoordinator,
@@ -22,13 +26,13 @@ class LoginViewController: UIViewController {
         self.coordinator = coordinator
         
         super.init(nibName: nil, bundle: nil)
-        
-        hidesBottomBarWhenPushed = true
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Life Cycle
     
     override func loadView() {
         super.loadView()
@@ -62,7 +66,10 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func initializeHideKeyboard() {
+    //MARK: - Actions
+    
+    private func initializeHideKeyboard() {
+
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(
@@ -73,10 +80,12 @@ class LoginViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    @objc func dismissMyKeyboard() {
+    @objc private func dismissMyKeyboard() {
         view.endEditing(true)
     }
 }
+
+//MARK: - Login View Delegate
 
 extension LoginViewController: LoginViewDelegate {
     func loginButtonPressed() {

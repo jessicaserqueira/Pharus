@@ -8,6 +8,8 @@ import UIKit
 
 class StudentHomeViewController: UIViewController {
     
+    //MARK: - Properties
+    
     private var coordinator: StudentHomeCoordinator
     private var presenter: StudentHomePresenter
     private var student: StudentModel
@@ -15,6 +17,8 @@ class StudentHomeViewController: UIViewController {
     private var currentIndex: Int
     private var pages: [Pages] = Pages.allCases
     private var customView: StudentHomeView
+    
+    //MARK: - Initializer
     
     init(
         coordinator: StudentHomeCoordinator,
@@ -34,17 +38,19 @@ class StudentHomeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupTabBarIcons()
-        setupPageController()
-    }
+    //MARK: - Life Cycle
     
     override func loadView() {
         super.loadView()
         
         self.view = customView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupTabBarIcons()
+        setupPageController()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +59,8 @@ class StudentHomeViewController: UIViewController {
         setGradientBackground()
         showStudentAvatar()
     }
+    
+    //MARK: - Actions
     
     func showStudentAvatar() {
         customView.studentAvatarImageView.image = UIImage(
@@ -81,6 +89,8 @@ class StudentHomeViewController: UIViewController {
         self.pageController?.didMove(toParent: self)
     }
 }
+
+//MARK: - UIPageViewControllerDataSource
 
 extension StudentHomeViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -113,6 +123,8 @@ extension StudentHomeViewController: UIPageViewControllerDataSource {
         return self.pages.count
     }
 }
+
+//MARK: - Pages
 
 enum Pages: CaseIterable {
     case pageZero

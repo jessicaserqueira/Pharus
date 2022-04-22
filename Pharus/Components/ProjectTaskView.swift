@@ -17,7 +17,7 @@ class ProjectTaskView: UIView {
     
     weak var delegate: ProjectTaskDelegate?
     private var checkImage: UIImage?
-    var task: TaskModel
+    private var task: TaskModel
     var color: UIColor
     
     //MARK: - Views
@@ -28,6 +28,7 @@ class ProjectTaskView: UIView {
         stackView.spacing = 11
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ProjectTaskViewView.individualStackView"
+        
         return stackView
     }()
     
@@ -37,6 +38,7 @@ class ProjectTaskView: UIView {
         stackView.axis = .horizontal
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ProjectTaskViewView.taskTitleStackView"
+        
         return stackView
     }()
     
@@ -46,6 +48,7 @@ class ProjectTaskView: UIView {
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectTaskViewView.taskTitleLabel"
+        
         return label
     }()
     
@@ -56,6 +59,7 @@ class ProjectTaskView: UIView {
         }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "ProjectTaskViewView.taskCheckmarkButton"
+        
         return button
     }()
     
@@ -98,6 +102,8 @@ class ProjectTaskView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Subviews
     
     func configureSubviews() {
         addSubview(mainStackView)

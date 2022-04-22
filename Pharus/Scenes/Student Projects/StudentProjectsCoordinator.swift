@@ -13,11 +13,18 @@ protocol StudentProjectsFlow {
 
 class StudentProjectsCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     private var student: StudentModel
     
-    init(navigationController: UINavigationController, student: StudentModel) {
+    //MARK: - Initializer
+    
+    init(
+        navigationController: UINavigationController,
+        student: StudentModel
+    ) {
         self.navigationController = navigationController
         self.student = student
     }
@@ -30,12 +37,14 @@ class StudentProjectsCoordinator: Coordinator {
             presenter: studentProjectsPresenter,
             student: student
         )
-
+        
         navigationController.setNavigationBarHidden(false, animated: true)
         
         navigationController.pushViewController(studentProjectsViewController, animated: true)
     }
 }
+
+//MARK: - Actions
 
 extension StudentProjectsCoordinator: StudentProjectsFlow {
     func showStudentProject(_ project: ProjectModel) {

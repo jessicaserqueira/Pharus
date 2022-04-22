@@ -13,11 +13,18 @@ protocol ConfirmationAlertFlow {
 
 class ConfirmationAlertCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var alertView: ConfirmationAlertView
+    private var alertView: ConfirmationAlertView
     
-    init(navigationController: UINavigationController, alertView: ConfirmationAlertView) {
+    //MARK: - Initializer
+    
+    init(
+        navigationController: UINavigationController,
+        alertView: ConfirmationAlertView
+    ) {
         self.navigationController = navigationController
         self.alertView = alertView
     }
@@ -36,6 +43,7 @@ class ConfirmationAlertCoordinator: Coordinator {
     }
 }
 
+//MARK: - Actions
 extension ConfirmationAlertCoordinator: ConfirmationAlertFlow {
     func closeModal() {
         navigationController.topViewController?.dismiss(animated: true)

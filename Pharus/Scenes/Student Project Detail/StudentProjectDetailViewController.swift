@@ -8,10 +8,14 @@ import UIKit
 
 class StudentProjectDetailViewController: UIViewController {
     
+    //MARK: - Properties
+    
     private var project: ProjectModel
     private var presenter: StudentProjectDetailPresenter
     private var coordinator: StudentProjectDetailCoordinator
     private var studentProjectDetailView: StudentProjectDetailView
+    
+    //MARK: - Initializer
     
     init(
         coordinator: StudentProjectDetailCoordinator,
@@ -30,11 +34,7 @@ class StudentProjectDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setNavigationBar()
-    }
+    //MARK: - Life Cycle
     
     override func loadView() {
         super.loadView()
@@ -43,26 +43,35 @@ class StudentProjectDetailViewController: UIViewController {
         self.view = studentProjectDetailView
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setNavigationBar()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         setGradientBackground()
     }
     
+    //MARK: - Actions
+    
     func setNavigationBar() {
         self.title = project.name
         
         var backButtonImage = UIImage(named: K.Assets.Icons.backArrowIcon)
-        backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
-                                                                 green: 0.153,
-                                                                 blue: 0.153,
-                                                                 alpha: 1),
-                                                         renderingMode: .alwaysOriginal)
+        backButtonImage = backButtonImage?.withTintColor(
+            .white,
+            renderingMode: .alwaysOriginal
+        )
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
-                                                                style: .plain,
-                                                                target: self,
-                                                                action: #selector(backButtonPressed))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: backButtonImage,
+            style: .plain,
+            target: self,
+            action: #selector(backButtonPressed)
+        )
         
     }
     
@@ -70,6 +79,8 @@ class StudentProjectDetailViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 }
+
+//MARK: - Student Project Detail View Delegate
 
 extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {
     func envelopeIconTapped() {
@@ -81,7 +92,7 @@ extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {
     }
     
     func rulesViewTapped() {
-        presenter.showProjectRules(rules: project.rules)
+        //presenter.showProjectRules(rules: project.rules)
     }
     
     func sendFilesButtonTapped() {

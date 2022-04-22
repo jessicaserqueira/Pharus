@@ -35,6 +35,7 @@ class StudentHomeCoordinator: Coordinator {
         )
     
         navigationController.setNavigationBarHidden(true, animated: true)
+        navigationController.tabBarController?.tabBar.isHidden = false
         
         navigationController.pushViewController(studentHomeViewController, animated: true)
     }

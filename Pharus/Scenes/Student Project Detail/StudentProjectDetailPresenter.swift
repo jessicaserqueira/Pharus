@@ -16,11 +16,17 @@ protocol StudentProjectsDetailPresenterProtocol {
 
 class StudentProjectDetailPresenter: StudentProjectsDetailPresenterProtocol {
     
+    //MARK: - Properties
+    
     private var coordinator: StudentProjectDetailCoordinator
+    
+    //MARK: - Initializer
     
     init(coordinator: StudentProjectDetailCoordinator) {
         self.coordinator = coordinator
     }
+    
+    //MARK: - Actions
     
     func showProjectRules(rules: String) {
         coordinator.showProjectRules()

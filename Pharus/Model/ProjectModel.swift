@@ -8,6 +8,9 @@
 import Foundation
 
 class ProjectModel: Codable {
+    
+    //MARK: - Properties
+    
     var id: String
     let name: String
     var isSubscribed: Bool
@@ -19,7 +22,6 @@ class ProjectModel: Codable {
     var startDate: String
     var endDate: String
     var school: String
-    var rules: String
     var mentor: String
     var hasCompanyPartnership: Bool
     var company: String?
@@ -29,8 +31,10 @@ class ProjectModel: Codable {
     enum CodingKeys: String, CodingKey {
         case id, name, isSubscribed, isComplete, score, placement
         case projectDescription = "description"
-        case scoreDescription, startDate, endDate, school, rules, mentor, hasCompanyPartnership, company, companyPhoto, tasks
+        case scoreDescription, startDate, endDate, school, mentor, hasCompanyPartnership, company, companyPhoto, tasks
     }
+    
+    //MARK: - Initializer
     
     init(
         id: String,
@@ -44,7 +48,6 @@ class ProjectModel: Codable {
         startDate: String,
         endDate: String,
         school: String,
-        rules: String,
         mentor: String,
         hasCompanyPartnership: Bool,
         company: String?,
@@ -62,7 +65,6 @@ class ProjectModel: Codable {
         self.startDate = startDate
         self.endDate = endDate
         self.school = school
-        self.rules = rules
         self.mentor = mentor
         self.hasCompanyPartnership = hasCompanyPartnership
         self.company = company

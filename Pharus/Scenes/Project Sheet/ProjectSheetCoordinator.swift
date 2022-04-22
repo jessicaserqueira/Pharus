@@ -13,11 +13,18 @@ protocol ProjectSheetFlow {
 
 class ProjectSheetCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var projectSheetView: ProjectSheetView
+    private var projectSheetView: ProjectSheetView
     
-    init(navigationController: UINavigationController, projectSheetView: ProjectSheetView) {
+    //MARK: - Initializer
+    
+    init(
+        navigationController: UINavigationController,
+        projectSheetView: ProjectSheetView
+    ) {
         self.navigationController = navigationController
         self.projectSheetView = projectSheetView
     }
@@ -34,10 +41,12 @@ class ProjectSheetCoordinator: Coordinator {
             presenter: projectSheetPresenter,
             projectSheetView: projectSheetView
         )
-    
+        
         navigationController.present(projectSheetViewController, animated: true)
     }
 }
+
+//MARK: - Actions
 
 extension ProjectSheetCoordinator: ProjectSheetFlow {
     func popView() {

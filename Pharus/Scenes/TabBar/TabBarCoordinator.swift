@@ -13,10 +13,14 @@ protocol TabBarFlow {
 
 class TabBarCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     private var student: StudentModel
     var navigationController: UINavigationController
     var tabBarViewController: UITabBarController
     var childCoordinators: [Coordinator] = []
+    
+    //MARK: - Initializer
     
     init(
         navigationController: UINavigationController,
@@ -35,11 +39,13 @@ class TabBarCoordinator: Coordinator {
         let studentAvatarCoordinator = makeStudentAvatarCoordinator()
         let studentProfileCoordinator = makeStudentProfileCoordinator()
         
-        childCoordinators.append(studentHomeCoordinator)
-        childCoordinators.append(studentProjectsCoordinator)
-        childCoordinators.append(studentAvatarCoordinator)
-        childCoordinators.append(studentProjectsRankingCoordinator)
-        childCoordinators.append(studentProfileCoordinator)
+        childCoordinators = [
+            studentHomeCoordinator,
+            studentProjectsCoordinator,
+            studentAvatarCoordinator,
+            studentProjectsRankingCoordinator,
+            studentProfileCoordinator
+        ]
         
         tabBarViewController.setViewControllers(
             [
@@ -52,95 +58,26 @@ class TabBarCoordinator: Coordinator {
             animated: true
         )
         
-        studentHomeCoordinator
-            .navigationController
-            .tabBarController?
-            .tabBar
-            .backgroundColor = UIColor.tabbar.blueBackground
-        
-        studentHomeCoordinator
-            .navigationController
-            .tabBarController?
-            .tabBar
-            .barTintColor = UIColor.tabbar.blueBackground
-        
-        studentHomeCoordinator
-            .navigationController
-            .tabBarController?
-            .tabBar
-            .tintColor = .none
-            
-        studentHomeCoordinator
-            .navigationController
-            .tabBarController?
-            .tabBar
-            .unselectedItemTintColor = UIColor.tabbar.whiteTint
-        
-        studentHomeCoordinator
-            .navigationController
-            .tabBarController?
-            .tabBar
-            .isTranslucent = false
-        
-        studentHomeCoordinator
-            .navigationController
-            .tabBarItem
-            .image = UIImage.icons.homeTabBarIcon
-        
-        studentHomeCoordinator
-            .navigationController
-            .tabBarItem
-            .selectedImage = UIImage.icons.homeTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
-        
-        studentProjectsCoordinator
-            .navigationController
-            .tabBarItem
-            .image = UIImage.icons.projecsTabBarIcon
-        
-        studentProjectsCoordinator
-            .navigationController
-            .tabBarItem
-            .selectedImage = UIImage.icons.projecsTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
-        
-        studentProjectsRankingCoordinator
-            .navigationController
-            .tabBarItem
-            .image = UIImage.icons.rankingTabBarIcon
-        
-        studentProjectsRankingCoordinator
-            .navigationController
-            .tabBarItem
-            .selectedImage = UIImage.icons.rankingTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
-        
-        studentAvatarCoordinator
-            .navigationController
-            .tabBarItem
-            .image = UIImage.icons.avatarTabBarIcon
-        
-        studentAvatarCoordinator
-            .navigationController
-            .tabBarItem
-            .selectedImage = UIImage.icons.avatarTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
-        
-        studentProfileCoordinator
-            .navigationController
-            .tabBarItem
-            .image = UIImage.icons.profileTabBarIcon
-        
-        
-        studentProfileCoordinator
-            .navigationController
-            .tabBarItem
-            .selectedImage = UIImage.icons.profileTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
-        
         navigationController.setViewControllers([tabBarViewController], animated: true)
     }
+    
+    //MARK: - Actions
     
     private func makeStudentHomeCoordinator() -> StudentHomeCoordinator {
         let coordinator = StudentHomeCoordinator(
             navigationController: UINavigationController(),
             student: student
         )
+                        
+        coordinator
+            .navigationController
+            .tabBarItem
+            .image = UIImage.icons.homeTabBarIcon
+        
+        coordinator
+            .navigationController
+            .tabBarItem
+            .selectedImage = UIImage.icons.homeTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
         
         coordinator.start()
         
@@ -153,6 +90,16 @@ class TabBarCoordinator: Coordinator {
             student: student
         )
         
+        coordinator
+            .navigationController
+            .tabBarItem
+            .image = UIImage.icons.projecsTabBarIcon
+        
+        coordinator
+            .navigationController
+            .tabBarItem
+            .selectedImage = UIImage.icons.projecsTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
+        
         coordinator.start()
         
         return coordinator
@@ -163,6 +110,16 @@ class TabBarCoordinator: Coordinator {
             navigationController: UINavigationController(),
             student: student
         )
+        
+        coordinator
+            .navigationController
+            .tabBarItem
+            .image = UIImage.icons.rankingTabBarIcon
+        
+        coordinator
+            .navigationController
+            .tabBarItem
+            .selectedImage = UIImage.icons.rankingTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
         
         coordinator.start()
         
@@ -175,6 +132,16 @@ class TabBarCoordinator: Coordinator {
             student: student
         )
         
+        coordinator
+            .navigationController
+            .tabBarItem
+            .image = UIImage.icons.avatarTabBarIcon
+        
+        coordinator
+            .navigationController
+            .tabBarItem
+            .selectedImage = UIImage.icons.avatarTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
+        
         coordinator.start()
         
         return coordinator
@@ -186,11 +153,21 @@ class TabBarCoordinator: Coordinator {
             student: student
         )
         
+        coordinator
+            .navigationController
+            .tabBarItem
+            .image = UIImage.icons.profileTabBarIcon
+        
+        
+        coordinator
+            .navigationController
+            .tabBarItem
+            .selectedImage = UIImage.icons.profileTabBarIconSelected?.withRenderingMode(.alwaysOriginal)
+        
         coordinator.start()
         
         return coordinator
     }
-    
 }
 
 extension TabBarCoordinator: TabBarFlow {

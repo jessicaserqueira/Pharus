@@ -22,11 +22,11 @@ class LogoutAlertViewController: UIViewController {
         coordinator: LogoutAlertCoordinator,
         presenter: LogoutAlertPresenter
     ) {
-
+        
         self.alertView = alertView
         self.coordinator = coordinator
         self.presenter = presenter
-
+        
         super.init(nibName: nil, bundle: nil)
     }
     

@@ -13,9 +13,13 @@ protocol AvatarSelectionFlow {
 
 class AvatarSelectionCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     private var student: StudentModel
+    
+    //MARK: - Initializer
     
     init(
         navigationController: UINavigationController,

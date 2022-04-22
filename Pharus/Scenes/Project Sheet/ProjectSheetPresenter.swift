@@ -13,14 +13,23 @@ protocol ProjectSheetProtocol {
 
 class ProjectSheetPresenter {
     
-    var coordinator: ProjectSheetCoordinator
-    var projectSheetView: ProjectSheetView
+    //MARK: - Properties
     
-    init(coordinator: ProjectSheetCoordinator, projectSheetView: ProjectSheetView) {
+    var coordinator: ProjectSheetCoordinator
+    private var projectSheetView: ProjectSheetView
+    
+    //MARK: - Initializer
+    
+    init(
+        coordinator: ProjectSheetCoordinator,
+        projectSheetView: ProjectSheetView
+    ) {
         self.coordinator = coordinator
         self.projectSheetView = projectSheetView
     }
 }
+
+//MARK: - Actions
 
 extension ProjectSheetPresenter: ProjectSheetProtocol {
     func popView() {
