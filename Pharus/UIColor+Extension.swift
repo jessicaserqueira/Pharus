@@ -189,4 +189,11 @@ extension UIColor {
             alpha: 1
         )
     }
+    
+    static let redError = UIColor(
+        red: 0.6,
+        green: 0,
+        blue: 0,
+        alpha: 1
+    )
 }

@@ -30,6 +30,7 @@ extension UIImage {
         static let warningIcon = UIImage(named: K.Assets.Icons.warningIcon)
         static let medalIcon = UIImage(named: K.Assets.Icons.medalIcon)
         static let companyIcon = UIImage(named: K.Assets.Icons.companyIcon)
+        static let errorIcon = UIImage(named: K.Assets.Icons.errorIcon)
         
         static let avatarTabBarIcon = UIImage(named: K.Assets.Icons.avatarTabBarIcon)
         static let homeTabBarIcon = UIImage(named: K.Assets.Icons.homeTabBarIcon)
