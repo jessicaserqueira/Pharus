@@ -17,10 +17,13 @@ class ProjectSheetView: UIView {
     
     weak var delegate: ProjectSheetDelegate?
     
-    private var icon: UIImage
-    private var title: String
-    private var descriptionTitle: String
-    private var descriptionText: String
+    private var project: ProjectModel
+    private var sheetContent: SheetContent
+    
+    enum SheetContent {
+        case activities
+        case mentorReview
+    }
     
     //MARK: - Views
     
@@ -61,7 +64,7 @@ class ProjectSheetView: UIView {
     
     private lazy var titleIconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = icon
+        imageView.image = UIImage.icons.feedbackIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "ProjectSheetView.titleIconImageView"
         return imageView
@@ -69,7 +72,6 @@ class ProjectSheetView: UIView {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = title
         label.font = .largeTitleBold
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -88,7 +90,6 @@ class ProjectSheetView: UIView {
     
     private lazy var descriptionTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = descriptionTitle
         label.font = .mediumTitleBold
         label.numberOfLines = 0
         label.textColor = .black
@@ -99,7 +100,6 @@ class ProjectSheetView: UIView {
     
     private lazy var descriptionTextLabel: UILabel = {
         let label = UILabel()
-        label.text = descriptionText
         label.numberOfLines = 0
         label.textColor = .black
         label.font = .smallBody
@@ -123,17 +123,13 @@ class ProjectSheetView: UIView {
     //MARK: - Initializer
     
     convenience init(
-        viewTitle: String,
-        descriptionTitle: String,
-        descriptionText: String,
-        icon: UIImage
+        project: ProjectModel,
+        sheetContent: SheetContent
     ) {
         self.init()
         
-        self.title = viewTitle
-        self.descriptionTitle = descriptionTitle
-        self.descriptionText = descriptionText
-        self.icon = icon
+        self.project = project
+        self.sheetContent = sheetContent
         
         configureSubviews()
         customizeSubviews()
@@ -141,10 +137,8 @@ class ProjectSheetView: UIView {
     }
     
     override init(frame: CGRect) {
-        title = "Comentários do mentor"
-        descriptionTitle = "Tarefa 01:"
-        descriptionText = "Parabéns pela dedicação e empenho em entregar a tarefa do projeto.\n\nA utilização da metodologia em um determinado momento ficou ausente, fugindo do proposto pela tarefa.\n\nPeço que faça uma revisão no material e continue a dedicação para as próximas tarefas"
-        icon = UIImage(named: K.Assets.Icons.rulesIcon)!
+        self.project = StudentModel.defaultProject
+        self.sheetContent = .mentorReview
         
         super.init(frame: .zero)
         
@@ -177,10 +171,19 @@ class ProjectSheetView: UIView {
     }
     
     private func customizeSubviews() {
-        titleIconImageView.image = icon
-        titleLabel.text = title
-        descriptionTitleLabel.text = descriptionTitle
-        descriptionTextLabel.text = descriptionText
+        if sheetContent == .mentorReview {
+            titleIconImageView.image = UIImage.icons.feedbackIcon
+            titleLabel.text = "Avaliação do Mentor"
+            descriptionTextLabel.text = project.scoreDescription
+        } else {
+            titleIconImageView.image = UIImage.icons.rulesIcon
+            titleLabel.text = "Atividades"
+            var descriptionText = ""
+            for task in project.tasks {
+                descriptionText += "\(task.title) - \(task.taskDescription)\n\n"
+            }
+            descriptionTextLabel.text = descriptionText
+        }
     }
     
     //MARK: - Constraints

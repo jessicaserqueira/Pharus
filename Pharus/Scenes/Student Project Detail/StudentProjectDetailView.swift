@@ -329,6 +329,10 @@ class StudentProjectDetailView: UIView {
             configureUnsubscribedProject(with: project)
         }
         
+        if project.isComplete {
+            uploadFilesButton.disable()
+        }
+        
         if project.scoreDescription != nil {
             mentorReviewImageView.image = UIImage.icons.notificationEnvelopeIcon
             mentorReviewHelperView.setOnClickListener {

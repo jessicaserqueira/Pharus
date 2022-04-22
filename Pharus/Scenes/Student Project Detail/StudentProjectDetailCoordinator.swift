@@ -49,10 +49,8 @@ class StudentProjectDetailCoordinator: Coordinator {
 extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
     func showProjectRules() {
         let projectSheetView = ProjectSheetView(
-            viewTitle: "Atividades",
-            descriptionTitle: "Tarefa 01",
-            descriptionText: "atividades vao ficar aq",
-            icon: UIImage(named: K.Assets.Icons.rulesIcon)!
+            project: project,
+            sheetContent: .activities
         )
         
         let projectSheetCoordinator = ProjectSheetCoordinator(
@@ -65,10 +63,8 @@ extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
     
     func showMentorReview() {
         let projectSheetView = ProjectSheetView(
-            viewTitle: "Avaliação do mentor",
-            descriptionTitle: project.name,
-            descriptionText: project.scoreDescription ?? "",
-            icon: UIImage.icons.feedbackIcon ?? .defaultImage
+            project: project,
+            sheetContent: .mentorReview
         )
         
         let projectSheetCoordinator = ProjectSheetCoordinator(
