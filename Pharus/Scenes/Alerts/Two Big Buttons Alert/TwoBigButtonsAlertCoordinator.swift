@@ -35,7 +35,7 @@ class TwoBigButtonsAlertCoordinator: Coordinator {
             coordinator: self,
             presenter: alertPresenter)
         
-        alertViewController.modalPresentationStyle = .overFullScreen
+        alertViewController.modalPresentationStyle = .fullScreen
         
         navigationController.present(alertViewController, animated: true)
     }

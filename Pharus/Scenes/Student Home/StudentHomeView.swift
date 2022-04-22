@@ -36,7 +36,7 @@ class StudentHomeView: UIView {
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 40
+        stackView.spacing = 49
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentHomeView.mainStackView"
         return stackView
@@ -92,21 +92,18 @@ class StudentHomeView: UIView {
         scrollView.accessibilityIdentifier = "StudentHomeView.newsScrollView"
         return scrollView
     }()
-    
-    lazy var newsStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 32
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "StudentHomeView.newsStackView"
-        return stackView
+        
+    lazy var newsHelperView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = "StudentHomeView.newsHelperView"
+        return view
     }()
     
     lazy var newsView: HomeNewsView = {
         let view = HomeNewsView()
         view.mainView.backgroundColor = .white
         view.mainView.layer.cornerRadius = 16
-        addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeView.newsView"
         return view
@@ -153,20 +150,9 @@ class StudentHomeView: UIView {
             miniCardStackView.addArrangedSubview(view)
         }
         
-        mainStackView.addArrangedSubview(newsScrollView)
-        newsScrollView.addSubview(newsStackView)
+        mainStackView.addArrangedSubview(newsHelperView)
         
-        for _ in 0...10 {
-            let view = HomeNewsView()
-            view.mainView.backgroundColor = .white
-            view.mainView.layer.cornerRadius = 16
-            
-            NSLayoutConstraint.activate([
-                view.heightAnchor.constraint(equalToConstant: 180),
-                view.widthAnchor.constraint(equalToConstant: 323)
-            ])
-            newsStackView.addArrangedSubview(view)
-        }
+        newsHelperView.addSubview(newsView)
     }
     
     //MARK: - Constraints
@@ -184,6 +170,7 @@ class StudentHomeView: UIView {
         NSLayoutConstraint.activate([
             mainStackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
         ])
+        
         //Main Stack View
         NSLayoutConstraint.activate([
             rectangleImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -215,16 +202,12 @@ class StudentHomeView: UIView {
             miniCardStackView.trailingAnchor.constraint(equalTo: miniCardScrollView.trailingAnchor)
         ])
         
-        //News Scroll View
+        //News Helper View
         NSLayoutConstraint.activate([
-            newsScrollView.heightAnchor.constraint(equalToConstant: 180),
-            
+            newsHelperView.heightAnchor.constraint(equalToConstant: 221)
         ])
-        //News Stack View
-        NSLayoutConstraint.activate([
-            newsStackView.heightAnchor.constraint(equalToConstant: 180),
-            newsStackView.leadingAnchor.constraint(equalTo: newsScrollView.leadingAnchor),
-            newsStackView.trailingAnchor.constraint(equalTo: newsScrollView.trailingAnchor)
-        ])
+        
+        //Home News View
+        self.stretch(newsView, to: newsHelperView, left: 16, right: -16)
     }
 }

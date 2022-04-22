@@ -36,7 +36,7 @@ class HomeNewsView: UIView {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Últimas notícias"
+        label.text = "Fique por dentro!"
         label.font = .largeTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "HomeNewsView.titleLabel"
