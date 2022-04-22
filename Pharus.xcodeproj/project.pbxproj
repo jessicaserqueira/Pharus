@@ -36,7 +36,7 @@
 		79735B64280ED78600D1067B /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79735B63280ED78600D1067B /* UIViewController+extension.swift */; };
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
 		79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */; };
-		7993C9A728102C2500526AF2 /* TwoBigButtonsAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A628102C2500526AF2 /* TwoBigButtonsAlertView.swift */; };
+		7993C9A728102C2500526AF2 /* ProjectSubcriptionAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */; };
 		7993C9A928102E1800526AF2 /* SecondaryCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */; };
 		7993C9AB281031F700526AF2 /* TwoBigButtonsAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9AA281031F700526AF2 /* TwoBigButtonsAlertViewController.swift */; };
 		7993C9AD28103CAB00526AF2 /* TwoBigButtonsAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9AC28103CAB00526AF2 /* TwoBigButtonsAlertPresenter.swift */; };
@@ -144,7 +144,7 @@
 		79735B63280ED78600D1067B /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingPresenter.swift.swift; sourceTree = "<group>"; };
-		7993C9A628102C2500526AF2 /* TwoBigButtonsAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBigButtonsAlertView.swift; sourceTree = "<group>"; };
+		7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSubcriptionAlertView.swift; sourceTree = "<group>"; };
 		7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryCardButton.swift; sourceTree = "<group>"; };
 		7993C9AA281031F700526AF2 /* TwoBigButtonsAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBigButtonsAlertViewController.swift; sourceTree = "<group>"; };
 		7993C9AC28103CAB00526AF2 /* TwoBigButtonsAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBigButtonsAlertPresenter.swift; sourceTree = "<group>"; };
@@ -350,7 +350,7 @@
 		7993C9A428102B3400526AF2 /* Two Big Buttons Alert */ = {
 			isa = PBXGroup;
 			children = (
-				7993C9A628102C2500526AF2 /* TwoBigButtonsAlertView.swift */,
+				7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */,
 				7993C9AC28103CAB00526AF2 /* TwoBigButtonsAlertPresenter.swift */,
 				7993C9AA281031F700526AF2 /* TwoBigButtonsAlertViewController.swift */,
 				7993C9AE28103CD500526AF2 /* ProjectSubcriptionAlertCoordinator.swift */,
@@ -761,7 +761,7 @@
 				7963213027F23AF000A202EE /* LoginPresenter.swift in Sources */,
 				C045618B27EA03A5007EC5C3 /* AppDelegate.swift in Sources */,
 				C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */,
-				7993C9A728102C2500526AF2 /* TwoBigButtonsAlertView.swift in Sources */,
+				7993C9A728102C2500526AF2 /* ProjectSubcriptionAlertView.swift in Sources */,
 				7963213227F23C9200A202EE /* Constants.swift in Sources */,
 				C045618D27EA03A5007EC5C3 /* SceneDelegate.swift in Sources */,
 				C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */,

@@ -15,12 +15,12 @@ class ProjectSubcriptionAlertCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var alertView: TwoBigButtonsAlertView
+    var alertView: ProjectSubcriptionAlertView
     var project: ProjectModel
     
     init(
         navigationController: UINavigationController,
-        alertView: TwoBigButtonsAlertView,
+        alertView: ProjectSubcriptionAlertView,
         project: ProjectModel
     ) {
         self.navigationController = navigationController
