@@ -30,7 +30,7 @@ class ProjectSubcriptionAlertCoordinator: Coordinator {
     
     func start() {
         let alertPresenter = ProjectSubcriptionAlertPresenter(coordinator: self)
-        let alertViewController = TwoBigButtonsAlertViewController(
+        let alertViewController = ProjectSubcriptionAlertViewController(
             alertView: alertView,
             coordinator: self,
             presenter: alertPresenter)

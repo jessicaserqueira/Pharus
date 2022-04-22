@@ -38,7 +38,7 @@
 		79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */; };
 		7993C9A728102C2500526AF2 /* ProjectSubcriptionAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */; };
 		7993C9A928102E1800526AF2 /* SecondaryCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */; };
-		7993C9AB281031F700526AF2 /* TwoBigButtonsAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9AA281031F700526AF2 /* TwoBigButtonsAlertViewController.swift */; };
+		7993C9AB281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9AA281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift */; };
 		7993C9AD28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9AC28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift */; };
 		7993C9AF28103CD500526AF2 /* ProjectSubcriptionAlertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9AE28103CD500526AF2 /* ProjectSubcriptionAlertCoordinator.swift */; };
 		7993C9B228104C5800526AF2 /* LogoutAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9B128104C5800526AF2 /* LogoutAlertView.swift */; };
@@ -146,7 +146,7 @@
 		79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingPresenter.swift.swift; sourceTree = "<group>"; };
 		7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSubcriptionAlertView.swift; sourceTree = "<group>"; };
 		7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryCardButton.swift; sourceTree = "<group>"; };
-		7993C9AA281031F700526AF2 /* TwoBigButtonsAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBigButtonsAlertViewController.swift; sourceTree = "<group>"; };
+		7993C9AA281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSubcriptionAlertViewController.swift; sourceTree = "<group>"; };
 		7993C9AC28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSubcriptionAlertPresenter.swift; sourceTree = "<group>"; };
 		7993C9AE28103CD500526AF2 /* ProjectSubcriptionAlertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSubcriptionAlertCoordinator.swift; sourceTree = "<group>"; };
 		7993C9B128104C5800526AF2 /* LogoutAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutAlertView.swift; sourceTree = "<group>"; };
@@ -352,7 +352,7 @@
 			children = (
 				7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */,
 				7993C9AC28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift */,
-				7993C9AA281031F700526AF2 /* TwoBigButtonsAlertViewController.swift */,
+				7993C9AA281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift */,
 				7993C9AE28103CD500526AF2 /* ProjectSubcriptionAlertCoordinator.swift */,
 			);
 			path = "Two Big Buttons Alert";
@@ -692,7 +692,7 @@
 				79A2C775280C473F00B3159B /* SubscribeButton.swift in Sources */,
 				794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */,
 				79E838AC280B0676001C46AD /* OneButtonAlertCoordinator.swift in Sources */,
-				7993C9AB281031F700526AF2 /* TwoBigButtonsAlertViewController.swift in Sources */,
+				7993C9AB281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift in Sources */,
 				79E838A9280AFD03001C46AD /* SendFileCoordinator.swift in Sources */,
 				7993C9B628104C6D00526AF2 /* LogoutAlertPresenter.swift in Sources */,
 				79222EA327F643D60051334A /* CircleProgressView.swift in Sources */,
