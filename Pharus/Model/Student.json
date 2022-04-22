@@ -230,43 +230,6 @@
             ]
         },
         {
-            "id": "625bb56c91d14d76f0123wq",
-            "name": "Criando Avatar!",
-            "isSubscribed": true,
-            "isComplete": true,
-            "score": 100,
-            "placement": 5,
-            "description": "Com base nos conhecimentos de design, para este projeto vamos trabalhar criando Avatar. Um avatar na internet nada mais é do que a sua representação por meios virtuais. Você pode fazer isso criando uma animação de si mesmo com as suas principais características ou deixar sua mente livre.",
-            "scoreDescription": "Parabéns pela dedicação e tempo que dedicação no Projeto Algoritmos no seu dia.\nTarefas entregues com sucesso e seguindo toda a metodologia solicitada.\nContinue em sua caminhada de estudos!!!!\nTenha sempre confiança em seu trabalho.",
-            "startDate": "04/02/2022",
-            "endDate": "05/05/2022",
-            "school": "Escola Estadual João da Silva",
-            "mentor": "Alberto",
-            "company": "ioasys",
-            "tasks": [
-                {
-                    "title": "Tarefa 01",
-                    "isComplete": true,
-                    "description": "Faça uma dupla com seu amigo de turma, e conversem sobre o tema Avatar. Com base neste conversa façam Avatar um do outro, respeitando sempre o amigo de trabalho. Alinhe e faça um Avatar que possa trazer traços que considera legal em seu par de tarefa."
-                },
-                {
-                    "title": "Tarefa 02",
-                    "isComplete": true,
-                    "description": "Imagine uma escola de outro mundo... Com base nesta liberdade de pensamento, crie pelo menos 06 Avatares, e o ambiente escolar. Esta atividade será individual."
-                },
-                {
-                    "title": "Tarefa 03",
-                    "isComplete": true,
-                    "description": "Em casa, converse com algum família sobre o projeto, e peça a liberdade para criar um ou dois avatares de algum familiar. Lembrando, sempre com permissão e respeito."
-                },
-                {
-                    "title": "Tarefa 04",
-                    "isComplete": true,
-                    "description": " Imagine que você é um avatar do seu game favorito. Agora desenhe este Avatar em pelo menos dois ambientes criados conforme o game. Ah! não deixe de nos contar qual o seu game favorito."
-                }
-            ]
-        },
-        {
             "id": "62501bb56c91d14d76f0123wq",
             "name": "Rabisco em arte",
             "isSubscribed": false,
@@ -300,6 +263,43 @@
                     "title": "Tarefa 04",
                     "isComplete": false,
                     "description": "Converse com seus famílias e amigos, e busque uma história do passado que tenha a Havaianas relacionada. Com base nesta conversa, crie uma arte para uma Coleção Memórias Havaianas."
+                }
+            ]
+        },
+        {
+            "id": "625bb56c91d14d76f0123wq",
+            "name": "Criando Avatar!",
+            "isSubscribed": true,
+            "isComplete": true,
+            "score": 100,
+            "placement": 5,
+            "description": "Com base nos conhecimentos de design, para este projeto vamos trabalhar criando Avatar. Um avatar na internet nada mais é do que a sua representação por meios virtuais. Você pode fazer isso criando uma animação de si mesmo com as suas principais características ou deixar sua mente livre.",
+            "scoreDescription": "Parabéns pela dedicação e tempo que dedicação no Projeto Algoritmos no seu dia.\nTarefas entregues com sucesso e seguindo toda a metodologia solicitada.\nContinue em sua caminhada de estudos!!!!\nTenha sempre confiança em seu trabalho.",
+            "startDate": "04/02/2022",
+            "endDate": "05/05/2022",
+            "school": "Escola Estadual João da Silva",
+            "mentor": "Alberto",
+            "company": "ioasys",
+            "tasks": [
+                {
+                    "title": "Tarefa 01",
+                    "isComplete": true,
+                    "description": "Faça uma dupla com seu amigo de turma, e conversem sobre o tema Avatar. Com base neste conversa façam Avatar um do outro, respeitando sempre o amigo de trabalho. Alinhe e faça um Avatar que possa trazer traços que considera legal em seu par de tarefa."
+                },
+                {
+                    "title": "Tarefa 02",
+                    "isComplete": true,
+                    "description": "Imagine uma escola de outro mundo... Com base nesta liberdade de pensamento, crie pelo menos 06 Avatares, e o ambiente escolar. Esta atividade será individual."
+                },
+                {
+                    "title": "Tarefa 03",
+                    "isComplete": true,
+                    "description": "Em casa, converse com algum família sobre o projeto, e peça a liberdade para criar um ou dois avatares de algum familiar. Lembrando, sempre com permissão e respeito."
+                },
+                {
+                    "title": "Tarefa 04",
+                    "isComplete": true,
+                    "description": " Imagine que você é um avatar do seu game favorito. Agora desenhe este Avatar em pelo menos dois ambientes criados conforme o game. Ah! não deixe de nos contar qual o seu game favorito."
                 }
             ]
         }
