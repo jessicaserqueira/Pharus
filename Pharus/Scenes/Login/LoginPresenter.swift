@@ -81,7 +81,6 @@ class LoginPresenter: LoginPresenterProtocol {
                 startDate: project.startDate,
                 endDate: project.endDate,
                 school: project.school,
-                rules: project.rules,
                 mentor: project.mentor,
                 hasCompanyPartnership: project.hasCompanyPartnership,
                 company: project.company,
@@ -103,6 +102,7 @@ class LoginPresenter: LoginPresenterProtocol {
             schoolShift: student.schoolShift,
             avatar: student.avatar,
             email: student.email,
+            password: student.password,
             username: student.username,
             projects: projectModelArray
         )

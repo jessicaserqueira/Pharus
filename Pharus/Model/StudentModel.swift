@@ -21,6 +21,7 @@ class StudentModel: Codable {
     var schoolShift: String
     var avatar: String
     var email: String
+    var password: String
     var username: String
     var projects: [ProjectModel]
     
@@ -38,6 +39,7 @@ class StudentModel: Codable {
         schoolShift: String,
         avatar: String,
         email: String,
+        password: String,
         username: String,
         projects: [ProjectModel]
     ) {
@@ -52,6 +54,7 @@ class StudentModel: Codable {
         self.schoolShift = schoolShift
         self.avatar = avatar
         self.email = email
+        self.password = password
         self.username = username
         self.projects = projects
     }
@@ -70,7 +73,6 @@ extension StudentModel {
         startDate: "22/03/2021",
         endDate: "25/05/2023",
         school: "Batista",
-        rules: "Siga as regras",
         mentor: "Yo el brabo",
         hasCompanyPartnership: false,
         company: nil,

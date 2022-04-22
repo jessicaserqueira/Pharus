@@ -1,174 +1,203 @@
 {
     "id": "",
-    "firstName": "João Pedro",
-    "lastName": "Ferreira Neto",
+    "firstName": "Antônia",
+    "lastName": "Ferreira",
     "birthdate": "13/05/2002",
     "gender": "M",
-    "school": "Colégio Los Brabos",
+    "school": "Escola Estadual João da Silva",
     "year": "1º ano",
     "city": "Lavras, MG",
     "schoolShift": "M",
-    "avatar": "12",
-    "email": "student@gmail.com",
+    "avatar": "7",
+    "email": "antonia.ferreira@gmail.com",
+    "password": "Atn4273!",
     "username": "sTud3nt",
     "projects": [
         {
             "id": "",
-            "name": "Minha primeira página web usando tenologias bem brabas",
+            "name": "Criando moda!",
             "isSubscribed": true,
             "isComplete": false,
-            "score": 68,
-            "placement": 15,
-            "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
+            "score": null,
+            "placement": null,
+            "description": "Design - uma maneira ou costume mais predominante em um determinado grupo em um determinado momento. É uma palavra muito usada para designar uma forma de se vestir que é comum para muitos ou apreciada por muitas pessoas.",
             "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
-            "startDate": "01/01/2022",
-            "endDate": "26/04/2022",
-            "school": "Colégio Los Brabos",
-            "rules": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "mentor": "Fabiano El Brabo Tomoda",
-            "hasCompanyPartnership": false,
-            "company": null,
-            "companyPhoto": null,
-            "tasks": [
-                {
-                    "title": "Criar navigation",
-                    "isComplete": false,
-                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
-                },
-                {
-                    "title": "Criar Login",
-                    "isComplete": true,
-                    "description": "omnis iste natus error sit voluptatem accusantium doloremque laudantium"
-                }
-            ]
-        },
-        {
-            "id": "",
-            "name": "Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "isSubscribed": true,
-            "isComplete": true,
-            "score": 100,
-            "placement": 1,
-            "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
-            "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
-            "startDate": "07/09/2022",
-            "endDate": "03/10/2022",
-            "school": "Colégio Los Brabos",
-            "rules": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "mentor": "Jessica La Braba Serqueria",
+            "startDate": "05/09/2022",
+            "endDate": "23/09/2022",
+            "school": "Escola Estadual João da Silva",
+            "mentor": "Ricardo Almeida",
             "hasCompanyPartnership": true,
-            "company": "ioBrabaAsys",
-            "companyPhoto": "https://pt.wikipedia.org/wiki/Ficheiro:Ioasys_logo.png",
+            "company": "Dupé",
+            "companyPhoto": "Dupé",
             "tasks": [
                 {
-                    "title": "quis nostrud exercitation",
-                    "isComplete": true,
-                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                    "title": "Moda do Momenton",
+                    "isComplete": false,
+                    "description": " Faça uma dissertação sobre como observa a moda em seu ambiente escola. Poderá escrever até 500 palavras, e encaminhar fotos com referências da moda em sua escola."
                 },
                 {
-                    "title": "sit amet",
-                    "isComplete": true,
-                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                    "title": "Moda na Família",
+                    "isComplete": false,
+                    "description": "Converse com algum familiar e entenda a moda de quando ele ou ela foi adolescente. Faça 04 desenhos com a moda da adolescência de seu familiar. Coloque no início do desenho ano referencial da moda."
+                },
+                {
+                    "title": "Rascunho Inovação",
+                    "isComplete": false,
+                    "description": "Imagine um futuro de 30 anos a frente, e desenhe a moda como poderá estar. Crie em uma ferramenta de design. Faça 03 desenhos completos, incluindo o tipo de caçado que poderá ser usado."
+                },
+                {
+                    "title": "Moda Verão Escolar",
+                    "isComplete": false,
+                    "description": "Com dias quentes durante o verão, desenhe calçados que possam ser confortáveis para ir a escola. Use a imaginação para cores, e que poderia ser usado. Faça 04 modelos em uma ferramenta de design."
                 }
             ]
         },
         {
             "id": "",
-            "name": "Minha décima quinta página web usando tenologias bem brabas",
+            "name": "Transformação Digital e Você!",
             "isSubscribed": false,
             "isComplete": false,
             "score": null,
-            "placement": 5,
-            "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
-            "scoreDescription": null,
-            "startDate": "01/01/2022",
-            "endDate": "26/04/2022",
-            "school": "Colégio Los Brabos",
-            "rules": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "mentor": "Fabiano El Brabo Tomoda",
-            "hasCompanyPartnership": false,
-            "company": null,
-            "companyPhoto": null,
+            "placement": null,
+            "description": "Transformação Digital - é uma mudança de mentalidade que as empresas passam com o objetivo de se tornarem mais modernas e acompanharem os avanços tecnológicos que não param de surgir.\n\nNão há pessoa no mundo que não tenha sido impactada por esse processo, e com as empresas, é a mesma coisa.\n\nO termo é muito usado no mundo corporativo quando o assunto são as exigências de uma nova realidade, na qual a tecnologia avança mais rápido que nunca.",
+            "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
+            "startDate": "08/08/2022",
+            "endDate": "28/08/2022",
+            "school": "Escola Estadual João da Silva",
+            "mentor": "Mariana",
+            "hasCompanyPartnership": true,
+            "company": "Alpargatas",
+            "companyPhoto": "Alpargatas",
             "tasks": [
                 {
-                    "title": "Criar navigation",
+                    "title": "Tarefa 01",
                     "isComplete": false,
-                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                    "description": "Utilizando os conhecimentos do minicurso de Algoritmo, rascunhe o processo de sua saída para a Escola, e acrescente como a transformação digital entrou neste fluxo. Anexar a tarefa 01 no aplicativo pharus"
                 },
                 {
-                    "title": "Criar Login",
+                    "title": "Tarefa 02",
                     "isComplete": false,
-                    "description": "omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                    "description": "Converse com seus responsáveis familiares, e entenda como a transformação digital faz parte de suas vidas. Relate em quais áreas a transformação digital foi mais impactante. Anexar a tarefa 02 no aplicativo pharus."
                 },
                 {
-                    "title": "Lorem",
+                    "title": "Tarefa 03",
                     "isComplete": false,
-                    "description": "omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                    "description": "Imagine um futuro, e uma inovação para uma transformação digital, em uma área qualquer que possa desejar. Como base no minicurso de design, faça um rascunho do que será essa inovação. Anexar tarefa 03 no aplicativo pharus."
                 },
                 {
-                    "title": "Ipsum",
+                    "title": "Tarefa 04",
                     "isComplete": false,
-                    "description": "omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                    "description": "Sabendo sobre o negócio da empresa parceira Alpargatas, rascunhe o que poderá ser a Transformação Digital, em alguma área da empesa. Anexar tarefa 04 no aplicativo pharus."
+                },
+                {
+                    "title": "Tarefa 05",
+                    "isComplete": false,
+                    "description": "Com um amigo de equipe, aponte se em sua Escola houve Transformação Digital, e projete o que considera como a inovação digital poderia auxiliar a Escola. Anexar tarefa 04 no aplicativo pharus."
+                }
+            ]
+        },
+        {
+            "id": "",
+            "name": "Startup Go!",
+            "isSubscribed": false,
+            "isComplete": false,
+            "score": null,
+            "placement": null,
+            "description": "Uma startup é uma empresa que tem o objetivo de crescer de maneira agressiva. As startups costumam oferecer produtos ou serviços inovadores, visando solucionar uma dor ou trazendo inovação incremental a mercadorias que já existem. Quase sempre, as startups baseiam o seu modelo de negócio em tecnologia digital, mas isso não é uma regra.",
+            "scoreDescription": null,
+            "startDate": "03/10/2022",
+            "endDate": "28/10/2022",
+            "school": "Escola Estadual João da Silva",
+            "mentor": "Sávio Costa",
+            "hasCompanyPartnership": false,
+            "company": "ioasys",
+            "companyPhoto": "ioasys",
+            "tasks": [
+                {
+                    "title": "Aprendendo a empreender",
+                    "isComplete": false,
+                    "description": "Forme um grupo de 04 amigos da escola para executar esta tarefa. Com base no aprendizado sobre o que é uma startup, reúnam-se para descobrir um possível nicho do ambiente escolar ou externo que possa ser um possível produto de uma startup. Para esta entrega, Façam: Descreva o problema a ser atuado / Como chegaram na conclusão do tema a ser trabalhado / Coloquem um nome para a startup."
+                },
+                {
+                    "title": "Desbravando o produto",
+                    "isComplete": false,
+                    "description": "Conhecendo o problema que escolheram, para tarefa escolha um nome este produto. Defina o que será este produto. Façam uma dissertação explicando como o produto irá ser importante para o problema escolhido. Descreva qual será o publico que o produto irá atender."
+                },
+                {
+                    "title": "Design em ação...",
+                    "isComplete": false,
+                    "description": "Com uma ferramenta de design criem uma logomarca para o produto escolhido, e um slogan (slogan é uma frase criada para gerar no consumidor uma associação mental a uma marca, favorecendo que se lembre dela facilmente)."
+                },
+                {
+                    "title": "Hora do show!",
+                    "isComplete": false,
+                    "description": "Definido o produto na tarefa 02, agora é hora de desenhar um protótipo (é o termo usado para se referir ao que foi criado pela primeira vez, servindo de modelo ou molde para futuras produções.) desta inovação. Com seus amigos de grupo, escolham uma ferramenta adequada para que possam rascunhar o produto. Façam ao menos 03 referenciais do produto."
                 }
             ]
         },
         {
             "id": "62501bb56c91d14d76f0123wwq",
-            "name": "Minha primeira página web usando tenologias bem brabas",
-            "isSubscribed": true,
-            "isComplete": false,
-            "score": null,
-            "placement": 4,
-            "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
-            "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
-            "startDate": "01/01/2022",
-            "endDate": "03/02/2023",
-            "school": "Colégio Los Brabos",
-            "rules": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "mentor": "Ca La Braba Mila",
-            "hasCompanyPartnership": false,
-            "company": null,
-            "companyPhoto": null,
-            "tasks": [
-                {
-                    "title": "consectetur adipiscing elit",
-                    "isComplete": true,
-                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
-                },
-                {
-                    "title": "tempor incididunt",
-                    "isComplete": false,
-                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
-                }
-            ]
-        },
-        {
-            "id": "62501bb56c91d14d76f0123wwqg",
-            "name": "Minha terceira página web usando tenologias bem brabas",
+            "name": "Sustentabilidade Hipster",
             "isSubscribed": true,
             "isComplete": false,
             "score": null,
             "placement": null,
-            "description": "O aluno deve fazer uma página web utilizando HTML, CSS e JavaScript",
+            "description": "Sustentabilidade é a capacidade de cumprir com as necessidades do presente sem comprometer as mesma das gerações futuras. O conceito de sustentabilidade é composto por três pilares: econômico, ambiental e social",
             "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
-            "startDate": "01/01/2022",
-            "endDate": "03/02/2023",
-            "school": "Colégio Los Brabos",
-            "rules": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "mentor": "Ca La Braba Mila",
-            "hasCompanyPartnership": false,
-            "company": null,
-            "companyPhoto": null,
+            "startDate": "07/11/2022",
+            "endDate": "30/11/2022",
+            "school": "Escola Estadual João da Silva",
+            "mentor": "Oskar Metsavaht",
+            "hasCompanyPartnership": true,
+            "company": "Osklen",
+            "companyPhoto":"Osklen",
             "tasks": [
                 {
-                    "title": "consectetur adipiscing elit",
-                    "isComplete": true,
-                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                    "title": "Sustentabilidade na prática!",
+                    "isComplete": false,
+                    "description": "Atividade será em equipe de 04 pessoas. Conhecendo os tipos de materiais para reciclagem, monte um trabalho de divulgação sobre como separar os materiais, e divulgue na escola. Utilize material que possam ser reciclados. Inovem!!!"
                 },
                 {
-                    "title": "tempor incididunt",
+                    "title": "Família na onda da sustentabilidade!",
                     "isComplete": false,
-                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+                    "description": "Esta atividade será individual. Com seu responsável familiar, monte em casa repositórios para a coleta de materiais para o direcionamento correto do lixo residencial. Faça etiquetas para os locais de depósito dos lixos. Ah! use produto reciclado para o deposito do lixo para reciclagem."
+                },{
+                    "title": "Ação na Comunidade",
+                    "isComplete": false,
+                    "description": "Esta tarefa será em grupo com acompanhamento de um responsável escolar. Inicialmente desenvolva material explicativo de como organizar o lixo para reciclagem. Crie um cronograma para que possam visitar residências da região escolar promovendo o conhecimento da reciclagem. Encaminhe os registros no app !"
+                }
+            ]
+        },
+        {
+            "id": "62501bb56c91d14d76f0123wwq",
+            "name": "Memória em ação!",
+            "isSubscribed": true,
+            "isComplete": false,
+            "score": null,
+            "placement": null,
+            "description": "Projeto Social - Projetos sociais são trabalhos desenvolvidos sem fins lucrativos que visam o desenvolvimento social, econômico e cultural de uma comunidade ou grupo.",
+            "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
+            "startDate": "05/12/2022",
+            "endDate": "16/12/2022",
+            "school": "Escola Estadual João da Silva",
+            "mentor": "Rafael Felício",
+            "hasCompanyPartnership": true,
+            "company": "Havaianas",
+            "companyPhoto":"Havaianas",
+            "tasks": [
+                {
+                    "title": "Desapegando!",
+                    "isComplete": false,
+                    "description": "Atividade individual. Para esta tarefa você deverá escolher uma peça de roupa ou calçado que não usa a um bom tempo, e está em boa conservação para que possa ser utilizado outra pessoa. Faça uma dissertação sobre o que esta peça lhe traz de memória, não limite para o texto. Encaminhe no APP!"
+                },
+                {
+                    "title": "Amigos de Escola!",
+                    "isComplete": false,
+                    "description": "Junte a dissertação criada mais a peça escolhida. A tarefa será o mentor da escola irá acompanhar uma reunião para que todos possam realizar a passagem da peça para um colega de turma, e livremente ler sua dissertação."
+                },{
+                    "title": "Imaginação no Social!",
+                    "isComplete": false,
+                    "description": "Atividade será individual. Observe sua comunidade, sua escola todo o ambiente por onde tenha sua vivência diária. Imagine como poderia ser útil para este ambiente. Crie um Projeto Social com base em suas observações, siga a seguinte lista: O ambiente que será beneficiado / Nome do Projeto Social / O problema observado / Como será o projeto social. Anexo o documento no APP."
                 }
             ]
         }

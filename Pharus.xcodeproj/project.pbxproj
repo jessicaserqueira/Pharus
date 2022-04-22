@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7906FE61281321F900E4A83A /* Float+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7906FE60281321F900E4A83A /* Float+Extension.swift */; };
 		7910D9CE27FCEFE900A8DDA0 /* StudentProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */; };
 		7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */; };
 		7910D9D227FD0B8300A8DDA0 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */; };
@@ -118,6 +119,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7906FE60281321F900E4A83A /* Float+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extension.swift"; sourceTree = "<group>"; };
 		7910D9CD27FCEFE900A8DDA0 /* StudentProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailView.swift; sourceTree = "<group>"; };
 		7910D9CF27FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectDetailViewController.swift; sourceTree = "<group>"; };
 		7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
 				7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */,
 				793EC73A27FE183000CD8334 /* UIImage+Extension.swift */,
+				7906FE60281321F900E4A83A /* Float+Extension.swift */,
 				79A4FCD0280E58B800B509FE /* UIStackView+Extension.swift */,
 				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
 				79735B63280ED78600D1067B /* UIViewController+Extension.swift */,
@@ -725,6 +728,7 @@
 				C05AA30327FFAA7400230698 /* ConfirmationAlertViewController.swift in Sources */,
 				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
 				7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */,
+				7906FE61281321F900E4A83A /* Float+Extension.swift in Sources */,
 				793EC73B27FE183000CD8334 /* UIImage+Extension.swift in Sources */,
 				79E8389F280AF7C5001C46AD /* HomeNewsView.swift in Sources */,
 				7993C9AF28103CD500526AF2 /* ProjectSubcriptionAlertCoordinator.swift in Sources */,

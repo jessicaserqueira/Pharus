@@ -91,7 +91,7 @@ extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {
     }
     
     func rulesViewTapped() {
-        presenter.showProjectRules(rules: project.rules)
+        //presenter.showProjectRules(rules: project.rules)
     }
     
     func sendFilesButtonTapped() {
