@@ -13,9 +13,9 @@ protocol OneButtonAlertPresenterProtocol {
 
 class OneButtonAlertPresenter: OneButtonAlertPresenterProtocol {
     
-    var coordinator: OneButtonAlertCoordinator
+    var coordinator: ConfirmationAlertCoordinator
     
-    init(coordinator: OneButtonAlertCoordinator) {
+    init(coordinator: ConfirmationAlertCoordinator) {
         self.coordinator = coordinator
     }
     

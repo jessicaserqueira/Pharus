@@ -45,7 +45,7 @@ extension SendFileCoordinator: SendFileFlow {
             image: UIImage.icons.checkIcon ?? .defaultImage
         )
         
-        let alertCoordinator = OneButtonAlertCoordinator(
+        let alertCoordinator = ConfirmationAlertCoordinator(
             navigationController: navigationController,
             alertView: alertView
         )
