@@ -65,7 +65,7 @@ class StudentHomeView: UIView {
         let label = UILabel()
         label.text = "Olá, Antônia!"
         label.textColor = .white
-        label.font = .systemFont(ofSize: 20, weight: .bold)
+        label.font = .largeTitleBold
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentHomeView.helloStudentLabel"
