@@ -26,6 +26,8 @@ class ChangePasswordPresenter: ChangePasswordPresenterProtocol {
        
     }
     
+    //MARK: - Actions
+    
     func isValidEmail(email: String) -> Bool {
         let emailRegEx = K.RegEx.emailRegEx
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegEx)

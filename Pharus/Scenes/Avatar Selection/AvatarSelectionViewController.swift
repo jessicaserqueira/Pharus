@@ -56,12 +56,12 @@ class AvatarSelectionViewController: UIViewController {
     
     //MARK: - Functions
     
-    func setNavigationBar() {
+    private func setNavigationBar() {
         self.title = "Avatar"
         self.navigationController?.title = ""
     }
     
-    func setupCollectionView() {
+    private  func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
@@ -94,7 +94,7 @@ class AvatarSelectionViewController: UIViewController {
         ])
     }
     
-    func showStudentAvatar() {
+    private func showStudentAvatar() {
         customView.mainAvatarImageView.image = UIImage(
             named: "avatar" + student.avatar + K.Assets.Images.Avatar.FullImage.suffix
         )

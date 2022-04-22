@@ -11,7 +11,7 @@ class AvatarSelectionView: UIView {
     
     //MARK: - Views
     
-    lazy var mainScrollView: UIScrollView = {
+    private lazy var mainScrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +20,7 @@ class AvatarSelectionView: UIView {
         return scrollView
     }()
     
-    lazy var mainView: UIView = {
+    private lazy var mainView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentAvatarView.mainView"
@@ -58,7 +58,7 @@ class AvatarSelectionView: UIView {
         return stackView
     }()
     
-    lazy var selectYourAvatarLabel: UILabel = {
+    private lazy var selectYourAvatarLabel: UILabel = {
         let label = UILabel()
         label.text = "Escolha o seu avatar"
         label.textAlignment = .center
@@ -85,7 +85,7 @@ class AvatarSelectionView: UIView {
     
     //MARK: - Functions
     
-    func configureSubviews() {
+    private func configureSubviews() {
         addSubview(mainScrollView)
         mainScrollView.addSubview(mainView)
         
@@ -97,7 +97,8 @@ class AvatarSelectionView: UIView {
         avatarSelectionStackView.addArrangedSubview(selectYourAvatarLabel)
     }
     
-    func setupConstraints() {
+    private func setupConstraints() {
+        
         //Main Scroll View
         self.stretch(mainScrollView)
         

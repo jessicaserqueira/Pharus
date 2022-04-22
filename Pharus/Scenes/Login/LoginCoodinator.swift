@@ -15,9 +15,12 @@ protocol LoginFlow {
 
 class LoginCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     
+    //MARK: - Initializer
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -35,11 +38,14 @@ class LoginCoordinator: Coordinator {
         navigationController.setViewControllers([loginViewController], animated: true)
     }
 }
+
+//MARK: - Actions
+
 extension LoginCoordinator: LoginFlow {
     func showChangePassword(student: StudentModel) {
         let coordinator = ChangePasswordCoordinator(
             navigationController: navigationController,
-            student
+            student: student
         )
           
         self.coordinate(to: coordinator)

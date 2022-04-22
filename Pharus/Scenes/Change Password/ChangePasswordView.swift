@@ -19,7 +19,7 @@ class ChangePasswordView: UIView {
     
     //MARK: - Views
     
-    lazy var mainScrollView: UIScrollView = {
+    private lazy var mainScrollView: UIScrollView = {
         var scrollView = UIScrollView()
         scrollView.clipsToBounds = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -27,7 +27,7 @@ class ChangePasswordView: UIView {
         return scrollView
     }()
     
-    lazy var mainView: UIView = {
+    private lazy var mainView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -36,7 +36,7 @@ class ChangePasswordView: UIView {
         return view
     }()
     
-    lazy var logoImageView: UIImageView = {
+    private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.images.appLogoImage
         imageView.contentMode = .scaleAspectFit
@@ -46,7 +46,7 @@ class ChangePasswordView: UIView {
         return imageView
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = UIScreen.main.bounds.height/17
@@ -57,7 +57,7 @@ class ChangePasswordView: UIView {
         return stackView
     }()
     
-    lazy var changePasswordTitle: UILabel = {
+    private lazy var changePasswordTitle: UILabel = {
         let label = UILabel()
         label.text = "Esqueci a senha!"
         label.textColor = UIColor.purple.pharusPurple
@@ -69,7 +69,7 @@ class ChangePasswordView: UIView {
         return label
     }()
     
-    lazy var emailStackView: UIStackView = {
+    private lazy var emailStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -81,7 +81,7 @@ class ChangePasswordView: UIView {
         return stackView
     }()
     
-    lazy var emailLabel: UILabel = {
+    private lazy var emailLabel: UILabel = {
         let label = UILabel()
         label.text = "E-mail"
         label.font = .mediumTitleBold
@@ -92,7 +92,7 @@ class ChangePasswordView: UIView {
         return label
     }()
     
-    lazy var emailTextField: UITextField = {
+    private lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.attributedPlaceholder = NSAttributedString(
             string: "antonia.ferreira@gmail.com",
@@ -112,7 +112,7 @@ class ChangePasswordView: UIView {
         return textField
     }()
     
-    lazy var newPasswordStackView: UIStackView = {
+    private lazy var newPasswordStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -120,11 +120,11 @@ class ChangePasswordView: UIView {
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ChangePasswordView.newPasswordStackView"
-    
+        
         return stackView
     }()
     
-    lazy var newPasswordLabel: UILabel = {
+    private lazy var newPasswordLabel: UILabel = {
         let label = UILabel()
         label.text = "Nova senha"
         label.font = .mediumTitleBold
@@ -135,7 +135,7 @@ class ChangePasswordView: UIView {
         return label
     }()
     
-    lazy var newPasswordTextField: UITextField = {
+    private lazy var newPasswordTextField: UITextField = {
         let textField = UITextField()
         textField.attributedPlaceholder = NSAttributedString(
             string: "Nova senha",
@@ -156,7 +156,7 @@ class ChangePasswordView: UIView {
         return textField
     }()
     
-    lazy var confirmPasswordStackView: UIStackView = {
+    private lazy var confirmPasswordStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -164,11 +164,11 @@ class ChangePasswordView: UIView {
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ChangePasswordView.confirmPasswordStackView"
-    
+        
         return stackView
     }()
     
-    lazy var confirmPasswordLabel: UILabel = {
+    private lazy var confirmPasswordLabel: UILabel = {
         let label = UILabel()
         label.text = "Confirmar senha"
         label.font = .mediumTitleBold
@@ -179,7 +179,7 @@ class ChangePasswordView: UIView {
         return label
     }()
     
-    lazy var confirmPasswordTextField: UITextField = {
+    private lazy var confirmPasswordTextField: UITextField = {
         let textField = UITextField()
         textField.attributedPlaceholder = NSAttributedString(
             string: "Confirmar senha",
@@ -200,7 +200,7 @@ class ChangePasswordView: UIView {
         return textField
     }()
     
-    lazy var changePasswordButton: MainCardButton = {
+    private lazy var changePasswordButton: MainCardButton = {
         let button = MainCardButton(title: "Mudar senha", buttonState: .normal)
         button.addAction(UIAction { _ in
             self.changePasswordButtonPressed()
@@ -208,7 +208,7 @@ class ChangePasswordView: UIView {
         button.titleLabel?.font = .largeButton
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "ChangePasswordView.changePasswordButton"
-
+        
         return button
     }()
     
@@ -225,10 +225,12 @@ class ChangePasswordView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureSubviews() {
+    //MARK: - Subviews
+    
+    private func configureSubviews() {
         addSubview(mainView)
         mainView.addSubview(mainScrollView)
-                
+        
         mainScrollView.addSubview(mainStackView)
         
         mainStackView.addArrangedSubview(logoImageView)
@@ -246,24 +248,26 @@ class ChangePasswordView: UIView {
         mainStackView.addArrangedSubview(confirmPasswordStackView)
         confirmPasswordStackView.addArrangedSubview(confirmPasswordLabel)
         confirmPasswordStackView.addArrangedSubview(confirmPasswordTextField)
-      
+        
         
         mainStackView.addArrangedSubview(changePasswordButton)
     }
     
-    func setupConstraints() {
-      
+    //MARK: - Constraints
+    
+    private func setupConstraints() {
+        
+        //Main Scroll View
         self.stretch(mainScrollView)
-          
+        
         //Main Stack View
         self.stretch(mainView, to: mainScrollView)
         mainView.center(in: mainScrollView)
         NSLayoutConstraint.activate([
             mainStackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
-
+            
         ])
-
-                
+        
         //Main Stack View
         NSLayoutConstraint.activate([
             mainStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 32),
