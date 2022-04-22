@@ -68,37 +68,7 @@ class TabBarCoordinator: Coordinator {
             navigationController: UINavigationController(),
             student: student
         )
-        
-        coordinator
-            .navigationController
-            .tabBarController?
-            .tabBar
-            .backgroundColor = UIColor.tabbar.blueBackground
-        
-        coordinator
-            .navigationController
-            .tabBarController?
-            .tabBar
-            .barTintColor = UIColor.tabbar.blueBackground
-        
-        coordinator
-            .navigationController
-            .tabBarController?
-            .tabBar
-            .tintColor = .none
-        
-        coordinator
-            .navigationController
-            .tabBarController?
-            .tabBar
-            .unselectedItemTintColor = UIColor.tabbar.whiteTint
-        
-        coordinator
-            .navigationController
-            .tabBarController?
-            .tabBar
-            .isTranslucent = false
-        
+                        
         coordinator
             .navigationController
             .tabBarItem

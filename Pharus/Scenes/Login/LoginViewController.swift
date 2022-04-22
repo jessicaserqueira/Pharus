@@ -25,8 +25,6 @@ class LoginViewController: UIViewController {
         self.coordinator = coordinator
         
         super.init(nibName: nil, bundle: nil)
-        
-        hidesBottomBarWhenPushed = true
     }
     
     required init?(coder: NSCoder) {

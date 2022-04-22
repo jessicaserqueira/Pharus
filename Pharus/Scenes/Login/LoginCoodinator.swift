@@ -33,7 +33,7 @@ class LoginCoordinator: Coordinator {
             presenter: loginPresenter
         )
     
-        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.setNavigationBarHidden(true, animated: true)
         navigationController.tabBarController?.tabBar.isHidden = true
         navigationController.setViewControllers([loginViewController], animated: true)
     }
