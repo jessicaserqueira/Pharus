@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         if let window = window {
             window.windowScene = windowScene
-            //window.overrideUserInterfaceStyle = .dark
+            window.overrideUserInterfaceStyle = .dark
             coordinator = AppCoordinator(window: window)
             coordinator?.start()
         }

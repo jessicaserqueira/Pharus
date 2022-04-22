@@ -42,6 +42,7 @@ class HomeNewsView: UIView {
         let label = UILabel()
         label.text = "Fique por dentro!"
         label.font = .largeTitleBold
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "HomeNewsView.titleLabel"
         return label
@@ -58,6 +59,7 @@ class HomeNewsView: UIView {
         let label = UILabel()
         label.text = "A empresa XPTO, em parceria com a escola, lançou o projeto Voluntários Digitais. Dá uma olhadinha lá, quem sabe você se identifica com a proposta!"
         label.numberOfLines = 0
+        label.textColor = .black
         label.textAlignment = .justified
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "HomeNewsView.descriptionLabel"

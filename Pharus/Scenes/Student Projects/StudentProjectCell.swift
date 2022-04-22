@@ -64,6 +64,7 @@ class StudentProjectCell: UITableViewCell {
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
         label.font = .largeTitleBold
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectCell.titleLabel"
         
@@ -74,6 +75,7 @@ class StudentProjectCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 1
         label.font = .mediumTitleBold
+        label.textColor = .black
         label.lineBreakMode = .byTruncatingTail
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectCell.mentorsLabel"
@@ -85,6 +87,7 @@ class StudentProjectCell: UITableViewCell {
         let label = UILabel()
         label.text = "Descrição:"
         label.font = .mediumTitleSemiBold
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectCell.descriptionTitleLabel"
         
@@ -102,6 +105,7 @@ class StudentProjectCell: UITableViewCell {
         let label = UILabel()
         label.font = .smallBody
         label.numberOfLines = 0
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectCell.descriptionLabel"
         
@@ -144,6 +148,7 @@ class StudentProjectCell: UITableViewCell {
         let label = UILabel()
         label.text = "100%"
         label.font = .smallBody
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectCell.percentageCompletionLabel"
         
@@ -197,6 +202,7 @@ class StudentProjectCell: UITableViewCell {
         let label = UILabel()
         label.text = "Parceira: "
         label.font = .smallBodyBold
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "UserProjectCell.partnershipLabel"
         
