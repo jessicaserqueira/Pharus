@@ -24,7 +24,7 @@ class OneButtonAlertCoordinator: Coordinator {
     
     func start() {
         let alertPresenter = OneButtonAlertPresenter(coordinator: self)
-        let alertViewController = OneButtonAlertViewController(
+        let alertViewController = ConfirmationAlertViewController(
             alertView: alertView,
             coordinator: self,
             presenter: alertPresenter

@@ -100,7 +100,7 @@
 		C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */; };
 		C05AA2F527FFA66D00230698 /* OneButtonAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F427FFA66D00230698 /* OneButtonAlertView.swift */; };
 		C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F827FFA69800230698 /* MainCardButton.swift */; };
-		C05AA30327FFAA7400230698 /* OneButtonAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA30227FFAA7400230698 /* OneButtonAlertViewController.swift */; };
+		C05AA30327FFAA7400230698 /* ConfirmationAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA30227FFAA7400230698 /* ConfirmationAlertViewController.swift */; };
 		C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA30627FFAA9500230698 /* SendFileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -211,7 +211,7 @@
 		C05AA2F427FFA66D00230698 /* OneButtonAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonAlertView.swift; sourceTree = "<group>"; };
 		C05AA2F827FFA69800230698 /* MainCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
 		C05AA2FE27FFA6F300230698 /* SendFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileView.swift; sourceTree = "<group>"; };
-		C05AA30227FFAA7400230698 /* OneButtonAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonAlertViewController.swift; sourceTree = "<group>"; };
+		C05AA30227FFAA7400230698 /* ConfirmationAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertViewController.swift; sourceTree = "<group>"; };
 		C05AA30627FFAA9500230698 /* SendFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -339,7 +339,7 @@
 		7993C9A328102B2C00526AF2 /* One Button Alert */ = {
 			isa = PBXGroup;
 			children = (
-				C05AA30227FFAA7400230698 /* OneButtonAlertViewController.swift */,
+				C05AA30227FFAA7400230698 /* ConfirmationAlertViewController.swift */,
 				C05AA2F427FFA66D00230698 /* OneButtonAlertView.swift */,
 				79E838AB280B0676001C46AD /* OneButtonAlertCoordinator.swift */,
 				79E838AD280B067D001C46AD /* OneButtonAlertPresenter.swift */,
@@ -701,7 +701,7 @@
 				79C577D227FBBB9800046B00 /* StudentProjectsRankingViewController.swift in Sources */,
 				C057E8F52807954B004E44C3 /* AvatarSelectionCoordinator.swift in Sources */,
 				7993C9BA28104E7400526AF2 /* SmallAlertButton.swift in Sources */,
-				C05AA30327FFAA7400230698 /* OneButtonAlertViewController.swift in Sources */,
+				C05AA30327FFAA7400230698 /* ConfirmationAlertViewController.swift in Sources */,
 				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
 				7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */,
 				793EC73B27FE183000CD8334 /* UIImage+Extension.swift in Sources */,

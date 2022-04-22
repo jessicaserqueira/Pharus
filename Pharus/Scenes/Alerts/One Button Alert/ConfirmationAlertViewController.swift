@@ -1,5 +1,5 @@
 //
-//  OneButtonAlertViewController.swift
+//  ConfirmationAlertViewController.swift
 //  Pharus
 //
 //  Created by Victor Colen on 07/04/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OneButtonAlertViewController: UIViewController {
+class ConfirmationAlertViewController: UIViewController {
     
     private var alertView: OneButtonAlertView
     private var coordinator: OneButtonAlertCoordinator
@@ -38,7 +38,7 @@ class OneButtonAlertViewController: UIViewController {
     }
 }
 
-extension OneButtonAlertViewController: OneButtonAlertViewDelegate {
+extension ConfirmationAlertViewController: OneButtonAlertViewDelegate {
     func closeButtonTapped() {
         presenter.closeModal()
     }
