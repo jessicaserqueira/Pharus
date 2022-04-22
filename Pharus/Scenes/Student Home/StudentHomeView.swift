@@ -165,7 +165,6 @@ class StudentHomeView: UIView {
         
         mainStackView.addArrangedSubview(newsHelperView)
         
-        newsHelperView.addSubview(newsView)
     }
     
     //MARK: - Constraints
@@ -219,8 +218,5 @@ class StudentHomeView: UIView {
         NSLayoutConstraint.activate([
             newsHelperView.heightAnchor.constraint(equalToConstant: 221)
         ])
-        
-        //Home News View
-        self.stretch(newsView, to: newsHelperView, left: 16, right: -16)
     }
 }
