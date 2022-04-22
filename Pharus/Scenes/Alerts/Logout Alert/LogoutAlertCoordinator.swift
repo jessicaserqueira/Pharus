@@ -43,7 +43,7 @@ class LogoutAlertCoordinator: Coordinator {
     }
 }
 
-//MARK: - Logout Alert Flow
+//MARK: - Actions
 
 extension LogoutAlertCoordinator: LogoutAlertFlow {
     func closeModal() {

@@ -20,12 +20,22 @@ class LogoutAlertView: UIView {
     
     //MARK: - Views
     
+    lazy var blurEffectView: UIVisualEffectView = {
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        return blurEffectView
+    }()
+    
     lazy var mainView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
         view.backgroundColor = UIColor.modal.yellowBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "LogoutAlertViewDelegate.mainView"
+        
         return view
     }()
     
@@ -34,6 +44,7 @@ class LogoutAlertView: UIView {
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "LogoutAlertViewDelegate.mainStackView"
+        
         return stackView
     }()
     
@@ -41,6 +52,7 @@ class LogoutAlertView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "LogoutAlertViewDelegate.logoutIconHelperView"
+        
         return view
     }()
     
@@ -49,6 +61,7 @@ class LogoutAlertView: UIView {
         imageView.image = UIImage.icons.logOutIcon?.withTintColor(.black)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "LogoutAlertViewDelegate.logoutIconImageView"
+        
         return imageView
     }()
     
@@ -59,6 +72,7 @@ class LogoutAlertView: UIView {
         label.font = UIFont.mediumTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LogoutAlertViewDelegate.titleLabel"
+        
         return label
     }()
     
@@ -69,6 +83,7 @@ class LogoutAlertView: UIView {
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "LogoutAlertViewDelegate.buttonStackView"
+        
         return stackView
     }()
     
@@ -77,13 +92,12 @@ class LogoutAlertView: UIView {
             title: "Sair",
             importance: .primary
         )
-        
         button.addAction(UIAction { _ in
             self.primaryButtonTapped()
         }, for: .touchUpInside)
-        
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "LogoutAlertViewDelegate.yesButton"
+        
         return button
     }()
     
@@ -92,13 +106,12 @@ class LogoutAlertView: UIView {
             title: "Cancelar",
             importance: .secondary
         )
-        
         button.addAction(UIAction { _ in
             self.secondaryButtonTapped()
         }, for: .touchUpInside)
-        
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "LogoutAlertViewDelegate.noButton"
+        
         return button
     }()
     
@@ -117,13 +130,7 @@ class LogoutAlertView: UIView {
     
     //MARK: - Subviews
     
-    func configureSubviews() {
-        
-        let blurEffect = UIBlurEffect(style: .light)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
+    func configureSubviews() {        
         addSubview(blurEffectView)
         addSubview(mainView)
         
@@ -139,7 +146,7 @@ class LogoutAlertView: UIView {
         buttonStackView.addArrangedSubview(primaryButton)
         buttonStackView.addArrangedSubview(secondaryButton)
     }
-        
+    
     //MARK: - Constraints
     
     func setupConstraints() {
@@ -164,16 +171,6 @@ class LogoutAlertView: UIView {
         NSLayoutConstraint.activate([
             logoutIconImageView.heightAnchor.constraint(equalToConstant: 48),
             logoutIconImageView.widthAnchor.constraint(equalToConstant: 48)
-        ])
-        
-        //Primary Button
-        NSLayoutConstraint.activate([
-            //primaryButton.widthAnchor.constraint(equalToConstant: 32)
-        ])
-        
-        //Secondary Button
-        NSLayoutConstraint.activate([
-           // secondaryButton.widthAnchor.constraint(equalToConstant: 32)
         ])
     }
     

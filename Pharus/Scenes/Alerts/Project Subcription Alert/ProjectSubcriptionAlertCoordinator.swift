@@ -13,10 +13,14 @@ protocol ProjectSubcriptionAlertFlow {
 
 class ProjectSubcriptionAlertCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     var alertView: ProjectSubcriptionAlertView
     var project: ProjectModel
+    
+    //MARK: - Initializer
     
     init(
         navigationController: UINavigationController,
@@ -40,6 +44,8 @@ class ProjectSubcriptionAlertCoordinator: Coordinator {
         navigationController.present(alertViewController, animated: true)
     }
 }
+
+//MARK: - Actions
 
 extension ProjectSubcriptionAlertCoordinator: ProjectSubcriptionAlertFlow {
     func closeModal() {

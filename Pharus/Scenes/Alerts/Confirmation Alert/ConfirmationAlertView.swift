@@ -20,6 +20,15 @@ class ConfirmationAlertView: UIView {
     
     //MARK: - Views
     
+    lazy var blurEffectView: UIVisualEffectView = {
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        return blurEffectView
+    }()
+    
     private lazy var mainView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
@@ -79,11 +88,9 @@ class ConfirmationAlertView: UIView {
     private lazy var actionButton: MainCardButton = {
         let button = MainCardButton()
         button.setTitle("Fechar", for: .normal)
-        
         button.addAction(UIAction { _ in
             self.closeButtonTapped()
         }, for: .touchUpInside)
-        
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "ConfirmationAlertView.actionButton"
         
@@ -116,14 +123,7 @@ class ConfirmationAlertView: UIView {
     }
     
     private func configureSubviews() {
-        
-        let blurEffect = UIBlurEffect(style: .light)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
         addSubview(blurEffectView)
-        
         addSubview(mainView)
         
         mainView.addSubview(mainStackView)
@@ -160,7 +160,7 @@ class ConfirmationAlertView: UIView {
         
         //Alert Icon Image View
         alertIconImageView.center(in: alertIconHelperView)
-                
+        
         //Alert Message Label
         alertMessageLabel.center(in: alertMessageHelperView)
         NSLayoutConstraint.activate([

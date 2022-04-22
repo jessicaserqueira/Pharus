@@ -14,11 +14,17 @@ protocol ProjectSubcriptionPresenterProtocol {
 
 class ProjectSubcriptionAlertPresenter: ProjectSubcriptionPresenterProtocol {
     
+    //MARK: - Properties
+    
     var coordinator: ProjectSubcriptionAlertCoordinator
+    
+    //MARK: - Initializer
     
     init(coordinator: ProjectSubcriptionAlertCoordinator) {
         self.coordinator = coordinator
     }
+    
+    //MARK: - Actions
     
     func closeModal() {
         coordinator.closeModal()

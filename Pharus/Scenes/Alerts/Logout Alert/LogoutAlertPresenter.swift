@@ -24,7 +24,7 @@ class LogoutAlertPresenter: LogoutAlertPresenterProtocol {
         self.coordinator = coordinator
     }
     
-    //MARK: - Logout Alert Presenter Protocol
+    //MARK: - Actions
     
     func closeModal() {
         coordinator.closeModal()

@@ -25,12 +25,22 @@ class ProjectSubcriptionAlertView: UIView {
     
     //MARK: - Views
     
+    lazy var blurEffectView: UIVisualEffectView = {
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        return blurEffectView
+    }()
+    
     lazy var mainView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.modal.yellowBackground
         view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "ProjectSubcriptionAlertView.mainView"
+        
         return view
     }()
     
@@ -40,6 +50,7 @@ class ProjectSubcriptionAlertView: UIView {
         stackView.spacing = 24
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ProjectSubcriptionAlertView.mainStackView"
+        
         return stackView
     }()
     
@@ -47,6 +58,7 @@ class ProjectSubcriptionAlertView: UIView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ProjectSubcriptionAlertView.titleStackView"
+        
         return stackView
     }()
     
@@ -56,6 +68,7 @@ class ProjectSubcriptionAlertView: UIView {
         label.text = "Confirmar Inscrição"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSubcriptionAlertView.titleLabel"
+        
         return label
     }()
     
@@ -67,6 +80,7 @@ class ProjectSubcriptionAlertView: UIView {
         }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "ProjectSubcriptionAlertView.closeModalButton"
+        
         return button
     }()
     
@@ -77,6 +91,7 @@ class ProjectSubcriptionAlertView: UIView {
         label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSubcriptionAlertView.descriptionLabel"
+        
         return label
     }()
     
@@ -87,6 +102,7 @@ class ProjectSubcriptionAlertView: UIView {
         }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "ProjectSubcriptionAlertView.primaryButton"
+        
         return button
     }()
     
@@ -97,11 +113,12 @@ class ProjectSubcriptionAlertView: UIView {
         }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "ProjectSubcriptionAlertView.secondaryButton"
+        
         return button
     }()
     
     //MARK: - Initializer
-        
+    
     convenience init(
         title: String,
         message: String,
@@ -136,15 +153,10 @@ class ProjectSubcriptionAlertView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Subviews
+    
     private func configureSubviews() {
-        
-        let blurEffect = UIBlurEffect(style: .light)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
         addSubview(blurEffectView)
-        
         addSubview(mainView)
         
         mainView.addSubview(mainStackView)
@@ -180,6 +192,7 @@ class ProjectSubcriptionAlertView: UIView {
         
         //Main Stack View
         self.stretch(mainStackView, to: mainView, top: 32, left: 16, bottom: -16, right: -13)
+        
         //Close Modal Image View
         NSLayoutConstraint.activate([
             closeModalButton.heightAnchor.constraint(equalToConstant: 24),
