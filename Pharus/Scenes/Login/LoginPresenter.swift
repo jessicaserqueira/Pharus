@@ -10,7 +10,7 @@ import Foundation
 protocol LoginPresenterProtocol {
     func isValidEmail(email: String) -> Bool
     func isValidPassword(password: String) -> Bool
-    func loginUser(email: String, password: String)
+    func loginUser(email: String, password: String) -> Bool
     func showChangePassword(email: String)
 }
 
@@ -42,14 +42,14 @@ class LoginPresenter: LoginPresenterProtocol {
         return passwordPredicate.evaluate(with: password)
     }
     
-    func loginUser(email: String, password: String) {
+    func loginUser(email: String, password: String) -> Bool {
         let student: Student = Bundle.main.decode("Student.json")
         if email == student.email && password == student.password {
             let studentModel = makeStudentModel(with: student)
             coordinator.showHome(student: studentModel)
-        } else {
-            //mostrar erro na tela
+            return true
         }
+        return false
     }
     
     func showChangePassword(email: String) {

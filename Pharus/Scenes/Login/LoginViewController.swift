@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-        
+    
     //MARK: - Actions
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -71,12 +71,12 @@ class LoginViewController: UIViewController {
     //MARK: - Actions
     
     private func initializeHideKeyboard() {
-
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(
                 dismissMyKeyboard
-                )
+            )
         )
         
         view.addGestureRecognizer(tap)
@@ -94,7 +94,13 @@ extension LoginViewController: LoginViewDelegate {
         guard let email = customView.emailTextField.text else { return }
         guard let password = customView.passwordTextField.text else { return }
         
-        presenter.loginUser(email: email, password: password)
+        let studentDidLogIn = presenter.loginUser(email: email, password: password)
+        
+        if studentDidLogIn == false {
+            customView.wrongPasswordImageView.image = customView.wrongPasswordImageView.image?.withTintColor(UIColor.redError)
+            customView.wrongPasswordLabel.textColor = UIColor.redError
+            customView.passwordTextField.textColor = UIColor.redError
+        }
     }
     func changePasswordButtonTapped() {
         guard let email = customView.emailTextField.text else { return }

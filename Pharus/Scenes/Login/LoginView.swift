@@ -159,7 +159,7 @@ class LoginView: UIView {
         return stackView
     }()
     
-    lazy var wrongPasswordStackView: UIStackView = {
+  private lazy var wrongPasswordStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 4
