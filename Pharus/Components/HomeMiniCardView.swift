@@ -25,6 +25,7 @@ class StudentHomeMiniCardView: UIView {
         view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeMiniCardView.mainView"
+        
         return view
     }()
     
@@ -34,6 +35,7 @@ class StudentHomeMiniCardView: UIView {
         stackView.spacing = 15
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentHomeMiniCardView.mainStackView"
+        
         return stackView
     }()
     
@@ -41,6 +43,7 @@ class StudentHomeMiniCardView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeMiniCardView.cardIconHelperView"
+        
         return view
     }()
     
@@ -49,6 +52,7 @@ class StudentHomeMiniCardView: UIView {
         imageView.image = UIImage.images.fifthPlaceMedalImage
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentHomeMiniCardView.cardIconImageView"
+        
         return imageView
     }()
     
@@ -56,6 +60,7 @@ class StudentHomeMiniCardView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeMiniCardView.cardDescriptionHelperView"
+        
         return view
     }()
     
@@ -66,6 +71,7 @@ class StudentHomeMiniCardView: UIView {
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentHomeMiniCardView.cardDescriptionLabel"
+        
         return label
     }()
     
@@ -98,6 +104,8 @@ class StudentHomeMiniCardView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Subviews
     
     func configureSubviews() {
         addSubview(mainView)
@@ -153,5 +161,4 @@ class StudentHomeMiniCardView: UIView {
             cardDescriptionLabel.bottomAnchor.constraint(equalTo: cardDescriptionHelperView.bottomAnchor)
         ])
     }
-    
 }

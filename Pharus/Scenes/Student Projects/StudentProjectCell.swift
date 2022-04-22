@@ -132,7 +132,7 @@ class StudentProjectCell: UITableViewCell {
             circleColor: .white,
             completionProgressColor: UIColor.purple.pharusPurple,
             radius: 45,
-            completionPercentage: 50
+            progress: 50
         )
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectCell.descriptionTitleLabel"
@@ -254,7 +254,7 @@ class StudentProjectCell: UITableViewCell {
         projectScheduleView.project = project
         subscribeButton.isSubscribed = project.isSubscribed
         
-        completionBarCircleView.completionPercentage = project.completionPercentage*100
+        completionBarCircleView.progress = project.completionPercentage*100
         percentageCompletionLabel.text = "\(project.completedTasksCount)/\(project.tasks.count)"
         
         if project.isSubscribed {

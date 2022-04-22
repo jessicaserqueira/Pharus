@@ -8,16 +8,10 @@
 import UIKit
 
 class CheckmarkButton: UIButton {
-    
-    //MARK: - Properties
-    
-    var checkImage: UIImage
-    
+        
     //MARK: - Initializer
     
     override init(frame: CGRect) {
-        checkImage = UIImage.icons.checkmarkIcon ?? .defaultImage
-        
         super.init(frame: .zero)
         
         setupButton()
@@ -27,13 +21,17 @@ class CheckmarkButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Subviews
+    
     private func setupButton() {
         self.layer.borderWidth = 1
         self.backgroundColor = .white
         self.layer.borderColor = UIColor.black.cgColor
         self.layer.cornerRadius = 4
-        self.setImage(checkImage, for: .normal)
+        self.setImage(UIImage.icons.checkmarkIcon , for: .normal)
     }
+    
+    //MARK: - Constraints
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
