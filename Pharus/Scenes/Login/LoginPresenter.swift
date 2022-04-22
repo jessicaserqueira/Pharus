@@ -26,6 +26,7 @@ class LoginPresenter: LoginPresenterProtocol {
         self.coordinator = coordinator
     }
     
+    //MARK: - Actions
     
     func isValidEmail(email: String) -> Bool {
         let emailRegEx = K.RegEx.emailRegEx

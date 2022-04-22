@@ -23,7 +23,7 @@ class StudentProjectDetailView: UIView {
     
     //MARK: - Views
     
-    lazy var mainScrollView: UIScrollView = {
+    private lazy var mainScrollView: UIScrollView = {
         var scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.accessibilityIdentifier = "StudentProjectDetailView.mainScrollView"
@@ -31,7 +31,7 @@ class StudentProjectDetailView: UIView {
         return scrollView
     }()
     
-    lazy var mainView: UIView = {
+    private  lazy var mainView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.modal.yellowBackground
         view.layer.cornerRadius = 16
@@ -41,7 +41,7 @@ class StudentProjectDetailView: UIView {
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 24
@@ -51,7 +51,7 @@ class StudentProjectDetailView: UIView {
         return stackView
     }()
     
-    lazy var titleStackView: UIStackView = {
+    private lazy var titleStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 8
@@ -60,7 +60,7 @@ class StudentProjectDetailView: UIView {
         return stackView
     }()
     
-    lazy var mentorLabel: UILabel = {
+    private lazy var mentorLabel: UILabel = {
         let label = UILabel()
         label.font = .largeTitleBold
         label.textColor = .black
@@ -71,14 +71,14 @@ class StudentProjectDetailView: UIView {
         return label
     }()
     
-    lazy var mentorReviewHelperView: UIView = {
+    private lazy var mentorReviewHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.mentorReviewHelperView"
         return view
     }()
     
-    lazy var mentorReviewImageView: UIImageView = {
+    private lazy var mentorReviewImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.icons.envelopeIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -86,7 +86,7 @@ class StudentProjectDetailView: UIView {
         return imageView
     }()
     
-    lazy var descriptionStackView: UIStackView = {
+    private lazy var descriptionStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 16
@@ -96,7 +96,7 @@ class StudentProjectDetailView: UIView {
         return stackView
     }()
     
-    lazy var descriptionTitleLabel: UILabel = {
+    private lazy var descriptionTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Descrição:"
         label.font = .mediumTitleMedium
@@ -108,7 +108,7 @@ class StudentProjectDetailView: UIView {
         return label
     }()
     
-    lazy var descriptionTextLabel: UILabel = {
+    private lazy var descriptionTextLabel: UILabel = {
         let label = UILabel()
         label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum elit tellus, at condimentum mauris sagittis ut. Nam auctor nunc non ipsum blandit tempus. "
         label.numberOfLines = 0
@@ -120,14 +120,14 @@ class StudentProjectDetailView: UIView {
         return label
     }()
     
-    lazy var rulesHelperView: UIView = {
+    private lazy var rulesHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.rulesHelperView"
         return view
     }()
     
-    lazy var rulesStackView: UIStackView = {
+    private lazy var rulesStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.setOnClickListener {
             self.rulesViewTapped()
@@ -139,7 +139,7 @@ class StudentProjectDetailView: UIView {
         return stackView
     }()
     
-    lazy var rulesArrowImageView: UIImageView = {
+    private lazy var rulesArrowImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.icons.rightArrowIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -147,7 +147,7 @@ class StudentProjectDetailView: UIView {
         return imageView
     }()
     
-    lazy var rulesLabel: UILabel = {
+    private lazy var rulesLabel: UILabel = {
         let label = UILabel()
         label.text = "Atividades do projeto"
         label.textColor = UIColor.project.redText
@@ -157,7 +157,7 @@ class StudentProjectDetailView: UIView {
         return label
     }()
     
-    lazy var tasksStackView: UIStackView = {
+    private lazy var tasksStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 29
@@ -167,7 +167,7 @@ class StudentProjectDetailView: UIView {
         return stackView
     }()
     
-    lazy var tasksTitleHelperView: UIView = {
+    private lazy var tasksTitleHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.taskStackView"
@@ -175,7 +175,7 @@ class StudentProjectDetailView: UIView {
         return view
     }()
     
-    lazy var taskTitleLabel: UILabel = {
+    private lazy var taskTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Lista de Tarefas"
         label.font = .mediumTitleSemiBold
@@ -186,7 +186,7 @@ class StudentProjectDetailView: UIView {
         return label
     }()
     
-    lazy var taskHelperStackView: UIStackView = {
+    private lazy var taskHelperStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 30
@@ -196,7 +196,7 @@ class StudentProjectDetailView: UIView {
         return stackView
     }()
     
-    lazy var completedTasksProgressStackView: UIStackView = {
+    private lazy var completedTasksProgressStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 16
@@ -206,7 +206,7 @@ class StudentProjectDetailView: UIView {
         return stackView
     }()
     
-    lazy var completedTasksLabel: UILabel = {
+    private lazy var completedTasksLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -218,7 +218,7 @@ class StudentProjectDetailView: UIView {
         return label
     }()
     
-    lazy var completedTasksProgressView: UIProgressView = {
+    private lazy var completedTasksProgressView: UIProgressView = {
         let progressView = UIProgressView()
         progressView.layer.cornerRadius = 8
         progressView.progress = 0.75
@@ -230,7 +230,7 @@ class StudentProjectDetailView: UIView {
         return progressView
     }()
     
-    lazy var uploadFilesHelperView: UIView = {
+    private lazy var uploadFilesHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.uploadFilesHelperView"
@@ -238,7 +238,7 @@ class StudentProjectDetailView: UIView {
         return view
     }()
     
-    lazy var uploadFilesButton: MainCardButton = {
+    private lazy var uploadFilesButton: MainCardButton = {
         let button = MainCardButton(title: "Enviar Arquivos", buttonState: .normal)
         button.addAction(UIAction { _ in
             self.sendFilesButtonTapped()
@@ -255,6 +255,7 @@ class StudentProjectDetailView: UIView {
         self.init()
         
         self.project = project
+        
         configureSubviews()
         customizeSubviews(with: project)
         setupConstraints()
@@ -274,7 +275,7 @@ class StudentProjectDetailView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Functions
+    //MARK: - Subviews
     
     func configureSubviews() {
         addSubview(mainScrollView)
@@ -325,14 +326,14 @@ class StudentProjectDetailView: UIView {
         setupProjectTasks(of: project)
         
         if !project.isSubscribed {
-            configureUnsubscribedProject(project)
+            configureUnsubscribedProject(with: project)
         }
         
         if project.scoreDescription != nil {
+            mentorReviewImageView.image = UIImage.icons.notificationEnvelopeIcon
             mentorReviewHelperView.setOnClickListener {
                 self.envelopeIconTapped()
             }
-            mentorReviewImageView.image = UIImage.icons.notificationEnvelopeIcon
         }
     }
     
@@ -359,7 +360,7 @@ class StudentProjectDetailView: UIView {
         completedTasksProgressView.progress = project.completionPercentage
     }
     
-    private func configureUnsubscribedProject(_ project: ProjectModel) {
+    private func configureUnsubscribedProject(with project: ProjectModel) {
         mentorReviewImageView.image = mentorReviewImageView.image?.withTintColor(UIColor.project.grayDisabledText)
         rulesLabel.textColor = UIColor.project.grayDisabledText
         completedTasksLabel.textColor = UIColor.project.grayDisabledText
@@ -372,14 +373,14 @@ class StudentProjectDetailView: UIView {
         }
     }
     
-    func updateProjectProgressView() {
+    private func updateProjectProgressView() {
         completedTasksLabel.text = "Completadas \(project.completedTasksCount) de \(project.tasks.count) tarefas (\(project.completionPercentage*100)%)"
         completedTasksProgressView.progress = project.completionPercentage
     }
     
     //MARK: - Constraints
     
-    func setupConstraints() {
+    private func setupConstraints() {
         
         //Scroll View
         self.stretch(mainScrollView)
@@ -403,7 +404,6 @@ class StudentProjectDetailView: UIView {
         ])
         
         //Mentor Review Image View
-        //center(in: mentorReviewHelperView)
         NSLayoutConstraint.activate([
             mentorReviewImageView.widthAnchor.constraint(equalToConstant: 36),
             mentorReviewImageView.heightAnchor.constraint(equalToConstant: 36)

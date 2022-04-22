@@ -11,7 +11,7 @@ class StudentProfileButton: UIButton {
     
     //MARK: - Properties
     
-   private var userImage: UIImage
+    private var userImage: UIImage
     
     //MARK: - Initializer
     
@@ -34,10 +34,12 @@ class StudentProfileButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureSubviews() {
-            self.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-            self.layer.cornerRadius = 0.5 * self.bounds.size.width
-            self.clipsToBounds = true
-            self.setImage(userImage, for: .normal)
+    //MARK: - Subviews
+    
+    private func configureSubviews() {
+        self.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
+        self.layer.cornerRadius = 0.5 * self.bounds.size.width
+        self.clipsToBounds = true
+        self.setImage(userImage, for: .normal)
     }
 }

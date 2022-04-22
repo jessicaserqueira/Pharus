@@ -11,7 +11,7 @@ struct Task: Codable {
     let title: String
     let isComplete: Bool
     let taskDescription: String
-
+    
     enum CodingKeys: String, CodingKey {
         case title, isComplete
         case taskDescription = "description"

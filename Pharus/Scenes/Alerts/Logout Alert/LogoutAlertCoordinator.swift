@@ -18,7 +18,7 @@ class LogoutAlertCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var alertView: LogoutAlertView
+    private var alertView: LogoutAlertView
     
     //MARK: - Initializer
     
@@ -43,7 +43,7 @@ class LogoutAlertCoordinator: Coordinator {
     }
 }
 
-//MARK: - Logout Alert Flow
+//MARK: - Actions
 
 extension LogoutAlertCoordinator: LogoutAlertFlow {
     func closeModal() {

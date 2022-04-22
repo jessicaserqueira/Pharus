@@ -17,7 +17,7 @@ class StudentProjectRankingCell: UITableViewCell {
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 32
@@ -27,7 +27,7 @@ class StudentProjectRankingCell: UITableViewCell {
         return stackView
     }()
     
-    lazy var projectTitleLabel: UILabel = {
+    private lazy var projectTitleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = .white
@@ -38,14 +38,14 @@ class StudentProjectRankingCell: UITableViewCell {
         return label
     }()
     
-    lazy var congratulationsHelperView: UIView = {
+    private lazy var congratulationsHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectRankingCell.congratulationsHelperView"
         return view
     }()
     
-    lazy var congratulationsLabel: UILabel = {
+    private lazy var congratulationsLabel: UILabel = {
         let label = UILabel()
         label.text = "Parabéns! Você alcançou o"
         label.numberOfLines = 2
@@ -57,7 +57,7 @@ class StudentProjectRankingCell: UITableViewCell {
         return label
     }()
     
-    lazy var placementStackView: UIStackView = {
+    private lazy var placementStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -66,14 +66,14 @@ class StudentProjectRankingCell: UITableViewCell {
         return stackView
     }()
     
-    lazy var placementHelperView: UIView = {
+    private lazy var placementHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectCell.placementHelperView"
         return view
     }()
     
-    lazy var placementImageView: UIImageView = {
+    private lazy var placementImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.images.thirdPlaceImage
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -81,7 +81,7 @@ class StudentProjectRankingCell: UITableViewCell {
         return imageView
     }()
     
-    lazy var medalImageView: UIImageView = {
+    private lazy var medalImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.images.thirdPlaceMedalImage
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -90,14 +90,14 @@ class StudentProjectRankingCell: UITableViewCell {
         return imageView
     }()
     
-    lazy var medalHelperView: UIView = {
+    private lazy var medalHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectCell.medalHelperView"
         return view
     }()
     
-    lazy var mentorCommentsStackView: UIStackView = {
+    private lazy var mentorCommentsStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -106,14 +106,14 @@ class StudentProjectRankingCell: UITableViewCell {
         return stackView
     }()
     
-    lazy var mentorCommentsTitleHelperView: UIView = {
+    private lazy var mentorCommentsTitleHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectRankingCell.mentorCommentsTitleHelperView"
         return view
     }()
     
-    lazy var mentorCommentsTitleLabel: UILabel = {
+    private lazy var mentorCommentsTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Comentários do Mentor"
         label.font = .mediumBodyBold
@@ -124,7 +124,7 @@ class StudentProjectRankingCell: UITableViewCell {
         return label
     }()
     
-    lazy var mentorCommentsDescriptionLabel: UILabel = {
+    private lazy var mentorCommentsDescriptionLabel: UILabel = {
         let label = UILabel()
         label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum elit tellus, at condimentum mauris sagittis ut. Nam auctor nunc non ipsum blandit tempus."
         label.font = .smallBody
@@ -135,7 +135,7 @@ class StudentProjectRankingCell: UITableViewCell {
         return label
     }()
     
-    lazy var mentorCommentsDescriptionHelperView: UIView = {
+    private lazy var mentorCommentsDescriptionHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectRankingCell.mentorCommentsDescriptionHelperView"
@@ -152,6 +152,8 @@ class StudentProjectRankingCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Subviews
     
     func configureCell(using project: ProjectModel) {
         self.projectTitleLabel.text = project.name
@@ -248,7 +250,11 @@ class StudentProjectRankingCell: UITableViewCell {
             mentorCommentsTitleLabel.font = UIFont.mediumBody
         }
     }
+    
+    //MARK: - Constraints
+    
     private func setupConstraints() {
+        
         //Main View
         self.stretch(mainView, top: 16, left: 16, bottom: -16, right: -16)
         

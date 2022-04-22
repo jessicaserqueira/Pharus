@@ -10,6 +10,8 @@ extension UIImage {
     
     static let defaultImage = UIImage()
     
+    //MARK: - Icons
+    
     struct icons {
         static let bookIcon = UIImage(named: K.Assets.Icons.bookIcon)
         static let clockIcon = UIImage(named: K.Assets.Icons.clockIcon)
@@ -42,12 +44,11 @@ extension UIImage {
         static let rankingTabBarIconSelected = UIImage(named: K.Assets.Icons.rankingTabBarIconSelected)
     }
     
+    //MARK: - Images
+    
     struct images {
-        static let companyLogoImage = UIImage(named: K.Assets.Images.companyLogoImage)
-        static let appLogoImage = UIImage(named: K.Assets.Images.appLogoImage)
         
         struct avatars {
-            
             static let avatarsDict: [UIImage : UIImage] = [
                 (UIImage.images.avatars.circleImage.avatar1 ?? .defaultImage) : UIImage.images.avatars.fullImage.avatar1 ?? .defaultImage
             ]
@@ -156,5 +157,8 @@ extension UIImage {
         static let thirdPlaceMedalImage = UIImage(named: K.Assets.Images.thirdPlaceMedalImage)
         static let fourthPlaceMedalImage = UIImage(named: K.Assets.Images.fourthPlaceMedalImage)
         static let fifthPlaceMedalImage = UIImage(named: K.Assets.Images.fifthPlaceMedalImage)
+        
+        static let companyLogoImage = UIImage(named: K.Assets.Images.companyLogoImage)
+        static let appLogoImage = UIImage(named: K.Assets.Images.appLogoImage)
     }
 }

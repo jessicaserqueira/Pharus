@@ -22,7 +22,7 @@ class HomeNewsView: UIView {
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 10
@@ -31,14 +31,14 @@ class HomeNewsView: UIView {
         return stackView
     }()
     
-    lazy var titleHelperView: UIView = {
+    private lazy var titleHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "HomeNewsView.titleHelperView"
         return view
     }()
     
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Fique por dentro!"
         label.font = .largeTitleBold
@@ -48,14 +48,14 @@ class HomeNewsView: UIView {
         return label
     }()
     
-    lazy var descriptionHelperView: UIView = {
+    private lazy var descriptionHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "HomeNewsView.descriptionHelperView"
         return view
     }()
     
-    lazy var descriptionLabel: UILabel = {
+    private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.text = "A empresa XPTO, em parceria com a escola, lançou o projeto Voluntários Digitais. Dá uma olhadinha lá, quem sabe você se identifica com a proposta!"
         label.numberOfLines = 0
@@ -89,6 +89,8 @@ class HomeNewsView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Subviews
     
     func configureSubviews() {
         addSubview(mainView)
@@ -127,7 +129,7 @@ class HomeNewsView: UIView {
         
         //Title Label
         titleLabel.center(in: titleHelperView)
-                
+        
         //Description Label
         self.stretch(descriptionLabel, to: descriptionHelperView)
     }

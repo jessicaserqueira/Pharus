@@ -18,8 +18,8 @@ class SmallAlertButton: UIButton {
         case primary
         case secondary
     }
-        
-    //MARK: - Initilizer
+    
+    //MARK: - Initializer
     
     convenience init(
         title: String,
@@ -48,7 +48,9 @@ class SmallAlertButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureSubviews() {
+    //MARK: - Subviews
+    
+    private func configureSubviews() {
         setTitle(title, for: .normal)
         layer.borderWidth = 2
         layer.borderColor = UIColor.purple.pharusPurple.cgColor
@@ -62,14 +64,13 @@ class SmallAlertButton: UIButton {
             setTitleColor(UIColor.purple.pharusPurple, for: .normal)
         }
     }
-        
+    
     //MARK: - Constraints
     
-    func setupConstraints() {
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             self.heightAnchor.constraint(equalToConstant: 32)
         ])
     }
-    
 }
 

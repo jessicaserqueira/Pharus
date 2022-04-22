@@ -14,11 +14,18 @@ protocol ChangePasswordFlow {
 
 class ChangePasswordCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     private var student: StudentModel
     
-    init(navigationController: UINavigationController,_ student: StudentModel) {
+    //MARK: - Initializer
+    
+    init(
+        navigationController: UINavigationController,
+        student: StudentModel
+    ) {
         self.navigationController = navigationController
         self.student = student
     }
@@ -35,6 +42,8 @@ class ChangePasswordCoordinator: Coordinator {
         
     }
 }
+
+//MARK: - Actions
 
 extension ChangePasswordCoordinator: ChangePasswordFlow {
     func showChangePassword(){

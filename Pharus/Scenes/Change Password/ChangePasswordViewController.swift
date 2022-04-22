@@ -9,9 +9,13 @@ import UIKit
 
 class ChangePasswordViewController: UIViewController {
     
+    //MARK: - Properties
+    
     private var customView = ChangePasswordView()
     private var coordinator: ChangePasswordFlow
     private var presenter: ChangePasswordPresenter
+    
+    //MARK: - Initializer
     
     init(
         coordinator: ChangePasswordFlow,
@@ -27,6 +31,8 @@ class ChangePasswordViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Life Cycle
+    
     override func loadView() {
         super.loadView()
         
@@ -41,22 +47,9 @@ class ChangePasswordViewController: UIViewController {
         setNavigationBar()
     }
     
-    func initializeHideKeyboard() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(
-                dismissMyKeyboard
-            )
-        )
-        
-        view.addGestureRecognizer(tap)
-    }
-
-    @objc func dismissMyKeyboard() {
-        view.endEditing(true)
-    }
+    //MARK: - Actions
     
-    func setNavigationBar() {
+    private func setNavigationBar() {
         self.navigationController?.title = ""
         
         let logoutIcon = UIImage.icons.xmarkIcon?.withRenderingMode(.alwaysOriginal)
@@ -67,16 +60,31 @@ class ChangePasswordViewController: UIViewController {
             action: #selector(logoutTapped)
         )
     }
+    
+    private func initializeHideKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(
+                dismissMyKeyboard
+            )
+        )
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func dismissMyKeyboard() {
+        view.endEditing(true)
+    }
 }
 
+//MARK: - Change Password Delegate
 extension ChangePasswordViewController: ChangePasswordDelegate {
-  func changePasswordButtonPressed() {
-      
+    func changePasswordButtonPressed() {
         presenter.changePasswordUser()
     }
+    
     @objc func logoutTapped() {
         presenter.logoutChangePassword()
-        
     }
 }
 

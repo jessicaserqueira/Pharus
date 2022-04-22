@@ -15,11 +15,18 @@ protocol StudentProjectDetailFlow {
 
 class StudentProjectDetailCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var project: ProjectModel
+    private var project: ProjectModel
     
-    init(navigationController: UINavigationController, project: ProjectModel) {
+    //MARK: - Initializer
+    
+    init(
+        navigationController: UINavigationController,
+        project: ProjectModel
+    ) {
         self.navigationController = navigationController
         self.project = project
     }
@@ -32,15 +39,15 @@ class StudentProjectDetailCoordinator: Coordinator {
             presenter: studentProjectDetailPresenter,
             project: project
         )
-                
+        
         navigationController.pushViewController(studentProjectDetailViewController, animated: true)
     }
 }
 
-extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
+//MARK: - Actions
 
+extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
     func showProjectRules() {
-        
         let projectSheetView = ProjectSheetView(
             viewTitle: "Atividades",
             descriptionTitle: "Tarefa 01",
@@ -77,7 +84,7 @@ extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
             navigationController: navigationController,
             project: project
         )
-
+        
         coordinate(to: sendFileCoordinator)
     }
 }

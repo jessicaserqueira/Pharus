@@ -12,11 +12,18 @@ protocol StudentProjectsPresenterProtocol {
 }
 
 class StudentProjectsPresenter: StudentProjectsPresenterProtocol {
+    
+    //MARK: - Properties
+    
     private var coordinator: StudentProjectsCoordinator
+    
+    //MARK: - Initializer
     
     init(coordinator: StudentProjectsCoordinator) {
         self.coordinator = coordinator
     }
+    
+    //MARK: - Actions
     
     func showStudentProject(project: ProjectModel) {
         coordinator.showStudentProject(project)
