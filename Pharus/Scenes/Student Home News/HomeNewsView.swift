@@ -19,6 +19,7 @@ class HomeNewsView: UIView {
         view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "HomeNewsView.view"
+        
         return view
     }()
     
@@ -28,6 +29,7 @@ class HomeNewsView: UIView {
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "HomeNewsView.mainStackView"
+        
         return stackView
     }()
     
@@ -35,6 +37,7 @@ class HomeNewsView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "HomeNewsView.titleHelperView"
+        
         return view
     }()
     
@@ -45,6 +48,7 @@ class HomeNewsView: UIView {
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "HomeNewsView.titleLabel"
+        
         return label
     }()
     
@@ -52,6 +56,7 @@ class HomeNewsView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "HomeNewsView.descriptionHelperView"
+        
         return view
     }()
     
@@ -64,6 +69,7 @@ class HomeNewsView: UIView {
         label.textAlignment = .justified
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "HomeNewsView.descriptionLabel"
+        
         return label
     }()
     

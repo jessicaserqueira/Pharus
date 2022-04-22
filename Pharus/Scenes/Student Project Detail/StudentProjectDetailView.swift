@@ -57,6 +57,7 @@ class StudentProjectDetailView: UIView {
         stackView.spacing = 8
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProjectDetailView.titleStackView"
+        
         return stackView
     }()
     
@@ -75,6 +76,7 @@ class StudentProjectDetailView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.mentorReviewHelperView"
+        
         return view
     }()
     
@@ -83,6 +85,7 @@ class StudentProjectDetailView: UIView {
         imageView.image = UIImage.icons.envelopeIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentProjectDetailView.mentorReviewImageView"
+        
         return imageView
     }()
     
@@ -124,6 +127,7 @@ class StudentProjectDetailView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.rulesHelperView"
+        
         return view
     }()
     
@@ -136,6 +140,7 @@ class StudentProjectDetailView: UIView {
         stackView.spacing = 8
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProjectDetailView.rulesStackView"
+        
         return stackView
     }()
     
@@ -144,6 +149,7 @@ class StudentProjectDetailView: UIView {
         imageView.image = UIImage.icons.rightArrowIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentProjectDetailView.rulesBoookImageView"
+        
         return imageView
     }()
     
@@ -154,6 +160,7 @@ class StudentProjectDetailView: UIView {
         label.font = .largeTitleMedium
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionLabel"
+       
         return label
     }()
     

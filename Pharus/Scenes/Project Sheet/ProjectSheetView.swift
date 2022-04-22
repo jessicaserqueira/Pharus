@@ -30,6 +30,7 @@ class ProjectSheetView: UIView {
         scrollView.layer.cornerRadius = 16
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.accessibilityIdentifier = "ProjectSheetView.scrollView"
+        
         return scrollView
     }()
     
@@ -47,6 +48,7 @@ class ProjectSheetView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "ProjectSheetView.titleHelperView"
+        
         return view
     }()
     
@@ -56,6 +58,7 @@ class ProjectSheetView: UIView {
         stackView.spacing = 8
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ProjectSheetView.titleStackView"
+        
         return stackView
     }()
     
@@ -64,6 +67,7 @@ class ProjectSheetView: UIView {
         imageView.image = icon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "ProjectSheetView.titleIconImageView"
+        
         return imageView
     }()
     
@@ -74,6 +78,7 @@ class ProjectSheetView: UIView {
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSheetView.titleLabel"
+        
         return label
     }()
     
@@ -83,6 +88,7 @@ class ProjectSheetView: UIView {
         stackView.spacing = 16
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ProjectSheetView.descriptionStackView"
+        
         return stackView
     }()
     
@@ -94,6 +100,7 @@ class ProjectSheetView: UIView {
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSheetView.descriptionTitleLabel"
+       
         return label
     }()
     
