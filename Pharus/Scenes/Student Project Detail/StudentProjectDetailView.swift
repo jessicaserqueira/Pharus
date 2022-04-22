@@ -349,14 +349,17 @@ class StudentProjectDetailView: UIView {
                 checkImage: checkboxIcon,
                 color: project.isSubscribed ? .black : UIColor.project.grayDisabledText
             )
-            taskView.taskCheckmarkButton.addAction(
-                UIAction { _ in
-                    self.taskCheckboxTapped(task: task)
-                    let newIcon = task.isComplete ? UIImage.icons.checkmarkIcon : .defaultImage
-                    taskView.taskCheckmarkButton.setImage(newIcon, for: .normal)
-                    self.updateProjectProgressView()
-                }, for: .touchUpInside
-            )
+            
+            if project.isComplete == false {
+                taskView.taskCheckmarkButton.addAction(
+                    UIAction { _ in
+                        self.taskCheckboxTapped(task: task)
+                        let newIcon = task.isComplete ? UIImage.icons.checkmarkIcon : .defaultImage
+                        taskView.taskCheckmarkButton.setImage(newIcon, for: .normal)
+                        self.updateProjectProgressView()
+                    }, for: .touchUpInside
+                )
+            }
             taskHelperStackView.addArrangedSubview(taskView)
         }
         
@@ -378,7 +381,7 @@ class StudentProjectDetailView: UIView {
     
     private func updateProjectProgressView() {
         let roundedPercentage: Float = project.completionPercentage*100
-
+        
         completedTasksLabel.text = "Completadas \(project.completedTasksCount) de \(project.tasks.count) tarefas (\(roundedPercentage.withDecimalPoints(2))%)"
         completedTasksProgressView.progress = project.completionPercentage
     }
