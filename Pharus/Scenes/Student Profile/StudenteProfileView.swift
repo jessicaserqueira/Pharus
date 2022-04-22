@@ -120,10 +120,12 @@ class StudentProfileView: UIView {
             
             let infoKeyLabel = UILabel()
             infoKeyLabel.text = info.key
+            infoKeyLabel.textColor = .white
             infoKeyLabel.font = .mediumTitleBold
             
             let infoValueLabel = UILabel()
             infoValueLabel.text = info.value
+            infoValueLabel.textColor = .white
             infoValueLabel.font = .smallBody
             
             stackView.addArrangedSubview(infoKeyLabel)

@@ -79,6 +79,7 @@ class ConfirmationAlertView: UIView {
         let label = UILabel()
         label.textAlignment = .center
         label.font = .mediumTitleBold
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ConfirmationAlertView.alertMessageLabel"
         

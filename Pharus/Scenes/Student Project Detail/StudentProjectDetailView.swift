@@ -63,6 +63,7 @@ class StudentProjectDetailView: UIView {
     lazy var mentorLabel: UILabel = {
         let label = UILabel()
         label.font = .largeTitleBold
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.mentorLabel"
         
@@ -98,6 +99,7 @@ class StudentProjectDetailView: UIView {
         let label = UILabel()
         label.text = "Descrição:"
         label.font = .mediumTitleMedium
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionTitleLabel"
         
@@ -109,6 +111,7 @@ class StudentProjectDetailView: UIView {
         label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum elit tellus, at condimentum mauris sagittis ut. Nam auctor nunc non ipsum blandit tempus. "
         label.numberOfLines = 0
         label.font = .smallBody
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionTextLabel"
         
@@ -174,6 +177,7 @@ class StudentProjectDetailView: UIView {
         let label = UILabel()
         label.text = "Lista de Tarefas"
         label.font = .mediumTitleSemiBold
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.taskTitleLabel"
         
@@ -205,6 +209,7 @@ class StudentProjectDetailView: UIView {
         label.textAlignment = .center
         label.numberOfLines = 0
         label.font = .smallTitleMedium
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.completedTasksLabel"
         

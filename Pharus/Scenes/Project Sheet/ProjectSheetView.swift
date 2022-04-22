@@ -71,6 +71,7 @@ class ProjectSheetView: UIView {
         let label = UILabel()
         label.text = title
         label.font = .largeTitleBold
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSheetView.titleLabel"
         return label
@@ -90,6 +91,7 @@ class ProjectSheetView: UIView {
         label.text = descriptionTitle
         label.font = .mediumTitleBold
         label.numberOfLines = 0
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSheetView.descriptionTitleLabel"
         return label
@@ -99,6 +101,7 @@ class ProjectSheetView: UIView {
         let label = UILabel()
         label.text = descriptionText
         label.numberOfLines = 0
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSheetView.descriptionTextLabel"
         

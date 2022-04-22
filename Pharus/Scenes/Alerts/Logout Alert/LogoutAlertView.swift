@@ -70,6 +70,7 @@ class LogoutAlertView: UIView {
         label.text = "Deseja sair da sua conta?"
         label.textAlignment = .center
         label.font = UIFont.mediumTitleBold
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LogoutAlertViewDelegate.titleLabel"
         

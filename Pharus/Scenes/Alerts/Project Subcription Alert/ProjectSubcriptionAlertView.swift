@@ -66,6 +66,7 @@ class ProjectSubcriptionAlertView: UIView {
         let label = UILabel()
         label.font = UIFont.largeTitleSemiBold
         label.text = "Confirmar Inscrição"
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSubcriptionAlertView.titleLabel"
         
@@ -89,6 +90,7 @@ class ProjectSubcriptionAlertView: UIView {
         label.font = .mediumBody
         label.text = "Você deseja se inscrever no projeto \"Algoritmo no seu dia?\""
         label.numberOfLines = 2
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSubcriptionAlertView.descriptionLabel"
         
