@@ -61,16 +61,17 @@ class StudentProjectDetailViewController: UIViewController {
         self.title = project.name
         
         var backButtonImage = UIImage(named: K.Assets.Icons.backArrowIcon)
-        backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
-                                                                 green: 0.153,
-                                                                 blue: 0.153,
-                                                                 alpha: 1),
-                                                         renderingMode: .alwaysOriginal)
+        backButtonImage = backButtonImage?.withTintColor(
+            .white,
+            renderingMode: .alwaysOriginal
+        )
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
-                                                                style: .plain,
-                                                                target: self,
-                                                                action: #selector(backButtonPressed))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: backButtonImage,
+            style: .plain,
+            target: self,
+            action: #selector(backButtonPressed)
+        )
         
     }
     
