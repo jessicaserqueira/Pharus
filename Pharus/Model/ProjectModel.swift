@@ -8,6 +8,9 @@
 import Foundation
 
 class ProjectModel: Codable {
+    
+    //MARK: - Properties
+    
     var id: String
     let name: String
     var isSubscribed: Bool
@@ -31,6 +34,8 @@ class ProjectModel: Codable {
         case projectDescription = "description"
         case scoreDescription, startDate, endDate, school, rules, mentor, hasCompanyPartnership, company, companyPhoto, tasks
     }
+    
+    //MARK: - Initializer
     
     init(
         id: String,

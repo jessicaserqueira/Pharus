@@ -6,8 +6,10 @@
 //
 import Foundation
 
-// MARK: - Student
 class StudentModel: Codable {
+    
+    //MARK: - Properties
+    
     var id: String
     let firstName: String
     let lastName: String
@@ -21,6 +23,8 @@ class StudentModel: Codable {
     var email: String
     var username: String
     var projects: [ProjectModel]
+    
+    //MARK: - Initializer
     
     init(
         id: String,
