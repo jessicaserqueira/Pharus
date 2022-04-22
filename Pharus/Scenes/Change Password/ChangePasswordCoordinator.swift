@@ -38,11 +38,11 @@ class ChangePasswordCoordinator: Coordinator {
 
 extension ChangePasswordCoordinator: ChangePasswordFlow {
     func showChangePassword(){
-        let alertView = OneButtonAlertView(
+        let alertView = ConfirmationAlertView(
             message: "Senha salva com sucesso",
             image: UIImage.icons.checkIcon ?? .defaultImage
         )
-        let alertCoordinator = OneButtonAlertCoordinator(
+        let alertCoordinator = ConfirmationAlertCoordinator(
             navigationController: navigationController,
             alertView: alertView
           

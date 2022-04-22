@@ -9,7 +9,6 @@ import UIKit
 
 protocol ChangePasswordDelegate: AnyObject{
     func changePasswordButtonPressed()
-
 }
 
 class ChangePasswordView: UIView {
@@ -258,12 +257,10 @@ class ChangePasswordView: UIView {
                 
         //Main Stack View
         NSLayoutConstraint.activate([
-//            mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 48),
             mainStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 32),
             mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -32),
             mainStackView.topAnchor.constraint(equalTo: mainScrollView.topAnchor, constant: 32),
             mainStackView.bottomAnchor.constraint(equalTo: mainScrollView.bottomAnchor, constant: -32)
-         
         ])
     }
 }
