@@ -24,6 +24,7 @@ class ChangePasswordView: UIView {
         scrollView.clipsToBounds = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.accessibilityIdentifier = "StudentProfileView.mainScrollView"
+        
         return scrollView
     }()
     
