@@ -15,14 +15,12 @@ struct Project: Codable {
     let scoreDescription: String?
     let startDate, endDate, school: String
     let mentor: String
-    let hasCompanyPartnership: Bool
-    let company: String?
-    let companyPhoto: String?
+    let company: String
     let tasks: [Task]
     
     enum CodingKeys: String, CodingKey {
         case id, name, isSubscribed, isComplete, score, placement
         case projectDescription = "description"
-        case scoreDescription, startDate, endDate, school, mentor, hasCompanyPartnership, company, companyPhoto, tasks
+        case scoreDescription, startDate, endDate, school, mentor, company, tasks
     }
 }

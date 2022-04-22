@@ -82,9 +82,7 @@ class LoginPresenter: LoginPresenterProtocol {
                 endDate: project.endDate,
                 school: project.school,
                 mentor: project.mentor,
-                hasCompanyPartnership: project.hasCompanyPartnership,
                 company: project.company,
-                companyPhoto: project.companyPhoto,
                 tasks: taskModelArray
             )
             projectModelArray.append(projectModel)

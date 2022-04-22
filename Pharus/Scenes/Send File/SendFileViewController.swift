@@ -79,9 +79,3 @@ extension SendFileViewController: SendFileDelegate {
         presenter.sendFile()
     }
 }
-
-//extension SendFileViewController: ConfirmationAlertViewDelegate {
-//    func closeButtonTapped() {
-//        self.dismiss(animated: true)
-//    }
-//}

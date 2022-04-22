@@ -28,7 +28,6 @@
             "mentor": "Ricardo Almeida",
             "hasCompanyPartnership": true,
             "company": "Dupé",
-            "companyPhoto": "Dupé",
             "tasks": [
                 {
                     "title": "Moda do Momenton",
@@ -65,9 +64,7 @@
             "endDate": "28/08/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Mariana",
-            "hasCompanyPartnership": true,
             "company": "Alpargatas",
-            "companyPhoto": "Alpargatas",
             "tasks": [
                 {
                     "title": "Tarefa 01",
@@ -109,9 +106,7 @@
             "endDate": "28/10/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Sávio Costa",
-            "hasCompanyPartnership": false,
             "company": "ioasys",
-            "companyPhoto": "ioasys",
             "tasks": [
                 {
                     "title": "Aprendendo a empreender",
@@ -148,9 +143,7 @@
             "endDate": "30/11/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Oskar Metsavaht",
-            "hasCompanyPartnership": true,
             "company": "Osklen",
-            "companyPhoto":"Osklen",
             "tasks": [
                 {
                     "title": "Sustentabilidade na prática!",
@@ -181,9 +174,7 @@
             "endDate": "16/12/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Rafael Felício",
-            "hasCompanyPartnership": true,
             "company": "Havaianas",
-            "companyPhoto":"Havaianas",
             "tasks": [
                 {
                     "title": "Desapegando!",
@@ -214,9 +205,7 @@
             "endDate": "16/12/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Sávio Costa",
-            "hasCompanyPartnership": true,
             "company": "ioasys",
-            "companyPhoto":"ioasys",
             "tasks": [
                 {
                     "title": "Tarefa 01",
@@ -253,9 +242,7 @@
             "endDate": "05/07/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Alberto",
-            "hasCompanyPartnership": true,
             "company": "ioasys",
-            "companyPhoto":"ioasys",
             "tasks": [
                 {
                     "title": "Tarefa 01",
@@ -292,9 +279,7 @@
             "endDate": "30/06/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Jess",
-            "hasCompanyPartnership": true,
             "company": "havaianas",
-            "companyPhoto":"havaianas",
             "tasks": [
                 {
                     "title": "Tarefa 01",
