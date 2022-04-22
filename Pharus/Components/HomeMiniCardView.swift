@@ -8,10 +8,21 @@ import UIKit
 
 class StudentHomeMiniCardView: UIView {
     
+    //MARK: - Properties
+    private var cardType: HomeCardType
+    private var message: String
+    
+    enum HomeCardType {
+        case warning
+        case newProject
+        case newMedal
+    }
+    
     //MARK: - Views
     
     lazy var mainView: UIView = {
         let view = UIView()
+        view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeMiniCardView.mainView"
         return view
@@ -58,7 +69,26 @@ class StudentHomeMiniCardView: UIView {
         return label
     }()
     
+    //MARK: - Initializer
+    
+    convenience init(
+        cardType: HomeCardType,
+        message: String
+    ) {
+        self.init()
+        
+        self.cardType = cardType
+        self.message = message
+        
+        
+        customizeSubviews()
+    }
+    
     override init(frame: CGRect) {
+        
+        self.cardType = .newProject
+        self.message = "O projeto ”Introdução a Robótica” te deu uma medalha!"
+        
         super.init(frame: .zero)
         
         configureSubviews()
@@ -81,6 +111,21 @@ class StudentHomeMiniCardView: UIView {
         mainStackView.addArrangedSubview(cardDescriptionHelperView)
         
         cardDescriptionHelperView.addSubview(cardDescriptionLabel)
+    }
+    
+    func customizeSubviews() {
+        if cardType == .newProject {
+            mainView.backgroundColor = UIColor.card.orangeHomeStandardCardBackground
+            cardIconImageView.image = UIImage.icons.companyIcon
+        } else if cardType == .warning {
+            mainView.backgroundColor = UIColor.card.yellowHomeAlertCardBackground
+            cardIconImageView.image = UIImage.icons.warningIcon
+        } else {
+            mainView.backgroundColor = UIColor.card.orangeHomeStandardCardBackground
+            cardIconImageView.image = UIImage.icons.medalIcon
+        }
+        
+        cardDescriptionLabel.text = message
     }
     
     //MARK: - Constraints

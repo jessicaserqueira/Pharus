@@ -48,14 +48,14 @@ extension StudentProjectsCoordinator: StudentProjectsFlow {
     }
     
     func showSubscribeAlert(of project: ProjectModel) {
-        let alertView = TwoBigButtonsAlertView(
+        let alertView = ProjectSubcriptionAlertView(
             title: "Confirmar Inscrição",
             message: "Você deseja se inscrever no projeto \"\(project.name)\"?",
             mainButtonText: "Sim, quero me inscrever",
             secondaryButtonText: "Não quero, mudei de idéia"
         )
         
-        let twoBigButtonsAlertCoordinator = TwoBigButtonsAlertCoordinator(
+        let twoBigButtonsAlertCoordinator = ProjectSubcriptionAlertCoordinator(
             navigationController: navigationController,
             alertView: alertView,
             project: project

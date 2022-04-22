@@ -1,5 +1,5 @@
 //
-//  TwoBigButtonsAlertViewController.swift
+//  ProjectSubcriptionAlertViewController.swift
 //  Pharus
 //
 //  Created by Victor Colen on 20/04/22.
@@ -7,16 +7,16 @@
 
 import UIKit
 
-class TwoBigButtonsAlertViewController: UIViewController {
+class ProjectSubcriptionAlertViewController: UIViewController {
     
-    private var alertView: TwoBigButtonsAlertView
-    private var coordinator: TwoBigButtonsAlertCoordinator
-    private var presenter: TwoBigButtonsAlertPresenter
+    private var alertView: ProjectSubcriptionAlertView
+    private var coordinator: ProjectSubcriptionAlertCoordinator
+    private var presenter: ProjectSubcriptionAlertPresenter
     
     init(
-        alertView: TwoBigButtonsAlertView,
-        coordinator: TwoBigButtonsAlertCoordinator,
-        presenter: TwoBigButtonsAlertPresenter
+        alertView: ProjectSubcriptionAlertView,
+        coordinator: ProjectSubcriptionAlertCoordinator,
+        presenter: ProjectSubcriptionAlertPresenter
     ) {
 
         self.alertView = alertView
@@ -38,7 +38,7 @@ class TwoBigButtonsAlertViewController: UIViewController {
     }
 }
 
-extension TwoBigButtonsAlertViewController: TwoBigButtonsAlertViewDelegate {
+extension ProjectSubcriptionAlertViewController: ProjectSubcriptionAlertViewDelegate {
     func closeButtonTapped() {
         presenter.closeModal()
     }

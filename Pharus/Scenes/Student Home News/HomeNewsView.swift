@@ -8,11 +8,15 @@ import UIKit
 
 class HomeNewsView: UIView {
     
+    //MARK: - Properties
+    private var news: String
+    
     //MARK: - Views
     
     lazy var mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.card.orangeHomeStandardCardBackground
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "HomeNewsView.view"
         return view
@@ -36,7 +40,7 @@ class HomeNewsView: UIView {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Últimas notícias"
+        label.text = "Fique por dentro!"
         label.font = .largeTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "HomeNewsView.titleLabel"
@@ -60,7 +64,19 @@ class HomeNewsView: UIView {
         return label
     }()
     
+    //MARK: - Initializer
+    
+    convenience init(news: String) {
+        self.init()
+        
+        self.news = news
+        
+        customizeSubviews()
+    }
+    
     override init(frame: CGRect) {
+        news = "A empresa XPTO, em parceria com a escola, lançou o projeto Voluntários Digitais. Dá uma olhadinha lá, quem sabe você se identifica com a proposta!"
+        
         super.init(frame: .zero)
         
         configureSubviews()
@@ -83,6 +99,10 @@ class HomeNewsView: UIView {
         mainStackView.addArrangedSubview(descriptionHelperView)
         
         descriptionHelperView.addSubview(descriptionLabel)
+    }
+    
+    func customizeSubviews() {
+        self.descriptionLabel.text = news
     }
     
     //MARK: - Constraints

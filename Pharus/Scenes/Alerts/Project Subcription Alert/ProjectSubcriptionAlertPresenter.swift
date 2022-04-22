@@ -1,5 +1,5 @@
 //
-//  TwoBigButtonsAlertPresenter.swift
+//  ProjectSubcriptionAlertPresenter.swift
 //  Pharus
 //
 //  Created by Victor Colen on 20/04/22.
@@ -7,16 +7,16 @@
 
 import UIKit
 
-protocol TwoBigButtonsAlertPresenterProtocol {
+protocol ProjectSubcriptionPresenterProtocol {
     func closeModal()
     func subscribeToProject()
 }
 
-class TwoBigButtonsAlertPresenter: TwoBigButtonsAlertPresenterProtocol {
+class ProjectSubcriptionAlertPresenter: ProjectSubcriptionPresenterProtocol {
     
-    var coordinator: TwoBigButtonsAlertCoordinator
+    var coordinator: ProjectSubcriptionAlertCoordinator
     
-    init(coordinator: TwoBigButtonsAlertCoordinator) {
+    init(coordinator: ProjectSubcriptionAlertCoordinator) {
         self.coordinator = coordinator
     }
     

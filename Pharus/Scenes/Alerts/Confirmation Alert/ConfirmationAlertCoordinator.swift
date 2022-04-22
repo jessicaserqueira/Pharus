@@ -1,5 +1,5 @@
 //
-//  OneButtonAlertCoordinator.swift
+//  ConfirmationAlertCoordinator.swift
 //  Pharus
 //
 //  Created by Victor Colen on 16/04/22.
@@ -7,24 +7,24 @@
 
 import UIKit
 
-protocol OneButtonAlertFlow {
+protocol ConfirmationAlertFlow {
     func closeModal()
 }
 
-class OneButtonAlertCoordinator: Coordinator {
+class ConfirmationAlertCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var alertView: OneButtonAlertView
+    var alertView: ConfirmationAlertView
     
-    init(navigationController: UINavigationController, alertView: OneButtonAlertView) {
+    init(navigationController: UINavigationController, alertView: ConfirmationAlertView) {
         self.navigationController = navigationController
         self.alertView = alertView
     }
     
     func start() {
-        let alertPresenter = OneButtonAlertPresenter(coordinator: self)
-        let alertViewController = OneButtonAlertViewController(
+        let alertPresenter = ConfirmationAlertPresenter(coordinator: self)
+        let alertViewController = ConfirmationAlertViewController(
             alertView: alertView,
             coordinator: self,
             presenter: alertPresenter
@@ -36,7 +36,7 @@ class OneButtonAlertCoordinator: Coordinator {
     }
 }
 
-extension OneButtonAlertCoordinator: OneButtonAlertFlow {
+extension ConfirmationAlertCoordinator: ConfirmationAlertFlow {
     func closeModal() {
         navigationController.topViewController?.dismiss(animated: true)
     }

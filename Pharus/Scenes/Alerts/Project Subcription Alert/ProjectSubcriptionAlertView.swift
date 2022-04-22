@@ -1,5 +1,5 @@
 //
-//  TwoBigButtonsAlertView.swift
+//  ProjectSubcriptionAlertView.swift
 //  Pharus
 //
 //  Created by Victor Colen on 20/04/22.
@@ -7,17 +7,17 @@
 
 import UIKit
 
-protocol TwoBigButtonsAlertViewDelegate: AnyObject {
+protocol ProjectSubcriptionAlertViewDelegate: AnyObject {
     func closeButtonTapped()
     func primaryButtonTapped()
     func secondaryButtonTapped()
 }
 
-class TwoBigButtonsAlertView: UIView {
+class ProjectSubcriptionAlertView: UIView {
     
     //MARK: - Properties
     
-    weak var delegate: TwoBigButtonsAlertViewDelegate?
+    weak var delegate: ProjectSubcriptionAlertViewDelegate?
     private var title: String
     private var message: String
     private var mainButtonText: String
@@ -30,7 +30,7 @@ class TwoBigButtonsAlertView: UIView {
         view.backgroundColor = UIColor.modal.yellowBackground
         view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "TwoBigButtonsAlertView.mainView"
+        view.accessibilityIdentifier = "ProjectSubcriptionAlertView.mainView"
         return view
     }()
     
@@ -39,14 +39,14 @@ class TwoBigButtonsAlertView: UIView {
         stackView.axis = .vertical
         stackView.spacing = 24
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "TwoBigButtonsAlertView.mainStackView"
+        stackView.accessibilityIdentifier = "ProjectSubcriptionAlertView.mainStackView"
         return stackView
     }()
     
     lazy var titleStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "TwoBigButtonsAlertView.titleStackView"
+        stackView.accessibilityIdentifier = "ProjectSubcriptionAlertView.titleStackView"
         return stackView
     }()
     
@@ -55,7 +55,7 @@ class TwoBigButtonsAlertView: UIView {
         label.font = UIFont.largeTitleSemiBold
         label.text = "Confirmar Inscrição"
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "TwoBigButtonsAlertView.titleLabel"
+        label.accessibilityIdentifier = "ProjectSubcriptionAlertView.titleLabel"
         return label
     }()
     
@@ -66,7 +66,7 @@ class TwoBigButtonsAlertView: UIView {
             self.closeButtonTapped()
         }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.accessibilityIdentifier = "TwoBigButtonsAlertView.closeModalButton"
+        button.accessibilityIdentifier = "ProjectSubcriptionAlertView.closeModalButton"
         return button
     }()
     
@@ -76,7 +76,7 @@ class TwoBigButtonsAlertView: UIView {
         label.text = "Você deseja se inscrever no projeto \"Algoritmo no seu dia?\""
         label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "TwoBigButtonsAlertView.descriptionLabel"
+        label.accessibilityIdentifier = "ProjectSubcriptionAlertView.descriptionLabel"
         return label
     }()
     
@@ -86,7 +86,7 @@ class TwoBigButtonsAlertView: UIView {
             self.primaryButtonTapped()
         }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.accessibilityIdentifier = "TwoBigButtonsAlertView.primaryButton"
+        button.accessibilityIdentifier = "ProjectSubcriptionAlertView.primaryButton"
         return button
     }()
     
@@ -96,7 +96,7 @@ class TwoBigButtonsAlertView: UIView {
             self.secondaryButtonTapped()
         }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.accessibilityIdentifier = "TwoBigButtonsAlertView.secondaryButton"
+        button.accessibilityIdentifier = "ProjectSubcriptionAlertView.secondaryButton"
         return button
     }()
     
@@ -190,7 +190,7 @@ class TwoBigButtonsAlertView: UIView {
 
 //MARK: - Actions
 
-extension TwoBigButtonsAlertView {
+extension ProjectSubcriptionAlertView {
     
     func closeButtonTapped() {
         delegate?.closeButtonTapped()

@@ -1,5 +1,5 @@
 //
-//  OneButtonAlertView.swift
+//  ConfirmationAlertView.swift
 //  Pharus
 //
 //  Created by Victor Colen on 07/04/22.
@@ -7,15 +7,15 @@
 
 import UIKit
 
-protocol OneButtonAlertViewDelegate: AnyObject {
+protocol ConfirmationAlertViewDelegate: AnyObject {
     func closeButtonTapped()
 }
 
-class OneButtonAlertView: UIView {
+class ConfirmationAlertView: UIView {
     
     //MARK: - Properties
     
-    weak var delegate: OneButtonAlertViewDelegate?
+    weak var delegate: ConfirmationAlertViewDelegate?
     private var image: UIImage
     private var message: String
     
@@ -26,7 +26,7 @@ class OneButtonAlertView: UIView {
         view.layer.cornerRadius = 16
         view.backgroundColor = UIColor.modal.yellowBackground
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "OneButtonAlertView.mainView"
+        view.accessibilityIdentifier = "ConfirmationAlertView.mainView"
         
         return view
     }()
@@ -37,7 +37,7 @@ class OneButtonAlertView: UIView {
         stackView.backgroundColor = .clear
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "OneButtonAlertView.mainStackView"
+        stackView.accessibilityIdentifier = "ConfirmationAlertView.mainStackView"
         
         return stackView
     }()
@@ -45,7 +45,7 @@ class OneButtonAlertView: UIView {
     private lazy var alertIconHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "OneButtonAlertView.alertIconHelperView"
+        view.accessibilityIdentifier = "ConfirmationAlertView.alertIconHelperView"
         
         return view
     }()
@@ -53,7 +53,7 @@ class OneButtonAlertView: UIView {
     private lazy var alertIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "OneButtonAlertView.alertIconImageView"
+        imageView.accessibilityIdentifier = "ConfirmationAlertView.alertIconImageView"
         
         return imageView
     }()
@@ -61,7 +61,7 @@ class OneButtonAlertView: UIView {
     private lazy var alertMessageHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "OneButtonAlertView.alertMessageHelperView"
+        view.accessibilityIdentifier = "ConfirmationAlertView.alertMessageHelperView"
         
         return view
     }()
@@ -71,7 +71,7 @@ class OneButtonAlertView: UIView {
         label.textAlignment = .center
         label.font = .mediumTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "OneButtonAlertView.alertMessageLabel"
+        label.accessibilityIdentifier = "ConfirmationAlertView.alertMessageLabel"
         
         return label
     }()
@@ -85,7 +85,7 @@ class OneButtonAlertView: UIView {
         }, for: .touchUpInside)
         
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.accessibilityIdentifier = "OneButtonAlertView.actionButton"
+        button.accessibilityIdentifier = "ConfirmationAlertView.actionButton"
         
         return button
     }()
@@ -175,7 +175,7 @@ class OneButtonAlertView: UIView {
 
 //MARK: - Actions
 
-extension OneButtonAlertView {
+extension ConfirmationAlertView {
     func closeButtonTapped() {
         delegate?.closeButtonTapped()
     }
