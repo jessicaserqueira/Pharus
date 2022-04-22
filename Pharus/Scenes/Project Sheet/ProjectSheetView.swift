@@ -102,6 +102,7 @@ class ProjectSheetView: UIView {
         label.text = descriptionText
         label.numberOfLines = 0
         label.textColor = .black
+        label.font = .smallBody
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSheetView.descriptionTextLabel"
         

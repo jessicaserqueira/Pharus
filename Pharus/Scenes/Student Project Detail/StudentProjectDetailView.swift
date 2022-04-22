@@ -64,6 +64,7 @@ class StudentProjectDetailView: UIView {
         let label = UILabel()
         label.font = .largeTitleBold
         label.textColor = .black
+        label.font = .mediumTitleBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.mentorLabel"
         
@@ -100,6 +101,7 @@ class StudentProjectDetailView: UIView {
         label.text = "Descrição:"
         label.font = .mediumTitleMedium
         label.textColor = .black
+        label.font = .mediumTitleMedium
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionTitleLabel"
         

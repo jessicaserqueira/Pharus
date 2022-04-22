@@ -18,6 +18,7 @@ class SendFileView: UIView {
     
     weak var delegate: SendFileDelegate?
     
+    
     //MARK: - Views
     
     private lazy var mainView: UIView = {
@@ -59,6 +60,7 @@ class SendFileView: UIView {
         label.numberOfLines = 0
         label.text = "Aqui você pode enviar os arquivos exigidos para completar uma tarefa. Você pode enviar mais de um arquivo de uma vez, bastando selecionar todos os que deseja enviar. "
         label.textColor = .black
+        label.font = .smallBody
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.descriptionLabel"
         return label
@@ -106,6 +108,7 @@ class SendFileView: UIView {
         label.text = "Selecione os arquivos para enviar"
         label.textAlignment = .center
         label.numberOfLines = 0
+        label.font = .smallBody
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.uploadMessageLabel"
