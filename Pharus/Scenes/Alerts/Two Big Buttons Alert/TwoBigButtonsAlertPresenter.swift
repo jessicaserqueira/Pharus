@@ -14,9 +14,9 @@ protocol TwoBigButtonsAlertPresenterProtocol {
 
 class TwoBigButtonsAlertPresenter: TwoBigButtonsAlertPresenterProtocol {
     
-    var coordinator: TwoBigButtonsAlertCoordinator
+    var coordinator: ProjectSubcriptionAlertCoordinator
     
-    init(coordinator: TwoBigButtonsAlertCoordinator) {
+    init(coordinator: ProjectSubcriptionAlertCoordinator) {
         self.coordinator = coordinator
     }
     

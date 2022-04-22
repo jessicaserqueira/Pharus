@@ -55,7 +55,7 @@ extension StudentProjectsCoordinator: StudentProjectsFlow {
             secondaryButtonText: "Não quero, mudei de idéia"
         )
         
-        let twoBigButtonsAlertCoordinator = TwoBigButtonsAlertCoordinator(
+        let twoBigButtonsAlertCoordinator = ProjectSubcriptionAlertCoordinator(
             navigationController: navigationController,
             alertView: alertView,
             project: project

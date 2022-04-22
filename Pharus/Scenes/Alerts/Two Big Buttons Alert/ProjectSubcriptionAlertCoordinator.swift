@@ -1,5 +1,5 @@
 //
-//  TwoBigButtonsAlertCoordinator.swift
+//  ProjectSubcriptionAlertCoordinator.swift
 //  Pharus
 //
 //  Created by Victor Colen on 20/04/22.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol TwoBigButtonsAlertFlow {
+protocol ProjectSubcriptionAlertFlow {
     func closeModal()
 }
 
-class TwoBigButtonsAlertCoordinator: Coordinator {
+class ProjectSubcriptionAlertCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
@@ -41,12 +41,11 @@ class TwoBigButtonsAlertCoordinator: Coordinator {
     }
 }
 
-extension TwoBigButtonsAlertCoordinator: TwoBigButtonsAlertFlow {
+extension ProjectSubcriptionAlertCoordinator: ProjectSubcriptionAlertFlow {
     func closeModal() {
         navigationController.topViewController?.dismiss(animated: true)
     }
     
-    //implementar
     func subscribeToProject() {
         project.isSubscribed = true
         closeModal()
