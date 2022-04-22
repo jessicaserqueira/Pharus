@@ -65,6 +65,7 @@ class StudentHomeMiniCardView: UIView {
         label.textAlignment = .center
         label.numberOfLines = 0
         label.textColor = .black
+        label.font =  .smallBody
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentHomeMiniCardView.cardDescriptionLabel"
         return label

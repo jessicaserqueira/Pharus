@@ -60,6 +60,7 @@ class HomeNewsView: UIView {
         label.text = "A empresa XPTO, em parceria com a escola, lançou o projeto Voluntários Digitais. Dá uma olhadinha lá, quem sabe você se identifica com a proposta!"
         label.numberOfLines = 0
         label.textColor = .black
+        label.font = .smallBody
         label.textAlignment = .justified
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "HomeNewsView.descriptionLabel"
