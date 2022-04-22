@@ -106,7 +106,7 @@ class StudentProfileView: UIView {
         infoHelperView.addSubview(infoStackView)
         
         let studentInfo: KeyValuePairs<String, String> = [
-            "Nome": student.firstName + student.lastName,
+            "Nome": "\(student.firstName) \(student.lastName)",
             "E-mail": student.email,
             "Escola": student.school,
             "Período Escolar": student.year,
