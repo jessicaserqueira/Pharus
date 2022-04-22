@@ -9,19 +9,22 @@ import UIKit
 class StudentHomeView: UIView {
     
     //MARK: - Properties
+    
+    private var studentName: String
+    
     private let cards: [StudentHomeMiniCardView] = [
-    StudentHomeMiniCardView(
-        cardType: .warning,
-        message: "\"Rabisco em arte\" termina em 6 dias!"
-    ),
-    StudentHomeMiniCardView(
-        cardType: .newMedal,
-        message: "O projeto \"Introdução a Robótica\" te deu uma medalha!"
-    ),
-    StudentHomeMiniCardView(
-        cardType: .newProject,
-        message: "Novo projeto: Algorítmo no seu dia"
-    )
+        StudentHomeMiniCardView(
+            cardType: .warning,
+            message: "\"Rabisco em arte\" termina em 6 dias!"
+        ),
+        StudentHomeMiniCardView(
+            cardType: .newMedal,
+            message: "O projeto \"Introdução a Robótica\" te deu uma medalha!"
+        ),
+        StudentHomeMiniCardView(
+            cardType: .newProject,
+            message: "Novo projeto: Algorítmo no seu dia"
+        )
     ]
     
     //MARK: - Views
@@ -108,7 +111,7 @@ class StudentHomeView: UIView {
         scrollView.accessibilityIdentifier = "StudentHomeView.newsScrollView"
         return scrollView
     }()
-        
+    
     lazy var newsHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -125,7 +128,19 @@ class StudentHomeView: UIView {
         return view
     }()
     
+    //MARK: - Initializer
+    
+    convenience init(studentName: String) {
+        self.init()
+        
+        self.studentName = studentName
+        customizeSubviews()
+    }
+    
     override init(frame: CGRect) {
+        
+        studentName = "Antônia"
+        
         super.init(frame: .zero)
         
         configureSubviews()
@@ -165,6 +180,10 @@ class StudentHomeView: UIView {
         
         mainStackView.addArrangedSubview(newsHelperView)
         
+    }
+    
+    func customizeSubviews() {
+        helloStudentLabel.text = "Olá, \(studentName)!"
     }
     
     //MARK: - Constraints

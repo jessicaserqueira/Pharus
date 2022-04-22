@@ -238,6 +238,7 @@
 		79434A652809129A006D0184 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				79A4B757281249A0002C018C /* Student Home News */,
 				795A021A2809F345000D0B84 /* Alerts */,
 				79434A6928091491006D0184 /* Avatar Selection */,
 				79434A66280912A8006D0184 /* Login */,
@@ -371,6 +372,15 @@
 			path = "Logout Alert";
 			sourceTree = "<group>";
 		};
+		79A4B757281249A0002C018C /* Student Home News */ = {
+			isa = PBXGroup;
+			children = (
+				79A4B75528124214002C018C /* HomeNewsViewController.swift */,
+				79E8389E280AF7C5001C46AD /* HomeNewsView.swift */,
+			);
+			path = "Student Home News";
+			sourceTree = "<group>";
+		};
 		79AF90F628043A120094AB97 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,7 +470,6 @@
 				793EC73827FE177000CD8334 /* CheckmarkButton.swift */,
 				79222EA227F643D60051334A /* CircleProgressView.swift */,
 				79E838A0280AF7E1001C46AD /* HomeMiniCardView.swift */,
-				79E8389E280AF7C5001C46AD /* HomeNewsView.swift */,
 				79A2C776280C4A1700B3159B /* MainCardButton.swift */,
 				79A2C778280C587F00B3159B /* ProjectScheduleView.swift */,
 				79AF90FC2804478F0094AB97 /* ProjectTaskView.swift */,
@@ -544,7 +553,6 @@
 			isa = PBXGroup;
 			children = (
 				7952058027FE382D00A89012 /* TabBarViewController.swift */,
-				79A4B75528124214002C018C /* HomeNewsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

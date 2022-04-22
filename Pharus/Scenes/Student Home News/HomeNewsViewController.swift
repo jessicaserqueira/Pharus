@@ -9,7 +9,6 @@ import UIKit
 
 class HomeNewsViewController: UIViewController {
     
-    private var customView = HomeNewsView()
     var page: Pages
     
     override func viewDidLoad() {
@@ -19,7 +18,7 @@ class HomeNewsViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        self.view = customView
+        self.view = page.view
     }
     
     init(with page: Pages) {
@@ -31,5 +30,4 @@ class HomeNewsViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
