@@ -10,11 +10,18 @@ import UniformTypeIdentifiers
 
 class SendFileViewController: UIViewController, UIDocumentPickerDelegate {
     
-    let sendFileView = SendFileView()
-    let presenter: SendFilePresenter
-    let coordinator: SendFileCoordinator
+    //MARK: - Properties
     
-    init(presenter: SendFilePresenter, coordinator: SendFileCoordinator) {
+    private let sendFileView = SendFileView()
+    private let presenter: SendFilePresenter
+    private let coordinator: SendFileCoordinator
+    
+    //MARK: - Initializer
+    
+    init(
+        presenter: SendFilePresenter,
+        coordinator: SendFileCoordinator
+    ) {
         self.presenter = presenter
         self.coordinator = coordinator
         
@@ -25,6 +32,8 @@ class SendFileViewController: UIViewController, UIDocumentPickerDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Life Cycle
+    
     override func loadView() {
         super.loadView()
         
@@ -33,29 +42,34 @@ class SendFileViewController: UIViewController, UIDocumentPickerDelegate {
     }
 }
 
+//MARK: - Send File Delegate
+
 extension SendFileViewController: SendFileDelegate {
-   
-     func uploadButtonTapped() {
-        presenter.uploadFile()
-        let suportFiles: [UTType] =
-            [
-                UTType.pdf,
-                UTType.data,
-                UTType.jpeg
-            ]
+    func uploadButtonTapped() {
+        let suportFiles: [UTType] = [
+            .pdf,
+            .data,
+            .jpeg
+        ]
         
-        let controller = UIDocumentPickerViewController(forOpeningContentTypes: suportFiles, asCopy: true)
+        let controller = UIDocumentPickerViewController(
+            forOpeningContentTypes: suportFiles,
+            asCopy: true
+        )
         controller.delegate = self
         controller.allowsMultipleSelection = false
         present(controller, animated: true, completion: nil)
     }
     
-    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+    func documentPicker(
+        _ controller: UIDocumentPickerViewController,
+        didPickDocumentsAt urls: [URL]
+    ) {
         if let filename = urls.first?.lastPathComponent {
-            print(filename)
             sendFileView.fileNameLabel.text = filename
         }
     }
+    
     func sendFileButtonTapped() {
         presenter.sendFile()
     }

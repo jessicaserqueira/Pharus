@@ -12,18 +12,15 @@ protocol SendFileDelegate: AnyObject {
     func sendFileButtonTapped()
 }
 
-
 class SendFileView: UIView {
-    
     
     //MARK: - Properties
     
     weak var delegate: SendFileDelegate?
-  
     
     //MARK: - Views
     
-    lazy var mainView: UIView = {
+    private lazy var mainView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.modal.yellowBackground
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +28,7 @@ class SendFileView: UIView {
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 30
@@ -40,14 +37,14 @@ class SendFileView: UIView {
         return stackView
     }()
     
-    lazy var titleHelperView: UIView = {
+    private lazy var titleHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.titleHelperView"
         return view
     }()
     
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Enviar arquivos"
         label.font = .largeTitleBold
@@ -57,7 +54,7 @@ class SendFileView: UIView {
         return label
     }()
     
-    lazy var descriptionLabel: UILabel = {
+    private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.text = "Aqui você pode enviar os arquivos exigidos para completar uma tarefa. Você pode enviar mais de um arquivo de uma vez, bastando selecionar todos os que deseja enviar. "
@@ -67,7 +64,7 @@ class SendFileView: UIView {
         return label
     }()
     
-    lazy var uploadFileHelperView: UIView = {
+    private lazy var uploadFileHelperView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.modal.orangeBackground
         view.layer.cornerRadius = 8
@@ -76,11 +73,10 @@ class SendFileView: UIView {
         return view
     }()
     
-    lazy var uploadFileStackView: UIStackView = {
+    private lazy var uploadFileStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.setOnClickListener {
             self.uploadButtonTapped()
-            
         }
         stackView.axis = .vertical
         stackView.spacing = 3
@@ -89,14 +85,14 @@ class SendFileView: UIView {
         return stackView
     }()
     
-    lazy var uploadIconHelperView: UIView = {
+    private lazy var uploadIconHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.uploadIconHelperView"
         return view
     }()
     
-    lazy var uploadIconImageView: UIImageView = {
+    private lazy var uploadIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.icons.uploadIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -105,18 +101,18 @@ class SendFileView: UIView {
     }()
     
     
-    lazy var uploadMessageLabel: UILabel = {
-         let label = UILabel()
-         label.text = "Selecione os arquivos para enviar"
-         label.textAlignment = .center
-         label.numberOfLines = 0
+    private lazy var uploadMessageLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Selecione os arquivos para enviar"
+        label.textAlignment = .center
+        label.numberOfLines = 0
         label.textColor = .black
-         label.translatesAutoresizingMaskIntoConstraints = false
-         label.accessibilityIdentifier = "SendFileView.uploadMessageLabel"
-         return label
-     }()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "SendFileView.uploadMessageLabel"
+        return label
+    }()
     
-    lazy var fileHelperView: UIView = {
+    private lazy var fileHelperView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 8
@@ -125,7 +121,7 @@ class SendFileView: UIView {
         return view
     }()
     
-    lazy var fileStackView: UIStackView = {
+    private lazy var fileStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 14
@@ -134,7 +130,7 @@ class SendFileView: UIView {
         return stackView
     }()
     
-    lazy var fileImageView: UIImageView = {
+    private lazy var fileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.icons.bookIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -151,7 +147,7 @@ class SendFileView: UIView {
         return label
     }()
     
-    lazy var removeFileButton: UIButton = {
+    private lazy var removeFileButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage.icons.xmarkIcon, for: .normal)
         button.tintColor = .black
@@ -160,7 +156,7 @@ class SendFileView: UIView {
         return button
     }()
     
-    lazy var sendFileButton: MainCardButton = {
+    private lazy var sendFileButton: MainCardButton = {
         let button = MainCardButton(title: "Enviar Arquivos", buttonState: .normal)
         button.addAction(UIAction { _ in
             self.sendFileButtonTapped()
@@ -169,6 +165,8 @@ class SendFileView: UIView {
         button.accessibilityIdentifier = "SendFileView.sendFileButton"
         return button
     }()
+    
+    //MARK: - Initializer
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -181,7 +179,9 @@ class SendFileView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureSubviews() {
+    //MARK: - Subviews
+    
+    private func configureSubviews() {
         addSubview(mainView)
         
         mainView.addSubview(mainStackView)
@@ -214,7 +214,7 @@ class SendFileView: UIView {
     
     //MARK: - Constraints
     
-    func setupConstraints() {
+    private func setupConstraints() {
         
         //Main View
         self.stretch(mainView)
@@ -279,7 +279,7 @@ extension SendFileView: SendFileDelegate {
     func uploadButtonTapped() {
         delegate?.uploadButtonTapped()
     }
-
+    
     func sendFileButtonTapped() {
         delegate?.sendFileButtonTapped()
     }

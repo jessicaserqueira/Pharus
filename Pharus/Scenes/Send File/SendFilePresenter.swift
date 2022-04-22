@@ -14,14 +14,17 @@ protocol SendFilePresenterProtocol {
 
 class SendFilePresenter {
     
+    //MARK: - Properties
+    
     var coordinator: SendFileCoordinator
+    
+    //MARK: - Initializer
     
     init(coordinator: SendFileCoordinator) {
         self.coordinator = coordinator
     }
-    func uploadFile(){
-        coordinator.showUploadFile()
-    }
+    
+    //MARK: - Actions
 
     func sendFile() {
         coordinator.showFileSentAlert()
