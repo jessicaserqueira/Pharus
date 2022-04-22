@@ -97,11 +97,18 @@ extension UIColor {
             alpha: 1
         )
         
-        static let pinkDisabledBorder = UIColor(
-            red: 0.81,
-            green: 0.64,
-            blue: 0.96,
-            alpha: 1.00
+        static let graySubscribeText = UIColor(
+            red: 0.686,
+            green: 0.682,
+            blue: 0.702,
+            alpha: 1
+        )
+        
+        static let graySubscribeBorder = UIColor(
+            red: 0.686,
+            green: 0.682,
+            blue: 0.702,
+            alpha: 1
         )
         
         static let grayDisabledBackground = UIColor(
