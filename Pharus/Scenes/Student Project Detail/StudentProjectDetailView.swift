@@ -362,7 +362,6 @@ class StudentProjectDetailView: UIView {
             }
             taskHelperStackView.addArrangedSubview(taskView)
         }
-        
         updateProjectProgressView()
     }
     

@@ -111,25 +111,24 @@ class ProjectScheduleView: UIView {
             textLabel.text = "Feito!"
             mainView.backgroundColor = UIColor.projectSchedule.greenBackground
         } else {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = K.DateFormats.projectDateFormat
-            
-            let projectEndDate = dateFormatter.date(from: project.endDate) ?? Date()
-            let daysRemaining = Date.getDifferenceInDays(
-                between: Date(),
-                and: projectEndDate
-            )
-            
-            textLabel.text = "\(daysRemaining) Dias"
-            
-            switch daysRemaining {
-            case ...6:
+            switch project.daysRemaining {
+            case ..<0:
+                mainView.backgroundColor = .black
+                textLabel.text = "Expirado"
+                iconImageView.image = UIImage.icons.xmarkIcon?.withTintColor(.white)
+            case 0...6:
                 mainView.backgroundColor = UIColor.projectSchedule.redBackground
+                iconImageView.image = UIImage.icons.clockIcon ?? .defaultImage
+                textLabel.text = "\(project.daysRemaining) Dias"
                 textLabel.textColor = .white
                 iconImageView.image = iconImageView.image?.withTintColor(.white)
             case 7...8:
+                iconImageView.image = UIImage.icons.clockIcon ?? .defaultImage
+                textLabel.text = "\(project.daysRemaining) Dias"
                 mainView.backgroundColor = UIColor.projectSchedule.yellowBackground
             default:
+                iconImageView.image = UIImage.icons.clockIcon ?? .defaultImage
+                textLabel.text = "\(project.daysRemaining) Dias"
                 mainView.backgroundColor = UIColor.projectSchedule.orangeBackground
             }
         }

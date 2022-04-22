@@ -267,12 +267,22 @@ class StudentProjectCell: UITableViewCell {
         )
         
         completionBarCircleView.progress = project.completionPercentage*100
-        percentageCompletionLabel.text = "\(project.completedTasksCount)/\(project.tasks.count)"
+        percentageCompletionLabel.text = "\(project.completedTasksCount) de \(project.tasks.count)"
         
-        if project.isSubscribed {
-            mainView.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
+        if project.daysRemaining >= 0 {
+            if project.isSubscribed {
+                mainView.backgroundColor = UIColor.project.orangeSubscribedProjectBackground
+            } else {
+                mainView.backgroundColor = UIColor.project.grayUnsubscribedProjectBackground
+            }
         } else {
-            mainView.backgroundColor = UIColor.project.grayUnsubscribedProjectBackground
+            mainView.backgroundColor = UIColor.project.redExpiredProjectBackground
+            titleLabel.textColor = .white
+            mentorLabel.textColor = .white
+            descriptionTitleLabel.textColor = .white
+            descriptionLabel.textColor = .white
+            partnershipLabel.textColor = .white
+            percentageCompletionLabel.textColor = .white
         }
     }
     

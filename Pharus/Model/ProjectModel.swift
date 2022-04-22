@@ -75,4 +75,17 @@ extension ProjectModel {
     var completionPercentage: Float {
         Float(completedTasksCount)/Float(self.tasks.count)
     }
+    
+    var daysRemaining: Int {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = K.DateFormats.projectDateFormat
+        
+        let projectEndDate = dateFormatter.date(from: self.endDate) ?? Date()
+        let daysRemaining = Date.getDifferenceInDays(
+            between: Date(),
+            and: projectEndDate
+        )
+        
+        return daysRemaining
+    }
 }

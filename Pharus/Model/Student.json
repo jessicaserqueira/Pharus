@@ -60,8 +60,8 @@
             "placement": null,
             "description": "Transformação Digital - é uma mudança de mentalidade que as empresas passam com o objetivo de se tornarem mais modernas e acompanharem os avanços tecnológicos que não param de surgir.\n\nNão há pessoa no mundo que não tenha sido impactada por esse processo, e com as empresas, é a mesma coisa.\n\nO termo é muito usado no mundo corporativo quando o assunto são as exigências de uma nova realidade, na qual a tecnologia avança mais rápido que nunca.",
             "scoreDescription": null,
-            "startDate": "08/03/2022",
-            "endDate": "20/04/2022",
+            "startDate": "03/03/2022",
+            "endDate": "28/05/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Mariana",
             "company": "Alpargatas",
@@ -96,14 +96,14 @@
         {
             "id": "",
             "name": "Startup Go!",
-            "isSubscribed": false,
+            "isSubscribed": true,
             "isComplete": false,
             "score": null,
             "placement": null,
             "description": "Uma startup é uma empresa que tem o objetivo de crescer de maneira agressiva. As startups costumam oferecer produtos ou serviços inovadores, visando solucionar uma dor ou trazendo inovação incremental a mercadorias que já existem. Quase sempre, as startups baseiam o seu modelo de negócio em tecnologia digital, mas isso não é uma regra.",
             "scoreDescription": null,
-            "startDate": "03/03/2022",
-            "endDate": "28/05/2022",
+            "startDate": "08/03/2022",
+            "endDate": "20/04/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Sávio Costa",
             "company": "ioasys",
@@ -115,7 +115,7 @@
                 },
                 {
                     "title": "Desbravando o produto",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Conhecendo o problema que escolheram, para tarefa escolha um nome este produto. Defina o que será este produto. Façam uma dissertação explicando como o produto irá ser importante para o problema escolhido. Descreva qual será o publico que o produto irá atender."
                 },
                 {
@@ -125,7 +125,7 @@
                 },
                 {
                     "title": "Hora do show!",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Definido o produto na tarefa 02, agora é hora de desenhar um protótipo (é o termo usado para se referir ao que foi criado pela primeira vez, servindo de modelo ou molde para futuras produções.) desta inovação. Com seus amigos de grupo, escolham uma ferramenta adequada para que possam rascunhar o produto. Façam ao menos 03 referenciais do produto."
                 }
             ]
