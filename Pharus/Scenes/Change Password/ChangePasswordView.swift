@@ -50,8 +50,7 @@ class ChangePasswordView: UIView {
     private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = UIScreen.main.bounds.height/17
-        stackView.alignment = .fill
+        stackView.spacing = 64
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ChangePasswordView.mainStackView"
         
@@ -265,8 +264,7 @@ class ChangePasswordView: UIView {
         self.stretch(mainView, to: mainScrollView)
         mainView.center(in: mainScrollView)
         NSLayoutConstraint.activate([
-            mainStackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
-            
+            mainView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
         ])
         
         //Main Stack View
