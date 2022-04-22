@@ -330,7 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				7993C9B028104C4400526AF2 /* Logout Alert */,
-				7993C9A428102B3400526AF2 /* Two Big Buttons Alert */,
+				7993C9A428102B3400526AF2 /* Project Subcription Alert */,
 				7993C9A328102B2C00526AF2 /* One Button Alert */,
 			);
 			path = Alerts;
@@ -347,7 +347,7 @@
 			path = "One Button Alert";
 			sourceTree = "<group>";
 		};
-		7993C9A428102B3400526AF2 /* Two Big Buttons Alert */ = {
+		7993C9A428102B3400526AF2 /* Project Subcription Alert */ = {
 			isa = PBXGroup;
 			children = (
 				7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */,
@@ -355,7 +355,7 @@
 				7993C9AA281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift */,
 				7993C9AE28103CD500526AF2 /* ProjectSubcriptionAlertCoordinator.swift */,
 			);
-			path = "Two Big Buttons Alert";
+			path = "Project Subcription Alert";
 			sourceTree = "<group>";
 		};
 		7993C9B028104C4400526AF2 /* Logout Alert */ = {
