@@ -11,12 +11,12 @@ class ConfirmationAlertViewController: UIViewController {
     
     private var alertView: ConfirmationAlertView
     private var coordinator: ConfirmationAlertCoordinator
-    private var presenter: OneButtonAlertPresenter
+    private var presenter: ConfirmationAlertPresenter
     
     init(
         alertView: ConfirmationAlertView,
         coordinator: ConfirmationAlertCoordinator,
-        presenter: OneButtonAlertPresenter
+        presenter: ConfirmationAlertPresenter
     ) {
         
         self.alertView = alertView

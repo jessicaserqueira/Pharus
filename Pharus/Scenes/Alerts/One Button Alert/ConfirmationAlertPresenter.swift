@@ -1,5 +1,5 @@
 //
-//  OneButtonAlertPresenter.swift
+//  ConfirmationAlertPresenter.swift
 //  Pharus
 //
 //  Created by Victor Colen on 16/04/22.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol OneButtonAlertPresenterProtocol {
+protocol ConfirmationAlertPresenterProtocol {
    func closeModal()
 }
 
-class OneButtonAlertPresenter: OneButtonAlertPresenterProtocol {
+class ConfirmationAlertPresenter: ConfirmationAlertPresenterProtocol {
     
     var coordinator: ConfirmationAlertCoordinator
     

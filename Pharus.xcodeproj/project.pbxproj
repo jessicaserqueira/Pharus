@@ -65,7 +65,7 @@
 		79E838A7280AFCE7001C46AD /* SendFilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A6280AFCE7001C46AD /* SendFilePresenter.swift */; };
 		79E838A9280AFD03001C46AD /* SendFileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A8280AFD03001C46AD /* SendFileCoordinator.swift */; };
 		79E838AC280B0676001C46AD /* ConfirmationAlertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838AB280B0676001C46AD /* ConfirmationAlertCoordinator.swift */; };
-		79E838AE280B067D001C46AD /* OneButtonAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838AD280B067D001C46AD /* OneButtonAlertPresenter.swift */; };
+		79E838AE280B067D001C46AD /* ConfirmationAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838AD280B067D001C46AD /* ConfirmationAlertPresenter.swift */; };
 		79EE5719280B881500F01069 /* StudentHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE5718280B881500F01069 /* StudentHomeCoordinator.swift */; };
 		79EE571B280B889200F01069 /* StudentHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE571A280B889200F01069 /* StudentHomePresenter.swift */; };
 		79EE5731280BAB7F00F01069 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79EE571F280BAB7E00F01069 /* Montserrat-Medium.ttf */; };
@@ -172,7 +172,7 @@
 		79E838A6280AFCE7001C46AD /* SendFilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFilePresenter.swift; sourceTree = "<group>"; };
 		79E838A8280AFD03001C46AD /* SendFileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileCoordinator.swift; sourceTree = "<group>"; };
 		79E838AB280B0676001C46AD /* ConfirmationAlertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertCoordinator.swift; sourceTree = "<group>"; };
-		79E838AD280B067D001C46AD /* OneButtonAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonAlertPresenter.swift; sourceTree = "<group>"; };
+		79E838AD280B067D001C46AD /* ConfirmationAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertPresenter.swift; sourceTree = "<group>"; };
 		79EE5718280B881500F01069 /* StudentHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeCoordinator.swift; sourceTree = "<group>"; };
 		79EE571A280B889200F01069 /* StudentHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomePresenter.swift; sourceTree = "<group>"; };
 		79EE571F280BAB7E00F01069 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
@@ -342,7 +342,7 @@
 				C05AA30227FFAA7400230698 /* ConfirmationAlertViewController.swift */,
 				C05AA2F427FFA66D00230698 /* ConfirmationAlertView.swift */,
 				79E838AB280B0676001C46AD /* ConfirmationAlertCoordinator.swift */,
-				79E838AD280B067D001C46AD /* OneButtonAlertPresenter.swift */,
+				79E838AD280B067D001C46AD /* ConfirmationAlertPresenter.swift */,
 			);
 			path = "One Button Alert";
 			sourceTree = "<group>";
@@ -754,7 +754,7 @@
 				79E838A5280AF82C001C46AD /* StudentHomeViewController.swift in Sources */,
 				7943975E27F3C6020075102B /* StudentProjectCell.swift in Sources */,
 				79C577D027FBBB8100046B00 /* StudentProjectRankingCell.swift in Sources */,
-				79E838AE280B067D001C46AD /* OneButtonAlertPresenter.swift in Sources */,
+				79E838AE280B067D001C46AD /* ConfirmationAlertPresenter.swift in Sources */,
 				C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */,
 				C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */,
 				79E838A1280AF7E1001C46AD /* HomeMiniCardView.swift in Sources */,
