@@ -350,7 +350,7 @@ class StudentProjectDetailView: UIView {
                 color: project.isSubscribed ? .black : UIColor.project.grayDisabledText
             )
             
-            if project.isComplete == false {
+            if project.isComplete == false && project.isSubscribed == true {
                 taskView.taskCheckmarkButton.addAction(
                     UIAction { _ in
                         self.taskCheckboxTapped(task: task)
