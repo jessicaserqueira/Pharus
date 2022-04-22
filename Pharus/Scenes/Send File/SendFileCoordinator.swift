@@ -41,8 +41,7 @@ extension SendFileCoordinator: SendFileFlow {
 
     func showFileSentAlert() {
         let alertView = ConfirmationAlertView(
-            message: "Arquivo enviado com sucesso!",
-            image: UIImage.icons.checkIcon ?? .defaultImage
+            message: "Arquivo enviado com sucesso!"
         )
         
         let alertCoordinator = ConfirmationAlertCoordinator(

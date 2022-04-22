@@ -16,9 +16,9 @@ class ChangePasswordCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    private var student: Student
+    private var student: StudentModel
     
-    init(navigationController: UINavigationController,navia student: Student) {
+    init(navigationController: UINavigationController,_ student: StudentModel) {
         self.navigationController = navigationController
         self.student = student
     }
@@ -29,34 +29,33 @@ class ChangePasswordCoordinator: Coordinator {
             coordinator: self,
             presenter: changePasswordPresenter
         )
-    
+        
         navigationController.setNavigationBarHidden(false, animated: false)
         navigationController.setViewControllers([changePasswordViewController], animated: true)
-      
+        
     }
 }
 
 extension ChangePasswordCoordinator: ChangePasswordFlow {
     func showChangePassword(){
         let alertView = ConfirmationAlertView(
-            message: "Senha salva com sucesso",
-            image: UIImage.icons.checkIcon ?? .defaultImage
+            message: "Senha salva com sucesso"
         )
         let alertCoordinator = ConfirmationAlertCoordinator(
             navigationController: navigationController,
             alertView: alertView
-          
+            
         )
         coordinate(to: alertCoordinator)
         
-        }
+    }
     func showLogoutChangePassword(){
         let coordinator = LoginCoordinator(
             navigationController: navigationController
         )
         navigationController.dismiss(animated: true)
         coordinate(to: coordinator)
-        }
     }
-    
-  
+}
+
+

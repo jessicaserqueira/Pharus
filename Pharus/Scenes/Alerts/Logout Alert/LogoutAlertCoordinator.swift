@@ -44,9 +44,12 @@ extension LogoutAlertCoordinator: LogoutAlertFlow {
         navigationController.topViewController?.dismiss(animated: true)
     }
     
-    //implementar
     func logout() {
         closeModal()
-        print("fazer logout")
+        let loginCoordinator = LoginCoordinator(
+            navigationController: navigationController
+        )
+        
+        coordinate(to: loginCoordinator)
     }
 }

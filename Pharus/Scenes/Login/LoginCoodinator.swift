@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginFlow {
-    func showChangePassword (student: Student)
+    func showChangePassword (student: StudentModel)
     func showHome(student: StudentModel)
 
 }
@@ -30,15 +30,17 @@ class LoginCoordinator: Coordinator {
             presenter: loginPresenter
         )
     
-        navigationController.setNavigationBarHidden(true, animated: true)
-        navigationController.pushViewController(loginViewController, animated: true)
+        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.tabBarController?.tabBar.isHidden = true
+        navigationController.setViewControllers([loginViewController], animated: true)
     }
 }
 extension LoginCoordinator: LoginFlow {
-    func showChangePassword(student: Student) {
+    func showChangePassword(student: StudentModel) {
         let coordinator = ChangePasswordCoordinator(
             navigationController: navigationController,
-            navia: student)
+            student
+        )
           
         self.coordinate(to: coordinator)
     }

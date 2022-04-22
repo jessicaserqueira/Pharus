@@ -101,7 +101,6 @@
 		C057E8F1280794E9004E44C3 /* AvatarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8F0280794E9004E44C3 /* AvatarSelectionViewController.swift */; };
 		C057E8F52807954B004E44C3 /* AvatarSelectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8F42807954B004E44C3 /* AvatarSelectionCoordinator.swift */; };
 		C05AA2BC27FC740E00230698 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */; };
-		C05AA2C827FC749E00230698 /* TarBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2C727FC749E00230698 /* TarBarPresenter.swift */; };
 		C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */; };
 		C05AA2F527FFA66D00230698 /* ConfirmationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F427FFA66D00230698 /* ConfirmationAlertView.swift */; };
 		C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F827FFA69800230698 /* MainCardButton.swift */; };
@@ -216,7 +215,6 @@
 		C057E8F0280794E9004E44C3 /* AvatarSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSelectionViewController.swift; sourceTree = "<group>"; };
 		C057E8F42807954B004E44C3 /* AvatarSelectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSelectionCoordinator.swift; sourceTree = "<group>"; };
 		C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
-		C05AA2C727FC749E00230698 /* TarBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarBarPresenter.swift; sourceTree = "<group>"; };
 		C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingCoordinator.swift; sourceTree = "<group>"; };
 		C05AA2F427FFA66D00230698 /* ConfirmationAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertView.swift; sourceTree = "<group>"; };
 		C05AA2F827FFA69800230698 /* MainCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
@@ -243,9 +241,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7906FE5F2812C04000E4A83A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */,
+				7952058027FE382D00A89012 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		79434A652809129A006D0184 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7906FE5F2812C04000E4A83A /* TabBar */,
 				79A4B757281249A0002C018C /* Student Home News */,
 				C00E5F2B2811DE9200E8C71C /* Change Password */,
 				795A021A2809F345000D0B84 /* Alerts */,
@@ -544,7 +552,6 @@
 				C045619827EA03A6007EC5C3 /* Info.plist */,
 				C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */,
 				C04561A227EA03B3007EC5C3 /* Model */,
-				C04561A027EA03AE007EC5C3 /* Presenter */,
 				79434A652809129A006D0184 /* Scenes */,
 				79E6424B27F098C10046A2F0 /* Service */,
 				C045619F27EA03AB007EC5C3 /* SystemDelegate */,
@@ -561,18 +568,9 @@
 			path = SystemDelegate;
 			sourceTree = "<group>";
 		};
-		C04561A027EA03AE007EC5C3 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				C05AA2C727FC749E00230698 /* TarBarPresenter.swift */,
-			);
-			name = Presenter;
-			sourceTree = "<group>";
-		};
 		C04561A127EA03B1007EC5C3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7952058027FE382D00A89012 /* TabBarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -596,7 +594,6 @@
 			children = (
 				C04561AA27EA0428007EC5C3 /* AppCoordinator.swift */,
 				C04561A727EA041B007EC5C3 /* Coordinator.swift */,
-				C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -724,9 +721,9 @@
 				794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */,
 				79E838AC280B0676001C46AD /* ConfirmationAlertCoordinator.swift in Sources */,
 				7993C9AB281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift in Sources */,
-				79E838AC280B0676001C46AD /* OneButtonAlertCoordinator.swift in Sources */,
+				79E838AC280B0676001C46AD /* ConfirmationAlertCoordinator.swift in Sources */,
 				C00E5F2D2811DECC00E8C71C /* ChangePasswordCoordinator.swift in Sources */,
-				7993C9AB281031F700526AF2 /* TwoBigButtonsAlertViewController.swift in Sources */,
+				7993C9AB281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift in Sources */,
 				79E838A9280AFD03001C46AD /* SendFileCoordinator.swift in Sources */,
 				7993C9B628104C6D00526AF2 /* LogoutAlertPresenter.swift in Sources */,
 				79222EA327F643D60051334A /* CircleProgressView.swift in Sources */,
@@ -765,7 +762,7 @@
 				7952058327FE394900A89012 /* ProjectSheetView.swift in Sources */,
 				C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */,
 				C057E8E92807941C004E44C3 /* AvatarSelectionView.swift in Sources */,
-				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
+				799768D027EA3B5F0057AFA7 /* StudentModel.swift in Sources */,
 				C00E5F3E2811DEFF00E8C71C /* ChangePasswordView.swift in Sources */,
 				795005AA2811E74D009C3716 /* Task.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* StudentModel.swift in Sources */,
@@ -781,7 +778,6 @@
 				795A02192809B695000D0B84 /* ProjectSheetCoordinator.swift in Sources */,
 				79A4B75628124214002C018C /* HomeNewsViewController.swift in Sources */,
 				7910D9D227FD0B8300A8DDA0 /* UIFont+Extension.swift in Sources */,
-				C05AA2C827FC749E00230698 /* TarBarPresenter.swift in Sources */,
 				79AF90FB28043DEA0094AB97 /* StudentProjectDetailPresenter.swift in Sources */,
 				79A2C779280C587F00B3159B /* ProjectScheduleView.swift in Sources */,
 				79A4FCD1280E58B900B509FE /* UIStackView+Extension.swift in Sources */,
