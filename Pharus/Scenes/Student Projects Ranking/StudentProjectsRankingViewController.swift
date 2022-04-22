@@ -10,11 +10,12 @@ class StudentRankingProjectsViewController: UIViewController {
     
     // MARK: - Properties
     
-    let tableView = UITableView()
+    private let tableView = UITableView()
     private var coordinator: StudentProjectsRankingCoordinator
     private var student: StudentModel
     private var projects: [ProjectModel]
-    private var filterdProjects: [ProjectModel]
+    
+    //MARK: - Initializer
     
     init(
         coordinator: StudentProjectsRankingCoordinator,
@@ -22,16 +23,21 @@ class StudentRankingProjectsViewController: UIViewController {
     ) {
         self.coordinator = coordinator
         self.student = student
-        
-        projects = student.projects.filter({ $0.placement != nil })
-        
-        filterdProjects = projects
+        self.projects = student.projects.filter({ $0.placement != nil })
         
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Life Cycle
+    
+    override func loadView() {
+        super.loadView()
+        
+        tableView.backgroundColor = .clear
     }
     
     override func viewDidLoad() {
@@ -41,20 +47,6 @@ class StudentRankingProjectsViewController: UIViewController {
         
         view.addSubview(tableView)
         setupTableView()
-        
-        student = Bundle.main.decode("Student.json")
-        projects = student.projects
-    }
-    
-    override func loadView() {
-        super.loadView()
-        
-        tableView.backgroundColor = .clear
-    }
-    
-    func setNavigationBar() {
-        self.title = "Seus Rankings"
-        self.navigationController?.title = ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,7 +55,14 @@ class StudentRankingProjectsViewController: UIViewController {
         setGradientBackground()
     }
     
-    func setupTableView() {
+    //MARK: - Actions
+    
+    private func setNavigationBar() {
+        self.title = "Seus Rankings"
+        self.navigationController?.title = ""
+    }
+    
+    private func setupTableView() {
         tableView.register(StudentProjectRankingCell.self,
                            forCellReuseIdentifier: K.CellReuseIdentifiers.userRankingProjects)
         
@@ -85,12 +84,8 @@ class StudentRankingProjectsViewController: UIViewController {
 
 extension StudentRankingProjectsViewController: UITableViewDataSource {
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        502
-//    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        filterdProjects.count
+        projects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,7 +94,7 @@ extension StudentRankingProjectsViewController: UITableViewDataSource {
             for: indexPath
         ) as! StudentProjectRankingCell
         
-        let project = filterdProjects[indexPath.row]
+        let project = projects[indexPath.row]
         
         cell.configureCell(using: project)
         cell.mainView.layer.cornerRadius = 16

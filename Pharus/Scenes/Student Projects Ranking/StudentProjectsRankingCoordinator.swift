@@ -7,17 +7,20 @@
 
 import UIKit
 
-protocol StudentProjectsRankingFlow {
-    func start()
-}
-
 class StudentProjectsRankingCoordinator: Coordinator {
+    
+    //MARK: - Properties
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     private var student: StudentModel
     
-    init(navigationController: UINavigationController, student: StudentModel) {
+    //MARK: - Initializer
+    
+    init(
+        navigationController: UINavigationController,
+        student: StudentModel
+    ) {
         self.navigationController = navigationController
         self.student = student
     }
@@ -32,13 +35,5 @@ class StudentProjectsRankingCoordinator: Coordinator {
             studentProjectsRankingViewController,
             animated: true
         )
-    }
-}
-
-extension StudentProjectsRankingCoordinator: StudentProjectsRankingFlow {
-    
-    func showUserProjectsRanking() {
-       
-        
     }
 }
