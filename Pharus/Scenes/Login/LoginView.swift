@@ -90,12 +90,13 @@ class LoginView: UIView {
         textField.attributedPlaceholder = NSAttributedString(
             string: "antonia.ferreira@gmail.com",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        textField.textColor = .black
         textField.font = .smallBody
         textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         textField.layer.shadowOpacity = 0.30
         textField.layer.shadowRadius = 0.0
-        textField.backgroundColor = UIColor.white
+        textField.backgroundColor = .white
         textField.autocorrectionType = .no
         textField.autocapitalizationType = .none
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -132,12 +133,13 @@ class LoginView: UIView {
         textField.attributedPlaceholder = NSAttributedString(
             string: "Senha",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        textField.textColor = .black
         textField.font = .smallBody
         textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         textField.layer.shadowOpacity = 0.30
         textField.layer.shadowRadius = 0.0
-        textField.backgroundColor = UIColor.white
+        textField.backgroundColor = .white
         textField.autocorrectionType = .no
         textField.autocapitalizationType = .none
         textField.isSecureTextEntry = true
