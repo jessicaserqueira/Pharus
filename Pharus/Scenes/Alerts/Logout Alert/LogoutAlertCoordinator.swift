@@ -18,7 +18,7 @@ class LogoutAlertCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var alertView: LogoutAlertView
+    private var alertView: LogoutAlertView
     
     //MARK: - Initializer
     

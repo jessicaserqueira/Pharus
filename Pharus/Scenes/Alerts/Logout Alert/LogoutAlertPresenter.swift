@@ -16,7 +16,7 @@ class LogoutAlertPresenter: LogoutAlertPresenterProtocol {
     
     //MARK: - Properties
     
-    var coordinator: LogoutAlertCoordinator
+    private var coordinator: LogoutAlertCoordinator
     
     //MARK: - Initializer
     

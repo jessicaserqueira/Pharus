@@ -25,7 +25,7 @@ class ProjectSubcriptionAlertView: UIView {
     
     //MARK: - Views
     
-    lazy var blurEffectView: UIVisualEffectView = {
+    private lazy var blurEffectView: UIVisualEffectView = {
         let blurEffect = UIBlurEffect(style: .light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = bounds
@@ -34,7 +34,7 @@ class ProjectSubcriptionAlertView: UIView {
         return blurEffectView
     }()
     
-    lazy var mainView: UIView = {
+    private lazy var mainView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.modal.yellowBackground
         view.layer.cornerRadius = 16
@@ -44,7 +44,7 @@ class ProjectSubcriptionAlertView: UIView {
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 24
@@ -54,7 +54,7 @@ class ProjectSubcriptionAlertView: UIView {
         return stackView
     }()
     
-    lazy var titleStackView: UIStackView = {
+    private lazy var titleStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ProjectSubcriptionAlertView.titleStackView"
@@ -62,7 +62,7 @@ class ProjectSubcriptionAlertView: UIView {
         return stackView
     }()
     
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.largeTitleSemiBold
         label.text = "Confirmar Inscrição"
@@ -73,7 +73,7 @@ class ProjectSubcriptionAlertView: UIView {
         return label
     }()
     
-    lazy var closeModalButton: UIButton = {
+    private lazy var closeModalButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage.icons.xmarkIcon, for: .normal)
         button.addAction(UIAction { _ in
@@ -85,7 +85,7 @@ class ProjectSubcriptionAlertView: UIView {
         return button
     }()
     
-    lazy var descriptionLabel: UILabel = {
+    private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = .mediumBody
         label.text = "Você deseja se inscrever no projeto \"Algoritmo no seu dia?\""
@@ -97,7 +97,7 @@ class ProjectSubcriptionAlertView: UIView {
         return label
     }()
     
-    lazy var primaryButton: MainCardButton = {
+    private lazy var primaryButton: MainCardButton = {
         let button = MainCardButton(title: "Sim, quero me inscrever", buttonState: .normal)
         button.addAction(UIAction { _ in
             self.primaryButtonTapped()
@@ -108,7 +108,7 @@ class ProjectSubcriptionAlertView: UIView {
         return button
     }()
     
-    lazy var secondaryButton: SecondaryCardButton = {
+    private lazy var secondaryButton: SecondaryCardButton = {
         let button = SecondaryCardButton(title: "Não quero, mudei de ideia")
         button.addAction( UIAction { _ in
             self.secondaryButtonTapped()

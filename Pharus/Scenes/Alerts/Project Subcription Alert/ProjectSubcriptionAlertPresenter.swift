@@ -16,7 +16,7 @@ class ProjectSubcriptionAlertPresenter: ProjectSubcriptionPresenterProtocol {
     
     //MARK: - Properties
     
-    var coordinator: ProjectSubcriptionAlertCoordinator
+    private var coordinator: ProjectSubcriptionAlertCoordinator
     
     //MARK: - Initializer
     

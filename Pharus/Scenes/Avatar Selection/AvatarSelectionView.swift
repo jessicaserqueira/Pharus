@@ -24,6 +24,7 @@ class AvatarSelectionView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentAvatarView.mainView"
+        
         return view
     }()
     

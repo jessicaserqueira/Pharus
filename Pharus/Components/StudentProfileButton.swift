@@ -36,7 +36,7 @@ class StudentProfileButton: UIButton {
     
     //MARK: - Subviews
     
-    func configureSubviews() {
+    private func configureSubviews() {
         self.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
         self.layer.cornerRadius = 0.5 * self.bounds.size.width
         self.clipsToBounds = true

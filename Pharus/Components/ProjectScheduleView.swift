@@ -18,7 +18,7 @@ class ProjectScheduleView: UIView {
     
     //MARK: - Views
     
-    lazy var mainView: UIView = {
+    private lazy var mainView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "ProjectScheduleView.mainView"
@@ -27,7 +27,7 @@ class ProjectScheduleView: UIView {
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 10
@@ -37,7 +37,7 @@ class ProjectScheduleView: UIView {
         return stackView
     }()
     
-    lazy var iconHelperView: UIView = {
+    private lazy var iconHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "ProjectScheduleView.iconHelperView"
@@ -45,7 +45,7 @@ class ProjectScheduleView: UIView {
         return view
     }()
     
-    lazy var iconImageView: UIImageView = {
+    private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.icons.clockIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +54,7 @@ class ProjectScheduleView: UIView {
         return imageView
     }()
     
-    lazy var textLabel: UILabel = {
+    private lazy var textLabel: UILabel = {
         let label = UILabel()
         label.text = "20 dias"
         label.font = UIFont.mediumBodyBold
@@ -92,7 +92,7 @@ class ProjectScheduleView: UIView {
     
     //MARK: - Subviews
     
-    func configureSubviews() {
+    private func configureSubviews() {
         addSubview(mainView)
         
         mainView.addSubview(mainStackView)
@@ -104,7 +104,7 @@ class ProjectScheduleView: UIView {
         mainStackView.addArrangedSubview(textLabel)
     }
     
-    func customizeSubviews() {
+    private func customizeSubviews() {
         
         if project.isComplete {
             iconImageView.image = UIImage.icons.checkIcon?.withTintColor(.black)
@@ -137,7 +137,7 @@ class ProjectScheduleView: UIView {
     
     //MARK: - Constraints
     
-    func setupConstraints() {
+    private func setupConstraints() {
         //Main View
         self.stretch(mainView)
         

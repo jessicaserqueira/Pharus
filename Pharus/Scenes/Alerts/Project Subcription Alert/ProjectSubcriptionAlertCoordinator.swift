@@ -17,8 +17,8 @@ class ProjectSubcriptionAlertCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var alertView: ProjectSubcriptionAlertView
-    var project: ProjectModel
+    private var alertView: ProjectSubcriptionAlertView
+    private var project: ProjectModel
     
     //MARK: - Initializer
     

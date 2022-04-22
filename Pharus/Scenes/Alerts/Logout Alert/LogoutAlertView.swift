@@ -20,7 +20,7 @@ class LogoutAlertView: UIView {
     
     //MARK: - Views
     
-    lazy var blurEffectView: UIVisualEffectView = {
+    private lazy var blurEffectView: UIVisualEffectView = {
         let blurEffect = UIBlurEffect(style: .light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = bounds
@@ -29,7 +29,7 @@ class LogoutAlertView: UIView {
         return blurEffectView
     }()
     
-    lazy var mainView: UIView = {
+    private lazy var mainView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
         view.backgroundColor = UIColor.modal.yellowBackground
@@ -39,7 +39,7 @@ class LogoutAlertView: UIView {
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -48,7 +48,7 @@ class LogoutAlertView: UIView {
         return stackView
     }()
     
-    lazy var logoutIconHelperView: UIView = {
+    private lazy var logoutIconHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "LogoutAlertViewDelegate.logoutIconHelperView"
@@ -56,7 +56,7 @@ class LogoutAlertView: UIView {
         return view
     }()
     
-    lazy var logoutIconImageView: UIImageView = {
+    private lazy var logoutIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.icons.logOutIcon?.withTintColor(.black)
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -65,7 +65,7 @@ class LogoutAlertView: UIView {
         return imageView
     }()
     
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Deseja sair da sua conta?"
         label.textAlignment = .center
@@ -77,7 +77,7 @@ class LogoutAlertView: UIView {
         return label
     }()
     
-    lazy var buttonStackView: UIStackView = {
+    private lazy var buttonStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 39
@@ -88,7 +88,7 @@ class LogoutAlertView: UIView {
         return stackView
     }()
     
-    lazy var primaryButton: SmallAlertButton = {
+    private lazy var primaryButton: SmallAlertButton = {
         let button = SmallAlertButton(
             title: "Sair",
             importance: .primary
@@ -102,7 +102,7 @@ class LogoutAlertView: UIView {
         return button
     }()
     
-    lazy var secondaryButton: SmallAlertButton = {
+    private lazy var secondaryButton: SmallAlertButton = {
         let button = SmallAlertButton(
             title: "Cancelar",
             importance: .secondary
@@ -131,7 +131,7 @@ class LogoutAlertView: UIView {
     
     //MARK: - Subviews
     
-    func configureSubviews() {        
+    private func configureSubviews() {
         addSubview(blurEffectView)
         addSubview(mainView)
         
@@ -150,7 +150,7 @@ class LogoutAlertView: UIView {
     
     //MARK: - Constraints
     
-    func setupConstraints() {
+    private func setupConstraints() {
         //Main View
         NSLayoutConstraint.activate([
             mainView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),

@@ -17,7 +17,7 @@ class ConfirmationAlertCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var alertView: ConfirmationAlertView
+    private var alertView: ConfirmationAlertView
     
     //MARK: - Initializer
     

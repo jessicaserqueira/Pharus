@@ -50,7 +50,7 @@ class SmallAlertButton: UIButton {
     
     //MARK: - Subviews
     
-    func configureSubviews() {
+    private func configureSubviews() {
         setTitle(title, for: .normal)
         layer.borderWidth = 2
         layer.borderColor = UIColor.purple.pharusPurple.cgColor
@@ -67,7 +67,7 @@ class SmallAlertButton: UIButton {
     
     //MARK: - Constraints
     
-    func setupConstraints() {
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             self.heightAnchor.constraint(equalToConstant: 32)
         ])

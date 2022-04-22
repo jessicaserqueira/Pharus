@@ -101,6 +101,7 @@ class AvatarSelectionViewController: UIViewController {
     }
 }
 
+//MARK: - UI Collection View Data Source
 extension AvatarSelectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         UIImage.images.avatars.circleImage.avatars.count
@@ -119,6 +120,8 @@ extension AvatarSelectionViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
+//MARK: - UI Collection View Delegate
 
 extension AvatarSelectionViewController: UICollectionViewDelegate {
     

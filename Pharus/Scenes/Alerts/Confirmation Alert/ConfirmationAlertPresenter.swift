@@ -15,7 +15,7 @@ class ConfirmationAlertPresenter: ConfirmationAlertPresenterProtocol {
     
     //MARK: - Properties
     
-    var coordinator: ConfirmationAlertCoordinator
+    private var coordinator: ConfirmationAlertCoordinator
     
     //MARK: - Initializer
     

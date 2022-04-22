@@ -20,7 +20,7 @@ class StudentHomeMiniCardView: UIView {
     
     //MARK: - Views
     
-    lazy var mainView: UIView = {
+    private lazy var mainView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +29,7 @@ class StudentHomeMiniCardView: UIView {
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 15
@@ -39,7 +39,7 @@ class StudentHomeMiniCardView: UIView {
         return stackView
     }()
     
-    lazy var cardIconHelperView: UIView = {
+    private lazy var cardIconHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeMiniCardView.cardIconHelperView"
@@ -47,7 +47,7 @@ class StudentHomeMiniCardView: UIView {
         return view
     }()
     
-    lazy var cardIconImageView: UIImageView = {
+    private lazy var cardIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.images.fifthPlaceMedalImage
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +56,7 @@ class StudentHomeMiniCardView: UIView {
         return imageView
     }()
     
-    lazy var cardDescriptionHelperView: UIView = {
+    private lazy var cardDescriptionHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeMiniCardView.cardDescriptionHelperView"
@@ -64,7 +64,7 @@ class StudentHomeMiniCardView: UIView {
         return view
     }()
     
-    lazy var cardDescriptionLabel: UILabel = {
+    private lazy var cardDescriptionLabel: UILabel = {
         let label = UILabel()
         label.text = "O projeto ”Introdução a Robótica” te deu uma medalha!"
         label.textAlignment = .center
@@ -108,7 +108,7 @@ class StudentHomeMiniCardView: UIView {
     
     //MARK: - Subviews
     
-    func configureSubviews() {
+    private func configureSubviews() {
         addSubview(mainView)
         
         mainView.addSubview(mainStackView)
@@ -122,7 +122,7 @@ class StudentHomeMiniCardView: UIView {
         cardDescriptionHelperView.addSubview(cardDescriptionLabel)
     }
     
-    func customizeSubviews() {
+    private func customizeSubviews() {
         if cardType == .newProject {
             mainView.backgroundColor = UIColor.card.orangeHomeStandardCardBackground
             cardIconImageView.image = UIImage.icons.companyIcon
@@ -139,7 +139,7 @@ class StudentHomeMiniCardView: UIView {
     
     //MARK: - Constraints
     
-    func setupConstraints() {
+    private func setupConstraints() {
         //Main View
         self.stretch(mainView)
         
