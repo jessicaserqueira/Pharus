@@ -11,12 +11,12 @@ class TwoBigButtonsAlertViewController: UIViewController {
     
     private var alertView: ProjectSubcriptionAlertView
     private var coordinator: ProjectSubcriptionAlertCoordinator
-    private var presenter: TwoBigButtonsAlertPresenter
+    private var presenter: ProjectSubcriptionAlertPresenter
     
     init(
         alertView: ProjectSubcriptionAlertView,
         coordinator: ProjectSubcriptionAlertCoordinator,
-        presenter: TwoBigButtonsAlertPresenter
+        presenter: ProjectSubcriptionAlertPresenter
     ) {
 
         self.alertView = alertView

@@ -39,7 +39,7 @@
 		7993C9A728102C2500526AF2 /* ProjectSubcriptionAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */; };
 		7993C9A928102E1800526AF2 /* SecondaryCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */; };
 		7993C9AB281031F700526AF2 /* TwoBigButtonsAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9AA281031F700526AF2 /* TwoBigButtonsAlertViewController.swift */; };
-		7993C9AD28103CAB00526AF2 /* TwoBigButtonsAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9AC28103CAB00526AF2 /* TwoBigButtonsAlertPresenter.swift */; };
+		7993C9AD28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9AC28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift */; };
 		7993C9AF28103CD500526AF2 /* ProjectSubcriptionAlertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9AE28103CD500526AF2 /* ProjectSubcriptionAlertCoordinator.swift */; };
 		7993C9B228104C5800526AF2 /* LogoutAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9B128104C5800526AF2 /* LogoutAlertView.swift */; };
 		7993C9B428104C6400526AF2 /* LogoutAlertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9B328104C6400526AF2 /* LogoutAlertCoordinator.swift */; };
@@ -147,7 +147,7 @@
 		7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSubcriptionAlertView.swift; sourceTree = "<group>"; };
 		7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryCardButton.swift; sourceTree = "<group>"; };
 		7993C9AA281031F700526AF2 /* TwoBigButtonsAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBigButtonsAlertViewController.swift; sourceTree = "<group>"; };
-		7993C9AC28103CAB00526AF2 /* TwoBigButtonsAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBigButtonsAlertPresenter.swift; sourceTree = "<group>"; };
+		7993C9AC28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSubcriptionAlertPresenter.swift; sourceTree = "<group>"; };
 		7993C9AE28103CD500526AF2 /* ProjectSubcriptionAlertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSubcriptionAlertCoordinator.swift; sourceTree = "<group>"; };
 		7993C9B128104C5800526AF2 /* LogoutAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutAlertView.swift; sourceTree = "<group>"; };
 		7993C9B328104C6400526AF2 /* LogoutAlertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutAlertCoordinator.swift; sourceTree = "<group>"; };
@@ -351,7 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */,
-				7993C9AC28103CAB00526AF2 /* TwoBigButtonsAlertPresenter.swift */,
+				7993C9AC28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift */,
 				7993C9AA281031F700526AF2 /* TwoBigButtonsAlertViewController.swift */,
 				7993C9AE28103CD500526AF2 /* ProjectSubcriptionAlertCoordinator.swift */,
 			);
@@ -735,7 +735,7 @@
 				C01BB6C5280B8C9C004D4790 /* StudentProfileViewController.swift in Sources */,
 				C05AA2F527FFA66D00230698 /* OneButtonAlertView.swift in Sources */,
 				C01BB6C1280B8C84004D4790 /* StudenteProfileView.swift in Sources */,
-				7993C9AD28103CAB00526AF2 /* TwoBigButtonsAlertPresenter.swift in Sources */,
+				7993C9AD28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift in Sources */,
 				795005AC2811E75A009C3716 /* Project.swift in Sources */,
 				7993C9B428104C6400526AF2 /* LogoutAlertCoordinator.swift in Sources */,
 				79AF90F728043A590094AB97 /* SendFileView.swift in Sources */,
