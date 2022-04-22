@@ -146,6 +146,20 @@ extension UIImage {
             }
             
         }
+        
+        struct companies {
+            static let ioasysLogoImage = UIImage(named: K.Assets.Images.Company.ioasysLogoImage)
+            static let dupeLogoImage = UIImage(named: K.Assets.Images.Company.dupeLogoImage)
+            static let havaianasLogoImage = UIImage(
+                named: K.Assets.Images.Company.havaianasLogoImage
+            )
+            static let alpargatasLogoImage = UIImage(
+                named: K.Assets.Images.Company.alpargatasLogoImage
+            )
+            static let osklenLogoImage = UIImage(
+                named: K.Assets.Images.Company.osklenLogoImage
+            )
+        }
         static let firstPlaceImage = UIImage(named: K.Assets.Images.firstPlaceImage)
         static let secondPlaceImage = UIImage(named: K.Assets.Images.secondPlaceImage)
         static let thirdPlaceImage = UIImage(named: K.Assets.Images.thirdPlaceImage)
@@ -158,7 +172,6 @@ extension UIImage {
         static let fourthPlaceMedalImage = UIImage(named: K.Assets.Images.fourthPlaceMedalImage)
         static let fifthPlaceMedalImage = UIImage(named: K.Assets.Images.fifthPlaceMedalImage)
         
-        static let companyLogoImage = UIImage(named: K.Assets.Images.companyLogoImage)
         static let appLogoImage = UIImage(named: K.Assets.Images.appLogoImage)
     }
 }

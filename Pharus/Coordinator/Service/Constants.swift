@@ -115,7 +115,15 @@ struct K {
                     static let suffix = "CircleImage"
                 }
             }
-            static let companyLogoImage = "companyLogoImage"
+            
+            struct Company {
+                static let havaianasLogoImage = "havaianasLogoImage"
+                static let ioasysLogoImage = "ioasysLogoImage"
+                static let osklenLogoImage = "osklenLogoImage"
+                static let dupeLogoImage = "dupéLogoImage"
+                static let alpargatasLogoImage = "alpargatasLogoImage"
+            }
+            
             static let appLogoImage = "PharusImage"
             
             static let firstPlaceImage = "1stPlaceImage"
