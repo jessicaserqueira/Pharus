@@ -11,7 +11,7 @@ class StudentProfileView: UIView {
     
     //MARK: - Views
     
-    lazy var mainScrollView: UIScrollView = {
+    private lazy var mainScrollView: UIScrollView = {
         var scrollView = UIScrollView()
         scrollView.clipsToBounds = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,7 +19,7 @@ class StudentProfileView: UIView {
         return scrollView
     }()
     
-    lazy var mainView: UIView = {
+    private lazy var mainView: UIView = {
         let view = UIView()
         view.backgroundColor = .red
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +28,7 @@ class StudentProfileView: UIView {
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 88
@@ -38,7 +38,7 @@ class StudentProfileView: UIView {
         return stackView
     }()
     
-    lazy var profileImageHelperView: UIView = {
+    private lazy var profileImageHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProfileView.profileImageHelperView"
@@ -56,14 +56,14 @@ class StudentProfileView: UIView {
         return imageView
     }()
     
-    lazy var infoHelperView: UIView = {
+    private lazy var infoHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProfileView.infoHelperView"
         return view
     }()
     
-    lazy var infoStackView: UIStackView = {
+    private lazy var infoStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 40
@@ -80,7 +80,7 @@ class StudentProfileView: UIView {
         configureSubviews(with: student)
         setupConstraints()
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
@@ -90,7 +90,7 @@ class StudentProfileView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Subviews Configuration
+    //MARK: - Subviews
     
     func configureSubviews(with student: StudentModel) {
         addSubview(mainScrollView)
@@ -140,7 +140,7 @@ class StudentProfileView: UIView {
     func setupConstraints() {
         //Main Scroll View
         self.stretch(mainScrollView)
-          
+        
         //Main Stack View
         self.stretch(mainStackView, to: mainScrollView, top: 30, bottom: -26)
         NSLayoutConstraint.activate([

@@ -8,10 +8,14 @@ import UIKit
 
 class StudentProjectDetailViewController: UIViewController {
     
+    //MARK: - Properties
+    
     private var project: ProjectModel
     private var presenter: StudentProjectDetailPresenter
     private var coordinator: StudentProjectDetailCoordinator
     private var studentProjectDetailView: StudentProjectDetailView
+    
+    //MARK: - Initializer
     
     init(
         coordinator: StudentProjectDetailCoordinator,
@@ -30,11 +34,7 @@ class StudentProjectDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setNavigationBar()
-    }
+    //MARK: - Life Cycle
     
     override func loadView() {
         super.loadView()
@@ -43,11 +43,19 @@ class StudentProjectDetailViewController: UIViewController {
         self.view = studentProjectDetailView
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setNavigationBar()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         setGradientBackground()
     }
+    
+    //MARK: - Actions
     
     func setNavigationBar() {
         self.title = project.name
@@ -70,6 +78,8 @@ class StudentProjectDetailViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 }
+
+//MARK: - Student Project Detail View Delegate
 
 extension StudentProjectDetailViewController: StudentProjectDetailViewDelegate {
     func envelopeIconTapped() {

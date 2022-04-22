@@ -9,10 +9,14 @@ import UIKit
 
 class StutentProfileViewController: UIViewController {
     
-    var coordinator: StudentProfileCoordinator
-    var studentProfileView: StudentProfileView
-    var presenter: StudentProfilePresenter
-    var student: StudentModel
+    //MARK: - Properties
+    
+    private var coordinator: StudentProfileCoordinator
+    private var studentProfileView: StudentProfileView
+    private var presenter: StudentProfilePresenter
+    private var student: StudentModel
+    
+    //MARK: - Initializer
     
     init(
         coordinator: StudentProfileCoordinator,
@@ -27,6 +31,12 @@ class StutentProfileViewController: UIViewController {
         
         super.init(nibName: nil, bundle: nil)
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Life Cycle
     
     override func loadView() {
         super.loadView()
@@ -46,10 +56,8 @@ class StutentProfileViewController: UIViewController {
         setGradientBackground()
         showStudentAvatar()
     }
-        
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    
+    //MARK: - Actions
     
     func showStudentAvatar() {
         studentProfileView.profileImageView.image = UIImage(
@@ -60,7 +68,7 @@ class StutentProfileViewController: UIViewController {
     func setNavigationBar() {
         self.title = "Perfil"
         self.navigationController?.title = ""
-
+        
         let logoutIcon = UIImage.icons.logOutIcon?.withRenderingMode(.alwaysOriginal)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: logoutIcon,
@@ -70,7 +78,6 @@ class StutentProfileViewController: UIViewController {
         )
     }
     
-    //MARK: - Implementar
     @objc func logoutTapped() {
         presenter.showLogoutAlert()
     }
