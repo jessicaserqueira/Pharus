@@ -98,7 +98,7 @@
 		C05AA2BC27FC740E00230698 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */; };
 		C05AA2C827FC749E00230698 /* TarBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2C727FC749E00230698 /* TarBarPresenter.swift */; };
 		C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */; };
-		C05AA2F527FFA66D00230698 /* OneButtonAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F427FFA66D00230698 /* OneButtonAlertView.swift */; };
+		C05AA2F527FFA66D00230698 /* ConfirmationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F427FFA66D00230698 /* ConfirmationAlertView.swift */; };
 		C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F827FFA69800230698 /* MainCardButton.swift */; };
 		C05AA30327FFAA7400230698 /* ConfirmationAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA30227FFAA7400230698 /* ConfirmationAlertViewController.swift */; };
 		C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA30627FFAA9500230698 /* SendFileViewController.swift */; };
@@ -208,7 +208,7 @@
 		C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		C05AA2C727FC749E00230698 /* TarBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarBarPresenter.swift; sourceTree = "<group>"; };
 		C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingCoordinator.swift; sourceTree = "<group>"; };
-		C05AA2F427FFA66D00230698 /* OneButtonAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneButtonAlertView.swift; sourceTree = "<group>"; };
+		C05AA2F427FFA66D00230698 /* ConfirmationAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertView.swift; sourceTree = "<group>"; };
 		C05AA2F827FFA69800230698 /* MainCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
 		C05AA2FE27FFA6F300230698 /* SendFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileView.swift; sourceTree = "<group>"; };
 		C05AA30227FFAA7400230698 /* ConfirmationAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertViewController.swift; sourceTree = "<group>"; };
@@ -340,7 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				C05AA30227FFAA7400230698 /* ConfirmationAlertViewController.swift */,
-				C05AA2F427FFA66D00230698 /* OneButtonAlertView.swift */,
+				C05AA2F427FFA66D00230698 /* ConfirmationAlertView.swift */,
 				79E838AB280B0676001C46AD /* OneButtonAlertCoordinator.swift */,
 				79E838AD280B067D001C46AD /* OneButtonAlertPresenter.swift */,
 			);
@@ -733,7 +733,7 @@
 				795005AA2811E74D009C3716 /* Task.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* StudentModel.swift in Sources */,
 				C01BB6C5280B8C9C004D4790 /* StudentProfileViewController.swift in Sources */,
-				C05AA2F527FFA66D00230698 /* OneButtonAlertView.swift in Sources */,
+				C05AA2F527FFA66D00230698 /* ConfirmationAlertView.swift in Sources */,
 				C01BB6C1280B8C84004D4790 /* StudenteProfileView.swift in Sources */,
 				7993C9AD28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift in Sources */,
 				795005AC2811E75A009C3716 /* Project.swift in Sources */,

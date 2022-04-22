@@ -9,12 +9,12 @@ import UIKit
 
 class ConfirmationAlertViewController: UIViewController {
     
-    private var alertView: OneButtonAlertView
+    private var alertView: ConfirmationAlertView
     private var coordinator: OneButtonAlertCoordinator
     private var presenter: OneButtonAlertPresenter
     
     init(
-        alertView: OneButtonAlertView,
+        alertView: ConfirmationAlertView,
         coordinator: OneButtonAlertCoordinator,
         presenter: OneButtonAlertPresenter
     ) {
@@ -38,7 +38,7 @@ class ConfirmationAlertViewController: UIViewController {
     }
 }
 
-extension ConfirmationAlertViewController: OneButtonAlertViewDelegate {
+extension ConfirmationAlertViewController: ConfirmationAlertViewDelegate {
     func closeButtonTapped() {
         presenter.closeModal()
     }

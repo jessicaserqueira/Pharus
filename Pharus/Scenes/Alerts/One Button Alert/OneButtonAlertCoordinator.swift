@@ -15,9 +15,9 @@ class OneButtonAlertCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var alertView: OneButtonAlertView
+    var alertView: ConfirmationAlertView
     
-    init(navigationController: UINavigationController, alertView: OneButtonAlertView) {
+    init(navigationController: UINavigationController, alertView: ConfirmationAlertView) {
         self.navigationController = navigationController
         self.alertView = alertView
     }
