@@ -45,6 +45,10 @@ class SendFileViewController: UIViewController, UIDocumentPickerDelegate {
 //MARK: - Send File Delegate
 
 extension SendFileViewController: SendFileDelegate {
+    func closeButtonTapped() {
+        presenter.closeSheet()
+    }
+    
     func uploadButtonTapped() {
         let suportFiles: [UTType] = [
             .pdf,
@@ -56,6 +60,7 @@ extension SendFileViewController: SendFileDelegate {
             forOpeningContentTypes: suportFiles,
             asCopy: true
         )
+        
         controller.delegate = self
         controller.allowsMultipleSelection = false
         present(controller, animated: true, completion: nil)
@@ -75,8 +80,8 @@ extension SendFileViewController: SendFileDelegate {
     }
 }
 
-extension SendFileViewController: ConfirmationAlertViewDelegate {
-    func closeButtonTapped() {
-        self.dismiss(animated: true)
-    }
-}
+//extension SendFileViewController: ConfirmationAlertViewDelegate {
+//    func closeButtonTapped() {
+//        self.dismiss(animated: true)
+//    }
+//}

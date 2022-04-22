@@ -10,6 +10,7 @@ import UIKit
 protocol SendFileDelegate: AnyObject {
     func uploadButtonTapped()
     func sendFileButtonTapped()
+    func closeButtonTapped()
 }
 
 class SendFileView: UIView {
@@ -38,6 +39,14 @@ class SendFileView: UIView {
         return stackView
     }()
     
+    private lazy var titleStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "SendFileView.titleStackView"
+        
+        return stackView
+    }()
+    
     private lazy var titleHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +61,22 @@ class SendFileView: UIView {
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.titleLabel"
+        
         return label
+    }()
+    
+    lazy var closeSheetButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage.icons.xmarkIcon, for: .normal)
+        button.addAction(
+            UIAction { _ in
+                self.closeButtonTapped()
+            },
+            for: .touchUpInside
+        )
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = "SendFileView.closeSheetButton"
+        return button
     }()
     
     private lazy var descriptionLabel: UILabel = {
@@ -189,9 +213,13 @@ class SendFileView: UIView {
         
         mainView.addSubview(mainStackView)
         
-        mainStackView.addArrangedSubview(titleHelperView)
+        mainStackView.addArrangedSubview(titleStackView)
+        
+        titleStackView.addArrangedSubview(titleHelperView)
         
         titleHelperView.addSubview(titleLabel)
+        
+        titleStackView.addArrangedSubview(closeSheetButton)
         
         mainStackView.addArrangedSubview(descriptionLabel)
         mainStackView.addArrangedSubview(uploadFileHelperView)
@@ -229,9 +257,10 @@ class SendFileView: UIView {
             mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -25)
         ])
         
-        //Title Helper View
+        //Close Sheet Button
         NSLayoutConstraint.activate([
-            titleHelperView.heightAnchor.constraint(equalToConstant: 25)
+            closeSheetButton.heightAnchor.constraint(equalToConstant: 24),
+            closeSheetButton.widthAnchor.constraint(equalToConstant: 24)
         ])
         
         //Title Label
@@ -279,6 +308,10 @@ class SendFileView: UIView {
 //MARK: - Actions
 
 extension SendFileView: SendFileDelegate {
+    func closeButtonTapped() {
+        delegate?.closeButtonTapped()
+    }
+    
     func uploadButtonTapped() {
         delegate?.uploadButtonTapped()
     }
