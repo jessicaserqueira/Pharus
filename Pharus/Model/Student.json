@@ -19,7 +19,7 @@
             "isSubscribed": true,
             "isComplete": true,
             "score": 100,
-            "placement": 2,
+            "placement": 1,
             "description": "Design - uma maneira ou costume mais predominante em um determinado grupo em um determinado momento. É uma palavra muito usada para designar uma forma de se vestir que é comum para muitos ou apreciada por muitas pessoas.",
             "scoreDescription": "Fico feliz pelo seu empenho e trabalho executado em disciplina que não temos em nossa grade curricular. O trabalho entregue está no caminho certo, e você tem um grande potencial para área de tecnologia. Busque complementar seu conhecimento na área do projeto e terá um futuro brilhante!",
             "startDate": "05/09/2022",
@@ -207,7 +207,7 @@
             "isSubscribed": true,
             "isComplete": true,
             "score": 100,
-            "placement": 1,
+            "placement": 9,
             "description": "Um algoritmo é um conjunto finito de diretrizes que descrevem como executar uma tarefa. Isso significa que até mesmo algo tão simples quanto uma receita ou uma lista de direções para a casa podem ser entendidos como um algoritmo.",
             "scoreDescription": "Parabéns pela dedicação e tempo que dedicação no Projeto Algoritmos no seu dia.\nTarefas entregues com sucesso e seguindo toda a metodologia solicitada.\nContinue em sua caminhada de estudos!!!!\nTenha sempre confiança em seu trabalho.",
             "startDate": "05/12/2022",
@@ -237,6 +237,84 @@
                     "title": "Tarefa 04",
                     "isComplete": true,
                     "description": "Escrever um algoritmo com um amigo de turma sobre a rotina de parceria de amizade. Considera juntamente uma visão de futuro. Anexar tarefa 04 no aplicativo pharus."
+                }
+            ]
+        },
+        {
+            "id": "625bb56c91d14d76f0123wq",
+            "name": "Criando Avatar!",
+            "isSubscribed": true,
+            "isComplete": true,
+            "score": 100,
+            "placement": 5,
+            "description": "Com base nos conhecimentos de design, para este projeto vamos trabalhar criando Avatar. Um avatar na internet nada mais é do que a sua representação por meios virtuais. Você pode fazer isso criando uma animação de si mesmo com as suas principais características ou deixar sua mente livre.",
+            "scoreDescription": "Parabéns pela dedicação e tempo que dedicação no Projeto Algoritmos no seu dia.\nTarefas entregues com sucesso e seguindo toda a metodologia solicitada.\nContinue em sua caminhada de estudos!!!!\nTenha sempre confiança em seu trabalho.",
+            "startDate": "04/07/2022",
+            "endDate": "05/07/2022",
+            "school": "Escola Estadual João da Silva",
+            "mentor": "Alberto",
+            "hasCompanyPartnership": true,
+            "company": "ioasys",
+            "companyPhoto":"ioasys",
+            "tasks": [
+                {
+                    "title": "Tarefa 01",
+                    "isComplete": true,
+                    "description": "Faça uma dupla com seu amigo de turma, e conversem sobre o tema Avatar. Com base neste conversa façam Avatar um do outro, respeitando sempre o amigo de trabalho. Alinhe e faça um Avatar que possa trazer traços que considera legal em seu par de tarefa."
+                },
+                {
+                    "title": "Tarefa 02",
+                    "isComplete": true,
+                    "description": "Imagine uma escola de outro mundo... Com base nesta liberdade de pensamento, crie pelo menos 06 Avatares, e o ambiente escolar. Esta atividade será individual."
+                },
+                {
+                    "title": "Tarefa 03",
+                    "isComplete": true,
+                    "description": "Em casa, converse com algum família sobre o projeto, e peça a liberdade para criar um ou dois avatares de algum familiar. Lembrando, sempre com permissão e respeito."
+                },
+                {
+                    "title": "Tarefa 04",
+                    "isComplete": true,
+                    "description": " Imagine que você é um avatar do seu game favorito. Agora desenhe este Avatar em pelo menos dois ambientes criados conforme o game. Ah! não deixe de nos contar qual o seu game favorito."
+                }
+            ]
+        },
+        {
+            "id": "62501bb56c91d14d76f0123wq",
+            "name": "Rabisco em arte",
+            "isSubscribed": false,
+            "isComplete": false,
+            "score": null,
+            "placement": null,
+            "description": "Design - Um Disciplina que visa a criação de objetos, ambientes, obras gráficas, e ao mesmo tempo funcionais, estéticos e conformes aos imperativos de uma produção industrial.É uma atividade responsável pelo planejamento, criação e desenvolvimento de produtos e serviços.\n\nÉ um processo que busca soluções criativas e inovadoras para atender características dos produtos, necessidades do cliente e da empresa de forma sintonizada com as demandas e oportunidades do mercado.",
+            "scoreDescription": null,
+            "startDate": "06/06/2022",
+            "endDate": "30/06/2022",
+            "school": "Escola Estadual João da Silva",
+            "mentor": "Jess",
+            "hasCompanyPartnership": true,
+            "company": "havaianas",
+            "companyPhoto":"havaianas",
+            "tasks": [
+                {
+                    "title": "Tarefa 01",
+                    "isComplete": false,
+                    "description": "Utilizando os conhecimentos do minicurso de Algoritmo, rascunhe o processo de sua saída para a Escola, e com o conhecimento do estudo de design, faça uma arte deste processo. Anexar a tarefa 01 no aplicativo pharus."
+                },
+                {
+                    "title": "Tarefa 02",
+                    "isComplete": false,
+                    "description": "Converse com seus responsáveis familiares, e procure entender o que sabem sobre design. Faça uma arte de sua residência utilizando alguma ferramenta de design. Anexar no APP."
+                },
+                {
+                    "title": "Tarefa 03",
+                    "isComplete": false,
+                    "description": "Faça uma arte com base no seu ambiente escola, o qual imagine sendo parte de uma coleção da Havaianas. Tenha a sua mente livre, fique a vontade para elaborar o número de desenhos que sentir a liberdade de criar."
+                },
+                {
+                    "title": "Tarefa 04",
+                    "isComplete": false,
+                    "description": "Converse com seus famílias e amigos, e busque uma história do passado que tenha a Havaianas relacionada. Com base nesta conversa, crie uma arte para uma Coleção Memórias Havaianas."
                 }
             ]
         }
