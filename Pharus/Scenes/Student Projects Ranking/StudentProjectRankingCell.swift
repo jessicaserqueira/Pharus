@@ -75,7 +75,7 @@ class StudentProjectRankingCell: UITableViewCell {
     
     lazy var placementImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .images.thirdPlaceImage
+        imageView.image = UIImage.images.thirdPlaceImage
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentProjectCell.placementImageView"
         return imageView
@@ -83,7 +83,7 @@ class StudentProjectRankingCell: UITableViewCell {
     
     lazy var medalImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .images.thirdPlaceMedalImage
+        imageView.image = UIImage.images.thirdPlaceMedalImage
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentProjectCell.placementImageView"
         
@@ -193,20 +193,20 @@ class StudentProjectRankingCell: UITableViewCell {
     private func setPlacementImages(with project: ProjectModel) {
         switch project.placement {
         case 1:
-            placementImageView.image = .images.firstPlaceImage
-            medalImageView.image = .images.firstPlaceMedalImage
+            placementImageView.image = UIImage.images.firstPlaceImage
+            medalImageView.image = UIImage.images.firstPlaceMedalImage
         case 2:
-            placementImageView.image = .images.secondPlaceImage
-            medalImageView.image = .images.secondPlaceMedalImage
+            placementImageView.image = UIImage.images.secondPlaceImage
+            medalImageView.image = UIImage.images.secondPlaceMedalImage
         case 3:
-            placementImageView.image = .images.thirdPlaceImage
-            medalImageView.image = .images.thirdPlaceMedalImage
+            placementImageView.image = UIImage.images.thirdPlaceImage
+            medalImageView.image = UIImage.images.thirdPlaceMedalImage
         case 4:
-            placementImageView.image = .images.fourthPlaceImage
-            medalImageView.image = .images.fourthPlaceMedalImage
+            placementImageView.image = UIImage.images.fourthPlaceImage
+            medalImageView.image = UIImage.images.fourthPlaceMedalImage
         case 5:
-            placementImageView.image = .images.fifthPlaceImage
-            medalImageView.image = .images.fifthPlaceMedalImage
+            placementImageView.image = UIImage.images.fifthPlaceImage
+            medalImageView.image = UIImage.images.fifthPlaceMedalImage
         default:
             placementImageView.image = .none
             medalImageView.image = .none

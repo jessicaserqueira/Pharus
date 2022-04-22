@@ -23,7 +23,7 @@ class LogoutAlertView: UIView {
     lazy var mainView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 16
-        view.backgroundColor = .modal.yellowBackground
+        view.backgroundColor = UIColor.modal.yellowBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "LogoutAlertViewDelegate.mainView"
         return view

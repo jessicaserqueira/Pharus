@@ -11,6 +11,7 @@ protocol LoginPresenterProtocol {
     func isValidEmail(email: String) -> Bool
     func isValidPassword(password: String) -> Bool
     func loginUser(email: String, password: String)
+    func showChangePassword(email: String)
 }
 
 class LoginPresenter: LoginPresenterProtocol {
@@ -93,5 +94,9 @@ class LoginPresenter: LoginPresenterProtocol {
         )
         
         coordinator.showHome(student: studentModel)
+    }
+    func showChangePassword(email: String) {
+        let student: Student = Bundle.main.decode("Student.json")
+        coordinator.showChangePassword(student: student)
     }
 }
