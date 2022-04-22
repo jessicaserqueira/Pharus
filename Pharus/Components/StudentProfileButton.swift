@@ -11,7 +11,7 @@ class StudentProfileButton: UIButton {
     
     //MARK: - Properties
     
-   private var userImage: UIImage
+    private var userImage: UIImage
     
     //MARK: - Initializer
     
@@ -37,9 +37,9 @@ class StudentProfileButton: UIButton {
     //MARK: - Subviews
     
     func configureSubviews() {
-            self.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-            self.layer.cornerRadius = 0.5 * self.bounds.size.width
-            self.clipsToBounds = true
-            self.setImage(userImage, for: .normal)
+        self.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
+        self.layer.cornerRadius = 0.5 * self.bounds.size.width
+        self.clipsToBounds = true
+        self.setImage(userImage, for: .normal)
     }
 }

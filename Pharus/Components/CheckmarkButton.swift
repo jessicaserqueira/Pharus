@@ -8,7 +8,7 @@
 import UIKit
 
 class CheckmarkButton: UIButton {
-        
+    
     //MARK: - Initializer
     
     override init(frame: CGRect) {

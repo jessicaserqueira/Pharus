@@ -44,15 +44,7 @@ class MainCardButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func disable() {
-        self.isEnabled = false
-        self.buttonState = .disabled
-    }
-    
-    func enable() {
-        self.isEnabled = true
-        self.buttonState = .normal
-    }
+    //MARK: - Subviews
     
     private func configureSubviews() {
         setTitle(title, for: .normal)
@@ -63,7 +55,7 @@ class MainCardButton: UIButton {
         layer.cornerRadius = 16
     }
     
-    func setBackgroundColor() {
+    private func setBackgroundColor() {
         if buttonState == .normal {
             backgroundColor = UIColor.purple.pharusPurple
         } else {
@@ -75,5 +67,17 @@ class MainCardButton: UIButton {
     
     private func setupConstraints() {
         self.heightAnchor.constraint(equalToConstant: 56).isActive = true
+    }
+    
+    //MARK: - Actions
+    
+    func disable() {
+        self.isEnabled = false
+        self.buttonState = .disabled
+    }
+    
+    func enable() {
+        self.isEnabled = true
+        self.buttonState = .normal
     }
 }

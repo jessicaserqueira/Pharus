@@ -18,7 +18,7 @@ class SmallAlertButton: UIButton {
         case primary
         case secondary
     }
-        
+    
     //MARK: - Initializer
     
     convenience init(
@@ -64,7 +64,7 @@ class SmallAlertButton: UIButton {
             setTitleColor(UIColor.purple.pharusPurple, for: .normal)
         }
     }
-        
+    
     //MARK: - Constraints
     
     func setupConstraints() {
