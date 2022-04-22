@@ -9,6 +9,7 @@ import UIKit
 
 protocol LoginViewDelegate: AnyObject{
     func loginButtonPressed()
+    func changePasswordButtonTapped()
 }
 
 class LoginView: UIView {
@@ -144,6 +145,10 @@ class LoginView: UIView {
     
     lazy var changePasswordLabel: UILabel = {
         let label = UILabel()
+        label.setOnClickListener {
+            self.changePasswordButtonTapped()
+        }
+        label.isUserInteractionEnabled = true
         label.text = "Esqueci minha senha!"
         label.font = .miniBody
         label.textColor = UIColor.purple.pharusPurple
@@ -220,8 +225,11 @@ class LoginView: UIView {
 
 //MARK: - Actions
 
-extension LoginView {
+extension LoginView: LoginViewDelegate {
      func loginButtonPressed() {
          delegate?.loginButtonPressed()
      }
+    func changePasswordButtonTapped(){
+        delegate?.changePasswordButtonTapped()
+    }
 }

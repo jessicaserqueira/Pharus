@@ -82,6 +82,10 @@
 		C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */; };
 		C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */; };
 		C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF2327F1EDA100AD94C9 /* LoginView.swift */; };
+		C00E5F2D2811DECC00E8C71C /* ChangePasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E5F2C2811DECC00E8C71C /* ChangePasswordCoordinator.swift */; };
+		C00E5F382811DEEB00E8C71C /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E5F372811DEEB00E8C71C /* ChangePasswordPresenter.swift */; };
+		C00E5F3E2811DEFF00E8C71C /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E5F3D2811DEFF00E8C71C /* ChangePasswordView.swift */; };
+		C00E5F422811DF0E00E8C71C /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E5F412811DF0E00E8C71C /* ChangePasswordViewController.swift */; };
 		C01BB6BB280B8C73004D4790 /* StudentProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB6BA280B8C73004D4790 /* StudentProfileCoordinator.swift */; };
 		C01BB6C1280B8C84004D4790 /* StudenteProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB6C0280B8C84004D4790 /* StudenteProfileView.swift */; };
 		C01BB6C5280B8C9C004D4790 /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB6C4280B8C9C004D4790 /* StudentProfileViewController.swift */; };
@@ -190,6 +194,10 @@
 		C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoodinator.swift; sourceTree = "<group>"; };
 		C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C008AF2327F1EDA100AD94C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C00E5F2C2811DECC00E8C71C /* ChangePasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordCoordinator.swift; sourceTree = "<group>"; };
+		C00E5F372811DEEB00E8C71C /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
+		C00E5F3D2811DEFF00E8C71C /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		C00E5F412811DF0E00E8C71C /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		C01BB6BA280B8C73004D4790 /* StudentProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileCoordinator.swift; sourceTree = "<group>"; };
 		C01BB6C0280B8C84004D4790 /* StudenteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudenteProfileView.swift; sourceTree = "<group>"; };
 		C01BB6C4280B8C9C004D4790 /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +244,7 @@
 		79434A652809129A006D0184 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C00E5F2B2811DE9200E8C71C /* Change Password */,
 				795A021A2809F345000D0B84 /* Alerts */,
 				79434A6928091491006D0184 /* Avatar Selection */,
 				79434A66280912A8006D0184 /* Login */,
@@ -471,6 +480,17 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		C00E5F2B2811DE9200E8C71C /* Change Password */ = {
+			isa = PBXGroup;
+			children = (
+				C00E5F2C2811DECC00E8C71C /* ChangePasswordCoordinator.swift */,
+				C00E5F372811DEEB00E8C71C /* ChangePasswordPresenter.swift */,
+				C00E5F3D2811DEFF00E8C71C /* ChangePasswordView.swift */,
+				C00E5F412811DF0E00E8C71C /* ChangePasswordViewController.swift */,
+			);
+			path = "Change Password";
+			sourceTree = "<group>";
+		};
 		C01BB6B9280B8C41004D4790 /* Student Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -692,6 +712,7 @@
 				79A2C775280C473F00B3159B /* SubscribeButton.swift in Sources */,
 				794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */,
 				79E838AC280B0676001C46AD /* OneButtonAlertCoordinator.swift in Sources */,
+				C00E5F2D2811DECC00E8C71C /* ChangePasswordCoordinator.swift in Sources */,
 				7993C9AB281031F700526AF2 /* TwoBigButtonsAlertViewController.swift in Sources */,
 				79E838A9280AFD03001C46AD /* SendFileCoordinator.swift in Sources */,
 				7993C9B628104C6D00526AF2 /* LogoutAlertPresenter.swift in Sources */,
@@ -700,6 +721,7 @@
 				79E838A3280AF804001C46AD /* StudentHomeView.swift in Sources */,
 				79C577D227FBBB9800046B00 /* StudentProjectsRankingViewController.swift in Sources */,
 				C057E8F52807954B004E44C3 /* AvatarSelectionCoordinator.swift in Sources */,
+				C00E5F382811DEEB00E8C71C /* ChangePasswordPresenter.swift in Sources */,
 				7993C9BA28104E7400526AF2 /* SmallAlertButton.swift in Sources */,
 				C05AA30327FFAA7400230698 /* OneButtonAlertViewController.swift in Sources */,
 				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
@@ -730,6 +752,8 @@
 				7952058327FE394900A89012 /* ProjectSheetView.swift in Sources */,
 				C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */,
 				C057E8E92807941C004E44C3 /* AvatarSelectionView.swift in Sources */,
+				799768D027EA3B5F0057AFA7 /* Student.swift in Sources */,
+				C00E5F3E2811DEFF00E8C71C /* ChangePasswordView.swift in Sources */,
 				795005AA2811E74D009C3716 /* Task.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* StudentModel.swift in Sources */,
 				C01BB6C5280B8C9C004D4790 /* StudentProfileViewController.swift in Sources */,
@@ -752,6 +776,7 @@
 				79A2C777280C4A1700B3159B /* MainCardButton.swift in Sources */,
 				7952058527FE3B1A00A89012 /* ProjectSheetViewController.swift in Sources */,
 				79E838A5280AF82C001C46AD /* StudentHomeViewController.swift in Sources */,
+				C00E5F422811DF0E00E8C71C /* ChangePasswordViewController.swift in Sources */,
 				7943975E27F3C6020075102B /* StudentProjectCell.swift in Sources */,
 				79C577D027FBBB8100046B00 /* StudentProjectRankingCell.swift in Sources */,
 				79E838AE280B067D001C46AD /* OneButtonAlertPresenter.swift in Sources */,

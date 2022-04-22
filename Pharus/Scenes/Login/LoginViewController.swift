@@ -63,6 +63,11 @@ extension LoginViewController: LoginViewDelegate {
         
         presenter.loginUser(email: email, password: password)
     }
+    func changePasswordButtonTapped() {
+        guard let email = customView.emailTextField.text else { return }
+        presenter.showChangePassword(email: email)
+    }
+    
 }
 
 

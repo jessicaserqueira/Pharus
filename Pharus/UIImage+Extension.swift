@@ -46,7 +46,7 @@ extension UIImage {
         struct avatars {
             
             static let avatarsDict: [UIImage : UIImage] = [
-                (.images.avatars.circleImage.avatar1 ?? .defaultImage) : .images.avatars.fullImage.avatar1 ?? .defaultImage
+                (UIImage.images.avatars.circleImage.avatar1 ?? .defaultImage) : UIImage.images.avatars.fullImage.avatar1 ?? .defaultImage
             ]
             
             struct fullImage {
