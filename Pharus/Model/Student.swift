@@ -10,6 +10,6 @@ import Foundation
 struct Student: Codable {
     let id, firstName, lastName, birthdate: String
     let gender, school, year, city: String
-    let schoolShift, avatar, email, username: String
+    let schoolShift, avatar, email, password, username: String
     let projects: [Project]
 }

@@ -356,8 +356,7 @@ class StudentProjectDetailView: UIView {
             taskHelperStackView.addArrangedSubview(taskView)
         }
         
-        completedTasksLabel.text = "Completadas \(project.completedTasksCount) de \(project.tasks.count) tarefas (\(project.completionPercentage*100)%)"
-        completedTasksProgressView.progress = project.completionPercentage
+        updateProjectProgressView()
     }
     
     private func configureUnsubscribedProject(with project: ProjectModel) {
@@ -374,7 +373,9 @@ class StudentProjectDetailView: UIView {
     }
     
     private func updateProjectProgressView() {
-        completedTasksLabel.text = "Completadas \(project.completedTasksCount) de \(project.tasks.count) tarefas (\(project.completionPercentage*100)%)"
+        let roundedPercentage: Float = project.completionPercentage*100
+
+        completedTasksLabel.text = "Completadas \(project.completedTasksCount) de \(project.tasks.count) tarefas (\(roundedPercentage.withDecimalPoints(2))%)"
         completedTasksProgressView.progress = project.completionPercentage
     }
     
