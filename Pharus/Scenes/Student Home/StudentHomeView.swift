@@ -33,6 +33,7 @@ class StudentHomeView: UIView {
         imageView.image = UIImage(named: "rectangleImage")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentHomeView.rectangleImageView"
+        
         return imageView
     }()
     
@@ -48,6 +49,7 @@ class StudentHomeView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeView.mainView"
+        
         return view
     }()
     
@@ -57,6 +59,7 @@ class StudentHomeView: UIView {
         stackView.spacing = 49
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentHomeView.mainStackView"
+        
         return stackView
     }()
     
@@ -68,6 +71,7 @@ class StudentHomeView: UIView {
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentHomeView.helloStudentLabel"
+        
         return label
     }()
     
@@ -75,6 +79,7 @@ class StudentHomeView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeView.studentAvatarHelperView"
+        
         return view
     }()
     
@@ -83,6 +88,7 @@ class StudentHomeView: UIView {
         imageView.image = UIImage.images.avatars.circleImage.avatar1
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentHomeView.studentAvatarImageView"
+        
         return imageView
     }()
     
@@ -91,6 +97,7 @@ class StudentHomeView: UIView {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.accessibilityIdentifier = "StudentHomeView.miniCardScrollView"
+        
         return scrollView
     }()
     
@@ -100,6 +107,7 @@ class StudentHomeView: UIView {
         stackView.spacing = 32
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentHomeView.miniCardStackView"
+        
         return stackView
     }()
     
@@ -108,6 +116,7 @@ class StudentHomeView: UIView {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.accessibilityIdentifier = "StudentHomeView.newsScrollView"
+       
         return scrollView
     }()
     
@@ -115,6 +124,7 @@ class StudentHomeView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeView.newsHelperView"
+        
         return view
     }()
     
@@ -124,6 +134,7 @@ class StudentHomeView: UIView {
         view.mainView.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeView.newsView"
+       
         return view
     }()
     

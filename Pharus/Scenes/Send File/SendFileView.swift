@@ -27,6 +27,7 @@ class SendFileView: UIView {
         view.backgroundColor = UIColor.modal.yellowBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.mainView"
+       
         return view
     }()
     
@@ -36,6 +37,7 @@ class SendFileView: UIView {
         stackView.spacing = 30
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "SendFileView.mainStackView"
+        
         return stackView
     }()
     
@@ -51,6 +53,7 @@ class SendFileView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.titleHelperView"
+        
         return view
     }()
     
@@ -87,6 +90,7 @@ class SendFileView: UIView {
         label.font = .smallBody
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.descriptionLabel"
+        
         return label
     }()
     
@@ -96,6 +100,7 @@ class SendFileView: UIView {
         view.layer.cornerRadius = 8
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.uploadFileHelperView"
+        
         return view
     }()
     
@@ -108,6 +113,7 @@ class SendFileView: UIView {
         stackView.spacing = 3
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "SendFileView.uploadFileStackView"
+       
         return stackView
     }()
     
@@ -115,6 +121,7 @@ class SendFileView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.uploadIconHelperView"
+       
         return view
     }()
     
@@ -123,6 +130,7 @@ class SendFileView: UIView {
         imageView.image = UIImage.icons.uploadIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "SendFileView.uploadIconImageView"
+       
         return imageView
     }()
     
@@ -136,6 +144,7 @@ class SendFileView: UIView {
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.uploadMessageLabel"
+        
         return label
     }()
     
@@ -145,6 +154,7 @@ class SendFileView: UIView {
         view.layer.cornerRadius = 8
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.fileView"
+        
         return view
     }()
     
@@ -154,6 +164,7 @@ class SendFileView: UIView {
         stackView.spacing = 14
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "SendFileView.fileStackView"
+       
         return stackView
     }()
     
@@ -162,6 +173,7 @@ class SendFileView: UIView {
         imageView.image = UIImage.icons.bookIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "SendFileView.fileImageView"
+        
         return imageView
     }()
     
@@ -171,6 +183,7 @@ class SendFileView: UIView {
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "SendFileView.fileNameLabel"
+        
         return label
     }()
     
@@ -180,6 +193,7 @@ class SendFileView: UIView {
         button.tintColor = .black
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "SendFileView.removeFileButton"
+        
         return button
     }()
     
@@ -190,6 +204,7 @@ class SendFileView: UIView {
         }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "SendFileView.sendFileButton"
+        
         return button
     }()
     

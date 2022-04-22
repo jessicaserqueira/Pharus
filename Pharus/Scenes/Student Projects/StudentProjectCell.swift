@@ -58,7 +58,6 @@ class StudentProjectCell: UITableViewCell {
         return stackView
     }()
     
-    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
@@ -98,6 +97,7 @@ class StudentProjectCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectCell.descriptionLabelView"
+       
         return view
     }()
     
@@ -159,6 +159,7 @@ class StudentProjectCell: UITableViewCell {
         let view = ProjectScheduleView(project: StudentModel.defaultProject)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectCell.projectScheduleView"
+        
         return view
     }()
     
@@ -166,6 +167,7 @@ class StudentProjectCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectCell.lowerHelperView"
+        
         return view
     }()
     
@@ -231,6 +233,7 @@ class StudentProjectCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "UserProjectCell.subscribeHelperView"
+        
         return view
     }()
     
@@ -238,6 +241,7 @@ class StudentProjectCell: UITableViewCell {
         let button = SubscribeButton(isSubscribed: true)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "UserProjectCell.subscribeButton"
+        
         return button
     }()
     
