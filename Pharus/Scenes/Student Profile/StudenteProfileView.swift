@@ -9,6 +9,8 @@ import UIKit
 
 class StudentProfileView: UIView {
     
+    //MARK: - Views
+    
     lazy var mainScrollView: UIScrollView = {
         var scrollView = UIScrollView()
         scrollView.clipsToBounds = true
@@ -70,6 +72,8 @@ class StudentProfileView: UIView {
         return stackView
     }()
     
+    //MARK: - Initializer
+    
     convenience init(student: StudentModel) {
         self.init()
         
@@ -85,6 +89,8 @@ class StudentProfileView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Subviews Configuration
     
     func configureSubviews(with student: StudentModel) {
         addSubview(mainScrollView)
@@ -128,6 +134,8 @@ class StudentProfileView: UIView {
             infoStackView.addArrangedSubview(stackView)
         }
     }
+    
+    //MARK: - Constraints
     
     func setupConstraints() {
         //Main Scroll View

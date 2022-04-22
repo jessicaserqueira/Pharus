@@ -116,6 +116,8 @@ class LogoutAlertView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Subviews
+    
     func configureSubviews() {
         
         let blurEffect = UIBlurEffect(style: .light)
@@ -138,11 +140,7 @@ class LogoutAlertView: UIView {
         buttonStackView.addArrangedSubview(primaryButton)
         buttonStackView.addArrangedSubview(secondaryButton)
     }
-    
-    func customizeSubviews() {
         
-    }
-    
     //MARK: - Constraints
     
     func setupConstraints() {

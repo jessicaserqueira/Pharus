@@ -14,6 +14,7 @@ class StudentRankingProjectsViewController: UIViewController {
     private var coordinator: StudentProjectsRankingCoordinator
     private var student: StudentModel
     private var projects: [ProjectModel]
+    private var filterdProjects: [ProjectModel]
     
     init(
         coordinator: StudentProjectsRankingCoordinator,
@@ -21,7 +22,10 @@ class StudentRankingProjectsViewController: UIViewController {
     ) {
         self.coordinator = coordinator
         self.student = student
-        self.projects = student.projects
+        
+        projects = student.projects.filter({ $0.placement != nil })
+        
+        filterdProjects = projects
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -64,7 +68,6 @@ class StudentRankingProjectsViewController: UIViewController {
                            forCellReuseIdentifier: K.CellReuseIdentifiers.userRankingProjects)
         
         tableView.dataSource = self
-        tableView.delegate = self
         tableView.allowsSelection = false
         
         tableView.separatorColor = .clear
@@ -82,18 +85,21 @@ class StudentRankingProjectsViewController: UIViewController {
 
 extension StudentRankingProjectsViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        502
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        502
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        projects.count
+        filterdProjects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.userRankingProjects,
-                                                 for: indexPath) as! StudentProjectRankingCell
-        let project = projects[indexPath.row]
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: K.CellReuseIdentifiers.userRankingProjects,
+            for: indexPath
+        ) as! StudentProjectRankingCell
+        
+        let project = filterdProjects[indexPath.row]
         
         cell.configureCell(using: project)
         cell.mainView.layer.cornerRadius = 16
@@ -101,8 +107,4 @@ extension StudentRankingProjectsViewController: UITableViewDataSource {
         
         return cell
     }
-}
-
-extension StudentRankingProjectsViewController: UITableViewDelegate {
-    
 }
