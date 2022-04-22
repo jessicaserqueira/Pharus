@@ -8,39 +8,52 @@
 import Foundation
 
 protocol ChangePasswordPresenterProtocol {
-    func isValidEmail(email: String) -> Bool
-    func changePasswordUser()
+    func changeStudentPassword(email: String, newPassword: String, confirmingPassword: String)
     func logoutChangePassword()
 }
 
 class ChangePasswordPresenter: ChangePasswordPresenterProtocol {
-       
+    
     //MARK: - Properties
     
-   private var coordinator: ChangePasswordFlow
+    private var coordinator: ChangePasswordFlow
+    private var student: StudentModel
     
     //MARK: - Initializer
     
-    init(coordinator: ChangePasswordFlow) {
+    init(
+        coordinator: ChangePasswordFlow,
+        student: StudentModel
+    ) {
         self.coordinator = coordinator
-       
+        self.student = student
     }
     
     //MARK: - Actions
     
-    func isValidEmail(email: String) -> Bool {
-        let emailRegEx = K.RegEx.emailRegEx
-        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPredicate.evaluate(with: email)
+    func isValidPassword(password: String) -> Bool {
+        let passwordRegEx = K.RegEx.passwordRegEx
+        
+        let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
+        return passwordPredicate.evaluate(with: password)
     }
     
-    func changePasswordUser() {
-
-        coordinator.showChangePassword()
-    
+    func changeStudentPassword(
+        email: String,
+        newPassword: String,
+        confirmingPassword: String
+    ) {
+        if email == student.email &&
+            self.isValidPassword(password: newPassword) &&
+            confirmingPassword == newPassword {
+            coordinator.showConfirmationAlert()
+        } else {
+            print("algo não está certo")
+        }
     }
+    
     func logoutChangePassword() {
-        coordinator.showLogoutChangePassword()
+        coordinator.closeChangePasswordView()
     }
     
 }

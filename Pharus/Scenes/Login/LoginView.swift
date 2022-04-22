@@ -149,6 +149,32 @@ class LoginView: UIView {
         return textField
     }()
     
+    lazy var lowerPasswordStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "LoginView.lowerPasswordStackView"
+        return stackView
+    }()
+    
+    lazy var wrongPasswordImageView: UIImageView = {
+        let imageView = UIImageView()
+        //imageView.image = UIImage(named: <#imageName#>)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.accessibilityIdentifier = "<#className#>.wrongPasswordImageView"
+        return imageView
+    }()
+    
+    lazy var wrongPasswordLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Senha incorreta!"
+        label.textColor = .red
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "LoginView.wrongPasswordLabel"
+        return label
+    }()
+    
     private lazy var changePasswordLabel: UILabel = {
         let label = UILabel()
         label.setOnClickListener {
@@ -208,7 +234,10 @@ class LoginView: UIView {
         
         passwordStackView.addArrangedSubview(passwordLabel)
         passwordStackView.addArrangedSubview(passwordTextField)
-        passwordStackView.addArrangedSubview(changePasswordLabel)
+        passwordStackView.addArrangedSubview(lowerPasswordStackView)
+        
+        lowerPasswordStackView.addArrangedSubview(wrongPasswordLabel)
+        lowerPasswordStackView.addArrangedSubview(changePasswordLabel)
         
         mainStackView.addArrangedSubview(loginButton)
     }
@@ -227,9 +256,9 @@ class LoginView: UIView {
         ])
         
         //Change Password Label
-        NSLayoutConstraint.activate([
-            changePasswordLabel.trailingAnchor.constraint(equalTo: passwordStackView.trailingAnchor)
-        ])
+//        NSLayoutConstraint.activate([
+//            changePasswordLabel.trailingAnchor.constraint(equalTo: passwordStackView.trailingAnchor)
+//        ])
     }
 }
 

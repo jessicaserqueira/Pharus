@@ -44,19 +44,22 @@ class LoginPresenter: LoginPresenterProtocol {
     
     func loginUser(email: String, password: String) {
         let student: Student = Bundle.main.decode("Student.json")
-        let studentModel = makeStudentMode(with: student)
-        
-        coordinator.showHome(student: studentModel)
+        if email == student.email && password == student.password {
+            let studentModel = makeStudentModel(with: student)
+            coordinator.showHome(student: studentModel)
+        } else {
+            //mostrar erro na tela
+        }
     }
     
     func showChangePassword(email: String) {
         let student: Student = Bundle.main.decode("Student.json")
-        let studentModel = makeStudentMode(with: student)
+        let studentModel = makeStudentModel(with: student)
         
         coordinator.showChangePassword(student: studentModel)
     }
     
-    func makeStudentMode(with student: Student) -> StudentModel {
+    func makeStudentModel(with student: Student) -> StudentModel {
         var projectModelArray = [ProjectModel]()
         
         for project in student.projects {

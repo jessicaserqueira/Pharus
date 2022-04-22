@@ -92,7 +92,7 @@ class ChangePasswordView: UIView {
         return label
     }()
     
-    private lazy var emailTextField: UITextField = {
+     lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.attributedPlaceholder = NSAttributedString(
             string: "antonia.ferreira@gmail.com",
@@ -135,7 +135,7 @@ class ChangePasswordView: UIView {
         return label
     }()
     
-    private lazy var newPasswordTextField: UITextField = {
+     lazy var newPasswordTextField: UITextField = {
         let textField = UITextField()
         textField.attributedPlaceholder = NSAttributedString(
             string: "Nova senha",
@@ -179,7 +179,7 @@ class ChangePasswordView: UIView {
         return label
     }()
     
-    private lazy var confirmPasswordTextField: UITextField = {
+     lazy var confirmPasswordTextField: UITextField = {
         let textField = UITextField()
         textField.attributedPlaceholder = NSAttributedString(
             string: "Confirmar senha",

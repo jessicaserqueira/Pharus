@@ -55,8 +55,13 @@ class StudentProjectsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setGradientBackground()
         tableView.reloadData()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        setGradientBackground()
     }
     
     //MARK: - Actions

@@ -52,9 +52,9 @@ class ChangePasswordViewController: UIViewController {
     private func setNavigationBar() {
         self.navigationController?.title = ""
         
-        let logoutIcon = UIImage.icons.xmarkIcon?.withRenderingMode(.alwaysOriginal)
+        let closeViewIcon = UIImage.icons.xmarkIcon?.withRenderingMode(.alwaysOriginal)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: logoutIcon,
+            image: closeViewIcon,
             style: .plain,
             target: self,
             action: #selector(logoutTapped)
@@ -68,7 +68,6 @@ class ChangePasswordViewController: UIViewController {
                 dismissMyKeyboard
             )
         )
-        
         view.addGestureRecognizer(tap)
     }
     
@@ -80,7 +79,15 @@ class ChangePasswordViewController: UIViewController {
 //MARK: - Change Password Delegate
 extension ChangePasswordViewController: ChangePasswordDelegate {
     func changePasswordButtonPressed() {
-        presenter.changePasswordUser()
+        guard let email = customView.emailTextField.text else { return }
+        guard let newPassword = customView.newPasswordTextField.text else { return }
+        guard let confirmingPassword = customView.confirmPasswordTextField.text else { return }
+        
+        presenter.changeStudentPassword(
+            email: email,
+            newPassword: newPassword,
+            confirmingPassword: confirmingPassword
+        )
     }
     
     @objc func logoutTapped() {

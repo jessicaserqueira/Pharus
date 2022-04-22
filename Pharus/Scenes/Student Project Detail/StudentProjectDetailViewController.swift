@@ -38,7 +38,8 @@ class StudentProjectDetailViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        
+    
+        studentProjectDetailView.backgroundColor = .white
         studentProjectDetailView.delegate = self
         self.view = studentProjectDetailView
     }
@@ -49,11 +50,12 @@ class StudentProjectDetailViewController: UIViewController {
         setNavigationBar()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         
         setGradientBackground()
     }
+    
     
     //MARK: - Actions
     
