@@ -14,11 +14,17 @@ protocol LogoutAlertPresenterProtocol {
 
 class LogoutAlertPresenter: LogoutAlertPresenterProtocol {
     
+    //MARK: - Properties
+    
     var coordinator: LogoutAlertCoordinator
+    
+    //MARK: - Initializer
     
     init(coordinator: LogoutAlertCoordinator) {
         self.coordinator = coordinator
     }
+    
+    //MARK: - Logout Alert Presenter Protocol
     
     func closeModal() {
         coordinator.closeModal()

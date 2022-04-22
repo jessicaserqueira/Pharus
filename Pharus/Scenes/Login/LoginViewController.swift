@@ -21,6 +21,8 @@ class LoginViewController: UIViewController {
         self.coordinator = coordinator
         
         super.init(nibName: nil, bundle: nil)
+        
+        hidesBottomBarWhenPushed = true
     }
     
     required init?(coder: NSCoder) {
@@ -32,6 +34,8 @@ class LoginViewController: UIViewController {
         
         self.view = customView
         customView.delegate = self
+        self.tabBarController?.tabBar.isHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewDidLoad() {
@@ -39,7 +43,7 @@ class LoginViewController: UIViewController {
         
         initializeHideKeyboard()
     }
-    
+        
     func initializeHideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,

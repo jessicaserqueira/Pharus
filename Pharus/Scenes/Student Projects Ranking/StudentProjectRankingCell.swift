@@ -142,6 +142,8 @@ class StudentProjectRankingCell: UITableViewCell {
         return view
     }()
     
+    //MARK: - Initializer
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -191,25 +193,46 @@ class StudentProjectRankingCell: UITableViewCell {
     }
     
     private func setPlacementImages(with project: ProjectModel) {
-        switch project.placement {
-        case 1:
-            placementImageView.image = UIImage.images.firstPlaceImage
-            medalImageView.image = UIImage.images.firstPlaceMedalImage
-        case 2:
-            placementImageView.image = UIImage.images.secondPlaceImage
-            medalImageView.image = UIImage.images.secondPlaceMedalImage
-        case 3:
-            placementImageView.image = UIImage.images.thirdPlaceImage
-            medalImageView.image = UIImage.images.thirdPlaceMedalImage
-        case 4:
-            placementImageView.image = UIImage.images.fourthPlaceImage
-            medalImageView.image = UIImage.images.fourthPlaceMedalImage
-        case 5:
-            placementImageView.image = UIImage.images.fifthPlaceImage
-            medalImageView.image = UIImage.images.fifthPlaceMedalImage
-        default:
-            placementImageView.image = .none
-            medalImageView.image = .none
+        guard let projectPlacement = project.placement else {
+            return
+        }
+        
+        if projectPlacement < 6 {
+            switch project.placement {
+            case 1:
+                placementImageView.image = UIImage.images.firstPlaceImage
+                medalImageView.image = UIImage.images.firstPlaceMedalImage
+            case 2:
+                placementImageView.image = UIImage.images.secondPlaceImage
+                medalImageView.image = UIImage.images.secondPlaceMedalImage
+            case 3:
+                placementImageView.image = UIImage.images.thirdPlaceImage
+                medalImageView.image = UIImage.images.thirdPlaceMedalImage
+            case 4:
+                placementImageView.image = UIImage.images.fourthPlaceImage
+                medalImageView.image = UIImage.images.fourthPlaceMedalImage
+            default:
+                placementImageView.image = UIImage.images.fifthPlaceImage
+                medalImageView.image = UIImage.images.fifthPlaceMedalImage
+            }
+            
+            //Placement Image View
+            placementImageView.center(in: placementHelperView)
+            NSLayoutConstraint.activate([
+                placementImageView.heightAnchor.constraint(equalToConstant: 102),
+                placementImageView.widthAnchor.constraint(equalTo: placementHelperView.widthAnchor)
+            ])
+            
+            //Medal Image View
+            medalImageView.center(in: medalHelperView)
+            NSLayoutConstraint.activate([
+                medalImageView.heightAnchor.constraint(equalToConstant: 104),
+                medalImageView.widthAnchor.constraint(equalToConstant: 104)
+            ])
+            
+        } else {
+            placementImageView.removeFromSuperview()
+            medalImageView.removeFromSuperview()
             congratulationsLabel.text = "Parabéns! Você completou o projeto e sua colocação foi:"
             
             placementStackView.axis = .vertical
@@ -225,7 +248,6 @@ class StudentProjectRankingCell: UITableViewCell {
             mentorCommentsTitleLabel.font = UIFont.mediumBody
         }
     }
-    
     private func setupConstraints() {
         //Main View
         self.stretch(mainView, top: 16, left: 16, bottom: -16, right: -16)
@@ -255,30 +277,19 @@ class StudentProjectRankingCell: UITableViewCell {
             placementStackView.heightAnchor.constraint(equalToConstant: 133)
         ])
         
-        //Placement Image View
-        placementImageView.center(in: placementHelperView)
-        NSLayoutConstraint.activate([
-            placementImageView.heightAnchor.constraint(equalToConstant: 102),
-            placementImageView.widthAnchor.constraint(equalToConstant: 160)
-        ])
-        
-        //Medal Image View
-        medalImageView.center(in: medalHelperView)
-        NSLayoutConstraint.activate([
-            medalImageView.heightAnchor.constraint(equalToConstant: 104),
-            medalImageView.widthAnchor.constraint(equalToConstant: 104)
-        ])
-        
-        //Mentor Comments Title Label
-        NSLayoutConstraint.activate([
-            mentorCommentsTitleLabel.centerXAnchor.constraint(equalTo: mentorCommentsTitleHelperView.centerXAnchor),
-            mentorCommentsTitleLabel.centerYAnchor.constraint(equalTo: mentorCommentsTitleHelperView.centerYAnchor)
-        ])
-        
         //Mentor Comments Title Helper View
         NSLayoutConstraint.activate([
             mentorCommentsTitleHelperView.heightAnchor.constraint(equalToConstant: 54)
         ])
+        
+        //Mentor Comments Title Label
+        mentorCommentsTitleLabel.center(in: mentorCommentsTitleHelperView)
+        
+        //Mentor Comment Description Helper View
+        NSLayoutConstraint.activate([
+            mentorCommentsDescriptionHelperView.heightAnchor.constraint(equalToConstant: 80)
+        ])
+        
         
         //Mentor Comments Description Label
         NSLayoutConstraint.activate([
