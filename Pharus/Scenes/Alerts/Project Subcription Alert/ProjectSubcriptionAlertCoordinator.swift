@@ -49,6 +49,14 @@ extension ProjectSubcriptionAlertCoordinator: ProjectSubcriptionAlertFlow {
     func subscribeToProject() {
         project.isSubscribed = true
         closeModal()
+        
+        let confirmationAlertView = ConfirmationAlertView(message: "Inscrição confirmada!")
+        let confirmationAlertCoordinator = ConfirmationAlertCoordinator(
+            navigationController: navigationController,
+            alertView: confirmationAlertView
+        )
+        
+        coordinate(to: confirmationAlertCoordinator)
     }
 }
 

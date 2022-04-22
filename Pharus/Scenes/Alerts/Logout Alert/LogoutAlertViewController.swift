@@ -9,9 +9,13 @@ import UIKit
 
 class LogoutAlertViewController: UIViewController {
     
+    //MARK: - Properties
+    
     private var alertView: LogoutAlertView
     private var coordinator: LogoutAlertCoordinator
     private var presenter: LogoutAlertPresenter
+    
+    //MARK: - Initializer
     
     init(
         alertView: LogoutAlertView,
@@ -30,13 +34,17 @@ class LogoutAlertViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         alertView.delegate = self
         self.view = alertView
-        
     }
 }
+
+//MARK: - Logout Alert View Delegate
 
 extension LogoutAlertViewController: LogoutAlertViewDelegate {
     

@@ -18,7 +18,7 @@ class LoginPresenter: LoginPresenterProtocol {
     
     //MARK: - Properties
     
-   private var coordinator: LoginCoordinator
+    private var coordinator: LoginCoordinator
     
     //MARK: - Initializer
     
@@ -43,6 +43,19 @@ class LoginPresenter: LoginPresenterProtocol {
     
     func loginUser(email: String, password: String) {
         let student: Student = Bundle.main.decode("Student.json")
+        let studentModel = makeStudentMode(with: student)
+        
+        coordinator.showHome(student: studentModel)
+    }
+    
+    func showChangePassword(email: String) {
+        let student: Student = Bundle.main.decode("Student.json")
+        let studentModel = makeStudentMode(with: student)
+        
+        coordinator.showChangePassword(student: studentModel)
+    }
+    
+    func makeStudentMode(with student: Student) -> StudentModel {
         var projectModelArray = [ProjectModel]()
         
         for project in student.projects {
@@ -93,10 +106,6 @@ class LoginPresenter: LoginPresenterProtocol {
             projects: projectModelArray
         )
         
-        coordinator.showHome(student: studentModel)
-    }
-    func showChangePassword(email: String) {
-        let student: Student = Bundle.main.decode("Student.json")
-        coordinator.showChangePassword(student: student)
+        return studentModel
     }
 }

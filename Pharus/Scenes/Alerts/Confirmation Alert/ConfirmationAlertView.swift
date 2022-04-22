@@ -16,7 +16,6 @@ class ConfirmationAlertView: UIView {
     //MARK: - Properties
     
     weak var delegate: ConfirmationAlertViewDelegate?
-    private var image: UIImage
     private var message: String
     
     //MARK: - Views
@@ -52,6 +51,7 @@ class ConfirmationAlertView: UIView {
     
     private lazy var alertIconImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.image = UIImage.icons.checkIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "ConfirmationAlertView.alertIconImageView"
         
@@ -92,11 +92,10 @@ class ConfirmationAlertView: UIView {
     
     //MARK: - Initializer
     
-    convenience init(message: String, image: UIImage) {
+    convenience init(message: String) {
         self.init()
         
         self.message = message
-        self.image = image
         
         configureSubviews()
         customizeView()
@@ -105,7 +104,6 @@ class ConfirmationAlertView: UIView {
     
     override init(frame: CGRect) {
         self.message = "Alerta"
-        self.image = UIImage(named: K.Assets.Icons.rulesIcon)!
         
         super.init(frame: .zero)
         
@@ -143,7 +141,6 @@ class ConfirmationAlertView: UIView {
     
     private func customizeView() {
         alertMessageLabel.text = message
-        alertIconImageView.image = image
     }
     
     //MARK: - Constraints
