@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "logo-havaianas-256 1.png",
+      "filename" : "alpargatas-logo-1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "logo-havaianas-256 1@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "logo-havaianas-256 1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

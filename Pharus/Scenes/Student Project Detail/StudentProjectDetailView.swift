@@ -57,6 +57,7 @@ class StudentProjectDetailView: UIView {
         stackView.spacing = 8
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProjectDetailView.titleStackView"
+        
         return stackView
     }()
     
@@ -75,6 +76,7 @@ class StudentProjectDetailView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.mentorReviewHelperView"
+        
         return view
     }()
     
@@ -83,6 +85,7 @@ class StudentProjectDetailView: UIView {
         imageView.image = UIImage.icons.envelopeIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentProjectDetailView.mentorReviewImageView"
+        
         return imageView
     }()
     
@@ -124,6 +127,7 @@ class StudentProjectDetailView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectDetailView.rulesHelperView"
+        
         return view
     }()
     
@@ -136,6 +140,7 @@ class StudentProjectDetailView: UIView {
         stackView.spacing = 8
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProjectDetailView.rulesStackView"
+        
         return stackView
     }()
     
@@ -144,6 +149,7 @@ class StudentProjectDetailView: UIView {
         imageView.image = UIImage.icons.rightArrowIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentProjectDetailView.rulesBoookImageView"
+        
         return imageView
     }()
     
@@ -154,6 +160,7 @@ class StudentProjectDetailView: UIView {
         label.font = .largeTitleMedium
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectDetailView.descriptionLabel"
+       
         return label
     }()
     
@@ -329,6 +336,10 @@ class StudentProjectDetailView: UIView {
             configureUnsubscribedProject(with: project)
         }
         
+        if project.isComplete {
+            uploadFilesButton.disable()
+        }
+        
         if project.scoreDescription != nil {
             mentorReviewImageView.image = UIImage.icons.notificationEnvelopeIcon
             mentorReviewHelperView.setOnClickListener {
@@ -345,17 +356,19 @@ class StudentProjectDetailView: UIView {
                 checkImage: checkboxIcon,
                 color: project.isSubscribed ? .black : UIColor.project.grayDisabledText
             )
-            taskView.taskCheckmarkButton.addAction(
-                UIAction { _ in
-                    self.taskCheckboxTapped(task: task)
-                    let newIcon = task.isComplete ? UIImage.icons.checkmarkIcon : .defaultImage
-                    taskView.taskCheckmarkButton.setImage(newIcon, for: .normal)
-                    self.updateProjectProgressView()
-                }, for: .touchUpInside
-            )
+            
+            if project.isComplete == false && project.isSubscribed == true {
+                taskView.taskCheckmarkButton.addAction(
+                    UIAction { _ in
+                        self.taskCheckboxTapped(task: task)
+                        let newIcon = task.isComplete ? UIImage.icons.checkmarkIcon : .defaultImage
+                        taskView.taskCheckmarkButton.setImage(newIcon, for: .normal)
+                        self.updateProjectProgressView()
+                    }, for: .touchUpInside
+                )
+            }
             taskHelperStackView.addArrangedSubview(taskView)
         }
-        
         updateProjectProgressView()
     }
     
@@ -374,7 +387,7 @@ class StudentProjectDetailView: UIView {
     
     private func updateProjectProgressView() {
         let roundedPercentage: Float = project.completionPercentage*100
-
+        
         completedTasksLabel.text = "Completadas \(project.completedTasksCount) de \(project.tasks.count) tarefas (\(roundedPercentage.withDecimalPoints(2))%)"
         completedTasksProgressView.progress = project.completionPercentage
     }

@@ -16,6 +16,7 @@ class StudentProfileView: UIView {
         scrollView.clipsToBounds = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.accessibilityIdentifier = "StudentProfileView.mainScrollView"
+       
         return scrollView
     }()
     
@@ -60,6 +61,7 @@ class StudentProfileView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProfileView.infoHelperView"
+       
         return view
     }()
     
@@ -69,6 +71,7 @@ class StudentProfileView: UIView {
         stackView.spacing = 40
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProfileView.infoStackView"
+       
         return stackView
     }()
     

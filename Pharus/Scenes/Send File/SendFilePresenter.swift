@@ -29,5 +29,9 @@ class SendFilePresenter {
     func sendFile() {
         coordinator.showFileSentAlert()
     }
+    
+    func closeSheet() {
+        coordinator.closeSheet()
+    }
 }
 

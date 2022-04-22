@@ -42,6 +42,7 @@ class StudentProjectRankingCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectRankingCell.congratulationsHelperView"
+        
         return view
     }()
     
@@ -54,6 +55,7 @@ class StudentProjectRankingCell: UITableViewCell {
         label.font = .mediumTitleSemiBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectRankingCell.congratulationsLabel"
+        
         return label
     }()
     
@@ -63,6 +65,7 @@ class StudentProjectRankingCell: UITableViewCell {
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentProjectCell.placementStackView"
+        
         return stackView
     }()
     
@@ -70,6 +73,7 @@ class StudentProjectRankingCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectCell.placementHelperView"
+       
         return view
     }()
     
@@ -78,6 +82,7 @@ class StudentProjectRankingCell: UITableViewCell {
         imageView.image = UIImage.images.thirdPlaceImage
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentProjectCell.placementImageView"
+       
         return imageView
     }()
     
@@ -94,6 +99,7 @@ class StudentProjectRankingCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectCell.medalHelperView"
+        
         return view
     }()
     
@@ -110,6 +116,7 @@ class StudentProjectRankingCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectRankingCell.mentorCommentsTitleHelperView"
+        
         return view
     }()
     
@@ -132,6 +139,7 @@ class StudentProjectRankingCell: UITableViewCell {
         label.numberOfLines = 4
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentProjectRankingCell.mentorCommentsStackView"
+        
         return label
     }()
     
@@ -139,6 +147,7 @@ class StudentProjectRankingCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentProjectRankingCell.mentorCommentsDescriptionHelperView"
+        
         return view
     }()
     
@@ -157,6 +166,7 @@ class StudentProjectRankingCell: UITableViewCell {
     
     func configureCell(using project: ProjectModel) {
         self.projectTitleLabel.text = project.name
+        mentorCommentsDescriptionLabel.text = project.scoreDescription
         configureSubviews(with: project)
         setupConstraints()
     }

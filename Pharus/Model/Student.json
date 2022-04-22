@@ -17,37 +17,36 @@
             "id": "",
             "name": "Criando moda!",
             "isSubscribed": true,
-            "isComplete": false,
-            "score": null,
-            "placement": null,
+            "isComplete": true,
+            "score": 100,
+            "placement": 1,
             "description": "Design - uma maneira ou costume mais predominante em um determinado grupo em um determinado momento. É uma palavra muito usada para designar uma forma de se vestir que é comum para muitos ou apreciada por muitas pessoas.",
-            "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
-            "startDate": "05/09/2022",
-            "endDate": "23/09/2022",
+            "scoreDescription": "Fico feliz pelo seu empenho e trabalho executado em disciplina que não temos em nossa grade curricular. O trabalho entregue está no caminho certo, e você tem um grande potencial para área de tecnologia. Busque complementar seu conhecimento na área do projeto e terá um futuro brilhante!",
+            "startDate": "03/02/2022",
+            "endDate": "23/07/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Ricardo Almeida",
             "hasCompanyPartnership": true,
             "company": "Dupé",
-            "companyPhoto": "Dupé",
             "tasks": [
                 {
                     "title": "Moda do Momenton",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": " Faça uma dissertação sobre como observa a moda em seu ambiente escola. Poderá escrever até 500 palavras, e encaminhar fotos com referências da moda em sua escola."
                 },
                 {
                     "title": "Moda na Família",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Converse com algum familiar e entenda a moda de quando ele ou ela foi adolescente. Faça 04 desenhos com a moda da adolescência de seu familiar. Coloque no início do desenho ano referencial da moda."
                 },
                 {
                     "title": "Rascunho Inovação",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Imagine um futuro de 30 anos a frente, e desenhe a moda como poderá estar. Crie em uma ferramenta de design. Faça 03 desenhos completos, incluindo o tipo de caçado que poderá ser usado."
                 },
                 {
                     "title": "Moda Verão Escolar",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Com dias quentes durante o verão, desenhe calçados que possam ser confortáveis para ir a escola. Use a imaginação para cores, e que poderia ser usado. Faça 04 modelos em uma ferramenta de design."
                 }
             ]
@@ -60,14 +59,12 @@
             "score": null,
             "placement": null,
             "description": "Transformação Digital - é uma mudança de mentalidade que as empresas passam com o objetivo de se tornarem mais modernas e acompanharem os avanços tecnológicos que não param de surgir.\n\nNão há pessoa no mundo que não tenha sido impactada por esse processo, e com as empresas, é a mesma coisa.\n\nO termo é muito usado no mundo corporativo quando o assunto são as exigências de uma nova realidade, na qual a tecnologia avança mais rápido que nunca.",
-            "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
-            "startDate": "08/08/2022",
-            "endDate": "28/08/2022",
+            "scoreDescription": null,
+            "startDate": "03/03/2022",
+            "endDate": "28/05/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Mariana",
-            "hasCompanyPartnership": true,
             "company": "Alpargatas",
-            "companyPhoto": "Alpargatas",
             "tasks": [
                 {
                     "title": "Tarefa 01",
@@ -99,19 +96,17 @@
         {
             "id": "",
             "name": "Startup Go!",
-            "isSubscribed": false,
+            "isSubscribed": true,
             "isComplete": false,
             "score": null,
             "placement": null,
             "description": "Uma startup é uma empresa que tem o objetivo de crescer de maneira agressiva. As startups costumam oferecer produtos ou serviços inovadores, visando solucionar uma dor ou trazendo inovação incremental a mercadorias que já existem. Quase sempre, as startups baseiam o seu modelo de negócio em tecnologia digital, mas isso não é uma regra.",
             "scoreDescription": null,
-            "startDate": "03/10/2022",
-            "endDate": "28/10/2022",
+            "startDate": "08/03/2022",
+            "endDate": "20/04/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Sávio Costa",
-            "hasCompanyPartnership": false,
             "company": "ioasys",
-            "companyPhoto": "ioasys",
             "tasks": [
                 {
                     "title": "Aprendendo a empreender",
@@ -120,7 +115,7 @@
                 },
                 {
                     "title": "Desbravando o produto",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Conhecendo o problema que escolheram, para tarefa escolha um nome este produto. Defina o que será este produto. Façam uma dissertação explicando como o produto irá ser importante para o problema escolhido. Descreva qual será o publico que o produto irá atender."
                 },
                 {
@@ -130,31 +125,29 @@
                 },
                 {
                     "title": "Hora do show!",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Definido o produto na tarefa 02, agora é hora de desenhar um protótipo (é o termo usado para se referir ao que foi criado pela primeira vez, servindo de modelo ou molde para futuras produções.) desta inovação. Com seus amigos de grupo, escolham uma ferramenta adequada para que possam rascunhar o produto. Façam ao menos 03 referenciais do produto."
                 }
             ]
         },
         {
-            "id": "62501bb56c91d14d76f0123wwq",
+            "id": "62501bb56c91d14d76f0123ww",
             "name": "Sustentabilidade Hipster",
             "isSubscribed": true,
             "isComplete": false,
             "score": null,
             "placement": null,
             "description": "Sustentabilidade é a capacidade de cumprir com as necessidades do presente sem comprometer as mesma das gerações futuras. O conceito de sustentabilidade é composto por três pilares: econômico, ambiental e social",
-            "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
-            "startDate": "07/11/2022",
-            "endDate": "30/11/2022",
+            "scoreDescription": null,
+            "startDate": "07/02/2022",
+            "endDate": "30/05/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Oskar Metsavaht",
-            "hasCompanyPartnership": true,
             "company": "Osklen",
-            "companyPhoto":"Osklen",
             "tasks": [
                 {
                     "title": "Sustentabilidade na prática!",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Atividade será em equipe de 04 pessoas. Conhecendo os tipos de materiais para reciclagem, monte um trabalho de divulgação sobre como separar os materiais, e divulgue na escola. Utilize material que possam ser reciclados. Inovem!!!"
                 },
                 {
@@ -169,7 +162,7 @@
             ]
         },
         {
-            "id": "62501bb56c91d14d76f0123wwq",
+            "id": "62501bb56c91d14d76f012wq",
             "name": "Memória em ação!",
             "isSubscribed": true,
             "isComplete": false,
@@ -177,27 +170,136 @@
             "placement": null,
             "description": "Projeto Social - Projetos sociais são trabalhos desenvolvidos sem fins lucrativos que visam o desenvolvimento social, econômico e cultural de uma comunidade ou grupo.",
             "scoreDescription": "Página interessante, porém pouco uso de JavaScript.",
-            "startDate": "05/12/2022",
-            "endDate": "16/12/2022",
+            "startDate": "05/01/2022",
+            "endDate": "30/04/2022",
             "school": "Escola Estadual João da Silva",
             "mentor": "Rafael Felício",
-            "hasCompanyPartnership": true,
             "company": "Havaianas",
-            "companyPhoto":"Havaianas",
             "tasks": [
                 {
                     "title": "Desapegando!",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Atividade individual. Para esta tarefa você deverá escolher uma peça de roupa ou calçado que não usa a um bom tempo, e está em boa conservação para que possa ser utilizado outra pessoa. Faça uma dissertação sobre o que esta peça lhe traz de memória, não limite para o texto. Encaminhe no APP!"
                 },
                 {
                     "title": "Amigos de Escola!",
-                    "isComplete": false,
+                    "isComplete": true,
                     "description": "Junte a dissertação criada mais a peça escolhida. A tarefa será o mentor da escola irá acompanhar uma reunião para que todos possam realizar a passagem da peça para um colega de turma, e livremente ler sua dissertação."
                 },{
                     "title": "Imaginação no Social!",
                     "isComplete": false,
                     "description": "Atividade será individual. Observe sua comunidade, sua escola todo o ambiente por onde tenha sua vivência diária. Imagine como poderia ser útil para este ambiente. Crie um Projeto Social com base em suas observações, siga a seguinte lista: O ambiente que será beneficiado / Nome do Projeto Social / O problema observado / Como será o projeto social. Anexo o documento no APP."
+                }
+            ]
+        },
+        {
+            "id": "62501bb56c91d14d76f0123wq",
+            "name": "Algoritmo no seu dia!",
+            "isSubscribed": true,
+            "isComplete": true,
+            "score": 100,
+            "placement": 9,
+            "description": "Um algoritmo é um conjunto finito de diretrizes que descrevem como executar uma tarefa. Isso significa que até mesmo algo tão simples quanto uma receita ou uma lista de direções para a casa podem ser entendidos como um algoritmo.",
+            "scoreDescription": "Parabéns pela dedicação e tempo que dedicação no Projeto Algoritmos no seu dia.\nTarefas entregues com sucesso e seguindo toda a metodologia solicitada.\nContinue em sua caminhada de estudos!!!!\nTenha sempre confiança em seu trabalho.",
+            "startDate": "05/02/2022",
+            "endDate": "16/06/2022",
+            "school": "Escola Estadual João da Silva",
+            "mentor": "Sávio Costa",
+            "company": "ioasys",
+            "tasks": [
+                {
+                    "title": "Tarefa 01",
+                    "isComplete": true,
+                    "description": "Escrever um algoritmo sobre a sua organização para ida para a escola. O fim do algoritmo deverá ser com a “Entrada na sala de aula”. Anexar a tarefa 01 no aplicativo pharus."
+                },
+                {
+                    "title": "Tarefa 02",
+                    "isComplete": true,
+                    "description": "Escrever um algoritmo sobre a sua rotina após o fim da aula. Anexar a tarefa 02 no aplicativo pharus."
+                },
+                {
+                    "title": "Tarefa 03",
+                    "isComplete": true,
+                    "description": "Desenhar um algoritmo sobre o final de semanal. Término será considerado como domingo às 20:00 h. Anexar tarefa 03 no aplicativo pharus."
+                },
+                {
+                    "title": "Tarefa 04",
+                    "isComplete": true,
+                    "description": "Escrever um algoritmo com um amigo de turma sobre a rotina de parceria de amizade. Considera juntamente uma visão de futuro. Anexar tarefa 04 no aplicativo pharus."
+                }
+            ]
+        },
+        {
+            "id": "62501bb56c91d14d76f0123wq",
+            "name": "Rabisco em arte",
+            "isSubscribed": false,
+            "isComplete": false,
+            "score": null,
+            "placement": null,
+            "description": "Design - Um Disciplina que visa a criação de objetos, ambientes, obras gráficas, e ao mesmo tempo funcionais, estéticos e conformes aos imperativos de uma produção industrial.É uma atividade responsável pelo planejamento, criação e desenvolvimento de produtos e serviços.\n\nÉ um processo que busca soluções criativas e inovadoras para atender características dos produtos, necessidades do cliente e da empresa de forma sintonizada com as demandas e oportunidades do mercado.",
+            "scoreDescription": null,
+            "startDate": "06/01/2022",
+            "endDate": "29/04/2022",
+            "school": "Escola Estadual João da Silva",
+            "mentor": "Jess",
+            "company": "havaianas",
+            "tasks": [
+                {
+                    "title": "Tarefa 01",
+                    "isComplete": false,
+                    "description": "Utilizando os conhecimentos do minicurso de Algoritmo, rascunhe o processo de sua saída para a Escola, e com o conhecimento do estudo de design, faça uma arte deste processo. Anexar a tarefa 01 no aplicativo pharus."
+                },
+                {
+                    "title": "Tarefa 02",
+                    "isComplete": false,
+                    "description": "Converse com seus responsáveis familiares, e procure entender o que sabem sobre design. Faça uma arte de sua residência utilizando alguma ferramenta de design. Anexar no APP."
+                },
+                {
+                    "title": "Tarefa 03",
+                    "isComplete": false,
+                    "description": "Faça uma arte com base no seu ambiente escola, o qual imagine sendo parte de uma coleção da Havaianas. Tenha a sua mente livre, fique a vontade para elaborar o número de desenhos que sentir a liberdade de criar."
+                },
+                {
+                    "title": "Tarefa 04",
+                    "isComplete": false,
+                    "description": "Converse com seus famílias e amigos, e busque uma história do passado que tenha a Havaianas relacionada. Com base nesta conversa, crie uma arte para uma Coleção Memórias Havaianas."
+                }
+            ]
+        },
+        {
+            "id": "625bb56c91d14d76f0123wq",
+            "name": "Criando Avatar!",
+            "isSubscribed": true,
+            "isComplete": true,
+            "score": 100,
+            "placement": 5,
+            "description": "Com base nos conhecimentos de design, para este projeto vamos trabalhar criando Avatar. Um avatar na internet nada mais é do que a sua representação por meios virtuais. Você pode fazer isso criando uma animação de si mesmo com as suas principais características ou deixar sua mente livre.",
+            "scoreDescription": "Parabéns pela dedicação e tempo que dedicação no Projeto Algoritmos no seu dia.\nTarefas entregues com sucesso e seguindo toda a metodologia solicitada.\nContinue em sua caminhada de estudos!!!!\nTenha sempre confiança em seu trabalho.",
+            "startDate": "04/02/2022",
+            "endDate": "05/05/2022",
+            "school": "Escola Estadual João da Silva",
+            "mentor": "Alberto",
+            "company": "ioasys",
+            "tasks": [
+                {
+                    "title": "Tarefa 01",
+                    "isComplete": true,
+                    "description": "Faça uma dupla com seu amigo de turma, e conversem sobre o tema Avatar. Com base neste conversa façam Avatar um do outro, respeitando sempre o amigo de trabalho. Alinhe e faça um Avatar que possa trazer traços que considera legal em seu par de tarefa."
+                },
+                {
+                    "title": "Tarefa 02",
+                    "isComplete": true,
+                    "description": "Imagine uma escola de outro mundo... Com base nesta liberdade de pensamento, crie pelo menos 06 Avatares, e o ambiente escolar. Esta atividade será individual."
+                },
+                {
+                    "title": "Tarefa 03",
+                    "isComplete": true,
+                    "description": "Em casa, converse com algum família sobre o projeto, e peça a liberdade para criar um ou dois avatares de algum familiar. Lembrando, sempre com permissão e respeito."
+                },
+                {
+                    "title": "Tarefa 04",
+                    "isComplete": true,
+                    "description": " Imagine que você é um avatar do seu game favorito. Agora desenhe este Avatar em pelo menos dois ambientes criados conforme o game. Ah! não deixe de nos contar qual o seu game favorito."
                 }
             ]
         }

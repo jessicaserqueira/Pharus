@@ -149,6 +149,46 @@ class LoginView: UIView {
         return textField
     }()
     
+    lazy var lowerPasswordStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "LoginView.lowerPasswordStackView"
+        
+        return stackView
+    }()
+    
+  private lazy var wrongPasswordStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 4
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.accessibilityIdentifier = "LoginView.wrongPasswordStackView"
+        
+        return stackView
+    }()
+    
+    lazy var wrongPasswordImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage.icons.errorIcon?.withTintColor(.clear)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.accessibilityIdentifier = "LoginView.wrongPasswordImageView"
+        
+        return imageView
+    }()
+    
+    lazy var wrongPasswordLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Senha incorreta!"
+        label.font = .smallBody
+        label.textColor = UIColor.clear
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "LoginView.wrongPasswordLabel"
+        
+        return label
+    }()
+    
     private lazy var changePasswordLabel: UILabel = {
         let label = UILabel()
         label.setOnClickListener {
@@ -208,7 +248,14 @@ class LoginView: UIView {
         
         passwordStackView.addArrangedSubview(passwordLabel)
         passwordStackView.addArrangedSubview(passwordTextField)
-        passwordStackView.addArrangedSubview(changePasswordLabel)
+        passwordStackView.addArrangedSubview(lowerPasswordStackView)
+        
+        lowerPasswordStackView.addArrangedSubview(wrongPasswordStackView)
+        
+        wrongPasswordStackView.addArrangedSubview(wrongPasswordImageView)
+        wrongPasswordStackView.addArrangedSubview(wrongPasswordLabel)
+        
+        lowerPasswordStackView.addArrangedSubview(changePasswordLabel)
         
         mainStackView.addArrangedSubview(loginButton)
     }
@@ -226,9 +273,9 @@ class LoginView: UIView {
             mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -32)
         ])
         
-        //Change Password Label
+        //Wrong password Image View
         NSLayoutConstraint.activate([
-            changePasswordLabel.trailingAnchor.constraint(equalTo: passwordStackView.trailingAnchor)
+            wrongPasswordImageView.widthAnchor.constraint(equalToConstant: 24)
         ])
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol StudentProjectsDetailPresenterProtocol {
-    func showProjectRules(rules: String)
+    func showProjectRules()
     func showUploadFileView()
     func toggleTaskCompletedStatus(task: TaskModel)
     func showMentorReview()
@@ -28,7 +28,7 @@ class StudentProjectDetailPresenter: StudentProjectsDetailPresenterProtocol {
     
     //MARK: - Actions
     
-    func showProjectRules(rules: String) {
+    func showProjectRules() {
         coordinator.showProjectRules()
     }
     

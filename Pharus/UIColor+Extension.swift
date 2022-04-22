@@ -16,6 +16,13 @@ extension UIColor {
             alpha: 1
         )
         
+        static let redExpiredProjectBackground = UIColor(
+            red: 0.765,
+            green: 0.063,
+            blue: 0.29,
+            alpha: 1
+        )
+        
         static let orangeSubscribedProjectBackground = UIColor(
             red: 0.992,
             green: 0.627,
@@ -90,11 +97,18 @@ extension UIColor {
             alpha: 1
         )
         
-        static let pinkDisabledBorder = UIColor(
-            red: 0.81,
-            green: 0.64,
-            blue: 0.96,
-            alpha: 1.00
+        static let graySubscribeText = UIColor(
+            red: 0.686,
+            green: 0.682,
+            blue: 0.702,
+            alpha: 1
+        )
+        
+        static let graySubscribeBorder = UIColor(
+            red: 0.686,
+            green: 0.682,
+            blue: 0.702,
+            alpha: 1
         )
         
         static let grayDisabledBackground = UIColor(
@@ -175,4 +189,11 @@ extension UIColor {
             alpha: 1
         )
     }
+    
+    static let redError = UIColor(
+        red: 0.6,
+        green: 0,
+        blue: 0,
+        alpha: 1
+    )
 }
