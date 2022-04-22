@@ -8,22 +8,14 @@
 import UIKit
 
 class ProjectSheetViewController: UIViewController {
+ 
+    //MARK: - Properties
     
     var coordinator: ProjectSheetCoordinator
     var presenter: ProjectSheetPresenter
-    var projectSheetView: ProjectSheetView
+    private var projectSheetView: ProjectSheetView
     
-    override func loadView() {
-        super.loadView()
-        
-        self.view = projectSheetView
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        projectSheetView.delegate = self
-    }
+    //MARK: - Initializer
     
     init(
         coordinator: ProjectSheetCoordinator,
@@ -40,7 +32,23 @@ class ProjectSheetViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Life Cycle
+    
+    override func loadView() {
+        super.loadView()
+        
+        self.view = projectSheetView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        projectSheetView.delegate = self
+    }
 }
+
+//MARK: - Project Sheet Delegate
 
 extension ProjectSheetViewController: ProjectSheetDelegate {
     func closeButtonTapped() {

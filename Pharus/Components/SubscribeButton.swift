@@ -13,7 +13,7 @@ class SubscribeButton: UIButton {
     
     var isSubscribed: Bool {
         didSet {
-            self.changeButtonStatus()
+            self.setButtonColors()
         }
     }
     
@@ -41,39 +41,27 @@ class SubscribeButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Subviews
+    
     private func configureSubviews() {
-        setTitle(
-            isSubscribed ? "Inscrito" : "Inscreva-se",
-            for: .normal
-        )
-        setTitleColor(
-            isSubscribed ? UIColor.button.grayDisabledText : UIColor.purple.pharusPurple,
-            for: .normal
-        )
-        
-        titleLabel?.font = UIFont.smallButton
+        setButtonColors()
+        titleLabel?.font = UIFont.smallButtonSemiBold
         backgroundColor = .clear
         contentEdgeInsets = UIEdgeInsets(top: 0.0, left: 16.0, bottom: 0.0, right: 16.0)
-        
-        layer.borderColor = isSubscribed ? UIColor.button.pinkDisabledBorder.cgColor : UIColor.purple.pharusPurple.cgColor
-        
         layer.borderWidth = 2
         layer.cornerRadius = 16
-        
     }
     
-    private func changeButtonStatus() {
-        setTitle(
-            isSubscribed ? "Inscrito" : "Inscreva-se",
-            for: .normal
-        )
-        
-        setTitleColor(
-            isSubscribed ? UIColor.button.grayDisabledText : UIColor.purple.pharusPurple,
-            for: .normal
-        )
-        
-        layer.borderColor = isSubscribed ? UIColor.button.pinkDisabledBorder.cgColor : UIColor.purple.pharusPurple.cgColor
+    private func setButtonColors() {
+        if isSubscribed {
+            setTitle("Inscrito", for: .normal)
+            setTitleColor(UIColor.button.grayDisabledText, for: .normal)
+            layer.borderColor = UIColor.button.pinkDisabledBorder.cgColor
+        } else {
+            setTitle("Inscreva-se", for: .normal)
+            setTitleColor(UIColor.purple.pharusPurple, for: .normal)
+            layer.borderColor = UIColor.purple.pharusPurple.cgColor
+        }
     }
     
     //MARK: - Constraints

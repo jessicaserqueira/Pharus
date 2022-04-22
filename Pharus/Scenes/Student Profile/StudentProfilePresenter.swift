@@ -7,22 +7,25 @@
 
 import Foundation
 
-protocol StudentProfilePresenterProtocol {
-    func showStudentProfile()
-}
+protocol StudentProfilePresenterProtocol { }
 
 class StudentProfilePresenter {
     
-    var coordinator: StudentProfileFlow
+    //MARK: - Properties
     
-    init(coordinator: StudentProfileFlow) {
+    private var coordinator: StudentProfileCoordinator
+    
+    //MARK: - Initializer
+    
+    init(coordinator: StudentProfileCoordinator) {
         self.coordinator = coordinator
     }
-
 }
 
-extension StudentProfilePresenter: StudentProfilePresenterProtocol{
-    func showStudentProfile() {
-        coordinator.showStudentProfile()
+//MARK: - Actions
+
+extension StudentProfilePresenter: StudentProfilePresenterProtocol {
+    func showLogoutAlert() {
+        coordinator.showLogOutAlert()
     }
 }

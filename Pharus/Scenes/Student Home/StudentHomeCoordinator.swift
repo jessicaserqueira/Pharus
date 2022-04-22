@@ -15,9 +15,14 @@ class StudentHomeCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
+    var student: StudentModel
     
-    init(navigationController: UINavigationController) {
+    init(
+        navigationController: UINavigationController,
+         student: StudentModel
+    ) {
         self.navigationController = navigationController
+        self.student = student
     }
     
     func start() {
@@ -25,10 +30,12 @@ class StudentHomeCoordinator: Coordinator {
         let studentHomePresenter = StudentHomePresenter(coordinator: self)
         let studentHomeViewController = StudentHomeViewController(
             coordinator: self,
-            presenter: studentHomePresenter
+            presenter: studentHomePresenter,
+            student: student
         )
     
         navigationController.setNavigationBarHidden(true, animated: true)
+        navigationController.tabBarController?.tabBar.isHidden = false
         
         navigationController.pushViewController(studentHomeViewController, animated: true)
     }

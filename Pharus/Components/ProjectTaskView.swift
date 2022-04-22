@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ProjectTaskDelegate: AnyObject {
-    func checkmarkButtonTapped(task: Task)
+    func checkmarkButtonTapped(task: TaskModel)
 }
 
 class ProjectTaskView: UIView {
@@ -16,10 +16,10 @@ class ProjectTaskView: UIView {
     //MARK: - Properties
     
     weak var delegate: ProjectTaskDelegate?
-    private var checkImage: UIImage
-    var task: Task
+    private var checkImage: UIImage?
+    private var task: TaskModel
     var color: UIColor
-
+    
     //MARK: - Views
     
     private lazy var mainStackView: UIStackView = {
@@ -28,6 +28,7 @@ class ProjectTaskView: UIView {
         stackView.spacing = 11
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ProjectTaskViewView.individualStackView"
+        
         return stackView
     }()
     
@@ -37,6 +38,7 @@ class ProjectTaskView: UIView {
         stackView.axis = .horizontal
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ProjectTaskViewView.taskTitleStackView"
+        
         return stackView
     }()
     
@@ -46,6 +48,7 @@ class ProjectTaskView: UIView {
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectTaskViewView.taskTitleLabel"
+        
         return label
     }()
     
@@ -56,22 +59,14 @@ class ProjectTaskView: UIView {
         }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "ProjectTaskViewView.taskCheckmarkButton"
+        
         return button
-    }()
-    
-    private lazy var taskDescriptionLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.font = .smallBody
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "ProjectTaskViewView.taskDescriptionLabel"
-        return label
     }()
     
     //MARK: - Initializer
     
     convenience init(
-        task: Task,
+        task: TaskModel,
         checkImage: UIImage,
         color: UIColor
     ) {
@@ -79,7 +74,7 @@ class ProjectTaskView: UIView {
         
         self.task = task
         self.checkImage = checkImage
-            self.color = color
+        self.color = color
         
         configureSubviews()
         customizeSubviews()
@@ -88,7 +83,7 @@ class ProjectTaskView: UIView {
     
     override init(frame: CGRect) {
         
-        self.task = Task(
+        self.task = TaskModel(
             title: "Tarefa",
             isComplete: false,
             description: "Lorem Ipsum"
@@ -108,6 +103,8 @@ class ProjectTaskView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Subviews
+    
     func configureSubviews() {
         addSubview(mainStackView)
         
@@ -115,15 +112,11 @@ class ProjectTaskView: UIView {
         
         taskTitleStackView.addArrangedSubview(taskCheckmarkButton)
         taskTitleStackView.addArrangedSubview(taskTitleLabel)
-        
-        mainStackView.addArrangedSubview(taskDescriptionLabel)
     }
     
     func customizeSubviews() {
         taskTitleLabel.text = task.title
         taskTitleLabel.textColor = color
-        taskDescriptionLabel.text = task.taskDescription
-        taskDescriptionLabel.textColor = color
         taskCheckmarkButton.setImage(self.checkImage, for: .normal)
     }
     
@@ -143,7 +136,7 @@ class ProjectTaskView: UIView {
 //MARK: - Actions
 
 extension ProjectTaskView {
-    func checkmarkButtonTapped(task: Task) {
+    func checkmarkButtonTapped(task: TaskModel) {
         delegate?.checkmarkButtonTapped(task: task)
     }
 }

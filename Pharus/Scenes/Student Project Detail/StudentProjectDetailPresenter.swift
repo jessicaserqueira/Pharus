@@ -10,27 +10,37 @@ import UIKit
 protocol StudentProjectsDetailPresenterProtocol {
     func showProjectRules(rules: String)
     func showUploadFileView()
-    func toggleTaskCompletedStatus(task: Task)
+    func toggleTaskCompletedStatus(task: TaskModel)
+    func showMentorReview()
 }
 
 class StudentProjectDetailPresenter: StudentProjectsDetailPresenterProtocol {
     
+    //MARK: - Properties
+    
     private var coordinator: StudentProjectDetailCoordinator
+    
+    //MARK: - Initializer
     
     init(coordinator: StudentProjectDetailCoordinator) {
         self.coordinator = coordinator
     }
     
+    //MARK: - Actions
+    
     func showProjectRules(rules: String) {
         coordinator.showProjectRules()
+    }
+    
+    func showMentorReview() {
+        coordinator.showMentorReview()
     }
     
     func showUploadFileView() {
         coordinator.showSendFileView()
     }
     
-    func toggleTaskCompletedStatus(task: Task) {
+    func toggleTaskCompletedStatus(task: TaskModel) {
         task.toggleCompletionStatus()
-        print(task.isComplete)
     }
 }

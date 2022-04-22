@@ -10,7 +10,7 @@ import UIKit
 class ProjectScheduleView: UIView {
     
     //MARK: - Properties
-    var project: Project {
+    var project: ProjectModel {
         didSet {
             customizeSubviews()
         }
@@ -18,51 +18,56 @@ class ProjectScheduleView: UIView {
     
     //MARK: - Views
     
-    lazy var mainView: UIView = {
+    private lazy var mainView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "ProjectScheduleView.mainView"
         view.layer.cornerRadius = 8
+        
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ProjectScheduleView.mainStackView"
+        
         return stackView
     }()
     
-    lazy var iconHelperView: UIView = {
+    private lazy var iconHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "ProjectScheduleView.iconHelperView"
+        
         return view
     }()
     
-    lazy var iconImageView: UIImageView = {
+    private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.icons.clockIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "ProjectScheduleView.iconImageView"
+        
         return imageView
     }()
     
-    lazy var textLabel: UILabel = {
+    private lazy var textLabel: UILabel = {
         let label = UILabel()
         label.text = "20 dias"
         label.font = UIFont.mediumBodyBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectScheduleView.textLabel"
+        
         return label
     }()
     
     
     //MARK: - Initilizer
     
-    convenience init(project: Project) {
+    convenience init(project: ProjectModel) {
         self.init()
         
         self.project = project
@@ -73,7 +78,7 @@ class ProjectScheduleView: UIView {
     
     override init(frame: CGRect) {
         
-        self.project = Student.defaultProject
+        self.project = StudentModel.defaultProject
         
         super.init(frame: .zero)
         
@@ -85,7 +90,9 @@ class ProjectScheduleView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureSubviews() {
+    //MARK: - Subviews
+    
+    private func configureSubviews() {
         addSubview(mainView)
         
         mainView.addSubview(mainStackView)
@@ -97,11 +104,11 @@ class ProjectScheduleView: UIView {
         mainStackView.addArrangedSubview(textLabel)
     }
     
-    func customizeSubviews() {
+    private func customizeSubviews() {
         
         if project.isComplete {
-            iconImageView.image = UIImage.images.checkImage
-            textLabel.text = "Concluído!"
+            iconImageView.image = UIImage.icons.checkIcon?.withTintColor(.black)
+            textLabel.text = "Feito!"
             mainView.backgroundColor = UIColor.projectSchedule.greenBackground
         } else {
             let dateFormatter = DateFormatter()
@@ -130,7 +137,7 @@ class ProjectScheduleView: UIView {
     
     //MARK: - Constraints
     
-    func setupConstraints() {
+    private func setupConstraints() {
         //Main View
         self.stretch(mainView)
         

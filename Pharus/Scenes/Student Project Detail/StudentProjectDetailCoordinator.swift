@@ -10,15 +10,23 @@ import UIKit
 protocol StudentProjectDetailFlow {
     func showProjectRules()
     func showSendFileView()
+    func showMentorReview()
 }
 
 class StudentProjectDetailCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var project: Project
+    private var project: ProjectModel
     
-    init(navigationController: UINavigationController, project: Project) {
+    //MARK: - Initializer
+    
+    init(
+        navigationController: UINavigationController,
+        project: ProjectModel
+    ) {
         self.navigationController = navigationController
         self.project = project
     }
@@ -31,20 +39,36 @@ class StudentProjectDetailCoordinator: Coordinator {
             presenter: studentProjectDetailPresenter,
             project: project
         )
-                
+        
         navigationController.pushViewController(studentProjectDetailViewController, animated: true)
     }
 }
 
+//MARK: - Actions
+
 extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
-    
     func showProjectRules() {
-        
         let projectSheetView = ProjectSheetView(
             viewTitle: "Atividades",
             descriptionTitle: "Tarefa 01",
-            descriptionText: project.rules,
+            descriptionText: "atividades vao ficar aq",
             icon: UIImage(named: K.Assets.Icons.rulesIcon)!
+        )
+        
+        let projectSheetCoordinator = ProjectSheetCoordinator(
+            navigationController: navigationController,
+            projectSheetView: projectSheetView
+        )
+        
+        coordinate(to: projectSheetCoordinator)
+    }
+    
+    func showMentorReview() {
+        let projectSheetView = ProjectSheetView(
+            viewTitle: "Avaliação do mentor",
+            descriptionTitle: "Tarefa 01:",
+            descriptionText: project.scoreDescription ?? "",
+            icon: UIImage.icons.feedbackIcon ?? .defaultImage
         )
         
         let projectSheetCoordinator = ProjectSheetCoordinator(
@@ -60,7 +84,7 @@ extension StudentProjectDetailCoordinator: StudentProjectDetailFlow {
             navigationController: navigationController,
             project: project
         )
-
+        
         coordinate(to: sendFileCoordinator)
     }
 }

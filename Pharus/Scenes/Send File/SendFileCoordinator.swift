@@ -13,11 +13,18 @@ protocol SendFileFlow {
 
 class SendFileCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var project: Project
+    private var project: ProjectModel
     
-    init(navigationController: UINavigationController, project: Project) {
+    //MARK: - Initializer
+    
+    init(
+        navigationController: UINavigationController,
+        project: ProjectModel
+    ) {
         self.navigationController = navigationController
         self.project = project
     }
@@ -33,14 +40,15 @@ class SendFileCoordinator: Coordinator {
     }
 }
 
+//MARK: - Actions
+
 extension SendFileCoordinator: SendFileFlow {
     func showFileSentAlert() {
-        let alertView = AlertView(
-            message: "Arquivo enviado com sucesso!",
-            image: UIImage.images.checkImage ?? .defaultImage
+        let alertView = ConfirmationAlertView(
+            message: "Arquivo enviado com sucesso!"
         )
         
-        let alertCoordinator = AlertCoordinator(
+        let alertCoordinator = ConfirmationAlertCoordinator(
             navigationController: navigationController,
             alertView: alertView
         )

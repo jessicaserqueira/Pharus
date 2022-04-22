@@ -8,57 +8,95 @@ import UIKit
 
 class StudentHomeMiniCardView: UIView {
     
+    //MARK: - Properties
+    private var cardType: HomeCardType
+    private var message: String
+    
+    enum HomeCardType {
+        case warning
+        case newProject
+        case newMedal
+    }
+    
     //MARK: - Views
     
-    lazy var mainView: UIView = {
+    private lazy var mainView: UIView = {
         let view = UIView()
+        view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeMiniCardView.mainView"
+        
         return view
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 15
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "StudentHomeMiniCardView.mainStackView"
+        
         return stackView
     }()
     
-    lazy var cardIconHelperView: UIView = {
+    private lazy var cardIconHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeMiniCardView.cardIconHelperView"
+        
         return view
     }()
     
-    lazy var cardIconImageView: UIImageView = {
+    private lazy var cardIconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: K.Assets.Images.medalImage)
+        imageView.image = UIImage.images.fifthPlaceMedalImage
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "StudentHomeMiniCardView.cardIconImageView"
+        
         return imageView
     }()
     
-    lazy var cardDescriptionHelperView: UIView = {
+    private lazy var cardDescriptionHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "StudentHomeMiniCardView.cardDescriptionHelperView"
+        
         return view
     }()
     
-    lazy var cardDescriptionLabel: UILabel = {
+    private lazy var cardDescriptionLabel: UILabel = {
         let label = UILabel()
         label.text = "O projeto ”Introdução a Robótica” te deu uma medalha!"
         label.textAlignment = .center
         label.numberOfLines = 0
+        label.textColor = .black
+        label.font =  .smallBody
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "StudentHomeMiniCardView.cardDescriptionLabel"
+        
         return label
     }()
     
+    //MARK: - Initializer
+    
+    convenience init(
+        cardType: HomeCardType,
+        message: String
+    ) {
+        self.init()
+        
+        self.cardType = cardType
+        self.message = message
+        
+        
+        customizeSubviews()
+    }
+    
     override init(frame: CGRect) {
+        
+        self.cardType = .newProject
+        self.message = "O projeto ”Introdução a Robótica” te deu uma medalha!"
+        
         super.init(frame: .zero)
         
         configureSubviews()
@@ -69,7 +107,9 @@ class StudentHomeMiniCardView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureSubviews() {
+    //MARK: - Subviews
+    
+    private func configureSubviews() {
         addSubview(mainView)
         
         mainView.addSubview(mainStackView)
@@ -83,9 +123,24 @@ class StudentHomeMiniCardView: UIView {
         cardDescriptionHelperView.addSubview(cardDescriptionLabel)
     }
     
+    private func customizeSubviews() {
+        if cardType == .newProject {
+            mainView.backgroundColor = UIColor.card.orangeHomeStandardCardBackground
+            cardIconImageView.image = UIImage.icons.companyIcon
+        } else if cardType == .warning {
+            mainView.backgroundColor = UIColor.card.yellowHomeAlertCardBackground
+            cardIconImageView.image = UIImage.icons.warningIcon
+        } else {
+            mainView.backgroundColor = UIColor.card.orangeHomeStandardCardBackground
+            cardIconImageView.image = UIImage.icons.medalIcon
+        }
+        
+        cardDescriptionLabel.text = message
+    }
+    
     //MARK: - Constraints
     
-    func setupConstraints() {
+    private func setupConstraints() {
         //Main View
         self.stretch(mainView)
         
@@ -108,5 +163,4 @@ class StudentHomeMiniCardView: UIView {
             cardDescriptionLabel.bottomAnchor.constraint(equalTo: cardDescriptionHelperView.bottomAnchor)
         ])
     }
-    
 }

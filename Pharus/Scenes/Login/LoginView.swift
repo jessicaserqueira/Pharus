@@ -9,6 +9,7 @@ import UIKit
 
 protocol LoginViewDelegate: AnyObject{
     func loginButtonPressed()
+    func changePasswordButtonTapped()
 }
 
 class LoginView: UIView {
@@ -19,7 +20,7 @@ class LoginView: UIView {
     
     //MARK: - Views
     
-    lazy var mainView: UIView = {
+    private lazy var mainView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +29,7 @@ class LoginView: UIView {
         return view
     }()
     
-    lazy var logoImageView: UIImageView = {
+    private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.images.appLogoImage
         imageView.contentMode = .scaleAspectFit
@@ -38,7 +39,7 @@ class LoginView: UIView {
         return imageView
     }()
     
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = UIScreen.main.bounds.height/17
@@ -49,7 +50,7 @@ class LoginView: UIView {
         return stackView
     }()
     
-    lazy var loginTitle: UILabel = {
+    private lazy var loginTitle: UILabel = {
         let label = UILabel()
         label.text = "Login"
         label.textColor = UIColor.purple.pharusPurple
@@ -61,7 +62,7 @@ class LoginView: UIView {
         return label
     }()
     
-    lazy var emailStackView: UIStackView = {
+    private lazy var emailStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -73,7 +74,7 @@ class LoginView: UIView {
         return stackView
     }()
     
-    lazy var emailLabel: UILabel = {
+    private lazy var emailLabel: UILabel = {
         let label = UILabel()
         label.text = "E-mail"
         label.font = .mediumTitleBold
@@ -86,13 +87,16 @@ class LoginView: UIView {
     
     lazy var emailTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "antonia.ferreira@gmail.com"
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "antonia.ferreira@gmail.com",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        textField.textColor = .black
         textField.font = .smallBody
         textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         textField.layer.shadowOpacity = 0.30
         textField.layer.shadowRadius = 0.0
-        textField.backgroundColor = UIColor.white
+        textField.backgroundColor = .white
         textField.autocorrectionType = .no
         textField.autocapitalizationType = .none
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -101,7 +105,7 @@ class LoginView: UIView {
         return textField
     }()
     
-    lazy var passwordStackView: UIStackView = {
+    private lazy var passwordStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -109,11 +113,11 @@ class LoginView: UIView {
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "LoginView.passwordStackView"
-    
+        
         return stackView
     }()
     
-    lazy var passwordLabel: UILabel = {
+    private  lazy var passwordLabel: UILabel = {
         let label = UILabel()
         label.text = "Senha"
         label.font = .mediumTitleBold
@@ -126,13 +130,16 @@ class LoginView: UIView {
     
     lazy var passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Senha"
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Senha",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        textField.textColor = .black
         textField.font = .smallBody
         textField.layer.shadowColor = UIColor.purple.pharusPurple.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         textField.layer.shadowOpacity = 0.30
         textField.layer.shadowRadius = 0.0
-        textField.backgroundColor = UIColor.white
+        textField.backgroundColor = .white
         textField.autocorrectionType = .no
         textField.autocapitalizationType = .none
         textField.isSecureTextEntry = true
@@ -142,8 +149,12 @@ class LoginView: UIView {
         return textField
     }()
     
-    lazy var changePasswordLabel: UILabel = {
+    private lazy var changePasswordLabel: UILabel = {
         let label = UILabel()
+        label.setOnClickListener {
+            self.changePasswordButtonTapped()
+        }
+        label.isUserInteractionEnabled = true
         label.text = "Esqueci minha senha!"
         label.font = .miniBody
         label.textColor = UIColor.purple.pharusPurple
@@ -154,15 +165,15 @@ class LoginView: UIView {
         return label
     }()
     
-    lazy var loginButton: MainCardButton = {
-        let button = MainCardButton(title: "Entrar")
+    private lazy var loginButton: MainCardButton = {
+        let button = MainCardButton(title: "Entrar", buttonState: .normal)
         button.addAction(UIAction { _ in
             self.loginButtonPressed()
         }, for: .touchUpInside)
         button.titleLabel?.font = .largeButton
         button.translatesAutoresizingMaskIntoConstraints = false
         button.accessibilityIdentifier = "LoginView.loginButton"
-
+        
         return button
     }()
     
@@ -178,6 +189,8 @@ class LoginView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Subviews
     
     func configureSubviews() {
         addSubview(mainView)
@@ -200,17 +213,19 @@ class LoginView: UIView {
         mainStackView.addArrangedSubview(loginButton)
     }
     
+    //MARK: - Constraints
+    
     func setupConstraints() {
         //Main View
         self.stretch(mainView)
-                
+        
         //Main Stack View
         NSLayoutConstraint.activate([
             mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 48),
             mainStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 32),
             mainStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -32)
         ])
-                        
+        
         //Change Password Label
         NSLayoutConstraint.activate([
             changePasswordLabel.trailingAnchor.constraint(equalTo: passwordStackView.trailingAnchor)
@@ -220,8 +235,12 @@ class LoginView: UIView {
 
 //MARK: - Actions
 
-extension LoginView {
-     func loginButtonPressed() {
-         delegate?.loginButtonPressed()
-     }
+extension LoginView: LoginViewDelegate {
+    func loginButtonPressed() {
+        delegate?.loginButtonPressed()
+    }
+    func changePasswordButtonTapped(){
+        delegate?.changePasswordButtonTapped()
+    }
+    
 }

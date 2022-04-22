@@ -8,17 +8,24 @@
 import UIKit
 
 protocol SendFilePresenterProtocol {
-   func sendFile()
+    func uploadFile()
+    func sendFile()
 }
 
-class SendFilePresenter: SendFilePresenterProtocol {
+class SendFilePresenter {
+    
+    //MARK: - Properties
     
     var coordinator: SendFileCoordinator
+    
+    //MARK: - Initializer
     
     init(coordinator: SendFileCoordinator) {
         self.coordinator = coordinator
     }
     
+    //MARK: - Actions
+
     func sendFile() {
         coordinator.showFileSentAlert()
     }

@@ -8,18 +8,29 @@
 import UIKit
 
 protocol StudentProjectsPresenterProtocol {
-    func showStudentProject(project: Project)
+    func showStudentProject(project: ProjectModel)
 }
 
 class StudentProjectsPresenter: StudentProjectsPresenterProtocol {
+    
+    //MARK: - Properties
+    
     private var coordinator: StudentProjectsCoordinator
+    
+    //MARK: - Initializer
     
     init(coordinator: StudentProjectsCoordinator) {
         self.coordinator = coordinator
     }
     
-    func showStudentProject(project: Project) {
+    //MARK: - Actions
+    
+    func showStudentProject(project: ProjectModel) {
         coordinator.showStudentProject(project)
+    }
+    
+    func showSubscribeAlert(of project: ProjectModel) {
+        coordinator.showSubscribeAlert(of: project)
     }
 }
 

@@ -8,19 +8,22 @@
 import UIKit
 
 protocol StudentProfileFlow {
-    func showStudentProfile()
     
 }
 
 class StudentProfileCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var student: Student
+    private var student: StudentModel
+    
+    //MARK: - Initializer
     
     init(
         navigationController: UINavigationController,
-        student: Student
+        student: StudentModel
     ) {
         self.navigationController = navigationController
         self.student = student
@@ -33,16 +36,26 @@ class StudentProfileCoordinator: Coordinator {
         
         let studentProfileViewController = StutentProfileViewController(
             coordinator: self,
-            presenter: studentProfilePresenter
+            presenter: studentProfilePresenter,
+            student: student
         )
-
+        
         navigationController.setNavigationBarHidden(false, animated: true)
         navigationController.pushViewController(studentProfileViewController, animated: true)
     }
 }
 
+//MARK: - Actions
+
 extension StudentProfileCoordinator: StudentProfileFlow {
-    func showStudentProfile() {
-   
+    func showLogOutAlert() {
+        let logoutAlertView = LogoutAlertView()
+        
+        let logoutAlertCoordinator = LogoutAlertCoordinator(
+            navigationController: navigationController,
+            alertView: logoutAlertView
+        )
+        
+        coordinate(to: logoutAlertCoordinator)
     }
 }

@@ -9,16 +9,20 @@ import UIKit
 
 class StudentProjectsViewController: UIViewController {
     
+    //MARK: - Properties
+    
     private var coordinator: StudentProjectsCoordinator
     private var presenter: StudentProjectsPresenter
-    private var student: Student
-    private var projects: [Project]
-    let tableView = UITableView()
+    private var student: StudentModel
+    private var projects: [ProjectModel]
+    private let tableView = UITableView()
+    
+    //MARK: - Initializer
     
     init(
         coordinator: StudentProjectsCoordinator,
-         presenter: StudentProjectsPresenter,
-         student: Student
+        presenter: StudentProjectsPresenter,
+        student: StudentModel
     ) {
         self.coordinator = coordinator
         self.presenter = presenter
@@ -32,6 +36,14 @@ class StudentProjectsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Life Cycle
+    
+    override func loadView() {
+        super.loadView()
+        
+        view.backgroundColor = .white
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,24 +52,28 @@ class StudentProjectsViewController: UIViewController {
         setupTableView()
     }
     
-    override func loadView() {
-        super.loadView()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        view.backgroundColor = .white
+        setGradientBackground()
+        tableView.reloadData()
     }
     
-    func setNavigationBar() {
+    //MARK: - Actions
+    
+    private func setNavigationBar() {
         self.title = "Seus projetos"
         self.navigationController?.title = ""
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         tableView.register(StudentProjectCell.self,
                            forCellReuseIdentifier: K.CellReuseIdentifiers.userProjects)
         
         tableView.dataSource = self
         tableView.delegate = self
         
+        tableView.backgroundColor = .clear
         tableView.separatorColor = .clear
         
         NSLayoutConstraint.activate([
@@ -70,6 +86,8 @@ class StudentProjectsViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
     }
 }
+
+//MARK: - UITableViewDataSource
 
 extension StudentProjectsViewController: UITableViewDataSource {
     
@@ -89,11 +107,19 @@ extension StudentProjectsViewController: UITableViewDataSource {
         cell.configureSubviews()
         cell.setupConstraints()
         cell.configureCell(using: project)
+        if project.isSubscribed == false {
+            cell.subscribeButton.addAction( UIAction { _ in
+                self.presenter.showSubscribeAlert(of: project)
+            }, for: .touchUpInside)
+        }
         cell.mainView.layer.cornerRadius = 16
+        cell.backgroundColor = .clear
         
         return cell
     }
 }
+
+//MARK: - UITableViewDelegate
 
 extension StudentProjectsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

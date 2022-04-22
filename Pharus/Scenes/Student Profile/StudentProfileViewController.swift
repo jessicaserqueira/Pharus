@@ -9,30 +9,25 @@ import UIKit
 
 class StutentProfileViewController: UIViewController {
     
-    var coordinator: StudentProfileCoordinator
-    var studentProfileView = StudentProfileView()
-    var presenter: StudentProfilePresenter
+    //MARK: - Properties
     
-    override func loadView() {
-        super.loadView()
-       
-        self.view = studentProfileView
-    }
+    private var coordinator: StudentProfileCoordinator
+    private var studentProfileView: StudentProfileView
+    private var presenter: StudentProfilePresenter
+    private var student: StudentModel
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        studentProfileView.delegate = self
-        setNavigationBar()
-        
-    }
+    //MARK: - Initializer
     
     init(
         coordinator: StudentProfileCoordinator,
-        presenter: StudentProfilePresenter
-    ){
+        presenter: StudentProfilePresenter,
+        student: StudentModel
+    ) {
         self.coordinator = coordinator
         self.presenter = presenter
+        self.student = student
+        
+        studentProfileView =  StudentProfileView(student: student)
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -41,51 +36,49 @@ class StutentProfileViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Life Cycle
+    
+    override func loadView() {
+        super.loadView()
+        
+        self.view = studentProfileView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setGradientBackground()
+        showStudentAvatar()
+    }
+    
+    //MARK: - Actions
+    
+    func showStudentAvatar() {
+        studentProfileView.profileImageView.image = UIImage(
+            named: "avatar" + student.avatar + K.Assets.Images.Avatar.CircleImage.suffix
+        )
+    }
+    
     func setNavigationBar() {
         self.title = "Perfil"
         self.navigationController?.title = ""
         
-        var logoutButtonImage = UIImage(named: K.Assets.Icons.logoutButtonIcon)
-        logoutButtonImage = logoutButtonImage?.withTintColor(UIColor(red: 0.153,
-                                                                     green: 0.153,
-                                                                     blue: 0.153,
-                                                                     alpha: 1),
-                                                             renderingMode: .alwaysOriginal)
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: logoutButtonImage,
-                                                                 style: .plain,
-                                                                 target: self,
-                                                                 action: #selector(logoutButtonPressed))
-        
-        var backButtonImage = UIImage(named: K.Assets.Icons.backButtonIcon)
-        backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
-                                                                 green: 0.153,
-                                                                 blue: 0.153,
-                                                                 alpha: 1),
-                                                         renderingMode: .alwaysOriginal)
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
-                                                                style: .plain,
-                                                                target: self,
-                                                                action: #selector(backButtonPressed))
-        
+        let logoutIcon = UIImage.icons.logOutIcon?.withRenderingMode(.alwaysOriginal)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: logoutIcon,
+            style: .plain,
+            target: self,
+            action: #selector(logoutTapped)
+        )
     }
     
-    //Implementar quando o fluxo estiver pronto
-    @objc func backButtonPressed() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    //Implementar quando o fluxo estiver pronto
-    @objc func logoutButtonPressed() {
-        self.navigationController?.popViewController(animated: true)
+    @objc func logoutTapped() {
+        presenter.showLogoutAlert()
     }
 }
-
-extension StutentProfileViewController: StudentProfileDelegate {
-  
-    
-}
-
-
-

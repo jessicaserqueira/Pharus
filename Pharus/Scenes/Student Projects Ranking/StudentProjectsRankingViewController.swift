@@ -4,31 +4,40 @@
 //
 //  Created by Victor Colen on 04/04/22.
 //
-
 import UIKit
 
 class StudentRankingProjectsViewController: UIViewController {
     
     // MARK: - Properties
     
-    let tableView = UITableView()
+    private let tableView = UITableView()
     private var coordinator: StudentProjectsRankingCoordinator
-    private var student: Student
-    private var projects: [Project]
+    private var student: StudentModel
+    private var projects: [ProjectModel]
+    
+    //MARK: - Initializer
     
     init(
         coordinator: StudentProjectsRankingCoordinator,
-        student: Student
+        student: StudentModel
     ) {
         self.coordinator = coordinator
         self.student = student
-        self.projects = student.projects
+        self.projects = student.projects.filter({ $0.placement != nil })
         
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Life Cycle
+    
+    override func loadView() {
+        super.loadView()
+        
+        tableView.backgroundColor = .clear
     }
     
     override func viewDidLoad() {
@@ -38,72 +47,27 @@ class StudentRankingProjectsViewController: UIViewController {
         
         view.addSubview(tableView)
         setupTableView()
-        
-        student = Bundle.main.decode("Student.json")
-        projects = student.projects
     }
     
-    override func loadView() {
-        super.loadView()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        view.backgroundColor = .white
+        setGradientBackground()
     }
     
-    func setNavigationBar() {
+    //MARK: - Actions
+    
+    private func setNavigationBar() {
         self.title = "Seus Rankings"
         self.navigationController?.title = ""
-        
-        let userImage = UIImage(named: K.Assets.Images.userImage)!
-        let userProfileButtonView = createUserProfileButton(image: userImage)
-        
-        let userPictureBarButton = UIBarButtonItem()
-        userPictureBarButton.customView = userProfileButtonView
-        
-        self.navigationItem.rightBarButtonItem = userPictureBarButton
-        
-        var backButtonImage = UIImage(named: K.Assets.Icons.backButtonIcon)
-        backButtonImage = backButtonImage?.withTintColor(UIColor(red: 0.153,
-                                                                 green: 0.153,
-                                                                 blue: 0.153,
-                                                                 alpha: 1),
-                                                         renderingMode: .alwaysOriginal)
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: backButtonImage,
-                                                                style: .plain,
-                                                                target: self,
-                                                                action: #selector(backButtonPressed))
-        
     }
     
-    func createUserProfileButton(image: UIImage) -> UIButton {
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.clipsToBounds = true
-        button.setImage(image, for: .normal)
-        button.addTarget(self,
-                         action: #selector(profilePicTapped),
-                         for: .touchUpInside)
-        
-        return button
-    }
-    
-    //Implementar quando o fluxo estiver pronto
-    @objc func backButtonPressed() {
-        print("Back button pressed")
-    }
-    
-    //Implementar quando a tela de usuário estiver pronta
-    @objc func profilePicTapped() {
-        print("Profile Picture pressed")
-    }
-    
-    func setupTableView() {
+    private func setupTableView() {
         tableView.register(StudentProjectRankingCell.self,
                            forCellReuseIdentifier: K.CellReuseIdentifiers.userRankingProjects)
         
         tableView.dataSource = self
-        tableView.delegate = self
+        tableView.allowsSelection = false
         
         tableView.separatorColor = .clear
         
@@ -120,29 +84,22 @@ class StudentRankingProjectsViewController: UIViewController {
 
 extension StudentRankingProjectsViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        480
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         projects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.CellReuseIdentifiers.userRankingProjects,
-                                                 for: indexPath) as! StudentProjectRankingCell
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: K.CellReuseIdentifiers.userRankingProjects,
+            for: indexPath
+        ) as! StudentProjectRankingCell
+        
         let project = projects[indexPath.row]
         
-        cell.configureSubviews()
-        cell.setupConstraints()
         cell.configureCell(using: project)
         cell.mainView.layer.cornerRadius = 16
+        cell.backgroundColor = .clear
         
         return cell
     }
 }
-
-extension StudentRankingProjectsViewController: UITableViewDelegate {
-    
-}
-

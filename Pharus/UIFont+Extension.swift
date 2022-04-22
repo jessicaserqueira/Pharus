@@ -4,15 +4,14 @@
 //
 //  Created by Victor Colen on 05/04/22.
 //
-
 import UIKit
 
 
 //MARK: - Constants
-
 extension UIFont {
     
-    static let largeTitleBold = customFont(font: .montserrat, ofSize: .extraLarge, weight: .bold)
+    static let largeTitleBold = customFont(font: .montserrat, ofSize: .large, weight: .bold)
+    static let largeTitleSemiBold = customFont(font: .montserrat, ofSize: .large, weight: .semibold)
     static let largeTitleMedium = customFont(font: .montserrat, ofSize: .large, weight: .medium)
     static let mediumTitleMedium = customFont(font: .montserrat, ofSize: .medium, weight: .medium)
     static let mediumTitleBold = customFont(font: .montserrat, ofSize: .medium, weight: .bold)
@@ -20,14 +19,16 @@ extension UIFont {
     static let smallTitleMedium = customFont(font: .montserrat, ofSize: .small, weight: .medium)
     
     static let largeButton = customFont(font: .montserrat, ofSize: .large, weight: .medium)
-    static let smallButton = customFont(font: .montserrat, ofSize: .small, weight: .semibold)
+    static let mediumButtonSemiBold = customFont(font: .montserrat, ofSize: .medium, weight: .semibold)
+    static let smallButtonSemiBold = customFont(font: .montserrat, ofSize: .small, weight: .semibold)
     
+    static let mediumBody = customFont(font: .openSans, ofSize: .medium)
     static let mediumBodyBold = customFont(font: .openSans, ofSize: .medium, weight: .bold)
     static let smallBody = customFont(font: .openSans, ofSize: .small)
     static let smallBodyBold = customFont(font: .openSans, ofSize: .small, weight: .bold)
     static let miniBody = customFont(font: .openSans, ofSize: .mini)
     
-    static func customFont(
+    private static func customFont(
         font: FontName,
         ofSize size: FontSize,
         weight: FontWeight = .regular
@@ -40,9 +41,8 @@ extension UIFont {
 }
 
 //MARK: - Enums
-
 extension UIFont {
-    enum FontSize: CGFloat {
+    private enum FontSize: CGFloat {
         case mini = 12
         case small = 14
         case medium = 18
@@ -51,16 +51,15 @@ extension UIFont {
         case giant = 32
     }
     
-    enum FontName: String {
+    private enum FontName: String {
         case montserrat = "Montserrat"
         case openSans = "OpenSans"
     }
     
-    enum FontWeight: String {
+    private enum FontWeight: String {
         case regular = "Regular"
         case medium = "Medium"
         case semibold = "Semibold"
         case bold = "Bold"
     }
 }
-

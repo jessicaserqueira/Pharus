@@ -26,7 +26,7 @@ class ProjectSheetView: UIView {
     
     private lazy var scrollView: UIScrollView = {
         var scrollView = UIScrollView()
-        scrollView.backgroundColor = UIColor.modal.yellowModalBackground
+        scrollView.backgroundColor = UIColor.modal.yellowBackground
         scrollView.layer.cornerRadius = 16
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.accessibilityIdentifier = "ProjectSheetView.scrollView"
@@ -71,6 +71,7 @@ class ProjectSheetView: UIView {
         let label = UILabel()
         label.text = title
         label.font = .largeTitleBold
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSheetView.titleLabel"
         return label
@@ -90,6 +91,7 @@ class ProjectSheetView: UIView {
         label.text = descriptionTitle
         label.font = .mediumTitleBold
         label.numberOfLines = 0
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSheetView.descriptionTitleLabel"
         return label
@@ -99,6 +101,8 @@ class ProjectSheetView: UIView {
         let label = UILabel()
         label.text = descriptionText
         label.numberOfLines = 0
+        label.textColor = .black
+        label.font = .smallBody
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectSheetView.descriptionTextLabel"
         
