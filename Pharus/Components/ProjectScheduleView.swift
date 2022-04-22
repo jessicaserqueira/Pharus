@@ -23,6 +23,7 @@ class ProjectScheduleView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "ProjectScheduleView.mainView"
         view.layer.cornerRadius = 8
+        
         return view
     }()
     
@@ -32,6 +33,7 @@ class ProjectScheduleView: UIView {
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "ProjectScheduleView.mainStackView"
+        
         return stackView
     }()
     
@@ -39,6 +41,7 @@ class ProjectScheduleView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "ProjectScheduleView.iconHelperView"
+        
         return view
     }()
     
@@ -47,6 +50,7 @@ class ProjectScheduleView: UIView {
         imageView.image = UIImage.icons.clockIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "ProjectScheduleView.iconImageView"
+        
         return imageView
     }()
     
@@ -56,6 +60,7 @@ class ProjectScheduleView: UIView {
         label.font = UIFont.mediumBodyBold
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "ProjectScheduleView.textLabel"
+        
         return label
     }()
     
@@ -84,6 +89,8 @@ class ProjectScheduleView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Subviews
     
     func configureSubviews() {
         addSubview(mainView)
