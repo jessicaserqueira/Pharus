@@ -28,7 +28,7 @@ extension UIFont {
     static let smallBodyBold = customFont(font: .openSans, ofSize: .small, weight: .bold)
     static let miniBody = customFont(font: .openSans, ofSize: .mini)
     
-    static func customFont(
+    private static func customFont(
         font: FontName,
         ofSize size: FontSize,
         weight: FontWeight = .regular
@@ -42,7 +42,7 @@ extension UIFont {
 
 //MARK: - Enums
 extension UIFont {
-    enum FontSize: CGFloat {
+    private enum FontSize: CGFloat {
         case mini = 12
         case small = 14
         case medium = 18
@@ -51,12 +51,12 @@ extension UIFont {
         case giant = 32
     }
     
-    enum FontName: String {
+    private enum FontName: String {
         case montserrat = "Montserrat"
         case openSans = "OpenSans"
     }
     
-    enum FontWeight: String {
+    private enum FontWeight: String {
         case regular = "Regular"
         case medium = "Medium"
         case semibold = "Semibold"

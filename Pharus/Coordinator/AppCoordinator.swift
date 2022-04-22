@@ -9,10 +9,14 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     
+    //MARK: - Properties
+    
     let window: UIWindow
     var navigationController: UINavigationController
     var navigationBarController: UINavigationBar
     var childCoordinators: [Coordinator] = []
+    
+    //MARK: - Initializer
     
     init(window: UIWindow) {
         self.window = window
