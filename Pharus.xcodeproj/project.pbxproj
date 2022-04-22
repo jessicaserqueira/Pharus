@@ -35,7 +35,6 @@
 		796F55342810F03E00DC6F70 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F55332810F03E00DC6F70 /* ProjectModel.swift */; };
 		79735B64280ED78600D1067B /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79735B63280ED78600D1067B /* UIViewController+extension.swift */; };
 		797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */; };
-		79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */; };
 		7993C9A728102C2500526AF2 /* ProjectSubcriptionAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */; };
 		7993C9A928102E1800526AF2 /* SecondaryCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */; };
 		7993C9AB281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C9AA281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift */; };
@@ -147,7 +146,6 @@
 		796F55332810F03E00DC6F70 /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		79735B63280ED78600D1067B /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingPresenter.swift.swift; sourceTree = "<group>"; };
 		7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSubcriptionAlertView.swift; sourceTree = "<group>"; };
 		7993C9A828102E1800526AF2 /* SecondaryCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryCardButton.swift; sourceTree = "<group>"; };
 		7993C9AA281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSubcriptionAlertViewController.swift; sourceTree = "<group>"; };
@@ -253,19 +251,19 @@
 		79434A652809129A006D0184 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				7906FE5F2812C04000E4A83A /* TabBar */,
-				79A4B757281249A0002C018C /* Student Home News */,
-				C00E5F2B2811DE9200E8C71C /* Change Password */,
 				795A021A2809F345000D0B84 /* Alerts */,
 				79434A6928091491006D0184 /* Avatar Selection */,
+				C00E5F2B2811DE9200E8C71C /* Change Password */,
 				79434A66280912A8006D0184 /* Login */,
 				795A02152809B664000D0B84 /* Project Sheet */,
 				79434A6B2809194D006D0184 /* Send File */,
 				79E8389D280AF791001C46AD /* Student Home */,
+				79A4B757281249A0002C018C /* Student Home News */,
 				C01BB6B9280B8C41004D4790 /* Student Profile */,
 				79434A68280912BE006D0184 /* Student Project Detail */,
 				79434A67280912B2006D0184 /* Student Projects */,
 				79434A6A280914D0006D0184 /* Student Projects Ranking */,
+				7906FE5F2812C04000E4A83A /* TabBar */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -318,7 +316,6 @@
 			children = (
 				79C577D127FBBB9800046B00 /* StudentProjectsRankingViewController.swift */,
 				C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */,
-				79812247280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift */,
 				79C577CF27FBBB8100046B00 /* StudentProjectRankingCell.swift */,
 			);
 			path = "Student Projects Ranking";
@@ -746,7 +743,6 @@
 				79FB0CCB27F33118001D36A7 /* Bundle+Extension.swift in Sources */,
 				C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */,
 				7993C9B228104C5800526AF2 /* LogoutAlertView.swift in Sources */,
-				79812248280B1DA6003CEE8A /* StudentProjectsRankingPresenter.swift.swift in Sources */,
 				7910D9D027FCF5C800A8DDA0 /* StudentProjectDetailViewController.swift in Sources */,
 				796F55342810F03E00DC6F70 /* ProjectModel.swift in Sources */,
 				79EE5719280B881500F01069 /* StudentHomeCoordinator.swift in Sources */,
