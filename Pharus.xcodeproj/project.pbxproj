@@ -331,12 +331,12 @@
 			children = (
 				7993C9B028104C4400526AF2 /* Logout Alert */,
 				7993C9A428102B3400526AF2 /* Project Subcription Alert */,
-				7993C9A328102B2C00526AF2 /* One Button Alert */,
+				7993C9A328102B2C00526AF2 /* Confirmation Alert */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
 		};
-		7993C9A328102B2C00526AF2 /* One Button Alert */ = {
+		7993C9A328102B2C00526AF2 /* Confirmation Alert */ = {
 			isa = PBXGroup;
 			children = (
 				C05AA30227FFAA7400230698 /* ConfirmationAlertViewController.swift */,
@@ -344,7 +344,7 @@
 				79E838AB280B0676001C46AD /* ConfirmationAlertCoordinator.swift */,
 				79E838AD280B067D001C46AD /* ConfirmationAlertPresenter.swift */,
 			);
-			path = "One Button Alert";
+			path = "Confirmation Alert";
 			sourceTree = "<group>";
 		};
 		7993C9A428102B3400526AF2 /* Project Subcription Alert */ = {
