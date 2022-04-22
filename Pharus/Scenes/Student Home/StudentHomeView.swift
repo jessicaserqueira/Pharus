@@ -8,6 +8,22 @@ import UIKit
 
 class StudentHomeView: UIView {
     
+    //MARK: - Properties
+    private let cards: [StudentHomeMiniCardView] = [
+    StudentHomeMiniCardView(
+        cardType: .warning,
+        message: "\"Rabisco em arte\" termina em 6 dias!"
+    ),
+    StudentHomeMiniCardView(
+        cardType: .newMedal,
+        message: "O projeto \"Introdução a Robótica\" te deu uma medalha!"
+    ),
+    StudentHomeMiniCardView(
+        cardType: .newProject,
+        message: "Novo projeto: Algorítmo no seu dia"
+    )
+    ]
+    
     //MARK: - Views
     
     lazy var rectangleImageView: UIImageView = {
@@ -137,17 +153,14 @@ class StudentHomeView: UIView {
         
         miniCardScrollView.addSubview(miniCardStackView)
         
-        for _ in 0...20 {
-            let view = StudentHomeMiniCardView()
-            view.mainView.backgroundColor = UIColor.card.orangeHomeStandardCardBackground
-            view.mainView.layer.cornerRadius = 16
+        for card in cards {
             
             NSLayoutConstraint.activate([
-                view.heightAnchor.constraint(equalToConstant: 180),
-                view.widthAnchor.constraint(equalToConstant: 127)
+                card.heightAnchor.constraint(equalToConstant: 180),
+                card.widthAnchor.constraint(equalToConstant: 127)
             ])
             
-            miniCardStackView.addArrangedSubview(view)
+            miniCardStackView.addArrangedSubview(card)
         }
         
         mainStackView.addArrangedSubview(newsHelperView)
