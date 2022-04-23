@@ -374,8 +374,11 @@ class StudentProjectDetailView: UIView {
         completedTasksProgressView.trackTintColor = UIColor.button.grayDisabledBackground
         uploadFilesButton.disable()
         
+        
+        
         for case let taskView as ProjectTaskView in tasksStackView.arrangedSubviews {
             taskView.color = UIColor.project.grayDisabledText
+    
         }
     }
     

@@ -45,6 +45,23 @@ class ChangePasswordViewController: UIViewController {
         
         initializeHideKeyboard()
         setNavigationBar()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.customView.frame.origin.y == 0 {
+                self.customView.frame.origin.y -= keyboardSize.height + 50
+                self.customView.frame.origin.y += keyboardSize.height - 130
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.customView.frame.origin.y != 0 {
+            self.customView.frame.origin.y = 0
+        }
     }
     
     //MARK: - Actions

@@ -112,6 +112,7 @@ class ProjectTaskView: UIView {
         
         taskTitleStackView.addArrangedSubview(taskCheckmarkButton)
         taskTitleStackView.addArrangedSubview(taskTitleLabel)
+        
     }
     
     func customizeSubviews() {
