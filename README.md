@@ -38,8 +38,8 @@
 ## Por quê fizeram o Pharus❓
 ### Nós participamos da segunda fase da 4ª Edição do Bootcamp da ioasys, e o nosso desafio era criar uma forma inovadora de resolver os problemas sugeridos pela 8ª ODS - Emprego Digno e Crescimento Econômico
   
-## Onde posso saber mais sobre o projeto de vocês?
-### Nossa equipe preparou um [relatório](https://ftomoda.notion.site/ftomoda/Um-Maluco-no-Coda-o-f8086e346ba845f8866c1498dd47013c) bem legal com toooodos os detalhes que você queira saber 😇
+## Onde posso saber mais sobre o projeto de vocês❓
+### Nossa equipe preparou um [relatório](https://ftomoda.notion.site/ftomoda/Um-Maluco-no-Coda-o-f8086e346ba845f8866c1498dd47013c) muuuuuuito legal 😜 com toooodos os detalhes que você queira saber 😇
   
 # Nós da equipe Um Maluco no Codaço esperamos do fundo do coração que você aprecie o nosso trabalho :)
 
