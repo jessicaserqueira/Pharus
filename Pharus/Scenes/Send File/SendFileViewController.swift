@@ -72,6 +72,7 @@ extension SendFileViewController: SendFileDelegate {
     ) {
         if let filename = urls.first?.lastPathComponent {
             sendFileView.fileNameLabel.text = filename
+            sendFileView.sendFileButton.enable()
         }
     }
     
