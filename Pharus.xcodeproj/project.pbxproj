@@ -274,10 +274,10 @@
 		79434A67280912B2006D0184 /* Student Projects */ = {
 			isa = PBXGroup;
 			children = (
-				7943975927F3C5D20075102B /* StudentProjectsViewController.swift */,
 				7943975D27F3C6020075102B /* StudentProjectCell.swift */,
-				7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */,
 				7943975727F3C5BF0075102B /* StudentProjectsCoordinator.swift */,
+				7943975F27F3C6130075102B /* StudentProjectsPresenter.swift */,
+				7943975927F3C5D20075102B /* StudentProjectsViewController.swift */,
 			);
 			path = "Student Projects";
 			sourceTree = "<group>";
@@ -306,9 +306,9 @@
 		79434A6A280914D0006D0184 /* Student Projects Ranking */ = {
 			isa = PBXGroup;
 			children = (
-				79C577D127FBBB9800046B00 /* StudentProjectsRankingViewController.swift */,
-				C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */,
 				79C577CF27FBBB8100046B00 /* StudentProjectRankingCell.swift */,
+				C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */,
+				79C577D127FBBB9800046B00 /* StudentProjectsRankingViewController.swift */,
 			);
 			path = "Student Projects Ranking";
 			sourceTree = "<group>";
@@ -316,9 +316,9 @@
 		79434A6B2809194D006D0184 /* Send File */ = {
 			isa = PBXGroup;
 			children = (
-				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
-				79E838A6280AFCE7001C46AD /* SendFilePresenter.swift */,
 				79E838A8280AFD03001C46AD /* SendFileCoordinator.swift */,
+				79E838A6280AFCE7001C46AD /* SendFilePresenter.swift */,
+				C05AA2FE27FFA6F300230698 /* SendFileView.swift */,
 				C05AA30627FFAA9500230698 /* SendFileViewController.swift */,
 			);
 			path = "Send File";
@@ -348,10 +348,10 @@
 		7993C9A328102B2C00526AF2 /* Single Button Alert */ = {
 			isa = PBXGroup;
 			children = (
-				C05AA30227FFAA7400230698 /* SingleButtonAlertViewController.swift */,
-				C05AA2F427FFA66D00230698 /* SingleButtonAlertView.swift */,
 				79E838AB280B0676001C46AD /* SingleButtonAlertCoordinator.swift */,
 				79E838AD280B067D001C46AD /* SingleButtonAlertPresenter.swift */,
+				C05AA2F427FFA66D00230698 /* SingleButtonAlertView.swift */,
+				C05AA30227FFAA7400230698 /* SingleButtonAlertViewController.swift */,
 			);
 			path = "Single Button Alert";
 			sourceTree = "<group>";
@@ -359,10 +359,10 @@
 		7993C9A428102B3400526AF2 /* Project Subcription Alert */ = {
 			isa = PBXGroup;
 			children = (
-				7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */,
-				7993C9AC28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift */,
-				7993C9AA281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift */,
 				7993C9AE28103CD500526AF2 /* ProjectSubcriptionAlertCoordinator.swift */,
+				7993C9AC28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift */,
+				7993C9A628102C2500526AF2 /* ProjectSubcriptionAlertView.swift */,
+				7993C9AA281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift */,
 			);
 			path = "Project Subcription Alert";
 			sourceTree = "<group>";
@@ -370,19 +370,36 @@
 		7993C9B028104C4400526AF2 /* Logout Alert */ = {
 			isa = PBXGroup;
 			children = (
-				7993C9B128104C5800526AF2 /* LogoutAlertView.swift */,
 				7993C9B328104C6400526AF2 /* LogoutAlertCoordinator.swift */,
 				7993C9B528104C6D00526AF2 /* LogoutAlertPresenter.swift */,
+				7993C9B128104C5800526AF2 /* LogoutAlertView.swift */,
 				7993C9B728104C7700526AF2 /* LogoutAlertViewController.swift */,
 			);
 			path = "Logout Alert";
 			sourceTree = "<group>";
 		};
+		799C666428139021008E716B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */,
+				79222EA027F63FC50051334A /* CGFloat+Extension.swift */,
+				794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */,
+				7906FE60281321F900E4A83A /* Float+Extension.swift */,
+				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
+				7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */,
+				793EC73A27FE183000CD8334 /* UIImage+Extension.swift */,
+				79A4FCD0280E58B800B509FE /* UIStackView+Extension.swift */,
+				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
+				79735B63280ED78600D1067B /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		79A4B757281249A0002C018C /* Student Home News */ = {
 			isa = PBXGroup;
 			children = (
-				79A4B75528124214002C018C /* HomeNewsViewController.swift */,
 				79E8389E280AF7C5001C46AD /* HomeNewsView.swift */,
+				79A4B75528124214002C018C /* HomeNewsViewController.swift */,
 			);
 			path = "Student Home News";
 			sourceTree = "<group>";
@@ -392,23 +409,6 @@
 			children = (
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		79CAD97F27EBD77600A554E0 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				79FB0CCA27F33118001D36A7 /* Bundle+Extension.swift */,
-				79222EA027F63FC50051334A /* CGFloat+Extension.swift */,
-				794D9ABC27F8D15A0017D5EB /* Date+Extension.swift */,
-				797A68EB27F4649200ABDAC6 /* UIColor+Extension.swift */,
-				7910D9D127FD0B8300A8DDA0 /* UIFont+Extension.swift */,
-				793EC73A27FE183000CD8334 /* UIImage+Extension.swift */,
-				7906FE60281321F900E4A83A /* Float+Extension.swift */,
-				79A4FCD0280E58B800B509FE /* UIStackView+Extension.swift */,
-				79164BB827F1251C00167B8A /* UIView+Extension.swift */,
-				79735B63280ED78600D1067B /* UIViewController+Extension.swift */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 		79E6424B27F098C10046A2F0 /* Service */ = {
@@ -492,10 +492,10 @@
 		C01BB6B9280B8C41004D4790 /* Student Profile */ = {
 			isa = PBXGroup;
 			children = (
-				C01BB6BA280B8C73004D4790 /* StudentProfileCoordinator.swift */,
 				C01BB6C0280B8C84004D4790 /* StudenteProfileView.swift */,
-				C01BB6C4280B8C9C004D4790 /* StudentProfileViewController.swift */,
+				C01BB6BA280B8C73004D4790 /* StudentProfileCoordinator.swift */,
 				C01BB6C8280B8CAF004D4790 /* StudentProfilePresenter.swift */,
+				C01BB6C4280B8C9C004D4790 /* StudentProfileViewController.swift */,
 			);
 			path = "Student Profile";
 			sourceTree = "<group>";
@@ -525,7 +525,7 @@
 				C045619327EA03A6007EC5C3 /* Assets.xcassets */,
 				C008AF2227F1ED7F00AD94C9 /* Components */,
 				C04561A327EA03BF007EC5C3 /* Coordinator */,
-				79CAD97F27EBD77600A554E0 /* Extensions */,
+				799C666428139021008E716B /* Extension */,
 				79EE571C280BAABE00F01069 /* Fonts */,
 				C045619827EA03A6007EC5C3 /* Info.plist */,
 				C045619527EA03A6007EC5C3 /* LaunchScreen.storyboard */,
@@ -549,12 +549,12 @@
 		C04561A227EA03B3007EC5C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				79FB0CC827F330FA001D36A7 /* Student.json */,
-				799768CF27EA3B5F0057AFA7 /* StudentModel.swift */,
-				796F55332810F03E00DC6F70 /* ProjectModel.swift */,
-				795005A72811E733009C3716 /* Student.swift */,
-				795005A92811E74D009C3716 /* Task.swift */,
 				795005AB2811E75A009C3716 /* Project.swift */,
+				796F55332810F03E00DC6F70 /* ProjectModel.swift */,
+				79FB0CC827F330FA001D36A7 /* Student.json */,
+				795005A72811E733009C3716 /* Student.swift */,
+				799768CF27EA3B5F0057AFA7 /* StudentModel.swift */,
+				795005A92811E74D009C3716 /* Task.swift */,
 				796F55312810F01A00DC6F70 /* TaskModel.swift */,
 			);
 			path = Model;
