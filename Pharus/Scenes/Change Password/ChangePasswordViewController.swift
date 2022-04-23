@@ -62,6 +62,7 @@ class ChangePasswordViewController: UIViewController {
         if self.customView.frame.origin.y != 0 {
             self.customView.frame.origin.y = 0
         }
+        
     }
     
     //MARK: - Actions
