@@ -27,7 +27,7 @@ class SendFileView: UIView {
         view.backgroundColor = UIColor.modal.yellowBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.mainView"
-       
+        
         return view
     }()
     
@@ -113,7 +113,7 @@ class SendFileView: UIView {
         stackView.spacing = 3
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "SendFileView.uploadFileStackView"
-       
+        
         return stackView
     }()
     
@@ -121,7 +121,7 @@ class SendFileView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.accessibilityIdentifier = "SendFileView.uploadIconHelperView"
-       
+        
         return view
     }()
     
@@ -130,7 +130,7 @@ class SendFileView: UIView {
         imageView.image = UIImage.icons.uploadIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.accessibilityIdentifier = "SendFileView.uploadIconImageView"
-       
+        
         return imageView
     }()
     
@@ -164,7 +164,7 @@ class SendFileView: UIView {
         stackView.spacing = 14
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.accessibilityIdentifier = "SendFileView.fileStackView"
-       
+        
         return stackView
     }()
     
@@ -197,7 +197,7 @@ class SendFileView: UIView {
         return button
     }()
     
-    private lazy var sendFileButton: MainCardButton = {
+    lazy var sendFileButton: MainCardButton = {
         let button = MainCardButton(title: "Enviar Arquivos", buttonState: .normal)
         button.addAction(UIAction { _ in
             self.sendFileButtonTapped()
@@ -256,6 +256,7 @@ class SendFileView: UIView {
         fileStackView.addArrangedSubview(removeFileButton)
         
         mainStackView.addArrangedSubview(sendFileButton)
+        sendFileButton.disable()
     }
     
     //MARK: - Constraints
