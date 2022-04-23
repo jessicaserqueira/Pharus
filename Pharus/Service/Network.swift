@@ -2,7 +2,7 @@
 //  Network.swift
 //  Pharus
 //
-//  Created by Victor Colen on 25/03/22.
+//  Created by Victor Colen on 27/03/22.
 //
 
 import Foundation
@@ -12,7 +12,7 @@ protocol APIClientProtocol {
                              httpBody: Data?,
                              dataType: T.Type,
                              baseUrlString: String,
-                             parameters: KeyValuePairs<String, Any>?,
+                             parameters: [String: Any]?,
                              completion: @escaping ((Result<T, Error>) -> Void))
 }
 
@@ -21,7 +21,7 @@ class Network: APIClientProtocol {
                     httpBody: Data? = nil,
                     dataType: T.Type,
                     baseUrlString: String,
-                    parameters: KeyValuePairs<String, Any>?,
+                    parameters: [String: Any]? = nil,
                     completion: @escaping ((Result<T, Error>) -> Void)) where T : Codable {
         
         var newUrlString = baseUrlString
@@ -36,11 +36,11 @@ class Network: APIClientProtocol {
         }
         
         let url = URL(string: newUrlString)
-        guard let url = url else {
+        guard url != nil else {
             return
         }
         
-        var urlRequest = URLRequest(url: url)
+        var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = httpMethod
         
         if let httpBody = httpBody {
@@ -63,4 +63,3 @@ class Network: APIClientProtocol {
         }.resume()
     }
 }
-
