@@ -65,8 +65,8 @@
 		79E838A5280AF82C001C46AD /* StudentHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A4280AF82C001C46AD /* StudentHomeViewController.swift */; };
 		79E838A7280AFCE7001C46AD /* SendFilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A6280AFCE7001C46AD /* SendFilePresenter.swift */; };
 		79E838A9280AFD03001C46AD /* SendFileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838A8280AFD03001C46AD /* SendFileCoordinator.swift */; };
-		79E838AC280B0676001C46AD /* ConfirmationAlertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838AB280B0676001C46AD /* ConfirmationAlertCoordinator.swift */; };
-		79E838AE280B067D001C46AD /* ConfirmationAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838AD280B067D001C46AD /* ConfirmationAlertPresenter.swift */; };
+		79E838AC280B0676001C46AD /* SingleButtonAlertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838AB280B0676001C46AD /* SingleButtonAlertCoordinator.swift */; };
+		79E838AE280B067D001C46AD /* SingleButtonAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E838AD280B067D001C46AD /* SingleButtonAlertPresenter.swift */; };
 		79EE5719280B881500F01069 /* StudentHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE5718280B881500F01069 /* StudentHomeCoordinator.swift */; };
 		79EE571B280B889200F01069 /* StudentHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE571A280B889200F01069 /* StudentHomePresenter.swift */; };
 		79EE5731280BAB7F00F01069 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79EE571F280BAB7E00F01069 /* Montserrat-Medium.ttf */; };
@@ -83,10 +83,6 @@
 		C008AF1A27F1ED3700AD94C9 /* LoginCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */; };
 		C008AF1D27F1ED5D00AD94C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */; };
 		C008AF2427F1EDA100AD94C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008AF2327F1EDA100AD94C9 /* LoginView.swift */; };
-		C00E5F2D2811DECC00E8C71C /* ChangePasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E5F2C2811DECC00E8C71C /* ChangePasswordCoordinator.swift */; };
-		C00E5F382811DEEB00E8C71C /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E5F372811DEEB00E8C71C /* ChangePasswordPresenter.swift */; };
-		C00E5F3E2811DEFF00E8C71C /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E5F3D2811DEFF00E8C71C /* ChangePasswordView.swift */; };
-		C00E5F422811DF0E00E8C71C /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E5F412811DF0E00E8C71C /* ChangePasswordViewController.swift */; };
 		C01BB6BB280B8C73004D4790 /* StudentProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB6BA280B8C73004D4790 /* StudentProfileCoordinator.swift */; };
 		C01BB6C1280B8C84004D4790 /* StudenteProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB6C0280B8C84004D4790 /* StudenteProfileView.swift */; };
 		C01BB6C5280B8C9C004D4790 /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB6C4280B8C9C004D4790 /* StudentProfileViewController.swift */; };
@@ -102,9 +98,9 @@
 		C057E8F52807954B004E44C3 /* AvatarSelectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057E8F42807954B004E44C3 /* AvatarSelectionCoordinator.swift */; };
 		C05AA2BC27FC740E00230698 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */; };
 		C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */; };
-		C05AA2F527FFA66D00230698 /* ConfirmationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F427FFA66D00230698 /* ConfirmationAlertView.swift */; };
+		C05AA2F527FFA66D00230698 /* SingleButtonAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F427FFA66D00230698 /* SingleButtonAlertView.swift */; };
 		C05AA2F927FFA69800230698 /* MainCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA2F827FFA69800230698 /* MainCardButton.swift */; };
-		C05AA30327FFAA7400230698 /* ConfirmationAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA30227FFAA7400230698 /* ConfirmationAlertViewController.swift */; };
+		C05AA30327FFAA7400230698 /* SingleButtonAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA30227FFAA7400230698 /* SingleButtonAlertViewController.swift */; };
 		C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AA30627FFAA9500230698 /* SendFileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -176,8 +172,8 @@
 		79E838A4280AF82C001C46AD /* StudentHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeViewController.swift; sourceTree = "<group>"; };
 		79E838A6280AFCE7001C46AD /* SendFilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFilePresenter.swift; sourceTree = "<group>"; };
 		79E838A8280AFD03001C46AD /* SendFileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileCoordinator.swift; sourceTree = "<group>"; };
-		79E838AB280B0676001C46AD /* ConfirmationAlertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertCoordinator.swift; sourceTree = "<group>"; };
-		79E838AD280B067D001C46AD /* ConfirmationAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertPresenter.swift; sourceTree = "<group>"; };
+		79E838AB280B0676001C46AD /* SingleButtonAlertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleButtonAlertCoordinator.swift; sourceTree = "<group>"; };
+		79E838AD280B067D001C46AD /* SingleButtonAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleButtonAlertPresenter.swift; sourceTree = "<group>"; };
 		79EE5718280B881500F01069 /* StudentHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeCoordinator.swift; sourceTree = "<group>"; };
 		79EE571A280B889200F01069 /* StudentHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomePresenter.swift; sourceTree = "<group>"; };
 		79EE571F280BAB7E00F01069 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
@@ -195,10 +191,6 @@
 		C008AF1927F1ED3700AD94C9 /* LoginCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoodinator.swift; sourceTree = "<group>"; };
 		C008AF1C27F1ED5D00AD94C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C008AF2327F1EDA100AD94C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		C00E5F2C2811DECC00E8C71C /* ChangePasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordCoordinator.swift; sourceTree = "<group>"; };
-		C00E5F372811DEEB00E8C71C /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
-		C00E5F3D2811DEFF00E8C71C /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
-		C00E5F412811DF0E00E8C71C /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		C01BB6BA280B8C73004D4790 /* StudentProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileCoordinator.swift; sourceTree = "<group>"; };
 		C01BB6C0280B8C84004D4790 /* StudenteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudenteProfileView.swift; sourceTree = "<group>"; };
 		C01BB6C4280B8C9C004D4790 /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
@@ -216,10 +208,10 @@
 		C057E8F42807954B004E44C3 /* AvatarSelectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSelectionCoordinator.swift; sourceTree = "<group>"; };
 		C05AA2BB27FC740E00230698 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		C05AA2CD27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProjectsRankingCoordinator.swift; sourceTree = "<group>"; };
-		C05AA2F427FFA66D00230698 /* ConfirmationAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertView.swift; sourceTree = "<group>"; };
+		C05AA2F427FFA66D00230698 /* SingleButtonAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleButtonAlertView.swift; sourceTree = "<group>"; };
 		C05AA2F827FFA69800230698 /* MainCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardButton.swift; sourceTree = "<group>"; };
 		C05AA2FE27FFA6F300230698 /* SendFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileView.swift; sourceTree = "<group>"; };
-		C05AA30227FFAA7400230698 /* ConfirmationAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertViewController.swift; sourceTree = "<group>"; };
+		C05AA30227FFAA7400230698 /* SingleButtonAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleButtonAlertViewController.swift; sourceTree = "<group>"; };
 		C05AA30627FFAA9500230698 /* SendFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -255,7 +247,6 @@
 			children = (
 				795A021A2809F345000D0B84 /* Alerts */,
 				79434A6928091491006D0184 /* Avatar Selection */,
-				C00E5F2B2811DE9200E8C71C /* Change Password */,
 				79434A66280912A8006D0184 /* Login */,
 				795A02152809B664000D0B84 /* Project Sheet */,
 				79434A6B2809194D006D0184 /* Send File */,
@@ -350,20 +341,20 @@
 			children = (
 				7993C9B028104C4400526AF2 /* Logout Alert */,
 				7993C9A428102B3400526AF2 /* Project Subcription Alert */,
-				7993C9A328102B2C00526AF2 /* Confirmation Alert */,
+				7993C9A328102B2C00526AF2 /* Single Button Alert */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
 		};
-		7993C9A328102B2C00526AF2 /* Confirmation Alert */ = {
+		7993C9A328102B2C00526AF2 /* Single Button Alert */ = {
 			isa = PBXGroup;
 			children = (
-				C05AA30227FFAA7400230698 /* ConfirmationAlertViewController.swift */,
-				C05AA2F427FFA66D00230698 /* ConfirmationAlertView.swift */,
-				79E838AB280B0676001C46AD /* ConfirmationAlertCoordinator.swift */,
-				79E838AD280B067D001C46AD /* ConfirmationAlertPresenter.swift */,
+				C05AA30227FFAA7400230698 /* SingleButtonAlertViewController.swift */,
+				C05AA2F427FFA66D00230698 /* SingleButtonAlertView.swift */,
+				79E838AB280B0676001C46AD /* SingleButtonAlertCoordinator.swift */,
+				79E838AD280B067D001C46AD /* SingleButtonAlertPresenter.swift */,
 			);
-			path = "Confirmation Alert";
+			path = "Single Button Alert";
 			sourceTree = "<group>";
 		};
 		7993C9A428102B3400526AF2 /* Project Subcription Alert */ = {
@@ -497,17 +488,6 @@
 				C05AA2F827FFA69800230698 /* MainCardButton.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		C00E5F2B2811DE9200E8C71C /* Change Password */ = {
-			isa = PBXGroup;
-			children = (
-				C00E5F2C2811DECC00E8C71C /* ChangePasswordCoordinator.swift */,
-				C00E5F372811DEEB00E8C71C /* ChangePasswordPresenter.swift */,
-				C00E5F3D2811DEFF00E8C71C /* ChangePasswordView.swift */,
-				C00E5F412811DF0E00E8C71C /* ChangePasswordViewController.swift */,
-			);
-			path = "Change Password";
 			sourceTree = "<group>";
 		};
 		C01BB6B9280B8C41004D4790 /* Student Profile */ = {
@@ -711,10 +691,9 @@
 			files = (
 				79A2C775280C473F00B3159B /* SubscribeButton.swift in Sources */,
 				794D9ABD27F8D15A0017D5EB /* Date+Extension.swift in Sources */,
-				79E838AC280B0676001C46AD /* ConfirmationAlertCoordinator.swift in Sources */,
+				79E838AC280B0676001C46AD /* SingleButtonAlertCoordinator.swift in Sources */,
 				7993C9AB281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift in Sources */,
-				79E838AC280B0676001C46AD /* ConfirmationAlertCoordinator.swift in Sources */,
-				C00E5F2D2811DECC00E8C71C /* ChangePasswordCoordinator.swift in Sources */,
+				79E838AC280B0676001C46AD /* SingleButtonAlertCoordinator.swift in Sources */,
 				7993C9AB281031F700526AF2 /* ProjectSubcriptionAlertViewController.swift in Sources */,
 				79E838A9280AFD03001C46AD /* SendFileCoordinator.swift in Sources */,
 				7993C9B628104C6D00526AF2 /* LogoutAlertPresenter.swift in Sources */,
@@ -723,9 +702,8 @@
 				79E838A3280AF804001C46AD /* StudentHomeView.swift in Sources */,
 				79C577D227FBBB9800046B00 /* StudentProjectsRankingViewController.swift in Sources */,
 				C057E8F52807954B004E44C3 /* AvatarSelectionCoordinator.swift in Sources */,
-				C00E5F382811DEEB00E8C71C /* ChangePasswordPresenter.swift in Sources */,
 				7993C9BA28104E7400526AF2 /* SmallAlertButton.swift in Sources */,
-				C05AA30327FFAA7400230698 /* ConfirmationAlertViewController.swift in Sources */,
+				C05AA30327FFAA7400230698 /* SingleButtonAlertViewController.swift in Sources */,
 				797A68EC27F4649200ABDAC6 /* UIColor+Extension.swift in Sources */,
 				7952058127FE382D00A89012 /* TabBarViewController.swift in Sources */,
 				7906FE61281321F900E4A83A /* Float+Extension.swift in Sources */,
@@ -755,11 +733,10 @@
 				C05AA2CE27FC82AB00230698 /* StudentProjectsRankingCoordinator.swift in Sources */,
 				C057E8E92807941C004E44C3 /* AvatarSelectionView.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* StudentModel.swift in Sources */,
-				C00E5F3E2811DEFF00E8C71C /* ChangePasswordView.swift in Sources */,
 				795005AA2811E74D009C3716 /* Task.swift in Sources */,
 				799768D027EA3B5F0057AFA7 /* StudentModel.swift in Sources */,
 				C01BB6C5280B8C9C004D4790 /* StudentProfileViewController.swift in Sources */,
-				C05AA2F527FFA66D00230698 /* ConfirmationAlertView.swift in Sources */,
+				C05AA2F527FFA66D00230698 /* SingleButtonAlertView.swift in Sources */,
 				C01BB6C1280B8C84004D4790 /* StudenteProfileView.swift in Sources */,
 				7993C9AD28103CAB00526AF2 /* ProjectSubcriptionAlertPresenter.swift in Sources */,
 				795005AC2811E75A009C3716 /* Project.swift in Sources */,
@@ -778,10 +755,9 @@
 				79A2C777280C4A1700B3159B /* MainCardButton.swift in Sources */,
 				7952058527FE3B1A00A89012 /* ProjectSheetViewController.swift in Sources */,
 				79E838A5280AF82C001C46AD /* StudentHomeViewController.swift in Sources */,
-				C00E5F422811DF0E00E8C71C /* ChangePasswordViewController.swift in Sources */,
 				7943975E27F3C6020075102B /* StudentProjectCell.swift in Sources */,
 				79C577D027FBBB8100046B00 /* StudentProjectRankingCell.swift in Sources */,
-				79E838AE280B067D001C46AD /* ConfirmationAlertPresenter.swift in Sources */,
+				79E838AE280B067D001C46AD /* SingleButtonAlertPresenter.swift in Sources */,
 				C05AA30727FFAA9500230698 /* SendFileViewController.swift in Sources */,
 				C04561AB27EA0428007EC5C3 /* AppCoordinator.swift in Sources */,
 				79E838A1280AF7E1001C46AD /* HomeMiniCardView.swift in Sources */,

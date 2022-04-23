@@ -9,7 +9,6 @@ import UIKit
 
 protocol LoginViewDelegate: AnyObject{
     func loginButtonPressed()
-    func changePasswordButtonTapped()
 }
 
 class LoginView: UIView {
@@ -149,16 +148,6 @@ class LoginView: UIView {
         return textField
     }()
     
-    lazy var lowerPasswordStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "LoginView.lowerPasswordStackView"
-        
-        return stackView
-    }()
-    
   private lazy var wrongPasswordStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -185,22 +174,6 @@ class LoginView: UIView {
         label.textColor = UIColor.clear
         label.translatesAutoresizingMaskIntoConstraints = false
         label.accessibilityIdentifier = "LoginView.wrongPasswordLabel"
-        
-        return label
-    }()
-    
-    private lazy var changePasswordLabel: UILabel = {
-        let label = UILabel()
-        label.setOnClickListener {
-            self.changePasswordButtonTapped()
-        }
-        label.isUserInteractionEnabled = true
-        label.text = "Esqueci minha senha!"
-        label.font = .miniBody
-        label.textColor = UIColor.purple.pharusPurple
-        label.textAlignment = .right
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "LoginView.changePasswordLabel"
         
         return label
     }()
@@ -248,14 +221,10 @@ class LoginView: UIView {
         
         passwordStackView.addArrangedSubview(passwordLabel)
         passwordStackView.addArrangedSubview(passwordTextField)
-        passwordStackView.addArrangedSubview(lowerPasswordStackView)
-        
-        lowerPasswordStackView.addArrangedSubview(wrongPasswordStackView)
+        passwordStackView.addArrangedSubview(wrongPasswordStackView)
         
         wrongPasswordStackView.addArrangedSubview(wrongPasswordImageView)
         wrongPasswordStackView.addArrangedSubview(wrongPasswordLabel)
-        
-        lowerPasswordStackView.addArrangedSubview(changePasswordLabel)
         
         mainStackView.addArrangedSubview(loginButton)
     }
@@ -286,8 +255,4 @@ extension LoginView: LoginViewDelegate {
     func loginButtonPressed() {
         delegate?.loginButtonPressed()
     }
-    func changePasswordButtonTapped(){
-        delegate?.changePasswordButtonTapped()
-    }
-    
 }

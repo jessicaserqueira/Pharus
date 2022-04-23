@@ -1,5 +1,5 @@
 //
-//  ConfirmationAlertViewController.swift
+//  SingleButtonAlertViewController.swift
 //  Pharus
 //
 //  Created by Victor Colen on 07/04/22.
@@ -7,20 +7,20 @@
 
 import UIKit
 
-class ConfirmationAlertViewController: UIViewController {
+class SingleButtonAlertViewController: UIViewController {
     
     //MARK: - Properties
     
-    private var alertView: ConfirmationAlertView
-    private var coordinator: ConfirmationAlertCoordinator
-    private var presenter: ConfirmationAlertPresenter
+    private var alertView: SingleButtonAlertView
+    private var coordinator: SingleButtonAlertCoordinator
+    private var presenter: SingleButtonAlertPresenter
     
     //MARK: - Initializer
     
     init(
-        alertView: ConfirmationAlertView,
-        coordinator: ConfirmationAlertCoordinator,
-        presenter: ConfirmationAlertPresenter
+        alertView: SingleButtonAlertView,
+        coordinator: SingleButtonAlertCoordinator,
+        presenter: SingleButtonAlertPresenter
     ) {
         
         self.alertView = alertView
@@ -46,7 +46,7 @@ class ConfirmationAlertViewController: UIViewController {
 
 //MARK: - Confirmation Alert View Delegate
 
-extension ConfirmationAlertViewController: ConfirmationAlertViewDelegate {
+extension SingleButtonAlertViewController: SingleButtonAlertViewDelegate {
     func closeButtonTapped() {
         presenter.closeModal()
     }

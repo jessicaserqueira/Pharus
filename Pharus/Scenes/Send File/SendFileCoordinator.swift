@@ -44,11 +44,12 @@ class SendFileCoordinator: Coordinator {
 
 extension SendFileCoordinator: SendFileFlow {
     func showFileSentAlert() {
-        let alertView = ConfirmationAlertView(
-            message: "Arquivo enviado com sucesso!"
+        let alertView = SingleButtonAlertView(
+            message: "Arquivo enviado com sucesso!",
+            type: .confirmation
         )
         
-        let alertCoordinator = ConfirmationAlertCoordinator(
+        let alertCoordinator = SingleButtonAlertCoordinator(
             navigationController: navigationController,
             alertView: alertView
         )

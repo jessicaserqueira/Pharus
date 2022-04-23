@@ -11,7 +11,6 @@ protocol LoginPresenterProtocol {
     func isValidEmail(email: String) -> Bool
     func isValidPassword(password: String) -> Bool
     func loginUser(email: String, password: String) -> Bool
-    func showChangePassword(email: String)
 }
 
 class LoginPresenter: LoginPresenterProtocol {
@@ -19,11 +18,13 @@ class LoginPresenter: LoginPresenterProtocol {
     //MARK: - Properties
     
     private var coordinator: LoginCoordinator
+    private var student: Student
     
     //MARK: - Initializer
     
     init(coordinator: LoginCoordinator) {
         self.coordinator = coordinator
+        self.student = Bundle.main.decode("Student.json")
     }
     
     //MARK: - Actions
@@ -43,20 +44,12 @@ class LoginPresenter: LoginPresenterProtocol {
     }
     
     func loginUser(email: String, password: String) -> Bool {
-        let student: Student = Bundle.main.decode("Student.json")
         if email == student.email && password == student.password {
             let studentModel = makeStudentModel(with: student)
             coordinator.showHome(student: studentModel)
             return true
         }
         return false
-    }
-    
-    func showChangePassword(email: String) {
-        let student: Student = Bundle.main.decode("Student.json")
-        let studentModel = makeStudentModel(with: student)
-        
-        coordinator.showChangePassword(student: studentModel)
     }
     
     func makeStudentModel(with student: Student) -> StudentModel {

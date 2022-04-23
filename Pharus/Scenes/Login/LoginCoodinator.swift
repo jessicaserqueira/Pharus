@@ -8,9 +8,7 @@
 import UIKit
 
 protocol LoginFlow {
-    func showChangePassword (student: StudentModel)
     func showHome(student: StudentModel)
-
 }
 
 class LoginCoordinator: Coordinator {
@@ -42,14 +40,6 @@ class LoginCoordinator: Coordinator {
 //MARK: - Actions
 
 extension LoginCoordinator: LoginFlow {
-    func showChangePassword(student: StudentModel) {
-        let coordinator = ChangePasswordCoordinator(
-            navigationController: navigationController,
-            student: student
-        )
-          
-        self.coordinate(to: coordinator)
-    }
     
     func showHome(student: StudentModel) {
         let tabbarViewController = TabBarViewController()
