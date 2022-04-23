@@ -1,5 +1,5 @@
 //
-//  ConfirmationAlertView.swift
+//  SingleButtonAlertView.swift
 //  Pharus
 //
 //  Created by Victor Colen on 07/04/22.
@@ -7,16 +7,22 @@
 
 import UIKit
 
-protocol ConfirmationAlertViewDelegate: AnyObject {
+protocol SingleButtonAlertViewDelegate: AnyObject {
     func closeButtonTapped()
 }
 
-class ConfirmationAlertView: UIView {
+class SingleButtonAlertView: UIView {
     
     //MARK: - Properties
     
-    weak var delegate: ConfirmationAlertViewDelegate?
+    weak var delegate: SingleButtonAlertViewDelegate?
     private var message: String
+    private var type: AlertType
+    
+    enum AlertType {
+        case confirmation
+        case error
+    }
     
     //MARK: - Views
     
@@ -34,7 +40,7 @@ class ConfirmationAlertView: UIView {
         view.layer.cornerRadius = 16
         view.backgroundColor = UIColor.modal.yellowBackground
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "ConfirmationAlertView.mainView"
+        view.accessibilityIdentifier = "SingleButtonAlertView.mainView"
         
         return view
     }()
@@ -45,7 +51,7 @@ class ConfirmationAlertView: UIView {
         stackView.backgroundColor = .clear
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.accessibilityIdentifier = "ConfirmationAlertView.mainStackView"
+        stackView.accessibilityIdentifier = "SingleButtonAlertView.mainStackView"
         
         return stackView
     }()
@@ -53,7 +59,7 @@ class ConfirmationAlertView: UIView {
     private lazy var alertIconHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "ConfirmationAlertView.alertIconHelperView"
+        view.accessibilityIdentifier = "SingleButtonAlertView.alertIconHelperView"
         
         return view
     }()
@@ -62,7 +68,7 @@ class ConfirmationAlertView: UIView {
         let imageView = UIImageView()
         imageView.image = UIImage.icons.checkIcon
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.accessibilityIdentifier = "ConfirmationAlertView.alertIconImageView"
+        imageView.accessibilityIdentifier = "SingleButtonAlertView.alertIconImageView"
         
         return imageView
     }()
@@ -70,7 +76,7 @@ class ConfirmationAlertView: UIView {
     private lazy var alertMessageHelperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.accessibilityIdentifier = "ConfirmationAlertView.alertMessageHelperView"
+        view.accessibilityIdentifier = "SingleButtonAlertView.alertMessageHelperView"
         
         return view
     }()
@@ -81,7 +87,7 @@ class ConfirmationAlertView: UIView {
         label.font = .mediumTitleBold
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.accessibilityIdentifier = "ConfirmationAlertView.alertMessageLabel"
+        label.accessibilityIdentifier = "SingleButtonAlertView.alertMessageLabel"
         
         return label
     }()
@@ -93,17 +99,21 @@ class ConfirmationAlertView: UIView {
             self.closeButtonTapped()
         }, for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.accessibilityIdentifier = "ConfirmationAlertView.actionButton"
+        button.accessibilityIdentifier = "SingleButtonAlertView.actionButton"
         
         return button
     }()
     
     //MARK: - Initializer
     
-    convenience init(message: String) {
+    convenience init(
+        message: String,
+        type: AlertType
+    ) {
         self.init()
         
         self.message = message
+        self.type = type
         
         configureSubviews()
         customizeView()
@@ -112,6 +122,7 @@ class ConfirmationAlertView: UIView {
     
     override init(frame: CGRect) {
         self.message = "Alerta"
+        self.type = .confirmation
         
         super.init(frame: .zero)
         
@@ -142,6 +153,12 @@ class ConfirmationAlertView: UIView {
     
     private func customizeView() {
         alertMessageLabel.text = message
+        
+        if type == .confirmation {
+            alertIconImageView.image = UIImage.icons.checkIcon
+        } else {
+            alertIconImageView.image = UIImage.icons.errorIcon
+        }
     }
     
     //MARK: - Constraints
@@ -173,7 +190,7 @@ class ConfirmationAlertView: UIView {
 
 //MARK: - Actions
 
-extension ConfirmationAlertView {
+extension SingleButtonAlertView {
     func closeButtonTapped() {
         delegate?.closeButtonTapped()
     }

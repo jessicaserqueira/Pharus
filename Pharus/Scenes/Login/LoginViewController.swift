@@ -102,10 +102,6 @@ extension LoginViewController: LoginViewDelegate {
             customView.passwordTextField.textColor = UIColor.redError
         }
     }
-    func changePasswordButtonTapped() {
-        guard let email = customView.emailTextField.text else { return }
-        presenter.showChangePassword(email: email)
-    }
 }
 
 

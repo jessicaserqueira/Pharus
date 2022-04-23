@@ -56,8 +56,11 @@ extension ProjectSubcriptionAlertCoordinator: ProjectSubcriptionAlertFlow {
         project.isSubscribed = true
         closeModal()
         
-        let confirmationAlertView = ConfirmationAlertView(message: "Inscrição confirmada!")
-        let confirmationAlertCoordinator = ConfirmationAlertCoordinator(
+        let confirmationAlertView = SingleButtonAlertView(
+            message: "Inscrição confirmada!",
+            type: .confirmation
+        )
+        let confirmationAlertCoordinator = SingleButtonAlertCoordinator(
             navigationController: navigationController,
             alertView: confirmationAlertView
         )
